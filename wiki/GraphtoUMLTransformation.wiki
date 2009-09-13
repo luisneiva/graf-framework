@@ -1,0 +1,50 @@
+Graph to UML Transformation - Approaches, Decisions, Assumptions and Pending Problems
+
+Written by Oscar Wood
+Description
+
+This module transforms a graph into the components of an objects diagram, which will be displayed by the GUI. The object diagram is annotated with state, actions and events for each class. The module is also responsible for communication between the GUI and the graph transformation module when the user selects an event or action and a graph transformation needs to be applied.
+
+Assumptions:
+
+    * The graph uses specific node and edge names with no variation in capitalisation or spelling. Some examples are:
+          o ownedAttribute
+          o i
+          o activeState
+          o pool
+          o message
+
+Approach:
+
+    * I fill in details about the object diagram by following edges and nodes in the graph.
+    * First object nodes are found. They have i edges to nodes that have i edges to Class.
+    * Associations are found as following:
+
+associations
+
+    * Attribute name are found by following the i edge from the object node, then following the ownedAttribute edge from there.
+    * Attribute values are found by following edges with names of attributes from the object node.
+    * States are found by following the execution edge from the object node, then following the activeState edge from there. (A state machine can be several active states at the same time -Greg)
+    * All possible events are found by following the source edge from the state node. These events have not been sent; they are collected so they can be sent as external events in the GUI.
+    * This image summarises the above:
+
+finding object diagram elements
+
+    * Now I find the events that are in the pool of their object. This is done using a process summarised in the diagram below.
+
+checking actions
+
+Events found in this way will be displayed in the GUI for the user to click on.
+
+    * Actions are found by following the execuatable edges from the behavior execution node.
+    * Each action is set as enabled or not. An enabled action can be clicked on because it has the necessary input pins to execute its rule. This is determined in two steps.
+          o First the names of the pins are found by following edges from the node of the action. The edges are target (or object), fromAction, result.
+          o Second the edges from the behavior execution are checked. If any edges have the same name as the pin names found in the first step then the action is enabled.
+
+Decisions Made:
+
+    * There may be alternative paths to follow on the graph to find the object diagram details.
+
+Problems:
+
+    * All this is hardcoded.
