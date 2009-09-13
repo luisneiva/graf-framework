@@ -1,0 +1,270 @@
+UML Animator Project Plan (this might need to be changed.)
+
+The project has taken the direction of a generic model animator framework… needs rephrasing somehow …
+1 Overview
+
+Model driven development is a new software development paradigm which allows the creation of software on a higher level of abstraction. This development technique saves development time, costs, and improves software quality. The technique models software using the Unied Modeling Language (UML). UML is the standard modeling language used in software engineering. It was developed by the Object Management Group (OMG). The UML denition contains clear and formal syntax; however the semantics are ambiguous. For a given UML model, the modelers may not agree on the underlying semantics. Greg O'Keefe's (our client) PhD thesis states that underlying the ambiguous descriptions of UML semantics is a graph transformation system (GTS) - which is clear and formal. The project will implement a tool is similar to a debugger or interpreter for UML models. It allows the users to 'step through' the model. The modeler inputs a collection of classes, state machines, test cases, etc, and the animator will verify if the given model is correct. Current implementations of UML animators is not adequate, since they are deterministic, however by denition, UML models should be non-deterministic.
+1.1 Project summary
+
+1.1.1 Purpose, scope, and objectives
+
+Purpose
+
+The purpose of this project is to create tools that will help to: Reduce software development time. Give modelers a better understanding of their models. The animator will act as a reference implementation of model
+Scope
+
+Currently the project will not cover the tools for executing UML models, but a tool for validating them. So the modelers provide the animator a model and test cases, the software will 'animate' the execution ow of the model. The animator will only cover a dened subset of UML. Covering the whole UML will be done in another software engineering project.
+Objectives
+
+Create tools to verify semantics of UML models. Run within Eclipse environment. Ease of use. Robust and ecient The nal software will be released under open source license.
+1.1.2 Assumptions and constraints
+
+Assumptions
+
+The project will be run over two semesters, with close out date of 10th October 2009. It is assumed that our client, Greg O'Keefe, and mentor Lynette will be available for consultation and guidance throughout the lifecycle of the project, and that we will be able to utilise some of the ANU Department of Computer Science's resources.
+Constraints
+
+One constraint placed by the client is that the UML Reference Animator, will be developed in the Eclipse IDE 3.4 (Ganymede) and run on Java 1.5. When the project is over, the source code will preferably be open source for further development. Also it is expected by the client that if the project uses any external modeling modules, it has to be open source as well. Further constraints include:
+
+    * The software must have an extensible architecture, for further development.
+    * UML Reference Animator must act as 'reference' for all other animators.
+    * Scheduling constraints - all team members have other course commitments, and some are working full-time. Also some team members will not be available during the lecture breaks.
+    * Team members' limited skill and knowledge in Eclipse EMF, graph transformations, UML, etc.
+    * The deadline on 10th October 2009 must be meet.
+    * The product must be reliable.
+    * The project is unfunded.
+
+1.1.3 Project deliverables
+
+On the 30/10/2009 a copy of:
+
+    * All source code,
+    * All prototypes,
+    * All of the reviews,
+    * The Architectural Design,
+    * The Concept of Operations,
+    * The poster,
+    * All of the reports,
+    * The Detailed Design,
+    * The Software Requirements Specication,
+    * The presentation, and
+    * The user documentation for this project shall be given to the client on a CD.
+
+1.1.4 Evolution of the SPMP
+
+Updates to this project management plan will be undertaken as necessary throughout the project. The Team Leader will be responsible for determining when an update is necessary. Current version of the plan will be available from the home page on Alliance as for older versions, they will be under Subversion. For conguration management, please refer to section 7.1
+1.1.5 Schedule and budget summary
+
+Summary of the Schedule:
+
+Term 1
+
+    * 12207
+    * Architectural Design
+    * Concept of Operations
+    * Peer Assesment 1
+    * Poster
+    * Project Setup
+    * Prototypes
+    * Research
+    * Team Charter
+    * Training
+
+Week 8, Semester 1
+
+    * Conguration Management Plan
+    * Management Plan
+    * Software Quality Assurance Plan
+    * Test Plans
+    * Verication and Validation Plan
+    * Work Breakdown Structure
+
+Term 2
+
+    * Detailed Design
+    * Peer Assesment 2
+    * Prototypes
+    * Research
+    * Software Requirements Specication
+    * Training
+
+Week 2, Semester 2
+
+    * Reflective Report
+
+Term 3
+
+    * Implementation
+    * Peer Assesment 3
+
+Week 12, Semester 2
+
+    * Presentation
+    * Peer Assesment 4
+    * User Documentation
+
+Progressive
+
+    * Agendas
+    * Minutes
+
+There is no budget.
+2 References
+
+   1. OMG Unied Modeling Language (OMG UML), Superstructure, V2.1.2, external link: http://www.omg.org/spec/
+
+UML/2.1.2/Superstructure/PDF, Object Management Group, November 2007
+3 Project organisation
+
+Team leaders: Manage the project Developers: Development and test the UML Reference Animator The team leaders are Andrew Mernagh and Huy Tran. The developers are Ian Maddox, Kevin O'Shea, Wilson Ly, Oscar Wood.
+3.1 External interfaces
+
+Parent organisation: The Australian National University College of Engineering and Computer Science Course co-ordinator: Shayne Flint Mentor: Lynette Johns-Boast Client: Greg O'Keefe
+3.2 Roles and responsibilities
+
+    * 12207 - 4th years
+    * Architectural Design - 3rd years
+    * Concept of Operations - 3rd years
+    * Peer Assesments - Everyone
+    * Poster - 3rd years
+    * Project Setup - 4th years
+    * Prototypes - 3rd years
+    * Research - 3rd years
+    * Team Charter - Everyone
+    * Training - Everyone
+    * Conguration Management Plan - 4th years
+    * Management Plan - 4th years
+    * Software Quality Assurance Plan - 4th years
+    * Test Plans - Everyone
+    * Verication and Validation Plan - 4th years
+    * Work Breakdown Structure - 4th years
+    * Detailed Design - 3rd years
+    * Software Requirements Specication - 3rd years
+    * Reflective Report - Everyone
+    * Implementation - 3rd years
+    * Presentation - Everyone
+    * User Documentation - 3rd years
+    * Agendas - 4th years
+    * Minutes - Everyone
+
+4 Managerial process plans
+
+4.1 Staffing plan
+
+UML Reference Animator project will have two team leaders and four developers expected to put at least 10 hours per week into the project.
+4.2 Project sta training plan
+
+No formal training will be available. Team members are expected to share their knowledge and skills with the team.
+4.3 Work plan
+
+4.3.1 Work activities
+
+See the Work Breakdown Structure.
+4.3.2 Schedule allocation
+
+See Tasks.mdb.
+4.4 Control plan
+
+4.4.1 Requirements control plan
+
+    * Changes to the baseline software requirements document needs to be reviewed and discussed by the
+
+team and client.
+
+    * Consider the feasibility of the changes in terms of time, resources and project constraints.
+    * Once the changes have been made, conguration management rules will be applied to the document.
+    * No further changes to the requirements document will be accepted after the testing phase. (since the
+
+software development process will be iterative) Please see the conguration management plan for further details.
+4.4.2 Schedule control plan
+
+    * If a task is not following the scheduled progress, the extra time will be allocated for the task. Also if
+
+needed, break down the task into subtasks that can be divided for other team members to work on.
+
+    * If a task denitely can not be nished on the scheduled time, an exception report will be created. The
+
+team must discuss this with the client or lecturers for a compromise.
+
+    * An excel document that lists all tasks and percentage completed will be used to track progress. This
+
+will be created and updated by team leaders.
+
+    * Team leaders will review the task before it is marked for completion.
+    * A current task list will be placed on the homepage of Alliance, so that everyone knows theirs tasks to
+
+be completed.
+4.4.3 Quality control plan
+
+A quality control plan will be created as part of the quality assurance plan in section 7.4
+4.4.4 Reporting plan
+
+    * A formal reporting plan will not be created for the project.
+    * Team meetings will be kept informal. Each of the team members will have a brief report on the progress
+
+of their allocated tasks.
+
+    * For each meeting brief meeting minutes will be created and stored on the Alliance website before the
+
+next meeting.
+
+    * Project reviews at the end of each term and client meetings will be more formal.
+
+4.5 Risk management plan
+
+Please refer to the risk management plan documentation.
+4.6 Project closeout plan
+
+    * Upon project close out a report will be prepared that includes lessons learnt and discussion and analysis
+
+of project objectives achieved.
+
+    * The project will be released as open source.
+    * Another software engineering project might follow this one to extend the software.
+    * Deliver all project outputs to client and course lecturers; this includes the nal source code, project
+
+plans, user manuals, technical documentation, etc.
+5 Technical process plans
+
+5.1 Process model
+
+See the Conguration Management Plan.
+5.2 Methods, tools, and techniques
+
+The software shall be developed in modules. Each module shall be specied, designed, built, tested, inte- grated, veried, validated, and documented before it is baselined. The following standards shall be followed:
+
+    * IEEE 830-1998: IEEE Recommended Practice for Software Requirements Specications
+    * IEEE 1233-1998: IEEE Guide for Developing System Requirements Specications
+    * IEEE 1016-1998: IEEE Recommended Practice for Software Design Descriptions
+    * IEEE 829-2008: IEEE Standard for Software and System Test Documentation
+    * IEEE 1008-1987: IEEE Standard for Software Unit Testing
+    * IEEE 1012-1998: IEEE Standard for Software Verication and Validation
+    * IEEE 1063-2001: IEEE Standard for Software User Documentation
+    * IEEE 828-2005: IEEE Standard for Software Conguration Management Plans
+
+5.3 Infrastructure plan
+
+See the Conguration Management Plan.
+6 Supporting process plans
+
+6.1 Conguration management plan
+
+See the Conguration Management Plan.
+6.2 Verication and validation plan
+
+A verication and validation plan will be a part of the quality assurance plan in section 7.4
+6.3 Documentation plan
+
+All documentation will follow the IEEE standards, except the risk management plan which follows the Australian and New Zealand standard. Formal documents will be in PDF format (preferably using Latex). Other documents will be on the Alliance wiki page. For the conguration management of these documents please see section 7.1.
+6.4 Quality assurance plan
+
+A quality assurance plan will be created.
+6.5 Reviews and audits
+
+Review and Audits would be addressed as a part of the Software Quality Assurance Plan.
+6.6 Problem resolution plan
+
+No formal problem resolution plan will be created. Due to the small size of the project, when there are problems, it will be resolved informally between the team members, client and lecturers.
+6.7 Process improvement plan
+
+No formal process improvement plan will be created for this project. However near the end of the project, it is intended that each team member will write up a lessons learnt document. 
