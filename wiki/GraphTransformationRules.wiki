@@ -1,0 +1,119 @@
+Graph Transformation Rules - Approaches, Decisions, and Pending Problems
+
+Written by Ian Maddox
+
+NOTE:
+
+    * This document was made before we decided to use AGG and therefore talks about the Graph Transformation module of our UML Reference Animator and the use of GTSRules.xml as our rule file.
+    * Since then we are using AGG as our transformation engine and therefore decided to use AGG's rule file format (GGX) to encode of GTS rules.
+    * With this in mind please note that GTS rules format section it is talking about the old format that we used in our GTSRules.xml rule file.
+
+Description
+
+This document is about the Graph Transformation Rules that are used to transform a graph from its current state into a new state. The way that Graph Transformation Rules work is that Graph Transformation module of our UML Reference Animator takes in the rules file (GTSRules.xml), finds the rule to be used, finds all the possible matches to the before part of the rule, and then displays the matches to the user so that they can choose which one to use.
+How I created the Graph Transformation Rules
+
+The way that I went about creating the Graph Transformation Rules was to have a look at Greg’s trace of our microwave example (microwave.updates). From here I had a look at the adds and deletes for each set and put these into my rules. An example of this is the actorSendSignal rule which has the following adds and deletes.
+
+{* Actor sends "cook" signal to m1.
+Actor semantics are a known problem in UML.
+We make it appear that the Actor has executed a SendSignalAction 11.3.45.
+*}
+add {
+c1 i cook
+c1 sender a1 {* 13.1 Fig 13.3 *}
+c1 receiver m1
+
+{* in fact, the receiveEvent should be added by a separate update (rule) *}
+c1 receiveEvent c1receipt
+c1receipt i SignalOccurrence {* 13.1 Fig 13.4 *}
+c1receipt message c1
+c1receipt receiver m1 {* 13.1 Fig 13.3 *}
+m1 pool c1receipt
+c1 sendEvent c1sent
+c1sent i SendInvocationOccurrence
+c1sent message c1
+c1sent sender a1
+c1sent execution a1behaviorExecution
+}
+
+delete { }
+
+The graph representation of this (with only the adds and deletes) looks like the following
+
+actorSendSignal A&amp;D ONLY.png
+
+Also I added in nodes that are needed to recognise what the unknowns can be (i.e. the ?signal node has to be of type Signal). Then this completes the actorSendSignal rule and now look like the following
+
+actorSendSignal.png
+Format of the rules file (GTSRules.xml)
+
+The format of GTSRules.xml of the following
+
+<?xml version="1.0" ?>
+<GTSRules>
+<rule name=" ">
+…
+</rule>
+…
+<rule name=" ">
+…
+</rule>
+</GTSRules>
+
+The first line here is the XML Declaration that states that this is an xml document. All of the GTS rules are define between the <GTSRules> tag and the </GTSRules> tag. Then after the <GTSRules> tag is where the first GTS rule is. GTS rules are defined between the <rule name=" "> tag and the </rule> tag The <rule name=" "> tag tells us that this is the start of the rule, and what the name of the rule is. The <rule name=" " composite="true"> tag is the same as the <rule name=" "> tag except it also tells us that this rule is made up of smaller rules. Then after the <rule name=" "> tag is where the contents of the first GTS rule is. The contents of the rules depends on whether we have a <rule name=" "> tag or a <rule name=" " composite="true"> tag. If we have a <rule name=" "> tag then the contents will be
+
+<before>
+<edge from="" to="" label=""/>
+…
+<edge from="" to="" label=""/>
+</before>
+<after>
+<edge from="" to="" label=""/>
+…
+<edge from="" to="" label=""/>
+</after>
+
+Here is where the before and after graphs are defined. The before graph is defined between the <before> tag and the </before> tag, whereas the after graph is defined between the <after> tag and the </ after> tag. The way that these graphs are defined is as a list of edges that connect nodes to each other. An edge is defined by the <edge from="" to="" label=""/> tag. E.g. <edge from="A" to="B" label="next"/> represents the following
+
+ABGraph.png
+
+Whereas if we have a <rule name=" " composite="true"> tag then the contents will be either
+
+<exclusive-dependencies>
+<dependency> name </dependency>
+…
+<dependency> name </dependency>
+</exclusive-dependencies>
+
+if the rule is made of sub rules where only one of these apply. (i.e. only the first sub rule that matches will be used.)
+
+OR
+
+<dependency> name </dependency>
+…
+<dependency> name </dependency>
+
+if the rule is made of sub rules that should be applied one after the other.
+
+Also there are some cases where a
+
+<dependency> name </dependency>
+
+could be replaced by a
+
+<looping-dependency>
+<dependency> name </dependency>
+</looping-dependency>
+
+which indicates that the dependency should be applied where ever it matches.
+
+Sub rules are identified as being surrounded by the <dependency name=""> tag and the </dependency> tag. Inside these tags we have the before and after graphs for these sub rules. The before graph is defined between the <before> tag and the </before> tag, whereas the after graph is defined between the <after> tag and the </ after> tag. The way that these graphs are defined is as a list of edges that connect nodes to each other. An edge is defined by the <edge from="" to="" label=""/> tag.
+Some of the assumptions made
+
+In microwave.updates Greg says that “Actor semantics are a known problem in UML. We make it appear that the Actor has executed a SendSignalAction”.
+
+There are also other assumptions that were made in Greg's trace of the Microwave example. Some of these assumptions have proved to be wrong and we have had to change these. Some of these assumptions include
+
+    * Values are attached to the classifier behavior (not the input pins as previously thought)
+    * Having to manually put activity edges into the graph so that we can identify actions within an activity.
