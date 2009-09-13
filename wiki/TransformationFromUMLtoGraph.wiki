@@ -1,0 +1,96 @@
+Transformation from UML to Graph - Approaches, Decisions, and Pending Problems
+
+Written by Kevin O'Shea
+Description
+
+This component of the Animator is responsible for converting a UML model into an equivalent graph representation, suitable for applying graph transformation rules. The graph comprises UML metamodel, model, instance, and runtime elements.
+Metamodel
+
+Approach:
+
+    * Using XMI:
+          o Every 'Class' element becomes a node
+          o Every 'xmi:type' attribute of a 'Class' element becomes an 'i' edge from the class to the type.
+          o Every 'Property' child of a 'Class' element becomes an edge going from its parent class node to the node specified by its type. The label of the edge is the name of the property.
+          o Every 'superClass' attribute of a 'Class' element becomes a 'superClass' edge from the class to the superClass class.
+
+Decisions Made:
+
+    * The node's strings are taken from their corresponding 'name' attribute in the metamodel xml file.
+    * Nodes sometimes appear multiple times in different packages of the metamodel (for example 'Property' appears in 5 different places. To avoid multiple identical edges, duplicates are ignored.
+    * I considered the option of producing an edge for all (not just superClass) of each elements' attributes in the xml file (like I have done with the model part - see below), in order to ensure there would be no missing information. However I chose not to do this because the resulting graph would become completely unusable - I predict that it would be at least 3 times the size of what it is now.
+    * There are other types of elements in the metamodel besides 'Class' elements that have not been included. These element types are Package, PackageImport, PackageMerge, Association, OpaqueExpression, Parameter, Enumeration, PrimitiveType, Operation, Comment, Constraint, EnumerationLiteral.
+          o Ignore Package, PackageImport and PackageMerge for now. I think they don't make any difference, though at some stage we should think this through more carefully and test. -Greg 9/8/09
+          o Associations should be handled like Classes, since they are also specialisations of Classifier. When association ends (Properties) are owned by the Classes, which is the default for binary associations, then the Associations are actually irrelevant. However, the Associations are needed when they own their ends. -Greg 9/8/09
+          o I don't think we can do much with OpaqueExpressions, just ignore them.
+          o We should investigate Paramenter, Enumeration, EnumerationLiteral, PrimitiveType and Operation. I think that something will need to be done with these. -Greg 9/8/09
+          o Ignore comments. -Greg 9/8/09
+          o I don't think Constraints make any sense as currently defined, best not to attempt any interpretation at this stage. -Greg 9/8/09
+    * We will exclude the metamodel edges from the current implementation. The reason is that the conversion of the model (see below) generates all necessary connections from the model to metamodel. For example the 'type' of a class is 'Class' so it automatically introduces the metamodel element 'Class'. The only thing that the model conversion does NOT pick up is the edges BETWEEN nodes in the metamodel. If these edges are not needed in rule applications (I don't see why they would be) then it should be sufficient to leave out all of this metamodel conversion. (note that we would have to ensure that when rules are defined they explicitly do NOT contain edges between metamodel elements because the rule would never match)
+
+Problems:
+
+    * (None)
+
+Model
+
+Approach:
+
+    * Using EMF:
+          o Every EObject becomes a node.
+          o Every EObject has an 'i' edge to its EClass (which specifies its type)
+          o Every EReference value of an EObject becomes an edge. The name of the reference becomes the edge label.
+    * Using XMI:
+          o Every 'Class' element becomes a node.
+          o Every 'xmi:type' attribute of an element becomes an 'i' edge from the element to the type.
+          o Every parent element will have an edge going from it to each of its child elements, where the label is the <elementname> of the element. (for example a class has ownedAttribute children)
+          o Every element will have an edge going from it to each of its attribute values, where the label is the attribute name. (for example a transition has source and target attributes).
+
+Decisions Made:
+
+    * The names (strings) of the graph nodes are taken from this order of precedence: value, name, identifier. For example if an element did not have a value attribute but did have a name then the name would be used. The reason I have made value as highest precedence is because if something has a value attribute it is usually the most important part - eg a 'defaultValue' node can have name="somename" and value=5, the value is more important. (note however that the name is not ignored - it is captured as a seperate node: 5--name-->somename).
+    * 'ElementImport' elements are ignored because they produce redundant duplicated edges
+    * When converting elements' attributes into edges, the identifier attributes (name, value, identifier) are excluded because they are used in the node name itself.
+    * There is a problem that arises when nodes have the same name. For example if two different state machines have the same name for one of their states then the generated graph will assume that they are the same node (causing potential chaos). A solution to this is to include the element's identifier in the node name (instead of only if it does not have a name or value) so that all names will be unique - eg CommonName_x32daf1…21. But note that this would also make generated graphs difficult to read. Since this implementation is primarily for demonstrative purposes, I have chosen not to implement this solution here.
+    * In the XMI version, I must identify when an attribute is an xmi:id reference to another element, look up the reference and obtain the name of the node referred to.
+    * In the XMI version, some elements do not have an xmi:type attribute, and therefore do not automatically get an 'i' edge to their type. In order to create an appropriate 'i' edge, I must look up the type of the element's name in the metamodel. For example 'ownedAttribute' elements do not have an xmi:type attribute, so I look up the type of ownedAttribute in the metamodel to find 'Property'. This also happens with such things as region, trigger, and ownedOperation. This solution works sufficiently, but can be slow, however I optimized this by remembering the results for common elements such as ownedAttribute.
+
+Problems:
+
+    * (None)
+
+Instance
+
+Approach:
+
+    * To specify an instance, I use a text file to specify objects, initial states, and attribute values. This is read in and parsed to generate the necessary edges in the graph.
+    * Objects are declared as: 'objname : ClassName'. These are translated to an edge from objname to ClassName with label 'i'.
+    * Attribute values are declared as 'attrname = val'. These are translated to an edge from objname to val with label attrname.
+    * Links are declared as 'obj1 <leftlabel, rightlabel> obj2'. These are translated to an edge from obj1 to obj2 with label rightlabel and an edge from obj2 to obj1 with label leftlabel. (if an association has a name, and the ends are owned by classes, the actual link (node) is useless).
+
+InstanceConversionLinkNoName.png
+
+    * Initial states are declared as '{init_state}'. These are translated to an edge from objnameclassifierBehaviorExecution to 'init_state' with label 'activeState'. In addition to this I also have to create the following edges:
+          o An edge from objnameclassifierBehaviorExecution to 'BehaviorExecution' with label 'i'.
+          o An edge from objname to objnameclassifierBehaviorExecution with label 'execution'.
+          o An edge from objnameclassifierBehaviorExecution to objname with label 'host'.
+          o An edge from objnameclassifierBehaviorExecution to objname's statemachine with label 'behavior'. To find objname's statemachine, I traverse objname--i-->classname--classifierBehavior-->statemachine.
+
+InstanceConversion.png
+
+Decisions Made:
+
+    * I have decided to use a text file description of an object diagram, rather than trying to parse an object diagram generated from a modelling tool. This is primarily for simplicity of this prototype, but it also allows greater flexibility in describing test cases - eg can specify initial states for objects.
+    * In this instance description, I have decided that it is required to specify an initial state for all objects declared. This is because the instance description specifies a starting state, and it would be illegal for an object to have no current state (it is not possible to choose an initial state because there could be multiple initial pseudostates to choose from)
+    * In this example transformation, I have not implemented the collection of default values when initial values are not specified in the instance description.
+
+Problems
+
+    * (None)
+
+Runtime
+
+    * Since most of the runtime components will be generated on the fly by appropriate rules, it is not necessary to create the components initially. (for example if a signal is sent, the rule will create the signal and the relevant edge thesignal--i-->Signal, etc)
+    * There is one exception to this, which is the need to set up edges for actor behavior execution, which looks like this:
+
+runtimegraph.png
