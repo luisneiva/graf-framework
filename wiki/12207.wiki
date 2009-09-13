@@ -1,0 +1,116 @@
+12207 - UML Reference Animator
+
+UML Reference Animator Life Cycle Processes
+
+Introduction
+
+This document details all processes that this project will undertake. This is a tailoring of the IEEE 12207 standard (1996).
+Primary life cycle processes
+
+Acquisition process
+
+We will not be involved in this process.
+Supply process
+
+Development process
+
+An evolutionary development process will be followed during the life cycle of this project:
+
+   1. Project analysis
+   2. Requirements
+   3. Architectural Design
+   4. Detailed Design
+   5. Implementation
+   6. Testing
+
+Operation process
+
+Maintenance process
+
+We will not be involved in this process, however we will provide technical/ user documentation to help maintenance.
+Supporting processes
+
+Documentation process
+
+    * All documents will be on Alliance wiki.
+    * Documents will follow the IEEE documentation standards.
+    * Once formal project documents such as Management plan, Software Requirements, Concept of Operations,etc has been agreed on by team members/ client, it will be marked with a v1.0 suffix in the title of the document.
+
+Configuration management process
+
+Documents and code that is in development will be under version control.
+
+    * All project documents will be version controlled using the alliance wiki.
+    * All source code will be version controlled using Subversion (SVN).
+
+Files that do not require version control will be placed in the Alliance Resources section.
+
+If file is too large for Alliance, we will place it on SVN, under LargeResources folder: external link: http://svn.anu.edu.au/SE_projects/UML/Large%20Resources
+
+Each folder in SVN will have a associated readme.txt file that introduces the contents of the folder.
+Quality assurance process
+
+The following activities will be undertaken to assure quality:
+
+    * Execution testing - find the errors of the program by executing it.
+          o Unit testing will be carried out by the author. Since our code is in Java, we will be using JUnit as unit testing tool.
+          o Integration testing will be carried out by the author and other team members.
+    * Techical reviews - carried out by whole team in team meetings. The reviews are intended to be informal and follow a walkthrough style. Reviews to detect defects in work products such as requirements, design, code, test cases,etc.
+    * Code will follow Java coding standards insert link here
+    * All documentation will follow IEEE documentation standards.
+    * Daily build and smoke test - code will be built daily and run through a 'smoke test' - simple check to see if the program smokes when it runs.
+          o This assures that code compiles everyday and passes basic requirements.
+          o Will be carried out during implementation phase.
+          o Using Ant build tool and JUnit.
+    * Risks will be managed by having a risk log. This includes the risk, impact, likelilhood, and action to reduce the risk. Risk assessment/ evaluation will be carried out in team meetings.
+
+Verification process
+
+The verification process ensures that the product will meet the requirements (SRS); ie "building the thing right". We will be conducting the following:
+
+    * informal peer reviews of code and documentation (on regular basis)
+    * walkthroughs of code and/or other outputs
+    * testing (unit tests, integration tests, acceptance tests) - this will be conducted along side with development.
+
+We will keep a log of the results of the peer reviews, walkthroughs and tests. Also al log of all the encountered bugs and the resulting actions on those bugs during the testing phase.
+Validation process
+
+The validation process ensures that the delivered product will fullfil its intended use; ie "we have built the right thing". Some of the items that will be selected for validation will include:
+
+    * the final UML Animator program.
+    * the requirements and designs
+    * the UML Animator funtionallities (such as model-to-graph, graph-to-graph transformation, etc)
+    * the graphical user interface design (somewhat)
+
+The following indicates the methods and approaches to validate the above items selected for validation:
+
+    * prototyping and demonstrations to the client and users.
+    * discussions and queries with the client so that we have a clear understanding of the product we are going to deliver
+    * acceptance testing with users (professional modellers)
+
+We will keep a log of all validation activities and results.
+Joint review process
+
+Problems found in the reviews will be documented and assign team members to act upon those problems.
+Audit process
+
+Problem resolution process
+
+Organizational life cycle processes
+
+Management process
+
+A project management plan has been developed. Please see this page
+Infrastructure process
+
+Improvement process
+
+    * Improvements will be communicated during team meetings, mentor meetings, project reviews.
+    * Improvements will be documented on the Alliance wiki page insert link here
+    * An Alliance forum is also set up for team members to suggest improvements.
+
+Training process
+
+    * No formal training will be provided.
+    * Team members are encouraged to share knowledge and skill will the rest of the team. This might range from technical to aspects such as Java runtime errors or to things like configuration of management of deliverable items.
+    * Tutorial documents will be provided for basic tasks, such as using Alliance, Dabble DB, Eclipse.
