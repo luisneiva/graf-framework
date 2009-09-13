@@ -1,0 +1,70 @@
+High Level Design
+
+Written by Kevin O'Shea
+Architecture
+
+Architecture.png
+
+The proposed solution is a plugin for eclipse, that will make use of the Eclipse Modeling Framework (EMF) for reading and displaying models. The proposed system architecture follows the model view controller architectural pattern. The motivation behind this is a result of clear separation between the user interface components and the modelling of the system state.
+Modules
+
+    * View - Draws current system state, and provides mechanisms for controlling animation.
+          o View - Provides generalized functionality for drawing model-based graphical interfaces.
+          o ContentDrawer - Draws the actual content, contained in an ObjectDisplay. Note this drawing will likely be langauge-dependent.
+    * Controller - Responds to events triggered in the view and coordinates changes in the model.
+    * Model - Contains the system state, and associated logic for transforming the data.
+          o Plugin Model - Contains the graph model and plugin system state.
+          o ModelTransformer - Transforms a model into another form.
+                + ModelToGraph - Transformation of a model into an equivalent graph form.
+                + GraphToModel - Transformation of the graph into a form which is suitable for drawing to the view. It creates the ObjectDisplay to be drawn by the view.
+                + ObjectDisplay - A collection of objects holding data to represent information in the graph, in a form more easily drawable by the ContentDrawer. It is the intermediary between the graph and display.
+          o GraphTransformer - Applies graph transformation rules, corresponding to requested actions, to transform the system state. The definitions of the graph rules are held in the GTSRules xml file.
+
+Interactions Between Modules:
+
+    * The Controller contains the main control flow for the system. It is responsible for handling events triggered in the View and causes changes in the Model.
+    * A model resource will originate as a file, which will be accessible to the Controller. The Controller will request the PluginModel to generate the Model based on this file. The PluginModel will cause the ModelToGraphTransformer to transform this file into a corresponding graph.
+    * The ModelToGraph module will provide the functionality to construct the graph through a language-specific transformation for the language used in the model.
+    * The GraphToModel module will provide the transformation of the graph to a language-specific representation of its information. This is then drawable by the ContentDrawer to display the information to the user.
+    * When events are triggered in the view, the Controller will invoke changes in PluginModel that will prompt the GraphTransformer to apply particular graph transformation rules to the current graph state.
+    * Following the application of a graph transformation rule, the GraphToModel module will again construct the useful information from it, which the ContentDrawer will then redraw for the user to see. (Note that users are never exposed to the underlying system state graph - all actions and corresponding changes are expressed through a language-specific interface).
+
+Rationale
+
+    * Highly extendable framework
+    * Seperation of modules defining language-specific elements from modules composing the framework that supports all language bases, which would not require modifications for new languages.
+    * Encapsulation of modules defining language-specific elements (ModelTransformer, and ContentDrawer). The view, controller, model facade, and graph transformations are generalized to apply to any modelling language.
+
+Module Interface Design
+
+HighLevelDesign.png
+ModelToGraph & GraphToModel
+
+    * The ModelToGraph and GraphToModel modules provide a generalized interface to their transformation functionality. When the controller requests that a graph be build from a ModelToGraph object, it simply goes through the abstract buildGraph() method.
+    * For maximum encapsulation, these modules also define a factory that can easily switch between translation classes to use, without having to change any code outside the module. The controller will allow the factory to create the transformation objects, and operate with them through the general interface.
+    * UMLToGraph and XMIToGraph are two example transformation classes from model to graph, and GraphToObjDiag is an example transformation class from graph to model.
+
+ObjectDisplay
+
+    * The classes in this module are also very generalized. Regardless of the particular transformation used, a GraphToModel object will produce an implementation of the ObjectDisplay interface, which is composed of implementations of the DisplayObject interface. These are abstractly used by the ContentDrawer.
+    * ObjDiag is an example of an ObjectDisplay implementation. It holds content for representing an object diagram, which includes both objects (ODObject) and the links between them (ODLink).
+
+ContentDrawer
+
+    * The ContentDrawer provides a general interface for drawing the actual content of the display. When the View is required to update the display, it simply goes through the abstract draw() method of this interface.
+    * Implementations of the ContentDrawer interface will be responsible for providing a graphical drawing for a particular implementation of an ObjectDisplay.
+    * ObjDiagDrawer is an example of a ContentDrawer implementation. It will provide the drawing for an ObjDiag object.
+
+Module Integration
+
+    * As explained above, all modules are designed to operate through a generalized interface, and the model transformation modules also provide a factory for maximum encapsulation.
+    * The example implementations of these modules correspond to particular functionalities in implementing our UML animator. These implementations interact in the following way:
+          o UMLToGraph converts a UML model into an equivalent graph.
+          o GraphToObjDiag converts a graph into an ObjDiag in ObjectDisplay.
+          o This ObjDiag is then used in ObjDiagDrawer to draw the content expressed, when requested by the View.
+
+Rationale
+
+    * Major functionality is defined through general interfaces.
+    * Maximum encapsulation for modules that will vary to support different languages.
+    * Minimal coupling between language-related aspects in different modules.
