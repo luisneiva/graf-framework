@@ -1,0 +1,53 @@
+UML Animator User Documentation
+
+Glossary
+
+Introduction
+
+UML Reference Animator is a free, open source reference model verification tool. In its current implementation, the tool aids UML modelers to verify the semantics of any given UML model. In Model Driven Development, for a given UML model, the modelers may not agree on the underlying semantics. This is a tool that will act as a debugger or interpreter for UML models. It allows the users to 'step through' or 'animate' the model. The modeler inputs a model, including the collection of classes, state machines, test cases, etc, and the animator will help verify if the given model is correct. To verify that the model is correct, the animator relies on Greg O'Keefe's PhD thesis (add reference here) that states that underlying the ambiguous descriptions of UML semantics is a graph transformation system (GTS) - which is clear and formal.
+THIS IMAGE IS OUT OF DATE!!!
+
+umlscreen.jpg
+Installation and Setup
+
+You will need to have:
+
+    * Java 1.6
+    * Eclipse Modeling Framework (EMF) with UML2 support
+    * At least Eclipse Europa [verified by Kevin 11/08 - but I didn't check if earlier versions of eclipse could run it (it is likely that they would be able to - check this!]
+
+Note all of this comes as standard with the Eclipse Modeling Tools bundle available from external link: http://www.eclipse.org/downloads
+Your system should have the following hardware requirements:
+
+    * CPU : 1.0 GHz
+    * RAM : 1GB
+    * HDD: 20GB
+
+Procedures
+
+To run standalone: Run the Controller.java file as a regular java application. To run as an Eclipse plug-in: Set up a project for it in eclipse, then right-click on the project and choose 'Run As' -> 'Eclipse Application'.
+
+We recommend running it as an Eclipse plug-in because this was the targetted runtime environment.
+
+Rough notes about running this stuff:
+
+    * When you run standalone, you get a 'New' button which opens a file chooser to allow you to choose a '.modeltest' file. (Note: currently there is a big 'Animate microwave.modeltest' button on the GUI - this will NOT be staying there so don't talk about it here!)
+    * When you run as plugin, you must right-click on a file in the package explorer and select 'Animate'. The file must have a '.modeltest' file extension.
+    * When running as an eclipse plugin, you do not have to have the Animator view showing when you right-click on something. If it is not showing then it will show itself when you do this. If you want to show it manually (for some reason…), then go to the Window menu and choose 'Show View' -> 'Other…' and then open the 'ModelAnimator' folder and choose 'Animator'.
+    * The first line of a '.modeltest' file must specify the filepath of a model to test. (ie the model that the test case is testing). This path may be relative or absolute.
+    * [Talk about undo(<), redo(>), and reset(<<).] You can undo up to 10 times. (and redo same amount). When you press reset, it resets everything back to the original condition, but it does not re-load from file. If you want to re-load from file, select the file again as a new animation.
+
+Loading in the Model
+
+    * To load in the model, click on the 'New' button, and navigate to the folder that contains the model files. Only model files will have a extension of '.modeltest' could be loaded into the animator. Other formats will be ignored.
+
+Animating the model
+
+Show and Hide
+
+To make the object diagram more readable and user friendly, use the show and hide option. Show and hide will display or hide object attributes and states. This can be useful when the loaded object diagram is large. Click on the [Show] or [hide] links in the object diagram to switch between them.
+Navigating through and rearranging the model
+
+    * To zoom in or out on the model on the UML model, click the (+) or (-) buttons. The (+) button indicates a zoom in and a (-) indicates a zoom out.
+    * To navigate through the movel click on the (<), (>), (/\), (\/) navigation buttons to pan the screen left, right, up, and down respectively.
+    * To rearrange the objects within the model, simply click and hold on the object and drag it to the specified location.
