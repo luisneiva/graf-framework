@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="c103" href="./ODAction.html" title="model.objectDiagram.ODAction" alt="" coords="16,163,168,269"/>
+<area shape="rect" id="c104" href="./ODAttribute.html" title="model.objectDiagram.ODAttribute" alt="" coords="213,131,379,301"/>
+<area shape="rect" id="c105" href="./ODClass.html" title="model.objectDiagram.ODClass" alt="" coords="423,139,686,293"/>
+<area shape="rect" id="c106" href="./ODEvent.html" title="model.objectDiagram.ODEvent" alt="" coords="731,147,883,285"/>
+<area shape="rect" id="c107" href="./ODLink.html" title="model.objectDiagram.ODLink" alt="" coords="928,107,1213,325"/>
+<area shape="rect" id="c108" href="./ODObject.html" title="model.objectDiagram.ODObject" alt="" coords="1258,11,1662,421"/>
+</map>
