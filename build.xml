@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+
+<project name="test" default="javadocs" basedir=".">
+
+	<property name="docs.dir" value="javadoc"/>
+	<property name="src.dir" value="./src"/>
+	<property name="bin.dir" value="./bin"/>
+	
+	<!-- external library files, eg UMLGraph.jar for drawing UML diagrams from code -->
+	<property name="lib.dir" value="lib"/> 
+	
+
+	
+	<!-- location for the junit class paths -->
+	  <path id="classpath.test">
+	    <pathelement location="./lib/junit.jar" />
+	  	<pathelement location="./src"/>
+	  	<pathelement path="./bin"/>	
+	  </path>
+	
+	<target name="compile">
+		  <delete includeemptydirs="true">
+		    <fileset dir="${bin.dir}" includes="**/*"/>
+		  </delete>
+		<javac srcdir="${src.dir}" destdir="${bin.dir}" >			
+		      <classpath refid="classpath.test" />
+		</javac>
+	</target>
+	
+	
+	<target name="clean">
+		<delete dir="javadocs"/>
+    </target>
+	
+	<!-- generate javadoc, with UML diagrams from code. -->
+	<target name="javadocs" depends="clean">
+	        <javadoc sourcepath="./src" packagenames="org.umlgraph.doclet.*,controller.*, model.*,model.graphTransformer.*, model.objectDiagram.*, view.*" destdir="./javadoc" 
+	                 private="true">
+	            <fileset dir="${src.dir}">
+	              <include name="**/*.java"/>
+	              <exclude name="**/*Test*.java"/>
+	            </fileset>
+	                <doclet name="org.umlgraph.doclet.UmlGraphDoc" path="lib/UMLGraph.jar">
+	                	<!--
+	                        <param name="-inferrel"/>
+	                        <param name="-inferdep"/>
+	                        <param name="-hide" value="java.*"/>
+	                        <param name="-collpackages" value="java.util.*"/>
+	                        <param name="-qualify"/>
+	                        <param name="-postfixpackage"/>
+	                        <param name="-nodefontsize" value="9"/>
+	                        <param name="-nodefontpackagesize" value="7"/>
+	                        <param name="-link" value="http://java.sun.com/j2se/1.5.0/docs/guide/javadoc/doclet/spec"/>
+	                        <param name="-link" value="http://java.sun.com/j2se/1.5/docs/api"/> 
+	                    -->
+	        	        <param name="-attributes" />
+	        	        <param name="-operations" />
+	        	        <param name="-qualify" />
+	        	        <param name="-types" />
+	        	        <param name="-visibility" />	                	
+	                </doclet>	        	
+	        </javadoc>
+		  <apply executable="dot" dest="${docs.dir}" parallel="false">
+		    <arg value="-Tpng"/>
+		    <arg value="-o"/>
+		     <targetfile/>
+		     <srcfile/>
+		     <fileset dir="${docs.dir}" includes="*.dot"/>
+		     <mapper type="glob" from="*.dot" to="*.png"/>
+		  </apply>		
+	</target>
+
+	<!-- Run unit tests (it is expected that Test classes will follow java conventions and have
+	     'Test' in their file name)
+	     -->
+	<target name="Junit">
+		<junit printsummary="yes" haltonfailure="yes" showoutput="yes" >
+		        <classpath>
+		                <pathelement path="${build}"/>
+		        </classpath>                   
+
+		        <batchtest fork="yes" todir="${reports}/raw/">
+		                <formatter type="xml"/>
+		                <fileset dir="${src.dir}"> 
+		                        <include name="**/*Test*.java"/>
+		                </fileset>
+		        </batchtest>
+		</junit> 	
+	</target>
+</project>

@@ -1,0 +1,87 @@
+This is the README file to the AGG system (Version 1.6.4).
+
+
+*** REQUIREMENTS ***
+
+To run this program, you will need the following:
+
+Hardware and OS:  everything that can run java java 1.6.0
+
+Software: java 1.6.0  see http://www.sun.com/software/java
+
+Jar files: 
+          agg_V164_classes.jar
+and
+          jgl3.1.0.jar  (Java Generic Libraries )
+you will get with our AGG zip archive.
+
+
+*** INSTALLATION ***
+
+I guess you have decompressed our package. Otherwise I wonder
+how you can read this README ;-)
+
+Make sure that you have installed java properly.
+
+To install AGG on UNIX/LINUX platform please use our script "install.sh".
+To install AGG on WINDOW platform the script "agg.bat" can be helpful.
+
+*** PLEASE NOTE ***
+It is usful to have a local installation of the AGG software.
+If you want to make the AGG installation as a root and 
+to launch it as a normal user,
+please do not change to the AGG root directory to run it.
+In this case you will get problems to load a graph grammar from a file 
+because AGG will try to write a needed temp file to the root directory
+without permission to do this.
+In this case you can create a link to the AGG application.
+
+*** PLEASE NOTE ***
+The current AGG version contains an extention of the graph layout, namely,
+graph layout algorithms from Eclipse Zest Project. 
+This extention is optional. 
+To activate it the Zest graph layout JAR file
+org.eclipse.zest.layouts_1.0.0.v20080226.jar from GEF-Zest-3.4.1.zip
+should be added to the CLASSPATH setting. 
+You can download this ZIP file from 
+Eclipse GEF Downloads -> Zest+Draw2D -> Runtime
+(href="http://www.eclipse.org/gef/downloads/").
+
+*** START ***
+
+To start AGG on UNIX/LINUX just run: 	agg.sh
+
+              or type:	java -Xmx1000m agg.gui.AGGAppl
+
+
+*** Critical Pair Analysis in AGG *** 
+
+To save time and memory you can compute critical pairs using command line:
+	java -Xmx1000m agg.gui.AGGComputeCriticalPairs [C | D] name.ggx
+or
+	java -Xmx1000m agg.gui.AGGComputeCriticalPairs name.cpx
+
+alternatively you can use:
+
+	java -Xmx1000m agg.parser.ComputeCriticalPairs [C | D] name.ggx
+
+Please run  
+	java -Xmx1000m agg.parser.ComputeCriticalPairs  
+without parameters to see the list of possible options.
+
+*** PLEASE NOTE ***
+	
+You can also use the script "ccp.sh" on UNIX/LINUX platform
+and "ccp.bat" on WINDOW. Please check the environment settings
+of this script and pass it if needed.
+
+
+*** MISC ***
+
+If something went wrong please feel free to contact us at:
+
+http://tfs.cs.tu-berlin.de/agg
+
+or email:
+
+agg-team@tfs.cs.tu-berlin.de
