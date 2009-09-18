@@ -84,5 +84,7 @@ Problems
 
 === Runtime===
  * Since most of the runtime components will be generated on the fly by appropriate rules, it is not necessary to create the components initially. (for example if a signal is sent, the rule will create the signal and the relevant edge thesignal--i-->Signal, etc)
- * There is one exception to this, which is the need to set up edges for actor behavior execution, which looks like this: \\
+ * There is one exception to this, which is the need to set up edges for actor behavior execution, which looks like this: 
+
+
 http://graf-framework.googlecode.com/files/runtimegraph.png
