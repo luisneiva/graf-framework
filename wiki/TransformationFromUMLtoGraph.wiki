@@ -71,7 +71,7 @@ http://graf-framework.googlecode.com/files/InstanceConversionLinkNoName.png
   ** An edge from objnameclassifierBehaviorExecution to 'BehaviorExecution' with label 'i'.
   ** An edge from objname to objnameclassifierBehaviorExecution with label 'execution'.
   ** An edge from objnameclassifierBehaviorExecution to objname with label 'host'.
-  ** An edge from objnameclassifierBehaviorExecution to objname's statemachine with label 'behavior'. To find objname's statemachine, I traverse objname\-\-i\-\->classname\-\-classifierBehavior\-\->statemachine. \\
+  ** An edge from objnameclassifierBehaviorExecution to objname's statemachine with label 'behavior'. To find objname's statemachine, I traverse objname--i-->classname--classifierBehavior-->statemachine. \\
 http://graf-framework.googlecode.com/files/InstanceConversion.png
 
 Decisions Made:
@@ -82,7 +82,7 @@ Decisions Made:
 Problems
  * (None)
 
-h3 Runtime
- * Since most of the runtime components will be generated on the fly by appropriate rules, it is not necessary to create the components initially. (for example if a signal is sent, the rule will create the signal and the relevant edge thesignal\-\-i\-\->Signal, etc)
+=== Runtime===
+ * Since most of the runtime components will be generated on the fly by appropriate rules, it is not necessary to create the components initially. (for example if a signal is sent, the rule will create the signal and the relevant edge thesignal--i-->Signal, etc)
  * There is one exception to this, which is the need to set up edges for actor behavior execution, which looks like this: \\
 http://graf-framework.googlecode.com/files/runtimegraph.png
