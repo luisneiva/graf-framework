@@ -45,7 +45,9 @@ Problems:
 
 Consider the following graph:
 
-http://graf-framework.googlecode.com/files/grapheg8.jpg|a graph with multiple pattern matches}
+http://graf-framework.googlecode.com/files/grapheg8.jpg
+
+
 
 Suppose we have found one pattern match for this graph and it is
 
