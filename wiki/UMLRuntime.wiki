@@ -1,37 +1,39 @@
-UML Runtime Structures and Processes
+== UML Runtime Structures and Processes==
 
-Written by Greg O'Keefe
-Description
+__Written by Greg O'Keefe__
 
-This page captures problems we have encountered with UML runtime semantics, and with their representation using a graph transformation system. Our decisions and their justifications on these matters are also recorded here.
-Runtime Model
+=== Description===
 
-Chapter 13 of the UML definition non-normatively describes a model of UML's runtime structures, including classes such as BehaviorExecution, EventOccurrence and so on. Greg's thesis suggests that this model ought to be included in the normative definition, and in each UML run-time system state.
+This page captures problems we have encountered with UML runtime semantics, and with their representation using a graph transformation system.  Our decisions and their justifications on these matters are also recorded here.
 
-At one point, our plan was to create this run-time model as a graph, and include it explicitly in the system state graphs. However, Kevin's investigations into the Transformation from UML to Graph have revealed that much of the metamodel, and this run-time model need not explicitly appear. It is sufficient to add those parts of the metamodel which are connected to M1 model elements, and those parts of the runtime model that are connected run-time elements connected to M0 objects. For example, when a signal is sent, a SendSignalOccurrence will be created, which will be an instance of this run-time element. Adding the edge will also add SendSignalOccurrence, if it is not there already.
+
+=== Runtime Model===
+
+Chapter 13 of the UML definition non-normatively describes a model of UML's runtime structures, including classes such as BehaviorExecution, EventOccurrence and so on.  Greg's thesis suggests that this model ought to be included in the normative definition, and in each UML run-time system state.   
+
+At one point, our plan was to create this run-time model as a graph, and include it explicitly in the system state graphs.  However, Kevin's investigations into the  [Transformation from UML to Graph | umltographprobsdecisions] have revealed that much of the metamodel, and this run-time model need not explicitly appear.  It is sufficient to add those parts of the metamodel which are connected to M1 model elements, and those parts of the runtime model that are connected run-time elements connected to M0 objects.  For example, when a signal is sent, a SendSignalOccurrence will be created, which will be an instance of this run-time element.  Adding the edge will also add SendSignalOccurrence, if it is not there already.
 
 It would clarify the nature of the system states to construct the complete run-time model, but this is not essential to make the animator run.
 
-Decision: we will not include the complete run-time model in each system-state. Parts of it will be added as needed.
-Action Enablement and Execution
+__Decision:__ we will not include the complete run-time model in each system-state.  Parts of it will be added as needed.
 
-When a behavior is invoked, a behavior execution is created. This will execute each action of its behavior according to UML's execution rules. There are two kinds of control, explicit sequence and data flow. Explicit sequence is expressed using model elements such as SequenceNode, DecisionNode, ForkNode, JoinNode, LoopNode and ControlFlow. Each action has input Pins, which receive input data required for the action to execute. Each pin has a multiplicity, just like and association end (Property). An action is only eligible to execute once each of its input pins has at least the lower bound number of values on it.
+h3 Action Enablement and Execution
+When a behavior is invoked, a behavior execution is created.  This will execute each action of its behavior according to UML's execution rules.  There are two kinds of control, explicit sequence and data flow.  Explicit sequence is expressed using model elements such as SequenceNode, DecisionNode, ForkNode, JoinNode, LoopNode and ControlFlow.  Each action has input Pins, which receive input data required for the action to execute.  Each pin has a multiplicity, just like and association end (Property). An action is only eligible to execute once each of its input pins has at least the lower bound number of values on it.
 
-The semantics of the control flow is expressed in terms of "tokens" (it is loosely based on petri-net theory). Many applications will not need this kind of control at all, since the only constraint on execution is the data prerequisites. Our microwave example falls into this category. Since the control flow is rather complicated, and not needed for our example, we will defer implementing it. that is, for now, we will not concern ourselves with the passing of "tokens", only with values being placed on "pins".
+The semantics of the control flow is expressed in terms of "tokens" (it is loosely based on petri-net theory).  Many applications will not need this kind of control at all, since the only constraint on execution is the data prerequisites.  Our microwave example falls into this category.  Since the control flow is rather complicated, and not needed for our example, we will defer implementing it.  that is, for now, we will not concern ourselves with the passing of "tokens", only with values being placed on "pins".
 
-Decision: We will ignore all explicit control flow, implementing only the data prerequisite control in the initial prototype.
+__Decision:__ We will ignore all explicit control flow, implementing only the data prerequisite control in the initial prototype.
 
-Problem: We need to keep track of which actions a behavior execution has executed, to be sure that each action is executed once and only once. One possibility is to add an "execute" edge from the behavior execution to each of its actions when the behavior execution is created (when the behavior is invoked). The difficulty is how to "find" these actions, since they form a tree with all kinds of labels. Kevin says there is no uniformly named link from a behavior to each of its actions, however, Figure 12.2 in the UML definition indicates that there should be one called "node" (or "ownedElement" which it subsets).
+__Problem:__ We need to keep track of which actions a behavior execution has executed, to be sure that each action is executed once and only once.  One possibility is to add an "execute" edge from the behavior execution to each of its actions when the behavior execution is created (when the behavior is invoked).  The difficulty is how to "find" these actions, since they form a tree with all kinds of labels.  Kevin says there is no uniformly named link from a behavior to each of its actions, however, Figure 12.2 in the UML definition indicates that there should be one called "node" (or "ownedElement" which it subsets).
+ * Kevin 09/08: In the generated graphs, there is indeed a 'node' edge from an activity to each of its actions. However this only applies to 'top-level' actions - ie if an action has an ActionInputPin, which has another action, then there is no 'node' edge from the original activity to this lower action. However I could implement a scheme that attempts to dig down this tree to forcefully create these edges that we want...
 
-    * Kevin 09/08: In the generated graphs, there is indeed a 'node' edge from an activity to each of its actions. However this only applies to 'top-level' actions - ie if an action has an ActionInputPin, which has another action, then there is no 'node' edge from the original activity to this lower action. However I could implement a scheme that attempts to dig down this tree to forcefully create these edges that we want…
+=== Pins===
 
-Pins
+"Recall the discussion in Chapter 3 of the core metamodel fragment shown in Figure 3.2 (on Page 35). This fragment has classes Property and Classiﬁer and two associations between them, classiﬁer and type. We noted that this fragment resembles the category theoretic diagram which deﬁnes graphs. We have an analogous situation here with Pins and Behaviors. Because Pin is a kind of TypedElement, each Pin has a type which is a Classiﬁer. Each Pin also belongs, perhaps transitively, to an Activity, which is a kind of Behavior and hence a Classiﬁer. In Chapter 3, we converted the model graph with properties as nodes into a type graph with properties as edges. The equivalent move here is to turn the Pins into labelled edges, so that valid run-time states will have edges from behavior executions to their pin-values, labelled by the pins name. We shall adopt this as a working hypothesis of run-time pin values."  \[Greg's thesis, Page 105\].
 
-"Recall the discussion in Chapter 3 of the core metamodel fragment shown in Figure 3.2 (on Page 35). This fragment has classes Property and Classiﬁer and two associations between them, classiﬁer and type. We noted that this fragment resembles the category theoretic diagram which deﬁnes graphs. We have an analogous situation here with Pins and Behaviors. Because Pin is a kind of TypedElement, each Pin has a type which is a Classiﬁer. Each Pin also belongs, perhaps transitively, to an Activity, which is a kind of Behavior and hence a Classiﬁer. In Chapter 3, we converted the model graph with properties as nodes into a type graph with properties as edges. The equivalent move here is to turn the Pins into labelled edges, so that valid run-time states will have edges from behavior executions to their pin-values, labelled by the pins name. We shall adopt this as a working hypothesis of run-time pin values." [Greg's thesis, Page 105].
+__Decision:__ Values on pins will be represented by edges from the behavior execution to the value, labelled by the pin name.  (Greg's example system state graphs may need to be modified to comply with this)
+h3 Parallelism
 
-Decision: Values on pins will be represented by edges from the behavior execution to the value, labelled by the pin name. (Greg's example system state graphs may need to be modified to comply with this)
-Parallelism
+The UML definition makes it clear that objects can act in parallel.  It is possible to allow true parallel rule application in a graph transformation system, but this would complicate the implementation.  Further investigation is needed, but we expect that interleaving of rule applications will be adequate.
 
-The UML definition makes it clear that objects can act in parallel. It is possible to allow true parallel rule application in a graph transformation system, but this would complicate the implementation. Further investigation is needed, but we expect that interleaving of rule applications will be adequate.
-
-Decision: We will not attempt true parallelism in the intitial implementation.
+__Decision:__ We will not attempt true parallelism in the intitial implementation.
