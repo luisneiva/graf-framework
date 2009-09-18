@@ -1,6 +1,6 @@
 == Transformation from UML to Graph - Approaches, Decisions, and Pending Problems==
 
-%%~~Written by Kevin O'Shea~~%%
+__Written by Kevin O'Shea__
 
 === Description ===
 
@@ -75,14 +75,14 @@ http://graf-framework.googlecode.com/files/InstanceConversionLinkNoName.png
 http://graf-framework.googlecode.com/files/InstanceConversion.png
 
 Decisions Made:
-* I have decided to use a text file description of an object diagram, rather than trying to parse an object diagram generated from a modelling tool. This is primarily for simplicity of this prototype, but it also allows greater flexibility in describing test cases - eg can specify initial states for objects.
-* In this instance description, I have decided that it is required to specify an initial state for all objects declared. This is because the instance description specifies a starting state, and it would be illegal for an object to have no current state (it is not possible to choose an initial state because there could be multiple initial pseudostates to choose from)
-* In this example transformation, I have not implemented the collection of default values when initial values are not specified in the instance description.
+ * I have decided to use a text file description of an object diagram, rather than trying to parse an object diagram generated from a modelling tool. This is primarily for simplicity of this prototype, but it also allows greater flexibility in describing test cases - eg can specify initial states for objects.
+ * In this instance description, I have decided that it is required to specify an initial state for all objects declared. This is because the instance description specifies a starting state, and it would be illegal for an object to have no current state (it is not possible to choose an initial state because there could be multiple initial pseudostates to choose from)
+ * In this example transformation, I have not implemented the collection of default values when initial values are not specified in the instance description.
 
 Problems
-* (None)
+ * (None)
 
 h3 Runtime
-* Since most of the runtime components will be generated on the fly by appropriate rules, it is not necessary to create the components initially. (for example if a signal is sent, the rule will create the signal and the relevant edge thesignal\-\-i\-\->Signal, etc)
-* There is one exception to this, which is the need to set up edges for actor behavior execution, which looks like this: \\
- {image:worksite:/Wiki Attachments/runtimegraph.png|runtimegraph.png}
+ * Since most of the runtime components will be generated on the fly by appropriate rules, it is not necessary to create the components initially. (for example if a signal is sent, the rule will create the signal and the relevant edge thesignal\-\-i\-\->Signal, etc)
+ * There is one exception to this, which is the need to set up edges for actor behavior execution, which looks like this: \\
+http://graf-framework.googlecode.com/files/runtimegraph.png
