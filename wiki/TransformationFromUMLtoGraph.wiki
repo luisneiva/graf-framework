@@ -48,7 +48,7 @@ Approach:
 
 Decisions Made:
 
- * The names (strings) of the graph nodes are taken from this order of precedence: value, name, identifier. For example if an element did not have a value attribute but did have a name then the name would be used. The reason I have made value as highest precedence is because if something has a value attribute it is usually the most important part - eg a 'defaultValue' node can have name="somename" and value=5, the value is more important. (note however that the name is not ignored - it is captured as a seperate node: 5\-\-name\-\->somename).
+ * The names (strings) of the graph nodes are taken from this order of precedence: value, name, identifier. For example if an element did not have a value attribute but did have a name then the name would be used. The reason I have made value as highest precedence is because if something has a value attribute it is usually the most important part - eg a 'defaultValue' node can have name="somename" and value=5, the value is more important. (note however that the name is not ignored - it is captured as a seperate node: 5--name-->somename).
  * 'ElementImport' elements are ignored because they produce redundant duplicated edges
  * When converting elements' attributes into edges, the identifier attributes (name, value, identifier) are excluded because they are used in the node name itself.
  * There is a problem that arises when nodes have the same name. For example if two different state machines have the same name for one of their states then the generated graph will assume that they are the same node (causing potential chaos). A solution to this is to include the element's identifier in the node name (instead of only if it does not have a name or value) so that all names will be unique - eg CommonName_x32daf1...21. But note that this would also make generated graphs difficult to read. Since this implementation is primarily for demonstrative purposes, I have chosen not to implement this solution here.
@@ -65,13 +65,17 @@ Approach:
  * To specify an instance, I use a text file to specify objects, initial states, and attribute values. This is read in and parsed to generate the necessary edges in the graph.
  * Objects are declared as: 'objname : ClassName'. These are translated to an edge from objname to ClassName with label 'i'.
  * Attribute values are declared as 'attrname = val'. These are translated to an edge from objname to val with label attrname.
- * Links are declared as 'obj1 <leftlabel, rightlabel> obj2'. These are translated to an edge from obj1 to obj2 with label rightlabel and an edge from obj2 to obj1 with label leftlabel. (if an association has a name, and the ends are owned by classes, the actual link (node) is useless). \\
+ * Links are declared as 'obj1 <leftlabel, rightlabel> obj2'. These are translated to an edge from obj1 to obj2 with label rightlabel and an edge from obj2 to obj1 with label leftlabel. (if an association has a name, and the ends are owned by classes, the actual link (node) is useless). 
+
+
 http://graf-framework.googlecode.com/files/InstanceConversionLinkNoName.png
  * Initial states are declared as '{init_state}'. These are translated to an edge from objnameclassifierBehaviorExecution to 'init_state' with label 'activeState'. In addition to this I also have to create the following edges:
   ** An edge from objnameclassifierBehaviorExecution to 'BehaviorExecution' with label 'i'.
   ** An edge from objname to objnameclassifierBehaviorExecution with label 'execution'.
   ** An edge from objnameclassifierBehaviorExecution to objname with label 'host'.
-  ** An edge from objnameclassifierBehaviorExecution to objname's statemachine with label 'behavior'. To find objname's statemachine, I traverse objname--i-->classname--classifierBehavior-->statemachine. \\
+  ** An edge from objnameclassifierBehaviorExecution to objname's statemachine with label 'behavior'. To find objname's statemachine, I traverse objname--i-->classname--classifierBehavior-->statemachine. 
+
+
 http://graf-framework.googlecode.com/files/InstanceConversion.png
 
 Decisions Made:
