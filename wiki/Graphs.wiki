@@ -1,0 +1,169 @@
+== Graphs==
+
+As far as our animator is concerned, a graph is a multiset of nodes connected by edges. Edges have labels. Nodes do not have labels. A multiset is a list where order doesn’t matter and there can be multiple occurrences of one element.
+
+A graph can be represented as a list of the following (from node, edge label, to node).
+
+Even though nodes do not have labels, we give them names for convenience.
+
+http://graf-framework.googlecode.com/files/grapheg1.png
+
+The above graph can also be represented as:
+
+C y A
+C x B
+B z A
+
+Note that in this representation, every name of a node (for example, C) represents the same node. Lines 1 and 2 refer to the same node C. However, two lines with the same label are not the same edge.
+
+=== Subgraphs ===
+
+For Graph A to be a subgraph of Graph B, for every edge in Graph A there must be an equivalent edge in Graph B.  If Graph A is a subgraph of Graph B and Graph B is a subgraph of Graph A, then Graph A and Graph B are equal.
+
+Consider the following example:
+
+Graph A:
+
+B x A
+D y B
+
+
+Graph B:
+
+B x A
+B x C
+D y B
+
+In this example, Graph A is a subgraph of Graph B because all the edges in A are in B.  However, Graph B is not a subgraph of Graph A because Graph A does not contain the edge B x. C
+
+Another example:
+
+Graph A
+B x A
+
+Graph B
+B x A
+B x A
+
+In this example, Graph A is a subgraph of Graph B but not visa versa.
+
+=== Variable Graphs===
+
+A _variable graph_ is a graph where labels and nodes can be variables. So far, we have only looked at constant variables and labels.
+
+http://graf-framework.googlecode.com/files/grapheg2.png
+
+In this graph the node called ?D is a variable and the label ?z is a variable. We use a leading question mark to indicate a variable node or label.
+
+A graph with variables represents an infinite set of graphs. A graph is represented by the variable graph if it can be obtained by substituting a node for each node variable, and a label for each label variable.
+
+That is, to find a graph in this set, simply replace the node variables and the label variables with constants.
+
+http://graf-framework.googlecode.com/files/grapheg3.png
+
+The above graph is an instance of the variable graph.
+
+http://graf-framework.googlecode.com/files/grapheg4.png
+
+An instance of the variable graph is a subgraph of the above graph. It has edges that are not in the variable graph.
+
+http://graf-framework.googlecode.com/files/grapheg5.png
+
+However, this graph is not an instance of the variable graph because it doesn’t contain a node A, connected in the same way as in the variable graph.
+
+=== Rules and graph transformations===
+A graph is transformed using a rule. A rule consists of two variable graphs, a before graph and an after graph. In practice, it is only the graphs in rules that contain variable nodes and edges.
+
+The first step in graph transformation is making sure the rule can be applied. An instance of the before graph must be a subgraph of the input (that is, the graph we want to transform). If it is not then the transformation cannot be applied.
+
+If an instance of the before graph is a subgraph of the input then we can transform the part of the input that is contained in the before graph into the corresponding instance of the after graph. (The same substitution of variables for constants must be applied to both before and after variable graphs.) Below is an example of a transformation.
+
+http://graf-framework.googlecode.com/files/grapheg6.png
+
+To explain in more detail, we will look at a certain algorithm for the transformation. This code assumes the graph is being represented as a list of edges.
+
+{{{
+Check that the before graph is a subgraph of the input. If it is not, then stop.
+Make a list of all the edges that are in the before graph, but not the after graph.
+Make a list of all the edges that are in the after graph, but not in the before graph.
+Make a list of all the nodes that are in the before graph, but not the after graph.
+Remove from the input all the edges in the first list.
+Add to the input all the edges in the second list.
+}}}
+
+This code does not deal with variable edges. One way to deal with variable edges is to modify the before and after graphs so that all instances of variable nodes and variable edges are replaced with constant nodes and edges, according to the nodes and edges of the input graph. This will occur after the check for homomorphism but before making the list of edges in the before graph but not the after graph.
+
+=== Negative application condition graphs===
+In addition to before and after graph, rules can optionally have negative application condition graphs (also known as forbidden graphs). Negative application condition graphs contain a list of edges that aren’t necessarily connected. If any one of these edges appears in input graph then the before graph is not a subgraph of the input. 
+
+If a negative application condition graph contains variable nodes or edges then first resolve the variables by comparing the before and input graphs. Then check if any forbidden edges are in the input.
+In the example below the before graph is not a subgraph of the input only because of the negative application condition graphs.
+
+http://graf-framework.googlecode.com/files/grapheg7.jpg
+
+===Pattern Matching===
+
+Pattern matching is the process of determining if a rule’s before graph is the subgraph of an input. Pattern matching is much more complicated than applying the rule's transformation.
+
+A pattern match can be represented as a list of assignments of variables in the before graph to constants in the input graph.
+
+A single before graph and a single input graph can give multiple pattern matches.
+
+http://graf-framework.googlecode.com/files/grapheg8.jpg
+
+The above graph has ten pattern matches. They include:
+
+?D := B, ?K := H, ?J := G
+?D := A, ?K := C, ?J := G
+?D := A, ?K := G, ?J := C
+
+=== Dealgebrization===
+
+Dealgebrization is a process which turns all of a graph’s edges into nodes.
+
+http://graf-framework.googlecode.com/files/grapheg9.jpg
+
+In a dealgebrized graph there are only two types of edges: to and from.
+
+Note that when you are representing a graph as a list of edges with from, label, to, dealgebrization creates problems. Consider the following example.
+
+http://graf-framework.googlecode.com/files/grapheg10.jpg
+
+Here we have two nodes with the same name. The representation of this as a list of edges would be:
+
+x from A
+x to B
+x to C
+x from A
+
+This can not be reconstructed into the original graph.
+
+The best way to solve this problem that I can think of is to add a unique string to the end of every edge label before dealgebrization. For example:
+
+x#1 from A
+x#1 to B
+x#2 from A
+x#2 to C
+
+This allows dealgebrization to be reversed. (Realgebrization?)
+
+The main benefit of this process (at least from the point of view of developing graph transformation prototypes) is that it eliminates variable edges by turning them into variable nodes. Below is an example.
+
+http://graf-framework.googlecode.com/files/grapheg11.jpg
+
+=== Input parameters===
+
+Recall the graph with ten possible fits:
+
+http://graf-framework.googlecode.com/files/grapheg8.jpg
+
+The graphs we deal with often look like this but we usually don’t care about all possible pattern matches. For example, we may only care about matches where ?J is assigned to equal G and ?D is assigned to equal B. This may be because we have other information about the graph.
+
+In order to focus on just the transformations we care about, we use input parameters. Using the input parameters:
+
+?J := G and
+?D := B
+the rule will now only produce one pattern match, that is:
+?J := G
+?D := B
+?K := H
