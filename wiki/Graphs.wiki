@@ -11,7 +11,9 @@ http://graf-framework.googlecode.com/files/grapheg1.png
 The above graph can also be represented as:
 
 C y A
+
 C x B
+
 B z A
 
 Note that in this representation, every name of a node (for example, C) represents the same node. Lines 1 and 2 refer to the same node C. However, two lines with the same label are not the same edge.
@@ -25,13 +27,16 @@ Consider the following example:
 Graph A:
 
 B x A
+
 D y B
 
 
 Graph B:
 
 B x A
+
 B x C
+
 D y B
 
 In this example, Graph A is a subgraph of Graph B because all the edges in A are in B.  However, Graph B is not a subgraph of Graph A because Graph A does not contain the edge B x. C
@@ -39,10 +44,13 @@ In this example, Graph A is a subgraph of Graph B because all the edges in A are
 Another example:
 
 Graph A
+
 B x A
 
 Graph B
+
 B x A
+
 B x A
 
 In this example, Graph A is a subgraph of Graph B but not visa versa.
@@ -114,8 +122,11 @@ http://graf-framework.googlecode.com/files/grapheg8.jpg
 The above graph has ten pattern matches. They include:
 
 ?D := B, ?K := H, ?J := G
+
 ?D := A, ?K := C, ?J := G
+
 ?D := A, ?K := G, ?J := C
+
 
 === Dealgebrization===
 
@@ -132,8 +143,11 @@ http://graf-framework.googlecode.com/files/grapheg10.jpg
 Here we have two nodes with the same name. The representation of this as a list of edges would be:
 
 x from A
+
 x to B
+
 x to C
+
 x from A
 
 This can not be reconstructed into the original graph.
@@ -141,8 +155,11 @@ This can not be reconstructed into the original graph.
 The best way to solve this problem that I can think of is to add a unique string to the end of every edge label before dealgebrization. For example:
 
 x#1 from A
+
 x#1 to B
+
 x#2 from A
+
 x#2 to C
 
 This allows dealgebrization to be reversed. (Realgebrization?)
@@ -162,8 +179,13 @@ The graphs we deal with often look like this but we usually don’t care about a
 In order to focus on just the transformations we care about, we use input parameters. Using the input parameters:
 
 ?J := G and
+
 ?D := B
+
 the rule will now only produce one pattern match, that is:
+
 ?J := G
+
 ?D := B
+
 ?K := H
