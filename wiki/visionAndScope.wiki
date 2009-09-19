@@ -1,72 +1,87 @@
-Business Requirements
-Background
-Modellers resort to time consuming discussions and meetings in order to have consensus on a model and its meaning. Also, it is difficult to verify a group’s understandings with a consistent, unbiased and reference interpretation of a modelling language. This problem arises often with the Universal Modelling Language, but affects all modelling languages. Currently, there are animators for select modelling languages, but these are inflexible and not recognised as references for the language.
-Business Opportunity
-Improving collaborative modelling by providing the developer community with a centralised framework to build reference model animators for any modelling language.
-Business Objective
+== Business Requirements ==
+=== Background ===
+Modellers of all sorts resort to time consuming discussions and meetings in order to have consensus on a model and its meaning. It is difficult to verify a group’s understandings with a consistent, unbiased and reference interpretation of a modelling language. Whether the modeller is a systems analyst or software architect, clear communication is critical and worth paying for to professionals.
+
+Communication difficulties arise often with the Unified Modelling Language (UML), a widely used language in software engineering, design and in management. Ambiguity reduces the applicability and feasibility of all modelling languages, and as a result, there is a need for a reliable definition. Currently, there are model animators for select modelling languages, but these are inflexible and not recognised as references for the language.
+
+
+=== Business Opportunity ===
+To improve collaborative modelling by providing the developer community with a centralised framework to build reference model animators for any modelling language, especially UML-like languages.
+
+=== Business Objective ===
 Have the developer community add at least one definition for a modelling language and one group of modellers improve their collaborative understanding with the additions
-Customer Need
 
-   1. Developers: A reliable framework on which to add modelling language definitions for reference animation.
-   2. Modellers: A clearly described reference definition of their particular model written in any modelling language.
+=== Customer Need ===
+  # Developers: A reliable framework on which to add modelling language definitions for reference animation.
+  # Modellers: A clearly described reference definition of their particular model written in their modelling language.
 
-Features
+=== Features ===
 A model animator framework designed to support many modelling languages and assist in the communication of ideas animating models according to language definitions.
-Vision of the solution
-Vision Statement
-The generic model animator is a model animator framework. It is for software developers who have a need to define modelling languages and modellers who need to use these definitions to communicate more effectively. The system is an animator that uses graph transformations to rigorously complete model state transitions to a level suitable for reference animators, and is designed to support languages like UML. Our product is a flexible animator framework that supports language definitions, unlike language specific animators already available.
-Major Features
 
-    * Reliably animate models by applying graph theory
-    * Designed to support UML-like modelling language definitions as an example use-case.
 
-Assumptions and Dependencies
 
-    * Modellers will be providing files of models to be animated.
-    * Users will have the Eclipse IDE.
+== Vision of the solution==
+=== Vision Statement===
+The generic model animator is a model animator framework designed to be adapted for different languages. It is for software developers who have a need to define modelling languages and then modellers who need to use these definitions to communicate more effectively. The system has particular relevance to model driven development, where models embody the value of the work, and also relevant to the modelling of business processes. 
 
-Scope and Limitations
-Scope of Initial Release
+The system is an animator that uses graph transformations to rigorously complete model state transitions to a level suitable for reference animators, and is designed to support languages like UML. Our product is a flexible animator framework that supports language definitions, unlike language specific animators already available.
+
+Direct users such as 
+
+=== Major Features===
+ * Rigorously and mathematically animate models by applying graph transformation and graph theory.
+ * Designed to support the non-determinism in UML and other modelling languages.
+ * User interface optimised for UML and UML-like modelling language definitions
+ * Provides a reference implementation of a subset of UML as a starting point and guide to defining new languages.
+ * Operates as part of The Eclipse IDE or as a standalone application.
+ * The flexibility with language definitions makes it relevant to modelling and its applications in the present and the future.
+
+=== Assumptions and Dependencies===
+ * Modellers will be providing files of models to be animated.
+ * Users will have the Eclipse IDE.
+
+
+
+== Scope and Limitations==
+=== Scope of Initial Release===
 The initial release focuses on the attraction of developers to continue the project. It emphasises:
-Functionality
 
-    * Ability to define a modelling language as a graph
-    * Support for complex graph transformations
-    * A simple graphical user interface to visualise model animation
+==== Functionality (~~What it can do~~)====
+ * Ability to define a modelling language as a graph
+ * Support for complex graph transformations
+ * Predifined reference implementation of a small subset of UML
+ * Ability to select execution paths and deal with non-determinism in modelling languages.
 
-Usability
+==== Usability (~~How easily it can be done~~)====
+ * Ability to define actions graphically as graph transformations
+ * State diagram merged with object diagram in predefined UML language definition.
+ * A simple graphical user interface to visualise model animation
+ * Graphical user interface mapped on state/object diagram.
 
-    * Ability to define actions as graph transformations for the language
-    * A language definition for a small subset of UML as a guide
-    * Support for animation of a simple UML model as a demonstration
 
-Reliability
+==== Reliability====
+ * Use of a verified graph transformation engine to provide correctness.
+ * Graph transformations of the UML reference derived from Greg's Thesis and UML definition. (~~provide link~~)
 
-    * Use of a verified graph transformation engine to provide correctness.
+==== Portability====
+ * All platforms supporting java and the Eclipse IDE will be supported.
 
-Portability
+=== Scope of Subsequent Releases===
+==== Functionality====
+ * A more advanced graphical user interface, with features such as intelligent model navigation, model filtering, etc
+ * Support for automated animation
+ * Extensive development of the UML language definition
+  ** Include a substantial subset of the UML language definition to form a reference animator
+  ** Recreation of a sequence diagram for a system execution trace
+  ** Ability to compare executed system traces and input sequence diagrams
+ * Ability to undo any number of system transitions
+ * Check the validity of input system sates
+ * Check if Object Constraint Language constraints are met.
 
-    * All platforms supporting java and the Eclipse IDE will be supported.
+==== Usability====
+ * Streamlined ability to define actions as graph transformations for the language
+ * A detailed guide to defining a modelling language as a graph transformation system with examples from the UML definition implemented.
+ * The animation of a non trivial UML model demonstrating the reference capabilities of the system
 
-Scope of Subsequent Releases
-Functionality
-
-    * A more advanced graphical user interface, with features such as intelligent model navigation, model filtering, etc
-    * Support for automated animation
-    * Extensive development of the UML language definition
-          o Include a substantial subset of the UML language definition to form a reference animator
-          o Recreation of a sequence diagram for a system execution trace
-          o Ability to compare executed system traces and input sequence diagrams
-    * Ability to undo any number of system transitions
-    * Check the validity of input system sates
-    * Check if Object Constraint Language constraints are met.
-
-Usability
-
-    * Streamlined ability to define actions as graph transformations for the language
-    * A detailed guide to defining a modelling language as a graph transformation system with examples from the UML definition implemented.
-    * The animation of a non trivial UML model demonstrating the reference capabilities of the system
-
-Limitations and Exclusions
-
-    * Ability to edit models will not be actively developed. Integration with the Eclipse IDE allows modellers to use their preferred modelling tools to create the models to animate, alongside the animator.
+=== Limitations and Exclusions===
+ * Ability to edit models will not be actively developed. Integration with the Eclipse IDE allows modellers to use their preferred modelling tools to create the models to animate, alongside the animator.
