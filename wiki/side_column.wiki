@@ -5,15 +5,11 @@
 
 ==== Approaches, Decisions Made, and Pending Problems====
 
- [TransformationFromUMLtoGraph Transformation from UML to Graph ]
-
- [GraphTransformation graph transformations]
-
- [UMLRuntime  UML Runtime Structures and Processes]
-
- [GraphtoUMLTransformation  Transformation from Graph to UML]
-
- [GraphTransformationRules  GTS Rules]
+[TransformationFromUMLtoGraph Transformation from UML to Graph ]
+[GraphTransformation graph transformations]
+[UMLRuntime  UML Runtime Structures and Processes]
+[GraphtoUMLTransformation  Transformation from Graph to UML]
+[GraphTransformationRules  GTS Rules]
 
 ==== Project Documentation====
 
