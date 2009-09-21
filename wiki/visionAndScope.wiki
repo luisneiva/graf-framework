@@ -1,4 +1,5 @@
-
+=Table of Contents=
+<wiki:toc max_depth="5" />
 == Business Requirements ==
 === Background ===
 Modellers of all sorts resort to time consuming discussions and meetings in order to have consensus on a model and its meaning. It is difficult to verify a group’s understandings with a consistent, unbiased and reference interpretation of a modelling language. Whether the modeller is a systems analyst or software architect, clear communication is critical and worth paying for to professionals.
