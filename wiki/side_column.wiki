@@ -1,9 +1,9 @@
-===== Research=====
+==== Research====
 
  * GTS
   ** [Graphs]
 
-===== Approaches, Decisions Made, and Pending Problems=====
+==== Approaches, Decisions Made, and Pending Problems====
 
  [TransformationFromUMLtoGraph Transformation from UML to Graph ]
 
@@ -15,14 +15,18 @@
 
  [GraphTransformationRules  GTS Rules]
 
-===== Project Documentation=====
+==== Project Documentation====
  * Project Management
   ** [12207 12207]
   ** [projectPlan management_plan]
 
 
  [visionAndScope vision and scope]
+
  [SRS SRSv2]
+
  [highLevelDesign high level design]
+
  [userDocumentation user documentation]
+
  [developerDocumentation  developer documentation]
