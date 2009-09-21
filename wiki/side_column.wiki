@@ -5,11 +5,11 @@
 
 ==== Approaches, Decisions Made, and Pending Problems====
 
-[TransformationFromUMLtoGraph Transformation from UML to Graph ]
-[GraphTransformation graph transformations]
-[UMLRuntime  UML Runtime Structures and Processes]
-[GraphtoUMLTransformation  Transformation from Graph to UML]
-[GraphTransformationRules  GTS Rules]
+[TransformationFromUMLtoGraph Transformation from UML to Graph ]<br>
+[GraphTransformation graph transformations]<br>
+[UMLRuntime  UML Runtime Structures and Processes]<br>
+[GraphtoUMLTransformation  Transformation from Graph to UML]<br>
+[GraphTransformationRules  GTS Rules]<br>
 
 ==== Project Documentation====
 
@@ -17,12 +17,9 @@
   ** [12207 12207]
   ** [projectPlan management_plan]
 
- [visionAndScope vision and scope]
-
- [SRS SRSv2]
-
- [highLevelDesign high level design]
-
- [userDocumentation user documentation]
-
- [developerDocumentation  developer documentation]
+<br>
+ [visionAndScope vision and scope]<br>
+ [SRS SRSv2]<br>
+ [highLevelDesign high level design]<br>
+ [userDocumentation user documentation]<br>
+ [developerDocumentation  developer documentation]<br>
