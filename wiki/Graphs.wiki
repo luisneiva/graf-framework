@@ -1,3 +1,4 @@
+<wiki:toc max_depth="5"/>
 == Graphs==
 
 As far as our animator is concerned, a graph is a multiset of nodes connected by edges. Edges have labels. Nodes do not have labels. A multiset is a list where order doesn’t matter and there can be multiple occurrences of one element.
