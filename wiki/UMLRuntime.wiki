@@ -1,6 +1,6 @@
 == UML Runtime Structures and Processes==
 
-*Written by Greg O'Keefe*
+_Written by Greg O'Keefe_
 
 === Description===
 
