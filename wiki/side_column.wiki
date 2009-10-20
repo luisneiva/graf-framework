@@ -1,7 +1,7 @@
 ==== Research====
 
- * GTS
-  ** [Graphs]
+[Graphs] <br>
+[Integrating AGG]<br>
 
 ==== Approaches, Decisions Made, and Pending Problems====
 
@@ -13,13 +13,8 @@
 
 ==== Project Documentation====
 
- * Project Management
-  ** [12207 12207]
-  ** [projectPlan management_plan]
-
-<br>
- [visionAndScope vision and scope]<br>
- [SRS SRSv2]<br>
- [highLevelDesign high level design]<br>
- [userDocumentation user documentation]<br>
- [developerDocumentation  developer documentation]<br>
+[visionAndScope vision and scope]<br>
+[SRS SRSv2]<br>
+[highLevelDesign high level design]<br>
+[userDocumentation user documentation]<br>
+[developerDocumentation  developer documentation]<br>
