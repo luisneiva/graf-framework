@@ -1,7 +1,7 @@
 ==== Research====
 
 [Graphs] <br>
-[IntegratingAGG]<br>
+[IntegratingAGG Integrating AGG]<br>
 
 ==== Approaches, Decisions Made, and Pending Problems====
 
