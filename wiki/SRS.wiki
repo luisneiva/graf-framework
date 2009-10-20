@@ -1,93 +1,59 @@
-== Introduction ==
+= Introduction =
 
-See [Business Specifications, Vision and Scope | vision_and_scope] document.
+See Business Specifications, Vision and Scope document.
 
-==== Glossary _(incomplete)_ ====
- * The animator – The Graph-based Reference Animator Framework, the system that this document describes.
- * Eclipse – General-purpose integrated development environment that supports plugin extensions.
- * EMF – Eclipse Modelling Framework
- * System state - An instantaneous snapshot of some point during execution. The system state elements in the UML language  the UML metamodel, a model and an instance combined.
- * System transition - A transformation of one system state to another.
+== Glossary ==
+
+ * Development Documentation - Contains a guide to extending the framework to executable modelling languages, with reference to the example UML implementation, and a guide to improving the framework itself across all languages.
+ * Eclipse IDE - General-purpose integrated development environment that supports plugin extensions.
+ * Example UML implementation - The extension of the framework to an animator for UML provided.
+ * Execution - the process of transforming a model instance between system states.
+ * Extend - to specialise the framework to a model animator of a particular executable modelling language. (See SRS1.1.2.2)
  * Graph - A directed graph composed of nodes, as strings, and edges between nodes. Each edge has a label.
- * Graph transformation rule - 
- * Rule application - 
+ * Graph transformation rule - Transforms the system state according to a before and after graph when applied
+ * Language - the implementation of an executable modelling language with a runtime, within the framework.
+ * Development Documentation - Contains a guide to extending the framework to executable modelling languages, with reference to the example UML implementation, and a guide to improving the framework itself across all languages.
+ * Model - an instance of the modelling language’s meta-model.
+ * Model instance - an instance of the model.
+ * System state - An instantaneous snapshot of some point during execution, including
+ * System transition - A transformation of one system state to another.
+ * The framework - The Graph-based Reference Animator Framework that this document describes.
+ * UML - Unified Modelling Language (external link: OMG UML.pdf)
 
-== Product Functions _(draft complete)_ ==
-
-The system will:
- # Be extended for a particular modelling language definition.
- # Take a model in the extended language and its initial state.
- # Then display the model's system state as defined by the language package. 
- # Provide a visualisation that captures the complete system state.
- # Allow the user to select interactions to initiate
- # Perform interactions following as graph transformations according to the language package's definition.
- # Presented the new system state at the completion of each system state transition, rather than interaction.
-
-== Assumptions and Constraints _( Draft complete)_ ==
-
- # The animator will execute as an Eclipse plugin and standalone application.
- # The animator will use graph transformations to perform verifiable model state transitions.
-
-== Functional Requirements _(incomplete)_ ==
-
-http://graf-framework.googlecode.com/files/Specification-Diagram.jpg
-
- # Graph transformations _(draft complete)_
- # # When input for a model and a system state is given, the animator will generate a graph which is equivalent to the input. _Required to be definitive_
- # # The graph will be of the type described by the language package.
- # # The annotated object diagram will always reflect exactly the meaning of the graph.
- # # The graph is not visible to the user.
- # # The graph will undergo graph transformations to transition from the current system state to the next.
-
-== Non-Functional Requirements  _(unchanged)_ ==
-
- # Performance - our processing of graphs must be efficient given that the graphs will be very large. \[perhaps we should come up with some well founded estimates here? eg, typical sized  model, say 100 classes, half active, yielding model graph of 5000 nodes and system state of 20,000? -Greg\] 
- # # _The time it takes the system to read in the model and process model-to-graph and graph-to-graph must not exceed 10 seconds for a model with 1 class, 1 state diagram, etc, etc. NOTE: these are random numbers I have pulled out from our current microwave example. Needs to validated with Greg. Eg processed under X seconds for Y UML diagrams, with Z state machines and W states, V actions, etc_ \[10 milliseconds I'd say, 10 seconds for the 20,000 node graph -Greg\]
- # # _Must run on machine with at least X CPU speed \[1Ghz\], Y RAM [\1Gb\], [\20Gb\] Z hard drive space etc _
- # Must be able to animate models produced from modelling tools including at least EMF and Rational Rose. \[ the standard .xmi format might be a more appropriate target - EMF and Rose both nominally use this\]
- # Must run Eclipse/EMF of at least version 3.2.
- # Must run on at least Java version 1.5.
- # _Extensibility - the system must be built so that future teams can easily build and add new functions upon the current implementation._
- # _Usability - the system must be intuitive and easy to use by users. (NOTE: this needs to be reviewed by team  and validated by Greg)_ \[ a measurable version of this goal would be good\]
- # # _The time to learn and be productive with the system must not exceed 2 days_ \[ I'd say 2 hours, -Greg\]
- # # _All system actions can be done within less than 5 mouse clicks_  \[? certainly the common ones, but really common ones we should aim for 1 click (if that doesn't infringe Amazon's patent) \]
- # # _There will be help documentation on all possible actions._
- # # _The language used will be easy to understand and contains no jargon (eg our target user base are professional modellers, so they do not need to know the details of graphs, graph transformations, etc)_ \[ some UML jargon is probably acceptable if necessary \]
-
-== UML sample language requirements ==
-The UML language definition sample will:
- * Display a system state as a object diagram with annotations to capture the complete system state (for example, the actions, events and activities describing the core of UML interactions)
- * Be the reference for instructional and tutorial documentation on extending the animator to modelling languages.
-
-== User-Interface Requirements _(unchanged)_ ==
-
-http://graf-framework.googlecode.com/files/Specification Diagram GUI.jpg
-
-_When user operations cannot be completed, an error message is shown describing the nature of the error and how it can be solved.)_
-
-
-== Future Work _(may not need changing)_ ==
-
-This section contains features of the system that would be desired by modellers using the system, but does not fit into the current scope of this project.
-
-==== User Interaction ====
- * Ability to undo any number of system transitions
- * Ability to filter displayed system state by for example: class, instance, criteria, etc.
- * More sophisticated view navigation, for example: following links to objects, automatic scrolling to non-visible objects, etc.
-==== Functionality ====
- * Further definition of graph transformation rules to support the full UML language.
- * Ability to generate a sequence diagram of executed system trace.
- * Ability to verify if the executed system trace satisfies an input sequence diagram.
-==== Automation ====
- * Ability to execute a pre-determined trace. For example this could be restored from a previous execution.
-==== System State Verification ====
- * Verify if the input system state is valid.
- * Verify if Object Constraint Language constraints are met.
-
-== References _(unchanged)_ ==
-
-\[Any references we need to make.\]
-
-_(Greg says: this section will be important. As well as the obvious stuff like the UML definition, we may want to cite our own writings where we have done a bit of research and reached some conclusions.) _
-
-\[This document is looking good -Greg\]
+ # *Functionality (What our entire system can do)*
+  ## The framework will:
+   ## Complete system transitions using “The Attributed Graph Grammar System” engine. [http://user.cs.tu-berlin.de/~gragra/agg/ AGGSystem]
+   ## Provide the ability to
+    ## Display system states using arbitrary:
+     ## Shapes
+     ## Text
+    ## Extend the framework to a model animator of a specific language by defining
+     ## How graph transformation rules are associated with the actions of the language
+     ## How a model is interpreted as a graph.
+     ## How a system state is displayed.
+    ## Accept:
+     ## A model
+     ## A model instance
+     ## Allow the model instance to be executed when the model and the model instance are provided, and framework extended to a language (See SRS1.1.2).
+  ## The example UML implementation will:
+   ## Extend the framework (See SRS 1.1.2.2.1) by implementing an equivalent graph transformation rule interpretation of the following UML definitions as speficied in the Object Management Group's UML definition (external link: OMG UML.pdf):
+    ## Actor Send Signal
+    ## Accept Event
+    ## Read Self
+    ## Read Structural Feature
+    ## Send Signal
+   ## Display the complete system state as a UML object diagram with annotations.
+   ## Be an extension of the framework using framework abilities provided in SRS1.1.2
+   ## Require only the addition of graph transformation rules (See SRS1.1.2.2.1) to implement a larger subset of the UML definition.
+   ## Allow the following UML model of a microwave heating food to be executed to completion: (link)
+   ## Let the user manually select the next action to execute with the mouse cursor.
+ # *Usability (How easily can the user get that functionality)*
+  ## The framework will:
+   ## Require, for language extensions, modification in:
+    ## One module for language rules at most
+    ## One module for user interface and model rendering at most
+    ## Less than 10 lines of code elsewhere
+ # *Portability*
+  ## The framework will function as:
+   ## As an Eclipse IDE plugin
+   ## As a java stand alone application
