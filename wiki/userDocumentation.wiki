@@ -1,57 +1,107 @@
-= GRAF User Documentation=
+= GRAF User Documentation =
 
-== Glossary==
+== Introduction ==
 
- * GRAF - Graph-based Reference Animator Framework
+This document will describe GRAF using a UML implementation as an example. An introduction to GRAF is here.
+== Installation and Setup ==
 
-==  Introduction==
+You will need to have:
 
-UML Reference Animator is a free, open source reference model verification tool. In its current implementation, the tool aids UML modelers to verify the semantics of any given UML model. In Model Driven Development, for a given UML model, the modelers may not agree on the underlying semantics. This is a tool that will act as a debugger or interpreter for UML models. It allows the users to 'step through' or 'animate' the model. The modeler inputs a model, including the collection of classes, state machines, test cases, etc, and the animator will help verify if the given model is correct. To verify that the model is correct, the animator relies on Greg O'Keefe's PhD thesis (add reference here) that states that underlying the ambiguous descriptions of UML semantics is a graph transformation system (GTS) - which is clear and formal. 
+    * Java 1.6
+    * Eclipse Modeling Framework (EMF) with UML2 support
+    * Eclipse 3.3 or higher
 
-http://graf-framework.googlecode.com/files/userinterface.png
+Note: the required Eclipse components come as standard with the Eclipse Modeling Tools bundle available from external link: http://www.eclipse.org/downloads
+Your system should have the following hardware requirements:
 
-== Installation and Setup==
+    * CPU : 1.0 GHz
+    * RAM : 1GB
+    * HDD: 20GB
 
-=== You will need to have:===
-* Java 1.6
-* Eclipse Modeling Framework (EMF) with UML2 support
-* At least Eclipse Europa \[verified by Kevin 11/08 - but I didn't check if earlier versions of eclipse could run it (it is likely that they would be able to - check this!\]
-Note all of this comes as standard with the Eclipse Modeling Tools bundle available from http://www.eclipse.org/downloads 
+== Procedures ==
 
-=== Your system should have the following hardware requirements:===
-* CPU : 1.0 GHz
-* RAM : 1GB
-* HDD: 20GB
+There are three ways in which you may run GRAF:
 
-== Procedures==
+To run the pre-packaged plugin GRAF.jar (located in the Implementation tags directory in the SVN repository):
 
+    * Copy the GRAF.jar file into the 'plugins' directory of your eclipse installation (eg 'C:\Eclipse\plugins')
+    * Run Eclipse
+    * The plugin will now be running in the Eclipse application. To open the Animator view, go to the Window menu and choose 'Show View' -> 'Other…' and then open the 'ModelAnimator' folder and choose 'Animator'. (Note, this view will open automatically when files are animated)
 
-To run standalone: Run the Controller.java file as a regular java application.
-To run as an Eclipse plug-in: Set up a project for it in eclipse, then right-click on the project and choose 'Run As' -> 'Eclipse Application'.
+To run the plugin from the code:
 
-We recommend running it as an Eclipse plug-in because this was the targetted runtime environment.
+    * Checkout the code from the SVN repository.
+    * Configure a new Eclipse project for the Implementation directory of the working copy.
+    * Right-click on the project and choose 'Run As' -> 'Eclipse Application'. A new Eclipse instance will run.
+    * The plugin will now be running in the new Eclipse instance. To open the Animator view, go to the Window menu and choose 'Show View' -> 'Other…' and then open the 'ModelAnimator' folder and choose 'Animator'. (Note, this view will open automatically when files are animated)
 
-Rough notes about running this stuff:
- * When you run standalone, you get a 'New' button which opens a file chooser to allow you to choose a '.modeltest' file. (Note: currently there is a big 'Animate microwave.modeltest' button on the GUI - this will NOT be staying there so don't talk about it here!)
- * When you run as plugin, you must right-click on a file in the package explorer and select 'Animate'. The file must have a '.modeltest' file extension.
- * When running as an eclipse plugin, you do not have to have the Animator view showing when you right-click on something. If it is not showing then it will show itself when you do this. If you want to show it manually (for some reason...), then go to the Window menu and choose 'Show View' -> 'Other...' and then open the 'ModelAnimator' folder and choose 'Animator'.
- * The first line of a '.modeltest' file must specify the filepath of a model to test. (ie the model that the test case is testing). This path may be relative or absolute.
- * \[Talk about undo(<), redo(>), and reset(<<).\] You can undo up to 10 times. (and redo same amount). When you press reset, it resets everything back to the original condition, but it does not re-load from file. If you want to re-load from file, select the file again as a new animation.
+To run the system standalone:
 
-=== Loading in the Model===
+    * Checkout the code from the SVN repository.
+    * Configure a new Eclipse project for the Implementation directory of the working copy.
+    * Run the Controller.java file as a java application.
 
- * To load in the model, click on the 'New' button, and navigate to the folder that contains the model files. Only model files will have a extension of '.modeltest' could be loaded into the animator. Other formats will be ignored.
+We recommend running the system as an Eclipse plug-in because this was the targetted runtime environment.
+Loading the Model
 
-=== Animating the model===
+Stand alone
+To animate a model, click the ‘New’ button and select a ‘.modeltest’ file.
 
-=== Show and Hide===
-To make the object diagram more readable and user friendly, use the show and hide option. Show and hide will display or hide object attributes and states. This can be useful when the loaded object diagram is large. Click on the \[Show\] or \[hide\] links in the object diagram to switch between them.
+Plugin
+To animate, right-click on a file in the package explorer (or project explorer) and select 'Animate' (see below). The file must have a ‘.modeltest’ file extension.
 
-===Navigating through and rearranging the model===
+The view should display itself when needed. If you want to display the view manually then go to the Window menu and choose 'Show View' -> 'Other…' and then open the 'ModelAnimator' folder and choose 'Animator'.
 
- * To zoom in or out on the model on the UML model, click the (+) or (-) buttons. The (+) button indicates a zoom in and a (-) indicates a zoom out.
- * To navigate through the movel click on the (<), (>), (/\\\), (\\\/) navigation buttons to pan the screen left, right, up, and down respectively.    
- * To rearrange the objects within the model, simply click and hold on the object and drag it to the specified location.
+http://graf-framework.googlecode.com/files/userinterface-1.png
 
+Modeltest file format
+The first line must specify the filepath of a model to test. (ie the model that the test case is testing). This will be a .uml file. This path may be relative or absolute.
 
-== Troubleshooting==
+The file should resemble the following:
+
+Microwave.uml
+
+f1 : Food
+{NotCooked}
+temperature = 3
+
+m1 : Microwave
+{NotCooking}
+
+m1 <cookedBy, cooks> f1
+
+Where:
+
+    * Microwave.uml is the file created using Eclipse's UML tools that contains class diagrams, state machines etc.
+    * Microwave and Food are the names of classes in the model.
+    * temperature is the name of an attribute of the Food class in the model.
+    * m1 and f1 are arbitrary names for objects of classes in the model.
+    * NotCooked and NotCooking are the names of states in the model for the Food and Microwave classes, respectively.
+    * cookedBy and cooks are the names of association ends in the model.
+
+Animating the model
+
+Sending an external event from an actor
+Right-click on an object and a menu will appear displaying possible external events to send to the object. Select an event and an actor will send the event.
+
+Receiving an event
+Objects contain a pool of events that have been sent but not received (1 in the diagram below). This is the bottom compartment of the object’s box (except when executing actions). Click an event for the object to receive the event.
+
+Executing actions
+Once an object receives an event it will begin executing actions according to its state machine. In this implementation of UML, the primitive actions of UML are displayed, not the high level actions specified in the state machine. Click on the actions to execute them (2). Greyed out actions cannot be executed until another action is exectued (3). When an object is executing actions the bottom compartment will be coloured off-yellow.
+
+Undo, redo and reset
+The (<) button is undo (4). The (>) button is redo (5). You can undo up to ten times and redo ten times. The (<<) button resets the graph but it does not reload the file (6). To reload the file, select it as a new animation.
+Show and Hide
+
+To hide irrelevant information, use the show and hide options (7). Attributes, event and actions can be hidden. This can be useful when the loaded object diagram is large. Click on the [Show] or [hide] links in the object diagram to switch between them.
+Navigating through and rearranging the model
+
+    * To zoom in or out on the model on the UML model, click the (+) or (-) buttons. The (+) button indicates a zoom in and a (-) indicates a zoom out (8).
+    * To navigate through the movel click on the (<), (>), (/\), (\/) navigation buttons to pan the screen left, right, up, and down respectively (9).
+    * To rearrange the objects within the model, simply click and hold on the object and drag it to the specified location.
+
+http://graf-framework.googlecode.com/files/userinterface-2.png
+== Troubleshooting ==
+
+If the 'Animate' menu item does not appear when right-clicking on a '.modeltest' file in the package explorer, and the Animator view does not appear in the 'Show View' menu, there may be a conflict with another plugin installed in your Eclipse environment. Consider running GRAF in a fresh Eclipse installation to help diagnose the source of the conflict.
