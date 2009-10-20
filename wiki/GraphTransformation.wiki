@@ -15,10 +15,10 @@ My own graph transformation system is complete except for two things:
 
 === Description===
 
-This module is responsible for representing the model, instance, metamodel and runtime as a graph and applying transformations to the graph. Graph transformations are described [here|graphs].
+This module is responsible for representing the model, instance, metamodel and runtime as a graph and applying transformations to the graph. Graph transformations are described [Graphs here].
 
 Approach:
- * [This page|graphs] describes most of the processes I use. It doesn’t describe how I find pattern matches or how I find further pattern matches, given the first one. I have not yet found a satisfactory method to complete these two tasks. See the problems section below.
+ * [Graphs This page] describes most of the processes I use. It doesn’t describe how I find pattern matches or how I find further pattern matches, given the first one. I have not yet found a satisfactory method to complete these two tasks. See the problems section below.
 
 Decisions Made:
  * I represent a pattern match as list of tuples (2-tuples). Each tuple contains a variable and a constant. There are two types of these tuples: one for edges and one for nodes.
@@ -35,11 +35,11 @@ Assumptions:
  * All variables in a rule’s forbidden graph are in the rule’s before graph. (This assumption was a mistake. Future work may require me to account for variable nodes only in the forbidden graph.)
  * No node or edge label uses the # character.
  * All variables are indicated by the ? character at the beginning of the name.
- * Rules will make use of the * character at the beginning to signify that a node needs to be given a unique name. Nodes using this character will only appear in the after graph of the rule, never in the before, forbidden or the input graph.
+ * Rules will make use of the `*` character at the beginning to signify that a node needs to be given a unique name. Nodes using this character will only appear in the after graph of the rule, never in the before, forbidden or the input graph.
 
 Problems:
 === Finding all possible pattern matches===
-(Pattern matches are described [here|graphs].)
+(Pattern matches are described [Graphs here].)
 
 (An algorithm is described in the paper http://portal.acm.org/citation.cfm?doid=321921.321925 .  It is a slightly different problem, because we can have several variable nodes mapped to the same node, so see if this can be worked around.  -Greg)
 
