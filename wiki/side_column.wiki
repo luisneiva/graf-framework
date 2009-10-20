@@ -5,7 +5,7 @@
 ==== Approaches, Decisions Made, and Pending Problems====
 
 [TransformationFromUMLtoGraph Transformation from UML to Graph ]<br>
-[GraphTransformation graph transformations]<br>
+[GraphTransformation Graph transformations]<br>
 [UMLRuntime  UML Runtime Structures and Processes]<br>
 [GraphtoUMLTransformation  Transformation from Graph to UML]<br>
 [GraphTransformationRules  GTS Rules]<br>
