@@ -1,7 +1,4 @@
-<wiki:toc max_depth="5"/>
-== Graphs==
-
-As far as our animator is concerned, a graph is a multiset of nodes connected by edges. Edges have labels. Nodes do not have labels. A multiset is a list where order doesn’t matter and there can be multiple occurrences of one element.
+This page contains an overview of graph theory relevant to GRAF. AGG takes care of most of this behind the scnese. As far as GRAF is concerned, a graph is a multiset of nodes connected by edges. Edges have labels. Nodes do not have labels. A multiset is a list where order doesn’t matter and there can be multiple occurrences of one element. In AGG, edges are called arcs.
 
 A graph can be represented as a list of the following (from node, edge label, to node).
 
@@ -13,9 +10,11 @@ The above graph can also be represented as:
 
 C y A
 
+
 C x B
 
 B z A
+
 
 Note that in this representation, every name of a node (for example, C) represents the same node. Lines 1 and 2 refer to the same node C. However, two lines with the same label are not the same edge.
 
@@ -32,6 +31,7 @@ B x A
 D y B
 
 
+
 Graph B:
 
 B x A
@@ -39,6 +39,7 @@ B x A
 B x C
 
 D y B
+
 
 In this example, Graph A is a subgraph of Graph B because all the edges in A are in B.  However, Graph B is not a subgraph of Graph A because Graph A does not contain the edge B x. C
 
@@ -48,21 +49,22 @@ Graph A
 
 B x A
 
+
 Graph B
 
 B x A
 
 B x A
 
+
 In this example, Graph A is a subgraph of Graph B but not visa versa.
 
-=== Variable Graphs===
-
-A _variable graph_ is a graph where labels and nodes can be variables. So far, we have only looked at constant variables and labels.
+=== Variable Graphs ===
+A __variable graph__ is a graph where labels and nodes can be variables. So far, we have only looked at constant variables and labels.
 
 http://graf-framework.googlecode.com/files/grapheg2.png
 
-In this graph the node called ?D is a variable and the label ?z is a variable. We use a leading question mark to indicate a variable node or label.
+In this graph the node called ?D is a variable and the label ?z is a variable. We use a leading question mark to indicate a variable node or label. AGG uses a different convention: quotation marks around the name indicate a constant and no quotation marks indicates a variable. 
 
 A graph with variables represents an infinite set of graphs. A graph is represented by the variable graph if it can be obtained by substituting a node for each node variable, and a label for each label variable.
 
@@ -80,7 +82,7 @@ http://graf-framework.googlecode.com/files/grapheg5.png
 
 However, this graph is not an instance of the variable graph because it doesn’t contain a node A, connected in the same way as in the variable graph.
 
-=== Rules and graph transformations===
+=== Rules and graph transformations ===
 A graph is transformed using a rule. A rule consists of two variable graphs, a before graph and an after graph. In practice, it is only the graphs in rules that contain variable nodes and edges.
 
 The first step in graph transformation is making sure the rule can be applied. An instance of the before graph must be a subgraph of the input (that is, the graph we want to transform). If it is not then the transformation cannot be applied.
@@ -98,11 +100,12 @@ Make a list of all the edges that are in the after graph, but not in the before 
 Make a list of all the nodes that are in the before graph, but not the after graph.
 Remove from the input all the edges in the first list.
 Add to the input all the edges in the second list.
+Remove from the input all edges that are connected to nodes in the third list.
 }}}
 
 This code does not deal with variable edges. One way to deal with variable edges is to modify the before and after graphs so that all instances of variable nodes and variable edges are replaced with constant nodes and edges, according to the nodes and edges of the input graph. This will occur after the check for homomorphism but before making the list of edges in the before graph but not the after graph.
 
-=== Negative application condition graphs===
+=== Negative application condition graphs ===
 In addition to before and after graph, rules can optionally have negative application condition graphs (also known as forbidden graphs). Negative application condition graphs contain a list of edges that aren’t necessarily connected. If any one of these edges appears in input graph then the before graph is not a subgraph of the input. 
 
 If a negative application condition graph contains variable nodes or edges then first resolve the variables by comparing the before and input graphs. Then check if any forbidden edges are in the input.
@@ -110,7 +113,7 @@ In the example below the before graph is not a subgraph of the input only becaus
 
 http://graf-framework.googlecode.com/files/grapheg7.jpg
 
-===Pattern Matching===
+=== Pattern Matching ===
 
 Pattern matching is the process of determining if a rule’s before graph is the subgraph of an input. Pattern matching is much more complicated than applying the rule's transformation.
 
@@ -129,7 +132,7 @@ The above graph has ten pattern matches. They include:
 ?D := A, ?K := G, ?J := C
 
 
-=== Dealgebrization===
+=== Dealgebrization ===
 
 Dealgebrization is a process which turns all of a graph’s edges into nodes.
 
@@ -151,6 +154,7 @@ x to C
 
 x from A
 
+
 This can not be reconstructed into the original graph.
 
 The best way to solve this problem that I can think of is to add a unique string to the end of every edge label before dealgebrization. For example:
@@ -163,13 +167,16 @@ x#2 from A
 
 x#2 to C
 
+
 This allows dealgebrization to be reversed. (Realgebrization?)
 
 The main benefit of this process (at least from the point of view of developing graph transformation prototypes) is that it eliminates variable edges by turning them into variable nodes. Below is an example.
 
 http://graf-framework.googlecode.com/files/grapheg11.jpg
 
-=== Input parameters===
+Dealgebrization was explored in the early stages of the project but it is no longer relevant to GRAF.
+
+=== Input parameters ===
 
 Recall the graph with ten possible fits:
 
