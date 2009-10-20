@@ -80,18 +80,18 @@ Where:
     * NotCooked and NotCooking are the names of states in the model for the Food and Microwave classes, respectively.
     * cookedBy and cooks are the names of association ends in the model.
 
-Animating the model
+=== Animating the model ===
 
-Sending an external event from an actor
+==== Sending an external event from an actor ====
 Right-click on an object and a menu will appear displaying possible external events to send to the object. Select an event and an actor will send the event.
 
-Receiving an event
+==== Receiving an event ====
 Objects contain a pool of events that have been sent but not received (1 in the diagram below). This is the bottom compartment of the object’s box (except when executing actions). Click an event for the object to receive the event.
 
-Executing actions
+==== Executing actions ====
 Once an object receives an event it will begin executing actions according to its state machine. In this implementation of UML, the primitive actions of UML are displayed, not the high level actions specified in the state machine. Click on the actions to execute them (2). Greyed out actions cannot be executed until another action is exectued (3). When an object is executing actions the bottom compartment will be coloured off-yellow.
 
-Undo, redo and reset
+==== Undo, redo and reset ====
 The (<) button is undo (4). The (>) button is redo (5). You can undo up to ten times and redo ten times. The (<<) button resets the graph but it does not reload the file (6). To reload the file, select it as a new animation.
 Show and Hide
 
