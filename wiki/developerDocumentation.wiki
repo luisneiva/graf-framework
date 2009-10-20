@@ -5,7 +5,7 @@
 Adding a new modelling language to the animator involves two processes. The first step is creating graph transformation rules that represent the runtime changes of the language. The second step is adding new interface implementations to the animator to draw, load and display the language.
 == Adding new interface implementations ==
 
-The interfaces GraphToModel.java and ModelToGraph.java and the abstract class ContentDrawer need to be implemented. More detail about the architecture is here.
+The interfaces GraphToModel.java and ModelToGraph.java and the abstract class ContentDrawer need to be implemented. More detail about the architecture is [highLevelDesign here].
 
 Class	Method	Purpose
 GraphToModel	generateDisplayObjects	Create all lines and boxes to display based on the current graph.
