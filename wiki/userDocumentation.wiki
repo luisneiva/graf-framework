@@ -42,23 +42,24 @@ To run the system standalone:
     * Run the Controller.java file as a java application.
 
 We recommend running the system as an Eclipse plug-in because this was the targetted runtime environment.
-Loading the Model
 
-Stand alone
+=== Loading the Model ===
+
+==== Stand alone ====
 To animate a model, click the ‘New’ button and select a ‘.modeltest’ file.
 
-Plugin
+==== Plugin ====
 To animate, right-click on a file in the package explorer (or project explorer) and select 'Animate' (see below). The file must have a ‘.modeltest’ file extension.
 
 The view should display itself when needed. If you want to display the view manually then go to the Window menu and choose 'Show View' -> 'Other…' and then open the 'ModelAnimator' folder and choose 'Animator'.
 
 http://graf-framework.googlecode.com/files/userinterface-1.png
 
-Modeltest file format
+==== Modeltest file format ====
 The first line must specify the filepath of a model to test. (ie the model that the test case is testing). This will be a .uml file. This path may be relative or absolute.
 
 The file should resemble the following:
-
+{{{
 Microwave.uml
 
 f1 : Food
@@ -69,7 +70,7 @@ m1 : Microwave
 {NotCooking}
 
 m1 <cookedBy, cooks> f1
-
+}}}
 Where:
 
     * Microwave.uml is the file created using Eclipse's UML tools that contains class diagrams, state machines etc.
