@@ -1,76 +1,45 @@
-== Developer Documentation==
+= Developer Documentation =
 
-=== Developing a Language-Specific Model Animator===
+== Developing a Language-Specific Model Animator ==
+
 Adding a new modelling language to the animator involves two processes. The first step is creating graph transformation rules that represent the runtime changes of the language. The second step is adding new interface implementations to the animator to draw, load and display the language.
+== Adding new interface implementations ==
 
-==== Adding new interface implementations====
-The interfaces GraphToModel.java and ModelToGraph.java and the abstract class ContentDrawer need to be implemented. More detail about the architecture is [here|Highleveldesign]. 
+The interfaces GraphToModel.java and ModelToGraph.java and the abstract class ContentDrawer need to be implemented. More detail about the architecture is here.
 
-|| Class || Method || Purpose ||
-||GraphToModel || generateDisplayObjects || Create all lines and boxes to display based on the current graph.||
-||GraphToModel || reset || Undo all transformations to the graph; make it as if the graph has just been generated.||
-||ModelToGraph || buildGraph || Creates a graph based on the given model file and instance file (the format of these files can be changed).||
-||ContentDrawer || draw || Display something (like an object diagram) to represent a system state of the modelling language.||
+Class	Method	Purpose
+GraphToModel	generateDisplayObjects	Create all lines and boxes to display based on the current graph.
+GraphToModel	reset	Undo all transformations to the graph; make it as if the graph has just been generated.
+ModelToGraph	buildGraph	Creates a graph based on the given model file and instance file (the format of these files can be changed).
+ContentDrawer	draw	Display something (like an object diagram) to represent a system state of the modelling language.
 
 The existing implementations, GraphToObjDiag, UMLToGraph and ObjectDiagDrawer can be used as a guide in creating new classes. If the modelling language is similar to UML then it may be possible to copy parts of these classes. In particular, if the modelling language’s metamodel is already known to the Eclipse EMF libraries (like UML), then the ModelToGraph implementation will be similar to that of the current UMLToGraph transformation.
 
 Once the interfaces have been created, the code must be changed to use them. The GraphToModelFactory class, the ModelToGraphFactory class determine which language-specific transformation classes to use.
-
 {{{
+
 // For example, in GraphToModelFactory change this
 return new GraphToObjDiag();
 // to this
 return new GraphToPetriNetDiagram();
-}}}
-If the actual display needs to be changed, this can be done by changing the content drawer. The View class provides all of the generic interface components that apply to any model, and the ContentDrawer provides the language-specific display for the particular model in use.
 
-==== Developing graph transformation rules for a modelling language====
-This topic is beyond the scope of the animator, requiring a knowledge of graph transformation systems and formal definitions of graphical modelling languages. The [Graphs] page contains an introduction to graphs and graph transformations. Googling _UML graph transformations_ might provide a starting point for research into formal definitions of modelling languages. Additionally, looking at the animator’s existing rules for UML may help. Once transformation rules for a modelling language exist, AGG is used to translate them into a file format usable by the animator. The following link will take you to a page that will step you through how to create Graph Transformation Rules in AGG. [How to create rules in AGG|createAGGRules]
-==== AGG====
-AGG can be downloaded at http://user.cs.tu-berlin.de/~gragra/agg/ . AGG supports various types of graphs but the animator only uses a specific type. Define a graph with a single node type and a single edge type. Both types have a single attribute called _name_. A constant node is one that has a value for _name_ in "quotes", otherwise it is a variable. Create all rules using AGG.
+}}}
+
+If the actual display needs to be changed, this can be done by changing the content drawer. The View class provides all of the generic interface components that apply to any model, and the ContentDrawer provides the language-specific display for the particular model in use.
+== Developing graph transformation rules for a modelling language ==
+
+This topic is beyond the scope of the animator, requiring a knowledge of graph transformation systems and formal definitions of graphical modelling languages. The [Graphs] page contains an introduction to graphs and graph transformations. Googling UML graph transformations might provide a starting point for research into formal definitions of modelling languages. Additionally, looking at the animator’s existing rules for UML may help. Once transformation rules for a modelling language exist, AGG is used to translate them into a file format usable by the animator. The following link will take you to a page that will step you through how to create Graph Transformation Rules in AGG. How to create rules in AGG
+== AGG ==
+
+AGG can be downloaded at external link: http://user.cs.tu-berlin.de/~gragra/agg/ . AGG supports various types of graphs but the animator only uses a specific type. Define a graph with a single node type and a single edge type. Both types have a single attribute called name. A constant node is one that has a value for name in "quotes", otherwise it is a variable. Create all rules using AGG.
 
 Save the graph transformations in one file called GTSRules.ggx and place this file in UML/Implementation/trunk.
+== Framework Development ==
 
-=== Framework Development===
 The core animator can be expanded to include new features. For example:
- * Automated animation based on previous animations.
- * Intelligent model navigation, such as a mini-map.
- * Filtering views so that the user sees only relevant parts of the system state display.
-The future works section of the [SRS|Srs2] contains further details.
 
+    * Automated animation (replays) based on previous animations.
+    * Intelligent model navigation, such as a mini-map.
+    * Filtering views so that the user sees only relevant parts of the system state display.
 
-
-----
-Kevin's rough notes are below
-
-==== Developing a Language-Specific Model Animator====
-
-This section explains how to use the framework to develop a language-specific model animator.
-
-This will be short-handed for now until someone can write it up properly.
-
- * see [highleveldesign]
- * The modules that are related to the specific language being used are the ModelToGraph module and the ContentDrawer (see the architecture for details of these).
- * The transformation to and from the modelling language and equivalent graph is encapsulated in the ModelTransformation module. Within this, both the ModelToGraph and GraphToModel modules provide a factory class and generic interface for defining these transformations.
- * Once these transformations are defined, the animator needs graph transformation rules to define the runtime semantics of the language. These are all defined in the GTSRules file \[\[\[check\]\]\] which is constructed through the use of the AGG application.
- * To use AGG to define the graph transformation rules, run \[something\]. Here, we define rules as follows: A single node type and a single edge type. Both types have a single attribute called 'name'. A constant node is one that has a value for 'name' in "quotes", otherwise it is a variable. If multiple nodes/edges have the same variable name then when applied they only match to things with the same name.
- * The ContentDrawer defines the user interface for the animator. Thus, it will depend on the particular language being used as to how the information should be presented. Note however that this is fairly generalized. For example if a language is 'UML-like' (eg xtUML) and can be expressed as an object diagram, then it would not be necessary to implement a new ContentDrawer implementation.
-
- * In summary:
-  ** To continue our UML animator, just add more rules to GTSRules and possibly add support for more language features by modifying the transformation process in ModelTransformer.
-  ** To build an animator for a UML-like language (eg xtUML), define the translation to and from an equivalent graph in ModelTransformer. Then define the graph transformation rules in GTSRules.
-  ** To build an animator for a very different language will also require producing a new ContentDrawer implementation to define a user interface that is more appropriate to the language.
-
- * also mention that: If you are defining a transformation from model to graph for a language that contains a metamodel already known to the Eclipse EMF libraries (like UML), then the transformation will be quite similar to that of the current UMLToGraph transformation.
-
-==== Framework Development====
-
-This section outlines possible future developments that could be made to the framework to provide greater functionality across all language bases.
-
-eg:
- * Automated animation
- * Intelligent model navigation
- * Filtering views
- * etc
-
-(This stuff will probably be very similar to what is in the SRS, but maybe it should be here instead of the SRS?)
+The modules and code to change depends on the nature of the improvement. The High Level Design page can be used to determine which modules will need to be changed to incorporate particular types of new features.
