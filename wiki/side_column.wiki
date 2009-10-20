@@ -1,7 +1,6 @@
 ==== Research====
 
 [Graphs] <br>
-[integratingAGG Integrating AGG]<br>
 
 ==== Approaches, Decisions Made, and Pending Problems====
 
@@ -10,6 +9,8 @@
 [UMLRuntime  UML Runtime Structures and Processes]<br>
 [GraphtoUMLTransformation  Transformation from Graph to UML]<br>
 [GraphTransformationRules  GTS Rules]<br>
+[integratingAGG Integrating AGG] <br>
+
 
 ==== Project Documentation====
 
