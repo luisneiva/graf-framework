@@ -18,7 +18,7 @@ See Business Specifications, Vision and Scope document.
  * System state - An instantaneous snapshot of some point during execution, including
  * System transition - A transformation of one system state to another.
  * The framework - The Graph-based Reference Animator Framework that this document describes.
- * UML - Unified Modelling Language (http://graf-framework.googlecode.com/files/OMG%20UML.pdf)
+ * UML - Unified Modelling Language ([http://graf-framework.googlecode.com/files/OMG%20UML.pdf OMG UML])
 
  # *Functionality (What our entire system can do)*
   ## The framework will:
@@ -36,7 +36,7 @@ See Business Specifications, Vision and Scope document.
      ## A model instance
      ## Allow the model instance to be executed when the model and the model instance are provided, and framework extended to a language (See SRS1.1.2).
   ## The example UML implementation will:
-   ## Extend the framework (See SRS 1.1.2.2.1) by implementing an equivalent graph transformation rule interpretation of the following UML definitions as speficied in the Object Management Group's UML definition (http://graf-framework.googlecode.com/files/OMG%20UML.pdf):
+   ## Extend the framework (See SRS 1.1.2.2.1) by implementing an equivalent graph transformation rule interpretation of the following UML definitions as speficied in the Object Management Group's UML definition ([http://graf-framework.googlecode.com/files/OMG%20UML.pdf OMG UML]):
     ## Actor Send Signal
     ## Accept Event
     ## Read Self
