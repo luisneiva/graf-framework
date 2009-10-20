@@ -10,7 +10,7 @@ The proposed solution is a plugin for eclipse, that will make use of the Eclipse
 === Modules ===
  * View - Draws current system state, and provides mechanisms for controlling animation.
    ** View - Provides generalized functionality for drawing model-based graphical interfaces.
-   ** ContentDrawer - Draws the actual content, contained in an ObjectDisplay. Note this drawing will likely be langauge-dependent.
+   ** ContentDrawer! - Draws the actual content, contained in an ObjectDisplay. Note this drawing will likely be langauge-dependent.
  * Controller - Responds to events triggered in the view and coordinates changes in the model.
  * Model - Contains the system state, and associated logic for transforming the data.
    ** Plugin Model - Contains the graph model and plugin system state.
