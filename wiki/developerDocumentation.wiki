@@ -1,3 +1,4 @@
+<wiki:toc max_depth="5" />
 = Developer Documentation =
 
 == Developing a Language-Specific Model Animator ==
@@ -7,11 +8,11 @@ Adding a new modelling language to the animator involves two processes. The firs
 
 The interfaces GraphToModel.java and ModelToGraph.java and the abstract class ContentDrawer need to be implemented. More detail about the architecture is [highLevelDesign here].
 
-Class	Method	Purpose
-GraphToModel	generateDisplayObjects	Create all lines and boxes to display based on the current graph.
-GraphToModel	reset	Undo all transformations to the graph; make it as if the graph has just been generated.
-ModelToGraph	buildGraph	Creates a graph based on the given model file and instance file (the format of these files can be changed).
-ContentDrawer	draw	Display something (like an object diagram) to represent a system state of the modelling language.
+|| Class || Method || Purpose ||
+|| GraphToModel	|| generateDisplayObjects ||Create all lines and boxes to display based on the current graph. ||
+|| GraphToModel	|| reset || Undo all transformations to the graph; make it as if the graph has just been generated.||
+|| ModelToGraph	|| buildGraph || Creates a graph based on the given model file and instance file (the format of these files can be changed).||
+|| ContentDrawer || draw || Display something (like an object diagram) to represent a system state of the modelling language. ||
 
 The existing implementations, GraphToObjDiag, UMLToGraph and ObjectDiagDrawer can be used as a guide in creating new classes. If the modelling language is similar to UML then it may be possible to copy parts of these classes. In particular, if the modelling language’s metamodel is already known to the Eclipse EMF libraries (like UML), then the ModelToGraph implementation will be similar to that of the current UMLToGraph transformation.
 
