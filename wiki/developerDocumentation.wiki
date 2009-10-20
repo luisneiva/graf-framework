@@ -42,4 +42,4 @@ The core animator can be expanded to include new features. For example:
     * Intelligent model navigation, such as a mini-map.
     * Filtering views so that the user sees only relevant parts of the system state display.
 
-The modules and code to change depends on the nature of the improvement. The High Level Design page can be used to determine which modules will need to be changed to incorporate particular types of new features.
+The modules and code to change depends on the nature of the improvement. The [highLevelDesign High Level Design] page can be used to determine which modules will need to be changed to incorporate particular types of new features.
