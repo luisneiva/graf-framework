@@ -1,6 +1,6 @@
 = Introduction =
 
-See Business Specifications, Vision and Scope document.
+See [http://code.google.com/p/graf-framework/wiki/visionAndScope Business Specifications, Vision and Scope] document.
 
 == Glossary ==
 
