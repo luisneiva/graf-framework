@@ -17,8 +17,8 @@ Have the developer community extend the framework to at least one modelling lang
 
 == Customer Need == 
 
- #Developers of executable modelling languages: A reliable framework to extend to a modelling language specific animator.
- #Users of an executable modelling language: A clearly described reference definition of their particular model written in their modelling language.
+ # Developers of executable modelling languages: A reliable framework to extend to a modelling language specific animator.
+ # Users of an executable modelling language: A clearly described reference definition of their particular model written in their modelling language.
 
 = Vision of the solution =
 
