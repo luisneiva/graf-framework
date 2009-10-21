@@ -1,5 +1,3 @@
-= Solutions = 
-
 === Negative Application Conditions ===
 
 If an NAC has variables and the variables have the same names as variables in the before or after graph then it will always prevent the graph from matching. Giving the variables in the NAC unique names allowed the NAC to work properly. I don’t understand how, but it worked.
@@ -9,6 +7,8 @@ If an NAC has variables and the variables have the same names as variables in th
 Rules are given two input parameters. One is the object name, the other varies depending on the rule. There’s an AGG method that returns parameters to set but the problem is that there’s no way to know which parameter is the object name and which is the other parameter. Therefore if the first combination doesn’t work, I swap them around and try the other order. This slows down the implementation. The alternative is to tell users to always put the object parameter first when creating rules in the AGG GUI.
 Accept correct event out of many
 
+=== Accept correct event out of many ===
+
 The way I rename nodes and arcs in the code doesn’t work completely. Sometimes the code does not contrast the new names. Maybe there’s a way to code it so that it does work properly, but I don’t know how. A symptom of this is that the accept event rules won’t correctly match input parameters always (because one of the parameters will have been renamed). Therefore when there are multiple events to be accepted, and you click on one of them, the code might accept another one instead.
 
 To solve this, I changed the order of the sub-rules of accept event. Accept-event-and-ignore goes first, using a new Negative Application Condition. This has solved the problem though it is not an ideal solution.
@@ -16,4 +16,8 @@ Unsolved problems
 
 === Unique names ===
 
-I have a process to give unique names but it won’t always work. First, follow an i edge from the node to be renamed. The name of the node beyond the i edge is the put into lower case then a number (starting at 1 and counting up) is added. Thus we get a name like “signaloccurence4”. It’s not impossible that the user would have already used a node with this name. If the user only uses names with some capital letters or no numbers then this will never come up. I am ignoring this problem.
+I have a process to give unique names but it won’t always work. First, follow an i edge from the node to be renamed. The name of the node beyond the i edge is the put into lower case then a number (starting at 1 and counting up) is added. Thus we get a name like “signaloccurence4”. It’s not impossible that the user would have already used a node with this name.
+
+For that matter, if the user uses names like Class or State this will still cause problems.
+
+I am ignoring this problem.
