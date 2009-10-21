@@ -1,15 +1,28 @@
 package view;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import model.PluginModel;
-import model.modelTransformer.objectDisplay.ObjectDisplay;
+import model.objectDiagram.ODAction;
+import model.objectDiagram.ODAttribute;
+import model.objectDiagram.ODEvent;
+import model.objectDiagram.ODLink;
+import model.objectDiagram.ODObject;
 
 import org.eclipse.draw2d.ActionListener;
 import org.eclipse.draw2d.Button;
+import org.eclipse.draw2d.ChopboxAnchor;
+import org.eclipse.draw2d.ConnectionEndpointLocator;
+import org.eclipse.draw2d.ConnectionLocator;
 import org.eclipse.draw2d.Figure;
 import org.eclipse.draw2d.FigureCanvas;
+import org.eclipse.draw2d.Label;
 import org.eclipse.draw2d.LightweightSystem;
 import org.eclipse.draw2d.MouseEvent;
 import org.eclipse.draw2d.MouseListener;
+import org.eclipse.draw2d.PolylineConnection;
+import org.eclipse.draw2d.PositionConstants;
 import org.eclipse.draw2d.ScalableFreeformLayeredPane;
 import org.eclipse.draw2d.XYLayout;
 import org.eclipse.draw2d.geometry.Rectangle;
@@ -25,8 +38,6 @@ import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.ui.part.ViewPart;
 
-import view.contentDrawer.ContentDrawer;
-import view.contentDrawer.ObjectDiagDrawer;
 import controller.Controller;
 
 /**
@@ -52,17 +63,16 @@ public class View extends ViewPart {
 	/** Holds model contents */
 	private ScalableFreeformLayeredPane contents;
 	
-	/** Draws model contents */
-	private ContentDrawer contentDrawer;
-	
-	//Random button for testing		//TODO - delete this
-	private Button button = new Button("Animate \"microwaveTest1.modeltest\"");
+	//Random button for testing
+	private Button button = new Button("Animate \"microwaveTest1.umltest\"");
 	/** Button to choose model to animate */
 	private Button newAnimButton = new Button("New");
 	
-	private ClickableLabel undo = new ClickableLabel("<");
-	private ClickableLabel redo = new ClickableLabel(">");
-	private ClickableLabel reset = new ClickableLabel("<<");
+	/** The action listener that is the response to when a user clicks on some event/action */
+	private MouseListener transListener;
+
+	/** The action listener that is the response to when a user clicks on a popup menu item */
+	private Listener popupListener;
 	
 	/** Default constructor called by plugin runtime. Do not call this if standalone.
 	 * @see View(plugin)
@@ -71,52 +81,32 @@ public class View extends ViewPart {
 		this(true);
 	}
 
-	/** Construct View
-	 * @param plugin Is the system running as a plugin
-	 */
 	public View(boolean plugin) {
+		System.out.println("This system is running " + (plugin?"as a plugin":"standalone"));
+		System.out.println("View is alive");
 		isPlugin = plugin;
-		contentDrawer = new ObjectDiagDrawer(this);
 		@SuppressWarnings("unused")
 		Controller controller = new Controller(this, plugin);
 	}
 
-	/** Set the model for use by this view */
 	public void setModel(PluginModel model) {
 		this.model = model;
 	}
 	
-	/** Add listener to the 'Animate modeltest' button */	//TODO - delete this
-	public void addAnimateListener(ActionListener animListener) {
-		button.addActionListener(animListener);
+	public void addAnimateListener(ActionListener listener) {
+		button.addActionListener(listener);
 	}
 
-	/** Add listener to the 'New' button */
-	public void addNewAnimListener(ActionListener newListener) {
-		newAnimButton.addActionListener(newListener);
+	public void addNewAnimListener(ActionListener listener) {
+		newAnimButton.addActionListener(listener);
 	}
 
-	/** Add listener to the 'Undo' button */
-	public void addUndoListener(MouseListener resetListener) {
-		undo.addMouseListener(resetListener);
-	}
-	/** Add listener to the 'Redo' button */
-	public void addRedoListener(MouseListener resetListener) {
-		redo.addMouseListener(resetListener);
-	}
-	/** Add listener to the 'Reset' button */
-	public void addResetListener(MouseListener resetListener) {
-		reset.addMouseListener(resetListener);
-	}
-	
-	/** Set the listener for when transition-sources are pressed */
-	public void setTransitionListener(MouseListener transListener) {
-		contentDrawer.setTransListener(transListener); 
+	public void setTransitionListener(MouseListener mouseListener) {
+		transListener = mouseListener; 
 	}
 
-	/** Set the listener for when popup menu items are selected */
-	public void setPopupListener(Listener popupListener) {
-		contentDrawer.setPopupListener(popupListener);
+	public void setPopupListener(Listener listener) {
+		popupListener = listener;
 	}
 
 	/** Reset display for new animation */
@@ -128,17 +118,13 @@ public class View extends ViewPart {
 	/** Open a file chooser and return path to chosen file, or null if none chosen */
 	public String openFileChooser() {
 		FileDialog filedialog = new FileDialog(parent.getShell());
-		filedialog.setFilterExtensions(new String[]{"*.modeltest"});
+		filedialog.setFilterExtensions(new String[]{"*.umltest"});
 		return filedialog.open();
 	}
 	
 	/** Display error message to user */
 	public void showError(String msg) {
-		if (parent == null) {
-			MessageDialog.openError(null, "Animator Error", msg);
-		} else {
-			MessageDialog.openError(parent.getShell(), "Animator Error", msg);
-		}
+		MessageDialog.openError(parent.getShell(), "Animator Error", msg);
 	}
 	
 	/** Creates the initial view - ie the view upon Animator startup */
@@ -159,8 +145,6 @@ public class View extends ViewPart {
 		rootFigure.add(contents);
 		lws.setContents(rootFigure);
 		
-		contentDrawer.setContents(contents);
-		
 		//set up the menu (button(s))
 		//TODO - delete this 'button' - just for testing (standalone onlys)
 		if (!isPlugin) {
@@ -169,54 +153,105 @@ public class View extends ViewPart {
 		}
 		// if not a plugin, need ability to choose a file to animate
 		if (!isPlugin) {
-			rootFigure.getLayoutManager().setConstraint(newAnimButton, new Rectangle(430,10,40,20));
+			rootFigure.getLayoutManager().setConstraint(newAnimButton, new Rectangle(450,10,40,20));
 			rootFigure.add(newAnimButton);
 		}
 	}
 	
-	private boolean firstLoaded = true;
 	/** Draws new contents */
 	public void update() {
 		contents.removeAll();
 		
-		ObjectDisplay objdisplay = model.getObjectDisplay();
+		//get from model the object diagram representation of the graph.
+		ArrayList<ODObject> odObjs = model.getODObjects();
+		ArrayList<ODLink> odLinks = model.getODLinks();
 		
 		//if a model is not currently loaded then don't continue
-		if (objdisplay==null) return;
+		if (odObjs==null || odLinks==null) return;
 		
-		if (firstLoaded) {
-			addNavControls();
-			firstLoaded = false;
+		addNavControls();
+		
+		HashMap<ODObject, UMLClassFigure> classFigureMap = new HashMap<ODObject, UMLClassFigure>();
+		for (ODObject odObj : odObjs) {
+			UMLClassFigure classFigure = new UMLClassFigure(odObj);
+			for (ODAttribute attr : odObj.getAttributes()) {
+				classFigure.addAttribute(attr.getName(), attr.getValue());
+			}
+			if (odObj.getEventMode()) {
+				for (ODEvent event : odObj.getEventPool()) {
+					classFigure.addEvent(event.getName(), transListener, event);
+				}
+			} else {
+				for (ODAction action : odObj.getActionPool()) {
+					classFigure.addAction(action.getName(), transListener, action.getActive(), action);
+				}
+			}
+			for (ODEvent extevent : odObj.getExternalEvents()) {
+				classFigure.addExternalEvent(extevent, popupListener);
+			}
+			classFigure.addMouseListener(new MenuOpenListener(classFigure));
+			classFigureMap.put(odObj, classFigure);
+			contents.getLayoutManager().setConstraint(classFigure,
+					new Rectangle(odObj.getLocation().x,odObj.getLocation().y,-1,-1));
+			contents.add(classFigure);
 		}
-		if (model.getUndosRemaining()>0) undo.setEnabled(true);
-		else undo.setEnabled(false);
-		if (model.getRedosRemaining()>0) redo.setEnabled(true);
-		else redo.setEnabled(false);
-		undo.repaint();
-		redo.repaint();
-		
-		contentDrawer.draw(objdisplay);
-		
+		//create links
+		for (ODLink odLink : odLinks) {
+			PolylineConnection c = new PolylineConnection();
+			ChopboxAnchor sourceAnchor = new ChopboxAnchor(classFigureMap.get(odLink.getLeftObj()));
+			ChopboxAnchor targetAnchor = new ChopboxAnchor(classFigureMap.get(odLink.getRightObj()));
+			c.setSourceAnchor(sourceAnchor);
+			c.setTargetAnchor(targetAnchor);
+			// Add labels to the connections
+			ConnectionEndpointLocator targetEndpointLocator = new ConnectionEndpointLocator(c, true);
+			targetEndpointLocator.setUDistance(5);		//distance from class box
+			targetEndpointLocator.setVDistance(5);		//distance from association line
+			Label targetMultiplicityLabel = new Label(odLink.getLinkLeftLabel());
+			c.add(targetMultiplicityLabel, targetEndpointLocator);
+			ConnectionEndpointLocator sourceEndpointLocator = new ConnectionEndpointLocator(c, false);
+			sourceEndpointLocator.setUDistance(5);
+			Label sourceMultiplicityLabel = new Label(odLink.getLinkRightLabel());
+			c.add(sourceMultiplicityLabel, sourceEndpointLocator);
+			ConnectionLocator middlelocator = new ConnectionLocator(c, ConnectionLocator.MIDDLE);
+			middlelocator.setRelativePosition(PositionConstants.NORTH);
+			middlelocator.setGap(5);
+			Label relationshipLabel = new Label(odLink.getLinkCentreLabel());
+			c.add(relationshipLabel, middlelocator);
+			contents.add(c);
+		}
 		contents.revalidate();
+	}
+	
+	class MenuOpenListener implements MouseListener {	//TODO
+		private UMLClassFigure host;
+		MenuOpenListener(UMLClassFigure host) {
+			this.host = host;
+		}
+		public void mousePressed(MouseEvent me) {
+			if (me.button == 3) {		//right-click: display popup menu
+				Point menupos = new Point(me.x,me.y);
+				menupos.x *= contents.getScale();
+				menupos.y *= contents.getScale();
+				if (isPlugin) {
+					Point pluginViewInset = parent.getParent().getLocation();
+					menupos.x += pluginViewInset.x;
+					menupos.y += pluginViewInset.y;
+				}
+				menupos = parent.getShell().toDisplay(menupos);
+		        Menu menu = new Menu (parent.getShell(), SWT.POP_UP);
+		        host.buildPopupMenu(menu);
+		        menu.setLocation(menupos);
+		        menu.setVisible (true);
+			}
+		}
+		public void mouseReleased(MouseEvent me) {}
+		public void mouseDoubleClicked(MouseEvent me) {}
 	}
 	
 	/**
 	 * Passing the focus request to the viewer's control.
 	 */
 	public void setFocus() {
-	}
-	
-	/** Create menu at the specified location
-	 * @return Reference to the menu created 
-	 */
-	public Menu createPopupMenu(Point menupos) {
-		menupos.x *= contents.getScale();
-		menupos.y *= contents.getScale();
-		menupos = parent.toDisplay(menupos);
-        Menu menu = new Menu (parent.getShell(), SWT.POP_UP);
-        menu.setLocation(menupos);
-        menu.setVisible (true);
-        return menu;
 	}
 	
 	/** Create and attach navigation controls to rootFigure */
@@ -227,24 +262,17 @@ public class View extends ViewPart {
 		ClickableLabel down = new ClickableLabel("\\/");
 		ClickableLabel zoomin = new ClickableLabel("+");
 		ClickableLabel zoomout = new ClickableLabel("-");
-		
 		Font boldfont = new Font(null, "Arial", 13, SWT.BOLD);
 		Font largeboldfont = new Font(null, "Arial", 15, SWT.BOLD);
 		left.setFont(boldfont); right.setFont(boldfont);
 		up.setFont(boldfont); down.setFont(boldfont);
 		zoomin.setFont(largeboldfont); zoomout.setFont(largeboldfont);
-		undo.setFont(boldfont); redo.setFont(boldfont); reset.setFont(boldfont);
-		
 		Color cyan = new Color(null,0,255,255);
 		left.setBackgroundColor(cyan); right.setBackgroundColor(cyan);
 		up.setBackgroundColor(cyan); down.setBackgroundColor(cyan);
 		zoomin.setBackgroundColor(cyan); zoomout.setBackgroundColor(cyan);
-		undo.setBackgroundColor(cyan); redo.setBackgroundColor(cyan);
-		reset.setBackgroundColor(cyan);
 		left.setOpaque(true); right.setOpaque(true); up.setOpaque(true); down.setOpaque(true);
 		zoomin.setOpaque(true); zoomout.setOpaque(true);
-		undo.setOpaque(true); redo.setOpaque(true); reset.setOpaque(true);
-		
 		final double moveunit = 20.0;
 		final int move = (int)(moveunit/contents.getScale()+0.05);
 		left.addMouseListener(new PanListener(new Point(move,0)));
@@ -253,51 +281,43 @@ public class View extends ViewPart {
 		down.addMouseListener(new PanListener(new Point(0,-move)));
 		zoomin.addMouseListener(new ZoomListener(0.2));
 		zoomout.addMouseListener(new ZoomListener(-0.2));
-		//listeners for undo, redo, and reset are given through methods.
-		
-		final int l = 490;	//left of control
+		final int l = 500;	//left of control
 		final int t = 10;	//top of control
 		final int w = 20;	//width of each 'button'
 		rootFigure.getLayoutManager().setConstraint(left,    new Rectangle(l,t+w,w,w));
 		rootFigure.getLayoutManager().setConstraint(right,   new Rectangle(l+w+w,t+w,w,w));
 		rootFigure.getLayoutManager().setConstraint(up,      new Rectangle(l+w,t,w,w));
 		rootFigure.getLayoutManager().setConstraint(down,    new Rectangle(l+w,t+w+w,w,w));
-		rootFigure.getLayoutManager().setConstraint(zoomin,  new Rectangle(l+w*3+w/2,t+w/2-1,w,w));
+		rootFigure.getLayoutManager().setConstraint(zoomin,  new Rectangle(l+w*3+w/2,t+w/2,w,w));
 		rootFigure.getLayoutManager().setConstraint(zoomout, new Rectangle(l+w*3+w/2,t+w/2+w,w,w));
-		rootFigure.getLayoutManager().setConstraint(reset,   new Rectangle(l+w*5,t+w/2-1,w*2+1,w));
-		rootFigure.getLayoutManager().setConstraint(undo,    new Rectangle(l+w*5,t+w/2+w,w,w));
-		rootFigure.getLayoutManager().setConstraint(redo,    new Rectangle(l+w*6+1,t+w/2+w,w,w));
 		rootFigure.add(left);
 		rootFigure.add(right);
 		rootFigure.add(up);
 		rootFigure.add(down);
 		rootFigure.add(zoomin);
 		rootFigure.add(zoomout);
-		rootFigure.add(undo);
-		rootFigure.add(redo);
-		rootFigure.add(reset);
 	}
 	
-	/** Shifts the display by a given translation vector */
 	private class PanListener implements MouseListener {
 		Point translation;
-		/** Construct listener to shift the display by the given translation vector */
 		PanListener(Point translation) {
 			this.translation = translation;
 		}
 		public void mouseDoubleClicked(MouseEvent me) {}
 		public void mouseReleased(MouseEvent me) {}
 		public void mousePressed(MouseEvent me) {
-			model.getObjectDisplay().move(translation.x,translation.y);
+			ArrayList<ODObject> odObjs = model.getODObjects();
+			for (ODObject odObj : odObjs) {
+				Point currLoc = odObj.getLocation();
+				odObj.setLocation(currLoc.x+translation.x, currLoc.y+translation.y);
+			}
 			update();
 		}
 	}
-	/** Zooms the display by a given zoom factor vector */
 	private class ZoomListener implements MouseListener {
 		Double zoomFactor;
 		final double zoomMin = 0.1;
 		final double zoomMax = 2.4;
-		/** Construct listener to zoom the display by the given zoom factor */
 		ZoomListener(Double zoomFactor) {
 			this.zoomFactor = zoomFactor;
 		}

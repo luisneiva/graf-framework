@@ -5,13 +5,13 @@
    <extension
          point="org.eclipse.ui.views">
       <category
-            name="ModelAnimator"
-            id="ModelAnimator">
+            name="UMLAnimator"
+            id="UMLAnimator">
       </category>
       <view
             name="Animator"
             icon="icons/sample.gif"
-            category="ModelAnimator"
+            category="UMLAnimator"
             class="view.View"
             id="view.View">
       </view>
@@ -36,7 +36,7 @@
                      </instanceof>
                      <test
                            property="org.eclipse.core.resources.name"
-                           value="*.modeltest">
+                           value="*.umltest">
                      </test>
                   </iterate>
                </with>
@@ -60,29 +60,5 @@
             commandId="view.packexpcontrib">
       </handler>
    </extension>
-
-   <extension
-     point="org.eclipse.emf.ecore.uri_mapping">
-    <mapping
-       source="pathmap://UML2_LIBRARIES/"
-       target="platform:/plugin/org.eclipse.uml2.resources/libraries/">
-    </mapping>
-  </extension>
-
-  <extension
-     point="org.eclipse.emf.ecore.uri_mapping">
-    <mapping
-       source="pathmap://UML2_METAMODELS/"
-       target="platform:/plugin/org.eclipse.uml2.resources/metamodels/">
-    </mapping>
-  </extension>
-
-  <extension
-     point="org.eclipse.emf.ecore.uri_mapping">
-    <mapping
-       source="pathmap://UML2_PROFILES/"
-       target="platform:/plugin/org.eclipse.uml2.resources/profiles/">
-    </mapping>
-  </extension>
 
 </plugin>

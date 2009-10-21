@@ -1,27 +1,17 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: ModelAnimator
-Bundle-SymbolicName: ModelAnimator;singleton:=true
+Bundle-Name: UMLAnimator
+Bundle-SymbolicName: UMLAnimator; singleton:=true
 Bundle-Version: 1.0.0
 Bundle-Activator: controller.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.draw2d,
- org.junit4,
- org.eclipse.emf.ecore.change,
- org.eclipse.uml2.uml
+ org.junit4
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Import-Package: org.eclipse.core.internal.resources,
  org.eclipse.core.resources,
  org.eclipse.draw2d,
- org.eclipse.emf.common.util,
- org.eclipse.emf.ecore,
- org.eclipse.emf.ecore.change,
- org.eclipse.emf.ecore.impl,
- org.eclipse.emf.ecore.resource.impl,
- org.eclipse.jdt.core,
- org.eclipse.uml2.uml
-Bundle-ClassPath: xom-1.2.1.zip,
- agg_V164/agg_V164_classes.jar,
- agg_V164/jgl3.1.0.jar
+ org.eclipse.jdt.core
+Bundle-ClassPath: xom-1.2.1.zip
