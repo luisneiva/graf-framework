@@ -4,7 +4,7 @@ import java.util.Random;
 
 import org.eclipse.swt.graphics.Point;
 
-import agg.xt_basis.Node;
+import model.Node;
 
 /** An object to be displayed */
 public abstract class DisplayObject {

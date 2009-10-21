@@ -1,16 +1,14 @@
 package tests;
 
-import static org.junit.Assert.assertTrue;
-
 import java.net.URL;
 
-import model.ListGraph;
+import model.Edge;
+import model.Graph;
 import model.modelTransformer.UMLToGraph;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import agg.xt_basis.Arc;
+import static org.junit.Assert.*;
 
 /**
  * JUnit test class for the UMLToGraph class
@@ -22,8 +20,8 @@ public class UMLToGraphTest {
 	String modelPath = "Microwave.uml";
 	String instancePath = "microwaveInst.txt";
 	
-	ListGraph graph;
-	ListGraph testGraph;
+	Graph graph;
+	Graph testGraph;
 	
 	@Before
 	public void setup() throws Exception {
@@ -32,7 +30,7 @@ public class UMLToGraphTest {
 		graph = new UMLToGraph().buildGraph(modelURL, instanceURL);
 		
 		//some basic edges to test for:
-		testGraph = new ListGraph();
+		testGraph = new Graph();
 		testGraph.addIEdge("Microwave", "Class");
 		testGraph.addIEdge("Food", "Class");
 		testGraph.addEdge("m1", "cooks", "f1");
@@ -43,9 +41,9 @@ public class UMLToGraphTest {
 	
 	@Test
 	public void testBuildGraph() throws Exception {
-		for (Arc testEdge : testGraph.getArcsList()) {
+		for (Edge testEdge : testGraph) {
 			Boolean foundMatch = false;
-			for (Arc edge : graph.getArcsList()) {
+			for (Edge edge : graph) {
 				if (testEdge.equals(edge)) {
 					foundMatch = true;
 					break;

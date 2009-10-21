@@ -1,7 +1,6 @@
 package model.modelTransformer;
 
-import model.ListGraph;
-import model.exceptions.GraphToModelException;
+import model.Graph;
 import model.modelTransformer.objectDisplay.ObjectDisplay;
 
 /**
@@ -12,5 +11,5 @@ public interface GraphToModel {
 	/** Reset data from previous animations */
 	public void reset();
 	
-	public ObjectDisplay generateDisplayObjects(ListGraph graph) throws GraphToModelException;
+	public ObjectDisplay generateDisplayObjects(Graph graph);
 }

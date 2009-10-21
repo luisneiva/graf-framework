@@ -9,9 +9,7 @@ package model.modelTransformer.objectDisplay;
 
 import java.util.ArrayList;
 
-import model.ListGraph;
-
-import agg.xt_basis.Node;
+import model.Node;
 
 
 public class ODClass {
@@ -23,7 +21,7 @@ public class ODClass {
 	public ODClass(Node graphNode) {
 		attributeNames = new ArrayList<String>();
 		this.graphNode = graphNode;
-		name = ListGraph.getName(graphNode);
+		name = graphNode.getName();
 	}
 	
 	public Node getGraphNode() {

@@ -13,7 +13,6 @@ public class TransitionAction {
 	private String actionName;
 	private String actionParam;
 
-	/** Construct a TransitionAction with the specified properties */
 	public TransitionAction(DisplayObject displayObj, String actionName, String actionParam) {
 		this.displayObj = displayObj;
 		this.actionName = actionName;

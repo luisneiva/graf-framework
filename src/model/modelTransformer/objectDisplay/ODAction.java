@@ -17,12 +17,9 @@ package model.modelTransformer.objectDisplay;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import model.ListGraph;
-
-import org.eclipse.draw2d.graph.Edge;
-
-import agg.xt_basis.Arc;
-import agg.xt_basis.Node;
+import model.Edge;
+import model.Graph;
+import model.Node;
 
 public class ODAction {
 
@@ -31,12 +28,12 @@ public class ODAction {
 	private String type;
 
 	ODAction(Node node) {
-		name = ListGraph.getName(node);
+		name = node.getName();
 		enabled = false;
 
-		for(Arc fromEdge : node.getOutgoingArcsVec()) {
-			if(ListGraph.getName(fromEdge).equals("i")) {
-				type = ListGraph.getName(fromEdge.getTarget());
+		for(Edge fromEdge : node.getFrom()) {
+			if(fromEdge.getLabel().equals("i")) {
+				type = fromEdge.getToName();
 				break;
 			}
 		}
@@ -73,8 +70,8 @@ public class ODAction {
 		traceToInputPin2.add("fromAction");
 		traceToInputPin2.add("result");
 		
-		potentialInputPins.addAll(ListGraph.toTrace(traceToInputPin1,node));
-		potentialInputPins.addAll(ListGraph.toTrace(traceToInputPin2,node));
+		potentialInputPins.addAll(node.toTrace(traceToInputPin1));
+		potentialInputPins.addAll(node.toTrace(traceToInputPin2));
 			
 		ArrayList<String> iTrace = new ArrayList<String>();
 		iTrace.add("i");
@@ -82,11 +79,11 @@ public class ODAction {
 		Iterator<Node> inIt = potentialInputPins.iterator();
 		while(inIt.hasNext()) {
 			Node next = inIt.next();
-			Node typeNode = ListGraph.toTrace(iTrace,next).get(0);
+			Node typeNode = next.toTrace(iTrace).get(0);
 			// There may be other valid types...
-			if(!ListGraph.getName(typeNode).equals("ActionInputPin") 
-					&& !ListGraph.getName(typeNode).equals("InputPin")
-					&& !ListGraph.getName(typeNode).equals("OutputPin")) {
+			if(!typeNode.getName().equals("ActionInputPin") 
+					&& !typeNode.getName().equals("InputPin")
+					&& !typeNode.getName().equals("OutputPin")) {
 				inIt.remove();
 			}
 		}
@@ -96,18 +93,18 @@ public class ODAction {
 		ArrayList<String> traceToBehEx = new ArrayList<String>();
 		traceToBehEx.add("executable");
 		try {
-		behEx = ListGraph.fromTrace(traceToBehEx,node).get(0);
+		behEx = node.fromTrace(traceToBehEx).get(0);
 		} catch(IndexOutOfBoundsException ioobe) {
 			System.out.println("error in odAction there was no executable edge to a behavior execution");
 			return;
 		}
 		
 		// Check if any edges from behavior execution are pins
-		for(Arc potentialPinInst : behEx.getOutgoingArcsVec()) {
+		for(Edge potentialPinInst : behEx.getFrom()) {
 			Iterator<Node> inIt2 = potentialInputPins.iterator();
 			while(inIt2.hasNext()) {
-				String nameToFind = ListGraph.getName(inIt2.next());
-				if(nameToFind.equals(ListGraph.getName(potentialPinInst))) {
+				String nameToFind = inIt2.next().getName();
+				if(nameToFind.equals(potentialPinInst.getLabel())) {
 					inIt2.remove();
 				}
 			}

@@ -11,7 +11,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.ecore.change,
  org.eclipse.uml2.uml
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Import-Package: org.eclipse.core.internal.resources,
  org.eclipse.core.resources,
  org.eclipse.draw2d,
@@ -23,5 +23,30 @@ Import-Package: org.eclipse.core.internal.resources,
  org.eclipse.jdt.core,
  org.eclipse.uml2.uml
 Bundle-ClassPath: xom-1.2.1.zip,
- agg_V164/agg_V164_classes.jar,
- agg_V164/jgl3.1.0.jar
+ .
+Export-Package: controller,
+ model,
+ model.exceptions,
+ model.graphTransformer,
+ model.modelTransformer,
+ model.modelTransformer.objectDisplay,
+ nu.xom,
+ nu.xom.canonical,
+ nu.xom.converters,
+ nu.xom.tests,
+ nu.xom.xinclude,
+ nu.xom.xslt,
+ org.jaxen,
+ org.jaxen.expr,
+ org.jaxen.expr.iter,
+ org.jaxen.function,
+ org.jaxen.function.ext,
+ org.jaxen.function.xslt,
+ org.jaxen.saxpath,
+ org.jaxen.saxpath.base,
+ org.jaxen.saxpath.helpers,
+ org.jaxen.util,
+ org.w3c.dom,
+ tests,
+ view,
+ view.contentDrawer

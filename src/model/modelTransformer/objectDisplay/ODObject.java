@@ -2,9 +2,9 @@ package model.modelTransformer.objectDisplay;
 
 import java.util.ArrayList;
 
-import model.ListGraph;
-
-import agg.xt_basis.Node;
+import model.Graph;
+import model.Node;
+import model.graphTransformer.GraphTransformer;
 
 /** 
  *   ODObject
@@ -22,7 +22,6 @@ public class ODObject extends DisplayObject {
 	private ArrayList<ODAttribute> attributes;
 
 	private Node stateNode;
-	
 
 	private ArrayList<ODAction> actionPool;
 	private ArrayList<ODEvent> eventPool;
@@ -42,7 +41,7 @@ public class ODObject extends DisplayObject {
 		this.instantiation = instantiation;
 		attributes = new ArrayList<ODAttribute>();
 		this.graphNode = graphNode;
-		name = ListGraph.getName(graphNode);
+		name = graphNode.getName();
 		stateNode = null;
 		actionPool = new ArrayList<ODAction>();
 		eventPool = new ArrayList<ODEvent>();

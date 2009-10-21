@@ -2,7 +2,8 @@ package model.graphTransformer;
 
 import java.net.URL;
 
-import model.ListGraph;
+import model.Graph;
+import model.Node;
 import model.exceptions.RuleException;
 import model.exceptions.RuleNoMatchException;
 import model.modelTransformer.objectDisplay.DisplayObject;
@@ -11,14 +12,11 @@ import nu.xom.Document;
 import nu.xom.Element;
 import nu.xom.Elements;
 import nu.xom.Nodes;
-import agg.xt_basis.Graph;
-import agg.xt_basis.Node;
-import agg.xt_basis.Rule;
 
 
 public class GraphTransformer {
 
-	private ListGraph graph;
+	private Graph graph;
 
 	/** Document containing GTS rule definitions */
 	private Document gtsRules;
@@ -34,12 +32,12 @@ public class GraphTransformer {
 	}
 
 	/** Assign a graph to be used in the transformations */
-	public void setGraph(ListGraph graph) {
+	public void setGraph(Graph graph) {
 		this.graph = graph;
 	}
 
 	/** Apply a GTS rule to the graph. */
-	public ListGraph transition(DisplayObject obj, String actionName, String actionParam) throws RuleException {
+	public Graph transition(DisplayObject obj, String actionName, String actionParam) throws RuleException {
 
 		// Find rule for actionName in gtsRules
 		Element gtsRulesRoot = gtsRules.getRootElement();
@@ -57,7 +55,7 @@ public class GraphTransformer {
 				if (depends.getLocalName().equals("dependency")) {
 					graph = transition(obj, depends.getValue(), actionParam);
 				} else if (depends.getLocalName().equals("exclusive-dependencies")) {
-					ListGraph graphBackup = new ListGraph(graph);
+					Graph graphBackup = new Graph(graph);
 					boolean foundmatch = false;
 					for (int j = 0; j < depends.getChildElements().size(); j++) {
 						try {
@@ -103,10 +101,8 @@ public class GraphTransformer {
 		//rule may be null if no actual rule (eg a composite rule)
 		if (rule != null) {
 
-			System.out.println("error: GraphTransformer is being used. Use AGGTransformer instead");
-			
 			// Read <parameter> elements of rule to determine assignments to make
-/*			PatternMatch assignments = new PatternMatch();
+			PatternMatch assignments = new PatternMatch();
 			Nodes parameternames = ruleElem.query("parameters/parameter/@name");
 			if (parameternames.size()>0) {
 				String parametername = parameternames.get(0).getValue();
@@ -127,12 +123,12 @@ public class GraphTransformer {
 			}
 			rule.applyPatternMatch(fit);
 			rule.transform(graph);
-*/
+
 			System.out.println("GTS Rule Applied: object="+obj.getName()+", action="+actionName+", " +
 					"actionParam="+actionParam);
 		}
 
-		return new ListGraph(graph);
+		return new Graph(graph);
 	}
 
 	/**
@@ -144,12 +140,9 @@ public class GraphTransformer {
 	 * @author Kevin
 	 */
 	private Rule parseRule(Element rule) {
-		ListGraph before = new ListGraph();
-		ListGraph after = new ListGraph();
-		ListGraph forbidden = new ListGraph();
-		
-		//AGG agg = new AGG();
-		//Rule newRule = agg.getGraGra().createRule();
+		Graph before = new Graph();
+		Graph after = new Graph();
+		Graph forbidden = new Graph();
 
 		// Extract before, after and forbidden graphs from rule
 		if (rule.query("before").size()==1) {
@@ -162,9 +155,7 @@ public class GraphTransformer {
 			forbidden = loadRuleGraph((Element)rule.query("forbidden").get(0));
 		}
 
-		System.out.println("error: GraphTransformer is being used. Use AGGTransformer instead.");
-		return null;
-		//return new Rule(before, after, forbidden);
+		return new Rule(before, after, forbidden);
 	}
 
 	/**
@@ -173,9 +164,9 @@ public class GraphTransformer {
 	 * @param element The element that is the parent of all the edges in the graph.
 	 * 
 	 */
-	private ListGraph loadRuleGraph(Element element) {
+	private Graph loadRuleGraph(Element element) {
 
-		ListGraph graph = new ListGraph();
+		Graph graph = new Graph();
 
 		Elements children = element.getChildElements();
 		for(int i = 0; i < children.size(); i++) {
@@ -187,5 +178,6 @@ public class GraphTransformer {
 
 		return graph;
 	}
+
 
 }

@@ -7,7 +7,8 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.HashMap;
 
-import model.ListGraph;
+import model.Edge;
+import model.Graph;
 import model.exceptions.ModelToGraphException;
 import nu.xom.Attribute;
 import nu.xom.Builder;
@@ -22,7 +23,6 @@ import nu.xom.XPathContext;
 import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.core.runtime.Path;
 
-import agg.xt_basis.Arc;
 import controller.Activator;
 
 /**
@@ -37,14 +37,14 @@ public class XMIToGraph implements ModelToGraph {
 	private static XPathContext xpathctx;
 	
 	/** The graph being built */
-	private ListGraph graph;
+	private Graph graph;
 	
 	private HashMap<String,Nodes> metamodelHashmap = new HashMap<String,Nodes>(); 
 	
 	public XMIToGraph() {
 	}
 	
-	public ListGraph buildGraph(URL modelURL, URL instanceURL) throws ModelToGraphException {
+	public Graph buildGraph(URL modelURL, URL instanceURL) throws ModelToGraphException {
 		try {
 			URL metamodelURL;
 			if (Activator.getDefault()==null) {
@@ -56,13 +56,12 @@ public class XMIToGraph implements ModelToGraph {
 			Builder metamodelbuilder = new Builder();
 			Document metamodeldoc = metamodelbuilder.build(metamodelURL.openStream());
 			metamodelroot = metamodeldoc.getRootElement();
-			graph = new ListGraph();
+			graph = new Graph();
 			translateModelPart(modelURL);
 			translateInstancePart(instanceURL);
 			createRuntimePart();
 			return graph;
 		} catch (Exception e) {
-			//e.printStackTrace();
 			throw new ModelToGraphException(e.getMessage());
 		}
 	}
@@ -186,7 +185,7 @@ public class XMIToGraph implements ModelToGraph {
 	}
 	private String activityName;
 	
-	private void translateInstancePart(URL instanceURL) throws Exception {
+	private void translateInstancePart(URL instanceURL) throws ValidityException, ParsingException, IOException {
 		//for keeping track of the object (and class) that owns following state/attributes
 		String objName = null;
 		String className = null;
@@ -240,15 +239,14 @@ public class XMIToGraph implements ModelToGraph {
 					//find the statemachine node in the model: obj--i-->classname--classifierBehavior-->statemachine
 					//and add an edge: objClassifierBehaviorExecution--behavior-->statemachine
 					Boolean statemachinefound = false;
-					for (int i = 0; i < graph.getArcsCount(); i++) {
-						Arc edge = graph.getArcsList().get(i);
-						if (ListGraph.getName(edge.getSource()).equals(className) && ListGraph.getName(edge).equals("classifierBehavior")) {
+					for (int i = 0; i < graph.size(); i++) {
+						Edge edge = graph.get(i);
+						if (edge.getFromName().equals(className) && edge.getLabel().equals("classifierBehavior")) {
 							statemachinefound = true;
-							graph.addEdge(instBehavExecNode, "behavior", ListGraph.getName(edge.getTarget()));
+							graph.addEdge(instBehavExecNode, "behavior", edge.getToName());
 						}
 					}
-					if (!statemachinefound)
-						instanceErr("ERROR - no state machine found for class " + className);
+					if (!statemachinefound) System.err.println("ERROR - no state machine found for class " + className);
 					
 					stateDeclared = true;
 					
@@ -348,7 +346,7 @@ public class XMIToGraph implements ModelToGraph {
 	}
 	
 	/** Performs response when an error occurs during instance translation */
-	private void instanceErr(String msg) throws ModelToGraphException {
-		throw new ModelToGraphException ("Invalid instance file. " + msg);
+	private void instanceErr(String msg) {
+		System.err.println("Invalid instance file. " + msg);
 	}
 }

@@ -3,19 +3,18 @@ package model.modelTransformer;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import model.ListGraph;
-import model.exceptions.GraphToModelException;
+import org.eclipse.swt.graphics.Point;
+
+import model.Edge;
+import model.Graph;
+import model.Node;
+import model.graphTransformer.GraphTransformer;
 import model.modelTransformer.objectDisplay.DisplayObject;
 import model.modelTransformer.objectDisplay.ODClass;
 import model.modelTransformer.objectDisplay.ODLink;
 import model.modelTransformer.objectDisplay.ODObject;
 import model.modelTransformer.objectDisplay.ObjDiag;
 import model.modelTransformer.objectDisplay.ObjectDisplay;
-
-import org.eclipse.swt.graphics.Point;
-
-import agg.xt_basis.Arc;
-import agg.xt_basis.Node;
 
 public class GraphToObjDiag implements GraphToModel {
 	
@@ -27,7 +26,7 @@ public class GraphToObjDiag implements GraphToModel {
     	ODObject.resetRandomLocator();
 	}
 	
-	public ObjectDisplay generateDisplayObjects(ListGraph graph) throws GraphToModelException {
+	public ObjectDisplay generateDisplayObjects(Graph graph) {
 		
 		ArrayList<DisplayObject> objects = objdiag.getODObjs();
 		ArrayList<ODLink> odLinks = objdiag.getODLinks();
@@ -69,32 +68,32 @@ public class GraphToObjDiag implements GraphToModel {
 		return objdiag;
 	}
 	
-	private ObjDiag generateObjectDiagram(ListGraph graph) throws GraphToModelException {
+	private ObjDiag generateObjectDiagram(Graph graph) {
 
 		ArrayList<ODObject> objects = new ArrayList<ODObject>();
 
 		// First find the Class node
 		Node classNode = null;
-		for(Arc edge : graph.getArcsList()) {
-			if(ListGraph.getName(edge.getTarget()).equals("Class")) {
-				classNode = (Node)edge.getTarget();
+		for(Edge edge : graph) {
+			if(edge.getTo().getName().equals("Class")) {
+				classNode = edge.getTo();
 				break;
 			}
-			if(ListGraph.getName(edge.getSource()).equals("Class")) {
-				classNode = (Node)edge.getSource();
+			if(edge.getFrom().getName().equals("Class")) {
+				classNode = edge.getFrom();
 				break;
 			}
 		}
 
 		if(classNode == null) {
-			throw new GraphToModelException("the graph has no class node");
+			System.out.println("the graph has no class node");
 		}
-		
+
 		// Find the classes.
 		ArrayList<ODClass> classes = new ArrayList<ODClass>();
-		for(Arc edgeToClass : classNode.getIncomingArcsVec()) {
-			if(ListGraph.getName(edgeToClass).equals("i")) {
-				Node node = (Node)edgeToClass.getSource();				
+		for(Edge edgeToClass : classNode.getTo()) {
+			if(edgeToClass.getLabel().equals("i")) {
+				Node node = edgeToClass.getFrom();				
 				ODClass clas = new ODClass(node);
 				classes.add(clas);
 			}
@@ -103,9 +102,9 @@ public class GraphToObjDiag implements GraphToModel {
 		// Find the objects of the classes.
 		for(ODClass clas : classes) {
 			Node node = clas.getGraphNode();
-			for(Arc edgeToClass : node.getIncomingArcsVec()) {
-				if(ListGraph.getName(edgeToClass).equals("i")) {
-					Node objNode = (Node)edgeToClass.getSource();
+			for(Edge edgeToClass : node.getTo()) {
+				if(edgeToClass.getLabel().equals("i")) {
+					Node objNode = edgeToClass.getFrom();
 					ODObject object = 
 						new ODObject(clas, objNode, true);
 					objects.add(object);
@@ -116,10 +115,10 @@ public class GraphToObjDiag implements GraphToModel {
 		// Find the attributes for each class.
 		for(ODClass clas : classes) {
 			Node node = clas.getGraphNode();
-			for(Arc edgeFromClass : node.getOutgoingArcsVec()) {				
-				if(ListGraph.getName(edgeFromClass).equals("ownedAttribute")) {
-					Node attributeName = (Node)edgeFromClass.getTarget();
-					clas.addAttributeName(ListGraph.getName(attributeName));
+			for(Edge edgeFromClass : node.getFrom()) {				
+				if(edgeFromClass.getLabel().equals("ownedAttribute")) {
+					Node attributeName = edgeFromClass.getTo();
+					clas.addAttributeName(attributeName.getName());
 				}
 			}
 		}
@@ -132,17 +131,17 @@ public class GraphToObjDiag implements GraphToModel {
 		ArrayList<Object[]> possibleAssociations = new ArrayList<Object[]>();
 		for(ODObject obj : objects) {
 			Node node = obj.getGraphNode();
-			for(Arc edgeFromAttr : node.getOutgoingArcsVec()) {
+			for(Edge edgeFromAttr : node.getFrom()) {
 
-				if(!ListGraph.getName(edgeFromAttr).equals("i")) {
-					String attrValue = ListGraph.getName(edgeFromAttr.getTarget());
-					String attrName = ListGraph.getName(edgeFromAttr);
+				if(!edgeFromAttr.getLabel().equals("i")) {
+					String attrValue = edgeFromAttr.getTo().getName();
+					String attrName = edgeFromAttr.getLabel();
 
 					//This could be either a attribute or an association					
 					Boolean wasAttribute = obj.setAttributeValue(attrName, attrValue);
 
 					if(!wasAttribute) {
-						Object[] possibility = {edgeFromAttr.getTarget(), attrName, obj};
+						Object[] possibility = {edgeFromAttr.getTo(), attrName, obj};
 						possibleAssociations.add(possibility);
 					}
 				}				
@@ -171,7 +170,7 @@ public class GraphToObjDiag implements GraphToModel {
 			//found object.
 
 			for(ODObject obj : objects) {
-				if(obj.getName().equals(ListGraph.getName(leftNode))) {
+				if(obj.getName().equals(leftNode.getName())) {
 					associations.add(new ODLink(left,leftLabel,right));
 				}
 			}
@@ -191,7 +190,7 @@ public class GraphToObjDiag implements GraphToModel {
 			ArrayList<String> toState = new ArrayList<String>();
 			toState.add("execution");
 			toState.add("activeState");
-			ArrayList<Node> states = ListGraph.toTrace(toState,node);
+			ArrayList<Node> states = node.toTrace(toState);
 			object.setState(states.get(0));
 		}
 
@@ -205,7 +204,7 @@ public class GraphToObjDiag implements GraphToModel {
 				ArrayList<String> traceOrder = new ArrayList<String>();
 				traceOrder.add("execution");
 				traceOrder.add("executable");
-				ArrayList<Node> executableActions = ListGraph.toTrace(traceOrder,object.getGraphNode());
+				ArrayList<Node> executableActions = object.getGraphNode().toTrace(traceOrder);
 				for (Node action : executableActions) {
 					object.addAction(action);
 				}
@@ -225,7 +224,7 @@ public class GraphToObjDiag implements GraphToModel {
 			toExternalEvent.add("transition");
 			toExternalEvent.add("trigger");
 			toExternalEvent.add("event");
-			ArrayList<Node> externalEvents = ListGraph.toTrace(toExternalEvent, object.getGraphNode());
+			ArrayList<Node> externalEvents = object.getGraphNode().toTrace(toExternalEvent);
 			for(Node node : externalEvents) {
 				object.addExternalEvent(node);
 			}
@@ -241,22 +240,22 @@ public class GraphToObjDiag implements GraphToModel {
 			ArrayList<String> fromSignalToReceive = new ArrayList<String>();
 			fromSignalToReceive.add("signal");
 
-			ArrayList<Node> recieptNodes = ListGraph.toTrace(toReciept, object.getGraphNode());
+			ArrayList<Node> recieptNodes = object.getGraphNode().toTrace(toReciept);
 			for(Node recieptNode : recieptNodes) {
 
 				ArrayList<Node> activeEventSignals 
-				= ListGraph.toTrace(fromRecieptToEvent, recieptNode);
+				= recieptNode.toTrace(fromRecieptToEvent);
 
 				ArrayList<Node> activeEvents = new ArrayList<Node>();
 				for(Node n : activeEventSignals) {
-					activeEvents.addAll(ListGraph.fromTrace(fromSignalToReceive, n));
+					activeEvents.addAll(n.fromTrace(fromSignalToReceive));
 				}
 
 				ArrayList<String> check = new ArrayList<String>();
 				check.add("i");
 				for(Node evNode : activeEvents) {
-					Node type = ListGraph.toTrace(check,evNode).get(0);
-					if(ListGraph.getName(type).equals("ReceiveSignalEvent")) {
+					Node type = evNode.toTrace(check).get(0);
+					if(type.getName().equals("ReceiveSignalEvent")) {
 						object.addEvent(evNode, recieptNode);
 					}
 				}

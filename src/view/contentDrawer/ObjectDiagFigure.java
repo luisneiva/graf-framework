@@ -1,8 +1,9 @@
 package view.contentDrawer;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
-import model.ListGraph;
+import model.modelTransformer.objectDisplay.ODEvent;
 import model.modelTransformer.objectDisplay.ODObject;
 
 import org.eclipse.draw2d.ColorConstants;
@@ -54,7 +55,7 @@ public class ObjectDiagFigure extends Figure {
 		
 		String objName = odObj.getName();
 		String className = odObj.getTheClass().getName();
-		String state = ListGraph.getName(odObj.getState());
+		String state = odObj.getState().getName();
 		
 		runtimePoolFigure = new CompartmentFigure(new GridLayout(2,true));
 

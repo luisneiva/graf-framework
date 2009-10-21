@@ -1,7 +1,6 @@
 package controller;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -9,6 +8,9 @@ import java.net.URL;
 
 import model.PluginModel;
 import model.TransitionAction;
+import model.modelTransformer.objectDisplay.ODAction;
+import model.modelTransformer.objectDisplay.ODEvent;
+import model.modelTransformer.objectDisplay.ODObject;
 
 import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.core.runtime.Path;
@@ -23,10 +25,10 @@ import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.widgets.Shell;
-import org.osgi.framework.Bundle;
 
 import view.ClickableLabel;
 import view.View;
+import view.contentDrawer.ObjectDiagFigure;
 
 /**
  * Coordinates the view and model major components.
@@ -35,9 +37,7 @@ import view.View;
  */
 public class Controller {
 	
-	/** Model of the system */
 	private PluginModel model;
-	/** View for the system */
 	private View view;
 	
 	/** Is the system running as a plugin or stand-alone. True if plugin, False if standalone */
@@ -49,46 +49,36 @@ public class Controller {
 	private final boolean debugmode;
 	/** Path to directory for storing graph states */
 	private final String graphOutputsPath = "GraphOutputs/";
-	private final String gtsRulesPath = "GTSRules.ggx";
-	private final String gtsRulesSeqPath = "GTSRulesSeq.xml";
+	private final String gtsRulesPath = "GTSRules.xml";
 	
 	/**
 	 * Set up model and view. Create and register listeners in the view.
 	 */
 	public Controller(final View theview, boolean plugin) {
+		System.out.println("Controller is alive");
+		
 		inst = this;
 		view = theview;
 		isPlugin = plugin;
 		debugmode = !isPlugin;	//only output dot files if standalone
 		
-		try {
-			String gtsRulesFilePath = "";
-			String gtsRulesSeqFilePath = "";
-			if (isPlugin) {
-				Bundle bundle = Activator.getDefault().getBundle();
-				URL gtsRulesRelURL = FileLocator.find(bundle, new Path(gtsRulesPath), null);
-				URL gtsRulesSeqRelURL = FileLocator.find(bundle, new Path(gtsRulesSeqPath), null);
-				if (gtsRulesRelURL==null)
-					throw new IOException("Cannot locate file: " + gtsRulesPath);
-				if (gtsRulesSeqRelURL==null)
-					throw new IOException("Cannot locate file: " + gtsRulesSeqPath);
-				URL gtsRulesURL = FileLocator.toFileURL(gtsRulesRelURL);
-				URL gtsRulesSeqURL = FileLocator.toFileURL(gtsRulesSeqRelURL);
-				gtsRulesFilePath = gtsRulesURL.getPath();
-				gtsRulesSeqFilePath = gtsRulesSeqURL.getPath();
-			} else {
-				if (new File(gtsRulesPath).exists()==false)
-					throw new IOException("Cannot locate file: " + gtsRulesPath);
-				if (new File(gtsRulesSeqPath).exists()==false)
-					throw new IOException("Cannot locate file: " + gtsRulesSeqPath);
-				gtsRulesFilePath = gtsRulesPath;
-				gtsRulesSeqFilePath = gtsRulesSeqPath;
+		URL gtsRulesURL = null;
+		if (isPlugin) {
+			gtsRulesURL = FileLocator.find(Activator.getDefault().getBundle(), new Path(gtsRulesPath), null);
+		} else {
+			try {
+				gtsRulesURL = new URL("file:" + gtsRulesPath);
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
-			model = new PluginModel(gtsRulesFilePath, gtsRulesSeqFilePath, debugmode, graphOutputsPath);
-			view.setModel(model);
-		} catch (Exception e) {
-			showError(e);
 		}
+			
+		try {
+			model = new PluginModel(gtsRulesURL, debugmode, graphOutputsPath);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		view.setModel(model);
 		
 		//Animation button action - TODO - delete this later
 		view.addAnimateListener(new ActionListener() {
@@ -110,12 +100,8 @@ public class Controller {
 		view.addUndoListener(new MouseListener() {
 			public void mouseDoubleClicked(MouseEvent me) {}
 			public void mousePressed(MouseEvent me) {
-				try {
-					model.undoAction();
-					view.update();
-				} catch (Exception e) {
-					showError(e);
-				}
+				model.undoAction();
+				view.update();
 			}
 			public void mouseReleased(MouseEvent me) {}
 		});
@@ -124,12 +110,8 @@ public class Controller {
 		view.addRedoListener(new MouseListener() {
 			public void mouseDoubleClicked(MouseEvent me) {}
 			public void mousePressed(MouseEvent me) {
-				try {
-					model.redoAction();
-					view.update();
-				} catch (Exception e) {
-					showError(e);
-				}
+				model.redoAction();
+				view.update();
 			}
 			public void mouseReleased(MouseEvent me) {}
 		});
@@ -138,13 +120,9 @@ public class Controller {
 		view.addResetListener(new MouseListener() {
 			public void mouseDoubleClicked(MouseEvent me) {}
 			public void mousePressed(MouseEvent me) {
-				try {
-					view.reset();
-					model.reset();
-					view.update();
-				} catch (Exception e) {
-					showError(e);
-				}
+				view.reset();
+				model.reset();
+				view.update();
 			}
 			public void mouseReleased(MouseEvent me) {}
 		});
@@ -198,8 +176,7 @@ public class Controller {
 				modelpath = line.trim();
 			}
 			if (modelpath.equals("")) {
-				showError(new FileNotFoundException(
-						"First line of test file must specify a model file to test."));
+				throw new FileNotFoundException("First line of test file must specify a model file to test.");
 			}
 			
 			URL instanceURL = new URL("file:" + instancepath);
@@ -212,11 +189,11 @@ public class Controller {
 				try {
 					modelURL = new URL(instanceURL, modelpath);
 					modelURL.getContent();
-				} catch (FileNotFoundException ex) {
-					showError(new FileNotFoundException("First line of test file must specify a " +
-							"model file to test. Could not locate file: " + modelpath));
-				} catch (IOException ex) {
-					showError(new IOException("Error reading file: " + modelpath));
+				} catch (FileNotFoundException e2) {
+					throw new FileNotFoundException("First line of test file must specify a " +
+							"model file to test. Could not locate file: " + modelpath);
+				} catch (IOException e3) {
+					throw new IOException("Error reading file: " + modelpath);
 				}
 			}
 			

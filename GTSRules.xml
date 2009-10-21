@@ -1,0 +1,490 @@
+<?xml version="1.0" ?>
+<GTSRules>
+	<rule name="ActorSendSignal">
+		<parameters>
+			<parameter name="?instance"/>
+			<parameter name="?receiveSignal"/>
+		</parameters>
+		<before>
+	        <edge from="?receiveSignal" to="?signal" label="signal"/>
+	        <edge from="?classifierBehaviorExecution" to="?instance" label="host"/>
+	        <edge from="?signal" to="Signal" label="i"/>
+	        <edge from="?instance" to="?classifierBehaviorExecution" label="execution"/>
+	        <edge from="?classifierBehaviorExecution2" to="?instance2" label="host"/>
+	        <edge from="?classifierBehaviorExecution" to="BehaviorExecution" label="i"/>
+	        <edge from="?trigger" to="?receiveSignal" label="event"/>
+	        <edge from="?instance2" to="Actor" label="i"/>
+	        <edge from="?classifierBehaviorExecution2" to="BehaviorExecution" label="i"/>
+	        <edge from="?instance2" to="?classifierBehaviorExecution2" label="execution"/>
+	        <edge from="?transition" to="?trigger" label="trigger"/>
+	        <edge from="?transition" to="Transition" label="i"/>
+	        <edge from="?trigger" to="Trigger" label="i"/>
+	        <edge from="?receiveSignal" to="ReceiveSignalEvent" label="i"/>
+	        <edge from="?classifierBehaviorExecution" to="?sm" label="behavior"/>
+	        <edge from="?sm" to="?smregion" label="region"/>
+	        <edge from="?smregion" to="?transition" label="transition"/>
+	        <edge from="?smregion" to="Region" label="i"/>
+	        <edge from="?sm" to="StateMachine" label="i"/>
+		</before>
+		<after>
+	        <edge from="*sent" to="?classifierBehaviorExecution2" label="execution"/>
+	        <edge from="*sent" to="?instance2" label="sender"/>
+	        <edge from="*instinst" to="?instance" label="receiver"/>
+	        <edge from="*instinst" to="*receipt" label="receiveEvent"/>
+	        <edge from="*sent" to="SendInvocationOccurrence" label="i"/>
+	        <edge from="?instance" to="*receipt" label="pool"/>
+	        <edge from="*instinst" to="?signal" label="i"/>
+	        <edge from="*sent" to="*instinst" label="message"/>
+	        <edge from="*receipt" to="?instance" label="receiver"/>
+	        <edge from="*instinst" to="*sent" label="sendEvent"/>
+	        <edge from="*receipt" to="*instinst" label="message"/>
+	        <edge from="*instinst" to="?instance2" label="sender"/>
+	        <edge from="*receipt" to="SignalOccurrence" label="i"/>
+	        <edge from="?receiveSignal" to="?signal" label="signal"/>
+	        <edge from="?classifierBehaviorExecution" to="?instance" label="host"/>
+	        <edge from="?signal" to="Signal" label="i"/>
+	        <edge from="?instance" to="?classifierBehaviorExecution" label="execution"/>
+	        <edge from="?classifierBehaviorExecution2" to="?instance2" label="host"/>
+	        <edge from="?classifierBehaviorExecution" to="BehaviorExecution" label="i"/>
+	        <edge from="?trigger" to="?receiveSignal" label="event"/>
+	        <edge from="?instance2" to="Actor" label="i"/>
+	        <edge from="?classifierBehaviorExecution2" to="BehaviorExecution" label="i"/>
+	        <edge from="?instance2" to="?classifierBehaviorExecution2" label="execution"/>
+	        <edge from="?transition" to="?trigger" label="trigger"/>
+	        <edge from="?transition" to="Transition" label="i"/>
+	        <edge from="?trigger" to="Trigger" label="i"/>
+	        <edge from="?receiveSignal" to="ReceiveSignalEvent" label="i"/>
+	        <edge from="?classifierBehaviorExecution" to="?sm" label="behavior"/> 
+	        <edge from="?sm" to="?smregion" label="region"/>
+	        <edge from="?smregion" to="?transition" label="transition"/>
+	        <edge from="?smregion" to="Region" label="i"/>
+	        <edge from="?sm" to="StateMachine" label="i"/>
+		</after>
+	</rule>
+	<rule name="AcceptEventAction" composite="true">
+		<exclusive-dependencies>
+			<dependency>AcceptEventAction-WithActivity</dependency>
+			<dependency>AcceptEventAction-WithoutActivity</dependency>
+			<dependency>AcceptEventAction-AndIgnore</dependency>
+		</exclusive-dependencies>
+	</rule>
+	<rule name="AcceptEventAction-WithActivity" composite="true">
+		<dependency>AcceptEventAction-WithActivity-Main</dependency>
+		<looping-dependency>
+		<dependency>AcceptEventAction-WithActivity-ExecutableEdges</dependency>
+		</looping-dependency>
+	</rule>
+	<rule name="AcceptEventAction-WithActivity-Main" composite="true">
+		<parameters>
+			<parameter name="?instance"/>
+			<parameter name="?c1receipt"/>
+		</parameters>
+		<before>
+	        <edge from="?classifierBehaviorExecution" to="BehaviorExecution" label="i"/>
+	        <edge from="?c1receipt" to="?instance" label="receiver"/>
+	        <edge from="?classifierBehaviorExecution" to="?instance" label="host"/>
+	        <edge from="?classifierBehaviorExecution" to="?state" label="activeState"/>
+	        <edge from="?c1receipt" to="?c1" label="message"/>
+	        <edge from="?c1" to="?c1sent" label="sendEvent"/>
+	        <edge from="?transition" to="?trigger" label="trigger"/>
+	        <edge from="?c1receipt" to="SignalOccurrence" label="i"/>
+	        <edge from="?transition" to="?state2" label="target"/>
+	        <edge from="?c1" to="?instance" label="receiver"/>
+	        <edge from="?transition" to="?state" label="source"/>
+	        <edge from="?c1sent" to="SendInvocationOccurrence" label="i"/>
+	        <edge from="?c1" to="?signal" label="i"/>
+	        <edge from="?state2" to="?activity" label="entry"/>
+	        <edge from="?instance" to="?c1receipt" label="pool"/>
+	        <edge from="?trigger" to="?receiveSignal" label="event"/>
+	        <edge from="?c1" to="?c1receipt" label="receiveEvent"/>
+	        <edge from="?instance" to="?classifierBehaviorExecution" label="execution"/>
+	        <edge from="?c1sent" to="?c1" label="message"/>
+	        <edge from="?activity" to="Activity" label="i"/>
+	        <edge from="?receiveSignal" to="?signal" label="signal"/>
+	        <edge from="?signal" to="Signal" label="i"/>
+	        <edge from="?transition" to="Transition" label="i"/>
+	        <edge from="?trigger" to="Trigger" label="i"/>
+	        <edge from="?receiveSignal" to="ReceiveSignalEvent" label="i"/>
+		</before>
+		<after>
+	        <edge from="?c1sent" to="SendInvocationOccurrence" label="i"/>
+	        <edge from="?c1receipt" to="?instance" label="receiver"/>
+	        <edge from="?transition" to="?trigger" label="trigger"/>
+	        <edge from="?classifierBehaviorExecution" to="BehaviorExecution" label="i"/>
+	        <edge from="?signal" to="Signal" label="i"/>
+	        <edge from="?classifierBehaviorExecution" to="?instance" label="host"/>
+	        <edge from="?trigger" to="?receiveSignal" label="event"/>
+	        <edge from="?c1receipt" to="SignalOccurrence" label="i"/>
+	        <edge from="?c1sent" to="?c1" label="message"/>
+	        <edge from="?c1" to="?instance" label="receiver"/>
+	        <edge from="?activity" to="Activity" label="i"/>
+	        <edge from="?instance" to="?classifierBehaviorExecution" label="execution"/>
+	        <edge from="?classifierBehaviorExecution" to="?state2" label="activeState"/>
+	        <edge from="?transition" to="?state" label="source"/>
+	        <edge from="?state2" to="?activity" label="entry"/>
+	        <edge from="?c1" to="?signal" label="i"/>
+	        <edge from="*newStateBehavior" to="?activity" label="behavior"/>
+	        <edge from="?receiveSignal" to="?signal" label="signal"/>
+	        <edge from="?c1" to="?c1receipt" label="receiveEvent"/>
+	        <edge from="?transition" to="?state2" label="target"/>
+	        <edge from="?c1receipt" to="?c1" label="message"/>
+	        <edge from="?instance" to="*newStateBehavior" label="execution"/>
+	        <edge from="*newStateBehavior" to="BehaviorExecution" label="i"/>
+	        <edge from="?c1" to="?c1sent" label="sendEvent"/>
+	        <edge from="*newStateBehavior" to="?instance" label="host"/>
+	        <edge from="?transition" to="Transition" label="i"/>
+	        <edge from="?trigger" to="Trigger" label="i"/>
+	        <edge from="?receiveSignal" to="ReceiveSignalEvent" label="i"/>
+		</after>
+	</rule>
+	<rule name="AcceptEventAction-WithActivity-ExecutableEdges" composite="true">
+		<parameters>
+			<parameter name="?instance"/>
+			<parameter name="?c1receipt"/>
+		</parameters>
+		<before>	<!-- Note: except for the last edge, this before graph is the same as the after graph for AcceptEventAction-WithActivity-Main -->
+	        <edge from="?c1sent" to="SendInvocationOccurrence" label="i"/>
+	        <edge from="?c1receipt" to="?instance" label="receiver"/>
+	        <edge from="?transition" to="?trigger" label="trigger"/>
+	        <edge from="?classifierBehaviorExecution" to="BehaviorExecution" label="i"/>
+	        <edge from="?signal" to="Signal" label="i"/>
+	        <edge from="?classifierBehaviorExecution" to="?instance" label="host"/>
+	        <edge from="?trigger" to="?receiveSignal" label="event"/>
+	        <edge from="?c1receipt" to="SignalOccurrence" label="i"/>
+	        <edge from="?c1sent" to="?c1" label="message"/>
+	        <edge from="?c1" to="?instance" label="receiver"/>
+	        <edge from="?activity" to="Activity" label="i"/>
+	        <edge from="?instance" to="?classifierBehaviorExecution" label="execution"/>
+	        <edge from="?classifierBehaviorExecution" to="?state2" label="activeState"/>
+	        <edge from="?transition" to="?state" label="source"/>
+	        <edge from="?state2" to="?activity" label="entry"/>
+	        <edge from="?c1" to="?signal" label="i"/>
+	        <edge from="?newStateBehavior" to="?activity" label="behavior"/>
+	        <edge from="?receiveSignal" to="?signal" label="signal"/>
+	        <edge from="?c1" to="?c1receipt" label="receiveEvent"/>
+	        <edge from="?transition" to="?state2" label="target"/>
+	        <edge from="?c1receipt" to="?c1" label="message"/>
+	        <edge from="?instance" to="?newStateBehavior" label="execution"/>
+	        <edge from="?newStateBehavior" to="BehaviorExecution" label="i"/>
+	        <edge from="?c1" to="?c1sent" label="sendEvent"/>
+	        <edge from="?newStateBehavior" to="?instance" label="host"/>
+	        <edge from="?transition" to="Transition" label="i"/>
+	        <edge from="?trigger" to="Trigger" label="i"/>
+	        <edge from="?receiveSignal" to="ReceiveSignalEvent" label="i"/>
+	        <!-- Include an action attached to the activity -->
+	        <edge from="?action" to="?activity" label="activity"/>
+		</before>
+		<after>
+			<edge from="?c1sent" to="SendInvocationOccurrence" label="i"/>
+	        <edge from="?c1receipt" to="?instance" label="receiver"/>
+	        <edge from="?transition" to="?trigger" label="trigger"/>
+	        <edge from="?classifierBehaviorExecution" to="BehaviorExecution" label="i"/>
+	        <edge from="?signal" to="Signal" label="i"/>
+	        <edge from="?classifierBehaviorExecution" to="?instance" label="host"/>
+	        <edge from="?trigger" to="?receiveSignal" label="event"/>
+	        <edge from="?c1receipt" to="SignalOccurrence" label="i"/>
+	        <edge from="?c1sent" to="?c1" label="message"/>
+	        <edge from="?c1" to="?instance" label="receiver"/>
+	        <edge from="?activity" to="Activity" label="i"/>
+	        <edge from="?instance" to="?classifierBehaviorExecution" label="execution"/>
+	        <edge from="?classifierBehaviorExecution" to="?state2" label="activeState"/>
+	        <edge from="?transition" to="?state" label="source"/>
+	        <edge from="?state2" to="?activity" label="entry"/>
+	        <edge from="?c1" to="?signal" label="i"/>
+	        <edge from="?newStateBehavior" to="?activity" label="behavior"/>
+	        <edge from="?receiveSignal" to="?signal" label="signal"/>
+	        <edge from="?c1" to="?c1receipt" label="receiveEvent"/>
+	        <edge from="?transition" to="?state2" label="target"/>
+	        <edge from="?c1receipt" to="?c1" label="message"/>
+	        <edge from="?instance" to="?newStateBehavior" label="execution"/>
+	        <edge from="?newStateBehavior" to="BehaviorExecution" label="i"/>
+	        <edge from="?c1" to="?c1sent" label="sendEvent"/>
+	        <edge from="?newStateBehavior" to="?instance" label="host"/>
+	        <edge from="?transition" to="Transition" label="i"/>
+	        <edge from="?trigger" to="Trigger" label="i"/>
+	        <edge from="?receiveSignal" to="ReceiveSignalEvent" label="i"/>
+	        <edge from="?action" to="?activity" label="activity"/>
+	        <!-- Add this edge: -->
+	        <edge from="?newStateBehavior" to="?action" label="executable"/>
+		</after>
+		<forbidden>
+		    <edge from="?newStateBehavior" to="?action" label="executable"/>
+		</forbidden>
+	</rule>
+	<rule name="AcceptEventAction-WithoutActivity">
+		<parameters>
+			<parameter name="?instance"/>
+			<parameter name="?c1receipt"/>
+		</parameters>
+		<before>
+	        <edge from="?transition" to="?trigger" label="trigger"/>
+	        <edge from="?c1" to="?instance" label="receiver"/>
+	        <edge from="?c1receipt" to="?c1" label="message"/>
+	        <edge from="?c1" to="?signal" label="i"/>
+	        <edge from="?c1sent" to="?c1" label="message"/>
+	        <edge from="?instance" to="?classifierBehaviorExecution" label="execution"/>
+	        <edge from="?c1receipt" to="?instance" label="receiver"/>
+	        <edge from="?c1" to="?c1sent" label="sendEvent"/>
+	        <edge from="?transition" to="?state" label="source"/>
+	        <edge from="?transition" to="?state2" label="target"/>
+	        <edge from="?signal" to="Signal" label="i"/>
+	        <edge from="?c1sent" to="SendInvocationOccurrence" label="i"/>
+	        <edge from="?receiveSignal" to="?signal" label="signal"/>
+	        <edge from="?trigger" to="?receiveSignal" label="event"/>
+	        <edge from="?classifierBehaviorExecution" to="?state" label="activeState"/>
+	        <edge from="?instance" to="?c1receipt" label="pool"/>
+	        <edge from="?c1receipt" to="SignalOccurrence" label="i"/>
+	        <edge from="?classifierBehaviorExecution" to="?instance" label="host"/>
+	        <edge from="?classifierBehaviorExecution" to="BehaviorExecution" label="i"/>
+	        <edge from="?c1" to="?c1receipt" label="receiveEvent"/>
+	        <edge from="?transition" to="Transition" label="i"/>
+	        <edge from="?trigger" to="Trigger" label="i"/>
+	        <edge from="?receiveSignal" to="ReceiveSignalEvent" label="i"/>
+		</before>
+		<after>
+	        <edge from="?trigger" to="?receiveSignal" label="event"/>
+	        <edge from="?classifierBehaviorExecution" to="?state2" label="activeState"/>
+	        <edge from="?classifierBehaviorExecution" to="?instance" label="host"/>
+	        <edge from="?c1receipt" to="?c1" label="message"/>
+	        <edge from="?classifierBehaviorExecution" to="BehaviorExecution" label="i"/>
+	        <edge from="?c1" to="?c1receipt" label="receiveEvent"/>
+	        <edge from="?transition" to="?state" label="source"/>
+	        <edge from="?signal" to="Signal" label="i"/>
+	        <edge from="?instance" to="?classifierBehaviorExecution" label="execution"/>
+	        <edge from="?c1" to="?signal" label="i"/>
+	        <edge from="?transition" to="?state2" label="target"/>
+	        <edge from="?c1" to="?instance" label="receiver"/>
+	        <edge from="?c1" to="?c1sent" label="sendEvent"/>
+	        <edge from="?c1sent" to="?c1" label="message"/>
+	        <edge from="?receiveSignal" to="?signal" label="signal"/>
+	        <edge from="?c1sent" to="SendInvocationOccurrence" label="i"/>
+	        <edge from="?c1receipt" to="SignalOccurrence" label="i"/>
+	        <edge from="?transition" to="?trigger" label="trigger"/>
+	        <edge from="?c1receipt" to="?instance" label="receiver"/>
+	        <edge from="?transition" to="Transition" label="i"/>
+	        <edge from="?trigger" to="Trigger" label="i"/>
+	        <edge from="?receiveSignal" to="ReceiveSignalEvent" label="i"/>
+		</after>
+	</rule>
+        <rule name="AcceptEventAction-AndIgnore">
+		<parameters>
+			<parameter name="?instance"/>
+			<parameter name="?c1receipt"/>
+		</parameters>
+		<before>
+	        <edge from="?c1" to="?instance" label="receiver"/>
+	        <edge from="?c1receipt" to="?c1" label="message"/>
+	        <edge from="?c1" to="?signal" label="i"/>
+	        <edge from="?c1receipt" to="?instance" label="receiver"/>
+	        <edge from="?signal" to="Signal" label="i"/>
+	        <edge from="?receiveSignal" to="?signal" label="signal"/>
+	        <edge from="?instance" to="?c1receipt" label="pool"/>
+	        <edge from="?c1receipt" to="SignalOccurrence" label="i"/>
+	        <edge from="?c1" to="?c1receipt" label="receiveEvent"/>
+	        <edge from="?receiveSignal" to="ReceiveSignalEvent" label="i"/>
+	        <edge from="?c1" to="?c1sent" label="sendEvent"/>
+	        <edge from="?c1sent" to="SendInvocationOccurrence" label="i"/>
+	        <edge from="?c1sent" to="?c1" label="message"/>
+		</before>
+		<after>
+	        <edge from="?c1" to="?instance" label="receiver"/>
+	        <edge from="?c1receipt" to="?c1" label="message"/>
+	        <edge from="?c1" to="?signal" label="i"/>
+	        <edge from="?c1receipt" to="?instance" label="receiver"/>
+	        <edge from="?signal" to="Signal" label="i"/>
+	        <edge from="?receiveSignal" to="?signal" label="signal"/>
+	        <edge from="?c1receipt" to="SignalOccurrence" label="i"/>
+	        <edge from="?c1" to="?c1receipt" label="receiveEvent"/>
+	        <edge from="?receiveSignal" to="ReceiveSignalEvent" label="i"/>
+	        <edge from="?c1" to="?c1sent" label="sendEvent"/>
+	        <edge from="?c1sent" to="SendInvocationOccurrence" label="i"/>
+	        <edge from="?c1sent" to="?c1" label="message"/>
+		</after>
+	</rule>
+	<rule name="SendSignalAction">
+		<parameters>
+			<parameter name="?instance"/>
+			<parameter name="?sendSignal"/>
+		</parameters>
+		<before>
+	        <edge from="?recieveSignal" to="ReceiveSignalEvent" label="i"/>
+	        <edge from="?recieveSignal" to="?signal" label="signal"/>
+	        <edge from="?foodPinB" to="ActionInputPin" label="i"/>
+	        <edge from="?instanceState" to="?instanceActivity" label="entry"/>
+	        <edge from="?instanceActivity" to="?sendSignal" label="node"/>
+	        <edge from="?classifierBehaviorExecution" to="?instance" label="host"/>
+	        <edge from="?sendSignal" to="?foodPinB" label="target"/>
+	        <edge from="?classifierBehaviorExecution" to="BehaviorExecution" label="i"/>
+	        <edge from="?stateMachine" to="StateMachine" label="i"/>
+	        <edge from="?sendSignal" to="SendSignalAction" label="i"/>
+	        <edge from="?stateMachine" to="?SMRegion" label="region"/>
+	        <edge from="?getFoodB" to="?theFoodB" label="result"/>
+	        <edge from="?instanceActivity" to="Activity" label="i"/>
+	        <edge from="?classifierBehaviorExecution2" to="?stateMachine" label="behavior"/>
+	        <edge from="?classifierBehaviorExecution" to="?instanceState" label="activeState"/>
+	        <edge from="?SMRegion" to="?transition" label="transition"/>
+	        <edge from="?trigger" to="?recieveSignal" label="event"/>
+	        <edge from="?foodPinB" to="?getFoodB" label="fromAction"/>
+	        <edge from="?trigger" to="Trigger" label="i"/>
+	        <edge from="?sendSignal" to="?signal" label="signal"/>
+	        <edge from="?classifierBehaviorExecution2" to="?instance2" label="host"/>
+	        <edge from="?SMRegion" to="Region" label="i"/>
+	        <edge from="?signal" to="Signal" label="i"/>
+	        <edge from="?instance2" to="?classifierBehaviorExecution2" label="execution"/>
+	        <edge from="?instance" to="?classifierBehaviorExecution" label="execution"/>
+	        <edge from="?transition" to="Transition" label="i"/>
+	        <edge from="?classifierBehaviorExecution2" to="BehaviorExecution" label="i"/>
+	        <edge from="?transition" to="?trigger" label="trigger"/>
+	        <edge from="?instance" to="?newStateBehavior" label="execution"/>
+	        <edge from="?newStateBehavior" to="?instance" label="host"/>
+	        <edge from="?newStateBehavior" to="?instanceActivity" label="behavior"/>
+	        <edge from="?newStateBehavior" to="?sendSignal" label="executable"/>
+		<edge from="?newStateBehavior" to="?instance2" label="?theFoodB"/>
+		</before>
+		<after>
+		<edge from="?classifierBehaviorExecution2" to="?instance2" label="host"/>
+	        <edge from="*c1" to="?instance2" label="receiver"/>
+	        <edge from="*c1sent" to="*c1" label="message"/>
+	        <edge from="?classifierBehaviorExecution" to="?instanceState" label="activeState"/>
+	        <edge from="*c1sent" to="?instance" label="sender"/>
+	        <edge from="?transition" to="Transition" label="i"/>
+	        <edge from="?classifierBehaviorExecution2" to="BehaviorExecution" label="i"/>
+	        <edge from="?getFoodB" to="?theFoodB" label="result"/>
+	        <edge from="?instanceActivity" to="Activity" label="i"/>
+	        <edge from="?sendSignal" to="?foodPinB" label="target"/>
+	        <edge from="*c1receipt" to="?instance2" label="receiver"/>
+	        <edge from="?instance" to="?classifierBehaviorExecution" label="execution"/>
+	        <edge from="?trigger" to="Trigger" label="i"/>
+	        <edge from="*c1sent" to="?classifierBehaviorExecution" label="execution"/>
+	        <edge from="?sendSignal" to="?signal" label="signal"/>
+	        <edge from="?recieveSignal" to="?signal" label="signal"/>
+	        <edge from="?SMRegion" to="Region" label="i"/>
+	        <edge from="?sendSignal" to="SendSignalAction" label="i"/>
+	        <edge from="*c1" to="?signal" label="i"/>
+	        <edge from="?foodPinB" to="?getFoodB" label="fromAction"/>
+	        <edge from="?recieveSignal" to="ReceiveSignalEvent" label="i"/>
+	        <edge from="?classifierBehaviorExecution" to="?instance" label="host"/>
+	        <edge from="?signal" to="Signal" label="i"/>
+	        <edge from="?SMRegion" to="?transition" label="transition"/>
+	        <edge from="?stateMachine" to="StateMachine" label="i"/>
+	        <edge from="?foodPinB" to="ActionInputPin" label="i"/>
+	        <edge from="?instance2" to="?classifierBehaviorExecution2" label="execution"/>
+	        <edge from="*c1sent" to="SendInvocationOccurrence" label="i"/>
+	        <edge from="?instance2" to="*c1receipt" label="pool"/>
+	        <edge from="*c1" to="*c1sent" label="sendEvent"/>
+	        <edge from="*c1receipt" to="*c1" label="message"/>
+	        <edge from="*c1" to="*c1receipt" label="receiveEvent"/>
+	        <edge from="*c1" to="?instance" label="sender"/>
+	        <edge from="*c1receipt" to="SignalOccurrence" label="i"/>
+	        <edge from="?stateMachine" to="?SMRegion" label="region"/>
+	        <edge from="?classifierBehaviorExecution2" to="?stateMachine" label="behavior"/>
+	        <edge from="?trigger" to="?recieveSignal" label="event"/>
+	        <edge from="?instanceActivity" to="?sendSignal" label="node"/>
+	        <edge from="?classifierBehaviorExecution" to="BehaviorExecution" label="i"/>
+	        <edge from="?instanceState" to="?instanceActivity" label="entry"/>
+	        <edge from="?transition" to="?trigger" label="trigger"/>
+	        <edge from="?instance" to="?newStateBehavior" label="execution"/>
+	        <edge from="?newStateBehavior" to="?instance" label="host"/>
+	        <edge from="?newStateBehavior" to="?instanceActivity" label="behavior"/>
+		<edge from="?newStateBehavior" to="?instance2" label="?theFoodB"/>
+		</after>
+	</rule>
+	<rule name="ReadStructuralFeatureAction" composite="true">
+		<exclusive-dependencies>
+			<dependency>ReadStructuralFeatureAction-Version1</dependency>
+			<dependency>ReadStructuralFeatureAction-Version2</dependency>
+		</exclusive-dependencies>
+	</rule>
+        <rule name="ReadStructuralFeatureAction-Version2">
+		<parameters>
+			<parameter name="?instance"/>
+			<parameter name="?getFood"/>
+		</parameters> <!-- version 1 is the final version. Version 2 will be deleted. -->
+		<before> <!-- ReadStructuralFeatureAction in split in 2 until the 2 vars->1 const issue is solved -->
+		<edge from="?theFood" to="OutputPin" label="i"/>
+	        <edge from="?getFood" to="?theFood" label="result"/>
+	        <edge from="?getFood" to="ReadStructuralFeatureAction" label="i"/>
+	        <edge from="?newStateBehavior" to="?getFood" label="executable"/>
+	        <edge from="?newStateBehavior" to="?instance" label="host"/>
+	        <edge from="?instance" to="?newStateBehavior" label="execution"/>
+	        <edge from="?getFood" to="?theFeature" label="structuralFeature"/>
+	        <edge from="?getFood" to="?selfActionInputPin" label="object"/>
+	        <edge from="?selfActionInputPin" to="?selfRead" label="fromAction"/>
+	        <edge from="?newStateBehavior" to="?instance" label="?selfPin"/>
+		<edge from="?instance" to="?feature" label="?theFeature"/>
+		<edge from="?selfRead" to="?selfPin" label="result"/>
+		</before>
+		<after>
+		<edge from="?theFood" to="OutputPin" label="i"/>
+	        <edge from="?getFood" to="?theFood" label="result"/>
+	        <edge from="?getFood" to="ReadStructuralFeatureAction" label="i"/>
+	        <edge from="?newStateBehavior" to="?instance" label="host"/>
+	        <edge from="?instance" to="?newStateBehavior" label="execution"/>
+	        <edge from="?getFood" to="?theFeature" label="structuralFeature"/>
+	        <edge from="?getFood" to="?selfActionInputPin" label="object"/>
+	        <edge from="?selfActionInputPin" to="?selfRead" label="fromAction"/>
+	        <edge from="?newStateBehavior" to="?instance" label="?selfPin"/>
+		<edge from="?instance" to="?feature" label="?theFeature"/>
+	        <edge from="?newStateBehavior" to="?feature" label="?theFood"/>
+		<edge from="?selfRead" to="?selfPin" label="result"/>
+		</after>
+	</rule>
+	<rule name="ReadStructuralFeatureAction-Version1">
+		<parameters>
+			<parameter name="?instance"/>
+			<parameter name="?getFood"/>
+		</parameters>
+		<before>
+		<edge from="?theFood" to="OutputPin" label="i"/>
+	        <edge from="?getFood" to="?theFood" label="result"/>
+	        <edge from="?getFood" to="ReadStructuralFeatureAction" label="i"/>
+	        <edge from="?newStateBehavior" to="?getFood" label="executable"/>
+	        <edge from="?newStateBehavior" to="?instance" label="host"/>
+	        <edge from="?instance" to="?newStateBehavior" label="execution"/>
+	        <edge from="?getFood" to="?theFeature" label="structuralFeature"/>
+	        <edge from="?getFood" to="?selfActionInputPin" label="object"/>
+	        <edge from="?selfActionInputPin" to="?selfRead" label="fromAction"/>
+	        <edge from="?newStateBehavior" to="?instance2" label="?selfPin"/>
+		<edge from="?instance2" to="?feature" label="?theFeature"/>
+		<edge from="?selfRead" to="?selfPin" label="result"/>
+		</before>
+		<after>
+		<edge from="?theFood" to="OutputPin" label="i"/>
+	        <edge from="?getFood" to="?theFood" label="result"/>
+	        <edge from="?getFood" to="ReadStructuralFeatureAction" label="i"/>
+	        <edge from="?newStateBehavior" to="?instance" label="host"/>
+	        <edge from="?instance" to="?newStateBehavior" label="execution"/>
+	        <edge from="?getFood" to="?theFeature" label="structuralFeature"/>
+	        <edge from="?getFood" to="?selfActionInputPin" label="object"/>
+	        <edge from="?selfActionInputPin" to="?selfRead" label="fromAction"/>
+	        <edge from="?newStateBehavior" to="?instance2" label="?selfPin"/>
+		<edge from="?instance2" to="?feature" label="?theFeature"/>
+	        <edge from="?newStateBehavior" to="?feature" label="?theFood"/>
+		<edge from="?selfRead" to="?selfPin" label="result"/>
+		</after>
+	</rule>
+	<rule name = "ReadSelfAction">
+		<parameters>
+			<parameter name="?instance"/>
+			<parameter name="?selfRead"/>
+		</parameters>
+		<before>
+		<edge from="?selfPin" to="OutputPin" label="i"/>
+		<edge from="?selfRead" to="?selfPin" label="result"/>
+		<edge from="?selfRead" to="ReadSelfAction" label="i"/>
+		<edge from="?classifierBehaviorExecution" to="?selfRead" label="executable"/>
+		<edge from="?classifierBehaviorExecution" to="BehaviorExecution" label="i"/>
+		<edge from="?classifierBehaviorExecution" to="?instance" label="host"/>
+		<edge from="?instance" to="?classifierBehaviorExecution" label="execution"/>
+		</before>
+		<after>
+		<edge from="?selfPin" to="OutputPin" label="i"/>
+		<edge from="?selfRead" to="?selfPin" label="result"/>
+		<edge from="?selfRead" to="ReadSelfAction" label="i"/>
+		<edge from="?classifierBehaviorExecution" to="BehaviorExecution" label="i"/>
+		<edge from="?classifierBehaviorExecution" to="?instance" label="host"/>
+		<edge from="?instance" to="?classifierBehaviorExecution" label="execution"/>
+		<edge from="?classifierBehaviorExecution" to="?instance" label="?selfPin"/>
+		</after>
+	</rule>
+</GTSRules>

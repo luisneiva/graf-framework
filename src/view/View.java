@@ -55,7 +55,7 @@ public class View extends ViewPart {
 	/** Draws model contents */
 	private ContentDrawer contentDrawer;
 	
-	//Random button for testing		//TODO - delete this
+	//Random button for testing
 	private Button button = new Button("Animate \"microwaveTest1.modeltest\"");
 	/** Button to choose model to animate */
 	private Button newAnimButton = new Button("New");
@@ -71,50 +71,41 @@ public class View extends ViewPart {
 		this(true);
 	}
 
-	/** Construct View
-	 * @param plugin Is the system running as a plugin
-	 */
 	public View(boolean plugin) {
+		System.out.println("This system is running " + (plugin?"as a plugin":"standalone"));
+		System.out.println("View is alive");
 		isPlugin = plugin;
 		contentDrawer = new ObjectDiagDrawer(this);
 		@SuppressWarnings("unused")
 		Controller controller = new Controller(this, plugin);
 	}
 
-	/** Set the model for use by this view */
 	public void setModel(PluginModel model) {
 		this.model = model;
 	}
 	
-	/** Add listener to the 'Animate modeltest' button */	//TODO - delete this
 	public void addAnimateListener(ActionListener animListener) {
 		button.addActionListener(animListener);
 	}
 
-	/** Add listener to the 'New' button */
 	public void addNewAnimListener(ActionListener newListener) {
 		newAnimButton.addActionListener(newListener);
 	}
 
-	/** Add listener to the 'Undo' button */
 	public void addUndoListener(MouseListener resetListener) {
 		undo.addMouseListener(resetListener);
 	}
-	/** Add listener to the 'Redo' button */
 	public void addRedoListener(MouseListener resetListener) {
 		redo.addMouseListener(resetListener);
 	}
-	/** Add listener to the 'Reset' button */
 	public void addResetListener(MouseListener resetListener) {
 		reset.addMouseListener(resetListener);
 	}
 	
-	/** Set the listener for when transition-sources are pressed */
 	public void setTransitionListener(MouseListener transListener) {
 		contentDrawer.setTransListener(transListener); 
 	}
 
-	/** Set the listener for when popup menu items are selected */
 	public void setPopupListener(Listener popupListener) {
 		contentDrawer.setPopupListener(popupListener);
 	}
@@ -134,11 +125,7 @@ public class View extends ViewPart {
 	
 	/** Display error message to user */
 	public void showError(String msg) {
-		if (parent == null) {
-			MessageDialog.openError(null, "Animator Error", msg);
-		} else {
-			MessageDialog.openError(parent.getShell(), "Animator Error", msg);
-		}
+		MessageDialog.openError(parent.getShell(), "Animator Error", msg);
 	}
 	
 	/** Creates the initial view - ie the view upon Animator startup */
@@ -210,6 +197,7 @@ public class View extends ViewPart {
 	 * @return Reference to the menu created 
 	 */
 	public Menu createPopupMenu(Point menupos) {
+		//Point menupos = new Point(me.x,me.y);
 		menupos.x *= contents.getScale();
 		menupos.y *= contents.getScale();
 		menupos = parent.toDisplay(menupos);
@@ -278,10 +266,8 @@ public class View extends ViewPart {
 		rootFigure.add(reset);
 	}
 	
-	/** Shifts the display by a given translation vector */
 	private class PanListener implements MouseListener {
 		Point translation;
-		/** Construct listener to shift the display by the given translation vector */
 		PanListener(Point translation) {
 			this.translation = translation;
 		}
@@ -292,12 +278,10 @@ public class View extends ViewPart {
 			update();
 		}
 	}
-	/** Zooms the display by a given zoom factor vector */
 	private class ZoomListener implements MouseListener {
 		Double zoomFactor;
 		final double zoomMin = 0.1;
 		final double zoomMax = 2.4;
-		/** Construct listener to zoom the display by the given zoom factor */
 		ZoomListener(Double zoomFactor) {
 			this.zoomFactor = zoomFactor;
 		}

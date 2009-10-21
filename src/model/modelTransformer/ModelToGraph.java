@@ -2,7 +2,7 @@ package model.modelTransformer;
 
 import java.net.URL;
 
-import model.ListGraph;
+import model.Graph;
 import model.exceptions.ModelToGraphException;
 
 /**
@@ -11,5 +11,5 @@ import model.exceptions.ModelToGraphException;
  * @author Kevin O'Shea
  */
 public interface ModelToGraph {
-	public ListGraph buildGraph(URL modelURL, URL instanceURL) throws ModelToGraphException;
+	public Graph buildGraph(URL modelURL, URL instanceURL) throws ModelToGraphException;
 }

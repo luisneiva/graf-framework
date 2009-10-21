@@ -8,8 +8,7 @@ package model.modelTransformer.objectDisplay;
  *
  */
 
-import model.ListGraph;
-import agg.xt_basis.Node;
+import model.Node;
 
 public class ODEvent {
 
@@ -21,9 +20,9 @@ public class ODEvent {
 	private String occurence;
 
 	ODEvent(Node eventNode, Node occurenceNode) {
-		name = ListGraph.getName(eventNode);
+		name = eventNode.getName();
 		if(occurenceNode != null) {
-			occurence = ListGraph.getName(occurenceNode);
+			occurence = occurenceNode.getName();
 		}
 		//System.out.println(name + " for " + occurence);
 	}

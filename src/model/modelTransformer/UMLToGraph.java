@@ -6,7 +6,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 
-import model.ListGraph;
+import model.Edge;
+import model.Graph;
 import model.exceptions.ModelToGraphException;
 
 import org.eclipse.emf.common.util.EList;
@@ -21,8 +22,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.uml2.uml.UMLPackage;
 import org.eclipse.uml2.uml.resource.UMLResource;
 
-import agg.xt_basis.Arc;
-
 /**
  * Transforms an EMF model into a graph. It is currently set up to read UML2 models.
  * 
@@ -31,13 +30,13 @@ import agg.xt_basis.Arc;
 public class UMLToGraph implements ModelToGraph {
 	
 	/** The graph being built */
-	private ListGraph graph;
+	private Graph graph;
 	
 	/** Path of the model file being transformed */
 	private String modelPath;
 	
-	public ListGraph buildGraph(URL modelURL, URL instanceURL) throws ModelToGraphException {
-		graph = new ListGraph();
+	public Graph buildGraph(URL modelURL, URL instanceURL) throws ModelToGraphException {
+		graph = new Graph();
 		translateModelPart(modelURL);
 		translateInstancePart(instanceURL);
 		createRuntimePart();
@@ -128,7 +127,7 @@ public class UMLToGraph implements ModelToGraph {
 	}
 	
 	private void createEdges(EObject obj, EStructuralFeature feature, Object value) {
-		//ignore redundant edges: (not used in current rule definitions)
+		//ignore redundant edges: (not used in current rule definitions) (TODO)
 		String featureName = feature.getName();
 		if (featureName.equals("qualifiedName")) return;
 		if (featureName.equals("namespace")) return;
@@ -196,12 +195,12 @@ public class UMLToGraph implements ModelToGraph {
 					//obj--i-->classname--classifierBehavior-->statemachine
 					//and add an edge: objClassifierBehaviorExecution--behavior-->statemachine
 					Boolean statemachinefound = false;
-					for (int i = 0; i < graph.getArcsCount(); i++) {
-						Arc edge = graph.getArcsList().get(i);
-						if (ListGraph.getName(edge.getSource()).equals(className) &&
-								ListGraph.getName(edge).equals("classifierBehavior")) {
+					for (int i = 0; i < graph.size(); i++) {
+						Edge edge = graph.get(i);
+						if (edge.getFromName().equals(className) &&
+								edge.getLabel().equals("classifierBehavior")) {
 							statemachinefound = true;
-							graph.addEdge(instBehavExecNode, "behavior", ListGraph.getName(edge));
+							graph.addEdge(instBehavExecNode, "behavior", edge.getToName());
 						}
 					}
 					if (!statemachinefound) {
