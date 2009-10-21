@@ -1,4 +1,3 @@
-
 = Introduction =
 
 See Business Specifications, Vision and Scope document.
@@ -21,7 +20,7 @@ See Business Specifications, Vision and Scope document.
  * The framework - The Graph-based Reference Animator Framework that this document describes.
  * UML - Unified Modelling Language ([http://graf-framework.googlecode.com/files/OMG%20UML.pdf OMG UML])
 
- # *Functionality (What our entire system can do)*
+ # ==Functionality (What our entire system can do)==
   ## The framework will:
    ## Complete system transitions using “The Attributed Graph Grammar System” engine. [http://user.cs.tu-berlin.de/~gragra/agg/ AGGSystem]
    ## Provide the ability to
@@ -48,13 +47,13 @@ See Business Specifications, Vision and Scope document.
    ## Require only the addition of graph transformation rules (See SRS1.1.2.2.1) to implement a larger subset of the UML definition.
    ## Allow the following UML model of a microwave heating food to be executed to completion: (link)
    ## Let the user manually select the next action to execute with the mouse cursor.
- # *Usability (How easily can the user get that functionality)*
+ # ==Usability (How easily can the user get that functionality)==
   ## The framework will:
    ## Require, for language extensions, modification in:
     ## One module for language rules at most
     ## One module for user interface and model rendering at most
     ## Less than 10 lines of code elsewhere
- # *Portability*
+ # ==Portability==
   ## The framework will function as:
    ## As an Eclipse IDE plugin
    ## As a java stand alone application
