@@ -3,7 +3,7 @@
 
 == Architecture ==
 
-http://graf-framework.googlecode.com/files/Architecture-1.png
+http://graf-framework.googlecode.com/files/Architecture-2.png
 
 The proposed solution is a plugin for eclipse, that will make use of the Eclipse Modeling Framework (EMF) for reading and displaying models. The proposed system architecture follows the model view controller architectural pattern. The motivation behind this is a result of clear separation between the user interface components and the modelling of the system state.
 
