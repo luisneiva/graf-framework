@@ -1,0 +1,3570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gxl xmlns="http://www.gupro.de/GXL/gxl-1.0.dtd">
+    <graph id="actorSendSignal - BEFORE" role="rule" edgeids="false" edgemode="directed">
+        <attr name="enabled">
+            <string>false</string>
+        </attr>
+        <attr name="$version">
+            <string>curly</string>
+        </attr>
+        <node id="n120392"/>
+        <node id="n120393"/>
+        <node id="n120394"/>
+        <node id="n120395"/>
+        <node id="n120396"/>
+        <node id="n120397"/>
+        <node id="n120398"/>
+        <node id="n120399"/>
+        <node id="n120400"/>
+        <node id="n120401"/>
+        <node id="n120402"/>
+        <node id="n120403"/>
+        <node id="n120404"/>
+        <node id="n120405"/>
+        <node id="n120406"/>
+        <node id="n120407"/>
+        <node id="n120408"/>
+        <node id="n120409"/>
+        <edge from="n120406" to="n120396">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n120408" to="n120408">
+            <attr name="label">
+                <string>Transition</string>
+            </attr>
+        </edge>
+        <edge from="n120405" to="n120407">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n120397" to="n120397">
+            <attr name="label">
+                <string>Actor</string>
+            </attr>
+        </edge>
+        <edge from="n120394" to="n120394">
+            <attr name="label">
+                <string>?instance2</string>
+            </attr>
+        </edge>
+        <edge from="n120407" to="n120407">
+            <attr name="label">
+                <string>StateMachine</string>
+            </attr>
+        </edge>
+        <edge from="n120400" to="n120402">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n120401" to="n120401">
+            <attr name="label">
+                <string>?recieveSignal</string>
+            </attr>
+        </edge>
+        <edge from="n120396" to="n120406">
+            <attr name="label">
+                <string>host</string>
+            </attr>
+        </edge>
+        <edge from="n120404" to="n120395">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n120405" to="n120404">
+            <attr name="label">
+                <string>region</string>
+            </attr>
+        </edge>
+        <edge from="n120401" to="n120392">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n120392" to="n120392">
+            <attr name="label">
+                <string>ReceiveSignalEvent</string>
+            </attr>
+        </edge>
+        <edge from="n120396" to="n120405">
+            <attr name="label">
+                <string>behavior</string>
+            </attr>
+        </edge>
+        <edge from="n120406" to="n120406">
+            <attr name="label">
+                <string>?instance</string>
+            </attr>
+        </edge>
+        <edge from="n120404" to="n120404">
+            <attr name="label">
+                <string>?stateMachineRegion</string>
+            </attr>
+        </edge>
+        <edge from="n120409" to="n120408">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n120403" to="n120403">
+            <attr name="label">
+                <string>Signal</string>
+            </attr>
+        </edge>
+        <edge from="n120395" to="n120395">
+            <attr name="label">
+                <string>Region</string>
+            </attr>
+        </edge>
+        <edge from="n120396" to="n120402">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n120396" to="n120396">
+            <attr name="label">
+                <string>?classifierBehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n120401" to="n120393">
+            <attr name="label">
+                <string>signal</string>
+            </attr>
+        </edge>
+        <edge from="n120393" to="n120393">
+            <attr name="label">
+                <string>?signal</string>
+            </attr>
+        </edge>
+        <edge from="n120398" to="n120398">
+            <attr name="label">
+                <string>?trigger</string>
+            </attr>
+        </edge>
+        <edge from="n120400" to="n120400">
+            <attr name="label">
+                <string>?classifierBehaviorExecution2</string>
+            </attr>
+        </edge>
+        <edge from="n120400" to="n120394">
+            <attr name="label">
+                <string>host</string>
+            </attr>
+        </edge>
+        <edge from="n120402" to="n120402">
+            <attr name="label">
+                <string>BehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n120394" to="n120397">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n120409" to="n120398">
+            <attr name="label">
+                <string>trigger</string>
+            </attr>
+        </edge>
+        <edge from="n120394" to="n120400">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n120399" to="n120399">
+            <attr name="label">
+                <string>Trigger</string>
+            </attr>
+        </edge>
+        <edge from="n120409" to="n120409">
+            <attr name="label">
+                <string>?transition</string>
+            </attr>
+        </edge>
+        <edge from="n120398" to="n120399">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n120398" to="n120401">
+            <attr name="label">
+                <string>event</string>
+            </attr>
+        </edge>
+        <edge from="n120404" to="n120409">
+            <attr name="label">
+                <string>transition</string>
+            </attr>
+        </edge>
+        <edge from="n120393" to="n120403">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n120405" to="n120405">
+            <attr name="label">
+                <string>?stateMachine</string>
+            </attr>
+        </edge>
+    </graph>
+    <graph id="actorSendSignal - AFTER" role="rule" edgeids="false" edgemode="directed">
+        <attr name="enabled">
+            <string>false</string>
+        </attr>
+        <attr name="$version">
+            <string>curly</string>
+        </attr>
+        <node id="n134544"/>
+        <node id="n134545"/>
+        <node id="n134546"/>
+        <node id="n134547"/>
+        <node id="n134548"/>
+        <node id="n134549"/>
+        <node id="n134550"/>
+        <node id="n134551"/>
+        <node id="n134552"/>
+        <node id="n134553"/>
+        <node id="n134554"/>
+        <node id="n134555"/>
+        <node id="n134556"/>
+        <node id="n134557"/>
+        <node id="n134558"/>
+        <node id="n134559"/>
+        <node id="n134560"/>
+        <node id="n134561"/>
+        <node id="n134562"/>
+        <node id="n134563"/>
+        <node id="n134564"/>
+        <node id="n134565"/>
+        <node id="n134566"/>
+        <edge from="n134545" to="n134545">
+            <attr name="label">
+                <string>?recieveSignal</string>
+            </attr>
+        </edge>
+        <edge from="n134562" to="n134562">
+            <attr name="label">
+                <string>ReceiveSignalEvent</string>
+            </attr>
+        </edge>
+        <edge from="n134551" to="n134565">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n134549" to="n134549">
+            <attr name="label">
+                <string>?classifierBehaviorExecution2</string>
+            </attr>
+        </edge>
+        <edge from="n134548" to="n134546">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n134563" to="n134563">
+            <attr name="label">
+                <string>BehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n134557" to="n134557">
+            <attr name="label">
+                <string>?stateMachine</string>
+            </attr>
+        </edge>
+        <edge from="n134552" to="n134548">
+            <attr name="label">
+                <string>trigger</string>
+            </attr>
+        </edge>
+        <edge from="n134555" to="n134559">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n134545" to="n134555">
+            <attr name="label">
+                <string>signal</string>
+            </attr>
+        </edge>
+        <edge from="n134555" to="n134555">
+            <attr name="label">
+                <string>?signal</string>
+            </attr>
+        </edge>
+        <edge from="n134566" to="n134566">
+            <attr name="label">
+                <string>Region</string>
+            </attr>
+        </edge>
+        <edge from="n134549" to="n134561">
+            <attr name="label">
+                <string>host</string>
+            </attr>
+        </edge>
+        <edge from="n134561" to="n134549">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n134547" to="n134564">
+            <attr name="label">
+                <string>receiveEvent</string>
+            </attr>
+        </edge>
+        <edge from="n134564" to="n134547">
+            <attr name="label">
+                <string>message</string>
+            </attr>
+        </edge>
+        <edge from="n134558" to="n134558">
+            <attr name="label">
+                <string>StateMachine</string>
+            </attr>
+        </edge>
+        <edge from="n134554" to="n134554">
+            <attr name="label">
+                <string>Transition</string>
+            </attr>
+        </edge>
+        <edge from="n134553" to="n134560">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n134553" to="n134561">
+            <attr name="label">
+                <string>sender</string>
+            </attr>
+        </edge>
+        <edge from="n134547" to="n134551">
+            <attr name="label">
+                <string>receiver</string>
+            </attr>
+        </edge>
+        <edge from="n134564" to="n134550">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n134565" to="n134565">
+            <attr name="label">
+                <string>?classifierBehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n134544" to="n134544">
+            <attr name="label">
+                <string>Actor</string>
+            </attr>
+        </edge>
+        <edge from="n134547" to="n134553">
+            <attr name="label">
+                <string>sendEvent</string>
+            </attr>
+        </edge>
+        <edge from="n134548" to="n134545">
+            <attr name="label">
+                <string>event</string>
+            </attr>
+        </edge>
+        <edge from="n134546" to="n134546">
+            <attr name="label">
+                <string>Trigger</string>
+            </attr>
+        </edge>
+        <edge from="n134556" to="n134556">
+            <attr name="label">
+                <string>?stateMachineRegion</string>
+            </attr>
+        </edge>
+        <edge from="n134545" to="n134562">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n134565" to="n134557">
+            <attr name="label">
+                <string>behavior</string>
+            </attr>
+        </edge>
+        <edge from="n134561" to="n134544">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n134551" to="n134551">
+            <attr name="label">
+                <string>?instance</string>
+            </attr>
+        </edge>
+        <edge from="n134565" to="n134551">
+            <attr name="label">
+                <string>host</string>
+            </attr>
+        </edge>
+        <edge from="n134557" to="n134556">
+            <attr name="label">
+                <string>region</string>
+            </attr>
+        </edge>
+        <edge from="n134564" to="n134551">
+            <attr name="label">
+                <string>receiver</string>
+            </attr>
+        </edge>
+        <edge from="n134549" to="n134563">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n134553" to="n134549">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n134556" to="n134552">
+            <attr name="label">
+                <string>transition</string>
+            </attr>
+        </edge>
+        <edge from="n134552" to="n134552">
+            <attr name="label">
+                <string>?transition</string>
+            </attr>
+        </edge>
+        <edge from="n134565" to="n134563">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n134553" to="n134553">
+            <attr name="label">
+                <string>*c1sent</string>
+            </attr>
+        </edge>
+        <edge from="n134547" to="n134561">
+            <attr name="label">
+                <string>sender</string>
+            </attr>
+        </edge>
+        <edge from="n134557" to="n134558">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n134559" to="n134559">
+            <attr name="label">
+                <string>Signal</string>
+            </attr>
+        </edge>
+        <edge from="n134548" to="n134548">
+            <attr name="label">
+                <string>?trigger</string>
+            </attr>
+        </edge>
+        <edge from="n134551" to="n134564">
+            <attr name="label">
+                <string>pool</string>
+            </attr>
+        </edge>
+        <edge from="n134556" to="n134566">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n134564" to="n134564">
+            <attr name="label">
+                <string>*c1receipt</string>
+            </attr>
+        </edge>
+        <edge from="n134561" to="n134561">
+            <attr name="label">
+                <string>?instance2</string>
+            </attr>
+        </edge>
+        <edge from="n134550" to="n134550">
+            <attr name="label">
+                <string>SignalOccurrence</string>
+            </attr>
+        </edge>
+        <edge from="n134560" to="n134560">
+            <attr name="label">
+                <string>SendInvocationOccurrence</string>
+            </attr>
+        </edge>
+        <edge from="n134547" to="n134547">
+            <attr name="label">
+                <string>*c1</string>
+            </attr>
+        </edge>
+        <edge from="n134547" to="n134555">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n134553" to="n134547">
+            <attr name="label">
+                <string>message</string>
+            </attr>
+        </edge>
+        <edge from="n134552" to="n134554">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+    </graph>
+    <graph id="acceptEvent - With Action - BEFORE" role="rule"
+        edgeids="false" edgemode="directed">
+        <attr name="enabled">
+            <string>false</string>
+        </attr>
+        <attr name="$version">
+            <string>curly</string>
+        </attr>
+        <node id="n139562"/>
+        <node id="n139563"/>
+        <node id="n139564"/>
+        <node id="n139565"/>
+        <node id="n139566"/>
+        <node id="n139567"/>
+        <node id="n139568"/>
+        <node id="n139569"/>
+        <node id="n139570"/>
+        <node id="n139571"/>
+        <node id="n139572"/>
+        <node id="n139573"/>
+        <node id="n139574"/>
+        <node id="n139575"/>
+        <node id="n139576"/>
+        <node id="n139577"/>
+        <node id="n139578"/>
+        <node id="n139579"/>
+        <node id="n139580"/>
+        <node id="n139581"/>
+        <edge from="n139562" to="n139562">
+            <attr name="label">
+                <string>?recieveSignal</string>
+            </attr>
+        </edge>
+        <edge from="n139566" to="n139566">
+            <attr name="label">
+                <string>SendInvocationOccurrence</string>
+            </attr>
+        </edge>
+        <edge from="n139575" to="n139565">
+            <attr name="label">
+                <string>source</string>
+            </attr>
+        </edge>
+        <edge from="n139574" to="n139577">
+            <attr name="label">
+                <string>message</string>
+            </attr>
+        </edge>
+        <edge from="n139567" to="n139565">
+            <attr name="label">
+                <string>activeState</string>
+            </attr>
+        </edge>
+        <edge from="n139575" to="n139573">
+            <attr name="label">
+                <string>target</string>
+            </attr>
+        </edge>
+        <edge from="n139577" to="n139574">
+            <attr name="label">
+                <string>sendEvent</string>
+            </attr>
+        </edge>
+        <edge from="n139564" to="n139564">
+            <attr name="label">
+                <string>?instance</string>
+            </attr>
+        </edge>
+        <edge from="n139562" to="n139570">
+            <attr name="label">
+                <string>signal</string>
+            </attr>
+        </edge>
+        <edge from="n139581" to="n139581">
+            <attr name="label">
+                <string>?activity</string>
+            </attr>
+        </edge>
+        <edge from="n139567" to="n139567">
+            <attr name="label">
+                <string>?classifierBehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n139564" to="n139563">
+            <attr name="label">
+                <string>pool</string>
+            </attr>
+        </edge>
+        <edge from="n139574" to="n139574">
+            <attr name="label">
+                <string>?c1sent</string>
+            </attr>
+        </edge>
+        <edge from="n139562" to="n139580">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n139580" to="n139580">
+            <attr name="label">
+                <string>ReceiveSignalEvent</string>
+            </attr>
+        </edge>
+        <edge from="n139573" to="n139581">
+            <attr name="label">
+                <string>entry</string>
+            </attr>
+        </edge>
+        <edge from="n139577" to="n139570">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n139577" to="n139564">
+            <attr name="label">
+                <string>receiver</string>
+            </attr>
+        </edge>
+        <edge from="n139568" to="n139568">
+            <attr name="label">
+                <string>BehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n139571" to="n139571">
+            <attr name="label">
+                <string>Activity</string>
+            </attr>
+        </edge>
+        <edge from="n139575" to="n139575">
+            <attr name="label">
+                <string>?transition</string>
+            </attr>
+        </edge>
+        <edge from="n139565" to="n139565">
+            <attr name="label">
+                <string>?state</string>
+            </attr>
+        </edge>
+        <edge from="n139567" to="n139564">
+            <attr name="label">
+                <string>host</string>
+            </attr>
+        </edge>
+        <edge from="n139567" to="n139568">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n139577" to="n139563">
+            <attr name="label">
+                <string>receiveEvent</string>
+            </attr>
+        </edge>
+        <edge from="n139577" to="n139577">
+            <attr name="label">
+                <string>?c1</string>
+            </attr>
+        </edge>
+        <edge from="n139563" to="n139576">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n139578" to="n139578">
+            <attr name="label">
+                <string>?trigger</string>
+            </attr>
+        </edge>
+        <edge from="n139563" to="n139577">
+            <attr name="label">
+                <string>message</string>
+            </attr>
+        </edge>
+        <edge from="n139575" to="n139578">
+            <attr name="label">
+                <string>trigger</string>
+            </attr>
+        </edge>
+        <edge from="n139581" to="n139571">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n139570" to="n139569">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n139576" to="n139576">
+            <attr name="label">
+                <string>SignalOccurrence</string>
+            </attr>
+        </edge>
+        <edge from="n139578" to="n139562">
+            <attr name="label">
+                <string>event</string>
+            </attr>
+        </edge>
+        <edge from="n139575" to="n139579">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n139570" to="n139570">
+            <attr name="label">
+                <string>?signal</string>
+            </attr>
+        </edge>
+        <edge from="n139569" to="n139569">
+            <attr name="label">
+                <string>Signal</string>
+            </attr>
+        </edge>
+        <edge from="n139574" to="n139566">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n139564" to="n139567">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n139579" to="n139579">
+            <attr name="label">
+                <string>Transition</string>
+            </attr>
+        </edge>
+        <edge from="n139578" to="n139572">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n139563" to="n139564">
+            <attr name="label">
+                <string>receiver</string>
+            </attr>
+        </edge>
+        <edge from="n139563" to="n139563">
+            <attr name="label">
+                <string>?c1receipt</string>
+            </attr>
+        </edge>
+        <edge from="n139573" to="n139573">
+            <attr name="label">
+                <string>?state2</string>
+            </attr>
+        </edge>
+        <edge from="n139572" to="n139572">
+            <attr name="label">
+                <string>Trigger</string>
+            </attr>
+        </edge>
+    </graph>
+    <graph id="acceptEvent - With Action - AFTER" role="rule"
+        edgeids="false" edgemode="directed">
+        <attr name="enabled">
+            <string>false</string>
+        </attr>
+        <attr name="$version">
+            <string>curly</string>
+        </attr>
+        <node id="n139341"/>
+        <node id="n139342"/>
+        <node id="n139343"/>
+        <node id="n139344"/>
+        <node id="n139345"/>
+        <node id="n139346"/>
+        <node id="n139347"/>
+        <node id="n139348"/>
+        <node id="n139349"/>
+        <node id="n139350"/>
+        <node id="n139351"/>
+        <node id="n139352"/>
+        <node id="n139353"/>
+        <node id="n139354"/>
+        <node id="n139355"/>
+        <node id="n139356"/>
+        <node id="n139357"/>
+        <node id="n139358"/>
+        <node id="n139359"/>
+        <node id="n139360"/>
+        <node id="n139361"/>
+        <edge from="n139342" to="n139346">
+            <attr name="label">
+                <string>activeState</string>
+            </attr>
+        </edge>
+        <edge from="n139357" to="n139357">
+            <attr name="label">
+                <string>SendInvocationOccurrence</string>
+            </attr>
+        </edge>
+        <edge from="n139354" to="n139351">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n139345" to="n139345">
+            <attr name="label">
+                <string>Trigger</string>
+            </attr>
+        </edge>
+        <edge from="n139353" to="n139350">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n139358" to="n139358">
+            <attr name="label">
+                <string>ReceiveSignalEvent</string>
+            </attr>
+        </edge>
+        <edge from="n139348" to="n139348">
+            <attr name="label">
+                <string>Activity</string>
+            </attr>
+        </edge>
+        <edge from="n139342" to="n139361">
+            <attr name="label">
+                <string>host</string>
+            </attr>
+        </edge>
+        <edge from="n139343" to="n139348">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n139360" to="n139344">
+            <attr name="label">
+                <string>event</string>
+            </attr>
+        </edge>
+        <edge from="n139359" to="n139360">
+            <attr name="label">
+                <string>trigger</string>
+            </attr>
+        </edge>
+        <edge from="n139349" to="n139349">
+            <attr name="label">
+                <string>?c1sent</string>
+            </attr>
+        </edge>
+        <edge from="n139342" to="n139356">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n139361" to="n139352">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n139346" to="n139343">
+            <attr name="label">
+                <string>entry</string>
+            </attr>
+        </edge>
+        <edge from="n139359" to="n139346">
+            <attr name="label">
+                <string>target</string>
+            </attr>
+        </edge>
+        <edge from="n139360" to="n139345">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n139354" to="n139353">
+            <attr name="label">
+                <string>receiveEvent</string>
+            </attr>
+        </edge>
+        <edge from="n139361" to="n139361">
+            <attr name="label">
+                <string>?instance</string>
+            </attr>
+        </edge>
+        <edge from="n139360" to="n139360">
+            <attr name="label">
+                <string>?trigger</string>
+            </attr>
+        </edge>
+        <edge from="n139359" to="n139347">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n139353" to="n139354">
+            <attr name="label">
+                <string>message</string>
+            </attr>
+        </edge>
+        <edge from="n139349" to="n139354">
+            <attr name="label">
+                <string>message</string>
+            </attr>
+        </edge>
+        <edge from="n139352" to="n139361">
+            <attr name="label">
+                <string>host</string>
+            </attr>
+        </edge>
+        <edge from="n139346" to="n139346">
+            <attr name="label">
+                <string>?state2</string>
+            </attr>
+        </edge>
+        <edge from="n139341" to="n139341">
+            <attr name="label">
+                <string>?state</string>
+            </attr>
+        </edge>
+        <edge from="n139359" to="n139341">
+            <attr name="label">
+                <string>source</string>
+            </attr>
+        </edge>
+        <edge from="n139352" to="n139343">
+            <attr name="label">
+                <string>behavior</string>
+            </attr>
+        </edge>
+        <edge from="n139352" to="n139352">
+            <attr name="label">
+                <string>*newStateBehavior</string>
+            </attr>
+        </edge>
+        <edge from="n139355" to="n139355">
+            <attr name="label">
+                <string>Signal</string>
+            </attr>
+        </edge>
+        <edge from="n139353" to="n139361">
+            <attr name="label">
+                <string>receiver</string>
+            </attr>
+        </edge>
+        <edge from="n139361" to="n139342">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n139347" to="n139347">
+            <attr name="label">
+                <string>Transition</string>
+            </attr>
+        </edge>
+        <edge from="n139354" to="n139361">
+            <attr name="label">
+                <string>receiver</string>
+            </attr>
+        </edge>
+        <edge from="n139344" to="n139351">
+            <attr name="label">
+                <string>signal</string>
+            </attr>
+        </edge>
+        <edge from="n139351" to="n139351">
+            <attr name="label">
+                <string>?signal</string>
+            </attr>
+        </edge>
+        <edge from="n139356" to="n139356">
+            <attr name="label">
+                <string>BehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n139349" to="n139357">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n139353" to="n139353">
+            <attr name="label">
+                <string>?c1receipt</string>
+            </attr>
+        </edge>
+        <edge from="n139352" to="n139356">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n139354" to="n139349">
+            <attr name="label">
+                <string>sendEvent</string>
+            </attr>
+        </edge>
+        <edge from="n139351" to="n139355">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n139354" to="n139354">
+            <attr name="label">
+                <string>?c1</string>
+            </attr>
+        </edge>
+        <edge from="n139359" to="n139359">
+            <attr name="label">
+                <string>?transition</string>
+            </attr>
+        </edge>
+        <edge from="n139344" to="n139358">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n139344" to="n139344">
+            <attr name="label">
+                <string>?recieveSignal</string>
+            </attr>
+        </edge>
+        <edge from="n139350" to="n139350">
+            <attr name="label">
+                <string>SignalOccurrence</string>
+            </attr>
+        </edge>
+        <edge from="n139343" to="n139343">
+            <attr name="label">
+                <string>?activity</string>
+            </attr>
+        </edge>
+        <edge from="n139342" to="n139342">
+            <attr name="label">
+                <string>?classifierBehaviorExecution</string>
+            </attr>
+        </edge>
+    </graph>
+    <graph id="aE - With A - Executable Edges - BEFORE" role="rule"
+        edgeids="false" edgemode="directed">
+        <attr name="enabled">
+            <string>false</string>
+        </attr>
+        <attr name="$version">
+            <string>curly</string>
+        </attr>
+        <node id="n145579"/>
+        <node id="n145580"/>
+        <node id="n145581"/>
+        <node id="n145582"/>
+        <node id="n145583"/>
+        <node id="n145584"/>
+        <node id="n145585"/>
+        <node id="n145586"/>
+        <node id="n145587"/>
+        <node id="n145588"/>
+        <node id="n145589"/>
+        <node id="n145590"/>
+        <node id="n145591"/>
+        <node id="n145592"/>
+        <node id="n145593"/>
+        <node id="n145594"/>
+        <node id="n145595"/>
+        <node id="n145596"/>
+        <node id="n145597"/>
+        <node id="n145598"/>
+        <node id="n145599"/>
+        <node id="n145600"/>
+        <edge from="n145593" to="n145593">
+            <attr name="label">
+                <string>?action</string>
+            </attr>
+        </edge>
+        <edge from="n145597" to="n145597">
+            <attr name="label">
+                <string>Trigger</string>
+            </attr>
+        </edge>
+        <edge from="n145587" to="n145587">
+            <attr name="label">
+                <string>?instance</string>
+            </attr>
+        </edge>
+        <edge from="n145599" to="n145599">
+            <attr name="label">
+                <string>Activity</string>
+            </attr>
+        </edge>
+        <edge from="n145585" to="n145585">
+            <attr name="label">
+                <string>*newStateBehavior</string>
+            </attr>
+        </edge>
+        <edge from="n145581" to="n145590">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n145587" to="n145583">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n145579" to="n145591">
+            <attr name="label">
+                <string>message</string>
+            </attr>
+        </edge>
+        <edge from="n145596" to="n145596">
+            <attr name="label">
+                <string>ReceiveSignalEvent</string>
+            </attr>
+        </edge>
+        <edge from="n145581" to="n145581">
+            <attr name="label">
+                <string>?transition</string>
+            </attr>
+        </edge>
+        <edge from="n145588" to="n145588">
+            <attr name="label">
+                <string>?state</string>
+            </attr>
+        </edge>
+        <edge from="n145583" to="n145587">
+            <attr name="label">
+                <string>host</string>
+            </attr>
+        </edge>
+        <edge from="n145591" to="n145587">
+            <attr name="label">
+                <string>receiver</string>
+            </attr>
+        </edge>
+        <edge from="n145579" to="n145587">
+            <attr name="label">
+                <string>receiver</string>
+            </attr>
+        </edge>
+        <edge from="n145594" to="n145597">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n145598" to="n145598">
+            <attr name="label">
+                <string>?recieveSignal</string>
+            </attr>
+        </edge>
+        <edge from="n145587" to="n145585">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n145594" to="n145594">
+            <attr name="label">
+                <string>?trigger</string>
+            </attr>
+        </edge>
+        <edge from="n145580" to="n145580">
+            <attr name="label">
+                <string>?state2</string>
+            </attr>
+        </edge>
+        <edge from="n145594" to="n145598">
+            <attr name="label">
+                <string>event</string>
+            </attr>
+        </edge>
+        <edge from="n145581" to="n145580">
+            <attr name="label">
+                <string>target</string>
+            </attr>
+        </edge>
+        <edge from="n145595" to="n145595">
+            <attr name="label">
+                <string>Signal</string>
+            </attr>
+        </edge>
+        <edge from="n145591" to="n145600">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n145590" to="n145590">
+            <attr name="label">
+                <string>Transition</string>
+            </attr>
+        </edge>
+        <edge from="n145592" to="n145592">
+            <attr name="label">
+                <string>?c1sent</string>
+            </attr>
+        </edge>
+        <edge from="n145582" to="n145582">
+            <attr name="label">
+                <string>?activity</string>
+            </attr>
+        </edge>
+        <edge from="n145589" to="n145589">
+            <attr name="label">
+                <string>SendInvocationOccurrence</string>
+            </attr>
+        </edge>
+        <edge from="n145592" to="n145591">
+            <attr name="label">
+                <string>message</string>
+            </attr>
+        </edge>
+        <edge from="n145593" to="n145582">
+            <attr name="label">
+                <string>activity</string>
+            </attr>
+        </edge>
+        <edge from="n145598" to="n145600">
+            <attr name="label">
+                <string>signal</string>
+            </attr>
+        </edge>
+        <edge from="n145591" to="n145591">
+            <attr name="label">
+                <string>?c1</string>
+            </attr>
+        </edge>
+        <edge from="n145598" to="n145596">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n145592" to="n145589">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n145585" to="n145587">
+            <attr name="label">
+                <string>host</string>
+            </attr>
+        </edge>
+        <edge from="n145579" to="n145586">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n145591" to="n145579">
+            <attr name="label">
+                <string>receiveEvent</string>
+            </attr>
+        </edge>
+        <edge from="n145583" to="n145584">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n145581" to="n145588">
+            <attr name="label">
+                <string>source</string>
+            </attr>
+        </edge>
+        <edge from="n145582" to="n145599">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n145581" to="n145594">
+            <attr name="label">
+                <string>trigger</string>
+            </attr>
+        </edge>
+        <edge from="n145591" to="n145592">
+            <attr name="label">
+                <string>sendEvent</string>
+            </attr>
+        </edge>
+        <edge from="n145580" to="n145582">
+            <attr name="label">
+                <string>entry</string>
+            </attr>
+        </edge>
+        <edge from="n145585" to="n145584">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n145600" to="n145595">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n145583" to="n145583">
+            <attr name="label">
+                <string>?classifierBehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n145586" to="n145586">
+            <attr name="label">
+                <string>SignalOccurrence</string>
+            </attr>
+        </edge>
+        <edge from="n145585" to="n145582">
+            <attr name="label">
+                <string>behavior</string>
+            </attr>
+        </edge>
+        <edge from="n145600" to="n145600">
+            <attr name="label">
+                <string>?signal</string>
+            </attr>
+        </edge>
+        <edge from="n145584" to="n145584">
+            <attr name="label">
+                <string>BehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n145579" to="n145579">
+            <attr name="label">
+                <string>?c1receipt</string>
+            </attr>
+        </edge>
+        <edge from="n145583" to="n145580">
+            <attr name="label">
+                <string>activeState</string>
+            </attr>
+        </edge>
+    </graph>
+    <graph id="aE - With A - Executable Edges - AFTER" role="rule"
+        edgeids="false" edgemode="directed">
+        <attr name="enabled">
+            <string>false</string>
+        </attr>
+        <attr name="$version">
+            <string>curly</string>
+        </attr>
+        <node id="n145869"/>
+        <node id="n145870"/>
+        <node id="n145871"/>
+        <node id="n145872"/>
+        <node id="n145873"/>
+        <node id="n145874"/>
+        <node id="n145875"/>
+        <node id="n145876"/>
+        <node id="n145877"/>
+        <node id="n145878"/>
+        <node id="n145879"/>
+        <node id="n145880"/>
+        <node id="n145881"/>
+        <node id="n145882"/>
+        <node id="n145883"/>
+        <node id="n145884"/>
+        <node id="n145885"/>
+        <node id="n145886"/>
+        <node id="n145887"/>
+        <node id="n145888"/>
+        <node id="n145889"/>
+        <node id="n145890"/>
+        <edge from="n145880" to="n145876">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n145878" to="n145879">
+            <attr name="label">
+                <string>sendEvent</string>
+            </attr>
+        </edge>
+        <edge from="n145872" to="n145872">
+            <attr name="label">
+                <string>SignalOccurrence</string>
+            </attr>
+        </edge>
+        <edge from="n145884" to="n145890">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n145887" to="n145875">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n145882" to="n145869">
+            <attr name="label">
+                <string>source</string>
+            </attr>
+        </edge>
+        <edge from="n145874" to="n145874">
+            <attr name="label">
+                <string>?trigger</string>
+            </attr>
+        </edge>
+        <edge from="n145888" to="n145888">
+            <attr name="label">
+                <string>?action</string>
+            </attr>
+        </edge>
+        <edge from="n145871" to="n145871">
+            <attr name="label">
+                <string>SendInvocationOccurrence</string>
+            </attr>
+        </edge>
+        <edge from="n145882" to="n145882">
+            <attr name="label">
+                <string>?transition</string>
+            </attr>
+        </edge>
+        <edge from="n145888" to="n145881">
+            <attr name="label">
+                <string>activity</string>
+            </attr>
+        </edge>
+        <edge from="n145870" to="n145877">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n145883" to="n145870">
+            <attr name="label">
+                <string>receiver</string>
+            </attr>
+        </edge>
+        <edge from="n145882" to="n145874">
+            <attr name="label">
+                <string>trigger</string>
+            </attr>
+        </edge>
+        <edge from="n145874" to="n145889">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n145878" to="n145883">
+            <attr name="label">
+                <string>receiveEvent</string>
+            </attr>
+        </edge>
+        <edge from="n145875" to="n145875">
+            <attr name="label">
+                <string>Signal</string>
+            </attr>
+        </edge>
+        <edge from="n145880" to="n145880">
+            <attr name="label">
+                <string>?recieveSignal</string>
+            </attr>
+        </edge>
+        <edge from="n145877" to="n145890">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n145877" to="n145873">
+            <attr name="label">
+                <string>activeState</string>
+            </attr>
+        </edge>
+        <edge from="n145870" to="n145884">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n145873" to="n145873">
+            <attr name="label">
+                <string>?state2</string>
+            </attr>
+        </edge>
+        <edge from="n145878" to="n145887">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n145877" to="n145877">
+            <attr name="label">
+                <string>?classifierBehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n145884" to="n145870">
+            <attr name="label">
+                <string>host</string>
+            </attr>
+        </edge>
+        <edge from="n145890" to="n145890">
+            <attr name="label">
+                <string>BehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n145883" to="n145878">
+            <attr name="label">
+                <string>message</string>
+            </attr>
+        </edge>
+        <edge from="n145886" to="n145886">
+            <attr name="label">
+                <string>Transition</string>
+            </attr>
+        </edge>
+        <edge from="n145879" to="n145878">
+            <attr name="label">
+                <string>message</string>
+            </attr>
+        </edge>
+        <edge from="n145878" to="n145878">
+            <attr name="label">
+                <string>?c1</string>
+            </attr>
+        </edge>
+        <edge from="n145880" to="n145887">
+            <attr name="label">
+                <string>signal</string>
+            </attr>
+        </edge>
+        <edge from="n145869" to="n145869">
+            <attr name="label">
+                <string>?state</string>
+            </attr>
+        </edge>
+        <edge from="n145877" to="n145870">
+            <attr name="label">
+                <string>host</string>
+            </attr>
+        </edge>
+        <edge from="n145882" to="n145886">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n145883" to="n145872">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n145881" to="n145885">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n145874" to="n145880">
+            <attr name="label">
+                <string>event</string>
+            </attr>
+        </edge>
+        <edge from="n145887" to="n145887">
+            <attr name="label">
+                <string>?signal</string>
+            </attr>
+        </edge>
+        <edge from="n145879" to="n145871">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n145883" to="n145883">
+            <attr name="label">
+                <string>?c1receipt</string>
+            </attr>
+        </edge>
+        <edge from="n145889" to="n145889">
+            <attr name="label">
+                <string>Trigger</string>
+            </attr>
+        </edge>
+        <edge from="n145881" to="n145881">
+            <attr name="label">
+                <string>?activity</string>
+            </attr>
+        </edge>
+        <edge from="n145882" to="n145873">
+            <attr name="label">
+                <string>target</string>
+            </attr>
+        </edge>
+        <edge from="n145870" to="n145870">
+            <attr name="label">
+                <string>?instance</string>
+            </attr>
+        </edge>
+        <edge from="n145879" to="n145879">
+            <attr name="label">
+                <string>?c1sent</string>
+            </attr>
+        </edge>
+        <edge from="n145884" to="n145881">
+            <attr name="label">
+                <string>behavior</string>
+            </attr>
+        </edge>
+        <edge from="n145873" to="n145881">
+            <attr name="label">
+                <string>entry</string>
+            </attr>
+        </edge>
+        <edge from="n145884" to="n145884">
+            <attr name="label">
+                <string>*newStateBehavior</string>
+            </attr>
+        </edge>
+        <edge from="n145876" to="n145876">
+            <attr name="label">
+                <string>ReceiveSignalEvent</string>
+            </attr>
+        </edge>
+        <edge from="n145878" to="n145870">
+            <attr name="label">
+                <string>receiver</string>
+            </attr>
+        </edge>
+        <edge from="n145884" to="n145888">
+            <attr name="label">
+                <string>executable</string>
+            </attr>
+        </edge>
+        <edge from="n145885" to="n145885">
+            <attr name="label">
+                <string>Activity</string>
+            </attr>
+        </edge>
+    </graph>
+    <graph id="acceptEvent - Without Action - BEFORE" role="rule"
+        edgeids="false" edgemode="directed">
+        <attr name="enabled">
+            <string>false</string>
+        </attr>
+        <attr name="$version">
+            <string>curly</string>
+        </attr>
+        <node id="n133267"/>
+        <node id="n133268"/>
+        <node id="n133269"/>
+        <node id="n133270"/>
+        <node id="n133271"/>
+        <node id="n133272"/>
+        <node id="n133273"/>
+        <node id="n133274"/>
+        <node id="n133275"/>
+        <node id="n133276"/>
+        <node id="n133277"/>
+        <node id="n133278"/>
+        <node id="n133279"/>
+        <node id="n133280"/>
+        <node id="n133281"/>
+        <node id="n133282"/>
+        <node id="n133283"/>
+        <node id="n133284"/>
+        <edge from="n133277" to="n133277">
+            <attr name="label">
+                <string>?classifierBehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n133280" to="n133270">
+            <attr name="label">
+                <string>trigger</string>
+            </attr>
+        </edge>
+        <edge from="n133282" to="n133282">
+            <attr name="label">
+                <string>Signal</string>
+            </attr>
+        </edge>
+        <edge from="n133272" to="n133272">
+            <attr name="label">
+                <string>?recieveSignal</string>
+            </attr>
+        </edge>
+        <edge from="n133280" to="n133283">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n133275" to="n133284">
+            <attr name="label">
+                <string>message</string>
+            </attr>
+        </edge>
+        <edge from="n133284" to="n133275">
+            <attr name="label">
+                <string>sendEvent</string>
+            </attr>
+        </edge>
+        <edge from="n133278" to="n133278">
+            <attr name="label">
+                <string>SignalOccurrence</string>
+            </attr>
+        </edge>
+        <edge from="n133283" to="n133283">
+            <attr name="label">
+                <string>Transition</string>
+            </attr>
+        </edge>
+        <edge from="n133280" to="n133273">
+            <attr name="label">
+                <string>source</string>
+            </attr>
+        </edge>
+        <edge from="n133273" to="n133273">
+            <attr name="label">
+                <string>?state</string>
+            </attr>
+        </edge>
+        <edge from="n133267" to="n133277">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n133274" to="n133274">
+            <attr name="label">
+                <string>?c1reciept</string>
+            </attr>
+        </edge>
+        <edge from="n133271" to="n133282">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n133267" to="n133274">
+            <attr name="label">
+                <string>pool</string>
+            </attr>
+        </edge>
+        <edge from="n133269" to="n133269">
+            <attr name="label">
+                <string>SendInvocationOccurrence</string>
+            </attr>
+        </edge>
+        <edge from="n133275" to="n133275">
+            <attr name="label">
+                <string>?c1sent</string>
+            </attr>
+        </edge>
+        <edge from="n133279" to="n133279">
+            <attr name="label">
+                <string>?state2</string>
+            </attr>
+        </edge>
+        <edge from="n133270" to="n133270">
+            <attr name="label">
+                <string>?trigger</string>
+            </attr>
+        </edge>
+        <edge from="n133270" to="n133272">
+            <attr name="label">
+                <string>event</string>
+            </attr>
+        </edge>
+        <edge from="n133268" to="n133268">
+            <attr name="label">
+                <string>ReceiveSignalEvent</string>
+            </attr>
+        </edge>
+        <edge from="n133284" to="n133284">
+            <attr name="label">
+                <string>?c1</string>
+            </attr>
+        </edge>
+        <edge from="n133270" to="n133276">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n133274" to="n133267">
+            <attr name="label">
+                <string>receiver</string>
+            </attr>
+        </edge>
+        <edge from="n133280" to="n133280">
+            <attr name="label">
+                <string>?transition</string>
+            </attr>
+        </edge>
+        <edge from="n133272" to="n133271">
+            <attr name="label">
+                <string>signal</string>
+            </attr>
+        </edge>
+        <edge from="n133274" to="n133284">
+            <attr name="label">
+                <string>message</string>
+            </attr>
+        </edge>
+        <edge from="n133277" to="n133281">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n133281" to="n133281">
+            <attr name="label">
+                <string>BehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n133274" to="n133278">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n133280" to="n133279">
+            <attr name="label">
+                <string>target</string>
+            </attr>
+        </edge>
+        <edge from="n133284" to="n133274">
+            <attr name="label">
+                <string>receiveEvent</string>
+            </attr>
+        </edge>
+        <edge from="n133284" to="n133267">
+            <attr name="label">
+                <string>receiver</string>
+            </attr>
+        </edge>
+        <edge from="n133277" to="n133267">
+            <attr name="label">
+                <string>host</string>
+            </attr>
+        </edge>
+        <edge from="n133267" to="n133267">
+            <attr name="label">
+                <string>?instance</string>
+            </attr>
+        </edge>
+        <edge from="n133272" to="n133268">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n133284" to="n133271">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n133277" to="n133273">
+            <attr name="label">
+                <string>activeState</string>
+            </attr>
+        </edge>
+        <edge from="n133276" to="n133276">
+            <attr name="label">
+                <string>Trigger</string>
+            </attr>
+        </edge>
+        <edge from="n133275" to="n133269">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n133271" to="n133271">
+            <attr name="label">
+                <string>?signal</string>
+            </attr>
+        </edge>
+    </graph>
+    <graph id="acceptEvent - Without Action - AFTER" role="rule"
+        edgeids="false" edgemode="directed">
+        <attr name="enabled">
+            <string>false</string>
+        </attr>
+        <attr name="$version">
+            <string>curly</string>
+        </attr>
+        <node id="n112588"/>
+        <node id="n112589"/>
+        <node id="n112590"/>
+        <node id="n112591"/>
+        <node id="n112592"/>
+        <node id="n112593"/>
+        <node id="n112594"/>
+        <node id="n112595"/>
+        <node id="n112596"/>
+        <node id="n112597"/>
+        <node id="n112598"/>
+        <node id="n112599"/>
+        <node id="n112600"/>
+        <node id="n112601"/>
+        <node id="n112602"/>
+        <node id="n112603"/>
+        <node id="n112604"/>
+        <node id="n112605"/>
+        <edge from="n112598" to="n112594">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n112591" to="n112588">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n112590" to="n112600">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n112593" to="n112593">
+            <attr name="label">
+                <string>?transition</string>
+            </attr>
+        </edge>
+        <edge from="n112596" to="n112603">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n112602" to="n112601">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n112603" to="n112603">
+            <attr name="label">
+                <string>Trigger</string>
+            </attr>
+        </edge>
+        <edge from="n112593" to="n112596">
+            <attr name="label">
+                <string>trigger</string>
+            </attr>
+        </edge>
+        <edge from="n112594" to="n112594">
+            <attr name="label">
+                <string>?signal</string>
+            </attr>
+        </edge>
+        <edge from="n112593" to="n112595">
+            <attr name="label">
+                <string>target</string>
+            </attr>
+        </edge>
+        <edge from="n112602" to="n112595">
+            <attr name="label">
+                <string>activeState</string>
+            </attr>
+        </edge>
+        <edge from="n112594" to="n112599">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n112596" to="n112591">
+            <attr name="label">
+                <string>event</string>
+            </attr>
+        </edge>
+        <edge from="n112595" to="n112595">
+            <attr name="label">
+                <string>?state2</string>
+            </attr>
+        </edge>
+        <edge from="n112602" to="n112589">
+            <attr name="label">
+                <string>host</string>
+            </attr>
+        </edge>
+        <edge from="n112605" to="n112605">
+            <attr name="label">
+                <string>Transition</string>
+            </attr>
+        </edge>
+        <edge from="n112604" to="n112592">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n112598" to="n112589">
+            <attr name="label">
+                <string>receiver</string>
+            </attr>
+        </edge>
+        <edge from="n112602" to="n112602">
+            <attr name="label">
+                <string>?classifierBehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n112598" to="n112604">
+            <attr name="label">
+                <string>receiveEvent</string>
+            </attr>
+        </edge>
+        <edge from="n112596" to="n112596">
+            <attr name="label">
+                <string>?trigger</string>
+            </attr>
+        </edge>
+        <edge from="n112589" to="n112589">
+            <attr name="label">
+                <string>?instance</string>
+            </attr>
+        </edge>
+        <edge from="n112593" to="n112597">
+            <attr name="label">
+                <string>source</string>
+            </attr>
+        </edge>
+        <edge from="n112597" to="n112597">
+            <attr name="label">
+                <string>?state</string>
+            </attr>
+        </edge>
+        <edge from="n112590" to="n112590">
+            <attr name="label">
+                <string>?c1sent</string>
+            </attr>
+        </edge>
+        <edge from="n112593" to="n112605">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n112600" to="n112600">
+            <attr name="label">
+                <string>SendInvocationOccurrence</string>
+            </attr>
+        </edge>
+        <edge from="n112592" to="n112592">
+            <attr name="label">
+                <string>SignalOccurrence</string>
+            </attr>
+        </edge>
+        <edge from="n112591" to="n112591">
+            <attr name="label">
+                <string>?recieveSignal</string>
+            </attr>
+        </edge>
+        <edge from="n112601" to="n112601">
+            <attr name="label">
+                <string>BehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n112604" to="n112598">
+            <attr name="label">
+                <string>message</string>
+            </attr>
+        </edge>
+        <edge from="n112598" to="n112590">
+            <attr name="label">
+                <string>sendEvent</string>
+            </attr>
+        </edge>
+        <edge from="n112604" to="n112589">
+            <attr name="label">
+                <string>receiver</string>
+            </attr>
+        </edge>
+        <edge from="n112588" to="n112588">
+            <attr name="label">
+                <string>ReceiveSignalEvent</string>
+            </attr>
+        </edge>
+        <edge from="n112598" to="n112598">
+            <attr name="label">
+                <string>?c1</string>
+            </attr>
+        </edge>
+        <edge from="n112590" to="n112598">
+            <attr name="label">
+                <string>message</string>
+            </attr>
+        </edge>
+        <edge from="n112604" to="n112604">
+            <attr name="label">
+                <string>?c1reciept</string>
+            </attr>
+        </edge>
+        <edge from="n112591" to="n112594">
+            <attr name="label">
+                <string>signal</string>
+            </attr>
+        </edge>
+        <edge from="n112599" to="n112599">
+            <attr name="label">
+                <string>Signal</string>
+            </attr>
+        </edge>
+        <edge from="n112589" to="n112602">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+    </graph>
+    <graph id="acceptEvent - And Ignore - BEFORE" role="rule"
+        edgeids="false" edgemode="directed">
+        <attr name="enabled">
+            <string>false</string>
+        </attr>
+        <attr name="$version">
+            <string>curly</string>
+        </attr>
+        <node id="n132136"/>
+        <node id="n132137"/>
+        <node id="n132138"/>
+        <node id="n132139"/>
+        <node id="n132140"/>
+        <node id="n132141"/>
+        <node id="n132142"/>
+        <node id="n132143"/>
+        <node id="n132144"/>
+        <node id="n132145"/>
+        <edge from="n132140" to="n132140">
+            <attr name="label">
+                <string>?recieveSignal</string>
+            </attr>
+        </edge>
+        <edge from="n132136" to="n132143">
+            <attr name="label">
+                <string>receiver</string>
+            </attr>
+        </edge>
+        <edge from="n132137" to="n132137">
+            <attr name="label">
+                <string>?c1sent</string>
+            </attr>
+        </edge>
+        <edge from="n132141" to="n132141">
+            <attr name="label">
+                <string>?signal</string>
+            </attr>
+        </edge>
+        <edge from="n132136" to="n132136">
+            <attr name="label">
+                <string>?c1reciept</string>
+            </attr>
+        </edge>
+        <edge from="n132139" to="n132141">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n132139" to="n132136">
+            <attr name="label">
+                <string>receiveEvent</string>
+            </attr>
+        </edge>
+        <edge from="n132136" to="n132139">
+            <attr name="label">
+                <string>message</string>
+            </attr>
+        </edge>
+        <edge from="n132145" to="n132145">
+            <attr name="label">
+                <string>Signal</string>
+            </attr>
+        </edge>
+        <edge from="n132144" to="n132144">
+            <attr name="label">
+                <string>SendInvocationOccurrence</string>
+            </attr>
+        </edge>
+        <edge from="n132136" to="n132138">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n132142" to="n132142">
+            <attr name="label">
+                <string>ReceiveSignalEvent</string>
+            </attr>
+        </edge>
+        <edge from="n132139" to="n132143">
+            <attr name="label">
+                <string>receiver</string>
+            </attr>
+        </edge>
+        <edge from="n132137" to="n132139">
+            <attr name="label">
+                <string>message</string>
+            </attr>
+        </edge>
+        <edge from="n132139" to="n132139">
+            <attr name="label">
+                <string>?c1</string>
+            </attr>
+        </edge>
+        <edge from="n132139" to="n132137">
+            <attr name="label">
+                <string>sendEvent</string>
+            </attr>
+        </edge>
+        <edge from="n132138" to="n132138">
+            <attr name="label">
+                <string>SignalOccurrence</string>
+            </attr>
+        </edge>
+        <edge from="n132137" to="n132144">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n132140" to="n132141">
+            <attr name="label">
+                <string>signal</string>
+            </attr>
+        </edge>
+        <edge from="n132143" to="n132143">
+            <attr name="label">
+                <string>?instance</string>
+            </attr>
+        </edge>
+        <edge from="n132141" to="n132145">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n132143" to="n132136">
+            <attr name="label">
+                <string>pool</string>
+            </attr>
+        </edge>
+        <edge from="n132140" to="n132142">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+    </graph>
+    <graph id="acceptEvent - And Ignore - AFTER" role="rule"
+        edgeids="false" edgemode="directed">
+        <attr name="enabled">
+            <string>false</string>
+        </attr>
+        <attr name="$version">
+            <string>curly</string>
+        </attr>
+        <node id="n132006"/>
+        <node id="n132007"/>
+        <node id="n132008"/>
+        <node id="n132009"/>
+        <node id="n132010"/>
+        <node id="n132011"/>
+        <node id="n132012"/>
+        <node id="n132013"/>
+        <node id="n132014"/>
+        <node id="n132015"/>
+        <edge from="n132006" to="n132014">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n132007" to="n132006">
+            <attr name="label">
+                <string>sendEvent</string>
+            </attr>
+        </edge>
+        <edge from="n132015" to="n132010">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n132008" to="n132012">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n132012" to="n132012">
+            <attr name="label">
+                <string>SignalOccurrence</string>
+            </attr>
+        </edge>
+        <edge from="n132008" to="n132008">
+            <attr name="label">
+                <string>?c1reciept</string>
+            </attr>
+        </edge>
+        <edge from="n132013" to="n132013">
+            <attr name="label">
+                <string>ReceiveSignalEvent</string>
+            </attr>
+        </edge>
+        <edge from="n132011" to="n132011">
+            <attr name="label">
+                <string>?recieveSignal</string>
+            </attr>
+        </edge>
+        <edge from="n132008" to="n132007">
+            <attr name="label">
+                <string>message</string>
+            </attr>
+        </edge>
+        <edge from="n132011" to="n132013">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n132007" to="n132008">
+            <attr name="label">
+                <string>receiveEvent</string>
+            </attr>
+        </edge>
+        <edge from="n132015" to="n132015">
+            <attr name="label">
+                <string>?signal</string>
+            </attr>
+        </edge>
+        <edge from="n132011" to="n132015">
+            <attr name="label">
+                <string>signal</string>
+            </attr>
+        </edge>
+        <edge from="n132008" to="n132009">
+            <attr name="label">
+                <string>receiver</string>
+            </attr>
+        </edge>
+        <edge from="n132007" to="n132015">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n132007" to="n132007">
+            <attr name="label">
+                <string>?c1</string>
+            </attr>
+        </edge>
+        <edge from="n132014" to="n132014">
+            <attr name="label">
+                <string>SendInvocationOccurrence</string>
+            </attr>
+        </edge>
+        <edge from="n132009" to="n132009">
+            <attr name="label">
+                <string>?instance</string>
+            </attr>
+        </edge>
+        <edge from="n132010" to="n132010">
+            <attr name="label">
+                <string>Signal</string>
+            </attr>
+        </edge>
+        <edge from="n132006" to="n132007">
+            <attr name="label">
+                <string>message</string>
+            </attr>
+        </edge>
+        <edge from="n132007" to="n132009">
+            <attr name="label">
+                <string>receiver</string>
+            </attr>
+        </edge>
+        <edge from="n132006" to="n132006">
+            <attr name="label">
+                <string>?c1sent</string>
+            </attr>
+        </edge>
+    </graph>
+    <graph id="sendSignalAction - BEFORE" role="rule" edgeids="false" edgemode="directed">
+        <attr name="enabled">
+            <string>false</string>
+        </attr>
+        <attr name="$version">
+            <string>curly</string>
+        </attr>
+        <node id="n144448"/>
+        <node id="n144449"/>
+        <node id="n144450"/>
+        <node id="n144451"/>
+        <node id="n144452"/>
+        <node id="n144453"/>
+        <node id="n144454"/>
+        <node id="n144455"/>
+        <node id="n144456"/>
+        <node id="n144457"/>
+        <node id="n144458"/>
+        <node id="n144459"/>
+        <node id="n144460"/>
+        <node id="n144461"/>
+        <node id="n144462"/>
+        <node id="n144463"/>
+        <node id="n144464"/>
+        <node id="n144465"/>
+        <node id="n144466"/>
+        <node id="n144467"/>
+        <node id="n144468"/>
+        <node id="n144469"/>
+        <node id="n144470"/>
+        <node id="n144471"/>
+        <node id="n144472"/>
+        <node id="n144473"/>
+        <node id="n144474"/>
+        <edge from="n144465" to="n144466">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n144452" to="n144458">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n144460" to="n144460">
+            <attr name="label">
+                <string>Region</string>
+            </attr>
+        </edge>
+        <edge from="n144472" to="n144456">
+            <attr name="label">
+                <string>event</string>
+            </attr>
+        </edge>
+        <edge from="n144474" to="n144468">
+            <attr name="label">
+                <string>result</string>
+            </attr>
+        </edge>
+        <edge from="n144462" to="n144453">
+            <attr name="label">
+                <string>behavior</string>
+            </attr>
+        </edge>
+        <edge from="n144464" to="n144464">
+            <attr name="label">
+                <string>Transition</string>
+            </attr>
+        </edge>
+        <edge from="n144454" to="n144454">
+            <attr name="label">
+                <string>?instanceState</string>
+            </attr>
+        </edge>
+        <edge from="n144465" to="n144465">
+            <attr name="label">
+                <string>?newStateBehavior</string>
+            </attr>
+        </edge>
+        <edge from="n144448" to="n144448">
+            <attr name="label">
+                <string>?classifierBehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n144450" to="n144467">
+            <attr name="label">
+                <string>target</string>
+            </attr>
+        </edge>
+        <edge from="n144468" to="n144459">
+            <attr name="label">
+                <string>value</string>
+            </attr>
+        </edge>
+        <edge from="n144467" to="n144449">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n144470" to="n144472">
+            <attr name="label">
+                <string>trigger</string>
+            </attr>
+        </edge>
+        <edge from="n144453" to="n144463">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n144465" to="n144451">
+            <attr name="label">
+                <string>host</string>
+            </attr>
+        </edge>
+        <edge from="n144453" to="n144453">
+            <attr name="label">
+                <string>?stateMachine</string>
+            </attr>
+        </edge>
+        <edge from="n144461" to="n144469">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n144454" to="n144452">
+            <attr name="label">
+                <string>entry</string>
+            </attr>
+        </edge>
+        <edge from="n144455" to="n144455">
+            <attr name="label">
+                <string>SendSignalAction</string>
+            </attr>
+        </edge>
+        <edge from="n144471" to="n144471">
+            <attr name="label">
+                <string>?SMRegion</string>
+            </attr>
+        </edge>
+        <edge from="n144462" to="n144462">
+            <attr name="label">
+                <string>?classifierBehaviorExecution2</string>
+            </attr>
+        </edge>
+        <edge from="n144456" to="n144456">
+            <attr name="label">
+                <string>?recieveSignal</string>
+            </attr>
+        </edge>
+        <edge from="n144451" to="n144451">
+            <attr name="label">
+                <string>?instance</string>
+            </attr>
+        </edge>
+        <edge from="n144467" to="n144474">
+            <attr name="label">
+                <string>fromAction</string>
+            </attr>
+        </edge>
+        <edge from="n144456" to="n144457">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n144461" to="n144461">
+            <attr name="label">
+                <string>?signal</string>
+            </attr>
+        </edge>
+        <edge from="n144452" to="n144450">
+            <attr name="label">
+                <string>node</string>
+            </attr>
+        </edge>
+        <edge from="n144459" to="n144459">
+            <attr name="label">
+                <string>?instance2</string>
+            </attr>
+        </edge>
+        <edge from="n144448" to="n144466">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n144450" to="n144455">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n144472" to="n144473">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n144448" to="n144451">
+            <attr name="label">
+                <string>host</string>
+            </attr>
+        </edge>
+        <edge from="n144474" to="n144474">
+            <attr name="label">
+                <string>?getFoodB</string>
+            </attr>
+        </edge>
+        <edge from="n144462" to="n144459">
+            <attr name="label">
+                <string>host</string>
+            </attr>
+        </edge>
+        <edge from="n144465" to="n144450">
+            <attr name="label">
+                <string>executable</string>
+            </attr>
+        </edge>
+        <edge from="n144456" to="n144461">
+            <attr name="label">
+                <string>signal</string>
+            </attr>
+        </edge>
+        <edge from="n144452" to="n144452">
+            <attr name="label">
+                <string>?instanceActivity</string>
+            </attr>
+        </edge>
+        <edge from="n144451" to="n144465">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n144471" to="n144470">
+            <attr name="label">
+                <string>transition</string>
+            </attr>
+        </edge>
+        <edge from="n144470" to="n144470">
+            <attr name="label">
+                <string>?transition</string>
+            </attr>
+        </edge>
+        <edge from="n144459" to="n144462">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n144463" to="n144463">
+            <attr name="label">
+                <string>StateMachine</string>
+            </attr>
+        </edge>
+        <edge from="n144469" to="n144469">
+            <attr name="label">
+                <string>Signal</string>
+            </attr>
+        </edge>
+        <edge from="n144467" to="n144467">
+            <attr name="label">
+                <string>?foodPinB</string>
+            </attr>
+        </edge>
+        <edge from="n144450" to="n144450">
+            <attr name="label">
+                <string>?sendSignal</string>
+            </attr>
+        </edge>
+        <edge from="n144473" to="n144473">
+            <attr name="label">
+                <string>Trigger</string>
+            </attr>
+        </edge>
+        <edge from="n144453" to="n144471">
+            <attr name="label">
+                <string>region</string>
+            </attr>
+        </edge>
+        <edge from="n144472" to="n144472">
+            <attr name="label">
+                <string>?trigger</string>
+            </attr>
+        </edge>
+        <edge from="n144470" to="n144464">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n144458" to="n144458">
+            <attr name="label">
+                <string>Activity</string>
+            </attr>
+        </edge>
+        <edge from="n144450" to="n144461">
+            <attr name="label">
+                <string>signal</string>
+            </attr>
+        </edge>
+        <edge from="n144465" to="n144452">
+            <attr name="label">
+                <string>behavior</string>
+            </attr>
+        </edge>
+        <edge from="n144451" to="n144448">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n144449" to="n144449">
+            <attr name="label">
+                <string>ActionInputPin</string>
+            </attr>
+        </edge>
+        <edge from="n144448" to="n144454">
+            <attr name="label">
+                <string>activeState</string>
+            </attr>
+        </edge>
+        <edge from="n144468" to="n144468">
+            <attr name="label">
+                <string>?theFoodB</string>
+            </attr>
+        </edge>
+        <edge from="n144462" to="n144466">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n144466" to="n144466">
+            <attr name="label">
+                <string>BehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n144471" to="n144460">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n144457" to="n144457">
+            <attr name="label">
+                <string>ReceiveSignalEvent</string>
+            </attr>
+        </edge>
+    </graph>
+    <graph id="sendSignalAction - AFTER" role="rule" edgeids="false" edgemode="directed">
+        <attr name="enabled">
+            <string>false</string>
+        </attr>
+        <attr name="$version">
+            <string>curly</string>
+        </attr>
+        <node id="n143873"/>
+        <node id="n143874"/>
+        <node id="n143875"/>
+        <node id="n143876"/>
+        <node id="n143877"/>
+        <node id="n143878"/>
+        <node id="n143879"/>
+        <node id="n143880"/>
+        <node id="n143881"/>
+        <node id="n143882"/>
+        <node id="n143883"/>
+        <node id="n143884"/>
+        <node id="n143885"/>
+        <node id="n143886"/>
+        <node id="n143887"/>
+        <node id="n143888"/>
+        <node id="n143889"/>
+        <node id="n143890"/>
+        <node id="n143891"/>
+        <node id="n143892"/>
+        <node id="n143893"/>
+        <node id="n143894"/>
+        <node id="n143895"/>
+        <node id="n143896"/>
+        <node id="n143897"/>
+        <node id="n143898"/>
+        <node id="n143899"/>
+        <node id="n143900"/>
+        <node id="n143901"/>
+        <node id="n143902"/>
+        <node id="n143903"/>
+        <node id="n143904"/>
+        <edge from="n143898" to="n143891">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n143885" to="n143885">
+            <attr name="label">
+                <string>Transition</string>
+            </attr>
+        </edge>
+        <edge from="n143880" to="n143904">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n143896" to="n143874">
+            <attr name="label">
+                <string>sender</string>
+            </attr>
+        </edge>
+        <edge from="n143880" to="n143880">
+            <attr name="label">
+                <string>?stateMachine</string>
+            </attr>
+        </edge>
+        <edge from="n143900" to="n143900">
+            <attr name="label">
+                <string>?trigger</string>
+            </attr>
+        </edge>
+        <edge from="n143901" to="n143901">
+            <attr name="label">
+                <string>?classifierBehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n143889" to="n143889">
+            <attr name="label">
+                <string>Signal</string>
+            </attr>
+        </edge>
+        <edge from="n143887" to="n143887">
+            <attr name="label">
+                <string>SendInvocationOccurrence</string>
+            </attr>
+        </edge>
+        <edge from="n143882" to="n143874">
+            <attr name="label">
+                <string>sender</string>
+            </attr>
+        </edge>
+        <edge from="n143874" to="n143901">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n143877" to="n143877">
+            <attr name="label">
+                <string>?getFoodB</string>
+            </attr>
+        </edge>
+        <edge from="n143888" to="n143886">
+            <attr name="label">
+                <string>receiver</string>
+            </attr>
+        </edge>
+        <edge from="n143883" to="n143880">
+            <attr name="label">
+                <string>behavior</string>
+            </attr>
+        </edge>
+        <edge from="n143901" to="n143874">
+            <attr name="label">
+                <string>host</string>
+            </attr>
+        </edge>
+        <edge from="n143888" to="n143878">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n143882" to="n143886">
+            <attr name="label">
+                <string>receiver</string>
+            </attr>
+        </edge>
+        <edge from="n143903" to="n143893">
+            <attr name="label">
+                <string>entry</string>
+            </attr>
+        </edge>
+        <edge from="n143880" to="n143875">
+            <attr name="label">
+                <string>region</string>
+            </attr>
+        </edge>
+        <edge from="n143899" to="n143873">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n143895" to="n143895">
+            <attr name="label">
+                <string>?foodPinB</string>
+            </attr>
+        </edge>
+        <edge from="n143876" to="n143886">
+            <attr name="label">
+                <string>value</string>
+            </attr>
+        </edge>
+        <edge from="n143899" to="n143874">
+            <attr name="label">
+                <string>host</string>
+            </attr>
+        </edge>
+        <edge from="n143894" to="n143894">
+            <attr name="label">
+                <string>ActionInputPin</string>
+            </attr>
+        </edge>
+        <edge from="n143899" to="n143893">
+            <attr name="label">
+                <string>behavior</string>
+            </attr>
+        </edge>
+        <edge from="n143879" to="n143900">
+            <attr name="label">
+                <string>trigger</string>
+            </attr>
+        </edge>
+        <edge from="n143882" to="n143888">
+            <attr name="label">
+                <string>receiveEvent</string>
+            </attr>
+        </edge>
+        <edge from="n143900" to="n143892">
+            <attr name="label">
+                <string>event</string>
+            </attr>
+        </edge>
+        <edge from="n143884" to="n143884">
+            <attr name="label">
+                <string>?signal</string>
+            </attr>
+        </edge>
+        <edge from="n143888" to="n143882">
+            <attr name="label">
+                <string>message</string>
+            </attr>
+        </edge>
+        <edge from="n143892" to="n143892">
+            <attr name="label">
+                <string>?recieveSignal</string>
+            </attr>
+        </edge>
+        <edge from="n143890" to="n143890">
+            <attr name="label">
+                <string>Trigger</string>
+            </attr>
+        </edge>
+        <edge from="n143877" to="n143876">
+            <attr name="label">
+                <string>result</string>
+            </attr>
+        </edge>
+        <edge from="n143879" to="n143885">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n143903" to="n143903">
+            <attr name="label">
+                <string>?instanceState</string>
+            </attr>
+        </edge>
+        <edge from="n143898" to="n143895">
+            <attr name="label">
+                <string>target</string>
+            </attr>
+        </edge>
+        <edge from="n143882" to="n143882">
+            <attr name="label">
+                <string>*c1</string>
+            </attr>
+        </edge>
+        <edge from="n143875" to="n143879">
+            <attr name="label">
+                <string>transition</string>
+            </attr>
+        </edge>
+        <edge from="n143893" to="n143893">
+            <attr name="label">
+                <string>?instanceActivity</string>
+            </attr>
+        </edge>
+        <edge from="n143886" to="n143886">
+            <attr name="label">
+                <string>?instance2</string>
+            </attr>
+        </edge>
+        <edge from="n143891" to="n143891">
+            <attr name="label">
+                <string>SendSignalAction</string>
+            </attr>
+        </edge>
+        <edge from="n143901" to="n143873">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n143886" to="n143888">
+            <attr name="label">
+                <string>pool</string>
+            </attr>
+        </edge>
+        <edge from="n143893" to="n143898">
+            <attr name="label">
+                <string>node</string>
+            </attr>
+        </edge>
+        <edge from="n143899" to="n143899">
+            <attr name="label">
+                <string>?newStateBehavior</string>
+            </attr>
+        </edge>
+        <edge from="n143883" to="n143886">
+            <attr name="label">
+                <string>host</string>
+            </attr>
+        </edge>
+        <edge from="n143874" to="n143899">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n143884" to="n143889">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n143882" to="n143896">
+            <attr name="label">
+                <string>sendEvent</string>
+            </attr>
+        </edge>
+        <edge from="n143882" to="n143884">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n143883" to="n143883">
+            <attr name="label">
+                <string>?classifierBehaviorExecution2</string>
+            </attr>
+        </edge>
+        <edge from="n143878" to="n143878">
+            <attr name="label">
+                <string>SignalOccurrence</string>
+            </attr>
+        </edge>
+        <edge from="n143875" to="n143875">
+            <attr name="label">
+                <string>?SMRegion</string>
+            </attr>
+        </edge>
+        <edge from="n143904" to="n143904">
+            <attr name="label">
+                <string>StateMachine</string>
+            </attr>
+        </edge>
+        <edge from="n143897" to="n143897">
+            <attr name="label">
+                <string>Activity</string>
+            </attr>
+        </edge>
+        <edge from="n143901" to="n143903">
+            <attr name="label">
+                <string>activeState</string>
+            </attr>
+        </edge>
+        <edge from="n143873" to="n143873">
+            <attr name="label">
+                <string>BehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n143892" to="n143884">
+            <attr name="label">
+                <string>signal</string>
+            </attr>
+        </edge>
+        <edge from="n143896" to="n143901">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n143898" to="n143884">
+            <attr name="label">
+                <string>signal</string>
+            </attr>
+        </edge>
+        <edge from="n143892" to="n143881">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n143895" to="n143894">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n143886" to="n143883">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n143896" to="n143887">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n143900" to="n143890">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n143888" to="n143888">
+            <attr name="label">
+                <string>*c1receipt</string>
+            </attr>
+        </edge>
+        <edge from="n143902" to="n143902">
+            <attr name="label">
+                <string>Region</string>
+            </attr>
+        </edge>
+        <edge from="n143895" to="n143877">
+            <attr name="label">
+                <string>fromAction</string>
+            </attr>
+        </edge>
+        <edge from="n143893" to="n143897">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n143879" to="n143879">
+            <attr name="label">
+                <string>?transition</string>
+            </attr>
+        </edge>
+        <edge from="n143898" to="n143898">
+            <attr name="label">
+                <string>?sendSignal</string>
+            </attr>
+        </edge>
+        <edge from="n143896" to="n143896">
+            <attr name="label">
+                <string>*c1sent</string>
+            </attr>
+        </edge>
+        <edge from="n143874" to="n143874">
+            <attr name="label">
+                <string>?instance</string>
+            </attr>
+        </edge>
+        <edge from="n143881" to="n143881">
+            <attr name="label">
+                <string>ReceiveSignalEvent</string>
+            </attr>
+        </edge>
+        <edge from="n143876" to="n143876">
+            <attr name="label">
+                <string>?theFoodB</string>
+            </attr>
+        </edge>
+        <edge from="n143875" to="n143902">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n143883" to="n143873">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n143896" to="n143882">
+            <attr name="label">
+                <string>message</string>
+            </attr>
+        </edge>
+    </graph>
+    <graph id="readStructuralFeatureAction - BEFORE" role="rule"
+        edgeids="false" edgemode="directed">
+        <attr name="enabled">
+            <string>false</string>
+        </attr>
+        <attr name="$version">
+            <string>curly</string>
+        </attr>
+        <node id="n138450"/>
+        <node id="n138451"/>
+        <node id="n138452"/>
+        <node id="n138453"/>
+        <node id="n138454"/>
+        <node id="n138455"/>
+        <node id="n138456"/>
+        <node id="n138457"/>
+        <node id="n138458"/>
+        <node id="n138459"/>
+        <node id="n138460"/>
+        <node id="n138461"/>
+        <edge from="n138460" to="n138453">
+            <attr name="label">
+                <string>executable</string>
+            </attr>
+        </edge>
+        <edge from="n138456" to="n138456">
+            <attr name="label">
+                <string>OutputPin</string>
+            </attr>
+        </edge>
+        <edge from="n138460" to="n138460">
+            <attr name="label">
+                <string>?newStateBehaviour</string>
+            </attr>
+        </edge>
+        <edge from="n138457" to="n138457">
+            <attr name="label">
+                <string>?selfPin</string>
+            </attr>
+        </edge>
+        <edge from="n138453" to="n138454">
+            <attr name="label">
+                <string>object</string>
+            </attr>
+        </edge>
+        <edge from="n138454" to="n138454">
+            <attr name="label">
+                <string>?selfActionInputPin</string>
+            </attr>
+        </edge>
+        <edge from="n138450" to="n138461">
+            <attr name="label">
+                <string>?theFeature</string>
+            </attr>
+        </edge>
+        <edge from="n138451" to="n138451">
+            <attr name="label">
+                <string>?instance</string>
+            </attr>
+        </edge>
+        <edge from="n138458" to="n138456">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n138455" to="n138455">
+            <attr name="label">
+                <string>?selfRead</string>
+            </attr>
+        </edge>
+        <edge from="n138453" to="n138452">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n138458" to="n138458">
+            <attr name="label">
+                <string>?theFood</string>
+            </attr>
+        </edge>
+        <edge from="n138455" to="n138457">
+            <attr name="label">
+                <string>result</string>
+            </attr>
+        </edge>
+        <edge from="n138453" to="n138453">
+            <attr name="label">
+                <string>?getFood</string>
+            </attr>
+        </edge>
+        <edge from="n138453" to="n138458">
+            <attr name="label">
+                <string>result</string>
+            </attr>
+        </edge>
+        <edge from="n138451" to="n138460">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n138454" to="n138455">
+            <attr name="label">
+                <string>fromAction</string>
+            </attr>
+        </edge>
+        <edge from="n138450" to="n138450">
+            <attr name="label">
+                <string>?instance2</string>
+            </attr>
+        </edge>
+        <edge from="n138452" to="n138452">
+            <attr name="label">
+                <string>ReadStructuralFeatureAction</string>
+            </attr>
+        </edge>
+        <edge from="n138461" to="n138461">
+            <attr name="label">
+                <string>?feature</string>
+            </attr>
+        </edge>
+        <edge from="n138459" to="n138459">
+            <attr name="label">
+                <string>?theFeature</string>
+            </attr>
+        </edge>
+        <edge from="n138453" to="n138459">
+            <attr name="label">
+                <string>structuralFeature</string>
+            </attr>
+        </edge>
+        <edge from="n138460" to="n138451">
+            <attr name="label">
+                <string>host</string>
+            </attr>
+        </edge>
+        <edge from="n138460" to="n138450">
+            <attr name="label">
+                <string>?selfPin</string>
+            </attr>
+        </edge>
+    </graph>
+    <graph id="readStructuralFeatureAction - AFTER" role="rule"
+        edgeids="false" edgemode="directed">
+        <attr name="enabled">
+            <string>false</string>
+        </attr>
+        <attr name="$version">
+            <string>curly</string>
+        </attr>
+        <node id="n138889"/>
+        <node id="n138890"/>
+        <node id="n138891"/>
+        <node id="n138892"/>
+        <node id="n138893"/>
+        <node id="n138894"/>
+        <node id="n138895"/>
+        <node id="n138896"/>
+        <node id="n138897"/>
+        <node id="n138898"/>
+        <node id="n138899"/>
+        <node id="n138900"/>
+        <edge from="n138889" to="n138892">
+            <attr name="label">
+                <string>?theFood</string>
+            </attr>
+        </edge>
+        <edge from="n138895" to="n138892">
+            <attr name="label">
+                <string>?theFeature</string>
+            </attr>
+        </edge>
+        <edge from="n138897" to="n138899">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n138898" to="n138896">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n138889" to="n138890">
+            <attr name="label">
+                <string>host</string>
+            </attr>
+        </edge>
+        <edge from="n138897" to="n138898">
+            <attr name="label">
+                <string>result</string>
+            </attr>
+        </edge>
+        <edge from="n138889" to="n138889">
+            <attr name="label">
+                <string>?newStateBehaviour</string>
+            </attr>
+        </edge>
+        <edge from="n138889" to="n138895">
+            <attr name="label">
+                <string>?selfPin</string>
+            </attr>
+        </edge>
+        <edge from="n138893" to="n138893">
+            <attr name="label">
+                <string>?selfPin</string>
+            </attr>
+        </edge>
+        <edge from="n138897" to="n138894">
+            <attr name="label">
+                <string>structuralFeature</string>
+            </attr>
+        </edge>
+        <edge from="n138896" to="n138896">
+            <attr name="label">
+                <string>OutputPin</string>
+            </attr>
+        </edge>
+        <edge from="n138894" to="n138894">
+            <attr name="label">
+                <string>?theFeature</string>
+            </attr>
+        </edge>
+        <edge from="n138892" to="n138892">
+            <attr name="label">
+                <string>?feature</string>
+            </attr>
+        </edge>
+        <edge from="n138897" to="n138891">
+            <attr name="label">
+                <string>object</string>
+            </attr>
+        </edge>
+        <edge from="n138891" to="n138891">
+            <attr name="label">
+                <string>?selfActionInputPin</string>
+            </attr>
+        </edge>
+        <edge from="n138890" to="n138890">
+            <attr name="label">
+                <string>?instance</string>
+            </attr>
+        </edge>
+        <edge from="n138899" to="n138899">
+            <attr name="label">
+                <string>ReadStructuralFeatureAction</string>
+            </attr>
+        </edge>
+        <edge from="n138900" to="n138900">
+            <attr name="label">
+                <string>?selfRead</string>
+            </attr>
+        </edge>
+        <edge from="n138895" to="n138895">
+            <attr name="label">
+                <string>?instance2</string>
+            </attr>
+        </edge>
+        <edge from="n138897" to="n138897">
+            <attr name="label">
+                <string>?getFood</string>
+            </attr>
+        </edge>
+        <edge from="n138900" to="n138893">
+            <attr name="label">
+                <string>result</string>
+            </attr>
+        </edge>
+        <edge from="n138890" to="n138889">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n138898" to="n138898">
+            <attr name="label">
+                <string>?theFood</string>
+            </attr>
+        </edge>
+        <edge from="n138891" to="n138900">
+            <attr name="label">
+                <string>fromAction</string>
+            </attr>
+        </edge>
+    </graph>
+    <graph id="readSelfAction - BEFORE" role="rule" edgeids="false" edgemode="directed">
+        <attr name="enabled">
+            <string>false</string>
+        </attr>
+        <attr name="$version">
+            <string>curly</string>
+        </attr>
+        <node id="n137785"/>
+        <node id="n137786"/>
+        <node id="n137787"/>
+        <node id="n137788"/>
+        <node id="n137789"/>
+        <node id="n137790"/>
+        <node id="n137791"/>
+        <edge from="n137790" to="n137785">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n137786" to="n137786">
+            <attr name="label">
+                <string>?classifierBehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n137786" to="n137788">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n137787" to="n137787">
+            <attr name="label">
+                <string>?instance</string>
+            </attr>
+        </edge>
+        <edge from="n137787" to="n137786">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n137789" to="n137789">
+            <attr name="label">
+                <string>OutputPin</string>
+            </attr>
+        </edge>
+        <edge from="n137788" to="n137788">
+            <attr name="label">
+                <string>BehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n137791" to="n137791">
+            <attr name="label">
+                <string>?selfPin</string>
+            </attr>
+        </edge>
+        <edge from="n137790" to="n137790">
+            <attr name="label">
+                <string>?selfRead</string>
+            </attr>
+        </edge>
+        <edge from="n137786" to="n137790">
+            <attr name="label">
+                <string>executable</string>
+            </attr>
+        </edge>
+        <edge from="n137786" to="n137787">
+            <attr name="label">
+                <string>host</string>
+            </attr>
+        </edge>
+        <edge from="n137790" to="n137791">
+            <attr name="label">
+                <string>result</string>
+            </attr>
+        </edge>
+        <edge from="n137785" to="n137785">
+            <attr name="label">
+                <string>ReadSelfAction</string>
+            </attr>
+        </edge>
+        <edge from="n137791" to="n137789">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+    </graph>
+    <graph id="readSelfAction - AFTER" role="rule" edgeids="false" edgemode="directed">
+        <attr name="enabled">
+            <string>false</string>
+        </attr>
+        <attr name="$version">
+            <string>curly</string>
+        </attr>
+        <node id="n138630"/>
+        <node id="n138631"/>
+        <node id="n138632"/>
+        <node id="n138633"/>
+        <node id="n138634"/>
+        <node id="n138635"/>
+        <node id="n138636"/>
+        <edge from="n138633" to="n138633">
+            <attr name="label">
+                <string>?classifierBehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n138635" to="n138633">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n138630" to="n138630">
+            <attr name="label">
+                <string>ReadSelfAction</string>
+            </attr>
+        </edge>
+        <edge from="n138631" to="n138631">
+            <attr name="label">
+                <string>?selfRead</string>
+            </attr>
+        </edge>
+        <edge from="n138636" to="n138636">
+            <attr name="label">
+                <string>OutputPin</string>
+            </attr>
+        </edge>
+        <edge from="n138631" to="n138630">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n138633" to="n138635">
+            <attr name="label">
+                <string>host</string>
+            </attr>
+        </edge>
+        <edge from="n138631" to="n138634">
+            <attr name="label">
+                <string>result</string>
+            </attr>
+        </edge>
+        <edge from="n138633" to="n138635">
+            <attr name="label">
+                <string>?selfPin</string>
+            </attr>
+        </edge>
+        <edge from="n138634" to="n138634">
+            <attr name="label">
+                <string>?selfPin</string>
+            </attr>
+        </edge>
+        <edge from="n138632" to="n138632">
+            <attr name="label">
+                <string>BehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n138633" to="n138632">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n138634" to="n138636">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n138635" to="n138635">
+            <attr name="label">
+                <string>?instance</string>
+            </attr>
+        </edge>
+    </graph>
+</gxl>

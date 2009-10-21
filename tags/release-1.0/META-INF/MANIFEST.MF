@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: UMLAnimator
+Bundle-SymbolicName: UMLAnimator; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: controller.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.draw2d,
+ org.junit4
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Import-Package: org.eclipse.core.internal.resources,
+ org.eclipse.core.resources,
+ org.eclipse.draw2d,
+ org.eclipse.jdt.core
+Bundle-ClassPath: xom-1.2.1.zip

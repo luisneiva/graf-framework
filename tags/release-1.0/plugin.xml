@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="UMLAnimator"
+            id="UMLAnimator">
+      </category>
+      <view
+            name="Animator"
+            icon="icons/sample.gif"
+            category="UMLAnimator"
+            class="view.View"
+            id="view.View">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
+         <command
+               commandId="view.packexpcontrib"
+               label="Animate"
+               style="push">
+            <visibleWhen>
+               <with
+                     variable="activeMenuSelection">
+                  <count
+                        value="1">
+                  </count>
+                  <iterate>
+                     <instanceof
+                           value="org.eclipse.core.resources.IFile">
+                     </instanceof>
+                     <test
+                           property="org.eclipse.core.resources.name"
+                           value="*.umltest">
+                     </test>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="view.packexpcontrib"
+            name="PackExpContrib">
+      </command>
+   </extension>
+   <extension
+         id="packexpcontribhandler"
+         name="packexpcontribhandler"
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="view.PackExpContrib"
+            commandId="view.packexpcontrib">
+      </handler>
+   </extension>
+
+</plugin>
