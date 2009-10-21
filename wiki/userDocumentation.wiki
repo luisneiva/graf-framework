@@ -3,7 +3,7 @@
 
 == Introduction ==
 
-This document will describe GRAF using a UML implementation as an example. An introduction to GRAF is here.
+This document will describe GRAF using a UML implementation as an example. An introduction to GRAF is [Graphs here].
 == Installation and Setup ==
 
 You will need to have:
