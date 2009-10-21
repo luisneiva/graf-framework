@@ -2,6 +2,8 @@ package model;
 
 /**
  * Used for setting input parameters
+ * 
+ * @author Oscar Wood
  */
 public class AGGAssignment {
 

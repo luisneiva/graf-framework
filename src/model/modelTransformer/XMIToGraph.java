@@ -192,12 +192,6 @@ public class XMIToGraph implements ModelToGraph {
 		String className = null;
 		Boolean stateDeclared = true;
 		
-		/*////////////////////////////////////////TODO:
-		 * - Check that no double-declarations are made (eg no 2 state {} in the same class declaration)
-		 * - Check that all classnames being instantiated are present in the model.
-		 * - Make sure all object names are unique - eg can't have 'm1 : Microwave' and 'm1 : Food' (or do something to avoid clashes)
-		 * ///////////////////////////////////////////////////
-		 */
 		try {
 			BufferedReader bf = new BufferedReader(new InputStreamReader(instanceURL.openStream()));
 			
@@ -229,27 +223,27 @@ public class XMIToGraph implements ModelToGraph {
 					
 				} else if (line.matches("^\\{.*\\}$")){		//state declaration - eg {current_state}
 					String state = line.substring(1,line.length()-1).trim();
-					////////////////////TODO: this should be done at the model level or some runtime level????
+					
 					String instBehavExecNode = objName + "classifierBehaviorExecution";
 					graph.addIEdge(instBehavExecNode, "BehaviorExecution");
 					graph.addEdge(objName, "execution", instBehavExecNode);
 					graph.addEdge(instBehavExecNode, "host", objName);
-					////////////////////
-					//(the below stuff \|/ may also be runtime-creation-stuff)
+					
 					// Add behaviour edge from the behavior execution instance to the model statemachine
 					//find the statemachine node in the model: obj--i-->classname--classifierBehavior-->statemachine
 					//and add an edge: objClassifierBehaviorExecution--behavior-->statemachine
 					Boolean statemachinefound = false;
 					for (int i = 0; i < graph.getArcsCount(); i++) {
 						Arc edge = graph.getArcsList().get(i);
-						if (ListGraph.getName(edge.getSource()).equals(className) && ListGraph.getName(edge).equals("classifierBehavior")) {
+						if (ListGraph.getName(edge.getSource()).equals(className) &&
+								ListGraph.getName(edge).equals("classifierBehavior")) {
 							statemachinefound = true;
 							graph.addEdge(instBehavExecNode, "behavior", ListGraph.getName(edge.getTarget()));
 						}
 					}
-					if (!statemachinefound)
+					if (!statemachinefound) {
 						instanceErr("ERROR - no state machine found for class " + className);
-					
+					}
 					stateDeclared = true;
 					
 					// Add activeState edge from the behaviour execution instance to the indicated model state
@@ -276,10 +270,6 @@ public class XMIToGraph implements ModelToGraph {
 			if (stateDeclared == false) {
 				instanceErr("No state declaration for object " + objName + " : " + className);
 			}
-			
-			//TODO: add in edges that weren't specified - eg missing attribute values => get default values
-			//(if no default values then don't add in)
-			//(THEN, do validation - if now missing edges then invalid specification)
 		} catch (FileNotFoundException e) {
 			instanceErr("Could not find file " + instanceURL.getPath());
 		}
@@ -287,7 +277,7 @@ public class XMIToGraph implements ModelToGraph {
 
 	/**
 	 * Extract a string that represents this node and is suitable for a node name in the graph.
-	 * Nodes are identified by their name, value, href, or xmi:id (in this order of preference) (<-TODO)
+	 * Nodes are identified by their name, value, href, or xmi:id (in this order of preference)
 	 * If a node does not contain any of these identifying elements then this method returns null.
 	 */
 	//eg:
@@ -296,19 +286,6 @@ public class XMIToGraph implements ModelToGraph {
     //  <defaultValue xmi:type="uml:LiteralString" xmi:id="_aFInAAlYEd6Zz8oMV4pXtg" name="" value="10"/>
     //</ownedAttribute>
 	private static String graphNodeName(Element node) {
-		
-		//TODO
-		//TODO
-		//TODO Every name generated must be unique across graph. This means that if
-		//TODO name or value is used, then must append the xmi:id to the end of it.
-		//TODO
-		//TODO
-		//TODO:
-		// I propose: refactor this - start with String identifierprefix. Then set this prefix
-		// to either value, name, or <elementname> (NOT href - maybe move href to highest precedence?)
-		// Then get the idstr - either full str, or first 4 characters. (make this easy to change)
-		// Then the name will be the identifierprefix + idstr.
-		
 		Nodes namenodes = node.query("@name");
 		Nodes typenodes = node.query("@xmi:type",xpathctx);
 		Nodes valuenodes = node.query("@value");
@@ -316,8 +293,8 @@ public class XMIToGraph implements ModelToGraph {
 		Nodes idnodes = node.query("@xmi:id",xpathctx);
 		String name = "";
 		if (valuenodes.size()==1)
-			name = valuenodes.get(0).getValue();	// \|/ some elements have an empty name which is useless
-		else if (namenodes.size()==1 && !namenodes.get(0).getValue().equals(""))	//TODO - remove this, but only when xmi:id is appended (risk of two things having a blank (/same) name)
+			name = valuenodes.get(0).getValue();
+		else if (namenodes.size()==1 && !namenodes.get(0).getValue().equals(""))
 			name = namenodes.get(0).getValue();
 		else if (hrefnodes.size()==1)
 			name = hrefnodes.get(0).getValue().split("#")[1];	
@@ -349,6 +326,6 @@ public class XMIToGraph implements ModelToGraph {
 	
 	/** Performs response when an error occurs during instance translation */
 	private void instanceErr(String msg) throws ModelToGraphException {
-		throw new ModelToGraphException ("Invalid instance file. " + msg);
+		throw new ModelToGraphException("Invalid instance file. " + msg);
 	}
 }

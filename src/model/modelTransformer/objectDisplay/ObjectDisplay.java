@@ -15,7 +15,7 @@ public abstract class ObjectDisplay {
 		return objects;
 	}
 	/** Set objects to be displayed */
-	public void setODObjs(ArrayList<DisplayObject> objects) {	//TODO - change name
+	public void setObjs(ArrayList<DisplayObject> objects) {
 		this.objects = objects;
 	}
 	

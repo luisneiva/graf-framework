@@ -6,9 +6,9 @@
 	
 	<action name="AcceptEventAction">
 		<exclusive-dependencies>
+			<rule>acceptEventAction-AndIgnore</rule>
 			<action>AcceptEventAction-WithActivity</action>
 			<rule>acceptEventAction-WithoutActivity</rule>
-			<rule>acceptEventAction-AndIgnore</rule>
 		</exclusive-dependencies>
 	</action>
 	<action name="AcceptEventAction-WithActivity">
@@ -24,8 +24,8 @@
 	
 	<action name="ReadStructuralFeatureAction">
 		<exclusive-dependencies>
-			<rule>readStructuralFeatureAction-Version1</rule>
-			<rule>readStructuralFeatureAction-Version2</rule>
+			<rule>readStructuralFeatureAction-SingleInt</rule>
+			<rule>readStructuralFeatureAction-TwoInts</rule>
 		</exclusive-dependencies>
 	</action>
 

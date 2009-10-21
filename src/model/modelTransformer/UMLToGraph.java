@@ -38,6 +38,7 @@ public class UMLToGraph implements ModelToGraph {
 	
 	public ListGraph buildGraph(URL modelURL, URL instanceURL) throws ModelToGraphException {
 		graph = new ListGraph();
+
 		translateModelPart(modelURL);
 		translateInstancePart(instanceURL);
 		createRuntimePart();
@@ -89,7 +90,7 @@ public class UMLToGraph implements ModelToGraph {
 	}
 	
 	private String activityName = null;
-	/** */
+	
 	private void buildedgetree(EObject obj) throws ModelToGraphException {
 		String objType = obj.eClass().getName();
 		String nodeName = getNodeID(obj);
@@ -191,9 +192,9 @@ public class UMLToGraph implements ModelToGraph {
 					graph.addIEdge(instBehavExecNode, "BehaviorExecution");
 					graph.addEdge(objName, "execution", instBehavExecNode);
 					graph.addEdge(instBehavExecNode, "host", objName);
+					
 					// Add behaviour edge from the behavior execution instance to the model statemachine
-					//find the statemachine node in the model:
-					//obj--i-->classname--classifierBehavior-->statemachine
+					//find the statemachine node in the model: obj--i-->classname--classifierBehavior-->statemachine
 					//and add an edge: objClassifierBehaviorExecution--behavior-->statemachine
 					Boolean statemachinefound = false;
 					for (int i = 0; i < graph.getArcsCount(); i++) {
@@ -201,11 +202,11 @@ public class UMLToGraph implements ModelToGraph {
 						if (ListGraph.getName(edge.getSource()).equals(className) &&
 								ListGraph.getName(edge).equals("classifierBehavior")) {
 							statemachinefound = true;
-							graph.addEdge(instBehavExecNode, "behavior", ListGraph.getName(edge));
+							graph.addEdge(instBehavExecNode, "behavior", ListGraph.getName(edge.getTarget()));
 						}
 					}
 					if (!statemachinefound) {
-						instanceErr("No state machine found for class " + className);
+						instanceErr("ERROR - no state machine found for class " + className);
 					}
 					stateDeclared = true;
 					
