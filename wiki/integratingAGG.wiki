@@ -1,3 +1,5 @@
+== Resolved ==
+
 === Negative Application Conditions ===
 
 If an NAC has variables and the variables have the same names as variables in the before or after graph then it will always prevent the graph from matching. Giving the variables in the NAC unique names allowed the NAC to work properly. I don’t understand how, but it worked.
@@ -12,12 +14,16 @@ Accept correct event out of many
 The way I rename nodes and arcs in the code doesn’t work completely. Sometimes the code does not contrast the new names. Maybe there’s a way to code it so that it does work properly, but I don’t know how. A symptom of this is that the accept event rules won’t correctly match input parameters always (because one of the parameters will have been renamed). Therefore when there are multiple events to be accepted, and you click on one of them, the code might accept another one instead.
 
 To solve this, I changed the order of the sub-rules of accept event. Accept-event-and-ignore goes first, using a new Negative Application Condition. This has solved the problem though it is not an ideal solution.
-Unsolved problems
+
+== Unresolved ==
+
+=== Possible efficiency improvement ===
+
+The accept event rule is slow because it contains sub-rules. The sub-rules have very similar before graphs. A possible way to speed it up is to have the first rule add a special node. Let's call this node Pointer. The Pointer node will have an edge pointing to something like the behaviour execution. Then the other sub-rules can have their before graphs drastically simplified so they just find the Pointer node and nodes near the Pointer node needed for the transformation. A final sub-rule would be needed to delete the Pointer node. Also, it would have to be ensured that Pointer had a unique name.
 
 === Unique names ===
 
-I have a process to give unique names but it won’t always work. First, follow an i edge from the node to be renamed. The name of the node beyond the i edge is the put into lower case then a number (starting at 1 and counting up) is added. Thus we get a name like “signaloccurence4”. It’s not impossible that the user would have already used a node with this name.
+I have a process to give unique names but it won’t always work. First, follow an i edge from the node to be renamed. The name of the node beyond the i edge is the put into lower case then a number (starting at 1 and counting up) is added. Thus we get a name like “signaloccurence4”. It’s not impossible that the user would have already used a node with this name. For that matter, if the user uses names like Class or State this will also cause problems.
 
-For that matter, if the user uses names like Class or State this will still cause problems.
-
-I am ignoring this problem.
+=== Confused state machine instances ===
+This is another problem which I believe to be symptom of incorrect renaming. When there are 2 objects of the same class and the 2 objects both have the same state machine and they're both executing the state machine actions at the same time, actions in one state machine instance can affect the other state machine instance. I do not know the exact cause of this problem but I suspect it is renamings not being propagated. This is a serious problem which we do not have time to address.
