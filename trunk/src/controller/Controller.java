@@ -90,13 +90,6 @@ public class Controller {
 			showError(e);
 		}
 		
-		//Animation button action - TODO - delete this later
-		view.addAnimateListener(new ActionListener() {
-			public void actionPerformed(ActionEvent event) {
-				animate("microwaveTest1.modeltest");
-			}
-		});
-		
 		// 'New' animation button action
 		view.addNewAnimListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {

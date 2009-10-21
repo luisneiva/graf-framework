@@ -37,7 +37,7 @@ public class GraphToObjDiag implements GraphToModel {
 		HashMap<String,Boolean[]> hideshow = new HashMap<String,Boolean[]>();
 		if(objects != null) {
 			if (objects.size()>0 && !(objects.get(0) instanceof ODObject)) {
-				return null;					//TODO - change to GraphToModelException
+				throw new GraphToModelException("Found object that is not an ODObject");
 			}
 			for(DisplayObject object : objects) {
 				ODObject odObj = (ODObject)object;
@@ -64,7 +64,7 @@ public class GraphToObjDiag implements GraphToModel {
 			}
 		}
 		
-		objdiag.setODObjs(objects);
+		objdiag.setObjs(objects);
 		objdiag.setODLinks(odLinks);
 		return objdiag;
 	}
@@ -226,6 +226,7 @@ public class GraphToObjDiag implements GraphToModel {
 			toExternalEvent.add("trigger");
 			toExternalEvent.add("event");
 			ArrayList<Node> externalEvents = ListGraph.toTrace(toExternalEvent, object.getGraphNode());
+			
 			for(Node node : externalEvents) {
 				object.addExternalEvent(node);
 			}
@@ -244,12 +245,16 @@ public class GraphToObjDiag implements GraphToModel {
 			ArrayList<Node> recieptNodes = ListGraph.toTrace(toReciept, object.getGraphNode());
 			for(Node recieptNode : recieptNodes) {
 
+			//	System.out.println(">" + ListGraph.getName(recieptNode));
+				
 				ArrayList<Node> activeEventSignals 
 				= ListGraph.toTrace(fromRecieptToEvent, recieptNode);
 
 				ArrayList<Node> activeEvents = new ArrayList<Node>();
 				for(Node n : activeEventSignals) {
-					activeEvents.addAll(ListGraph.fromTrace(fromSignalToReceive, n));
+					
+					ArrayList<Node> all = ListGraph.fromTrace(fromSignalToReceive, n);					
+					activeEvents.addAll(all);
 				}
 
 				ArrayList<String> check = new ArrayList<String>();
@@ -258,11 +263,11 @@ public class GraphToObjDiag implements GraphToModel {
 					Node type = ListGraph.toTrace(check,evNode).get(0);
 					if(ListGraph.getName(type).equals("ReceiveSignalEvent")) {
 						object.addEvent(evNode, recieptNode);
-					}
+					}					
 				}
 			}
 		}
-		
+
 		// Set modes - if contains (executable) actions then in action mode
 		for(ODObject object : objects) {
 			if (object.getActionPool().size()==0) {

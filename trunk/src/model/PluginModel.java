@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import model.exceptions.GraphToModelException;
 import model.exceptions.ModelToGraphException;
 import model.graphTransformer.AGGTransformer;
-import model.graphTransformer.GraphTransformer;
 import model.modelTransformer.GraphToModel;
 import model.modelTransformer.GraphToModelFactory;
 import model.modelTransformer.ModelToGraph;
@@ -19,6 +18,7 @@ import model.modelTransformer.objectDisplay.ObjectDisplay;
 import agg.xt_basis.Arc;
 
 /**
+ * Facade to model. Holds graph and coordinates model logic.
  * 
  * @author Kevin O'Shea
  * @author Oscar Wood
@@ -28,7 +28,6 @@ public class PluginModel {
 	/** Provides functionality for model to graph transformation */
 	private ModelToGraph modeltograph;
 	/** Provides functionality for graph transformations */
-	//private GraphTransformer graphTransformer; TODO changed to test
 	private AGGTransformer graphTransformer;
 
 	/** Provides functionality for graph to model transformation */

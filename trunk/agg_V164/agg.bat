@@ -9,6 +9,6 @@ set RULES=../GTSRules.ggx
 
 SET CLASSPATH=%JAVA_HOME%\bin;%PATH%;%AGG%
 
-java -Xmx1000m agg.gui.AGGAppl %RULES%
+java -version:1.6 -Xmx1000m agg.gui.AGGAppl %RULES%
 
  

@@ -55,8 +55,6 @@ public class View extends ViewPart {
 	/** Draws model contents */
 	private ContentDrawer contentDrawer;
 	
-	//Random button for testing		//TODO - delete this
-	private Button button = new Button("Animate \"microwaveTest1.modeltest\"");
 	/** Button to choose model to animate */
 	private Button newAnimButton = new Button("New");
 	
@@ -84,11 +82,6 @@ public class View extends ViewPart {
 	/** Set the model for use by this view */
 	public void setModel(PluginModel model) {
 		this.model = model;
-	}
-	
-	/** Add listener to the 'Animate modeltest' button */	//TODO - delete this
-	public void addAnimateListener(ActionListener animListener) {
-		button.addActionListener(animListener);
 	}
 
 	/** Add listener to the 'New' button */
@@ -161,12 +154,6 @@ public class View extends ViewPart {
 		
 		contentDrawer.setContents(contents);
 		
-		//set up the menu (button(s))
-		//TODO - delete this 'button' - just for testing (standalone onlys)
-		if (!isPlugin) {
-			rootFigure.getLayoutManager().setConstraint(button, new Rectangle(250,50,220,30));
-			rootFigure.add(button);
-		}
 		// if not a plugin, need ability to choose a file to animate
 		if (!isPlugin) {
 			rootFigure.getLayoutManager().setConstraint(newAnimButton, new Rectangle(430,10,40,20));
