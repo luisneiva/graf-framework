@@ -1,0 +1,173 @@
+= How to create rules in AGG =
+
+== Setting up the GUI version of AGG ==
+We have included *AGG 1.6.4* in our repository so you don't have to go to the hassle of downloading it yourself. 
+
+This means that you can skip to the *Opening up the GUI version of AGG* step. 
+
+But if this doesn’t work or if you prefer to use a new version of AGG then we have included instructions on how to 
+* *Download & Unzip AGG*, and
+* *Change it’s Batch File*
+
+=== Downloading & Unzipping ===
+AGG can be downloaded at http://user.cs.tu-berlin.de/~gragra/agg/down_V164-test/index.html
+From here you’ll want to go to the bottom of the page and press the with *API* button.
+
+*Note:* You don’t need to type any real information into the textboxes above to be able to download AGG. I.e. you can just type things like A, B, a@hotmail, companyA, blah.
+
+By pressing this button it should start downloading the AGG zip file which when you unzip will step up the AGG GUI onto your computer.
+
+=== Changing the Batch File ===
+But this doesn’t mean that you can just use AGG straightaway since you firstly need to set up the *agg.bat* file which can be found in the *agg_V164* folder. The reason why we need to do this is so that AGG knows where everything is. To set up the *agg.bat* file we simply right click the file and say *Edit* to open it in a standard text editor.
+
+Once you have done this there are two settings that need to be changed which are *JAVA_HOME* (line 4) and *AGG* (line 9). 
+
+We need to change the location set by *JAVA_HOME* to the location of where your *JDK 1.6* (or *JRE 1.6*) is installed. (I had to set it to *C:\Program Files\Java\jre6* but it might be different for you since one of my team had to go *C:/Program Files/Java/jdk1.6.0_16*)
+
+*Note:* If you don’t have *JDK 1.6* (or *JRE 1.6*) installed then you can get it from http://java.sun.com/.
+
+Also need to change the location set by *AGG* to the location of where you installed AGG. 
+
+You can also change the setting of *EXAMPLES* (line 12) if you want to so it points to the examples that were provided in the zip file but this is not necessary to run the AGG GUI.
+
+== Opening up the GUI version of AGG ==
+Once you have set up the *agg.bat* file you can open the AGG GUI by simply double left clicking on the *agg.bat* file.
+
+*Note:* If you get the error about the package Zest not being able to be found then just ignore it since this doesn't affect us.
+
+== Layout of the AGG GUI ==
+
+The following image show the layout of the AGG GUI and labels the major parts you should know about.
+
+ {image:worksite:/Wiki Attachments/AGG Layout.jpg|AGG Layout.jpg}
+
+If you are creating your own set of rules then go to the *File* menu and then click on *New GraGra*. 
+
+But if you want to extend our rules for the UML Animator then you just need to go the *File* menu and then click on *Open* and select our *GTSRules.ggx* file. Our rules for the UML Animator can be found at *(our SVN directory)/Implementation/Trunk/GTSRules.ggx*
+
+== Creating Default Node & Edge Types ==
+Once you have opened AGG you will need to create a default node type and a default edge type.
+
+*Note:* If you are extending GTSRules.ggx then you won’t need to do this since we have already done this for this file).
+
+To create a default node type and a default edge type firstly open up the Type Editor which looks like this:
+
+  {image:worksite:/Wiki Attachments/creating default AGG types.png|creating default AGG types.png}
+
+ If it isn’t already then you can open it by clicking on the *expand icon* {image:worksite:/Wiki Attachments/expand icon.jpg|expand icon.jpg}
+ which is located towards the right most side of the screen and is to the right of 
+the right most *print icon*  {image:worksite:/Wiki Attachments/print icon.jpg|print icon.jpg}
+
+When you press the *expand icon* you should see the *Type Editor Area*
+
+
+
+Once you have this section you can click on *New* to create a new Node Type.
+To create a default node just click on *Add* and then click on *Close*.
+
+The same thing can be done to create a default edge (i.e. clicking *New*, then *Add*, and then *Close*)
+
+== Creating an AGG rule ==
+To make a blank rule for you to add to simple press the *New Rule icon*   {image:worksite:/Wiki Attachments/new rule icon.jpg|new rule icon.jpg}
+
+which can be found in the main icon area.
+
+To rename the newly created rule simple double click on it in the graph tree on the left hand side of the page.
+
+From here you can create a before graph and after graph for this rule.
+
+== Creating Before & After Graphs ==
+This is quite simple since all you need to do is to go into the draw mode by clicking on the *Draw Mode icon* {image:worksite:/Wiki Attachments/draw mode icon.jpg|draw mode icon.jpg}
+
+and then click in the before/after graph area to create a node and click and drag from one node to another to create a directed edge between the two nodes.
+
+To select a node or edge simply click on the *Select Mode icon* {image:worksite:/Wiki Attachments/select mode icon.jpg|select mode icon.jpg}
+
+To move a node or edge simply click on the *Move Mode icon*  {image:worksite:/Wiki Attachments/move mode icon.jpg|move mode icon.jpg}
+and then move the object to where you want it.
+
+To name a node or edge simply click on the *Attribute Mode icon*   {image:worksite:/Wiki Attachments/attributes mode icon.jpg|attributes mode icon.jpg}
+and then click on the node/edge that you want to name.
+From here you should set the *Type* as *String*, the *Name* as *name*, and then enter in the name of the node/edge under *Expression*
+
+*Note:* If you want the name to be a constant then it should be of form *“objectName”* whereas if you want the name to a variable then it should be of form *objectName*.
+
+== Mapping Graphs elements ==
+After you have created your before and after graph you should map elements in the before graph to elements in the after graph so that AGG knows which elements can be kept, which elements to add, and which elements to delete from the original graph area.
+
+To map elements in the before graph to elements in the after graph you firstly have to click on the *Map Mode icon* {image:worksite:/Wiki Attachments/map mode icon.jpg|map mode icon.jpg}
+
+After this you can click on an element in the before graph and then an element in the after graph to tell AGG that this element should be kept in the original graph area.
+
+From here you repeat this step until you have mapped all of the elements that you intend to be kept in the original graph area.
+
+*Note:* If an element is in the before graph but not mapped to any element in the after graph then it means that this element should be deleted from the original graph area. Also if an element is in the after graph but not mapped to any element in the before graph then it means that this element should be added to the original graph area.
+
+To unmap a graph element simply click on the *Unmap Mode icon*  {image:worksite:/Wiki Attachments/unmap mode icon.jpg|unmap mode icon.jpg} and then click on the element that you want to unmap.
+
+== Creating a Negative Application Condition (NAC) ==
+
+The first thing you have to do is click on the *New NAC icon* {image:worksite:/Wiki Attachments/Negative Application Condition icon.jpg|Negative Application Condition icon.jpg} which will create a new *NAC Graph Area* where you can draw your NAC. After this it is very similar to creating a before/after graph except you a drawing graph that should not appear as part of the before graph.
+
+*Note:* A Negative Application Condition (NAC) can sometimes also be called a forbidden graph.
+
+== Adding Parameters to rules ==
+For the following section we will be use the *testParameters.ggx* file which can be found at *(our SVN directory)\Prototypes\AGG Test*
+Lets say you want to add parameters for the *readSelfAction* rule in the *testParameters.ggx* file. The first thing we need to do is open this file in the usual way.
+
+To make *selfRead* and *instance* be parameters simply double click on a node in the before graph which change *PICTURE A* below into *PICTURE B* below (I.e. the original graph area will change to the object attributes area).
+
+  {image:worksite:/Wiki Attachments/AGG testParameters main.jpg|AGG testParameters main.jpg}
+
+*PICTURE A*
+
+  {image:worksite:/Wiki Attachments/AGG testParameters parameters.jpg|AGG testParameters parameters.jpg}
+
+*PICTURE B*
+
+Then go to the *Attribute Context tab* in the section that has just changed from your starting graph
+
+Now since we want both *selfRead* and *instance* to be parameters we check the boxes in the *In* column next to *selfRead* and *instance*.
+
+From here we can try and apply this rule by pressing the *Transformation Step icon*
+{image:worksite:/Wiki Attachments/Transformation Step icon.jpg|Transformation Step icon.jpg} .
+ When this button is pressed AGG will open up a frame (as shown below in *PICTURE C*) where you can tell it the values that you want the parameters to have for this application
+
+  {image:worksite:/Wiki Attachments/AGG testParameters input.jpg|AGG testParameters input.jpg}
+
+*PICTURE C*
+
+Lets say that we want *selfRead* to only match to *sRA* then we just put *sRA* into the *Expression* column of the *selfRead* row. The same can be said about making *instance* only match *iA*.
+
+Now if we try and use this rule on the starting graph in *PICTURE A* we see that it will only match the graph is the first half of the original graph area. This is because it is the only one that has *sRA* and *iA* nodes which the rule requires.
+
+= AGG GUI Tutorial =
+If you need further help in creating rules in the AGG GUI then we have also provided a tutorial that will teach you how to create a simple rule that implements a circular buffer put action. In GROOVE the rule looks like the following
+
+  {image:worksite:/Wiki Attachments/Put.jpg|Put.jpg}
+
+From this we can see that the rule adds 
+* an edge called last
+* an edge called val, and 
+* a node called Object
+it also removes the last edge and can only be applied when there isn’t the red stuff.
+
+The first step is to create a new rule called something like put. Also since we also have a Negative Application Condition (the red stuff) you will also have to create a new NAC (Negative Application Condition) called something like forbidden.
+
+Then after this we move onto creating the before graph. From the above diagram we can see that the before and after graphs will look like the following
+
+h4 Before
+
+  {image:worksite:/Wiki Attachments/put before.jpg|put before.jpg}
+
+h4 After
+
+  {image:worksite:/Wiki Attachments/put after.jpg|put after.jpg}
+
+And that the NAC (forbidden) will look like the following
+
+  {image:worksite:/Wiki Attachments/forbidden.jpg|forbidden.jpg}
+
+Now since we know all the parts we can draw each of them in their own sections to get the following
+
+  {image:worksite:/Wiki Attachments/Tutorial.jpg|Tutorial.jpg}
