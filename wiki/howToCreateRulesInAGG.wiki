@@ -43,7 +43,7 @@ http://graf-framework.googlecode.com/files/AGG%20Layout.jpg
 
 If you are creating your own set of rules then go to the *File* menu and then click on *New GraGra*. 
 
-But if you want to extend our rules for the UML Animator then you just need to go the *File* menu and then click on *Open* and select our *GTSRules.ggx* file. Our rules for the UML Animator can be found at *(our SVN directory)/Implementation/Trunk/GTSRules.ggx*
+But if you want to extend our rules for the UML Animator then you just need to go the *File* menu and then click on *Open* and select our *GTSRules.ggx* file. Our rules for the UML Animator can be found at *http://code.google.com/p/graf-framework/source/browse/trunk/GTSRules.ggx *
 
 == Creating Default Node & Edge Types ==
 Once you have opened AGG you will need to create a default node type and a default edge type.
@@ -109,7 +109,7 @@ The first thing you have to do is click on the *New NAC icon* http://graf-framew
 *Note:* A Negative Application Condition (NAC) can sometimes also be called a forbidden graph.
 
 == Adding Parameters to rules ==
-For the following section we will be use the *testParameters.ggx* file which can be found at *(our SVN directory)\Prototypes\AGG Test*
+For the following section we will be use the *testParameters.ggx* file which can be found at *http://svn.anu.edu.au/SE_projects/UML/Prototypes/AGG%20Test/testParameters.ggx *
 Lets say you want to add parameters for the *readSelfAction* rule in the *testParameters.ggx* file. The first thing we need to do is open this file in the usual way.
 
 To make *selfRead* and *instance* be parameters simply double click on a node in the before graph which change *PICTURE A* below into *PICTURE B* below (I.e. the original graph area will change to the object attributes area).
