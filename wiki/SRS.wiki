@@ -36,7 +36,7 @@ See [http://code.google.com/p/graf-framework/wiki/visionAndScope Business Specif
      ## A model instance
      ## Allow the model instance to be executed when the model and the model instance are provided, and framework extended to a language (See SRS1.1.2).
   ## The example UML implementation will:
-   ## Extend the framework (See SRS 1.1.2.2.1) by implementing an equivalent graph transformation rule interpretation of the following UML actions as specified in the Object Management Group's UML definition ([http://graf-framework.googlecode.com/files/OMG%20UML.pdf OMG UML]):
+   ## Extend the framework (See SRS 1.1.2.2.1) by implementing an equivalent graph transformation rule interpretation of the following UML actions with reference to the Object Management Group's UML definition ([http://graf-framework.googlecode.com/files/OMG%20UML.pdf OMG UML]):
     ## Actor Send Signal
     ## Accept Event
     ## Read Self
