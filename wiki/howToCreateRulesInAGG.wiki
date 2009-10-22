@@ -1,3 +1,17 @@
+  * [howToCreateRulesInAGG#How_to_create_rules_in_AGG How to create rules in AGG]
+    * [howToCreateRulesInAGG#Setting_up_the_GUI_version_of_AGG Setting up the GUI version of AGG]
+      * [howToCreateRulesInAGG#Downloading_&_Unzipping Downloading & Unzipping]
+      * [howToCreateRulesInAGG#Changing_the_Batch_File Changing the Batch File]
+    * [howToCreateRulesInAGG#Opening_up_the_GUI_version_of_AGG Opening up the GUI version of AGG]
+    * [howToCreateRulesInAGG#Layout_of_the_AGG_GUI Layout of the AGG GUI]
+    * [howToCreateRulesInAGG#Creating_Default_Node_&_Edge_Types Creating Default Node & Edge Types]
+    * [howToCreateRulesInAGG#Creating_an_AGG_rule Creating an AGG rule]
+    * [howToCreateRulesInAGG#Creating_Before_&_After_Graphs Creating Before & After Graphs]
+    * [howToCreateRulesInAGG#Mapping_Graphs_elements Mapping Graphs elements]
+    * [howToCreateRulesInAGG#Creating_a_Negative_Application_Condition_(NAC) Creating a Negative Application Condition (NAC)]
+    * [howToCreateRulesInAGG#Adding_Parameters_to_rules Adding Parameters to rules]
+  * [howToCreateRulesInAGG#AGG_GUI_Tutorial AGG GUI Tutorial]
+
 = How to create rules in AGG =
 
 == Setting up the GUI version of AGG ==
@@ -6,8 +20,8 @@ We have included *AGG 1.6.4* in our repository so you don't have to go to the ha
 This means that you can skip to the *Opening up the GUI version of AGG* step. 
 
 But if this doesn’t work or if you prefer to use a new version of AGG then we have included instructions on how to 
-* *Download & Unzip AGG*, and
-* *Change it’s Batch File*
+  * *Download & Unzip AGG*, and
+  * *Change it’s Batch File*
 
 === Downloading & Unzipping ===
 AGG can be downloaded at http://user.cs.tu-berlin.de/~gragra/agg/down_V164-test/index.html
