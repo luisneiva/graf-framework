@@ -39,7 +39,7 @@ Once you have set up the *agg.bat* file you can open the AGG GUI by simply doubl
 
 The following image show the layout of the AGG GUI and labels the major parts you should know about.
 
- {image:worksite:/Wiki Attachments/AGG Layout.jpg|AGG Layout.jpg}
+http://graf-framework.googlecode.com/files/AGG%20Layout.jpg
 
 If you are creating your own set of rules then go to the *File* menu and then click on *New GraGra*. 
 
@@ -52,11 +52,10 @@ Once you have opened AGG you will need to create a default node type and a defau
 
 To create a default node type and a default edge type firstly open up the Type Editor which looks like this:
 
-  {image:worksite:/Wiki Attachments/creating default AGG types.png|creating default AGG types.png}
+  http://graf-framework.googlecode.com/files/creating%20default%20AGG%20types.png
 
- If it isn’t already then you can open it by clicking on the *expand icon* {image:worksite:/Wiki Attachments/expand icon.jpg|expand icon.jpg}
- which is located towards the right most side of the screen and is to the right of 
-the right most *print icon*  {image:worksite:/Wiki Attachments/print icon.jpg|print icon.jpg}
+ If it isn’t already then you can open it by clicking on the *expand icon* http://graf-framework.googlecode.com/files/expand%20icon.jpg which is located towards the right most side of the screen and is to the right of 
+the right most *print icon*  http://graf-framework.googlecode.com/files/print%20icon.jpg
 
 When you press the *expand icon* you should see the *Type Editor Area*
 
@@ -68,25 +67,23 @@ To create a default node just click on *Add* and then click on *Close*.
 The same thing can be done to create a default edge (i.e. clicking *New*, then *Add*, and then *Close*)
 
 == Creating an AGG rule ==
-To make a blank rule for you to add to simple press the *New Rule icon*   {image:worksite:/Wiki Attachments/new rule icon.jpg|new rule icon.jpg}
-
-which can be found in the main icon area.
+To make a blank rule for you to add to simple press the *New Rule icon*   http://graf-framework.googlecode.com/files/new%20rule%20icon.jpg which can be found in the main icon area.
 
 To rename the newly created rule simple double click on it in the graph tree on the left hand side of the page.
 
 From here you can create a before graph and after graph for this rule.
 
 == Creating Before & After Graphs ==
-This is quite simple since all you need to do is to go into the draw mode by clicking on the *Draw Mode icon* {image:worksite:/Wiki Attachments/draw mode icon.jpg|draw mode icon.jpg}
+This is quite simple since all you need to do is to go into the draw mode by clicking on the *Draw Mode icon* http://graf-framework.googlecode.com/files/draw%20mode%20icon.jpg
 
 and then click in the before/after graph area to create a node and click and drag from one node to another to create a directed edge between the two nodes.
 
-To select a node or edge simply click on the *Select Mode icon* {image:worksite:/Wiki Attachments/select mode icon.jpg|select mode icon.jpg}
+To select a node or edge simply click on the *Select Mode icon* http://graf-framework.googlecode.com/files/select%20mode%20icon.jpg
 
-To move a node or edge simply click on the *Move Mode icon*  {image:worksite:/Wiki Attachments/move mode icon.jpg|move mode icon.jpg}
+To move a node or edge simply click on the *Move Mode icon*  http://graf-framework.googlecode.com/files/move%20mode%20icon.jpg
 and then move the object to where you want it.
 
-To name a node or edge simply click on the *Attribute Mode icon*   {image:worksite:/Wiki Attachments/attributes mode icon.jpg|attributes mode icon.jpg}
+To name a node or edge simply click on the *Attribute Mode icon*   http://graf-framework.googlecode.com/files/attributes%20mode%20icon.jpg
 and then click on the node/edge that you want to name.
 From here you should set the *Type* as *String*, the *Name* as *name*, and then enter in the name of the node/edge under *Expression*
 
@@ -95,7 +92,7 @@ From here you should set the *Type* as *String*, the *Name* as *name*, and then 
 == Mapping Graphs elements ==
 After you have created your before and after graph you should map elements in the before graph to elements in the after graph so that AGG knows which elements can be kept, which elements to add, and which elements to delete from the original graph area.
 
-To map elements in the before graph to elements in the after graph you firstly have to click on the *Map Mode icon* {image:worksite:/Wiki Attachments/map mode icon.jpg|map mode icon.jpg}
+To map elements in the before graph to elements in the after graph you firstly have to click on the *Map Mode icon* http://graf-framework.googlecode.com/files/map%20mode%20icon.jpg
 
 After this you can click on an element in the before graph and then an element in the after graph to tell AGG that this element should be kept in the original graph area.
 
@@ -103,11 +100,11 @@ From here you repeat this step until you have mapped all of the elements that yo
 
 *Note:* If an element is in the before graph but not mapped to any element in the after graph then it means that this element should be deleted from the original graph area. Also if an element is in the after graph but not mapped to any element in the before graph then it means that this element should be added to the original graph area.
 
-To unmap a graph element simply click on the *Unmap Mode icon*  {image:worksite:/Wiki Attachments/unmap mode icon.jpg|unmap mode icon.jpg} and then click on the element that you want to unmap.
+To unmap a graph element simply click on the *Unmap Mode icon*  http://graf-framework.googlecode.com/files/unmap%20mode%20icon.jpg and then click on the element that you want to unmap.
 
 == Creating a Negative Application Condition (NAC) ==
 
-The first thing you have to do is click on the *New NAC icon* {image:worksite:/Wiki Attachments/Negative Application Condition icon.jpg|Negative Application Condition icon.jpg} which will create a new *NAC Graph Area* where you can draw your NAC. After this it is very similar to creating a before/after graph except you a drawing graph that should not appear as part of the before graph.
+The first thing you have to do is click on the *New NAC icon* http://graf-framework.googlecode.com/files/Negative%20Application%20Condition%20icon.jpg which will create a new *NAC Graph Area* where you can draw your NAC. After this it is very similar to creating a before/after graph except you a drawing graph that should not appear as part of the before graph.
 
 *Note:* A Negative Application Condition (NAC) can sometimes also be called a forbidden graph.
 
@@ -117,11 +114,11 @@ Lets say you want to add parameters for the *readSelfAction* rule in the *testPa
 
 To make *selfRead* and *instance* be parameters simply double click on a node in the before graph which change *PICTURE A* below into *PICTURE B* below (I.e. the original graph area will change to the object attributes area).
 
-  {image:worksite:/Wiki Attachments/AGG testParameters main.jpg|AGG testParameters main.jpg}
+  http://graf-framework.googlecode.com/files/AGG%20testParameters%20main.jpg
 
 *PICTURE A*
 
-  {image:worksite:/Wiki Attachments/AGG testParameters parameters.jpg|AGG testParameters parameters.jpg}
+  http://graf-framework.googlecode.com/files/AGG%20testParameters%20parameters.jpg
 
 *PICTURE B*
 
@@ -130,10 +127,10 @@ Then go to the *Attribute Context tab* in the section that has just changed from
 Now since we want both *selfRead* and *instance* to be parameters we check the boxes in the *In* column next to *selfRead* and *instance*.
 
 From here we can try and apply this rule by pressing the *Transformation Step icon*
-{image:worksite:/Wiki Attachments/Transformation Step icon.jpg|Transformation Step icon.jpg} .
- When this button is pressed AGG will open up a frame (as shown below in *PICTURE C*) where you can tell it the values that you want the parameters to have for this application
+http://graf-framework.googlecode.com/files/Transformation%20Step%20icon.jpg
+When this button is pressed AGG will open up a frame (as shown below in *PICTURE C*) where you can tell it the values that you want the parameters to have for this application
 
-  {image:worksite:/Wiki Attachments/AGG testParameters input.jpg|AGG testParameters input.jpg}
+  http://graf-framework.googlecode.com/files/AGG%20testParameters%20input.jpg
 
 *PICTURE C*
 
@@ -144,7 +141,7 @@ Now if we try and use this rule on the starting graph in *PICTURE A* we see that
 = AGG GUI Tutorial =
 If you need further help in creating rules in the AGG GUI then we have also provided a tutorial that will teach you how to create a simple rule that implements a circular buffer put action. In GROOVE the rule looks like the following
 
-  {image:worksite:/Wiki Attachments/Put.jpg|Put.jpg}
+  http://graf-framework.googlecode.com/files/Put.jpg
 
 From this we can see that the rule adds 
 * an edge called last
@@ -156,18 +153,18 @@ The first step is to create a new rule called something like put. Also since we 
 
 Then after this we move onto creating the before graph. From the above diagram we can see that the before and after graphs will look like the following
 
-h4 Before
+=== Before ===
 
-  {image:worksite:/Wiki Attachments/put before.jpg|put before.jpg}
+  http://graf-framework.googlecode.com/files/put%20before.jpg
 
-h4 After
+=== After ===
 
-  {image:worksite:/Wiki Attachments/put after.jpg|put after.jpg}
+  http://graf-framework.googlecode.com/files/put%20after.jpg
 
 And that the NAC (forbidden) will look like the following
 
-  {image:worksite:/Wiki Attachments/forbidden.jpg|forbidden.jpg}
+  http://graf-framework.googlecode.com/files/forbidden.jpg
 
 Now since we know all the parts we can draw each of them in their own sections to get the following
 
-  {image:worksite:/Wiki Attachments/Tutorial.jpg|Tutorial.jpg}
+  http://graf-framework.googlecode.com/files/Tutorial.jpg
