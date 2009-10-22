@@ -1,115 +1,14 @@
-== Graph Transformation - Approaches, Decisions, Assumptions and Pending Problems==
+== Graph Transformation - Unresolved issues==
 
 ----
 
 __Oscar Wood__
 
 ----
+GRAF aims to have its implementation of UML extendable by adding more graph transformation rules, not adding more code. However, there are two outstanding issues that need to be addressed in the code before GRAF requires only rule changes.
 
-__Note:__ This page describes my own graph transformation system. Now that we're using AGG, most of this is no longer relevant.
+=== Arithmetic ===
+Operations such as addition and multiplication can’t be performed by graph transformation rules based on a before and after graph. The code in the AGGTransformer class would have to be extended to perform the equivalent java arithmetic operations.
 
-My own graph transformation system is complete except for two things:
- # It is impossible for two variable nodes to be assigned to the same constant node.
- # The ActorSendSignal rule will not always correctly identify the actor behavior execution because it is only connected to the rest of the graph by ?BehEx1 -i-> BehaviorExecution <-i- ?BehEx2.
-----
-
-=== Description===
-
-This module is responsible for representing the model, instance, metamodel and runtime as a graph and applying transformations to the graph. Graph transformations are described [Graphs here].
-
-Approach:
- * [Graphs This page] describes most of the processes I use. It doesn’t describe how I find pattern matches or how I find further pattern matches, given the first one. I have not yet found a satisfactory method to complete these two tasks. See the problems section below.
-
-Decisions Made:
- * I represent a pattern match as list of tuples (2-tuples). Each tuple contains a variable and a constant. There are two types of these tuples: one for edges and one for nodes.
- * I deal with variable edges by dealgebrizing the entire graph and then treating them as variable nodes. I only do this because I didn’t know that there was such a thing as variable edges when I began. If I were to restart this prototype I would reconsider this approach.
- * Nodes are represented by the class Node.java. Originally I used strings to represent nodes but this made it impossible to navigate the graph edge by edge. Without this ability pattern matching is extremely difficult. The disadvantage of a node class is that when you copy a node from one graph to another, nodes will still have attributes referencing edges in other graphs. That is, the code is more complicated.
- * Some rules add nodes which must be given a unique name for each application of the rule. This is indicated by the `*` character. My code generates a name for these by following the i edge of the node. The new name is the name of the node it instantiates, changed to lower case with a unique number added on to the end. If the instantiation node is a variable, then I replace the “?” with the string “var”. If there is no i edge then I add the unique number to the name given in the rule and remove the `*` character.
-
-Assumptions:
- * All variables in a rule’s after graph are in the rule’s before graph.
- * A rule’s before graph has at least one constant node.
- * An edge will never appear in a rule’s before graph and the rule’s forbidden graph. (Forbidden graphs are described [here|graphs]).
- * A rule’s before graph always has at least one variable.
- * All graphs (including a rule’s forbidden graph) contain at least one edge.
- * All variables in a rule’s forbidden graph are in the rule’s before graph. (This assumption was a mistake. Future work may require me to account for variable nodes only in the forbidden graph.)
- * No node or edge label uses the # character.
- * All variables are indicated by the ? character at the beginning of the name.
- * Rules will make use of the `*` character at the beginning to signify that a node needs to be given a unique name. Nodes using this character will only appear in the after graph of the rule, never in the before, forbidden or the input graph.
-
-Problems:
-=== Finding all possible pattern matches===
-(Pattern matches are described [Graphs here].)
-
-(An algorithm is described in the paper http://portal.acm.org/citation.cfm?doid=321921.321925 .  It is a slightly different problem, because we can have several variable nodes mapped to the same node, so see if this can be worked around.  -Greg)
-
-Consider the following graph:
-
-http://graf-framework.googlecode.com/files/grapheg8.jpg
-
-
-
-Suppose we have found one pattern match for this graph and it is
-
-
-?D := B
-
-
-?K := H
-
-
-?J := G
-
-
-This is found by a method called findPatternMatch().
- * What process can we now apply to find every other pattern match and how do we know when we have found all the pattern matches?
- * If we call findPatternMatch() again then it will just find the first pattern match again.
- * The method I currently employ is to pass parameters to findPatternMatch(). The parameters are each of the variable assignments in the first pattern match. Then the method will ignore potential solutions that contain the input parameters. For example:
-
-
-findPatternMatch(?D := B)
-
-
-findPatternMatch(?K := H)
-
-
-findPatternMatch(?D := B, ?K := H) etc.
-
-
-This is not sufficient to find all ten fits in this graph.
-
-==== A solution====
-
-In the UML animator the situation summarised in the image above will never happen. In the animator, we will always be given at least one variable assignment in the pattern match.
-
-
-For example, we may have to solve the Actor Send Signal rule but we will be given ?instance := m1
-
-
-I don't think the animator will ever have to find many pattern matches, just find one that matches the given variable assignment.
-
-=== Always finding a pattern match when one exists===
-findPatternMatch() itself is not always successful. I won’t describe in full detail my method here because it’s very complicated and it’s constantly changing. Basically:
- # I find a list of __potential variable assignments__ such as (for the above) ?D =?= B and ?D =?= A etc.
- # I score each of the potential variable assignments based on how likely I think it is to be a good fit in the rule. The score depends on how many variable and constant nodes the variable in the potential variable assignment is connected to.
- # I sort the list according the score given.
- # I go through the list and either remove the assignment or make the assignment depending on various things. I stop when I come to node with a lower score than the first one in the list.
- # Then I go back recalculate the scores, resort the list and start again.
- # I am finished when I have no more potential variable assignments.
- # If I have one variable assignment for each variable then I was successful, otherwise I assume the before graph was not a subgraph of the input.
-
-I think this will be sufficient for the prototype that we’re doing for the end of the winter holidays 09.
-The main areas for improvement are:
- * How I score potential variable assignments.
- * How I decide whether to accept the potential variable assignments or remove them.
-For the final product I will either need to come up with a better method or we could use some existing software like Groove.
-
-==== A solution====
-
-In the UML animator, whenever we need to apply a rule, we will be given a variable assignment that is part of the solution.
-
-
-For example, we may have to solve the Actor Send Signal rule but we will be given ?instance := m1
-
-
-I have adjusted my code so that when it is scoring each of the potential variable assignments, it will score highly any assignment that is close to the given variable assignment. It will also score highly any variable assignment close to that variable assignment. So far, this seems sufficient to make my code work as needed.
+=== Association centre labels ===
+Currently, the graphs of GRAF store the end labels of associations but not the centre label. Certain state machine actions involve getting associations by their centre label. To make this work, the ModelToGraph implementation and some rules would have to be changed to use a representation in graphs that features the association ends.
