@@ -9,7 +9,7 @@ See [http://code.google.com/p/graf-framework/wiki/visionAndScope Business Specif
  * Example UML implementation - The extension of the framework to an animator for UML provided.
  * Execution - the process of transforming a model instance between system states.
  * Extend - to specialise the framework to a model animator of a particular executable modelling language. (See SRS1.1.2.2)
- * Graph - A directed graph composed of nodes, as strings, and edges between nodes. Each edge has a label.
+ * Graph - See [http://code.google.com/p/graf-framework/wiki/Graphs Graph]
  * Graph transformation rule - Transforms the system state according to a before and after graph when applied
  * Language - the implementation of an executable modelling language with a runtime, within the framework.
  * Development Documentation - Contains a guide to extending the framework to executable modelling languages, with reference to the example UML implementation, and a guide to improving the framework itself across all languages.
