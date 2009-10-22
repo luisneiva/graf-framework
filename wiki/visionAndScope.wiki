@@ -37,7 +37,7 @@ Our system
  * Executes models after being specialised and provided a model and model instance.
  * Is modularly designed with the intention of being extended.
 
-Provided with the system will be a substantial reference implementation of the UML Language, which
+Provided with the system will be a substantial reference implementation of UML, which
 
  * Is part of a guide to extending the framework for
   ** New language definitions
@@ -90,7 +90,7 @@ The initial release focuses on the attraction of developers to continue the proj
    ## All platforms supporting java will support that standalone version.
    ## All platforms supporting the Eclipse IDE will support the plugin version.
 
-== Scope of Subsequent Releases ==
+== Suggestions for Subsequent Releases ==
 
 === Functionality ===
 
@@ -104,8 +104,8 @@ Functionality Framework:
 
 UML example extension:
 
-    * Extensive development of the UML language definition
-     ** Include a substantial subset of the UML language definition to form a usable, general purpose reference animator
+    * Extensive development of UML definition
+     ** Include a substantial subset of UML definition to form a usable, general purpose reference animator
      ** Recreation of a sequence diagram for a system execution trace
      ** Ability to compare executed system traces and input sequence diagram.
     * Ability to undo any number of system transitions
