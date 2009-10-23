@@ -4,7 +4,6 @@
 This document provides details of how GRAF can be changed to suit particular purposes. Primarily, these fall into the category of either:
   # Using GRAF to develop a language-specific model animator
   # Developing the core framework itself
-
 == Developing a Language-Specific Model Animator ==
 
 Adding a new modelling language to the animator involves two processes. The first step is creating graph transformation rules that represent the runtime changes of the language. The second step is adding new interface implementations to the animator to draw, load and display the language.
