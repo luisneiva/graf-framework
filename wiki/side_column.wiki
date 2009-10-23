@@ -15,7 +15,7 @@
 ==== Project Documentation====
 
 [visionAndScope vision and scope]<br>
-[SRS SRSv2]<br>
+[SRS SRS]<br>
 [highLevelDesign high level design]<br>
 [userDocumentation user documentation]<br>
 [developerDocumentation  developer documentation]<br>
