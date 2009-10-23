@@ -3,7 +3,7 @@
 
 Written by Kevin O'Shea
 
-In this document, the term 'model' has two different meanings - the first is a model in a modelling language (for example, a UML model) and the second is the model component of the model view controller architectural pattern. The latter is distinguished by a prefixed '(MVC)' and a capital letter 'M'. For example:
+In this document, the term 'model' has two different meanings - the first is a model in a modelling language (for example, a UML model) and the second is the model component of the Model-View-Controller architectural pattern. The latter is distinguished by a prefixed '(MVC)' and a capital letter 'M'. For example:
   # A graph expresses data contained in a given model
   # The View displays the data held in the (MVC)Model
 
