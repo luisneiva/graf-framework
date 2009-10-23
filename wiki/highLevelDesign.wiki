@@ -19,7 +19,7 @@ The proposed solution is a plugin for eclipse, that will make use of the Eclipse
    ** !ContentDrawer - Draws the actual content, contained in an !ObjectDisplay. Note this drawing will likely be language-dependent.
  * Controller - Responds to events triggered in the View and coordinates changes in the (MVC)Model.
  * Model - Contains the system state, and associated logic for transforming the data.
-   ** !PluginModel - Contains the graph and plugin system state.
+   ** !PluginModel - Contains the graph and plugin system state. The term Model in this name refers to the (MVC)Model.
    ** !ModelTransformer - Transforms a model into another form.
     ** !ModelToGraph - Transformation of a model into a graph.
     ** !GraphToModel - Transformation of the graph into a form which is suitable for drawing by the View. It creates the !ObjectDisplay to be drawn by the View.
