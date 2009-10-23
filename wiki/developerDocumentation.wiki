@@ -1,7 +1,7 @@
 <wiki:toc max_depth="5" />
 = Developer Documentation =
 
-This document provides details of how GRAF can be changed to suit particular purposes. Primarily, these fall into the category of either:
+This document provides details of how GRAF can be extended to suit particular purposes. Primarily, these fall into the category of either:
   # Using GRAF to develop a language-specific model animator
   # Developing the core framework itself
 == Developing a Language-Specific Model Animator ==
