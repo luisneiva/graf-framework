@@ -7,7 +7,6 @@ If an NAC has variables and the variables have the same names as variables in th
 === Input Parameters === 
 
 Rules are given two input parameters. One is the object name, the other varies depending on the rule. There’s an AGG method that returns parameters to set but the problem is that there’s no way to know which parameter is the object name and which is the other parameter. Therefore if the first combination doesn’t work, I swap them around and try the other order. This slows down the implementation. The alternative is to tell users to always put the object parameter first when creating rules in the AGG GUI.
-Accept correct event out of many
 
 === Accept correct event out of many ===
 
