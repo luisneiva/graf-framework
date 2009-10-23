@@ -43,7 +43,7 @@ Approach:
  * Using XMI:
   ** Every 'Class' element becomes a node.
   ** Every 'xmi:type' attribute of an element becomes an 'i' edge from the element to the type.
-  ** Every parent element will have an edge going from it to each of its child elements, where the label is the <elementname> of the element. (for example a class has ownedAttribute children)
+  ** Every parent element will have an edge going from it to each of its child elements, where the label is the < elementname > of the element. (for example a class has ownedAttribute children)
   ** Every element will have an edge going from it to each of its attribute values, where the label is the attribute name. (for example a transition has source and target attributes).
 
 Decisions Made:
