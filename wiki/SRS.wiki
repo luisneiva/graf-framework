@@ -55,5 +55,5 @@ See [http://code.google.com/p/graf-framework/wiki/visionAndScope Business Specif
     ## Less than 10 lines of code elsewhere
  # ==Portability==
   ## The framework will function as:
-   ## As an Eclipse IDE plugin
-   ## As a java stand alone application
+   ## An Eclipse IDE plugin
+   ## A java stand alone application
