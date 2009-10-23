@@ -8,7 +8,7 @@ This document provides details of how GRAF can be changed to suit particular pur
 == Developing a Language-Specific Model Animator ==
 
 Adding a new modelling language to the animator involves two processes. The first step is creating graph transformation rules that represent the runtime changes of the language. The second step is adding new interface implementations to the animator to draw, load and display the language.
-==== Adding new interface implementations ====
+=== Adding new interface implementations ===
 
 The interfaces GraphToModel.java and ModelToGraph.java and the abstract class ContentDrawer need to be implemented. More detail about the architecture is [highLevelDesign here].
 
@@ -31,7 +31,7 @@ return new GraphToPetriNetDiagram();
 }}}
 
 If the actual display needs to be changed, this can be done by changing the content drawer. The View class provides all of the generic interface components that apply to any model, and the ContentDrawer provides the language-specific display for the particular model in use.
-==== Developing graph transformation rules for a modelling language ====
+=== Developing graph transformation rules for a modelling language ===
 
 This topic is beyond the scope of the animator, requiring a knowledge of graph transformation systems and formal definitions of graphical modelling languages. The [Graphs] page contains an introduction to graphs and graph transformations. Googling UML graph transformations might provide a starting point for research into formal definitions of modelling languages. Additionally, looking at the animator’s existing rules for UML may help. Once transformation rules for a modelling language exist, AGG is used to translate them into a file format usable by the animator. The following link will take you to a page that will step you through how to create Graph Transformation Rules in AGG. [howToCreateRulesInAGG]
 
