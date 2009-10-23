@@ -4,22 +4,24 @@
 This document provides details of how GRAF can be extended to suit particular purposes. Primarily, these fall into the category of either:
   # Using GRAF to develop a language-specific model animator
   # Developing the core framework itself
+
 == Developing a Language-Specific Model Animator ==
 
 Adding a new modelling language to the animator involves two processes. The first step is creating graph transformation rules that represent the runtime changes of the language. The second step is adding new interface implementations to the animator to draw, load and display the language.
+
 === Adding new interface implementations ===
 
 The interfaces GraphToModel.java and ModelToGraph.java and the abstract class ContentDrawer need to be implemented. More detail about the architecture is [highLevelDesign here].
 
 || Class || Method || Purpose ||
-|| GraphToModel	|| generateDisplayObjects ||Create all lines and boxes to display based on the current graph. ||
+|| ModelToGraph	|| buildGraph || Transform a given model file and instance file into a graph (the format of these files can be changed).||
+|| GraphToModel	|| generateDisplayObjects || Extract information from the current graph.||
 || GraphToModel	|| reset || Undo all transformations to the graph; make it as if the graph has just been generated.||
-|| ModelToGraph	|| buildGraph || Creates a graph based on the given model file and instance file (the format of these files can be changed).||
-|| ContentDrawer || draw || Display something (like an object diagram) to represent a system state of the modelling language. ||
+|| ContentDrawer || draw || Display the extracted information from GraphToModel in a form suitable to the language (for example, an object diagram in UML). ||
 
 The existing implementations, GraphToObjDiag, UMLToGraph and ObjectDiagDrawer can be used as a guide in creating new classes. If the modelling language is similar to UML then it may be possible to copy parts of these classes. In particular, if the modelling language’s metamodel is already known to the Eclipse EMF libraries (like UML), then the ModelToGraph implementation will be similar to that of the current UMLToGraph transformation.
 
-Once the interfaces have been created, the code must be changed to use them. The GraphToModelFactory class, the ModelToGraphFactory class determine which language-specific transformation classes to use.
+Once the interfaces have been created, the code must be changed to use them. The GraphToModelFactory class and the ModelToGraphFactory class determine which language-specific transformation classes to use.
 {{{
 
 // For example, in GraphToModelFactory change this
