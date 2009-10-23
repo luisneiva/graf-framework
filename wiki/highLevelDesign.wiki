@@ -39,7 +39,7 @@ The proposed solution is a plugin for eclipse, that will make use of the Eclipse
  * MVC pattern promotes clear separation between (MVC)Model data (graph, plugin state), and View (user interaction, Eclipse integration)
  * Highly extendable framework
  * Separation of modules defining language-specific elements from modules composing the framework that supports all language bases, which would not require modifications for new languages.
- * Encapsulation of modules defining language-specific elements (!ModelTransformer, and !ContentDrawer). The View, Controller, PluginModel, and graph transformations are generalized to apply to any modelling language.
+ * Encapsulation of modules defining language-specific elements (!ModelTransformer, and !ContentDrawer). The View, Controller, !PluginModel, and graph transformations are generalized to apply to any modelling language.
 
 == Module Interface Design ==
 
