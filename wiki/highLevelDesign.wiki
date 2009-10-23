@@ -14,7 +14,7 @@ http://graf-framework.googlecode.com/files/Architecture-2.png
 The proposed solution is a plugin for eclipse, that will make use of the Eclipse Modeling Framework (EMF) for reading and displaying models. The proposed system architecture follows the Model-View-Controller architectural pattern. The motivation behind this is a result of clear separation between the user interface components and the system state data.
 
 === Modules ===
- * View - Draws current system state, and provides mechanisms for controlling animation.
+ * View - Draws the current system state, and provides mechanisms for controlling animation.
    ** View - Provides generalized functionality for drawing graphical interfaces for instances of models.
    ** !ContentDrawer - Draws the actual content, contained in an !ObjectDisplay. Note this drawing will likely be language-dependent.
  * Controller - Responds to events triggered in the View and coordinates changes in the (MVC)Model.
