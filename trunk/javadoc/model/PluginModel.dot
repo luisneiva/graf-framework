@@ -10,29 +10,34 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// model.PluginModel
-	c1170 [label=<<table title="model.PluginModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PluginModel.html">
+	c2395 [label=<<table title="model.PluginModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PluginModel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PluginModel </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> - umltograph : UMLToGraph </td></tr>
-<tr><td align="left" balign="left"> - graphTransformer : GraphTransformer </td></tr>
-<tr><td align="left" balign="left"> - graph : Graph </td></tr>
-<tr><td align="left" balign="left"> - odObjs : ArrayList&lt;ODObject&gt; </td></tr>
-<tr><td align="left" balign="left"> - odLinks : ArrayList&lt;ODLink&gt; </td></tr>
-<tr><td align="left" balign="left"> - metamodelURL : URL </td></tr>
+<tr><td align="left" balign="left"> - modeltograph : ModelToGraph </td></tr>
+<tr><td align="left" balign="left"> - graphTransformer : AGGTransformer </td></tr>
+<tr><td align="left" balign="left"> - graphtomodel : GraphToModel </td></tr>
+<tr><td align="left" balign="left"> - graph : ListGraph </td></tr>
+<tr><td align="left" balign="left"> - undoLimit : int </td></tr>
+<tr><td align="left" balign="left"> - undosRemaining : int </td></tr>
+<tr><td align="left" balign="left"> - origGraph : ListGraph </td></tr>
+<tr><td align="left" balign="left"> - graphs : ArrayList&lt;ListGraph&gt; </td></tr>
 <tr><td align="left" balign="left"> - graphOutputsPath : String </td></tr>
+<tr><td align="left" balign="left"> - objectdisplay : ObjectDisplay </td></tr>
 <tr><td align="left" balign="left"> - debugmode : boolean </td></tr>
 <tr><td align="left" balign="left"> - transitionnumber : Integer </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getODObjects() : ArrayList&lt;ODObject&gt; </td></tr>
-<tr><td align="left" balign="left"> + getODLinks() : ArrayList&lt;ODLink&gt; </td></tr>
+<tr><td align="left" balign="left"> + getObjectDisplay() : ObjectDisplay </td></tr>
+<tr><td align="left" balign="left"> + reset() </td></tr>
 <tr><td align="left" balign="left"> + buildGraph(modelURL : URL, instanceURL : URL) </td></tr>
-<tr><td align="left" balign="left"> + transition() </td></tr>
-<tr><td align="left" balign="left"> - constructObjDiag() </td></tr>
-<tr><td align="left" balign="left"> - setUpMicrowave(graph : Graph) </td></tr>
-<tr><td align="left" balign="left"> - outputdot() </td></tr>
+<tr><td align="left" balign="left"> + transition(transAction : TransitionAction) </td></tr>
+<tr><td align="left" balign="left"> + getUndosRemaining() : Integer </td></tr>
+<tr><td align="left" balign="left"> + getRedosRemaining() : Integer </td></tr>
+<tr><td align="left" balign="left"> + undoAction() </td></tr>
+<tr><td align="left" balign="left"> + redoAction() </td></tr>
+<tr><td align="left" balign="left"> - outputdot(newgraph : ListGraph, oldgraph : ListGraph) </td></tr>
 		</table></td></tr>
 		</table>>, fontname="arial", fontcolor="black", fontsize=10.0];
 }
