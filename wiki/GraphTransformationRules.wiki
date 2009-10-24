@@ -9,6 +9,7 @@ _NOTE:_
  * This document was made before we decided to use AGG and therefore talks about the Graph Transformation module of our UML Reference Animator and the use of GTSRules.xml as our rule file.
  * Since then we are using AGG as our transformation engine and therefore decided to use AGG's rule file format (GGX) to encode of GTS rules.
  * With this in mind please note that GTS rules format section it is talking about the old format that we used in our GTSRules.xml rule file.
+ * To get a better idea about how our GTS rules go to *[howToCreateRulesInAGG How to create rules in AGG]*
 ----
 
 === Description===
