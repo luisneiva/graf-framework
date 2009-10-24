@@ -9,158 +9,93 @@ digraph G {
 	node [fontname="arial",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// model.Edge
-	c32 [label=<<table title="model.Edge" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Edge.html">
+	// model.AGGAssignment
+	c45 [label=<<table title="model.AGGAssignment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AGGAssignment.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Edge </td></tr>
+<tr><td align="center" balign="center"> AGGAssignment </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> - to : Node </td></tr>
-<tr><td align="left" balign="left"> - from : Node </td></tr>
-<tr><td align="left" balign="left"> - label : String </td></tr>
-<tr><td align="left" balign="left"> - toName : String </td></tr>
-<tr><td align="left" balign="left"> - fromName : String </td></tr>
-<tr><td align="left" balign="left"> + toIsVariable : Boolean </td></tr>
-<tr><td align="left" balign="left"> + fromIsVariable : Boolean </td></tr>
-<tr><td align="left" balign="left"> + edgeIsVariable : Boolean </td></tr>
-<tr><td align="left" balign="left"> + checked : Boolean </td></tr>
+<tr><td align="left" balign="left"> + var : String </td></tr>
+<tr><td align="left" balign="left"> + cons : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
-<tr><td align="left" balign="left"> + equals(o : Object) : boolean </td></tr>
-<tr><td align="left" balign="left"> + applyPatternMatch(pattern : PatternMatch) </td></tr>
-<tr><td align="left" balign="left"> + getTo() : Node </td></tr>
-<tr><td align="left" balign="left"> + getFrom() : Node </td></tr>
-<tr><td align="left" balign="left"> + getLabel() : String </td></tr>
-<tr><td align="left" balign="left"> + getToName() : String </td></tr>
-<tr><td align="left" balign="left"> + getFromName() : String </td></tr>
-<tr><td align="left" balign="left"> + setToName(toName : String) </td></tr>
-<tr><td align="left" balign="left"> + setFromName(fromName : String) </td></tr>
 		</table></td></tr>
 		</table>>, fontname="arial", fontcolor="black", fontsize=10.0];
-	// model.Graph
-	c33 [label=<<table title="model.Graph" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Graph.html">
+	// model.ListGraph
+	c46 [label=<<table title="model.ListGraph" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ListGraph.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Graph </td></tr>
+<tr><td align="center" balign="center"> ListGraph </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> - objects : ArrayList&lt;ODObject&gt; </td></tr>
-<tr><td align="left" balign="left"> - associations : ArrayList&lt;ODLink&gt; </td></tr>
+<tr><td align="left" balign="left"> - renameIndicator : String </td></tr>
+<tr><td align="left" balign="left"> - nodeType : Type </td></tr>
+<tr><td align="left" balign="left"> - edgeType : Type </td></tr>
+<tr><td align="left" balign="left"> - javaHandler : AttrHandler </td></tr>
+<tr><td align="left" balign="left"> - uniqueNumber : Integer </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getODObjects() : ArrayList&lt;ODObject&gt; </td></tr>
-<tr><td align="left" balign="left"> + getODLinks() : ArrayList&lt;ODLink&gt; </td></tr>
+<tr><td align="left" balign="left"> + getName(graphObj : GraphObject) : String </td></tr>
+<tr><td align="left" balign="left"> + isVariable(graphObj : GraphObject) : Boolean </td></tr>
+<tr><td align="left" balign="left"> + getNodeByName(str : String) : Node </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
-<tr><td align="left" balign="left"> + containsVariableNodes() : Boolean </td></tr>
-<tr><td align="left" balign="left"> + replaceNode(target : String, replacement : String) </td></tr>
-<tr><td align="left" balign="left"> + resetCheck() </td></tr>
-<tr><td align="left" balign="left"> + getNodeWithName(name : String) : Node </td></tr>
-<tr><td align="left" balign="left"> + addIEdge(from : String, to : String) </td></tr>
+<tr><td align="left" balign="left"> + deleteEdge(from : String, label : String, to : String) </td></tr>
 <tr><td align="left" balign="left"> + addEdge(from : String, label : String, to : String) </td></tr>
-<tr><td align="left" balign="left"> + applyPatternMatch(pattern : PatternMatch) </td></tr>
-<tr><td align="left" balign="left"> + numberOfVariables() : Integer </td></tr>
-<tr><td align="left" balign="left"> + dealg() : Graph </td></tr>
-<tr><td align="left" balign="left"> + realg() : Graph </td></tr>
-<tr><td align="left" balign="left"> + containsVariableEdges() : Boolean </td></tr>
-<tr><td align="left" balign="left"> + outputdot(name : String) </td></tr>
-<tr><td align="left" balign="left"> + generateObjectDiagram() : String </td></tr>
-		</table></td></tr>
-		</table>>, fontname="arial", fontcolor="black", fontsize=10.0];
-	// model.Node
-	c34 [label=<<table title="model.Node" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Node.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Node </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> - name : String </td></tr>
-<tr><td align="left" balign="left"> - edgesFrom : ArrayList&lt;Edge&gt; </td></tr>
-<tr><td align="left" balign="left"> - edgesTo : ArrayList&lt;Edge&gt; </td></tr>
-<tr><td align="left" balign="left"> - variable : Boolean </td></tr>
-<tr><td align="left" balign="left"> - checked : Boolean </td></tr>
-<tr><td align="left" balign="left"> - certainty : Integer </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-<tr><td align="left" balign="left"> + getFrom() : ArrayList&lt;Edge&gt; </td></tr>
-<tr><td align="left" balign="left"> + getTo() : ArrayList&lt;Edge&gt; </td></tr>
-<tr><td align="left" balign="left"> + variable() : Boolean </td></tr>
-<tr><td align="left" balign="left"> + replace(target : String, replacement : String) </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-<tr><td align="left" balign="left"> + calculateCertainty() </td></tr>
-<tr><td align="left" balign="left"> + getCertainty() : Integer </td></tr>
-<tr><td align="left" balign="left"> + resetCertainty() </td></tr>
-<tr><td align="left" balign="left"> + getSize() : Integer </td></tr>
-<tr><td align="left" balign="left"> + check() </td></tr>
-<tr><td align="left" balign="left"> + getChecked() : Boolean </td></tr>
-<tr><td align="left" balign="left"> + resetCheck() </td></tr>
-<tr><td align="left" balign="left"> + deleteNodeReferences(deleteNodes : ArrayList&lt;String&gt;) </td></tr>
-<tr><td align="left" balign="left"> + toTrace(edgeNames : ArrayList&lt;String&gt;) : ArrayList&lt;Node&gt; </td></tr>
-<tr><td align="left" balign="left"> + fromTrace(edgeNames : ArrayList&lt;String&gt;) : ArrayList&lt;Node&gt; </td></tr>
+<tr><td align="left" balign="left"> + addIEdge(from : String, to : String) </td></tr>
+<tr><td align="left" balign="left"> - rename(object : GraphObject, newName : String) </td></tr>
+<tr><td align="left" balign="left"> + giveAddedNodesUniqueNames(graph : Graph) </td></tr>
+<tr><td align="left" balign="left"> - generateUniqueName(obj : GraphObject) </td></tr>
+<tr><td align="left" balign="left"> + toTrace(edgeNames : ArrayList&lt;String&gt;, here : Node) : ArrayList&lt;Node&gt; </td></tr>
+<tr><td align="left" balign="left"> + fromTrace(edgeNames : ArrayList&lt;String&gt;, here : Node) : ArrayList&lt;Node&gt; </td></tr>
+<tr><td align="left" balign="left"> + containsNode(name : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + containsEdge(edge : Arc) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, fontname="arial", fontcolor="black", fontsize=10.0];
 	// model.PluginModel
-	c35 [label=<<table title="model.PluginModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PluginModel.html">
+	c47 [label=<<table title="model.PluginModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PluginModel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PluginModel </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> - umltograph : UMLToGraph </td></tr>
-<tr><td align="left" balign="left"> - graphTransformer : GraphTransformer </td></tr>
-<tr><td align="left" balign="left"> - graph : Graph </td></tr>
-<tr><td align="left" balign="left"> - odObjs : ArrayList&lt;ODObject&gt; </td></tr>
-<tr><td align="left" balign="left"> - odLinks : ArrayList&lt;ODLink&gt; </td></tr>
-<tr><td align="left" balign="left"> - metamodelURL : URL </td></tr>
+<tr><td align="left" balign="left"> - modeltograph : ModelToGraph </td></tr>
+<tr><td align="left" balign="left"> - graphTransformer : AGGTransformer </td></tr>
+<tr><td align="left" balign="left"> - graphtomodel : GraphToModel </td></tr>
+<tr><td align="left" balign="left"> - graph : ListGraph </td></tr>
+<tr><td align="left" balign="left"> - undoLimit : int </td></tr>
+<tr><td align="left" balign="left"> - undosRemaining : int </td></tr>
+<tr><td align="left" balign="left"> - origGraph : ListGraph </td></tr>
+<tr><td align="left" balign="left"> - graphs : ArrayList&lt;ListGraph&gt; </td></tr>
 <tr><td align="left" balign="left"> - graphOutputsPath : String </td></tr>
+<tr><td align="left" balign="left"> - objectdisplay : ObjectDisplay </td></tr>
 <tr><td align="left" balign="left"> - debugmode : boolean </td></tr>
 <tr><td align="left" balign="left"> - transitionnumber : Integer </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getODObjects() : ArrayList&lt;ODObject&gt; </td></tr>
-<tr><td align="left" balign="left"> + getODLinks() : ArrayList&lt;ODLink&gt; </td></tr>
+<tr><td align="left" balign="left"> + getObjectDisplay() : ObjectDisplay </td></tr>
+<tr><td align="left" balign="left"> + reset() </td></tr>
 <tr><td align="left" balign="left"> + buildGraph(modelURL : URL, instanceURL : URL) </td></tr>
-<tr><td align="left" balign="left"> + transition() </td></tr>
-<tr><td align="left" balign="left"> - constructObjDiag() </td></tr>
-<tr><td align="left" balign="left"> - setUpMicrowave(graph : Graph) </td></tr>
-<tr><td align="left" balign="left"> - outputdot() </td></tr>
+<tr><td align="left" balign="left"> + transition(transAction : TransitionAction) </td></tr>
+<tr><td align="left" balign="left"> + getUndosRemaining() : Integer </td></tr>
+<tr><td align="left" balign="left"> + getRedosRemaining() : Integer </td></tr>
+<tr><td align="left" balign="left"> + undoAction() </td></tr>
+<tr><td align="left" balign="left"> + redoAction() </td></tr>
+<tr><td align="left" balign="left"> - outputdot(newgraph : ListGraph, oldgraph : ListGraph) </td></tr>
 		</table></td></tr>
 		</table>>, fontname="arial", fontcolor="black", fontsize=10.0];
-	// model.UMLToGraph
-	c36 [label=<<table title="model.UMLToGraph" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UMLToGraph.html">
+	// model.TransitionAction
+	c48 [label=<<table title="model.TransitionAction" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TransitionAction.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> UMLToGraph </td></tr>
+<tr><td align="center" balign="center"> TransitionAction </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> - metamodelroot : Element </td></tr>
-<tr><td align="left" balign="left"> - metamodelxpathctx : XPathContext </td></tr>
-<tr><td align="left" balign="left"> - xpathctx : XPathContext </td></tr>
-<tr><td align="left" balign="left"> - graph : Graph </td></tr>
-<tr><td align="left" balign="left"> - metamodelHashmap : HashMap&lt;String, Nodes&gt; </td></tr>
+<tr><td align="left" balign="left"> - displayObj : DisplayObject </td></tr>
+<tr><td align="left" balign="left"> - actionName : String </td></tr>
+<tr><td align="left" balign="left"> - actionParam : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + buildGraph(modelURL : URL, instanceURL : URL) : Graph </td></tr>
-<tr><td align="left" balign="left"> - translateModelPart(modelURL : URL) </td></tr>
-<tr><td align="left" balign="left"> - buildedgetree(root : Element) </td></tr>
-<tr><td align="left" balign="left"> - translateInstancePart(instanceURL : URL) </td></tr>
-<tr><td align="left" balign="left"> - graphNodeName(node : Element) : String </td></tr>
-<tr><td align="left" balign="left"> - createRuntimePart() </td></tr>
-<tr><td align="left" balign="left"> - instanceErr(msg : String) </td></tr>
-		</table></td></tr>
-		</table>>, fontname="arial", fontcolor="black", fontsize=10.0];
-	// model.UMLToGraphTest
-	c58 [label=<<table title="model.UMLToGraphTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UMLToGraphTest.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> UMLToGraphTest </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> ~ metamodelPath : String </td></tr>
-<tr><td align="left" balign="left"> ~ modelPath : String </td></tr>
-<tr><td align="left" balign="left"> ~ instancePath : String </td></tr>
-<tr><td align="left" balign="left"> ~ graph : Graph </td></tr>
-<tr><td align="left" balign="left"> ~ testGraph : Graph </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + setup() </td></tr>
-<tr><td align="left" balign="left"> + testBuildGraph() </td></tr>
+<tr><td align="left" balign="left"> + getObject() : DisplayObject </td></tr>
+<tr><td align="left" balign="left"> + getActionName() : String </td></tr>
+<tr><td align="left" balign="left"> + getActionParam() : String </td></tr>
 		</table></td></tr>
 		</table>>, fontname="arial", fontcolor="black", fontsize=10.0];
 }
