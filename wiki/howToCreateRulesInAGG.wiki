@@ -123,7 +123,7 @@ The first thing you have to do is click on the *New NAC icon* http://graf-framew
 *Note:* A Negative Application Condition (NAC) can sometimes also be called a forbidden graph.
 
 == Adding Parameters to rules ==
-For the following section we will be use the *testParameters.ggx* file which can be found at *http://code.google.com/p/graf-framework/source/browse/trunk/testParameters.ggx *
+For the following section we will be use the *testParameters.ggx* file which can be found at *http://code.google.com/p/graf-framework/source/browse/trunk/Prototypes/AGG%20Test/testParameters.ggx *
 Lets say you want to add parameters for the *readSelfAction* rule in the *testParameters.ggx* file. The first thing we need to do is open this file in the usual way.
 
 To make *selfRead* and *instance* be parameters simply double click on a node in the before graph which change *PICTURE A* below into *PICTURE B* below (I.e. the original graph area will change to the object attributes area).
@@ -158,9 +158,9 @@ If you need further help in creating rules in the AGG GUI then we have also prov
   http://graf-framework.googlecode.com/files/Put.jpg
 
 From this we can see that the rule adds 
-* an edge called last
-* an edge called val, and 
-* a node called Object
+  * an edge called last
+  * an edge called val, and 
+  * a node called Object
 it also removes the last edge and can only be applied when there isn’t the red stuff.
 
 The first step is to create a new rule called something like put. Also since we also have a Negative Application Condition (the red stuff) you will also have to create a new NAC (Negative Application Condition) called something like forbidden.
