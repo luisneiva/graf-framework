@@ -1,0 +1,23 @@
+{* an optimistic story about Greg learning European Languages, 
+   system state transitions (updates).
+
+   Greg, May 2009
+*}
+
+add {
+  Greg speaks French
+  Greg learning Italian
+}
+
+delete {
+  Greg learning French
+}
+
+add {
+  Greg speaks Italian
+  Greg learning Spainish
+}
+
+delete {
+  Greg learning Italian
+}

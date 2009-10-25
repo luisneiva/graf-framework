@@ -1,0 +1,17 @@
+/* Architecture of UML Reference Animator
+   Greg O'Keefe, 9 May 2009
+*/
+
+digraph architecture {
+    node [shape=box]
+    ranksep=2
+
+    ss [label = "   systemState:Graph   "]
+
+    "metamodel:UML/EMF" -> ss [label=conv]
+    "model:UML/EMF" -> ss [label=conv]
+    "instance:UML/EMF" -> ss [label=dealg]
+    ss -> ss [label=editor, tailport=nw, headport=s]
+    ss -> ss [label=transitioner,tailport=ne, headport=s]
+    ss -> ":Bool" [label=checks]
+}

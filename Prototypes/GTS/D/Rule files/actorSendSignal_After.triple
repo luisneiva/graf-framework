@@ -1,0 +1,44 @@
+{*
+  After graph for actorSendSignal rule.
+  Based on Ian's graph on the wiki
+  Oscar, June 2009
+*}
+
+?instance2 i Actor
+?classifierBehaviorExecution2 host ?instance2
+?instance2 execution ?classifierBehaviorExecution2
+?classifierBehaviorExecution2 i BehaviorExecution
+classifierBehaviorExecution i BehaviorExecution
+
+?classifierBehaviorExecution host ?instance
+?instance execution ?classifierBehaviorExecution
+?classifierBehaviorExecution activeState ?state
+?transition source ?state
+?transition trigger ?trigger
+?trigger event ?recieveSignal
+?recieveSignal signal ?signal
+?signal i Signal
+
+c1 i ?signal
+c1 recieveEvent c1reciept
+c1 sender ?instance2
+c1 sendEvent c1sent
+c1reciept message c1
+c1sent message c1
+
+c1sent sender ?instance2
+c1sent execution ?classifierBehaviorExecution2
+c1sent i SendInvocationOccurance
+
+c1reciept reciever ?instance
+?instance pool c1reciept
+c1reciept i SignalOccurance
+
+{* 
+these lines I added myself
+*}
+{*
+?recieveSignal i ReceiveSignalEvent
+?trigger i Trigger
+?state i State
+*}

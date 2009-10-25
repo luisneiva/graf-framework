@@ -1,0 +1,446 @@
+<?xml version = '1.0' encoding = 'UTF-8' ?>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Sat May 23 13:27:52 EST 2009'>
+  <XMI.header>    <XMI.documentation>
+      <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
+      <XMI.exporterVersion>0.28(6) revised on $Date: 2007-05-12 08:08:08 +0200 (Sat, 12 May 2007) $ </XMI.exporterVersion>
+    </XMI.documentation>
+    <XMI.metamodel xmi.name="UML" xmi.version="1.4"/></XMI.header>
+  <XMI.content>
+    <UML:Model xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DD9'
+      name = 'Microwave' isSpecification = 'false' isRoot = 'false' isLeaf = 'false'
+      isAbstract = 'false'>
+      <UML:Namespace.ownedElement>
+        <UML:Class xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DDA'
+          name = 'Microwave' visibility = 'public' isSpecification = 'false' isRoot = 'false'
+          isLeaf = 'false' isAbstract = 'false' isActive = 'false'/>
+        <UML:Class xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DDB'
+          name = 'Food' visibility = 'public' isSpecification = 'false' isRoot = 'false'
+          isLeaf = 'false' isAbstract = 'false' isActive = 'false'/>
+        <UML:Class xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DDC'
+          name = 'Beeper' visibility = 'public' isSpecification = 'false' isRoot = 'false'
+          isLeaf = 'false' isAbstract = 'false' isActive = 'false'/>
+        <UML:Association xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DDD'
+          name = 'Microwave-Beeper' isSpecification = 'false' isRoot = 'false' isLeaf = 'false'
+          isAbstract = 'false'>
+          <UML:Association.connection>
+            <UML:AssociationEnd xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DDE'
+              name = 'in' visibility = 'public' isSpecification = 'false' isNavigable = 'true'
+              ordering = 'unordered' aggregation = 'none' targetScope = 'instance' changeability = 'changeable'>
+              <UML:AssociationEnd.multiplicity>
+                <UML:Multiplicity xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DE9'>
+                  <UML:Multiplicity.range>
+                    <UML:MultiplicityRange xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DE8'
+                      lower = '1' upper = '1'/>
+                  </UML:Multiplicity.range>
+                </UML:Multiplicity>
+              </UML:AssociationEnd.multiplicity>
+              <UML:AssociationEnd.participant>
+                <UML:Class xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DDA'/>
+              </UML:AssociationEnd.participant>
+            </UML:AssociationEnd>
+            <UML:AssociationEnd xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DE1'
+              name = 'has' visibility = 'public' isSpecification = 'false' isNavigable = 'true'
+              ordering = 'unordered' aggregation = 'none' targetScope = 'instance' changeability = 'changeable'>
+              <UML:AssociationEnd.multiplicity>
+                <UML:Multiplicity xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DE7'>
+                  <UML:Multiplicity.range>
+                    <UML:MultiplicityRange xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DE6'
+                      lower = '1' upper = '1'/>
+                  </UML:Multiplicity.range>
+                </UML:Multiplicity>
+              </UML:AssociationEnd.multiplicity>
+              <UML:AssociationEnd.participant>
+                <UML:Class xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DDC'/>
+              </UML:AssociationEnd.participant>
+            </UML:AssociationEnd>
+          </UML:Association.connection>
+        </UML:Association>
+        <UML:Association xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DEA'
+          name = 'Microwave-Food' isSpecification = 'false' isRoot = 'false' isLeaf = 'false'
+          isAbstract = 'false'>
+          <UML:Association.connection>
+            <UML:AssociationEnd xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DEB'
+              name = 'cooked by' visibility = 'public' isSpecification = 'false' isNavigable = 'true'
+              ordering = 'unordered' aggregation = 'none' targetScope = 'instance' changeability = 'changeable'>
+              <UML:AssociationEnd.multiplicity>
+                <UML:Multiplicity xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DF2'>
+                  <UML:Multiplicity.range>
+                    <UML:MultiplicityRange xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DF1'
+                      lower = '1' upper = '1'/>
+                  </UML:Multiplicity.range>
+                </UML:Multiplicity>
+              </UML:AssociationEnd.multiplicity>
+              <UML:AssociationEnd.participant>
+                <UML:Class xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DDA'/>
+              </UML:AssociationEnd.participant>
+            </UML:AssociationEnd>
+            <UML:AssociationEnd xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DEE'
+              name = 'cooks' visibility = 'public' isSpecification = 'false' isNavigable = 'true'
+              ordering = 'unordered' aggregation = 'none' targetScope = 'instance' changeability = 'changeable'>
+              <UML:AssociationEnd.multiplicity>
+                <UML:Multiplicity xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DEF'>
+                  <UML:Multiplicity.range>
+                    <UML:MultiplicityRange xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DF0'
+                      lower = '1' upper = '1'/>
+                  </UML:Multiplicity.range>
+                </UML:Multiplicity>
+              </UML:AssociationEnd.multiplicity>
+              <UML:AssociationEnd.participant>
+                <UML:Class xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DDB'/>
+              </UML:AssociationEnd.participant>
+            </UML:AssociationEnd>
+          </UML:Association.connection>
+        </UML:Association>
+        <UML:StateMachine xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E0C'
+          name = 'microwaveSM' isSpecification = 'false'>
+          <UML:StateMachine.top>
+            <UML:CompositeState xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E0D'
+              name = 'top' isSpecification = 'false' isConcurrent = 'false'>
+              <UML:CompositeState.subvertex>
+                <UML:Pseudostate xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E0E'
+                  name = 'microwaveInitial' isSpecification = 'false' kind = 'initial'>
+                  <UML:StateVertex.outgoing>
+                    <UML:Transition xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E10'/>
+                  </UML:StateVertex.outgoing>
+                </UML:Pseudostate>
+                <UML:SimpleState xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E0F'
+                  name = 'NotCooking' isSpecification = 'false'>
+                  <UML:StateVertex.outgoing>
+                    <UML:Transition xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E12'/>
+                  </UML:StateVertex.outgoing>
+                  <UML:StateVertex.incoming>
+                    <UML:Transition xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E10'/>
+                  </UML:StateVertex.incoming>
+                </UML:SimpleState>
+                <UML:SimpleState xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E11'
+                  name = 'Cooking' isSpecification = 'false'>
+                  <UML:StateVertex.outgoing>
+                    <UML:Transition xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E14'/>
+                  </UML:StateVertex.outgoing>
+                  <UML:StateVertex.incoming>
+                    <UML:Transition xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E12'/>
+                  </UML:StateVertex.incoming>
+                  <UML:State.doActivity>
+                    <UML:CallAction xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E17'
+                      name = 'Food.temperature ++' isSpecification = 'false' isAsynchronous = 'false'>
+                      <UML:Action.script>
+                        <UML:ActionExpression xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E38'
+                          language = '' body = 'Food.temperature ++'/>
+                      </UML:Action.script>
+                    </UML:CallAction>
+                  </UML:State.doActivity>
+                </UML:SimpleState>
+                <UML:SimpleState xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E13'
+                  name = 'FinishedCooking' isSpecification = 'false'>
+                  <UML:StateVertex.outgoing>
+                    <UML:Transition xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E16'/>
+                  </UML:StateVertex.outgoing>
+                  <UML:StateVertex.incoming>
+                    <UML:Transition xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E14'/>
+                  </UML:StateVertex.incoming>
+                  <UML:State.entry>
+                    <UML:CallAction xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E23'
+                      name = 'Food.cooked' isSpecification = 'false' isAsynchronous = 'false'>
+                      <UML:Action.script>
+                        <UML:ActionExpression xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E27'
+                          language = '' body = 'Food.cooked'/>
+                      </UML:Action.script>
+                    </UML:CallAction>
+                  </UML:State.entry>
+                  <UML:State.exit>
+                    <UML:CallAction xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E28'
+                      name = 'Beeper.beep' isSpecification = 'false' isAsynchronous = 'false'>
+                      <UML:Action.script>
+                        <UML:ActionExpression xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E2A'
+                          language = '' body = 'Beeper.beep'/>
+                      </UML:Action.script>
+                    </UML:CallAction>
+                  </UML:State.exit>
+                </UML:SimpleState>
+                <UML:FinalState xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E15'
+                  name = 'microwaveFinal' isSpecification = 'false'>
+                  <UML:StateVertex.incoming>
+                    <UML:Transition xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E16'/>
+                  </UML:StateVertex.incoming>
+                </UML:FinalState>
+              </UML:CompositeState.subvertex>
+            </UML:CompositeState>
+          </UML:StateMachine.top>
+          <UML:StateMachine.transitions>
+            <UML:Transition xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E10'
+              name = 'microwaveInitialTrans' isSpecification = 'false'>
+              <UML:Transition.source>
+                <UML:Pseudostate xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E0E'/>
+              </UML:Transition.source>
+              <UML:Transition.target>
+                <UML:SimpleState xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E0F'/>
+              </UML:Transition.target>
+            </UML:Transition>
+            <UML:Transition xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E12'
+              name = 'cookTrans' isSpecification = 'false'>
+              <UML:Transition.trigger>
+                <UML:SignalEvent xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E2B'/>
+              </UML:Transition.trigger>
+              <UML:Transition.source>
+                <UML:SimpleState xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E0F'/>
+              </UML:Transition.source>
+              <UML:Transition.target>
+                <UML:SimpleState xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E11'/>
+              </UML:Transition.target>
+            </UML:Transition>
+            <UML:Transition xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E14'
+              name = 'stopCookingTrans' isSpecification = 'false'>
+              <UML:Transition.trigger>
+                <UML:SignalEvent xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E2C'/>
+              </UML:Transition.trigger>
+              <UML:Transition.source>
+                <UML:SimpleState xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E11'/>
+              </UML:Transition.source>
+              <UML:Transition.target>
+                <UML:SimpleState xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E13'/>
+              </UML:Transition.target>
+            </UML:Transition>
+            <UML:Transition xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E16'
+              name = 'microwaveFinalTrans' isSpecification = 'false'>
+              <UML:Transition.source>
+                <UML:SimpleState xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E13'/>
+              </UML:Transition.source>
+              <UML:Transition.target>
+                <UML:FinalState xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E15'/>
+              </UML:Transition.target>
+            </UML:Transition>
+          </UML:StateMachine.transitions>
+        </UML:StateMachine>
+        <UML:SignalEvent xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E2B'
+          name = 'cook' isSpecification = 'false'/>
+        <UML:SignalEvent xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E2C'
+          name = 'stopCooking' isSpecification = 'false'/>
+        <UML:StateMachine xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E2D'
+          name = 'foodSM' isSpecification = 'false'>
+          <UML:StateMachine.top>
+            <UML:CompositeState xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E2E'
+              name = 'top' isSpecification = 'false' isConcurrent = 'false'>
+              <UML:CompositeState.subvertex>
+                <UML:Pseudostate xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E2F'
+                  name = 'foodInitial' isSpecification = 'false' kind = 'initial'>
+                  <UML:StateVertex.outgoing>
+                    <UML:Transition xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E31'/>
+                  </UML:StateVertex.outgoing>
+                </UML:Pseudostate>
+                <UML:SimpleState xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E30'
+                  name = 'NotCooked' isSpecification = 'false'>
+                  <UML:StateVertex.outgoing>
+                    <UML:Transition xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E33'/>
+                  </UML:StateVertex.outgoing>
+                  <UML:StateVertex.incoming>
+                    <UML:Transition xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E31'/>
+                  </UML:StateVertex.incoming>
+                </UML:SimpleState>
+                <UML:SimpleState xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E32'
+                  name = 'Cooked' isSpecification = 'false'>
+                  <UML:StateVertex.outgoing>
+                    <UML:Transition xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E35'/>
+                  </UML:StateVertex.outgoing>
+                  <UML:StateVertex.incoming>
+                    <UML:Transition xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E33'/>
+                  </UML:StateVertex.incoming>
+                </UML:SimpleState>
+                <UML:FinalState xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E34'
+                  name = 'foodFinal' isSpecification = 'false'>
+                  <UML:StateVertex.incoming>
+                    <UML:Transition xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E35'/>
+                  </UML:StateVertex.incoming>
+                </UML:FinalState>
+              </UML:CompositeState.subvertex>
+            </UML:CompositeState>
+          </UML:StateMachine.top>
+          <UML:StateMachine.transitions>
+            <UML:Transition xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E31'
+              name = 'foodInitialTrans' isSpecification = 'false'>
+              <UML:Transition.source>
+                <UML:Pseudostate xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E2F'/>
+              </UML:Transition.source>
+              <UML:Transition.target>
+                <UML:SimpleState xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E30'/>
+              </UML:Transition.target>
+            </UML:Transition>
+            <UML:Transition xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E33'
+              name = 'cookedTrans' isSpecification = 'false'>
+              <UML:Transition.trigger>
+                <UML:SignalEvent xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E36'/>
+              </UML:Transition.trigger>
+              <UML:Transition.source>
+                <UML:SimpleState xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E30'/>
+              </UML:Transition.source>
+              <UML:Transition.target>
+                <UML:SimpleState xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E32'/>
+              </UML:Transition.target>
+            </UML:Transition>
+            <UML:Transition xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E35'
+              name = 'foodFinalTrans' isSpecification = 'false'>
+              <UML:Transition.source>
+                <UML:SimpleState xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E32'/>
+              </UML:Transition.source>
+              <UML:Transition.target>
+                <UML:FinalState xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E34'/>
+              </UML:Transition.target>
+            </UML:Transition>
+          </UML:StateMachine.transitions>
+        </UML:StateMachine>
+        <UML:SignalEvent xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E36'
+          name = 'cooked' isSpecification = 'false'/>
+        <UML:StateMachine xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E39'
+          name = 'beeperSM' isSpecification = 'false'>
+          <UML:StateMachine.top>
+            <UML:CompositeState xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E3A'
+              name = 'top' isSpecification = 'false' isConcurrent = 'false'>
+              <UML:CompositeState.subvertex>
+                <UML:Pseudostate xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E3B'
+                  name = 'beeperInitial' isSpecification = 'false' kind = 'initial'>
+                  <UML:StateVertex.outgoing>
+                    <UML:Transition xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E3D'/>
+                  </UML:StateVertex.outgoing>
+                </UML:Pseudostate>
+                <UML:SimpleState xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E3C'
+                  name = 'Silent' isSpecification = 'false'>
+                  <UML:StateVertex.outgoing>
+                    <UML:Transition xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E3F'/>
+                    <UML:Transition xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E44'/>
+                  </UML:StateVertex.outgoing>
+                  <UML:StateVertex.incoming>
+                    <UML:Transition xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E3D'/>
+                    <UML:Transition xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E41'/>
+                  </UML:StateVertex.incoming>
+                </UML:SimpleState>
+                <UML:SimpleState xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E3E'
+                  name = 'Beeping' isSpecification = 'false'>
+                  <UML:StateVertex.outgoing>
+                    <UML:Transition xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E41'/>
+                  </UML:StateVertex.outgoing>
+                  <UML:StateVertex.incoming>
+                    <UML:Transition xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E3F'/>
+                  </UML:StateVertex.incoming>
+                </UML:SimpleState>
+                <UML:FinalState xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E43'
+                  name = 'beeperFinal' isSpecification = 'false'>
+                  <UML:StateVertex.incoming>
+                    <UML:Transition xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E44'/>
+                  </UML:StateVertex.incoming>
+                </UML:FinalState>
+              </UML:CompositeState.subvertex>
+            </UML:CompositeState>
+          </UML:StateMachine.top>
+          <UML:StateMachine.transitions>
+            <UML:Transition xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E3D'
+              name = 'beeperInitialTrans' isSpecification = 'false'>
+              <UML:Transition.source>
+                <UML:Pseudostate xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E3B'/>
+              </UML:Transition.source>
+              <UML:Transition.target>
+                <UML:SimpleState xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E3C'/>
+              </UML:Transition.target>
+            </UML:Transition>
+            <UML:Transition xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E3F'
+              name = 'beepTrans' isSpecification = 'false'>
+              <UML:Transition.trigger>
+                <UML:SignalEvent xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E40'/>
+              </UML:Transition.trigger>
+              <UML:Transition.source>
+                <UML:SimpleState xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E3C'/>
+              </UML:Transition.source>
+              <UML:Transition.target>
+                <UML:SimpleState xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E3E'/>
+              </UML:Transition.target>
+            </UML:Transition>
+            <UML:Transition xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E41'
+              name = 'stopBeepingTrans' isSpecification = 'false'>
+              <UML:Transition.trigger>
+                <UML:SignalEvent xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E42'/>
+              </UML:Transition.trigger>
+              <UML:Transition.source>
+                <UML:SimpleState xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E3E'/>
+              </UML:Transition.source>
+              <UML:Transition.target>
+                <UML:SimpleState xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E3C'/>
+              </UML:Transition.target>
+            </UML:Transition>
+            <UML:Transition xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E44'
+              name = 'beeperFinalTrans' isSpecification = 'false'>
+              <UML:Transition.source>
+                <UML:SimpleState xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E3C'/>
+              </UML:Transition.source>
+              <UML:Transition.target>
+                <UML:FinalState xmi.idref = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E43'/>
+              </UML:Transition.target>
+            </UML:Transition>
+          </UML:StateMachine.transitions>
+        </UML:StateMachine>
+        <UML:SignalEvent xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E40'
+          name = 'beep' isSpecification = 'false'/>
+        <UML:SignalEvent xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E42'
+          name = 'stopBeeping' isSpecification = 'false'/>
+      </UML:Namespace.ownedElement>
+    </UML:Model>
+    <UML:ActionExpression xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E18'
+      language = '' body = 'a'/>
+    <UML:ActionExpression xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E19'
+      language = '' body = ''/>
+    <UML:ActionExpression xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E1A'
+      language = '' body = 'Food.temperature ++'/>
+    <UML:ActionExpression xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E1B'
+      language = '' body = ' Food.temperature ++'/>
+    <UML:ActionExpression xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E1C'
+      language = '' body = 'Food.temperature ++'/>
+    <UML:ActionExpression xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E1E'
+      language = '' body = ''/>
+    <UML:ActionExpression xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E1F'
+      language = '' body = 'Food.cooked'/>
+    <UML:ActionExpression xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E20'
+      language = '' body = 'Food.cooked&#10;'/>
+    <UML:ActionExpression xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E24'
+      language = '' body = ''/>
+    <UML:ActionExpression xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E25'
+      language = '' body = 'Beeper.beep'/>
+    <UML:ActionExpression xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E26'
+      language = '' body = ''/>
+    <UML:ActionExpression xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E29'
+      language = '' body = ''/>
+    <UML:ActionExpression xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E37'
+      language = '' body = ''/>
+    <UML:Multiplicity xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DDF'>
+      <UML:Multiplicity.range>
+        <UML:MultiplicityRange xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DE0'
+          lower = '1' upper = '1'/>
+      </UML:Multiplicity.range>
+    </UML:Multiplicity>
+    <UML:Multiplicity xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DE2'>
+      <UML:Multiplicity.range>
+        <UML:MultiplicityRange xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DE3'
+          lower = '1' upper = '1'/>
+      </UML:Multiplicity.range>
+    </UML:Multiplicity>
+    <UML:Multiplicity xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DE5'>
+      <UML:Multiplicity.range>
+        <UML:MultiplicityRange xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DE4'
+          lower = '1' upper = '1'/>
+      </UML:Multiplicity.range>
+    </UML:Multiplicity>
+    <UML:Multiplicity xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DEC'>
+      <UML:Multiplicity.range>
+        <UML:MultiplicityRange xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000DED'
+          lower = '1' upper = '1'/>
+      </UML:Multiplicity.range>
+    </UML:Multiplicity>
+    <UML:CallAction xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E1D'
+      name = 'Food.cooked' isSpecification = 'false' isAsynchronous = 'false'>
+      <UML:Action.script>
+        <UML:ActionExpression xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E21'
+          language = '' body = 'Food.cooked'/>
+      </UML:Action.script>
+      <UML:Action.actualArgument>
+        <UML:Argument xmi.id = '-87--2-66-68--359ab6ff:1216b46bec0:-8000:0000000000000E22'
+          isSpecification = 'false'/>
+      </UML:Action.actualArgument>
+    </UML:CallAction>
+  </XMI.content>
+</XMI>

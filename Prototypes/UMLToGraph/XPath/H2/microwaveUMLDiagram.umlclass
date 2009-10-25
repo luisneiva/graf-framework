@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_RSFo0GfmEd67COU_hE_xjQ" type="UMLClass" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_Rg12gGfmEd67COU_hE_xjQ" type="2014">
+    <children xmi:type="notation:Node" xmi:id="_Rg12g2fmEd67COU_hE_xjQ" type="5020"/>
+    <children xmi:type="notation:Node" xmi:id="_Rg12hGfmEd67COU_hE_xjQ" type="7032">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Rg12hWfmEd67COU_hE_xjQ" collapsed="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Rg12hmfmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Rg12h2fmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:CanonicalStyle" xmi:id="_Rg12iGfmEd67COU_hE_xjQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_Rg12gWfmEd67COU_hE_xjQ"/>
+    <element xmi:type="uml:Package" href="microwaveUMLDiagram.uml#_rEtvkAbREd6hmNr2e6F5xg"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Rg12gmfmEd67COU_hE_xjQ"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_Rg12iWfmEd67COU_hE_xjQ" type="2001">
+    <children xmi:type="notation:Node" xmi:id="_Rg12jWfmEd67COU_hE_xjQ" type="5003">
+      <styles xmi:type="notation:FontStyle" xmi:id="_Rg120WfmEd67COU_hE_xjQ" bold="true"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_Rg12jmfmEd67COU_hE_xjQ" type="5019"/>
+    <children xmi:type="notation:Node" xmi:id="_Rg12j2fmEd67COU_hE_xjQ" type="7001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Rg12kGfmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_Rg12kWfmEd67COU_hE_xjQ" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Rg12kmfmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Rg12k2fmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:CanonicalStyle" xmi:id="_Rg12lGfmEd67COU_hE_xjQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_Rg12lWfmEd67COU_hE_xjQ" type="7002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Rg12lmfmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_Rg12l2fmEd67COU_hE_xjQ" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Rg12mGfmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Rg12mWfmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:CanonicalStyle" xmi:id="_Rg12mmfmEd67COU_hE_xjQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_Rg12m2fmEd67COU_hE_xjQ" type="7003">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Rg12nGfmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_Rg12nWfmEd67COU_hE_xjQ" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Rg12nmfmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Rg12n2fmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:CanonicalStyle" xmi:id="_Rg12oGfmEd67COU_hE_xjQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_Rg12imfmEd67COU_hE_xjQ"/>
+    <styles xmi:type="notation:CanonicalStyle" xmi:id="_Rg12i2fmEd67COU_hE_xjQ"/>
+    <element xmi:type="uml:Class" href="microwaveUMLDiagram.uml#_LSySYEZ0Ed6JvpGL0b827A"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Rg12jGfmEd67COU_hE_xjQ" x="432" y="60"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_Rg12oWfmEd67COU_hE_xjQ" type="2001">
+    <children xmi:type="notation:Node" xmi:id="_Rg12pWfmEd67COU_hE_xjQ" type="5003">
+      <styles xmi:type="notation:FontStyle" xmi:id="_Rg121GfmEd67COU_hE_xjQ" bold="true"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_Rg12pmfmEd67COU_hE_xjQ" type="5019"/>
+    <children xmi:type="notation:Node" xmi:id="_Rg12p2fmEd67COU_hE_xjQ" type="7001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Rg12qGfmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_Rg12qWfmEd67COU_hE_xjQ" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Rg12qmfmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Rg12q2fmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:CanonicalStyle" xmi:id="_Rg12rGfmEd67COU_hE_xjQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_Rg12rWfmEd67COU_hE_xjQ" type="7002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Rg12rmfmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_Rg12r2fmEd67COU_hE_xjQ" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Rg12sGfmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Rg12sWfmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:CanonicalStyle" xmi:id="_Rg12smfmEd67COU_hE_xjQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_Rg12s2fmEd67COU_hE_xjQ" type="7003">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Rg12tGfmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_Rg12tWfmEd67COU_hE_xjQ" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Rg12tmfmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Rg12t2fmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:CanonicalStyle" xmi:id="_Rg12uGfmEd67COU_hE_xjQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_Rg12omfmEd67COU_hE_xjQ"/>
+    <styles xmi:type="notation:CanonicalStyle" xmi:id="_Rg12o2fmEd67COU_hE_xjQ"/>
+    <element xmi:type="uml:Class" href="microwaveUMLDiagram.uml#_WcejoEZ0Ed6JvpGL0b827A"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Rg12pGfmEd67COU_hE_xjQ" x="144" y="48"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_Rg12uWfmEd67COU_hE_xjQ" type="2001">
+    <children xmi:type="notation:Node" xmi:id="_Rg12vWfmEd67COU_hE_xjQ" type="5003">
+      <styles xmi:type="notation:FontStyle" xmi:id="_Rg_ngGfmEd67COU_hE_xjQ" bold="true"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_Rg12vmfmEd67COU_hE_xjQ" type="5019"/>
+    <children xmi:type="notation:Node" xmi:id="_Rg12v2fmEd67COU_hE_xjQ" type="7001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Rg12wGfmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_Rg12wWfmEd67COU_hE_xjQ" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Rg12wmfmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Rg12w2fmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:CanonicalStyle" xmi:id="_Rg12xGfmEd67COU_hE_xjQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_Rg12xWfmEd67COU_hE_xjQ" type="7002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Rg12xmfmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_Rg12x2fmEd67COU_hE_xjQ" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Rg12yGfmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Rg12yWfmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:CanonicalStyle" xmi:id="_Rg12ymfmEd67COU_hE_xjQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_Rg12y2fmEd67COU_hE_xjQ" type="7003">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Rg12zGfmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_Rg12zWfmEd67COU_hE_xjQ" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Rg12zmfmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Rg12z2fmEd67COU_hE_xjQ"/>
+      <styles xmi:type="notation:CanonicalStyle" xmi:id="_Rg120GfmEd67COU_hE_xjQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_Rg12umfmEd67COU_hE_xjQ"/>
+    <styles xmi:type="notation:CanonicalStyle" xmi:id="_Rg12u2fmEd67COU_hE_xjQ"/>
+    <element xmi:type="uml:Class" href="microwaveUMLDiagram.uml#_akEEEEZ0Ed6JvpGL0b827A"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Rg12vGfmEd67COU_hE_xjQ" x="144" y="216"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_RSFo0WfmEd67COU_hE_xjQ"/>
+  <styles xmi:type="notation:FilteringStyle" xmi:id="_RSFo0mfmEd67COU_hE_xjQ"/>
+  <element xmi:type="uml:Package" href="microwaveUMLDiagram.uml#_rEtvkAbREd6hmNr2e6F5xg"/>
+</notation:Diagram>

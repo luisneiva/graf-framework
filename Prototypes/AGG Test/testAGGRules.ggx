@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document version="1.0">
+    <GraphTransformationSystem ID="I1" name="MyGraGra">
+        <TaggedValue Tag="AttrHandler" TagValue="Java Expr">
+            <TaggedValue Tag="Package" TagValue="java.lang"/>
+            <TaggedValue Tag="Package" TagValue="java.util"/>
+            <TaggedValue Tag="Package" TagValue="com.objectspace.jgl"/>
+            <TaggedValue Tag="Package" TagValue="automata_impl"/>
+            <TaggedValue Tag="Package" TagValue="automata"/>
+            <TaggedValue Tag="Package" TagValue="automata.impl"/>
+            <TaggedValue Tag="Package" TagValue="org.eclipse.draw2d"/>
+            <TaggedValue Tag="Package" TagValue="org.eclipse.draw2d.geometry"/>
+            <TaggedValue Tag="Package" TagValue="org.eclipse.swt.graphics"/>
+        </TaggedValue>
+        <TaggedValue Tag="CSP" TagValue="true"/>
+        <TaggedValue Tag="injective" TagValue="true"/>
+        <TaggedValue Tag="dangling" TagValue="true"/>
+        <TaggedValue Tag="NACs" TagValue="true"/>
+        <TaggedValue Tag="PACs" TagValue="true"/>
+        <TaggedValue Tag="breakAllLayer" TagValue="true"/>
+        <TaggedValue Tag="showGraphAfterStep" TagValue="true"/>
+        <TaggedValue Tag="TypeGraphLevel" TagValue="DISABLED"/>
+        <Types>
+            <NodeType ID="I2" abstract="false" name="%:RECT:java.awt.Color[r=0,g=0,b=0]:[NODE]:">
+                <AttrType ID="I4" attrname="name" typename="String" visible="true"/>
+            </NodeType>
+            <EdgeType ID="I5" abstract="false" name="%:SOLID_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:">
+                <AttrType ID="I7" attrname="name" typename="String" visible="true"/>
+            </EdgeType>
+        </Types>
+        <Graph ID="I8" kind="HOST" name="MyGraph">
+            <Node ID="I9" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <java class="java.beans.XMLDecoder" version="1.6.0_13">
+                            <string>const</string>
+                        </java>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="100" Y="52"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I12" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <java class="java.beans.XMLDecoder" version="1.6.0_13">
+                            <string>const2</string>
+                        </java>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="322" Y="109"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I15" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <java class="java.beans.XMLDecoder" version="1.6.0_13">
+                            <string>const3</string>
+                        </java>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="113" Y="189"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I18" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <java class="java.beans.XMLDecoder" version="1.6.0_13">
+                            <string>node</string>
+                        </java>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="510" Y="119"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I21" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <java class="java.beans.XMLDecoder" version="1.6.0_13">
+                            <string>thefeature</string>
+                        </java>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="740" Y="117"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I24" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <java class="java.beans.XMLDecoder" version="1.6.0_13">
+                            <string>node2</string>
+                        </java>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="509" Y="211"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I27" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <java class="java.beans.XMLDecoder" version="1.6.0_13">
+                            <string>doesntmatch</string>
+                        </java>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="750" Y="212"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Edge ID="I30" source="I9" target="I15" type="I5">
+                <Attribute constant="true" type="I7">
+                    <Value>
+                        <java class="java.beans.XMLDecoder" version="1.6.0_13">
+                            <string>blah</string>
+                        </java>
+                    </Value>
+                </Attribute>
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="5" textOffsetY="-25"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I33" source="I9" target="I12" type="I5">
+                <Attribute constant="true" type="I7">
+                    <Value>
+                        <java class="java.beans.XMLDecoder" version="1.6.0_13">
+                            <string>i</string>
+                        </java>
+                    </Value>
+                </Attribute>
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="-13" textOffsetY="-38"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I36" source="I18" target="I21" type="I5">
+                <Attribute constant="true" type="I7">
+                    <Value>
+                        <java class="java.beans.XMLDecoder" version="1.6.0_13">
+                            <string>thefeature</string>
+                        </java>
+                    </Value>
+                </Attribute>
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="-49" textOffsetY="-40"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I39" source="I24" target="I27" type="I5">
+                <Attribute constant="true" type="I7">
+                    <Value>
+                        <java class="java.beans.XMLDecoder" version="1.6.0_13">
+                            <string>nomatching</string>
+                        </java>
+                    </Value>
+                </Attribute>
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="-55" textOffsetY="-42"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+        </Graph>
+        <Rule ID="I42" name="MyRule">
+            <Parameter name="var" type="String"/>
+            <Graph ID="I44" kind="LHS" name="LeftOf_MyRule">
+                <Node ID="I45" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <java class="java.beans.XMLDecoder" version="1.6.0_13">
+                                <string>const</string>
+                            </java>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="104" Y="52"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I48" type="I2">
+                    <NodeLayout X="255" Y="92"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I50" type="I2">
+                    <NodeLayout X="126" Y="136"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I52" type="I2">
+                    <NodeLayout X="202" Y="157"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I54" type="I2">
+                    <Attribute type="I4" variable="true">
+                        <Value>
+                            <string>var</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="319" Y="157"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Edge ID="I57" source="I45" target="I48" type="I5">
+                    <Attribute constant="true" type="I7">
+                        <Value>
+                            <java class="java.beans.XMLDecoder" version="1.6.0_13">
+                                <string>i</string>
+                            </java>
+                        </Value>
+                    </Attribute>
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="-14" textOffsetY="-37"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I60" source="I45" target="I50" type="I5">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I62" source="I52" target="I54" type="I5">
+                    <Attribute type="I7" variable="true">
+                        <Value>
+                            <string>var</string>
+                        </Value>
+                    </Attribute>
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="-30" textOffsetY="-36"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I65" kind="RHS" name="RightOf_MyRule">
+                <Node ID="I66" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <java class="java.beans.XMLDecoder" version="1.6.0_13">
+                                <string>const</string>
+                            </java>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="90" Y="49"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I69" type="I2">
+                    <NodeLayout X="262" Y="83"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I71" type="I2">
+                    <NodeLayout X="127" Y="144"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I73" type="I2">
+                    <NodeLayout X="338" Y="154"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I75" type="I2">
+                    <Attribute type="I4" variable="true">
+                        <Value>
+                            <string>var</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="455" Y="154"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I78" type="I2">
+                    <Attribute type="I4" variable="true">
+                        <Value>
+                            <string>var</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="455" Y="92"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Edge ID="I81" source="I66" target="I71" type="I5">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I83" source="I66" target="I69" type="I5">
+                    <Attribute constant="true" type="I7">
+                        <Value>
+                            <java class="java.beans.XMLDecoder" version="1.6.0_13">
+                                <string>i</string>
+                            </java>
+                        </Value>
+                    </Attribute>
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="-16" textOffsetY="-39"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I86" source="I69" target="I71" type="I5">
+                    <Attribute constant="true" type="I7">
+                        <Value>
+                            <java class="java.beans.XMLDecoder" version="1.6.0_13">
+                                <string>newedge</string>
+                            </java>
+                        </Value>
+                    </Attribute>
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="-11" textOffsetY="-6"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I89" source="I73" target="I75" type="I5">
+                    <Attribute type="I7" variable="true">
+                        <Value>
+                            <string>var</string>
+                        </Value>
+                    </Attribute>
+                    <EdgeLayout bendX="380" bendY="154"
+                        textOffsetX="-24" textOffsetY="-36"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Morphism name="MyRule">
+                <Mapping image="I69" orig="I48"/>
+                <Mapping image="I71" orig="I50"/>
+                <Mapping image="I66" orig="I45"/>
+                <Mapping image="I73" orig="I52"/>
+                <Mapping image="I75" orig="I54"/>
+                <Mapping image="I81" orig="I60"/>
+                <Mapping image="I83" orig="I57"/>
+                <Mapping image="I89" orig="I62"/>
+            </Morphism>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <RuleSequences/>
+    </GraphTransformationSystem>
+</Document>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_rEtvkAbREd6hmNr2e6F5xg" name="MyPackage">
+  <elementImport xmi:id="_rFJ0tAbREd6hmNr2e6F5xg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_rFJ0tQbREd6hmNr2e6F5xg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_rFJ0tgbREd6hmNr2e6F5xg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_rFJ0twbREd6hmNr2e6F5xg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_LSySYEZ0Ed6JvpGL0b827A" name="Food" classifierBehavior="_Fr7iIEZ1Ed6JvpGL0b827A">
+    <ownedAttribute xmi:id="_zk6SYEZ0Ed6JvpGL0b827A" name="temperature"/>
+    <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_Fr7iIEZ1Ed6JvpGL0b827A" name="foodSM">
+      <region xmi:id="_fant4EZ1Ed6JvpGL0b827A" name="foodSMregion">
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_y2hF4EZ1Ed6JvpGL0b827A" name="foodInitial"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_zr7D4EZ1Ed6JvpGL0b827A" name="foodFinal"/>
+        <subvertex xmi:type="uml:State" xmi:id="_1pduoEZ1Ed6JvpGL0b827A" name="NotCooked"/>
+        <subvertex xmi:type="uml:State" xmi:id="_2Tdt4EZ1Ed6JvpGL0b827A" name="Cooked"/>
+        <transition xmi:id="_53xiIEZ1Ed6JvpGL0b827A" name="foodInitialTrans" target="_1pduoEZ1Ed6JvpGL0b827A" source="_y2hF4EZ1Ed6JvpGL0b827A"/>
+        <transition xmi:id="_6sC3sEZ1Ed6JvpGL0b827A" name="foodFinalTrans" target="_zr7D4EZ1Ed6JvpGL0b827A" source="_2Tdt4EZ1Ed6JvpGL0b827A"/>
+        <transition xmi:id="_8zAkMEZ1Ed6JvpGL0b827A" name="cookedTrans" target="_2Tdt4EZ1Ed6JvpGL0b827A" source="_1pduoEZ1Ed6JvpGL0b827A">
+          <trigger xmi:id="_V2wVgEZ2Ed6JvpGL0b827A" name="cookedTrigger" event="_41b3MEZ8Ed6JvpGL0b827A"/>
+        </transition>
+      </region>
+    </ownedBehavior>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_WcejoEZ0Ed6JvpGL0b827A" name="Microwave" classifierBehavior="_LDRaQEZ1Ed6JvpGL0b827A">
+    <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_LDRaQEZ1Ed6JvpGL0b827A" name="microwaveSM">
+      <region xmi:id="_dzM8wEZ4Ed6JvpGL0b827A" name="microwaveSMregion">
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_dzM8wUZ4Ed6JvpGL0b827A" name="microwaveInitial"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_dzM8wkZ4Ed6JvpGL0b827A" name="microwaveFinal"/>
+        <subvertex xmi:type="uml:State" xmi:id="_dzM8w0Z4Ed6JvpGL0b827A" name="NotCooking"/>
+        <subvertex xmi:type="uml:State" xmi:id="_dzM8xEZ4Ed6JvpGL0b827A" name="Cooking">
+          <doActivity xmi:type="uml:Activity" xmi:id="_al6SoEZ-Ed6JvpGL0b827A" name="CookingDo">
+            <node xmi:type="uml:AddStructuralFeatureValueAction" xmi:id="_p_p7cEaMEd6JvpGL0b827A" name="cookIncrement" isReplaceAll="true">
+              <nameExpression xmi:id="_HTz8kEaOEd6JvpGL0b827A" name="newTemperature" symbol="++">
+                <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Expression"/>
+              </nameExpression>
+              <object xmi:type="uml:ActionInputPin" xmi:id="_90QR4EaNEd6JvpGL0b827A" name="oldTemperature">
+                <fromAction xmi:type="uml:ReadStructuralFeatureAction" xmi:id="_YyrAIEaOEd6JvpGL0b827A" name="readCurrentTemperature" structuralFeature="_zk6SYEZ0Ed6JvpGL0b827A">
+                  <object xmi:type="uml:ActionInputPin" xmi:id="_FmtFEEaPEd6JvpGL0b827A" name="foodPin">
+                    <fromAction xmi:type="uml:ReadStructuralFeatureAction" xmi:id="_RmoawEaPEd6JvpGL0b827A" name="getFood">
+                      <object xmi:type="uml:ActionInputPin" xmi:id="_b3aHAEaPEd6JvpGL0b827A" name="selfActionInputPin">
+                        <fromAction xmi:type="uml:ReadSelfAction" xmi:id="_lYqa0EaPEd6JvpGL0b827A" name="selfRead">
+                          <result xmi:id="_sgG-oEaPEd6JvpGL0b827A" name="selfPin" isLeaf="true"/>
+                        </fromAction>
+                      </object>
+                      <result xmi:id="_UShZQEaPEd6JvpGL0b827A" name="theFood" isLeaf="true"/>
+                    </fromAction>
+                  </object>
+                  <result xmi:id="_w0I1EEaOEd6JvpGL0b827A" name="currentTemperature" isLeaf="true"/>
+                </fromAction>
+              </object>
+            </node>
+          </doActivity>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_oehP8EZ4Ed6JvpGL0b827A" name="FinishedCooking">
+          <entry xmi:type="uml:Activity" xmi:id="_-LTsgEZ4Ed6JvpGL0b827A" name="FinishedCookingEntry">
+            <node xmi:type="uml:SendSignalAction" xmi:id="_PJ7w0EZ5Ed6JvpGL0b827A" name="sendCooked">
+              <argument xmi:type="uml:ActionInputPin" xmi:id="_WQxQoEZ5Ed6JvpGL0b827A" name="foodPinB">
+                <fromAction xmi:type="uml:ReadStructuralFeatureAction" xmi:id="_Lx1XIEZ6Ed6JvpGL0b827A" name="getFoodB">
+                  <object xmi:type="uml:ActionInputPin" xmi:id="_jCokIEZ6Ed6JvpGL0b827A" name="selfActionInputPinB">
+                    <fromAction xmi:type="uml:ReadSelfAction" xmi:id="_suUmUEZ6Ed6JvpGL0b827A" name="selfReadB">
+                      <result xmi:id="_y5H7sEZ6Ed6JvpGL0b827A" name="selfPinB" isLeaf="true"/>
+                    </fromAction>
+                  </object>
+                  <result xmi:id="_5MxrEEZ6Ed6JvpGL0b827A" name="theFoodB" isLeaf="true"/>
+                </fromAction>
+              </argument>
+            </node>
+          </entry>
+        </subvertex>
+        <transition xmi:id="_dzM8xUZ4Ed6JvpGL0b827A" name="microwaveInitialTrans" target="_dzM8w0Z4Ed6JvpGL0b827A" source="_dzM8wUZ4Ed6JvpGL0b827A"/>
+        <transition xmi:id="_dzM8xkZ4Ed6JvpGL0b827A" name="microwaveFinalTrans" target="_dzM8wkZ4Ed6JvpGL0b827A" source="_oehP8EZ4Ed6JvpGL0b827A"/>
+        <transition xmi:id="_dzM8x0Z4Ed6JvpGL0b827A" name="cookTrans" target="_dzM8xEZ4Ed6JvpGL0b827A" source="_dzM8w0Z4Ed6JvpGL0b827A">
+          <trigger xmi:id="_AJ-NEEaDEd6JvpGL0b827A" name="cookTrigger" event="_S-gR0EZ9Ed6JvpGL0b827A"/>
+        </transition>
+        <transition xmi:id="_yxhJwEZ4Ed6JvpGL0b827A" name="stopCookingTrans" target="_oehP8EZ4Ed6JvpGL0b827A" source="_dzM8xEZ4Ed6JvpGL0b827A">
+          <trigger xmi:id="_CcXtgEaDEd6JvpGL0b827A" name="stopCookingTrigger" event="_HvZVEEZ9Ed6JvpGL0b827A"/>
+        </transition>
+      </region>
+    </ownedBehavior>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_akEEEEZ0Ed6JvpGL0b827A" name="Beeper" classifierBehavior="_Lb_cQEZ1Ed6JvpGL0b827A">
+    <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_Lb_cQEZ1Ed6JvpGL0b827A" name="beeperSM">
+      <region xmi:id="_kV8-cEaAEd6JvpGL0b827A" name="beeperSMregion">
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_kV8-cUaAEd6JvpGL0b827A" name="beeperInitial"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_kV8-ckaAEd6JvpGL0b827A" name="beeperFinal"/>
+        <subvertex xmi:type="uml:State" xmi:id="_kV8-c0aAEd6JvpGL0b827A" name="Silent"/>
+        <subvertex xmi:type="uml:State" xmi:id="_kV8-dEaAEd6JvpGL0b827A" name="Beeping"/>
+        <transition xmi:id="_kV8-dUaAEd6JvpGL0b827A" name="beeperInitialTrans" target="_kV8-c0aAEd6JvpGL0b827A" source="_kV8-cUaAEd6JvpGL0b827A"/>
+        <transition xmi:id="_kV8-dkaAEd6JvpGL0b827A" name="beeperFinalTrans" target="_kV8-ckaAEd6JvpGL0b827A" source="_kV8-c0aAEd6JvpGL0b827A"/>
+        <transition xmi:id="_kV8-d0aAEd6JvpGL0b827A" name="beepTrans" target="_kV8-dEaAEd6JvpGL0b827A" source="_kV8-c0aAEd6JvpGL0b827A">
+          <trigger xmi:id="_gQbooEaCEd6JvpGL0b827A" name="beepTrigger" event="_t3cqMEZ9Ed6JvpGL0b827A"/>
+        </transition>
+        <transition xmi:id="_9EfUwEaAEd6JvpGL0b827A" name="stopBeepingTrans" target="_kV8-c0aAEd6JvpGL0b827A" source="_kV8-dEaAEd6JvpGL0b827A">
+          <trigger xmi:id="_43FOQEaCEd6JvpGL0b827A" name="stopBeepingTrigger" event="_ZqLfoEZ9Ed6JvpGL0b827A"/>
+        </transition>
+      </region>
+    </ownedBehavior>
+  </packagedElement>
+  <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_41b3MEZ8Ed6JvpGL0b827A" name="receiveCooked" signal="_MBrb4EZ4Ed6JvpGL0b827A"/>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_MBrb4EZ4Ed6JvpGL0b827A" name="cooked"/>
+  <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_HvZVEEZ9Ed6JvpGL0b827A" name="receiveStopCooking" signal="_MZ_b8EZ9Ed6JvpGL0b827A"/>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_MZ_b8EZ9Ed6JvpGL0b827A" name="stopCooking"/>
+  <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_S-gR0EZ9Ed6JvpGL0b827A" name="receiveCook" signal="_U-InQEZ9Ed6JvpGL0b827A"/>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_U-InQEZ9Ed6JvpGL0b827A" name="cook"/>
+  <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_ZqLfoEZ9Ed6JvpGL0b827A" name="receiveStopBeeping" signal="_cgZe0EZ9Ed6JvpGL0b827A"/>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_cgZe0EZ9Ed6JvpGL0b827A" name="stopBeeping"/>
+  <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_t3cqMEZ9Ed6JvpGL0b827A" name="receiveBeep" signal="_t3cqMUZ9Ed6JvpGL0b827A"/>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_t3cqMUZ9Ed6JvpGL0b827A" name="beep"/>
+</uml:Package>

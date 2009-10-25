@@ -1,0 +1,71 @@
+{*
+  Before graph for acceptEvent with action rule.
+  Based on Ian's graph on the wiki
+  Oscar, July 2009
+*}
+
+c1sent i SendInvocationOccurance
+c1sent sender ?instance2
+c1sent message c1
+c1sent execution ?classifierBehaviorExecution2
+
+c1 i ?signal
+c1 recieveEvent c1reciept
+c1 sender ?instance2
+c1 reciever ?instance
+
+c1reciept message c1
+c1reciept i SignalOccurance
+c1reciept reciever ?instance
+
+?instance execution ?classifierBehaviorExecution
+
+?classifierBehaviorExecution2 i BehaviorExecution
+?classifierBehaviorExecution2 host ?instance2
+
+?instance2 execution ?classifierBehaviorExecution2
+
+?classifierBehaviorExecution host ?instance
+?classifierBehaviorExecution i BehaviorExecution
+
+?transition target ?state2
+?transition source ?state
+?transition trigger ?trigger
+
+?state2 ?x ?activity
+
+?activity i Activity
+
+?trigger event ?recieveSignal
+
+?recieveSignal signal ?signal
+
+?signal i Signal
+
+{* new edges *}
+
+?classifierBehaviorExecution activeState ?state2
+
+?instance execution newStateBehavior
+
+newStateBehavior behavior ?activity
+newStateBehavior host ?instance
+newStateBehavior i BehaviorExecution
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
