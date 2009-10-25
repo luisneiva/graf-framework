@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<GTSRules>
+	<action name="ActorSendSignal">
+		<rule>actorSendSignal</rule>
+	</action>
+	
+	<action name="AcceptEventAction">
+		<exclusive-dependencies>
+			<rule>acceptEventAction-AndIgnore</rule>
+			<action>AcceptEventAction-WithActivity</action>
+			<rule>acceptEventAction-WithoutActivity</rule>
+		</exclusive-dependencies>
+	</action>
+	<action name="AcceptEventAction-WithActivity">
+		<rule>acceptEventAction-WithActivity-Main</rule>
+		<looping-dependency>
+			<rule>acceptEventAction-WithActivity-ExecutableEdges</rule>
+		</looping-dependency>
+	</action>
+	
+	<action name="SendSignalAction">
+		<rule>sendSignalAction</rule>
+	</action>
+	
+	<action name="ReadStructuralFeatureAction">
+		<exclusive-dependencies>
+			<rule>readStructuralFeatureAction-SingleInt</rule>
+			<rule>readStructuralFeatureAction-TwoInts</rule>
+		</exclusive-dependencies>
+	</action>
+
+	<action name="ReadSelfAction">
+		<rule>readSelfAction</rule>
+	</action>
+</GTSRules>
