@@ -22,7 +22,6 @@ import org.eclipse.draw2d.MouseListener;
 import org.eclipse.draw2d.PolylineConnection;
 import org.eclipse.draw2d.PositionConstants;
 import org.eclipse.draw2d.geometry.Rectangle;
-import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.widgets.Menu;
 

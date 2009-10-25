@@ -4,11 +4,9 @@ package model.modelTransformer.objectDisplay;
  *   An action that an object with a state machine executes after it changes state.
  *
  *   The active attribute refers to whether the action can be done.
- *   This means that it has the input pins satisfied and/or
- *   it fits the before image of a rule.
+ *   This means that it has the input pins satisfied.
  *   If active then in the GUI you should be able to click on it.
- *   If not active then in the GUI it will be greyed out or invisible.
- *   I don't know how to determine the value.
+ *   If not active then in the GUI it will be greyed out.
  *
  *	 @author Oscar Wood 
  *
@@ -18,16 +16,20 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import model.ListGraph;
-
-import org.eclipse.draw2d.graph.Edge;
-
 import agg.xt_basis.Arc;
 import agg.xt_basis.Node;
 
 public class ODAction {
 
+	/** whether this is clickable in the GUI */
 	private Boolean enabled;
 	private String name;
+	/** 
+	 * The name of the node that the i edge 
+	 * from this points to.
+	 * There should be a rule that has the same name as this
+	 * string.
+	 */
 	private String type;
 
 	ODAction(Node node) {
@@ -40,23 +42,6 @@ public class ODAction {
 				break;
 			}
 		}
-
-		/*Graph test = null;
-		try {
-			GraphTransformer gt = new GraphTransformer(new URL("file:" + "GTSRules.xml"));
-			gt.setGraph(new Graph(graph));
-			test = gt.transition(inst, type, node.getName());
-		}
-		catch(RuleException re)
-		{
-		}
-		catch(MalformedURLException mue)
-		{
-			mue.printStackTrace();
-		}
-
-		enabled = test != null;*/
-
 		
 		// Find the input pin nodes first
 		ArrayList<Node> potentialInputPins = new ArrayList<Node>();

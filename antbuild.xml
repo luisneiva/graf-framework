@@ -29,12 +29,12 @@
 	
 	
 	<target name="clean">
-		<delete dir="javadocs"/>
+		<delete dir="javadoc"/>
     </target>
 	
 	<!-- generate javadoc, with UML diagrams from code. -->
 	<target name="javadocs" depends="clean">
-	        <javadoc sourcepath="./src" packagenames="org.umlgraph.doclet.*,controller.*, model.*,model.graphTransformer.*, model.objectDiagram.*, view.*" destdir="./javadoc" 
+	        <javadoc sourcepath="./src" packagenames="org.umlgraph.doclet.*,controller.*, model.*,model.exceptions.*,model.graphTransformer.*, model.modelTransformer.*, model.modelTransformer.objectDisplay.*, view.*, view.contentDrawer.*" destdir="./javadoc" 
 	                 private="true">
 	            <fileset dir="${src.dir}">
 	              <include name="**/*.java"/>
