@@ -1,6 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="c45" href="./AGGAssignment.html" title="model.AGGAssignment" alt="" coords="16,155,147,245"/>
-<area shape="rect" id="c46" href="./ListGraph.html" title="model.ListGraph" alt="" coords="191,27,657,373"/>
-<area shape="rect" id="c47" href="./PluginModel.html" title="model.PluginModel" alt="" coords="701,11,1040,389"/>
-<area shape="rect" id="c48" href="./TransitionAction.html" title="model.TransitionAction" alt="" coords="1085,131,1275,269"/>
+<area shape="rect" id="c32" href="./Edge.html" title="model.Edge" alt="" coords="15,35,294,381"/>
+<area shape="rect" id="c33" href="./Graph.html" title="model.Graph" alt="" coords="338,43,654,373"/>
+<area shape="rect" id="c34" href="./Node.html" title="model.Node" alt="" coords="698,11,1089,405"/>
+<area shape="rect" id="c35" href="./PluginModel.html" title="model.PluginModel" alt="" coords="1133,59,1451,357"/>
+<area shape="rect" id="c36" href="./UMLToGraph.html" title="model.UMLToGraph" alt="" coords="1496,91,1861,325"/>
+<area shape="rect" id="c58" href="./UMLToGraphTest.html" title="model.UMLToGraphTest" alt="" coords="1906,131,2075,285"/>
 </map>

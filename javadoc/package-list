@@ -1,8 +1,5 @@
 controller
 model
-model.exceptions
 model.graphTransformer
-model.modelTransformer
-model.modelTransformer.objectDisplay
+model.objectDiagram
 view
-view.contentDrawer

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// controller.Activator
-	c2304 [label=<<table title="controller.Activator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Activator.html">
+	c1074 [label=<<table title="controller.Activator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Activator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Activator </td></tr>
 		</table></td></tr>
@@ -26,11 +26,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, fontname="arial", fontcolor="black", fontsize=10.0];
 	//controller.Activator extends AbstractUIPlugin
-	c2347:p -> c2304:p [dir=back,arrowtail=empty];
+	c1104:p -> c1074:p [dir=back,arrowtail=empty];
 	//controller.Activator extends AbstractUIPlugin
-	c2347:p -> c2304:p [dir=back,arrowtail=empty];
+	c1104:p -> c1074:p [dir=back,arrowtail=empty];
 	// AbstractUIPlugin
-	c2347[label=<<table title="AbstractUIPlugin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api//AbstractUIPlugin.html">
+	c1104[label=<<table title="AbstractUIPlugin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api//AbstractUIPlugin.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AbstractUIPlugin </td></tr>
 		</table></td></tr>

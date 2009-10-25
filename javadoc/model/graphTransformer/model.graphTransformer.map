@@ -1,3 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="c139" href="./AGGTransformer.html" title="model.graphTransformer.AGGTransformer" alt="" coords="16,11,549,181"/>
+<area shape="rect" id="c67" href="./EdgeVariableAssignment.html" title="model.graphTransformer.EdgeVariableAssignment" alt="" coords="15,353,259,522"/>
+<area shape="rect" id="c68" href="./GraphTransformer.html" title="model.graphTransformer.GraphTransformer" alt="" coords="463,91,635,213"/>
+<area shape="rect" id="c69" href="./NodeVariableAssignment.html" title="model.graphTransformer.NodeVariableAssignment" alt="" coords="304,361,827,514"/>
+<area shape="rect" id="c70" href="./PatternMatch.html" title="model.graphTransformer.PatternMatch" alt="" coords="680,115,811,189"/>
+<area shape="rect" id="c71" href="./Rule.html" title="model.graphTransformer.Rule" alt="" coords="856,11,1328,293"/>
+<area shape="rect" id="c72" href="./VariableAssignment.html" title="model.graphTransformer.VariableAssignment" alt="" coords="283,139,419,165"/>
 </map>

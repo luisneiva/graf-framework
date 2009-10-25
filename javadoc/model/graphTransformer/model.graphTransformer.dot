@@ -9,23 +9,106 @@ digraph G {
 	node [fontname="arial",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// model.graphTransformer.AGGTransformer
-	c139 [label=<<table title="model.graphTransformer.AGGTransformer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AGGTransformer.html">
+	// model.graphTransformer.EdgeVariableAssignment
+	c67 [label=<<table title="model.graphTransformer.EdgeVariableAssignment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EdgeVariableAssignment.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> AGGTransformer </td></tr>
+<tr><td align="center" balign="center"> EdgeVariableAssignment </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> - gg : GraGra </td></tr>
-<tr><td align="left" balign="left"> - gtsRulesSeq : Document </td></tr>
+<tr><td align="left" balign="left"> ~ ruleEdge : Edge </td></tr>
+<tr><td align="left" balign="left"> + inputEdge : Edge </td></tr>
+<tr><td align="left" balign="left"> + originalVariable : String </td></tr>
+<tr><td align="left" balign="left"> ~ constantToUpdate : String </td></tr>
+<tr><td align="left" balign="left"> - needsUpdate : Boolean </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + getNeedsUpdate() : Boolean </td></tr>
+<tr><td align="left" balign="left"> + update(before : Graph, input : Graph) </td></tr>
+		</table></td></tr>
+		</table>>, fontname="arial", fontcolor="black", fontsize=10.0];
+	// model.graphTransformer.GraphTransformer
+	c68 [label=<<table title="model.graphTransformer.GraphTransformer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./GraphTransformer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> GraphTransformer </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> - graph : Graph </td></tr>
+<tr><td align="left" balign="left"> - gtsRules : Document </td></tr>
+<tr><td align="left" balign="left"> - attrcounter : int </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + setGraph(graph : Graph) </td></tr>
-<tr><td align="left" balign="left"> + transition(objName : String, actionName : String, actionParam : String) : Graph </td></tr>
-<tr><td align="left" balign="left"> - applyRule(objName : String, actionName : String, actionParam : String) </td></tr>
-<tr><td align="left" balign="left"> - setInputParameters(rule : Rule, object : String, actionParam : String, inOrder : Boolean) </td></tr>
-<tr><td align="left" balign="left"> - debugDeleteEdges(rule : Rule) </td></tr>
-<tr><td align="left" balign="left"> - apply(rule : Rule) </td></tr>
+<tr><td align="left" balign="left"> + transition() </td></tr>
 		</table></td></tr>
 		</table>>, fontname="arial", fontcolor="black", fontsize=10.0];
+	// model.graphTransformer.NodeVariableAssignment
+	c69 [label=<<table title="model.graphTransformer.NodeVariableAssignment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NodeVariableAssignment.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> NodeVariableAssignment </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> ~ ruleNode : Node </td></tr>
+<tr><td align="left" balign="left"> + inputNode : Node </td></tr>
+<tr><td align="left" balign="left"> + originalVariable : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + verifyEdges(input : Graph, before : Graph) : Boolean </td></tr>
+<tr><td align="left" balign="left"> - checkSize(ruleEdge : Edge, inputEdge : Edge, checkToNotFrom : Boolean) : Boolean </td></tr>
+<tr><td align="left" balign="left"> + equals(o : Object) : boolean </td></tr>
+		</table></td></tr>
+		</table>>, fontname="arial", fontcolor="black", fontsize=10.0];
+	// model.graphTransformer.PatternMatch
+	c70 [label=<<table title="model.graphTransformer.PatternMatch" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PatternMatch.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PatternMatch </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, fontname="arial", fontcolor="black", fontsize=10.0];
+	// model.graphTransformer.Rule
+	c71 [label=<<table title="model.graphTransformer.Rule" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Rule.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Rule </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> - before : Graph </td></tr>
+<tr><td align="left" balign="left"> - after : Graph </td></tr>
+<tr><td align="left" balign="left"> - forbidden : Graph </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + subgraph(input : Graph) : Boolean </td></tr>
+<tr><td align="left" balign="left"> - checkForbiddenEdges(input : Graph) : Boolean </td></tr>
+<tr><td align="left" balign="left"> + transform(input : Graph) </td></tr>
+<tr><td align="left" balign="left"> + findPatternMatch(input : Graph, ignoreMatch : PatternMatch) : PatternMatch </td></tr>
+<tr><td align="left" balign="left"> - findSuspiciousPairs(input : Graph) : PatternMatch </td></tr>
+<tr><td align="left" balign="left"> - sortPairs(list : PatternMatch) </td></tr>
+<tr><td align="left" balign="left"> - compareEdges(input : Graph) : Boolean </td></tr>
+<tr><td align="left" balign="left"> + findAllPatternMatches(input : Graph) : ArrayList&lt;PatternMatch&gt; </td></tr>
+<tr><td align="left" balign="left"> + dealg() </td></tr>
+<tr><td align="left" balign="left"> + realg() </td></tr>
+<tr><td align="left" balign="left"> + applyPatternMatch(pattern : PatternMatch) </td></tr>
+		</table></td></tr>
+		</table>>, fontname="arial", fontcolor="black", fontsize=10.0];
+	// model.graphTransformer.VariableAssignment
+	c72 [label=<<table title="model.graphTransformer.VariableAssignment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./VariableAssignment.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="ariali"> VariableAssignment </font></td></tr>
+		</table></td></tr>
+		</table>>, fontname="arial", fontcolor="black", fontsize=10.0];
+	//model.graphTransformer.EdgeVariableAssignment extends model.graphTransformer.VariableAssignment
+	c72:p -> c67:p [dir=back,arrowtail=empty];
+	//model.graphTransformer.NodeVariableAssignment extends model.graphTransformer.VariableAssignment
+	c72:p -> c69:p [dir=back,arrowtail=empty];
+	//model.graphTransformer.NodeVariableAssignment extends model.graphTransformer.VariableAssignment
+	c72:p -> c69:p [dir=back,arrowtail=empty];
+	//model.graphTransformer.EdgeVariableAssignment extends model.graphTransformer.VariableAssignment
+	c72:p -> c67:p [dir=back,arrowtail=empty];
 }
 
