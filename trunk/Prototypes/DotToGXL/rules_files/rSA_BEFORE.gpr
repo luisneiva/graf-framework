@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gxl xmlns="http://www.gupro.de/GXL/gxl-1.0.dtd">
+    <graph id="readSelfAction - BEFORE" role="rule" edgeids="false" edgemode="directed">
+        <attr name="enabled">
+            <string>false</string>
+        </attr>
+        <attr name="$version">
+            <string>curly</string>
+        </attr>
+        <node id="n137083"/>
+        <node id="n137084"/>
+        <node id="n137085"/>
+        <node id="n137086"/>
+        <node id="n137087"/>
+        <node id="n137088"/>
+        <node id="n137089"/>
+        <edge from="n137083" to="n137087">
+            <attr name="label">
+                <string>execution</string>
+            </attr>
+        </edge>
+        <edge from="n137087" to="n137085">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n137087" to="n137083">
+            <attr name="label">
+                <string>host</string>
+            </attr>
+        </edge>
+        <edge from="n137087" to="n137087">
+            <attr name="label">
+                <string>?classifierBehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n137086" to="n137086">
+            <attr name="label">
+                <string>?selfRead</string>
+            </attr>
+        </edge>
+        <edge from="n137086" to="n137084">
+            <attr name="label">
+                <string>result</string>
+            </attr>
+        </edge>
+        <edge from="n137083" to="n137083">
+            <attr name="label">
+                <string>?instance</string>
+            </attr>
+        </edge>
+        <edge from="n137085" to="n137085">
+            <attr name="label">
+                <string>BehaviorExecution</string>
+            </attr>
+        </edge>
+        <edge from="n137086" to="n137089">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n137089" to="n137089">
+            <attr name="label">
+                <string>ReadSelfAction</string>
+            </attr>
+        </edge>
+        <edge from="n137084" to="n137084">
+            <attr name="label">
+                <string>?selfPin</string>
+            </attr>
+        </edge>
+        <edge from="n137084" to="n137088">
+            <attr name="label">
+                <string>i</string>
+            </attr>
+        </edge>
+        <edge from="n137087" to="n137086">
+            <attr name="label">
+                <string>executable</string>
+            </attr>
+        </edge>
+        <edge from="n137088" to="n137088">
+            <attr name="label">
+                <string>OutputPin</string>
+            </attr>
+        </edge>
+    </graph>
+</gxl>

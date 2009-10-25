@@ -1,0 +1,7 @@
+        <edge from="?instance" to="?classifierBehaviorExecution" label="execution"/>
+        <edge from="?classifierBehaviorExecution" to="BehaviorExecution" label="i"/>
+        <edge from="?classifierBehaviorExecution" to="?instance" label="host"/>
+        <edge from="?selfRead" to="?selfPin" label="result"/>
+        <edge from="?selfRead" to="ReadSelfAction" label="i"/>
+        <edge from="?selfPin" to="OutputPin" label="i"/>
+        <edge from="?classifierBehaviorExecution" to="?selfRead" label="executable"/>

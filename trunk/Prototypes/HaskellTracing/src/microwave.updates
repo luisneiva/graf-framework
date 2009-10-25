@@ -1,0 +1,135 @@
+{* Updates to produce a microwave model system trace satisfying the
+example sequence diagram.  Initial state given in microwave.triple.
+
+Greg O'Keefe, May 2009 *}
+
+{* Actor sends "cook" signal to m1. 
+   Actor semantics are a known problem in UML. 
+   We make it appear that the Actor has executed a SendSignalAction 11.3.45.
+*}
+add {
+  c1 i cook
+  c1 sender a1                 {* 13.1 Fig 13.3 *}
+  c1 receiver m1
+
+  {* in fact, the receiveEvent should be added by a separate update (rule) *}
+  c1 receiveEvent c1receipt
+  c1receipt i SignalOccurrence {* 13.1 Fig 13.4 *}
+  c1receipt message c1         
+  c1receipt receiver m1        {* 13.1 Fig 13.3 *}
+  m1 pool c1receipt
+  c1 sendEvent c1sent
+  c1sent i SendInvocationOccurrence	
+  c1sent message c1
+  c1sent sender a1
+  c1sent execution a1behaviorExecution
+}
+
+delete { }
+
+
+{* Microwave accepts the cook signal receipt event  *}
+add {
+  m1classifierBehaviorExecution activeState Cooking
+  m1CookingDo1 i BehaviorExecution
+  m1CookingDo1 host m1     
+  m1 execution m1CookingDo1
+  m1CookingDo1 behavior CookingDo
+  {* I think explicit enabled edges are not necessary *}
+}
+
+delete {
+  m1 pool c1receipt
+  m1classifierBehaviorExecution activeState NotCooking
+}
+
+{* Microwave executes the do action of its Cooking state
+ (In order to make sure that each action is only executed once, I
+think behavior executions will need "execute" edges to their actions
+when created. These edges will be removed when the action is executed)
+*}
+
+{* read self action *}
+add {
+  selfPin value m1
+}
+delete { }
+
+{* get food (read structural feature action) *}
+add {
+  theFood value f1
+}
+delete { }
+
+{* get current temperature (another read structural feature action) *}
+add {
+  currentTemperature value 3
+}
+delete { }
+
+{* calculate new temperature (I'm assuming that the expression is
+simply replaced by its value *}
+add {
+  cookIncrement value 4
+}
+
+delete {
+  cookIncrement value newTemperature
+}
+
+{* write the new temperature (AddStructuralFeatureAction, replaceall =
+true) *}
+
+add    { f1 temperature 4 }
+delete { f1 temperature 3 }
+
+{* being a "do" action, at this point all the execute edges would be readded? *}
+
+
+{* Actor sends stopCooking signal to microwave *}
+add {
+  sc1 i stopCooking
+  sc1 sender a1 
+  sc1 receiver m1
+  sc1 receiveEvent sc1receipt
+  sc1receipt i SignalOccurrence
+  sc1receipt message sc1         
+  sc1receipt receiver m1       
+  m1 pool sc1receipt
+  sc1 sendEvent sc1sent
+  sc1sent i SendInvocationOccurrence	
+  sc1sent message sc1
+  sc1sent sender a1
+  sc1sent execution a1behaviorExecution
+}
+
+delete { }
+
+{* Microwave accepts the stopCooking signal receipt event *}
+add {
+  m1classifierBehaviorExecution activeState FinishedCooking
+
+  {* entry action execution *}
+  m1FinishedCookingEntry1 i BehaviorExecution
+  m1FinishedCookingEntry1 host m1     
+  m1 execution m1FinishedCookingEntry1
+  m1FinishedCookingEntry1 behavior FinishedCookingEntry
+}
+
+delete {
+  m1 pool sc1receipt
+  m1classifierBehaviorExecution activeState Cooking
+
+  {* remove the do behavior of the Cooking state *}
+  m1CookingDo1 i BehaviorExecution
+  m1CookingDo1 host m1     
+  m1 execution m1CookingDo1
+  m1CookingDo1 behavior CookingDo
+}
+
+{* Microwave executes entry action - in fact, this will be many
+updates, and quite similar to the do action. *}
+
+
+{* Since transition out of FinishedCooking state has no trigger, I
+don't think the exit action will ever happen. *}

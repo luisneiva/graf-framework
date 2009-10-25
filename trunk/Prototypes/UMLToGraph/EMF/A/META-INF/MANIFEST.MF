@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: UMLAnimProtA Plug-in
+Bundle-SymbolicName: UMLAnimProtA
+Bundle-Version: 0.1.0
+Require-Bundle: org.eclipse.emf.ecore,
+ org.eclipse.emf.query,
+ org.eclipse.uml2.uml
+Import-Package: org.eclipse.emf.compare.util,
+ org.eclipse.emf.ecore.change,
+ org.eclipse.emf.ecore.change.util,
+ org.eclipse.emf.ecore.xmi.impl,
+ org.eclipse.emf.query.conditions.numbers,
+ org.eclipse.uml2.uml

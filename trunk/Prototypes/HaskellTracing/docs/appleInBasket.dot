@@ -1,0 +1,4 @@
+digraph appleInBasket {
+        apple -> basket [label=in]
+        banana -> basket [label=in]
+}
