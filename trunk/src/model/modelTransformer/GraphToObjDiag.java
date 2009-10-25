@@ -245,8 +245,6 @@ public class GraphToObjDiag implements GraphToModel {
 			ArrayList<Node> recieptNodes = ListGraph.toTrace(toReciept, object.getGraphNode());
 			for(Node recieptNode : recieptNodes) {
 
-			//	System.out.println(">" + ListGraph.getName(recieptNode));
-				
 				ArrayList<Node> activeEventSignals 
 				= ListGraph.toTrace(fromRecieptToEvent, recieptNode);
 

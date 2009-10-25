@@ -1,11 +1,9 @@
 package model.modelTransformer.objectDisplay;
 /** 
- *   A class which at least one object in the object diagram is an instance of.
+ *   A class which at least one object in the object diagram instantiates.
  *
  * 	 @author Oscar Wood   
- *
  */
-
 
 import java.util.ArrayList;
 

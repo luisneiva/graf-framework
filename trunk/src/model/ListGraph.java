@@ -40,7 +40,7 @@ public class ListGraph extends Graph {
 	private static Integer uniqueNumber = 0;
 
 	/**
-	 * begins empty
+	 * Constructs an empty graph
 	 */
 	public ListGraph() {
 		super();
@@ -107,6 +107,9 @@ public class ListGraph extends Graph {
 		}
 	}
 
+	/**
+	 * Returns the first node in this graph with the given name
+	 */
 	public Node getNodeByName(String str) {
 		str = "\"" + str + "\"";
 		for(Node node : getNodesList()) {
@@ -197,7 +200,6 @@ public class ListGraph extends Graph {
 	}
 
 	private static void rename(GraphObject object, String newName) {
-
 		object.getAttribute().setValueAt(newName, "name");
 	}
 
@@ -217,6 +219,11 @@ public class ListGraph extends Graph {
 		}
 	}
 
+	/**
+	 * Changes the name of the input node or arc.
+	 * The new name should be unique in the graph most of the
+	 * time but it isn't guaranteed.
+	 */
 	private static void generateUniqueName(GraphObject obj) {
 		String newName = "addedEdge"+getName(obj);
 
@@ -311,7 +318,7 @@ public class ListGraph extends Graph {
 	/**
 	 * @param name The name of a node will need a ? as the first
 	 * character if it is a variable
-	 * @return true if there is a node with the name input
+	 * @return true if there is a node with the name input in the graph
 	 */
 	public boolean containsNode(String name) {
 
@@ -324,7 +331,8 @@ public class ListGraph extends Graph {
 	}
 
 	/**
-	 * This returns true if they have they same name.
+	 * This returns true if the graph contains an
+	 * edge with the same name as the input.
 	 */
 	public boolean containsEdge(Arc edge) {
 

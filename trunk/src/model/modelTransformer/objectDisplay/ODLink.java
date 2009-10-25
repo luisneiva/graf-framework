@@ -3,7 +3,6 @@ package model.modelTransformer.objectDisplay;
  *   A line connecting 2 objects in the object diagram.
  * 
  *   @author Oscar Wood 
- *
  */
 
 
@@ -18,15 +17,14 @@ public class ODLink {
 	private ODObject right;
 	private String rightLabel;
 
-	public ODLink(ODObject left, String rightLabel/*leftLabel*/, ODObject right) {
-		//this.leftLabel = leftLabel;
+	public ODLink(ODObject left, String rightLabel, ODObject right) {
 		this.rightLabel = rightLabel;
 		this.left = left;
 		this.right = right;
 	}
 
 	public String toString() {
-		if(/*rightLabel*/leftLabel == null)
+		if(leftLabel == null)
 			return "(incomplete) To " + left.getName() + " with label " + leftLabel + " from " + right.getName();
 		else
 			return left.getName() + "<--" + leftLabel + "---------" + rightLabel +"-->"+ right.getName();
@@ -40,7 +38,6 @@ public class ODLink {
 	}
 	public String getLinkCentreLabel() { 
 		//TODO
-		// I have no example of a centre label to work on -Oscar
 		return ""; 
 	}
 
@@ -72,7 +69,6 @@ public class ODLink {
 			}
 			else if(other.left.equals(right)
 					&& other.right.equals(left)) {
-				//rightLabel = other.leftLabel;
 				leftLabel = other.rightLabel;
 				assocIterator.remove();
 			}

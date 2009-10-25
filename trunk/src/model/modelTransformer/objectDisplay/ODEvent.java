@@ -4,8 +4,6 @@ package model.modelTransformer.objectDisplay;
  * An event that, in a state machine, moves an object from one state to another.
  * 
  * @author Oscar Wood 
- *
- *
  */
 
 import model.ListGraph;
@@ -25,7 +23,6 @@ public class ODEvent {
 		if(occurenceNode != null) {
 			occurence = ListGraph.getName(occurenceNode);
 		}
-		//System.out.println(name + " for " + occurence);
 	}
 
 	public String getName() {

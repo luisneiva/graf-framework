@@ -22,7 +22,6 @@ public class ODObject extends DisplayObject {
 	private ArrayList<ODAttribute> attributes;
 
 	private Node stateNode;
-	
 
 	private ArrayList<ODAction> actionPool;
 	private ArrayList<ODEvent> eventPool;
@@ -139,8 +138,8 @@ public class ODObject extends DisplayObject {
 	 * Finds the attribute with the given name and sets 
 	 * it to the given value. However, if there is no
 	 * attribute with that name then we ignore it because we 
-	 * assume that it is some other part of the graph other
-	 * than an attribute.
+	 * assume that it is some other part of the graph not
+	 * an attribute.
 	 * 
 	 * @param attrName The name of the attribute.
 	 * @param attrValue The value of the named attribute.

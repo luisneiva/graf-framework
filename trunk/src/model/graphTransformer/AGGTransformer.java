@@ -28,6 +28,7 @@ import agg.xt_basis.TypeException;
  * Applies the AGG methods to transform a graph.
  *
  * @author Oscar Wood
+ * @author Kevin O'Shea
  */
 public class AGGTransformer {
 
@@ -37,7 +38,6 @@ public class AGGTransformer {
 	private Document gtsRulesSeq;
 
 	public AGGTransformer(String gtsRulesPath, String gtsRulesSeqPath) throws Exception {
-
 		gg = new GraGra(false);
 		gg.load(gtsRulesPath);
 		gtsRulesSeq = new Builder().build(gtsRulesSeqPath);
@@ -86,7 +86,7 @@ public class AGGTransformer {
 					} catch (RuleNoMatchException e) {
 						//if the exclusive dependency did not fully complete, erase its work.
 						setGraph(graphBackup);
-						System.out.println("GTS Rule Cancelled: object="+objName+
+						System.out.println("Rule Cancelled: object="+objName+
 								", action="+child.getChildElements().get(j).getValue()+
 								", actionParam="+actionParam + " (" + e.getMessage() + ")");
 					}
@@ -130,27 +130,26 @@ public class AGGTransformer {
 	private void applyRule(String objName, String actionName, String actionParam)
 	throws RuleException {
 
-		System.out.println("[Trying to apply rule for " + actionName + "]");
+		//System.out.println("[Trying to apply rule for " + actionName + "]");
 		Rule rule = gg.getRule(actionName);
 		if (rule==null)
 			throw new RuleException("Could not find rule for " + actionName + " in ggx");
 
 		setInputParameters(rule, objName, actionParam, true);
 
-		// I'm assuming apply() will never partly execute. Therefore we don't have to go back to an old copy
+		// If the input parameters are set in the wrong order
+		// then reverse the order and try again
 		try {
 			apply(rule);	//throws RuleNoMatchException
-			//System.out.println("object then action worked.");
+			// I'm assuming apply() will never partly execute. Therefore we don't have to go back to an old copy
 		}
 		catch(RuleNoMatchException rnme) {
-			//System.out.println("object then action didn't work.");
 			rule.unsetInputParameter(true);
 			setInputParameters(rule, objName, actionParam, false);
 			apply(rule);
-			//System.out.println("action then object worked.");
 		}
 
-		System.out.println("GTS Rule Applied: object="+objName+", action="
+		System.out.println("Rule Applied: object="+objName+", action="
 				+actionName+", actionParam="+actionParam);
 	}
 
@@ -198,13 +197,14 @@ public class AGGTransformer {
 			parameters.put(assign.var, vector);
 		}
 
-		//System.out.println(">>>>> " + parameters + " " + parameters.size());
-
 		rule.setInputParameters(parameters);
 	}
 
 	/**
-	 * Used for testing
+	 * Used for debugging
+	 * Deleting specific edges from a rule
+	 * can be a useful technique to work out why a rule
+	 * won't fit.
 	 */
 	private void debugDeleteEdges(Rule rule) {
 
@@ -273,7 +273,6 @@ public class AGGTransformer {
 				}
 				catch(NullPointerException npe)
 				{
-					System.out.println("npe");
 					continue;
 				}
 				if(arcsNum == 0)
@@ -305,13 +304,6 @@ public class AGGTransformer {
 
 		Match match = gg.createMatch(rule);
 
-		//System.out.println("before: "+new ListGraph(rule.getLeft()));
-		//try {System.out.println("nac: "+rule.getNACsList().get(0)); } catch(Exception e) {}
-		//System.out.println("after: "+new ListGraph(rule.getRight()));
-		//System.out.println("GG:" + gg.getGraph());
-
-		//match.setCompletionStrategy(CompletionStrategySelector.getDefault(), true);
-
 		/*System.out.println("Match attribute context:");  
 		AttrContext ac = match.getAttrContext();
 		for (int i = 0; i < ac.getVariables().getNumberOfEntries(); i++) {
@@ -324,8 +316,8 @@ public class AGGTransformer {
 				Step step = new Step();
 				try {
 					Morphism comatch = step.execute(match);
-					System.out.println("RULE APPLIED (" +
-							match.getRule().getName() + ")");
+				//	System.out.println("RULE APPLIED (" +
+				//			match.getRule().getName() + ")");
 					((OrdinaryMorphism) comatch).dispose();
 				} catch (TypeException ex) {
 					//System.out.println("1"+match.getErrorMsg());
@@ -343,10 +335,6 @@ public class AGGTransformer {
 					+ " did not match");
 		}
 
-		ListGraph.giveAddedNodesUniqueNames(gg.getGraph());
-		/*gg.getGraph().setChanged();
-		
-		ListGraph newGraph = new ListGraph(gg.getGraph());
-		setGraph(newGraph);*/
+		ListGraph.giveAddedNodesUniqueNames(gg.getGraph());	
 	}
 }

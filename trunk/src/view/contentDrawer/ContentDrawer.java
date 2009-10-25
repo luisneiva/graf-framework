@@ -1,7 +1,5 @@
 package view.contentDrawer;
 
-import java.util.ArrayList;
-
 import model.modelTransformer.objectDisplay.ObjectDisplay;
 
 import org.eclipse.draw2d.Figure;
