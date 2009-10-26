@@ -32,7 +32,8 @@ _Problem:_ We need to keep track of which actions a behavior execution has execu
 "Recall the discussion in Chapter 3 of the core metamodel fragment shown in Figure 3.2 (on Page 35). This fragment has classes Property and Classiﬁer and two associations between them, classiﬁer and type. We noted that this fragment resembles the category theoretic diagram which deﬁnes graphs. We have an analogous situation here with Pins and Behaviors. Because Pin is a kind of TypedElement, each Pin has a type which is a Classiﬁer. Each Pin also belongs, perhaps transitively, to an Activity, which is a kind of Behavior and hence a Classiﬁer. In Chapter 3, we converted the model graph with properties as nodes into a type graph with properties as edges. The equivalent move here is to turn the Pins into labelled edges, so that valid run-time states will have edges from behavior executions to their pin-values, labelled by the pins name. We shall adopt this as a working hypothesis of run-time pin values."  \[Greg's thesis, Page 105\].
 
 *Decision:* Values on pins will be represented by edges from the behavior execution to the value, labelled by the pin name.  (Greg's example system state graphs may need to be modified to comply with this)
-h3 Parallelism
+
+===Parallelism===
 
 The UML definition makes it clear that objects can act in parallel.  It is possible to allow true parallel rule application in a graph transformation system, but this would complicate the implementation.  Further investigation is needed, but we expect that interleaving of rule applications will be adequate.
 
