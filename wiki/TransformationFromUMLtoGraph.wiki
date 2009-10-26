@@ -1,6 +1,6 @@
 == Transformation from UML to Graph - Approaches, Decisions, and Pending Problems==
 
-__Written by Kevin O'Shea__
+_Written by Kevin O'Shea_
 
 === Description ===
 
