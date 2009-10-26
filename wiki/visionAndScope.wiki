@@ -99,7 +99,7 @@ Functionality Framework:
     * Support for automated animation
     * Outputting of trace scripts
     * Input and running of trace scripts
-    * Check the validity of input system sates
+    * Check the validity of input system states
     * Check if Object Constraint Language constraints are met.
 
 UML example extension:
