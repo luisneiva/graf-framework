@@ -1,4 +1,4 @@
-This page contains an overview of graph theory relevant to GRAF. AGG takes care of most of this behind the scnese. As far as GRAF is concerned, a graph is a multiset of nodes connected by edges. Edges have labels. Nodes do not have labels. A multiset is a list where order doesn’t matter and there can be multiple occurrences of one element. In AGG, edges are called arcs.
+This page contains an overview of graph theory relevant to GRAF. AGG takes care of most of this behind the scenes. As far as GRAF is concerned, a graph is a multiset of nodes connected by edges. Edges have labels. Nodes do not have labels. A multiset is a list where order doesn’t matter and there can be multiple occurrences of one element. In AGG, edges are called arcs.
 
 A graph can be represented as a list of the following (from node, edge label, to node).
 
