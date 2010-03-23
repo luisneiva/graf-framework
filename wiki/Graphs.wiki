@@ -10,13 +10,12 @@ The above graph can also be represented as:
 
 C y A
 
-
 C x B
 
 B z A
 
 
-Note that in this representation, every name of a node (for example, C) represents the same node. Lines 1 and 2 refer to the same node C. However, two lines with the same label are not the same edge.
+Note that in this representation, every name of a node (for example, C) represents the same node. Lines 1 and 2 refer to the same node C. However, two lines with the same edge label do not refer to the same edge.
 
 === Subgraphs ===
 
