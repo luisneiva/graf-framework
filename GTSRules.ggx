@@ -2453,6 +2453,7 @@
             <Parameter name="getFoodBa" type="String"/>
             <Parameter name="actionOutput" type="String"/>
             <Parameter name="actionOutputPin" type="String"/>
+            <Parameter name="theInstance" type="String"/>
             <Graph ID="I669" kind="LHS" name="LeftOf_sendSignalAction">
                 <Node ID="I670" type="I2">
                     <Attribute type="I4" variable="true">
@@ -3083,7 +3084,7 @@
                 <Edge ID="I850" source="I670" target="I733" type="I5">
                     <Attribute type="I7" variable="true">
                         <Value>
-                            <string>theFoodB</string>
+                            <string>theInstance</string>
                         </Value>
                     </Attribute>
                     <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
@@ -3831,7 +3832,7 @@
                 <Edge ID="I1064" source="I872" target="I884" type="I5">
                     <Attribute type="I7" variable="true">
                         <Value>
-                            <string>theFoodB</string>
+                            <string>theInstance</string>
                         </Value>
                     </Attribute>
                     <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
