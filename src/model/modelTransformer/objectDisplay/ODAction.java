@@ -48,6 +48,7 @@ public class ODAction {
 		
 		ArrayList<String> traceToInputPin1 = new ArrayList<String>();
 		ArrayList<String> traceToInputPin2 = new ArrayList<String>();
+		ArrayList<String> traceToInputPin3 = new ArrayList<String>();
 		
 		// There may be other edges that lead to input pins...		
 		traceToInputPin1.add("target");
@@ -58,9 +59,14 @@ public class ODAction {
 		traceToInputPin2.add("fromAction");
 		traceToInputPin2.add("result");
 		
+		traceToInputPin3.add("argument");
+		traceToInputPin3.add("fromAction");
+		traceToInputPin3.add("result");
+		
 		potentialInputPins.addAll(ListGraph.toTrace(traceToInputPin1,node));
 		potentialInputPins.addAll(ListGraph.toTrace(traceToInputPin2,node));
-			
+		potentialInputPins.addAll(ListGraph.toTrace(traceToInputPin3, node));
+		
 		ArrayList<String> iTrace = new ArrayList<String>();
 		iTrace.add("i");
 		
