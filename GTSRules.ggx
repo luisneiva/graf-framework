@@ -2983,16 +2983,14 @@
                     <additionalLayout aktlength="201" force="10" preflength="200"/>
                 </Edge>
                 <Edge ID="I823" source="I685" target="I700" type="I5">
-                    <Attribute constant="true" type="I7">
+                    <Attribute type="I7" variable="true">
                         <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_0">
-                                <string>target</string>
-                            </java>
+                            <string>target</string>
                         </Value>
                     </Attribute>
                     <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
                     <additionalLayout aktlength="175" force="10" preflength="200"/>
-                </Edge>
+		    </Edge>
                 <Edge ID="I826" source="I685" target="I691" type="I5">
                     <Attribute constant="true" type="I7">
                         <Value>
