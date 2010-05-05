@@ -1,0 +1,10 @@
+digraph readSelfAction {
+	"?classifierBehaviorExecution" -> "BehaviorExecution" [label="i"]
+	"?selfRead" -> "ReadSelfAction" [label="i"]
+	"?selfPin" -> "OutputPin" [label="i"]
+	"?selfRead" -> "?selfPin" [label="result"]
+	"?classifierBehaviorExecution" -> "?instance" [label="host"]
+	"?instance" -> "?classifierBehaviorExecution" [label="execution"]
+	"?classifierBehaviorExecution" -> "?instance" [label="?selfPin", color="green"]
+	"?classifierBehaviorExecution" -> "?selfRead" [label="executable", color="blue"]
+}

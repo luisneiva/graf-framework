@@ -1,6 +1,10 @@
 package model.graphTransformer;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Vector;
 
@@ -336,5 +340,84 @@ public class AGGTransformer {
 		}
 
 		ListGraph.giveAddedNodesUniqueNames(gg.getGraph());	
+	}
+
+	/** Outputs dot code for each rule in the GraGra
+	 *  Green = to add, blue = to delete, red = NAC. 
+	 * @param outputPath The path of the output folder
+	 * @throws IOException 
+	 */
+	public void outputRulesAsDot(String outputPath) throws IOException {
+		Enumeration<Rule> listOfRules = gg.getRules();
+		String dot;
+		Rule rule;
+		ListGraph leftGraph, rightGraph, condition;
+		Enumeration<OrdinaryMorphism> nac;
+		String filepath;
+
+		/* Iterate through the available rules */
+		while (listOfRules.hasMoreElements()) {
+			rule = listOfRules.nextElement();
+			leftGraph = new ListGraph(rule.getLeft());
+			rightGraph = new ListGraph(rule.getRight());
+			nac = rule.getNACs();
+			filepath = outputPath;
+			
+			dot = "digraph " + rule.getName().replace('-', '_') + " {\n";
+			/* Get the RHS (precondition) of the rule */
+			for (Arc edge : rightGraph.getArcsList()) {
+					/* Add the edge, with it's source and target nodes, to the .dot string */
+					dot += "\t\"" + ListGraph.getName(edge.getSource()) + "\" -> \"" + ListGraph.getName(edge.getTarget()) +
+					"\" [label=\"" + ListGraph.getName(edge) + "\"";
+					/* New edges are coloured green */
+					if (!leftGraph.containsThisEdge(edge)) {
+						dot += ", color=\"green\"";
+					}
+					dot += "]\n";
+					/* New nodes are coloured green */
+					if (!leftGraph.containsNode(ListGraph.getName(edge.getSource()))) {
+						dot += "\t\"" + ListGraph.getName(edge.getSource()) + "\" [color=\"green\", fontcolor=\"green\"]" + "\n";
+					}
+					if (!leftGraph.containsNode(ListGraph.getName(edge.getTarget()))) {
+						dot += "\t\"" + ListGraph.getName(edge.getTarget()) + "\" [color=\"green\", fontcolor=\"green\"]" + "\n";
+					}
+			}
+			/* Check for and add deleted edges */
+			for (Arc edge : leftGraph.getArcsList()) {
+				if (!rightGraph.containsThisEdge(edge)) {
+					dot += "\t\"" + ListGraph.getName(edge.getSource()) + "\" -> \"" + ListGraph.getName(edge.getTarget()) +
+					"\" [label=\"" + ListGraph.getName(edge) + "\", color=\"blue\"]\n";
+				}
+				if (!rightGraph.containsNode(ListGraph.getName(edge.getSource()))) {
+					dot += "\t\"" + ListGraph.getName(edge.getSource()) + "\" [color=\"blue\", fontcolor=\"red\"]" + "\n";
+				}
+				if (!rightGraph.containsNode(ListGraph.getName(edge.getTarget()))) {
+					dot += "\t\"" + ListGraph.getName(edge.getTarget()) + "\" [color=\"blue\", fontcolor=\"red\"]" + "\n";
+				}
+			}
+			/* Add NACs (edges only) */
+			while(nac.hasMoreElements()) {
+				condition = new ListGraph(nac.nextElement().getImage());
+				for (Arc edge : condition.getArcsList()) {
+					if (!rightGraph.containsThisEdge(edge)) {
+						dot += "\t\"" + ListGraph.getName(edge.getSource()) + "\" -> \"" + ListGraph.getName(edge.getTarget()) +
+						"\" [label=\"" + ListGraph.getName(edge) + "\", color=\"red\"]\n";
+					}
+				}
+			}
+			dot += "}\n";
+			/* Write complete rule to file */
+			try {
+				filepath += rule.getName() + ".dot";
+				BufferedWriter out = new BufferedWriter(new FileWriter(filepath));
+				out.write(dot);
+				out.close();
+				System.out.println("Dot code written: " + filepath);
+			} catch (Exception e) {
+				throw new IOException("Error writing dot file: " + e.getMessage());
+			}
+			
+		}
+		
 	}
 }
