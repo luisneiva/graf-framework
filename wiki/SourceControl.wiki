@@ -8,7 +8,7 @@ Subversion (SVN)
   * Access to ANU SVN for all relevant parties is already there
 
 === Some random web pages related to source control ===
-  * Mercurial vs SVN [http://wiki.apidesign.org/wiki/Mercurial_vs._Subversion example].
+  * Mercurial vs SVN[http://wiki.apidesign.org/wiki/Mercurial_vs._Subversion example].
   *[http://seeknuance.com/2008/07/06/mercurial-vs-subversion/ Small developer picking Source Control Tool (bit old but can see the thought process)]
   * Huge table with lots of info about Bazaar, CVS, Git, Mercurial and SVN is [http://versioncontrolblog.com/comparison/Bazaar/CVS/Git/Mercurial/Subversion/index.html here].
 
