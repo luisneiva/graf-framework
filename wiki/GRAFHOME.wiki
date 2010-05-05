@@ -3,15 +3,15 @@
 Welcome to the[http://cs.anu.edu.au/student/comp3500/local_docs/projects/xtumlReferenceAnimator.pdf2010 GRAF project] wiki
 
 == Research ==
-  *[BugTrackingTools Bug Tracking Tools]<br>
-  *[SourceControl Source Control]<br>
-  *[TimeTracking Time Tracking]<br>
+  * [BugTrackingTools Bug Tracking Tools]<br>
+  * [SourceControl Source Control]<br>
+  * [TimeTracking Time Tracking]<br>
 
 == Reference ==
-  *Gregs PHD [worksite:/thesis.pdf thesis]<br>
-  *[worksite:/OMG UML.pdf The UML Definition]<br>
-  *[http://java.sun.com/docs/codeconv/CodeConventions.pdf Java Coding Standards]<br>
-  *[http://gpme.anu.edu.au/gpme GPME]<br>
+  * Gregs PHD [worksite:/thesis.pdf thesis]<br>
+  * [worksite:/OMG UML.pdf The UML Definition]<br>
+  * [http://java.sun.com/docs/codeconv/CodeConventions.pdf Java Coding Standards]<br>
+  * [http://gpme.anu.edu.au/gpme GPME]<br>
 
 == Tutorials ==
 
