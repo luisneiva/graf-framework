@@ -6,8 +6,8 @@ This wiki was designed in Google Chrome Browser, there are some formatting issue
 
 Welcome to the GRAF 2010 project wiki.
 
-For a brief description of this years project:
-  * http://cs.anu.edu.au/student/comp3500/local_docs/projects/xtumlReferenceAnimator.pdf
+For a brief description of this years [http://cs.anu.edu.au/student/comp3500/local_docs/projects/xtumlReferenceAnimator.pdf project].
+
 
 === Research ===
 [BugTrackingTools Bug Tracking Tools]<br>
