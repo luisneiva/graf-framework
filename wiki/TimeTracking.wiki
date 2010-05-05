@@ -1,0 +1,16 @@
+A Time Tracker will be used by our project management to record progress in the project as well as team and client meeting arrangements. It could be in the form of spreadsheets or GPME. The main functionalities are the following:
+  * Define project domain, scope and requirements
+  * Create tasks categories
+  * Track time and expense towards projects and clients
+  * Track overall progress and track time spent in each area
+  * Easily track billable and non-billable time
+  * Choose an approval path that fits our needs
+  * Full and limited access user support
+  * Track and manage the entire team's time
+Available tool at ANU: GPME
+  * http://gpme.anu.edu.au/gpme/?q=login
+  * ANU School of Computer Science in-house developed tool
+Other options:
+  * [http://www.aceproject.com/ ACEProject:]
+  * DOVICO Timesheet: http://www.dovico.com/
+  * Comparison of time tracking software: http://en.wikipedia.org/wiki/Comparison_of_time_tracking_software
