@@ -1,0 +1,18 @@
+#Information on Source Control
+
+== Source Control ==
+
+Subversion (SVN)
+* Many readily available GUI's (Go TortoiseSVN)
+* Platform portable
+* Already available
+* 2500 students (all of us?) have already used SVN
+* Access to ANU SVN for all relevant parties is already there
+
+== Some random web pages i found ==
+  * [http://wiki.apidesign.org/wiki/Mercurial_vs._Subversion Mercurial vs SVN example]
+  *[http://seeknuance.com/2008/07/06/mercurial-vs-subversion/ Small developer picking Source Control Tool (bit old but can see the thought process)]
+  * Huge table with lots of info about Bazaar, CVS, Git, Mercurial and SVN is [http://versioncontrolblog.com/comparison/Bazaar/CVS/Git/Mercurial/Subversion/index.html here].
+
+== Final decision ==
+As an SVN server has been provided to us by the ANU, GRAF 2010 will be using that for all source control operations
