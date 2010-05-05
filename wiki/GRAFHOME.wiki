@@ -1,5 +1,5 @@
 #sidebar TableOfContents
-=+ Introduction ==
+== Introduction ==
 
 Welcome to the GRAF 2010 project wiki.
 
