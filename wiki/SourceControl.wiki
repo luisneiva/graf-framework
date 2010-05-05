@@ -7,7 +7,9 @@ Subversion (SVN)
   * [http://cs.anu.edu.au/students/comp2500 COMP2500 students] (all of us?) have already used SVN
   * Access to ANU SVN for all relevant parties is already there
 
+
 Mercurial
+
 
 CVS
   * Succeeded by SVN
