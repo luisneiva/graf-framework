@@ -11,6 +11,6 @@ Available tool at ANU: GPME
   * http://gpme.anu.edu.au/gpme/?q=login
   * ANU School of Computer Science in-house developed tool
 Other options:
-  * [http://www.aceproject.com/ ACEProject:]
-  * DOVICO Timesheet: http://www.dovico.com/
-  * Comparison of time tracking software: http://en.wikipedia.org/wiki/Comparison_of_time_tracking_software
+  * [http://www.aceproject.com/ ACEProject]
+  * [http://www.dovico.com/ DOVICO Timesheet]
+  * [http://en.wikipedia.org/wiki/Comparison_of_time_tracking_software Comparison of time tracking software]
