@@ -1,11 +1,11 @@
 Information on various methods of source control that were considered for use.
 
 Subversion (SVN)
-  * Many readily available GUI's (Go TortoiseSVN)
+  * Many readily available GUI's (e.g. TortoiseSVN)
   * Platform portable
-  * Already available
+  * Project repository already setup
   * [http://cs.anu.edu.au/students/comp2500 COMP2500 students] (all of us?) have already used SVN
-  * Access to ANU SVN for all relevant parties is already there
+  * Access to ANU SVN for all relevant parties already exists
 
 === Some random web pages related to source control ===
   * Mercurial vs SVN [http://wiki.apidesign.org/wiki/Mercurial_vs._Subversion example]
