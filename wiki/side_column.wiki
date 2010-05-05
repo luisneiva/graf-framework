@@ -1,9 +1,9 @@
 ==== Research====
 
 [Graphs] <br>
-[BugTrackingTools Bug Tracking Tools]<br> 2010 - alliance transfer
-[SourceControl Source Control]<br> 2010 - alliance transfer
-[TimeTracking Time Tracking]<br> 2010 - alliance transfer
+_2010 - alliance transfer_ [BugTrackingTools Bug Tracking Tools]<br>
+_2010 - alliance transfer_ [SourceControl Source Control]<br>
+_2010 - alliance transfer_ [TimeTracking Time Tracking]<br> 
 
 ==== Approaches, Decisions Made, and Pending Problems====
 
