@@ -1,6 +1,6 @@
 _Author: Cameron Chisholm_
 
-Last year (2009) the microwave model (linkify later) used to demonstrate the progress the team had made with GRAF was created by manually editing an XML tree. This is a time consuming process. As GRAF will be hopefully demonstrating multiple models this year a semi(or ideally wholly) automated process to produce UML models in XMI is required.
+Last year (2009) the microwave model (linkify later) used to demonstrate the progress the team had made with GRAF was created by manually editing an XML tree. This is a time consuming process. As GRAF will be hopefully demonstrating multiple models this year a semi(or ideally wholly) automated process to produce models in XMI is required.
 
 The tools investigated include:
 
@@ -8,7 +8,7 @@ The tools investigated include:
 BOUML
   * Less user friendly than other tools
 ARGOUML
-  * XMI files that are output
+  * XMI files that are output are not specific to Eclipse
 Visual Paradigm SDE Community Edition
   * Lacks the XMI output required to feed models into GRAF
   * Is available as an Eclipse plugin that allows the editing of UML models graphically
@@ -19,7 +19,7 @@ Enterprise Architect
   * Requires an Eclipse plugin as standard edition outputs XMI files that are not specific to Eclipse (unsure if this plugin would even allow this)
 
 Visual Paradigm SDE
-  * Modellers edition required to 
+  * Modellers edition required to output XMI files
 
 == What we ended up with ==
 
