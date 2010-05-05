@@ -2,6 +2,8 @@
 
 [Graphs] <br>
 [BugTrackingTools Bug Tracking Tools]<br>
+[SourceControl Source Control]<br>
+[TimeTracking Time Tracking]<br>
 
 ==== Approaches, Decisions Made, and Pending Problems====
 
