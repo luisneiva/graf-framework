@@ -1,0 +1,76 @@
+#labels Phase-Requirements
+# 
+= Bug tracking tools =
+
+This is a dot-point comparison of some bug tracking tools which we might consider using. It is obviously an incomplete list - for a more detailed comparison, see http://en.wikipedia.org/wiki/Comparison_of_issue_tracking_systems .
+
+In summary:
+* Bugzilla is a well-established product with lots of features but an awkward user interface;
+* Trac is 'lightweight' with fewer features and good SVN integration;
+* JIRA is a good tool but requires a license;
+* Mantis has lots of features and a simple user interface, and is already known to the team;
+* Eventum is also a well-established product but seems to have a reputation for complex administration. 
+
+=== Bugzilla ===
+* well known
+* open source (based on UNIX/LINUX)
+* 'mature', 'feature rich'
+* good for large projects, and can handle multiple projects
+* powerful and flexible
+* relatively simple bug entry with lots of information fields
+* requires verification of fixes
+* long, error-prone installation
+* hard-coded workflow
+* ugly and convoluted (but functional) user interface
+
+* Perl, mySQL or PostgreSQL, and a web server
+
+=== Trac ===
+* lightweight
+* integration with SVN - allows direct browsing and referencing of repositories
+* open source
+* project overview features such as timelines
+* simple ticket creation
+* easy to use?
+* relatively simple installation?
+* fewer features than Bugzilla
+* limited reporting
+* no fix verification in workflow
+	 
+* Python, mySQL or PostgreSQL or SQLite. Can run as a stand-alone server or be installed on a web server
+
+=== JIRA ===
+* easy installation - can use its own or other databases
+* good, intuitive user interface
+* useful predefined news and search - simpler than Bugzilla
+* good for large and multiple projects
+* customisable, with lots of features
+
+* commercial - license costs $1,200 to $4,800 (may offer free licenses for open source projects)
+
+=== Mantis ===
+* open source
+* runs on windows, linux and macOS
+* long install process (but relatively simple?)
+* lots of features, simple interface
+* reports exported in Excel and MSWord
+* easy admin
+* no client installation
+* has fix validation
+* ... already known to team
+
+* PostgreSQL, MySQL Server and MySQL with web-based IIS or Apache server 
+
+=== Eventum ===
+* time-management feature
+* open source
+* good community support (used by mySQL team)
+* complex administration
+* annoying setup process - no default priority codes or issue types
+* full PHP application
+* runs on Apache or IIS and MySQL
+
+* MySQL, Apache/IIS with PHP installed
+
+== Final Decision ==
+It was decided to use the Google Code project's tracker to keep a record of issues encountered. This negates the need to set up, maintain and administrate a new system. This will require all new project members to be added into the project. 
