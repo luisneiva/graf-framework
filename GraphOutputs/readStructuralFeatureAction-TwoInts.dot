@@ -1,0 +1,15 @@
+digraph readStructuralFeatureAction_TwoInts {
+	"?readFeatureOutput" -> "OutputPin" [label="i"]
+	"?readStructuralFeature" -> "?readFeatureOutput" [label="result"]
+	"?readStructuralFeature" -> "ReadStructuralFeatureAction" [label="i"]
+	"?readStructuralFeature" -> "?theFeature" [label="structuralFeature"]
+	"?readStructuralFeature" -> "?selfActionInputPin" [label="object"]
+	"?newStateBehaviour" -> "?instance" [label="host"]
+	"?instance" -> "?newStateBehaviour" [label="execution"]
+	"?newStateBehaviour" -> "?instance2" [label="?selfPin"]
+	"?instance2" -> "?feature" [label="?theFeature"]
+	"?selfActionInputPin" -> "?selfRead" [label="fromAction"]
+	"?selfRead" -> "?selfPin" [label="result"]
+	"?newStateBehaviour" -> "?feature" [label="?readFeatureOutput", color="green"]
+	"?newStateBehaviour" -> "?readStructuralFeature" [label="executable", color="blue"]
+}

@@ -346,4 +346,25 @@ public class ListGraph extends Graph {
 
 		return false;
 	}
+	
+	/**
+	 * Checks whether the graph contains the specified edge
+	 * @param edge the edge to be checked
+	 * @return true if the graph contains an edge with the same name, source and target as input
+	 */
+	public boolean containsThisEdge(Arc edge) {
+		
+		String name = getName(edge);
+		String source = getName(edge.getSource());
+		String target = getName(edge.getTarget());
+		
+		for(Arc arc : getArcsList()) {
+			if (getName(arc).equals(name) 
+					&& getName(arc.getSource()).equals(source)
+					&& getName(arc.getTarget()).equals(target)) {
+				return true;
+			}
+		}
+		return false;
+	}
 }
