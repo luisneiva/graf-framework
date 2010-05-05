@@ -2,7 +2,7 @@
 #sidebar TableOfContents
 == Introduction ==
 
-This wiki was designed in Google Chrome Browser, there are some formatting issues in Internet Explorer 8.
+This wiki was designed in the Google Chrome web browser, there are some formatting issues in Internet Explorer 8.
 
 Welcome to the GRAF 2010 project wiki.
 
