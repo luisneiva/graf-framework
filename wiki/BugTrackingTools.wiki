@@ -1,11 +1,11 @@
 This is a dot-point comparison of some bug tracking tools which we might consider using. It is obviously an incomplete list - for a more detailed comparison, see [http://en.wikipedia.org/wiki/Comparison_of_issue_tracking_systems this website].
 
 In summary:
-* Bugzilla is a well-established product with lots of features but an awkward user interface; 
-* Trac is 'lightweight' with fewer features and good SVN integration;
-* JIRA is a good tool but requires a license;
-* Mantis has lots of features and a simple user interface, and is already known to the team;
-* Eventum is also a well-established product but seems to have a reputation for complex administration. 
+*  Bugzilla is a well-established product with lots of features but an awkward user interface; 
+*  Trac is 'lightweight' with fewer features and good SVN integration;
+*  JIRA is a good tool but requires a license;
+*  Mantis has lots of features and a simple user interface, and is already known to the team;
+*  Eventum is also a well-established product but seems to have a reputation for complex administration. 
 
 === Bugzilla ===
 * well known
