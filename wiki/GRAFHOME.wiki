@@ -1,8 +1,30 @@
 = Introduction =
 
-Welcome to the 2010 GRAF project wiki
+Welcome to the [http://cs.anu.edu.au/student/comp3500/local_docs/projects/xtumlReferenceAnimator.pdf2010 GRAF project] wiki
 
 == Research ==<br>
 [BugTrackingTools Bug Tracking Tools]<br>
 [SourceControl Source Control]<br>
-[TimeTracking Time Tracking]<br
+[TimeTracking Time Tracking]<br>
+
+== Reference ==
+Gregs PHD [link:The Meaning of UML Models|worksite:/thesis.pdf thesis]<br>
+[worksite:/OMG UML.pdf The UML Definition]<br>
+[http://java.sun.com/docs/codeconv/CodeConventions.pdf Java Coding Standards]<br>
+[http://gpme.anu.edu.au/gpme GPME]<br>
+
+//* [General Rules in Regards to Implementation]
+//* [Models]
+//* [FAQ]
+//* GRAF application reference
+//** [Framework prerequisites|GRAF User Requirements]
+//** [Graph transformation step-through]
+//** [Implemented graph transformation rules]
+
+== Tutorials ==
+
+== Project Documentation ==
+
+== Project Review Documents ==
+
+== Development Pages ==
