@@ -16,8 +16,8 @@ For a brief description of this years project:
 [ModelTools Possible tools to produce models for GRAF]<br>
 
 === Reference ===
-Gregs PHD [worksite:/thesis.pdf thesis]<br>
-[worksite:/OMG UML.pdf The UML Definition]<br>
+Gregs PHD [worksite:/thesis.pdf thesis] Ask Greg if we can put it up here<br> 
+[http://www.omg.org/spec/UML/2.2/ The UML 2.2 Definition] <br>
 [http://java.sun.com/docs/codeconv/CodeConventions.pdf Java Coding Standards]<br>
 [http://gpme.anu.edu.au/gpme GPME]<br>
 
