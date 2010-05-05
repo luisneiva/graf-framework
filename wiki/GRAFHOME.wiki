@@ -1,5 +1,8 @@
+#labels Featured
 #sidebar TableOfContents
 == Introduction ==
+
+This wiki was designed in Google Chrome Browser, there are some formatting issues in Internet Explorer 8.
 
 Welcome to the GRAF 2010 project wiki.
 
@@ -10,6 +13,7 @@ For a brief description of this years project:
 [BugTrackingTools Bug Tracking Tools]<br>
 [SourceControl Source Control]<br>
 [TimeTracking Time Tracking]<br>
+[ModelTools Possible tools to produce models for GRAF]<br>
 
 === Reference ===
 Gregs PHD [worksite:/thesis.pdf thesis]<br>
