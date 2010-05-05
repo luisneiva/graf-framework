@@ -1,6 +1,3 @@
-# 
-= Bug tracking tools =
-
 This is a dot-point comparison of some bug tracking tools which we might consider using. It is obviously an incomplete list - for a more detailed comparison, see [http://en.wikipedia.org/wiki/Comparison_of_issue_tracking_systems this website].
 
 In summary:
