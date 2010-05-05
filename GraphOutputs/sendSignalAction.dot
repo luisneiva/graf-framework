@@ -41,7 +41,7 @@ digraph sendSignalAction {
 	"?actionInputPin" -> "ActionInputPin" [label="i"]
 	"?actionInputPin" -> "?action" [label="fromAction"]
 	"?action" -> "?actionOutputPin" [label="result"]
-	"?sendSignal" -> "?actionInputPin" [label="target"]
+	"?sendSignal" -> "?actionInputPin" [label="target", color="green"]
 	"?sendSignal" -> "SendSignalAction" [label="i"]
 	"?instanceActivity" -> "Activity" [label="i"]
 	"?instanceState" -> "?instanceActivity" [label="entry"]
@@ -64,5 +64,6 @@ digraph sendSignalAction {
 	"#c1" [color="green", fontcolor="green"]
 	"#c1" -> "?instance" [label="sender", color="green"]
 	"#c1" [color="green", fontcolor="green"]
+	"?sendSignal" -> "?actionInputPin" [label="?target", color="blue"]
 	"?newStateBehavior" -> "?sendSignal" [label="executable", color="blue"]
 }

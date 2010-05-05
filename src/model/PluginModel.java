@@ -69,7 +69,7 @@ public class PluginModel {
 		modeltograph = ModelToGraphFactory.createModelToGraph();
 		graphtomodel = GraphToModelFactory.createGraphToModel();
 		graphTransformer = new AGGTransformer(gtsRulesPath, gtsRulesSeqPath);
-// 		Uncomment this to generate rule .dot files on setup
+// 		Uncomment the following to generate rule .dot files on setup
 //		graphTransformer.outputRulesAsDot(this.graphOutputsPath);
 	}
 

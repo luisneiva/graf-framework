@@ -399,10 +399,8 @@ public class AGGTransformer {
 			while(nac.hasMoreElements()) {
 				condition = new ListGraph(nac.nextElement().getImage());
 				for (Arc edge : condition.getArcsList()) {
-					if (!rightGraph.containsThisEdge(edge)) {
-						dot += "\t\"" + ListGraph.getName(edge.getSource()) + "\" -> \"" + ListGraph.getName(edge.getTarget()) +
-						"\" [label=\"" + ListGraph.getName(edge) + "\", color=\"red\"]\n";
-					}
+					dot += "\t\"" + ListGraph.getName(edge.getSource()) + "\" -> \"" + ListGraph.getName(edge.getTarget()) +
+					"\" [label=\"" + ListGraph.getName(edge) + "\", color=\"red\"]\n";
 				}
 			}
 			dot += "}\n";
