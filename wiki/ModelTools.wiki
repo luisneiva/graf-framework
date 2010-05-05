@@ -7,12 +7,15 @@ The tools investigated include:
 === Free ===
 BOUML
   * Less user friendly than other tools
+  * Allows for Eclipse specific output format but State Diagrams don't correctly nest with Classes creating an error when GRAF tries to load the .uml file
 ARGOUML
   * XMI files that are output are not specific to Eclipse
 Visual Paradigm SDE Community Edition
   * Lacks the XMI output required to feed models into GRAF
   * Is available as an Eclipse plugin that allows the editing of UML models graphically
 Topcased
+  * Allows for output in Eclipse specific format
+  * 
 
 === Paid ===
 Enterprise Architect
