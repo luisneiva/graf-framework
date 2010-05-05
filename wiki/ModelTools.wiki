@@ -2,6 +2,8 @@ _Author: Cameron Chisholm_
 
 Last year (2009) the microwave model (linkify later) used to demonstrate the progress the team had made with GRAF was created by manually editing an XML tree. This is a time consuming process. As GRAF will be hopefully demonstrating multiple models this year a semi(or ideally wholly) automated process to produce models in XMI is required.
 
+The ideal tool will output the XMI in a format that GRAF will recognise - requires xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" or xmlns:uml="http://www.eclipse.org/uml2/2.1.1/UML". 
+
 The tools investigated include:
 
 === Free ===
