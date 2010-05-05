@@ -7,13 +7,6 @@ Subversion (SVN)
   * [http://cs.anu.edu.au/students/comp2500 COMP2500 students] (all of us?) have already used SVN
   * Access to ANU SVN for all relevant parties is already there
 
-<br>
-Mercurial
-<br>
-
-CVS
-  * Succeeded by SVN
-
 === Some random web pages related to source control ===
   * Mercurial vs SVN [http://wiki.apidesign.org/wiki/Mercurial_vs._Subversion example]
   * [http://seeknuance.com/2008/07/06/mercurial-vs-subversion/ Small developer picking Source Control Tool (bit old but can see the thought process)]
