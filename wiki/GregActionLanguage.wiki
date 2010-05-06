@@ -12,7 +12,7 @@ So, to solve the textual UML action language problem, we need a grammar for the 
  
 == EMF UML Implementation ==
  
-You are already using this, and I guess you have seen the wiki http://wiki.eclipse.org/MDT-UML2<br>
+You are already using this, and I guess you have seen the [http://wiki.eclipse.org/MDT-UML2 wiki] <br>
 
 As I mentioned on the phone, you can actually call this stuff using Java, and create or edit a model by making calls to its API.  (I guess that's how the Eclipse UI for it does it huh?)  So, if we had a grammar coded up in JavaCC, we could put these kinds of calls inside the {braces} to say what the text form action language means, in terms of UML Actions.  The following tutorial has examples of using the API to create and manipulate models.<br>
 
