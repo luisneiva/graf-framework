@@ -3,9 +3,9 @@
 First, you may not know what a parser/generator is, so, I'm attaching an example I've recently worked on.  The parser is for a language called Racer (a description logic reasoner), and I've attached a silly example input file.  See RacerParser.y attached for the grammar.  This gets run through a parser-generator called Happy, which generates Haskell code for a parser.  I'm going to talk about the Happy code, but I'll be explaining what the generated Haskell code does.  There are similar parser generator tools for C (yacc) and Java ([https://javacc.dev.java.net/ JavaCC], was used by the eLEMenator project). <br>
 
 The text input first goes through a lexer or "tokenizer", which breaks into words or "tokens".  You will see a list of tokens for Racer near the top of RacerParser.y.  The important stuff in there all follows the same format, which is syntax on the left, semantics on the right, in {braces}. So for example, the character '(' means the Haskell value (of a type I made up) Punct '('. <br>
- 
+<br> 
 After the %% are the grammar rules, and the same kind of thing is going on here.  For this particular parser, the *value* of a racer input file is a list of Haskell values, of a type that I defined for Racer statements.  Scroll down a bit and you will see a rule for "statement", and a line of that rule for "IMPLIES" statements, which you can see examples of in test.racer.  The lower case bits (eg concept) come from another rule, which has recognised some of the input, and given it a value.  That value is accessed in the right-hand-side semantic code as $3 or $5 or whatever, according to what position it occurs in in the rule line. <br>
- 
+<br> 
 After the grammar rules is just a bunch of Haskell code to support it, which the generator throws in with the generated code. <br>
  
 So, to solve the textual UML action language problem, we need a grammar for the textual language, and we need to be able to write "semantics" that are actual UML Actions that can be added on to a UML model. <br>
