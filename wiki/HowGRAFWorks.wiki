@@ -38,9 +38,9 @@ A system state is a combination of model, instance and metamodel (eg. UML). From
 GRAF represents the system state internally as one gigantic graph. GRAF also provides a graphical representation (an object diagram annotated with state information) to display to the user.
 
 From a system state it is possible to transition to another system state. There are three ways to transition:
-  = Execute an action (click on the action)
-  = Accept an internal event (click on the event)
-  = Accept an external event (right click on an object and choose an event to send)
+  * Execute an action (click on the action)
+  * Accept an internal event (click on the event)
+  * Accept an external event (right click on an object and choose an event to send)
 
 When this happens the graph behind the scenes is transformed and a new object diagram GUI is generated and the process starts again.
 
