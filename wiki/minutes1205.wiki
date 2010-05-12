@@ -9,7 +9,7 @@ Duration: 1 hour
 == Progress Reports ==
 
   * Hamish - finished Vision.
-  * Alice - finished AddStructuralFeature rule.
+  * Alice - finished !AddStructuralFeature rule.
   * Cameron - investigated TextUML and Google Code wiki.
   * Frank - worked on GUI.
 
@@ -21,7 +21,7 @@ Duration: 1 hour
 
 == Assigned Tasks ==
 
-  * Stephen - Try to get a response from Kennedy Carter and try and get a trial version of PathMate from Pathfinder.
+  * Stephen - Try to get a response from Kennedy Carter and try and get a trial version of !PathMate from Pathfinder.
   * Alice - Follow up the defects discovered by Hamish. Work out what is happening in terms of graphs that is causing the defect.
   * Frank - Finish the GUI work. Then, investigate the TE00 model.
   * Cameron - Download Rhapsody trial and get it working and animate a model in it. Conclude textUML investigation. Put up a list of all attempted UML tools when looking for an action language editor.
