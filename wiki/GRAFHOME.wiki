@@ -15,15 +15,18 @@ For a brief description of this years project go [http://cs.anu.edu.au/student/c
 [SourceControl Source Control]<br>
 [TimeTracking Time Tracking]<br>
 [ModelTools Possible tools to produce models for GRAF]<br>
-[GregActionLanguage Gregs thoughts on Action Language]<br>
+[GregActionLanguage Greg's thoughts on Action Language]<br>
+[DecisionBPMN Decision on UML over BPMN]<br>
+[ModelAnim Other UMLAnimators]<br>
 
 === Reference ===
 Gregs PHD [worksite:/thesis.pdf thesis] Ask Greg if we can put it up here<br> 
 [http://www.omg.org/spec/UML/2.2/ The UML 2.2 Definition] <br>
 [http://java.sun.com/docs/codeconv/CodeConventions.pdf Java Coding Standards]<br>
 [http://gpme.anu.edu.au/gpme GPME]<br>
+[Models]<br>
 ==== GRAF ====
-[HowGRAFWorks How GRAF Works]
+[HowGRAFWorks How GRAF Works]<br>
 
 === Tutorials ===
 
