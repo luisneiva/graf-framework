@@ -1,6 +1,6 @@
 _Author: Cameron Chisholm_
 
-Last year (2009) the microwave model (linkify later) used to demonstrate the progress the team had made with GRAF was created by manually editing an XML tree. This is a time consuming process. As GRAF will be hopefully demonstrating multiple models this year a semi(or ideally wholly) automated process to produce models in XMI is required.
+Last year (2009) the microwave model (linkify later) was used to demonstrate the progress the team had made. It was created by manually editing an XML tree. This is a time consuming process. As GRAF will hopefully be demonstrating multiple models this year a semi(or ideally wholly) automated process to produce models in XMI is required.
 
 The ideal tool will output the XMI in a format that GRAF will recognise - requires xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" or xmlns:uml="http://www.eclipse.org/uml2/2.1.1/UML". 
 
@@ -17,16 +17,19 @@ Visual Paradigm SDE Community Edition
   * Is available as an Eclipse plugin that allows the editing of UML models graphically
 Topcased
   * Allows for output in Eclipse specific format
-  * 
+  * No visual component - can use with Visual Paradigm to provide this functionality
 
 === Paid ===
 Enterprise Architect
   * Requires an Eclipse plugin as standard edition outputs XMI files that are not specific to Eclipse (unsure if this plugin would even allow this)
+  * Doesnt correctly nest state machines in classes
 
 Visual Paradigm SDE
-  * Modellers edition required to output XMI files
+  * Modellers edition outputs XMI files
 
-== What we ended up with ==
+Omondo UML
+
+== Conclusion ==
 
 A combination of Visual Paradigm SDE Community Edition Eclipse plugin and Topcased allows for the creation of UML models and their associated State Diagrams in a format allows GRAF to display the classes and their associated attributes. Unfortunately, no solution that allows for action language to be entered directly into the State Diagrams was found.
  
