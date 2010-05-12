@@ -8,7 +8,7 @@ This wiki was designed in the Google Chrome web browser, there are some formatti
 
 For a brief description of this years project go [http://cs.anu.edu.au/student/comp3500/local_docs/projects/xtumlReferenceAnimator.pdf here].
 
-[Minutes and agendas]<br>
+[Minutes Minutes and agendas]<br>
 
 === Research ===
 [BugTrackingTools Bug Tracking Tools]<br>
