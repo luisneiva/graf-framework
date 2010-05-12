@@ -10,14 +10,17 @@ The tools investigated include:
 BOUML
   * Less user friendly than other tools
   * Allows for Eclipse specific output format but State Diagrams don't correctly nest with Classes creating an error when GRAF tries to load the .uml file
+  * Unable to input action language
 ARGOUML
   * XMI files that are output are not specific to Eclipse
 Visual Paradigm SDE Community Edition
   * Lacks the XMI output required to feed models into GRAF
   * Is available as an Eclipse plugin that allows the editing of UML models graphically
+  * Unable to input action language
 Topcased
   * Allows for output in Eclipse specific format
   * No visual component - can use with Visual Paradigm to provide this functionality
+  * Unable to input action language
 
 === Paid ===
 Enterprise Architect
