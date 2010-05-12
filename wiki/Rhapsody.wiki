@@ -1,3 +1,1 @@
-Rational Rhapsody by IBM
-
-[http://www-01.ibm.com/software/awdtools/rhapsody/ Rational Rhapsody] is a 700mb download. The free fully featured trial version is valid for 30 days from activation. An IBM ID (free but they want your personal details, student option is available) is required to download this software. The download server is a bit on the slow side (~75kbsec) for a 4 hour total download time.  
+[http://www-01.ibm.com/software/awdtools/rhapsody/ Rational Rhapsody] by IBM is a 700mb download. The free fully featured trial version is valid for 30 days from activation. An IBM ID (free but they want your personal details, student option is available) is required to download this software. The download server is a bit on the slow side (~75kbsec) for a 4 hour total download time.  
