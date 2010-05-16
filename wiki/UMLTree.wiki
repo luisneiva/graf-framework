@@ -44,3 +44,53 @@ The action nodes are connected by !ActionInputPins. I'm not sure what they do ex
 || !ReadStructuralFeatureAction || Used to read links, attributes to modify etc ||
 || !SendSignalAction || Used only in generate x to y type statements ||
 || !AddStructuralFeatureAction || Used in any kind of arithmetic eg. x++ but could be used for other things? ||
+
+= List of UML Actions =
+
+These are most of the actions listed in the UML definition. Some of these actions might be generalisations of other actions, which means we don’t need to implement them.
+
+|| Section in UML Definition and Name || Status ||
+|| 11.3.1 !AcceptCallAction || Research needed || 
+|| 11.3.2 !AcceptEventAction || DONE || 
+|| 11.3.5 !AddStructuralFeatureValueAction || DONE ||  
+|| 11.3.6 !AddVariableValueAction || Research needed ||  
+|| 11.3.7 !BroadcastSignalAction || Research needed ||  
+|| 11.3.8 !CallAction || Research needed || 
+|| 11.3.9 !CallBehaviorAction || Research needed ||  
+|| 11.3.10 !CallOperationAction || Research needed ||  
+|| 11.3.11 !ClearAssociationAction || Research needed ||  
+|| 11.3.12 !ClearStructuralFeatureAction || Research needed ||  
+|| 11.3.13 !ClearVariableAction || Research needed || 
+|| 11.3.14 !CreateLinkAction || Research needed ||  
+|| 11.3.15 !CreateLinkObjectAction || Research needed ||  
+|| 11.3.16 !CreateObjectAction || Research needed ||  
+|| 11.3.17 !DestroyLinkAction || Research needed ||  
+|| 11.3.18 !DestroyObjectAction || Research needed ||  
+|| 11.3.20 !InvocationAction || Research needed ||  
+|| 11.3.21 1LinkAction || Research needed ||  
+|| 11.3.26 !OpaqueAction || Research needed ||  
+|| 11.3.30 !RaiseExceptionAction || Research needed ||  
+|| 11.3.31 !ReadExtentAction || Research needed ||  
+|| 11.3.32 !ReadIsClassifiedObjectAction || Research needed ||  
+|| 11.3.33 !ReadLinkAction || Research needed ||  
+|| 11.3.34 !ReadLinkObjectEndAction || Research needed ||  
+|| 11.3.35 !ReadLinkObjectEndQualifierAction || Research needed ||  
+|| 11.3.36 !ReadSelfAction || DONE ||  							
+|| 11.3.37 !ReadStructuralFeatureAction || DONE || 
+|| 11.3.38 !ReadVariableAction || Research needed ||  
+|| 11.3.39 !ReclassifyObjectAction || Research needed ||  
+|| 11.3.40 !ReduceAction || Research needed ||  
+|| 11.3.41 !RemoveStructuralFeatureValueAction || Research needed ||  
+|| 11.3.42 !RemoveVariableValueAction || Research needed ||  
+|| 11.3.43 !ReplyAction || Research needed ||  
+|| 11.3.44 !SendObjectAction || Research needed ||  
+|| 11.3.45 !SendSignalAction || DONE || 
+|| 11.3.46 !StartClassifierBehaviorAction || Research needed ||  
+|| 11.3.47 !StructuralFeatureAction || Research needed ||  
+|| 11.3.48 !TestIdentityAction || Research needed ||  
+|| 11.3.49 !UnmarshallAction || Research needed ||  
+|| 11.3.51 !ValueSpecificationAction || Research needed ||  
+|| 11.3.52 !VariableAction || Research needed ||  
+|| 11.3.53 !WriteLinkAction || Research needed ||  
+|| 11.3.54 !WriteStructuralFeatureAction || Research needed ||  
+|| 11.3.55 !WriteVariableAction || Research needed ||  
