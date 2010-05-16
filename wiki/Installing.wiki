@@ -1,1 +1,18 @@
-Install 
+Install Visual Paradigm Community Edition SDE for Eclipse. Open Eclipse once this is done to check it works.
+
+Install [http://www.topcased.org/ Topcased] org.topcased.sdk-3.3.0.zip by dragging and dropping the downloaded files into the Eclipse plugins directory. 
+
+  * File
+  * New
+  * Project
+  * Expand Topcased
+  * Select Topcased Project
+  * Expand project in project explorer, models folder should appear
+  * Right click the models folder
+  * New
+  * Select UML model with TOPCASED
+  * Name the new model
+  * Open the .umldi file (graphical representation)
+  * You should be able to add classes using the interface presented
+  * To add a state machine double click on the class you want to build one for. A dialog box will appear. Select State Machine Diagram and click ok.
+  * The .uml file with the same name as the .umldi file can be plugged into GRAF
