@@ -30,6 +30,7 @@ Gregs PHD [worksite:/thesis.pdf thesis] Ask Greg if we can put it up here<br>
 [HowGRAFWorks How GRAF Works]<br>
 
 === Tutorials ===
+[Installing Visual Paradigm and Topcased]<br>
 
 === Project Documentation ===
 
