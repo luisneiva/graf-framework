@@ -36,14 +36,14 @@ The action nodes are connected by !ActionInputPins. I'm not sure what they do ex
 ||get x across y; y.attribute++ || 1 !ReadSelfAction ||
 || || 2 !ReadStrucutalFeatureAction (get y link) ||
 || || 3 !ReadStrucutalFeatureAction (get attribute) ||
-|| || 4 !AddStructuralFeatureAction (takes a string expression for the ++) ||
+|| || 4 !AddStructuralFeatureValueAction (takes a string expression for the ++) ||
 
 = How UML Actions correspond to Action Language =
 || UML Action || Example Use ||
 || !ReadSelfAction || (Used in every single action) ||
 || !ReadStructuralFeatureAction || Used to read links, attributes to modify etc ||
 || !SendSignalAction || Used only in generate x to y type statements ||
-|| !AddStructuralFeatureAction || Used in any kind of arithmetic eg. x++ but could be used for other things? ||
+|| !AddStructuralFeatureValueAction || Used in any kind of arithmetic eg. x++ but could be used for other things? ||
 
 = List of UML Actions =
 
