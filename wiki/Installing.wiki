@@ -1,6 +1,6 @@
 Install Visual Paradigm Community Edition SDE for Eclipse. Open Eclipse once this is done to check it works.
 
-Install [http://www.topcased.org/ Topcased] org.topcased.sdk-3.3.0.zip by dragging and dropping the downloaded files into the Eclipse plugins directory. 
+Install [http://www.topcased.org/ Topcased] org.topcased.sdk-3.3.0.zip (a little bit under 30megs) by dragging and dropping the downloaded files into the Eclipse plugins directory. 
 
   * File
   * New
