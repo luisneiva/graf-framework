@@ -23,6 +23,8 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Menu;
+import org.eclipse.swt.widgets.MenuItem;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.part.ViewPart;
 
 import view.contentDrawer.ContentDrawer;
@@ -137,6 +139,65 @@ public class View extends ViewPart {
 	/** Creates the initial view - ie the view upon Animator startup */
 	public void createPartControl(Composite parent) {
 		this.parent = parent;
+		
+		// @author: Frank
+		// Add a menu bar to the top. But, the menu bar does not appear.
+		// Can someone please check this problem? The action listeners below are commented out.
+		// I am not sure which controller class to put them.
+		Menu menuBar, fileMenu, helpMenu;
+		MenuItem fileMenuHeader, helpMenuHeader;
+		MenuItem fileExitItem, fileSaveItem, helpGetHelpItem;
+		Shell sh = parent.getShell();
+		
+		menuBar = new Menu(sh, SWT.BAR);
+		fileMenuHeader = new MenuItem(menuBar, SWT.CASCADE);
+		fileMenuHeader.setText("File");
+
+		fileMenu = new Menu(sh, SWT.DROP_DOWN);
+		fileMenuHeader.setMenu(fileMenu);
+
+		fileSaveItem = new MenuItem(fileMenu, SWT.PUSH);
+		fileSaveItem.setText("Save");
+
+		fileExitItem = new MenuItem(fileMenu, SWT.PUSH);
+		fileExitItem.setText("Exit");
+
+		helpMenuHeader = new MenuItem(menuBar, SWT.CASCADE);
+		helpMenuHeader.setText("Help");
+
+		helpMenu = new Menu(sh, SWT.DROP_DOWN);
+		helpMenuHeader.setMenu(helpMenu);
+
+		helpGetHelpItem = new MenuItem(helpMenu, SWT.PUSH);
+		helpGetHelpItem.setText("Get Help");
+
+//		fileExitItem.addSelectionListener(new SelectionListener() {
+//			public void widgetDefaultSelected(SelectionEvent event) {
+//				sh.close();
+//				d.dispose();
+//			}
+//
+//			public void widgetSelected(SelectionEvent e) {
+//				sh.close();
+//				d.dispose();
+//			}
+//		});
+//		
+//		fileSaveItem.addSelectionListener(new SelectionListener() {
+//			public void widgetDefaultSelected(SelectionEvent e) {
+//			}
+//
+//			public void widgetSelected(SelectionEvent e) {
+//			}			
+//		});
+//		
+//		helpGetHelpItem.addHelpListener(new HelpListener() {
+//			public void helpRequested(HelpEvent e) {
+//			}			
+//		});
+		
+		
+		
 		FigureCanvas canvas = new FigureCanvas(parent);
 		canvas.setLayout(new RowLayout(SWT.VERTICAL));
 
