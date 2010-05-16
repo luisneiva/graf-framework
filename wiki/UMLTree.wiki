@@ -1,0 +1,42 @@
+= What is the Eclipse UML tree? =
+The tree is a file format to save UML diagrams. All types of UML diagrams can be stored in the tree: class, state, object, use case, sequence etc. The advantage of the Eclipse Tree is that you can use it with different Eclipse plugins. You can use one plugin to add a class diagram and then another to add an object diagram for it.
+
+= How the Eclipse UML tree works =
+All nodes contain a type and a large number of properties. Type is important but other than _name_, most of the properties can be ignored. The parent-child relationships of the nodes is the most important piece of information for a certain node.
+
+The tree contains nodes for class diagrams and state machines and basically everything in UML. What interest us is the Actions, because all the other things can be created easily by using other tools, rather than directly editting the tree. In the tree, actions will only occur within _Activity_ subtrees, which usually occur within state machine parts of the tree.
+
+A simple action language statement like _generate cook across cooks_ is represented by a number of nodes (these are UML tree nodes, not to be confused with nodes in a graph).
+
+{{{
+IMPORTANT CLARIFICATION
+
+This document talks about "UML actions" and "Action language"
+Action language refers to the code you see inside boxes in state machines. For example, ords = ords->excluding(o); or generate x across y;
+UML actions refer to the actions defined in part II of the UML definition. For example, ReadStructuralFeatureAction and SendSignalAction.
+UML actions can be thought of as primitives for Action Language.
+
+}}}
+
+== Action nodes ==
+These are a certain type of node in the UML tree. The _generate cook across cooks_ UML action actually contains 3 action nodes: !ReadSelfAction, !ReadStructuralFeatureAction and !SendSignalAction. The actions are embedded within each other. !SendSignalAction is on top. !SendSignalAction calls !ReadStructuralFeatureAction to find out where to send the signal to. !ReadStructuralFeatureAction calls !ReadSelfAction because, for some reason, that's always at the bottom of the call-tree. Also note that in the properties of !SendSignalAction it says what event to send (cook in this case) and in the properties of !ReadStructuralFeatureAction it says what link to follow (cooks in this case).
+
+== Pin nodes ==
+The action nodes are connected by !ActionInputPins. I'm not sure what they do exactly, but you need to put one of them between all action nodes. !OutputPins appear as child nodes of action nodes that have output (eg. !ReadStructuralFeatureAction and !ReadSelfAction but not !SendSignalAction) (ie. anything not at the top of the action node tree I think). There should also be !InputPins, but I've never seen them used.
+
+= How Action Language statements correspond to UML Actions =
+|| Action Language || UML actions ||
+|| get x across y; generate z to x	|| 1 !ReadSelfAction ||
+|| || 2 !ReadStructuralFeatureAction (get y link) ||
+|| || 3 !SendSignalAction (includes z) ||
+||get x across y; y.attribute++ || 1 !ReadSelfAction ||
+|| || 2 !ReadStrucutalFeatureAction (get y link) ||
+|| || 3 !ReadStrucutalFeatureAction (get attribute) ||
+|| || 4 !AddStructuralFeatureAction (takes a string expression for the ++) ||
+
+= How UML Actions correspond to Action Language =
+|| UML Action || Example Use ||
+|| !ReadSelfAction || (Used in every single action) ||
+|| !ReadStructuralFeatureAction || Used to read links, attributes to modify etc ||
+|| !SendSignalAction || Used only in generate x to y type statements ||
+|| !AddStructuralFeatureAction || Used in any kind of arithmetic eg. x++ but could be used for other things? ||
