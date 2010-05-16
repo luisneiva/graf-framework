@@ -1,1 +1,11 @@
-[http://www-01.ibm.com/software/awdtools/rhapsody/ Rational Rhapsody] by IBM _"provides system engineers a collaborative development environment with simulation for early requirements, architecture and behavioral validation, helping communication of complex requirements and trade off analysis of complex systems"_. The free fully featured trial version is valid for 30 days from activation. An IBM ID (free but they want your personal details, student option is available) is required to download this software. The download server is a bit on the slow side (total download = 700mb @ ~75kbsec) making it a 4 hour total download time.  
+[http://www-01.ibm.com/software/awdtools/rhapsody/ Rational Rhapsody] by IBM _"provides system engineers a collaborative development environment with simulation for early requirements, architecture and behavioral validation, helping communication of complex requirements and trade off analysis of complex systems"_. The free fully featured trial version is valid for 30 days from activation. An IBM ID (free but they want your personal details, student option is available) is required to download this software. The download server is a bit on the slow side (total download = 700mb @ ~75kbsec) making it a 4 hour total download time.
+
+The Rational Rhapsody software suite is huge and many different diagrams can be added to models including class diagrams, state diagrams, sequence diagrams, use case diagrams, structure diagrams, package diagrams and more.
+
+Action language uses a C++ compiler. Signal generation is denoted by GEN(signalName);. This only generates signals within a state machine. I am yet to find how to generate signals between state machines.
+
+====The Microwave Model====
+
+I have yet to get the model to animate but the state machines and class diagrams are in. Its once again the action language that is a problem. The help documentation doesn't seem to be too expansive on action language and how to get state machines to interact unfortunately. If signals sent within the state machines are the only type used the model can be built and executed but nothing is demonstrated on the screen.
+
+Currently looking for a training manual for Rational Rhapsody as I have been told most people who end up using it professionally go on a training course to learn about it. 
