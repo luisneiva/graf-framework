@@ -17,7 +17,7 @@ For a brief description of this year's project go [http://cs.anu.edu.au/student/
 [ModelTools Possible tools to produce models for GRAF]<br>
 [GregActionLanguage Greg's thoughts on Action Language]<br>
 [DecisionBPMN Decision on UML over BPMN]<br>
-[ModelAnim Other UMLAnimators]<br>
+[ModelAnim Other UML Animators]<br>
 [UMLTree The Eclipse UML 2 Tree]
 
 === Reference ===
