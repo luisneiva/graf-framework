@@ -15,7 +15,7 @@ http://graf-framework.googlecode.com/files/sendsignaluml.jpg
 {{{
 IMPORTANT CLARIFICATION
 
-This document talks about "UML actions" and "Action language"
+This page talks about "UML actions" and "Action language"
 Action language refers to the code you see inside boxes in state machines. For example, ords = ords->excluding(o); or generate x across y;
 UML actions refer to the actions defined in part II of the UML definition. For example, ReadStructuralFeatureAction and SendSignalAction.
 UML actions can be thought of as primitives for Action Language.
