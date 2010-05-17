@@ -1,6 +1,6 @@
 || Date || Type || Agenda || Minutes ||
 || 12/5 || Mentor || (on alliance) || [minutes1205 Minutes] ||
 || 18/5 || Client || || ||
-|| 18/5 || Team || || ||
+|| 18/5 || Team || [agenda1805 Agenda] || ||
 
 Agendas and minutes from before 12/5/2010 are on the Alliance site.
