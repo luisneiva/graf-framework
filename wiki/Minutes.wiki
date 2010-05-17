@@ -3,4 +3,6 @@
 || 18/5 || Client || || ||
 || 18/5 || Team || [agenda1805 Agenda] || ||
 
-Agendas and minutes from before 12/5/2010 are on the Alliance site.
+Agendas and minutes from before 12/5/2010 are on the Alliance site. <br>
+[agendaTemplate Agenda Template] <br>
+[minutesTemplate Minutes Template] <br>
