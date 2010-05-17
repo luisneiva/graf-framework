@@ -126,7 +126,7 @@ public class View extends ViewPart {
 	//	public void addFileNewListener(SelectionListener sl) {
 	//		fileNewItem.addSelectionListener(sl);
 	//	}
-
+	
 	//	public void addExitListener(SelectionListener sl) {
 	//		fileExitItem.addSelectionListener(sl);
 	//	}
