@@ -1,0 +1,10 @@
+#summary agenda template
+== Meeting title ==
+*Date:*
+<br>*Time:*
+<br>*Location:*
+<br>
+
+=== Agenda Items ===
+  *
+  *
