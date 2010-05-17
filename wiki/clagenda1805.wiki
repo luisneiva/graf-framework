@@ -4,7 +4,7 @@
 *Date:* 17/5/10
 <br>*Time:* 10am
 <br>*Location:* Raj's office
-<br>
+<br>*Duration:* 1 hour
 
 === Agenda Items ===
   * Contacting Raj and Greg when Raj is away
