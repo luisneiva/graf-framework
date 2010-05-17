@@ -2,9 +2,9 @@
 
 = Client Meeting, 12/5/2010 =
 Location: CSIT N110
-Present: James, Oscar, Stephen, Alice, Cameron, Hamish and Frank
-Time: 5pm
-Duration: 1 hour
+<br>Present: James, Oscar, Stephen, Alice, Cameron, Hamish and Frank
+<br>Time: 5pm
+<br>Duration: 1 hour
 
 == Progress Reports ==
 
