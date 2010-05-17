@@ -3,7 +3,7 @@
 *Date:*
 <br>*Time:*
 <br>*Location:*
-<br>
+<br>*Duration:*
 
 === Agenda Items ===
   *
