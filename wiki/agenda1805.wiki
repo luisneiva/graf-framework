@@ -3,7 +3,7 @@
 *Date:* 17/5/10
 <br>*Time:* 5pm
 <br>*Location:* N110
-<br>
+<br>*Duration:* 1 hour
 
 === Agenda Items ===
   * Progress report
