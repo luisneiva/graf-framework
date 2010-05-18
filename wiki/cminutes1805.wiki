@@ -1,0 +1,19 @@
+#summary Minutes
+
+= Client Meeting =
+Location: Raj's office
+<br>Present: Raj, Oscar, Stephen, Alice, Hamish and Frank
+<br>Time: 10am
+<br>Duration: 1 hour
+
+== Things discussed ==
+  * Next week (from 24th) is Raj's last week before he goes away
+  * Could it be possible to get Bridgepoint from Clive?
+  * Eclipse provides the framework for state machine actions yet nobody uses them?
+  * We need to be able to justify why GRAF does state machine behaviour and not class diagram method behaviour
+  * The action language parser/generator will probably be left for next year
+  * No more meetings are scheduled with Raj, but we can organise one next week if needed
+
+== Action items ==
+  * We need to find a new phone to call Greg. There should be one in DCS
+  * By the end of June, all Greg's models shall be entered into GRAF no matter what
