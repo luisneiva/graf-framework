@@ -32,4 +32,8 @@
 	<action name="ReadSelfAction">
 		<rule>readSelfAction</rule>
 	</action>
+	
+	<action name="AddStructuralFeatureValueAction">
+		<rule>addStructuralFeatureValueAction</rule>
+	</action>
 </GTSRules>
