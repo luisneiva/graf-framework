@@ -33,6 +33,7 @@ Gregs PHD [worksite:/thesis.pdf thesis] Ask Greg if we can put it up here<br>
 [Installing Visual Paradigm and Topcased]<br>
 
 === Project Documentation ===
+[Scope Scope]
 
 === Project Review Documents ===
 
