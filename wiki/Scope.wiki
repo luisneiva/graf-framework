@@ -1,0 +1,9 @@
+#summary 2010 scope
+
+= Scope for 2010 =
+  * Add the 4 models from Greg to GRAF by doing the following:
+    * Add graph transformations to correspond to all the actions in the model.
+    * Add other required functionality such as if-statements and ability to deal with ints, strings or booleans.
+    * Create the needed .uml files for the models.
+  * Look for inconsistencies between other UML animators.
+  * Search for contentious models in industry and academia.
