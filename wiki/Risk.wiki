@@ -29,9 +29,14 @@
 || Models' action language statements can't be manually to a uml file || Low || High ||
 
 
+http://graf-framework.googlecode.com/files/Risk-Criteria.jpg <br>
 Only critical and high threat level risks will be mitigated
 
 === Mitigation of critical and high risks ===
+===== The models from Greg can't be entered into GRAF =====
+*Action:* Reduce likelihood, reduce impact <br>
+The team will look for other models that serve the same purpose but are more compatible with GRAF. The team will make it a priority to find out what is needed to add the 4 models so it will become clear how feasible it is.
+
 ===== No action language builder =====
 *Action:* Reduce impact<br>
 The team will make it a priority to determine whether any tool supports easily adding action language commands to a state machine. If none can be found, then we will make it part of the project to develop our own application to do so. GRAF cannot be used without a state machine with action commands and it is unreasonable to expect anyone to seriously use GRAF if they need to manually add each primitive UML action.
