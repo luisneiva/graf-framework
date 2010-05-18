@@ -45,6 +45,7 @@ The action nodes are connected by !ActionInputPins. I'm not sure what they do ex
 || !SendSignalAction || Used only in generate x to y type statements ||
 || !AddStructuralFeatureValueAction || Used in any kind of arithmetic eg. x++ but could be used for other things? ||
 
+[http://books.google.com.au/books?id=wpNgmMG2DvAC&pg=PA323&lpg=PA323&dq=addstructuralfeatureaction&source=bl&ots=DHelR9jzda&sig=CDpHlC4dGvrzGBeVbc5Xb0FZocA&hl=en&ei=JGjyS4f9MNCGkAWx0di7DQ&sa=X&oi=book_result&ct=result&resnum=1&ved=0CBQQ6AEwAA#v=onepage&q=addstructuralfeatureaction&f=false Here] is an example of action language translated to UML actions.
 
 = List of UML Actions =
 
