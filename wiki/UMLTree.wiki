@@ -45,7 +45,11 @@ The action nodes are connected by !ActionInputPins. I'm not sure what they do ex
 || !SendSignalAction || Used only in generate x to y type statements ||
 || !AddStructuralFeatureValueAction || Used in any kind of arithmetic eg. x++ but could be used for other things? ||
 
+
 = List of UML Actions =
+
+= Relevant link =
+This [http://research.cs.queensu.ca/~stl/internal/uml2/unlocked/working/actions/PrioritizingActions_v1.doc link] categorizes the actions really well.
 
 These are most of the actions listed in the UML definition. Some of these actions might be generalisations of other actions, which means we don’t need to implement them.
 
