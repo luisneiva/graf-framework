@@ -1,0 +1,61 @@
+= Risk log =
+|| Risk || Likelihood|| Impact ||
+|| No action language builder || High || High ||
+|| Work to make GRAF useable is unattainable in 2010 || Medium || Low ||
+|| Project scope is unattainable in 2010 || Medium || High ||
+|| Project doesn't meet client's needs || Low || High ||
+|| Latent defects discovered || Medium || Medium ||
+|| If statements or select statements require excessive code rework || Medium || Medium ||
+|| A new version of Eclipse isn't backwards compatible || Medium || Low||
+|| GRAF runs too slowly || Low || Medium ||
+|| Adding new rules requires code change || Medium || Low ||
+|| Can't find anyone locally who will use GRAF || Medium || Low ||
+|| Competing product appears || Very low || Very low ||
+|| Other animators aren't ambiguous || Low || High ||
+|| No tool can be found to instantiate models for GRAF || High || Low ||
+|| Greg can no longer be involved || Medium || High ||
+|| A team member leaves temporarily or permanently || High|| Medium ||
+|| AGG disappears || Low || Low ||
+|| GPME disappears || Low || Medium ||
+|| Google code disappears || Low || High ||
+|| Alliance disappears || Low || High ||
+|| Email history lost in part or entirely || Medium || Low ||
+|| New requirements || Medium || Medium ||
+|| Legal/license problems appear || Low || High ||
+|| ~~There are no free UML animators~~ || ~~Medium~~ || High ||
+|| ~~Contacted stakeholders have no use for GRAF, have no ambiguous models~~ || ~~High~~|| High ||
+|| Space on Google code used up || Low || Medium ||
+|| The models from Greg can't be entered into GRAF || High || High ||
+|| Models' action language statements can't be manually to a uml file || Low || High ||
+
+
+Only critical and high threat level risks will be mitigated
+
+=== Mitigation of critical and high risks ===
+===== No action language builder =====
+*Action:* Reduce impact<br>
+The team will make it a priority to determine whether any tool supports easily adding action language commands to a state machine. If none can be found, then we will make it part of the project to develop our own application to do so. GRAF cannot be used without a state machine with action commands and it is unreasonable to expect anyone to seriously use GRAF if they need to manually add each primitive UML action.
+
+===== Project scope is unattainable in 2010 =====
+*Action:* Reduce probability<br>
+The team will undertake proper estimating and planning so that we can set out to achieve everything we plan to do.
+
+=== Mitigation of risks that used to be critical or high risk ===
+
+===== Project doesn't meet client's needs =====
+*Action:* Reduce probability<br>
+The team will meet with the client fortnightly to discuss the progress of the project.
+
+===== Contacted stakeholders have no use for GRAF, have no ambiguous models =====
+*Action:* Reduce probability/transfer risk<br>
+--First, the team will make it a priority to find out as soon as possible if this will be the case. Second, the team will consider other uses for GRAF and Graph Transformation Theory.--
+This risk did not eventuate Clive Boughton saw the value in GRAF, he had had situations where GRAF would have been beneficial and he would like to use the finished GRAF product. 
+
+===== Work to make GRAF useable is unattainable in 2010 =====
+*Action:* Reduce impact<br>
+~~The team will seek to make connections with interested parties so that someone will continue to work on GRAF after 2010. This may or may not involve having the project run again as an ANU Software Engineering project.~~
+GRAF doesn't have to be _useable_ by 2011. Only the team needs to be able to use it to demonstrate problems in other animators.
+
+===== There are no free UML animators =====
+*Action:* Reduce impact<br>
+The team will look into other ways to demonstrate ambiguities in models. The team will consider other approaches to acquire animators.
