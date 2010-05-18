@@ -1,0 +1,27 @@
+#summary Minutes
+
+= Team Meeting =
+Location: CSIT N110
+<br>Present: Oscar, Stephen, Alice, Hamish, Frank and Cameron
+<br>Time: 5pm
+<br>Duration: 1 hour
+
+== Things discussed ==
+  * Progress Reports
+  * Scope discussion:
+    * Removed publication of GRAF
+    * Removed the testing of models beyond our chosen contentious models
+    * Added add what we need to GRAF to make out contentious models work
+  * Risk Management:
+    * Not being able to add the action language manually
+    * Not being able to add all the models
+    * Running out of code on Google Code
+    * Risk Mitigation
+
+== Action items ==
+  * Alice: continue previous works week
+  * Cameron: Rhapsody investigation and the put model in the PostScript document into GRAF
+  * Frank: Continue model work and GUI work
+  * Hamish: Continue Artisan and previous weeks model work
+  * Stephen and Oscar: Linking State Machine actions and UML actions for invoicer State Machine
+  * All: Use GPME, Commit to Google Code
