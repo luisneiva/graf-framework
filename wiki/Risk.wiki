@@ -27,6 +27,7 @@
 || Space on Google code used up || Low || Medium ||
 || The models from Greg can't be entered into GRAF || High || High ||
 || Models' action language statements can't be manually to a uml file || Low || High ||
+|| The new UML action language syntax, when it comes out, makes our work out of date || Medium || Medium ||
 
 
 http://graf-framework.googlecode.com/files/Risk-Criteria.jpg <br>
