@@ -39,7 +39,7 @@
         <subvertex xmi:type="uml:State" xmi:id="_dzM8xEZ4Ed6JvpGL0b827A" name="Cooking">
           <entry xmi:type="uml:Activity" xmi:id="_kv068H8_Ed6qzudwZW-ZIQ" name="CookingEntry">
             <node xmi:type="uml:AddStructuralFeatureValueAction" xmi:id="_HhUhQFm4Ed-NnOcPv9zCUA" name="cookIncrement" isReplaceAll="true">
-              <nameExpression xmi:id="_HhUhQVm4Ed-NnOcPv9zCUA" name="newTemperature" symbol="++">
+              <nameExpression xmi:id="_HhUhQVm4Ed-NnOcPv9zCUA" name="newTemperature" symbol="+1">
                 <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Expression"/>
               </nameExpression>
               <object xmi:type="uml:ActionInputPin" xmi:id="_HhUhQlm4Ed-NnOcPv9zCUA" name="oldTemperature">

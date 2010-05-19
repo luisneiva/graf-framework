@@ -3,6 +3,9 @@ package model;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
+
 import agg.attribute.facade.impl.DefaultInformationFacade;
 import agg.attribute.handler.AttrHandler;
 import agg.attribute.impl.ValueMember;
@@ -204,21 +207,52 @@ public class ListGraph extends Graph {
 	}
 
 	/**
-	 * Applies generateUniqName() to all nodes in the graph.
+	 * Applies generateUniqName() to all nodes in the graph with
+	 * the # character at the beginning of their name.
+	 * 
+	 * Applies evaluateName() to all nodes in the graph with
+	 * the ## string at the beginning of their name.
 	 * 
 	 * @param graph A graph that is not part of the rule.
 	 */
-	public static void giveAddedNodesUniqueNames(Graph graph) {
+	public static void giveAddedNodesProperNames(Graph graph) {
 		for(Node node : graph.getNodesList()) {
 			try {
 				if(getName(node).substring(0, renameIndicator.length()).equals(renameIndicator)) {
-					generateUniqueName(node);
+					
+					int index1 = renameIndicator.length();
+					int index2 = renameIndicator.length()*2;
+					if(getName(node).substring(index1, index2).equals(renameIndicator)) {
+						evaluateName(node);
+					}						
+					else {
+						generateUniqueName(node);
+					}
 				}
 			} catch(StringIndexOutOfBoundsException sioobe) {
 			}
 		}
 	}
 
+	/**
+	 * Changes the name of the input node or arc.
+	 * The new name should be the solution of the arithmetic
+	 * expression that is the current name of the node.
+	 */
+	private static void evaluateName(GraphObject obj) {
+		String expression = getName(obj).replaceAll(renameIndicator, "");
+		
+		String result = "(parse error in ListGraph.java)";
+		
+		try {
+			result = new ScriptEngineManager().getEngineByExtension("js").eval(expression).toString();
+		} catch (ScriptException e) {
+			e.printStackTrace();
+		}
+		
+		rename(obj, result);
+	}
+	
 	/**
 	 * Changes the name of the input node or arc.
 	 * The new name should be unique in the graph most of the

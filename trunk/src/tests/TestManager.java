@@ -1,7 +1,8 @@
 package tests;
 
-import junit.framework.*;
-import java.io.*;
+import java.io.File;
+
+import junit.framework.TestCase;
 
 /***
  * This test class performs basic system checks.

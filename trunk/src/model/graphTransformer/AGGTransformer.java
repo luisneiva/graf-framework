@@ -339,7 +339,7 @@ public class AGGTransformer {
 					+ " did not match");
 		}
 
-		ListGraph.giveAddedNodesUniqueNames(gg.getGraph());	
+		ListGraph.giveAddedNodesProperNames(gg.getGraph());	
 	}
 
 	/** Outputs dot code for each rule in the GraGra
