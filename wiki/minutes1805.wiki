@@ -19,7 +19,7 @@ Location: CSIT N110
     * Risk Mitigation
 
 == Action items ==
-  * Alice: continue previous works week
+  * Alice: continue previous week's work
   * Cameron: Rhapsody investigation and the put model in the PostScript document into GRAF
   * Frank: Continue model work and GUI work
   * Hamish: Continue Artisan and previous weeks model work
