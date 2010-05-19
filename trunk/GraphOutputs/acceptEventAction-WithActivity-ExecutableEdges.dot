@@ -29,5 +29,5 @@ digraph acceptEventAction_WithActivity_ExecutableEdges {
 	"?instance" -> "?newStateBehavior" [label="execution"]
 	"?action" -> "?activity" [label="activity"]
 	"?newStateBehavior" -> "?action" [label="executable", color="green"]
-	"?newStateBehavior" -> "?action" [label="executable", color="red"]
+	"?newStateBehavior2" -> "?action2" [label="executable", color="red"]
 }
