@@ -1,0 +1,64 @@
+== Decision summary ==
+=== xtUML vs BPMN ===
+==== Introduction ====
+The project description of GRAF stated that _the project is to further develop the GRAF system to handle either a (a subset of) xtUML or a subset of the Business Process Modelling Nota-tion/Language (BPMN/L), which is a UML-like language designed to help model the workflows of businesses._ Naturally, the first important decision for the group was to decide which of these notations to proceed with. The following page summarises the process we went through in choosing between BPMN and xtUML. We considered:
+  * the features and purpose of each notation;
+  * the context in which it is used; and
+  * the likely GRAF extensions for each notation.
+Based on the above information, we evaluated the options based on:
+  * available group resources and experience; and
+  * the overall goals of the project, which include:
+    * having someone use the system;
+    * demonstrating the need for precise semantics in modeling language definitions in a concrete way ie with real examples.
+==== BPMN ====
+===== Features, purpose and context =====
+BPMN stands for Business Process Modeling Notation. BPMN diagrams are designed to be a more intuitive version of UML's activity diagrams, with the overall goal of standardising the notation used by business analysts. Information about a company's business processes can be used to analyse and improve the process, or to provide additional information to the overall enterprise structure. However, BPMN modeling is only concerned with capturing an ordered sequence of business activities and supporting information. That is, only the process is modeled. \
+Another goal of BPMN was to allow direct execution of business process models by a BPMS (Business Process Management System/Suite): {quote}The underlying semantics of the notation facilitate the translation of business level models into executable models that BPM Systems and workflow engines can understand. {quote} BPM Systems are software systems which should allow the modeling and execution of process-based applications, and enable business analytics, content management and collaboration.^^[2|#2]^^ 
+h4 GRAF Extensions
+A threshold question for BPMN GRAF extensions was BPMN would 'fit' the underlying GRAF implementation and purpose. This required BPMN to:
+  * allow step-wise execution;
+  * be non-deterministic (a system state can advance to multiple other system states); and
+  * be based on an informal/unclear definition, that would benefit from a formal definition based on graph-transformation.
+We found that BPMN definitely had the first two qualities, and probably the third. Certainly the official definition of BPMN is in 'plain English', without recourse to formal mathematical theory. We also found instances where different software would generate different executables from the same model, suggesting an insufficient or unclear definition (we also note that this could arise from differences in the implementation of the software products themselves). From this analysis, we concluded that it would be possible to create a BPMN-based GRAF extension.
+Extending the GRAF system to include BPMN would involve:
+  * redesigning the interface;
+  * defining a graph metamodel for BPMN;
+  * generating a graph model from an input file;
+  * generating a BPMN diagram from the graph;
+  * creating some graph transformations; and
+  * executing the transformations on the graph in response to user input.
+==== xtUML ====
+===== Features, purpose and context =====
+{quote}Executable UML is at the next higher layer of abstraction, abstracting away both specific programming languages and decisions about the organization of the software so that a specification built in Executable UML can be deployed in various software environments without change.^^[3|#3]^^{quote} An xtUML model is comprised of a UML class diagram, a state machine and action language algorithms. The combination of these components is said to be 'computationally complete', in that it can be compiled and executed. Unlike BPMN, a full xtUML model is concerned with data, structure ~~and~~ process.<br>
+A further goal of xtUML is to support the OMG's Model-Driven Architecture (MDA) initiative. An MDA consists of 'a definitive Platform-Independent Model (PIM), plus one or more PSMs and complete implementations'.^^[4|#4]^^  Mellor asserts that an executable model is required as a way to specify PIMs completely, so that 'an executable UML' is necessary for Model-Driven Architecture to succeed. 
+===== GRAF Extensions =====
+In thinking about an xtUML extension for GRAF, we took into account the fact that both class diagrams and state machines used in xtUML are directly derived from standard UML notation. Because of this, we would be able to use much of the existing GRAF code to implement the basics of an xtUML extension. Assuming this, we then looked at what features of xtUML should have the highest priority for inclusion in an animator such as GRAF.
+xtUML extensions for GRAF could include:
+  * Object Constraint Language (OCL) constraints, which would involve:
+    * extending the interface;
+    * defining:
+      * unique instance constraints; 
+      * derived attributes;
+      * loop constraints; and 
+      * referential attributes in terms of graph-transformations and the underlying metamodel; and
+    * implementing the above.
+  * Boolean operators, which would involve extending the interface, and creating and implementing in terms of graph-transformations.
+==== Evaluation ====
+When evaluating BPMN and xtUML we considered both the available group resources and experience, and the overall goals of the project. 
+===== BPMN =====
+====== Group resources and experience ======
+None of the team members have experience with BPMN, however our group mentor uses BPMN in the workplace, which could give us valuable insight into the notation. In terms of the project, using BPMN would necessitate a linear workflow, with each step depending on the completion of the previous one. 
+====== Overall goals of the project ======
+While using BPMN would require re-doing much of the work done last year, it would also take the project in a new direction and potentially extend its audience beyond programmers. Initially, the clients were considering involving the ANU's Empirical Software Engineering group as end users. This group uses BPML, so an implementation of BPMN/L would be most useful to them. However, the clients were unable to establish a dialogue with the ESE group on that basis. Since this potential arrangement was one of the main reasons BPMN/L was raised as a possible GRAF notation, the client feels that one of the main motivations for choosing BPMN is no longer available, and the theoretical goals of the project would be better served by xtUML. 
+===== xtUML =====
+====== Group resources and experience ======
+All the team members have some degree of knowledge about xtUML through university courses. In addition, the client has experience in xtUML. For the project, using xtUML would mean that much of the initial work, such as extending the interface, could also be applied to improve the existing GRAF implementation, which would allow the original project to keep improving. Because an xtUML extension would rely on the existing framework, the group could concentrate on extensions which could be developed concurrently. These extensions would focus on adding new graph-transformation rules to the system, to capture aspects of xtUML not already present in the UML implementation.
+====== Overall goals of the project ======
+One of the original goals of the GRAF project is to develop a reference model for an ambiguous notation. The client indicates that xtUML may have similar or greater problems than UML. Because xtUML is also widely used, this means that a reference modeler would potentially be useful in the context of MDA. In addition, the sequence of possible actions, and the consequences of their interaction is not necessarily as evident on the face of an xtUML model as it is in a BPMN model – partially because an xtUML model consists of three separate diagrams showing different aspects of the system. This means that xtUML is a good candidate for showing hidden complexity in models, since it could demonstrate decoupling between the different diagrams, for example, where a sequence diagram details only some of the possible execution paths described by an object or class diagram. 
+==== Conclusion ====
+After considering the advantages and disadvantages of BPMN and xtUML as candidates for GRAF implementation, we concluded that xtUML would serve the goals of the project better than BPMN. In particular, xtUML would build on the existing foundations of the project, making a more useful and usable product overall.
+==== Sources ====
+# {anchor:1}Derek Miers, 'Understanding BPMN' <http://www.bpm.com/understanding-bpmn.html>, 2/4/2010{anchor}
+# {anchor:2}'Business Process Management', <http://en.wikipedia.org/wiki/BPMS>, 2/4/2010{anchor}
+# {anchor:3}Stephen J. Mellor, Marc J. Balcer Executable UML: A Foundation for Model-Driven Architecture (2002){anchor}
+# {anchor:4} B. Hailpern, P. Tarr, 'Model-driven development: The good, the bad, and the ugly' IBM Systems Journal, vol 45, no 3, 2006.{anchor}
