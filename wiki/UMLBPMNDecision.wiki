@@ -29,7 +29,7 @@ Extending the GRAF system to include BPMN would involve:
   * executing the transformations on the graph in response to user input.
 ==== xtUML ====
 ===== Features, purpose and context =====
-{quote}Executable UML is at the next higher layer of abstraction, abstracting away both specific programming languages and decisions about the organization of the software so that a specification built in Executable UML can be deployed in various software environments without change.^^[3|#3]^^{quote} An xtUML model is comprised of a UML class diagram, a state machine and action language algorithms. The combination of these components is said to be 'computationally complete', in that it can be compiled and executed. Unlike BPMN, a full xtUML model is concerned with data, structure ~~and~~ process.<br>
+{quote}Executable UML is at the next higher layer of abstraction, abstracting away both specific programming languages and decisions about the organization of the software so that a specification built in Executable UML can be deployed in various software environments without change.^^[3|#3]^^{quote} An xtUML model is comprised of a UML class diagram, a state machine and action language algorithms. The combination of these components is said to be 'computationally complete', in that it can be compiled and executed. Unlike BPMN, a full xtUML model is concerned with data, structure _and_ process.<br>
 A further goal of xtUML is to support the OMG's Model-Driven Architecture (MDA) initiative. An MDA consists of 'a definitive Platform-Independent Model (PIM), plus one or more PSMs and complete implementations'.^^[4|#4]^^  Mellor asserts that an executable model is required as a way to specify PIMs completely, so that 'an executable UML' is necessary for Model-Driven Architecture to succeed. 
 ===== GRAF Extensions =====
 In thinking about an xtUML extension for GRAF, we took into account the fact that both class diagrams and state machines used in xtUML are directly derived from standard UML notation. Because of this, we would be able to use much of the existing GRAF code to implement the basics of an xtUML extension. Assuming this, we then looked at what features of xtUML should have the highest priority for inclusion in an animator such as GRAF.
@@ -58,7 +58,7 @@ One of the original goals of the GRAF project is to develop a reference model fo
 === Conclusion ===
 After considering the advantages and disadvantages of BPMN and xtUML as candidates for GRAF implementation, we concluded that xtUML would serve the goals of the project better than BPMN. In particular, xtUML would build on the existing foundations of the project, making a more useful and usable product overall.
 === Sources ===
-# {anchor:1}Derek Miers, 'Understanding BPMN' <http://www.bpm.com/understanding-bpmn.html>, 2/4/2010{anchor}
-# {anchor:2}'Business Process Management', <http://en.wikipedia.org/wiki/BPMS>, 2/4/2010{anchor}
-# {anchor:3}Stephen J. Mellor, Marc J. Balcer Executable UML: A Foundation for Model-Driven Architecture (2002){anchor}
-# {anchor:4} B. Hailpern, P. Tarr, 'Model-driven development: The good, the bad, and the ugly' IBM Systems Journal, vol 45, no 3, 2006.{anchor}
+  # {anchor:1}Derek Miers, 'Understanding BPMN' <http://www.bpm.com/understanding-bpmn.html>, 2/4/2010{anchor}
+  # {anchor:2}'Business Process Management', <http://en.wikipedia.org/wiki/BPMS>, 2/4/2010{anchor}
+  # {anchor:3}Stephen J. Mellor, Marc J. Balcer Executable UML: A Foundation for Model-Driven Architecture (2002){anchor}
+  # {anchor:4} B. Hailpern, P. Tarr, 'Model-driven development: The good, the bad, and the ugly' IBM Systems Journal, vol 45, no 3, 2006.{anchor}
