@@ -46,6 +46,6 @@ When this happens the graph behind the scenes is transformed and a new object di
 
 In order to find out how to transform the graph to the next system state, a graph transformation rule is used. All graph transformation rules are contained in GTSRules.ggx. Currently there are about 6 rules like AcceptEvent and SendSignal. You can change these rules without changing the GRAF code and the model's behaviour will change.
 
-The diagram below should summarise the above. Next week I'll explain graphs in more detail. <br>
+The diagram below summarises the above. <br>
 <br> 
 http://graf-framework.googlecode.com/files/simplearch.jpg
