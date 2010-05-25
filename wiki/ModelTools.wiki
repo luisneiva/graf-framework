@@ -21,6 +21,12 @@ Topcased
   * Allows for output in Eclipse specific format
   * No visual component - can use with Visual Paradigm to provide this functionality
   * Unable to input action language
+Vide
+  * http://www.vide-ist.eu/index.html
+  * Vide _definitely_ provides a tool to generate UML actions in the eclipse tree from given code.
+  * Vide is an eclipse plugin, but it's exceedingly difficult to set up.
+  * Install instructions: http://www.vide-ist.eu/reflib/cookbook.html
+  * Vide isn't just an eclipse plugin. There's also various Vide articles that describe how UML actions work and many other things.
 
 === Paid ===
 Enterprise Architect
