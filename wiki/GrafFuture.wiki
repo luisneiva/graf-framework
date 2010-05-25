@@ -1,0 +1,12 @@
+#summary stuff that won't happen in 2010
+
+Some of GRAF's future ambitions include: 
+ * Animation Features
+  ** Intelligent display navigation (a minimap)
+  ** Display filtering (particularly important with large models)
+  ** Support for automated animation
+ * Potential application of graph logic to:
+  ** Verify safety properties of system states
+  ** Analyse and enforce model constraints (such as Object Constraint Language queries)
+  ** Analyse feasibility of given system traces (for example, can a model satisfy a given  sequence diagram)
+ * Development of reference animators for languages in need, including continuing development of our UML reference animator.
