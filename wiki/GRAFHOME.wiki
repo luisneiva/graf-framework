@@ -21,7 +21,7 @@ For a brief description of this year's project go [http://cs.anu.edu.au/student/
 [UMLTree The Eclipse UML 2 Tree]
 
 === Reference ===
-Gregs PHD [worksite:/thesis.pdf thesis] Ask Greg if we can put it up here<br> 
+[http://graf-framework.googlecode.com/files/thesis.pdf Greg O’Keefe's thesis, The Meaning of UML Models]<br>
 [http://www.omg.org/spec/UML/2.2/ The UML 2.2 Definition] <br>
 [http://java.sun.com/docs/codeconv/CodeConventions.pdf Java Coding Standards]<br>
 [http://gpme.anu.edu.au/gpme GPME]<br>
