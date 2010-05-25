@@ -28,6 +28,7 @@
 || The models from Greg can't be entered into GRAF || High || High ||
 || Models' action language statements can't be manually to a uml file || Low || High ||
 || The new UML action language syntax, when it comes out, makes our work out of date || Medium || Medium ||
+|| The clients question the worth of their own project || Low || Medium ||
 
 
 http://graf-framework.googlecode.com/files/Risk-Criteria.jpg <br>
@@ -54,7 +55,7 @@ The team will meet with the client fortnightly to discuss the progress of the pr
 
 ===== Contacted stakeholders have no use for GRAF, have no ambiguous models =====
 *Action:* Reduce probability/transfer risk<br>
---First, the team will make it a priority to find out as soon as possible if this will be the case. Second, the team will consider other uses for GRAF and Graph Transformation Theory.--
+~~First, the team will make it a priority to find out as soon as possible if this will be the case. Second, the team will consider other uses for GRAF and Graph Transformation Theory.~~
 This risk did not eventuate Clive Boughton saw the value in GRAF, he had had situations where GRAF would have been beneficial and he would like to use the finished GRAF product. 
 
 ===== Work to make GRAF useable is unattainable in 2010 =====
