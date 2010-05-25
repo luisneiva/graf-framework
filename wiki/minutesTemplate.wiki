@@ -1,7 +1,8 @@
 #summary Minutes template
 
 = Meeting name =
-Location: CSIT N110
+Date:
+<br>Location: CSIT N110
 <br>Present: Oscar, Stephen, Alice, Cameron, Hamish and Frank
 <br>Time:
 <br>Duration:
