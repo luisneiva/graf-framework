@@ -1,0 +1,11 @@
+#summary agenda
+== Meeting title ==
+*Date:* 25/5/2010
+<br>*Time:* 5pm
+<br>*Location:* N110
+<br>*Duration:* 1 hour
+
+=== Agenda Items ===
+  * Progress reports
+  * Wiki title page update
+  * Task allocation
