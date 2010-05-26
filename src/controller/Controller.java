@@ -34,15 +34,15 @@ import view.View;
  * @author Kevin O'Shea
  */
 public class Controller {
-
+	
 	/** Model of the system */
 	private PluginModel model;
 	/** View for the system */
 	private View view;
-
+	
 	/** Is the system running as a plugin or stand-alone. True if plugin, False if standalone */
 	private Boolean isPlugin;
-
+	
 	/** Reference to controller instance, needed when running as plugin */
 	private static Controller inst;
 	/** In debug mode, graph states are output (as dot) at every transition */
@@ -51,7 +51,7 @@ public class Controller {
 	private final String graphOutputsPath = "GraphOutputs/";
 	private final String gtsRulesPath = "GTSRules.ggx";
 	private final String gtsRulesSeqPath = "GTSRulesSeq.xml";
-
+	
 	/**
 	 * Set up model and view. Create and register listeners in the view.
 	 */
@@ -60,7 +60,7 @@ public class Controller {
 		view = theview;
 		isPlugin = plugin;
 		debugmode = !isPlugin;	//only output dot files if standalone
-
+		
 		try {
 			String gtsRulesFilePath = "";
 			String gtsRulesSeqFilePath = "";
@@ -89,7 +89,7 @@ public class Controller {
 		} catch (Exception e) {
 			showError(e);
 		}
-
+		
 		// 'New' animation button action
 		view.addNewAnimListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
@@ -98,33 +98,7 @@ public class Controller {
 				animate(instancepath);
 			}			
 		});
-
-		//		view.addFileNewListener(new SelectionListener() {
-		//			public void widgetDefaultSelected(SelectionEvent e) {
-		//				String instancepath = view.openFileChooser();
-		//				if (instancepath == null) return;
-		//				animate(instancepath);
-		//			}
-		//
-		//			public void widgetSelected(SelectionEvent e) {
-		//				String instancepath = view.openFileChooser();
-		//				if (instancepath == null) return;
-		//				animate(instancepath);
-		//			}
-		//		});
-
-		//		view.addExitListener(new SelectionListener() {
-		//			public void widgetDefaultSelected(SelectionEvent e) {
-		//				sh.close();
-		//				d.dispose();
-		//			}
-		//
-		//			public void widgetSelected(SelectionEvent e) {
-		//				shell.close();
-		//				d.dispose();
-		//			}
-		//		});
-
+		
 		//Undo (<) button
 		view.addUndoListener(new MouseListener() {
 			public void mouseDoubleClicked(MouseEvent me) {}
@@ -138,7 +112,7 @@ public class Controller {
 			}
 			public void mouseReleased(MouseEvent me) {}
 		});
-
+		
 		//Redo (>) button
 		view.addRedoListener(new MouseListener() {
 			public void mouseDoubleClicked(MouseEvent me) {}
@@ -152,7 +126,7 @@ public class Controller {
 			}
 			public void mouseReleased(MouseEvent me) {}
 		});
-
+		
 		//Reset (<<) button
 		view.addResetListener(new MouseListener() {
 			public void mouseDoubleClicked(MouseEvent me) {}
@@ -167,7 +141,7 @@ public class Controller {
 			}
 			public void mouseReleased(MouseEvent me) {}
 		});
-
+		
 		//Clicking on an action
 		view.setTransitionListener(new MouseListener() {
 			public void mouseDoubleClicked(MouseEvent me) {}
@@ -183,7 +157,7 @@ public class Controller {
 			}
 			public void mouseReleased(MouseEvent me) {}
 		});
-
+		
 		//Clicking on a popup menu item (for generating external events)
 		view.setPopupListener(new Listener() {
 			public void handleEvent(Event event) {
@@ -198,12 +172,12 @@ public class Controller {
 			}
 		});
 	}
-
+	
 	/** Execute animation, called when choosing file from plugin package explorer */
 	public static void pluginAnimFileChosen(String instancepath) {
 		inst.animate(instancepath);
 	}
-
+	
 	/**
 	 * Begin animation
 	 */
@@ -218,9 +192,9 @@ public class Controller {
 			}
 			if (modelpath.equals("")) {
 				showError(new FileNotFoundException(
-				"First line of test file must specify a model file to test."));
+						"First line of test file must specify a model file to test."));
 			}
-
+			
 			URL instanceURL = new URL("file:" + instancepath);
 			URL modelURL = null;
 			//first assume absolute path - if not found then try relative
@@ -238,21 +212,21 @@ public class Controller {
 					showError(new IOException("Error reading file: " + modelpath));
 				}
 			}
-
+			
 			model.reset();
 			view.reset();
 
 			//Build the graph, using the collected model/instance information
 			model.buildGraph(modelURL, instanceURL);
-
+			
 			//then tell view to draw the OD that PluginModel will have created.
 			view.update();
-
+			
 		} catch(Exception e) {
 			showError(e);
 		}
 	}
-
+	
 	private void showError(Exception e) {
 		if (e!=null && e.getMessage()!=null){
 			view.showError(e.getMessage());
@@ -261,7 +235,7 @@ public class Controller {
 		}
 		e.printStackTrace();
 	}
-
+	
 	/**
 	 * Run the Animator as a stand-alone application
 	 */
@@ -271,10 +245,10 @@ public class Controller {
 		shell.setSize(650, 420);
 		shell.setText("Animator");
 		shell.setLayout(new FillLayout(SWT.VERTICAL));
-
+				
 		//run it
 		new View(false).createPartControl(shell);
-
+		
 		shell.open();
 		while (!shell.isDisposed())
 			while (!d.readAndDispatch())
