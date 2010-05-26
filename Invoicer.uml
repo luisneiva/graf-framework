@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA">
+  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="Invoicer">
+    <packagedElement xmi:type="uml:Class" xmi:id="_QDmQoGGVEd-wueUf9g8DcA" name="Invoicer" classifierBehavior="_UEZ-MGGWEd-wueUf9g8DcA">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_UEZ-MGGWEd-wueUf9g8DcA" name="StateMachine">
+        <region xmi:id="_UEZ-MWGWEd-wueUf9g8DcA" name="Region">
+          <subvertex xmi:type="uml:State" xmi:id="_cxHPoGGWEd-wueUf9g8DcA" name="State1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_kvQK4GGWEd-wueUf9g8DcA" name="Initial"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_nAAsk2GWEd-wueUf9g8DcA" name="Pseudos Init"/>
+          <subvertex xmi:type="uml:State" xmi:id="_rqv9YGGWEd-wueUf9g8DcA" name="Invoicing"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_3ehGYGGWEd-wueUf9g8DcA" name="Pseudo Teminate" kind="terminate"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_hwjJkGJQEd-00p05I7Yl0g" name="Pseudo Exit" kind="exitPoint"/>
+          <transition xmi:id="_pBJd4GGWEd-wueUf9g8DcA" name="" source="_nAAsk2GWEd-wueUf9g8DcA" target="_kvQK4GGWEd-wueUf9g8DcA"/>
+          <transition xmi:id="_uP4zoGGWEd-wueUf9g8DcA" name="Invoice" source="_kvQK4GGWEd-wueUf9g8DcA" target="_rqv9YGGWEd-wueUf9g8DcA"/>
+          <transition xmi:id="_wls0dGGWEd-wueUf9g8DcA" name="Do" source="_rqv9YGGWEd-wueUf9g8DcA" target="_kvQK4GGWEd-wueUf9g8DcA"/>
+          <transition xmi:id="_z93qIGGWEd-wueUf9g8DcA" name="Stop" source="_kvQK4GGWEd-wueUf9g8DcA" target="_3ehGYGGWEd-wueUf9g8DcA"/>
+          <transition xmi:id="_7iIFxGGWEd-wueUf9g8DcA" name="Stop" source="_rqv9YGGWEd-wueUf9g8DcA" target="_3ehGYGGWEd-wueUf9g8DcA"/>
+          <transition xmi:id="__XJ2kGGWEd-wueUf9g8DcA" name="Do" source="_rqv9YGGWEd-wueUf9g8DcA" target="_rqv9YGGWEd-wueUf9g8DcA"/>
+          <transition xmi:id="_nVwelGJQEd-00p05I7Yl0g" name="Stop" source="_kvQK4GGWEd-wueUf9g8DcA" target="_hwjJkGJQEd-00p05I7Yl0g"/>
+          <transition xmi:id="_tW7W0GJQEd-00p05I7Yl0g" name="Stop" source="_rqv9YGGWEd-wueUf9g8DcA" target="_hwjJkGJQEd-00p05I7Yl0g"/>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>
