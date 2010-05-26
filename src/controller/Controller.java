@@ -55,8 +55,7 @@ public class Controller {
 	private final String gtsRulesPath = "GTSRules.ggx";
 	private final String gtsRulesSeqPath = "GTSRulesSeq.xml";
 
-	
-	
+
 	/**
 	 * Set up model and view. Create and register listeners in the view.
 	 */
@@ -223,6 +222,7 @@ public class Controller {
 		}
 	}
 
+	
 	private void showError(Exception e) {
 		if (e!=null && e.getMessage()!=null){
 			view.showError(e.getMessage());
@@ -234,8 +234,9 @@ public class Controller {
 
 	/**
 	 * Add a menu bar to the top.
-	 * @param shell
-	 * @param d
+	 * Hot keys are ctrl+n for new, ctrl+z for undo, ctrl+y for redo, ctrl+r for reset.
+	 * @param shell  this shell window
+	 * @param d  this display
 	 */
 	public void addMenuBar(final Shell shell, final Display d)
 	{
@@ -286,6 +287,7 @@ public class Controller {
 
 		shell.setMenuBar(menuBar);
 
+		// file->exit
 		fileExitItem.addSelectionListener(new SelectionListener() {
 			public void widgetDefaultSelected(SelectionEvent event) {
 				shell.close();
@@ -298,6 +300,7 @@ public class Controller {
 			}
 		});
 
+		// file->new
 		fileNewItem.addSelectionListener(new SelectionListener() {
 			public void widgetDefaultSelected(SelectionEvent e) {
 
@@ -315,6 +318,7 @@ public class Controller {
 			}			
 		});
 
+		// undo
 		undoItem.addSelectionListener(new SelectionListener() {
 			public void widgetDefaultSelected(SelectionEvent e) {
 
@@ -332,6 +336,7 @@ public class Controller {
 			}			
 		});
 
+		// redo
 		redoItem.addSelectionListener(new SelectionListener() {
 			public void widgetDefaultSelected(SelectionEvent e) {
 
@@ -348,7 +353,7 @@ public class Controller {
 			}			
 		});
 		
-		
+		// reset
 		resetItem.addSelectionListener(new SelectionListener() {
 			public void widgetDefaultSelected(SelectionEvent e) {
 
