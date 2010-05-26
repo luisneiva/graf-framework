@@ -8,15 +8,4 @@
 === Agenda Items ===
   * Progress reports
   * Wiki title page update
-  * Discussion of Review Feedback
-    * Risk Register -> Has been updated since review to reflect feedback
-    * Success Factors -> Still waiting on client to deliver
   * Task allocation
-    * Hamish: Continue Elevator model and Artisan evaluation
-    * Alice: Coding Task
-    * Frank: GUI, meeting Oscar Wednesday to discuss
-    * Cameron: Kennedy Carter evaluation when available
-  * Meetings over exam period:
-    * No meeting week of the 8th of June (1st week of exams)
-    * Meeting Monday 14th of June
-    * Meeting as normal 22nd of June  
