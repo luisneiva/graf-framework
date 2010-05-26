@@ -16,7 +16,7 @@ Location: CSIT N110
     * Meeting Monday 14th of June
     * Meeting as normal 22nd of June  
 
-== Action items ==
+== Action Items ==
   * Hamish: Continue Elevator model and Artisan evaluation
   * Alice: Coding Task
   * Frank: GUI, meeting Oscar Wednesday to discuss
