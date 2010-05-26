@@ -9,7 +9,7 @@
   * Progress reports
   * Wiki title page update
   * Discussion of Review Feedback
-    * Risk Register -> Has been updated since review
+    * Risk Register -> Has been updated since review to reflect feedback
     * Success Factors -> Still waiting on client to deliver
   * Task allocation
     * Hamish: Continue Elevator model and Artisan evaluation
