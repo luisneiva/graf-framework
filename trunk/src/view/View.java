@@ -15,16 +15,11 @@ import org.eclipse.draw2d.XYLayout;
 import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.HelpEvent;
-import org.eclipse.swt.events.HelpListener;
-import org.eclipse.swt.events.SelectionEvent;
-import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Menu;
@@ -46,7 +41,7 @@ public class View extends ViewPart {
 
 	/** Is the system running as a plugin or stand-alone. True if plugin, False if standalone */
 	private Boolean isPlugin;
-
+	
 	/** Reference to system model */
 	private PluginModel model;
 
@@ -55,24 +50,20 @@ public class View extends ViewPart {
 
 	/** Container for menus, controls and content container */
 	private Figure rootFigure;
-
+	
 	/** Holds model contents */
 	private ScalableFreeformLayeredPane contents;
-
+	
 	/** Draws model contents */
 	private ContentDrawer contentDrawer;
-
+	
 	/** Button to choose model to animate */
 	private Button newAnimButton = new Button("New");
-
+	
 	private ClickableLabel undo = new ClickableLabel("<");
 	private ClickableLabel redo = new ClickableLabel(">");
 	private ClickableLabel reset = new ClickableLabel("<<");
-
-	private Menu menuBar, fileMenu, editMenu, helpMenu;
-	private MenuItem fileMenuHeader, editMenuHeader, helpMenuHeader;
-	private MenuItem fileExitItem, fileNewItem, helpGetHelpItem, undoItem, redoItem;
-
+	
 	/** Default constructor called by plugin runtime. Do not call this if standalone.
 	 * @see View(plugin)
 	 */
@@ -112,7 +103,7 @@ public class View extends ViewPart {
 	public void addResetListener(MouseListener resetListener) {
 		reset.addMouseListener(resetListener);
 	}
-
+	
 	/** Set the listener for when transition-sources are pressed */
 	public void setTransitionListener(MouseListener transListener) {
 		contentDrawer.setTransListener(transListener); 
@@ -123,27 +114,19 @@ public class View extends ViewPart {
 		contentDrawer.setPopupListener(popupListener);
 	}
 
-	//	public void addFileNewListener(SelectionListener sl) {
-	//		fileNewItem.addSelectionListener(sl);
-	//	}
-	
-	//	public void addExitListener(SelectionListener sl) {
-	//		fileExitItem.addSelectionListener(sl);
-	//	}
-
 	/** Reset display for new animation */
 	public void reset() {
 		contents.removeAll();
 		contents.setScale(1.0);
 	}
-
+	
 	/** Open a file chooser and return path to chosen file, or null if none chosen */
 	public String openFileChooser() {
 		FileDialog filedialog = new FileDialog(parent.getShell());
 		filedialog.setFilterExtensions(new String[]{"*.modeltest"});
 		return filedialog.open();
 	}
-
+	
 	/** Display error message to user */
 	public void showError(String msg) {
 		if (parent == null) {
@@ -152,21 +135,20 @@ public class View extends ViewPart {
 			MessageDialog.openError(parent.getShell(), "Animator Error", msg);
 		}
 	}
-
+	
 	/** Creates the initial view - ie the view upon Animator startup */
 	public void createPartControl(Composite parent) {
 		this.parent = parent;
-
+		
 		// @author: Frank
-		// Add a menu bar to the top. But, some menu items are not working.
-		// The action listeners below are commented out.
-		// I am not sure how to call from the main controller class to add listeners.
-		// Some attempts in the main controller class are commented out.
-		// Can someone please check the problem?
-
-		final Shell sh = parent.getShell();
-		final Display d = parent.getDisplay();
-
+		// Add a menu bar to the top. But, the menu bar does not appear.
+		// Can someone please check this problem? The action listeners below are commented out.
+		// I am not sure which controller class to put them.
+		Menu menuBar, fileMenu, helpMenu;
+		MenuItem fileMenuHeader, helpMenuHeader;
+		MenuItem fileExitItem, fileSaveItem, helpGetHelpItem;
+		Shell sh = parent.getShell();
+		
 		menuBar = new Menu(sh, SWT.BAR);
 		fileMenuHeader = new MenuItem(menuBar, SWT.CASCADE);
 		fileMenuHeader.setText("File");
@@ -174,23 +156,11 @@ public class View extends ViewPart {
 		fileMenu = new Menu(sh, SWT.DROP_DOWN);
 		fileMenuHeader.setMenu(fileMenu);
 
-		fileNewItem = new MenuItem(fileMenu, SWT.PUSH);
-		fileNewItem.setText("New");
+		fileSaveItem = new MenuItem(fileMenu, SWT.PUSH);
+		fileSaveItem.setText("Save");
 
 		fileExitItem = new MenuItem(fileMenu, SWT.PUSH);
 		fileExitItem.setText("Exit");
-
-		editMenuHeader = new MenuItem(menuBar, SWT.CASCADE);
-		editMenuHeader.setText("Edit");
-
-		editMenu = new Menu(sh, SWT.DROP_DOWN);
-		editMenuHeader.setMenu(editMenu);
-
-		undoItem = new MenuItem(editMenu, SWT.PUSH);
-		undoItem.setText("Undo");
-
-		redoItem = new MenuItem(editMenu, SWT.PUSH);
-		redoItem.setText("Redo");
 
 		helpMenuHeader = new MenuItem(menuBar, SWT.CASCADE);
 		helpMenuHeader.setText("Help");
@@ -201,59 +171,33 @@ public class View extends ViewPart {
 		helpGetHelpItem = new MenuItem(helpMenu, SWT.PUSH);
 		helpGetHelpItem.setText("Get Help");
 
-		sh.setMenuBar(menuBar);
-
-		fileExitItem.addSelectionListener(new SelectionListener() {
-			public void widgetDefaultSelected(SelectionEvent event) {
-				sh.close();
-				d.dispose();
-			}
-
-			public void widgetSelected(SelectionEvent e) {
-				sh.close();
-				d.dispose();
-			}
-		});
-
-		fileNewItem.addSelectionListener(new SelectionListener() {
-			public void widgetDefaultSelected(SelectionEvent e) {
-
-			}
-
-			public void widgetSelected(SelectionEvent e) {
-				String instancepath = openFileChooser();
-				if (instancepath == null) return;
-				//				controller.animate(instancepath);
-			}			
-		});
-
-		helpGetHelpItem.addHelpListener(new HelpListener() {
-			public void helpRequested(HelpEvent e) {
-			}			
-		});
-
-		undoItem.addSelectionListener(new SelectionListener() {
-			public void widgetDefaultSelected(SelectionEvent e) {
-
-			}
-
-			public void widgetSelected(SelectionEvent e) {
-
-			}			
-		});
-
-		redoItem.addSelectionListener(new SelectionListener() {
-			public void widgetDefaultSelected(SelectionEvent e) {
-
-			}
-
-			public void widgetSelected(SelectionEvent e) {
-
-			}			
-		});
-
-
-
+//		fileExitItem.addSelectionListener(new SelectionListener() {
+//			public void widgetDefaultSelected(SelectionEvent event) {
+//				sh.close();
+//				d.dispose();
+//			}
+//
+//			public void widgetSelected(SelectionEvent e) {
+//				sh.close();
+//				d.dispose();
+//			}
+//		});
+//		
+//		fileSaveItem.addSelectionListener(new SelectionListener() {
+//			public void widgetDefaultSelected(SelectionEvent e) {
+//			}
+//
+//			public void widgetSelected(SelectionEvent e) {
+//			}			
+//		});
+//		
+//		helpGetHelpItem.addHelpListener(new HelpListener() {
+//			public void helpRequested(HelpEvent e) {
+//			}			
+//		});
+		
+		
+		
 		FigureCanvas canvas = new FigureCanvas(parent);
 		canvas.setLayout(new RowLayout(SWT.VERTICAL));
 
@@ -268,26 +212,26 @@ public class View extends ViewPart {
 		contents.setSize(3000,3000);
 		rootFigure.add(contents);
 		lws.setContents(rootFigure);
-
+		
 		contentDrawer.setContents(contents);
-
+		
 		// if not a plugin, need ability to choose a file to animate
 		if (!isPlugin) {
 			rootFigure.getLayoutManager().setConstraint(newAnimButton, new Rectangle(430,10,40,20));
 			rootFigure.add(newAnimButton);
 		}
 	}
-
+	
 	private boolean firstLoaded = true;
 	/** Draws new contents */
 	public void update() {
 		contents.removeAll();
-
+		
 		ObjectDisplay objdisplay = model.getObjectDisplay();
-
+		
 		//if a model is not currently loaded then don't continue
 		if (objdisplay==null) return;
-
+		
 		if (firstLoaded) {
 			addNavControls();
 			firstLoaded = false;
@@ -298,18 +242,18 @@ public class View extends ViewPart {
 		else redo.setEnabled(false);
 		undo.repaint();
 		redo.repaint();
-
+		
 		contentDrawer.draw(objdisplay);
-
+		
 		contents.revalidate();
 	}
-
+	
 	/**
 	 * Passing the focus request to the viewer's control.
 	 */
 	public void setFocus() {
 	}
-
+	
 	/** Create menu at the specified location
 	 * @return Reference to the menu created 
 	 */
@@ -317,12 +261,12 @@ public class View extends ViewPart {
 		menupos.x *= contents.getScale();
 		menupos.y *= contents.getScale();
 		menupos = parent.toDisplay(menupos);
-		Menu menu = new Menu (parent.getShell(), SWT.POP_UP);
-		menu.setLocation(menupos);
-		menu.setVisible (true);
-		return menu;
+        Menu menu = new Menu (parent.getShell(), SWT.POP_UP);
+        menu.setLocation(menupos);
+        menu.setVisible (true);
+        return menu;
 	}
-
+	
 	/** Create and attach navigation controls to rootFigure */
 	private void addNavControls() {
 		ClickableLabel left = new ClickableLabel("<");
@@ -331,14 +275,14 @@ public class View extends ViewPart {
 		ClickableLabel down = new ClickableLabel("\\/");
 		ClickableLabel zoomin = new ClickableLabel("+");
 		ClickableLabel zoomout = new ClickableLabel("-");
-
+		
 		Font boldfont = new Font(null, "Arial", 13, SWT.BOLD);
 		Font largeboldfont = new Font(null, "Arial", 15, SWT.BOLD);
 		left.setFont(boldfont); right.setFont(boldfont);
 		up.setFont(boldfont); down.setFont(boldfont);
 		zoomin.setFont(largeboldfont); zoomout.setFont(largeboldfont);
 		undo.setFont(boldfont); redo.setFont(boldfont); reset.setFont(boldfont);
-
+		
 		Color cyan = new Color(null,0,255,255);
 		left.setBackgroundColor(cyan); right.setBackgroundColor(cyan);
 		up.setBackgroundColor(cyan); down.setBackgroundColor(cyan);
@@ -348,7 +292,7 @@ public class View extends ViewPart {
 		left.setOpaque(true); right.setOpaque(true); up.setOpaque(true); down.setOpaque(true);
 		zoomin.setOpaque(true); zoomout.setOpaque(true);
 		undo.setOpaque(true); redo.setOpaque(true); reset.setOpaque(true);
-
+		
 		final double moveunit = 20.0;
 		final int move = (int)(moveunit/contents.getScale()+0.05);
 		left.addMouseListener(new PanListener(new Point(move,0)));
@@ -358,7 +302,7 @@ public class View extends ViewPart {
 		zoomin.addMouseListener(new ZoomListener(0.2));
 		zoomout.addMouseListener(new ZoomListener(-0.2));
 		//listeners for undo, redo, and reset are given through methods.
-
+		
 		final int l = 490;	//left of control
 		final int t = 10;	//top of control
 		final int w = 20;	//width of each 'button'
@@ -381,7 +325,7 @@ public class View extends ViewPart {
 		rootFigure.add(redo);
 		rootFigure.add(reset);
 	}
-
+	
 	/** Shifts the display by a given translation vector */
 	private class PanListener implements MouseListener {
 		Point translation;
