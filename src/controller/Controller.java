@@ -12,15 +12,18 @@ import model.TransitionAction;
 
 import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.core.runtime.Path;
-import org.eclipse.draw2d.ActionEvent;
-import org.eclipse.draw2d.ActionListener;
 import org.eclipse.draw2d.MouseEvent;
 import org.eclipse.draw2d.MouseListener;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.HelpEvent;
+import org.eclipse.swt.events.HelpListener;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
+import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.widgets.Shell;
 import org.osgi.framework.Bundle;
@@ -34,15 +37,15 @@ import view.View;
  * @author Kevin O'Shea
  */
 public class Controller {
-	
+
 	/** Model of the system */
 	private PluginModel model;
 	/** View for the system */
-	private View view;
-	
+	private static View view;
+
 	/** Is the system running as a plugin or stand-alone. True if plugin, False if standalone */
 	private Boolean isPlugin;
-	
+
 	/** Reference to controller instance, needed when running as plugin */
 	private static Controller inst;
 	/** In debug mode, graph states are output (as dot) at every transition */
@@ -51,6 +54,8 @@ public class Controller {
 	private final String graphOutputsPath = "GraphOutputs/";
 	private final String gtsRulesPath = "GTSRules.ggx";
 	private final String gtsRulesSeqPath = "GTSRulesSeq.xml";
+
+	
 	
 	/**
 	 * Set up model and view. Create and register listeners in the view.
@@ -60,7 +65,7 @@ public class Controller {
 		view = theview;
 		isPlugin = plugin;
 		debugmode = !isPlugin;	//only output dot files if standalone
-		
+
 		try {
 			String gtsRulesFilePath = "";
 			String gtsRulesSeqFilePath = "";
@@ -89,16 +94,7 @@ public class Controller {
 		} catch (Exception e) {
 			showError(e);
 		}
-		
-		// 'New' animation button action
-		view.addNewAnimListener(new ActionListener() {
-			public void actionPerformed(ActionEvent event) {
-				String instancepath = view.openFileChooser();
-				if (instancepath == null) return;
-				animate(instancepath);
-			}			
-		});
-		
+
 		//Undo (<) button
 		view.addUndoListener(new MouseListener() {
 			public void mouseDoubleClicked(MouseEvent me) {}
@@ -112,7 +108,7 @@ public class Controller {
 			}
 			public void mouseReleased(MouseEvent me) {}
 		});
-		
+
 		//Redo (>) button
 		view.addRedoListener(new MouseListener() {
 			public void mouseDoubleClicked(MouseEvent me) {}
@@ -126,7 +122,7 @@ public class Controller {
 			}
 			public void mouseReleased(MouseEvent me) {}
 		});
-		
+
 		//Reset (<<) button
 		view.addResetListener(new MouseListener() {
 			public void mouseDoubleClicked(MouseEvent me) {}
@@ -141,7 +137,7 @@ public class Controller {
 			}
 			public void mouseReleased(MouseEvent me) {}
 		});
-		
+
 		//Clicking on an action
 		view.setTransitionListener(new MouseListener() {
 			public void mouseDoubleClicked(MouseEvent me) {}
@@ -157,7 +153,7 @@ public class Controller {
 			}
 			public void mouseReleased(MouseEvent me) {}
 		});
-		
+
 		//Clicking on a popup menu item (for generating external events)
 		view.setPopupListener(new Listener() {
 			public void handleEvent(Event event) {
@@ -172,12 +168,12 @@ public class Controller {
 			}
 		});
 	}
-	
+
 	/** Execute animation, called when choosing file from plugin package explorer */
 	public static void pluginAnimFileChosen(String instancepath) {
 		inst.animate(instancepath);
 	}
-	
+
 	/**
 	 * Begin animation
 	 */
@@ -192,9 +188,9 @@ public class Controller {
 			}
 			if (modelpath.equals("")) {
 				showError(new FileNotFoundException(
-						"First line of test file must specify a model file to test."));
+				"First line of test file must specify a model file to test."));
 			}
-			
+
 			URL instanceURL = new URL("file:" + instancepath);
 			URL modelURL = null;
 			//first assume absolute path - if not found then try relative
@@ -212,21 +208,21 @@ public class Controller {
 					showError(new IOException("Error reading file: " + modelpath));
 				}
 			}
-			
+
 			model.reset();
 			view.reset();
 
 			//Build the graph, using the collected model/instance information
 			model.buildGraph(modelURL, instanceURL);
-			
+
 			//then tell view to draw the OD that PluginModel will have created.
 			view.update();
-			
+
 		} catch(Exception e) {
 			showError(e);
 		}
 	}
-	
+
 	private void showError(Exception e) {
 		if (e!=null && e.getMessage()!=null){
 			view.showError(e.getMessage());
@@ -235,20 +231,157 @@ public class Controller {
 		}
 		e.printStackTrace();
 	}
+
+	/**
+	 * Add a menu bar to the top.
+	 * @param shell
+	 * @param d
+	 */
+	public void addMenuBar(final Shell shell, final Display d)
+	{
+		Menu menuBar, fileMenu, editMenu, helpMenu;
+		MenuItem fileMenuHeader, editMenuHeader, helpMenuHeader;
+		MenuItem fileExitItem, fileNewItem, helpGetHelpItem, undoItem, redoItem, resetItem;
+		
+		menuBar = new Menu(shell, SWT.BAR);
+		fileMenuHeader = new MenuItem(menuBar, SWT.CASCADE);
+		fileMenuHeader.setText("&File");
+
+		fileMenu = new Menu(shell, SWT.DROP_DOWN);
+		fileMenuHeader.setMenu(fileMenu);
+
+		fileNewItem = new MenuItem(fileMenu, SWT.PUSH);
+		fileNewItem.setText("&New\tCtrl+N");
+		fileNewItem.setAccelerator(SWT.CTRL + 'N');
+
+		fileExitItem = new MenuItem(fileMenu, SWT.PUSH);
+		fileExitItem.setText("&Exit");
+
+		editMenuHeader = new MenuItem(menuBar, SWT.CASCADE);
+		editMenuHeader.setText("&Edit");
+
+		editMenu = new Menu(shell, SWT.DROP_DOWN);
+		editMenuHeader.setMenu(editMenu);
+
+		undoItem = new MenuItem(editMenu, SWT.PUSH);
+		undoItem.setText("&Undo\tCtrl+Z");
+		undoItem.setAccelerator(SWT.CTRL + 'Z');
+
+		redoItem = new MenuItem(editMenu, SWT.PUSH);
+		redoItem.setText("&Redo\tCtrl+Y");
+		redoItem.setAccelerator(SWT.CTRL + 'Y');
+		
+		resetItem = new MenuItem(editMenu, SWT.PUSH);
+		resetItem.setText("&Reset\tCtrl+R");
+		resetItem.setAccelerator(SWT.CTRL + 'R');
+
+		helpMenuHeader = new MenuItem(menuBar, SWT.CASCADE);
+		helpMenuHeader.setText("&Help");
+
+		helpMenu = new Menu(shell, SWT.DROP_DOWN);
+		helpMenuHeader.setMenu(helpMenu);
+
+		helpGetHelpItem = new MenuItem(helpMenu, SWT.PUSH);
+		helpGetHelpItem.setText("&Get Help");
+
+		shell.setMenuBar(menuBar);
+
+		fileExitItem.addSelectionListener(new SelectionListener() {
+			public void widgetDefaultSelected(SelectionEvent event) {
+				shell.close();
+				d.dispose();
+			}
+
+			public void widgetSelected(SelectionEvent e) {
+				shell.close();
+				d.dispose();
+			}
+		});
+
+		fileNewItem.addSelectionListener(new SelectionListener() {
+			public void widgetDefaultSelected(SelectionEvent e) {
+
+			}
+
+			public void widgetSelected(SelectionEvent e) {
+				String instancepath = view.openFileChooser();
+				if (instancepath == null) return;
+				animate(instancepath);
+			}			
+		});
+
+		helpGetHelpItem.addHelpListener(new HelpListener() {
+			public void helpRequested(HelpEvent e) {
+			}			
+		});
+
+		undoItem.addSelectionListener(new SelectionListener() {
+			public void widgetDefaultSelected(SelectionEvent e) {
+
+			}
+
+			public void widgetSelected(SelectionEvent e) {
+				
+				try {
+					model.undoAction();
+					view.update();
+				} catch (Exception exception) {
+					showError(exception);
+				}
+
+			}			
+		});
+
+		redoItem.addSelectionListener(new SelectionListener() {
+			public void widgetDefaultSelected(SelectionEvent e) {
+
+			}
+
+			public void widgetSelected(SelectionEvent e) {
+
+				try {
+					model.redoAction();
+					view.update();
+				} catch (Exception exception) {
+					showError(exception);
+				}
+			}			
+		});
+		
+		
+		resetItem.addSelectionListener(new SelectionListener() {
+			public void widgetDefaultSelected(SelectionEvent e) {
+
+			}
+
+			public void widgetSelected(SelectionEvent e) {
+				try {
+					view.reset();
+					model.reset();
+					view.update();
+				} catch (Exception exception) {
+					showError(exception);
+				}
+				
+			}			
+		});
+	}
+	
 	
 	/**
 	 * Run the Animator as a stand-alone application
 	 */
 	public static void main(String[] args) {
-		Display d = new Display();
-		Shell shell = new Shell(d);
+		final Display d = new Display();
+		final Shell shell = new Shell(d);
 		shell.setSize(650, 420);
 		shell.setText("Animator");
 		shell.setLayout(new FillLayout(SWT.VERTICAL));
-				
-		//run it
-		new View(false).createPartControl(shell);
 		
+		//run it
+		View view = new View(false, shell);
+		view.createPartControl(shell);
+
 		shell.open();
 		while (!shell.isDisposed())
 			while (!d.readAndDispatch())
