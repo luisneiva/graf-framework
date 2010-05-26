@@ -6,7 +6,7 @@ Location: CSIT N110
 <br>Time: 5pm
 <br>Duration: 1 hour
 
-== Things discussed ==
+== Discussion Items ==
   * Progress Reports
   * Scope discussion:
     * Removed publication of GRAF
@@ -18,7 +18,7 @@ Location: CSIT N110
     * Running out of code on Google Code
     * Risk Mitigation
 
-== Action items ==
+== Action Items ==
   * Alice: continue previous week's work
   * Cameron: Rhapsody investigation and the put model in the PostScript document into GRAF
   * Frank: Continue model work and GUI work
