@@ -1,7 +1,7 @@
 #summary Milestones for 2010
 =Milestones=
 
-==Milestone 1 - 1st June==
+==Milestone 1 - 1st of June==
   * Actions added:
     * !AddStructuralFeatureAction
   * GUI Improvements:
