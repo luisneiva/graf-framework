@@ -33,10 +33,11 @@ For a brief description of this year's project go [http://cs.anu.edu.au/student/
 [Installing Visual Paradigm and Topcased]<br>
 
 === Project Documentation ===
-[Scope Scope]<br>
-[Risk Risk Log]<br>
-[GrafFuture GRAF beyond 2010]<br>
-[Milestones Milestones]
+[Scope Scope]
+<br>[Risk Risk Log]
+<br>[GrafFuture GRAF beyond 2010]
+<br>[Milestones Milestones]
+<br>[WBS Work Breakdown Structure]
 
 === Project Review Documents ===
 
