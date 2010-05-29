@@ -3,7 +3,7 @@
 
 ==Milestone 1 - 1st June==
   * Actions added:
-    * AddStructuralFeatureAction
+    * !AddStructuralFeatureAction
   * GUI Improvements:
     * Collated toolbar
     * Hotkeys 
