@@ -27,3 +27,19 @@ The original WBS file (which is easier to look at) is [http://svn.anu.edu.au/SE_
 
 ====WBS including time estimates====
 http://graf-framework.googlecode.com/files/wbstimes29-5-10.jpg
+
+== PERT Diagram ==
+http://graf-framework.googlecode.com/files/pert29-5-10.jpg
+
+=== Notes ===
+This page contains a PERT diagram based on the second lowest level of the WBS. This diagram is unusal because its times are in hours not days, and certainly not working days. It's impossible to get an accurate PERT diagram for the project because no one is working full time on it.
+
+This diagram suggests that the 91 hours of work in the WBS can be cut down to 55 hours. Both these values are obviously ridiculous underestimates.
+
+This diagram is also deficient in that it lacks adequate information on paralleling tasks. Although no more than 4 tasks have to happen at once, certain skills are needed for certain tasks which may make the implied concurrency impossible.
+
+Some things that are not dependent on the diagram might be (eg. Multiple state machine defect).
+
+Some things that are dependent on the diagram (eg. Find other UML tools -> RCA01/AR02) are not dependent. Making a PERT diagram for the next level of detail of the WBS could solve this problem.
+
+The one useful thing this diagram does is suggest the critical path of Find other UML tools -> RCA01/AR02 -> Add models to other animators. Although these activities can largely be done concurrently, it does single out RCA01/AR02 as the most challenging task.
