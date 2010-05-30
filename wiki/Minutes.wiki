@@ -1,9 +1,11 @@
 || Date || Type || Agenda || Minutes ||
-|| 12/5 || Mentor || (on alliance) || [minutes1205 Minutes] ||
+|| 12/5 || Mentor || [https://alliance.anu.edu.au/portal/site/944d1b04-7284-49af-a71e-287371313ec8/page/44404e8e-507f-4439-807f-841e15845469 Agenda] || [minutes1205 Minutes] ||
 || 18/5 || Client || [clagenda1805 Agenda] || [cminutes1805 Minutes] ||
 || 18/5 || Team || [agenda1805 Agenda] || [minutes1805 Minutes] ||
 || 25/5 || Team || [agenda2505 Agenda] || [minutes2505 Minutes] ||
+|| 1/6 || Client || [cagenda0106 Agenda] || [cminutes0106 Minutes] ||
+|| 1/6 || Mentor || [agenda0106 Agenda] || [minutes0106 Minutes] ||
 
-Agendas and minutes from before 12/5/2010 are on the Alliance site. <br>
+Agendas and minutes from before 12/5/2010 are on the [https://alliance.anu.edu.au/portal Alliance]. <br>
 [agendaTemplate Agenda Template] <br>
 [minutesTemplate Minutes Template] <br>
