@@ -32,7 +32,7 @@ http://graf-framework.googlecode.com/files/wbstimes29-5-10.jpg
 http://graf-framework.googlecode.com/files/pert29-5-10.jpg
 
 === Notes ===
-This page contains a PERT diagram based on the second lowest level of the WBS. This diagram is unusal because its times are in hours not days, and certainly not working days. It's impossible to get an accurate PERT diagram for the project because no one is working full time on it.
+This PERT diagram is based on the second lowest level of the WBS. This diagram is unusal because its times are in hours not days, and certainly not working days. It's impossible to get an accurate PERT diagram for the project because no one is working full time on it.
 
 This diagram suggests that the 91 hours of work in the WBS can be cut down to 55 hours. Both these values are obviously ridiculous underestimates.
 
