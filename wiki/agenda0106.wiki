@@ -1,0 +1,14 @@
+#summary One-sentence summary of this page.
+
+== Mentor meeting ==
+*Date:* 1/6/2010
+<br>*Time:* 5pm
+<br>*Location:* N110
+<br>*Duration:* 1 hour
+
+=== Agenda Items ===
+  * Progress reports
+  * Summary all animators/UML tools investigated
+  * Organise meetings during exam period
+  * Task allocation
+  * Mentor comments
