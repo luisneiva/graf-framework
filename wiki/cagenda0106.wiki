@@ -1,0 +1,9 @@
+#summary agenda
+== Client meeting ==
+*Date:* 1/6/2010
+<br>*Time:* 10am
+<br>*Location:* Raj's office
+<br>*Duration:* 1 hour
+
+=== Agenda Items ===
+  * Adding actions to UML models
