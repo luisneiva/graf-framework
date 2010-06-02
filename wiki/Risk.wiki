@@ -12,6 +12,7 @@
 || Can't find anyone locally who will use GRAF || Medium || Low ||
 || Competing product appears || Very low || Very low ||
 || Other animators aren't ambiguous || Low || High ||
+|| 2 animators give the same results || High || Medium ||
 || No tool can be found to instantiate models for GRAF || High || Low ||
 || Greg can no longer be involved || Medium || High ||
 || A team member leaves temporarily or permanently || High|| Medium ||
@@ -26,7 +27,7 @@
 || ~~Contacted stakeholders have no use for GRAF, have no ambiguous models~~ || ~~High~~|| High ||
 || Space on Google code used up || Low || Medium ||
 || The models from Greg can't be entered into GRAF || High || High ||
-|| Models' action language statements can't be manually to a uml file || Low || High ||
+|| Models' action language statements can't be manually added to a uml file || Low || High ||
 || The new UML action language syntax, when it comes out, makes our work out of date || Medium || Medium ||
 || The clients question the worth of their own project || Low || Medium ||
 
@@ -46,6 +47,10 @@ The team will make it a priority to determine whether any tool supports easily a
 ===== Project scope is unattainable in 2010 =====
 *Action:* Reduce probability<br>
 The team will undertake proper estimating and planning so that we can set out to achieve everything we plan to do.
+
+===== 2 animators give the same results ====
+*Action:* Reduce impact<br>
+The team will try to get more than two animators working. We will also look for other ways to demonstrate the problems with a lack of formality.
 
 === Mitigation of risks that used to be critical or high risk ===
 
