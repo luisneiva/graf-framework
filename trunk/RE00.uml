@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA">
+  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="RE00">
+    <packagedElement xmi:type="uml:Class" xmi:id="_wIKVkGYEEd-8QvdEjO-jiQ" name="A" classifierBehavior="_CArPQGYFEd-8QvdEjO-jiQ">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_CArPQGYFEd-8QvdEjO-jiQ" name="StateMachine">
+        <region xmi:id="_CArPQWYFEd-8QvdEjO-jiQ" name="Region">
+          <subvertex xmi:type="uml:State" xmi:id="_RnZFcGYFEd-8QvdEjO-jiQ" name="A"/>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_wjPvGGYEEd-8QvdEjO-jiQ" name="B" classifierBehavior="_-UbnAGYEEd-8QvdEjO-jiQ">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_-UbnAGYEEd-8QvdEjO-jiQ" name="StateMachine">
+        <region xmi:id="_-UbnAWYEEd-8QvdEjO-jiQ" name="Region">
+          <subvertex xmi:type="uml:State" xmi:id="_TxAdUGYFEd-8QvdEjO-jiQ" name="B"/>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_w8O22GYEEd-8QvdEjO-jiQ" name="C" classifierBehavior="_CwI9UGYFEd-8QvdEjO-jiQ">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_CwI9UGYFEd-8QvdEjO-jiQ" name="StateMachine">
+        <region xmi:id="_CwI9UWYFEd-8QvdEjO-jiQ" name="Region">
+          <subvertex xmi:type="uml:State" xmi:id="_MWa7EmYFEd-8QvdEjO-jiQ" name="C"/>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_xmVjymYEEd-8QvdEjO-jiQ" name="A_&lt;a>_&lt;b>" memberEnd="_xmVjy2YEEd-8QvdEjO-jiQ _xmVjzmYEEd-8QvdEjO-jiQ">
+      <ownedEnd xmi:id="_xmVjy2YEEd-8QvdEjO-jiQ" name="a" type="_wIKVkGYEEd-8QvdEjO-jiQ" isUnique="false" association="_xmVjymYEEd-8QvdEjO-jiQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xmVjzGYEEd-8QvdEjO-jiQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xmVjzWYEEd-8QvdEjO-jiQ"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_xmVjzmYEEd-8QvdEjO-jiQ" name="b" type="_wjPvGGYEEd-8QvdEjO-jiQ" isUnique="false" association="_xmVjymYEEd-8QvdEjO-jiQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xmVjz2YEEd-8QvdEjO-jiQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xmVj0GYEEd-8QvdEjO-jiQ"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_514_K2YEEd-8QvdEjO-jiQ" name="A_&lt;b>_&lt;c>" memberEnd="_514_LGYEEd-8QvdEjO-jiQ _514_L2YEEd-8QvdEjO-jiQ">
+      <ownedEnd xmi:id="_514_LGYEEd-8QvdEjO-jiQ" name="b" type="_wjPvGGYEEd-8QvdEjO-jiQ" isUnique="false" association="_514_K2YEEd-8QvdEjO-jiQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_514_LWYEEd-8QvdEjO-jiQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_514_LmYEEd-8QvdEjO-jiQ"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_514_L2YEEd-8QvdEjO-jiQ" name="c" type="_w8O22GYEEd-8QvdEjO-jiQ" association="_514_K2YEEd-8QvdEjO-jiQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_514_MGYEEd-8QvdEjO-jiQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_514_MWYEEd-8QvdEjO-jiQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>
