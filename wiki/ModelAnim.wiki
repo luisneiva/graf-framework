@@ -1,7 +1,66 @@
-== Other Model Animators ==
+= Comparison of other model animators =
+== Unimod ==
+*Action:* Further investigation could be useful 
+  * Eclipse plugin to make state machines and class diagrams
+  * Download doesn't compile
+== UMLAnT ==
+*Action:* Abandoned
+  * Like GRAF but without the graph transformation stuff - it's not clear how it decides what system state to go to next.
+  * See http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.94.4625&rep=rep1&type=pdf or just google UMLAnT
+  * Download links are closed (checked in May 2010)
+== Bridgepoint ==
+*Action:* Seeking access to full version
+  * A whole suite of tools for common UML diagrams and animation.
+  * It's not clear how it decides what system state to go to next (there are probably inconsistencies between UMLAnT and Bridgepoint).
+  * Commercial software that people actually use.
+  * See http://www.mentor.com/products/sm/model_development/bridgepoint_uml_tutorials
+  * Free version does not support state machines (checked in May 2010)
+  * http://www.mentor.com/products/sm/download/bridgepoint-eval
 
-[Rhapsody]<br>
-[KennedyCarter Kennedy Carter]<br>
-[UniMod UniMod]<br>
-[UMLAnt UMLAnT]<br>
-[Artisan Artisan]<br>
+== UGT ==
+*Action:* No further investigation needed because this application _does use_ graph transformations
+  * Very similar to GRAF except it has no link to Eclipse and it's exclusively for UML.
+  * Also does Object Constraint Language stuff.
+  * See http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.71.7931&rep=rep1&type=pdf or google ugt graph uml
+  * Download at http://ostatic.com/ugt
+  * According to the site it has 0 users. Our goal is to not have GRAF end up like UGT.
+  * Not reliable to demonstrate state machines
+  * Errors in the jar file that need to fix by hand
+
+== GReAT ==
+*Action:* No further investigation because this is about graphs, not about UML
+  * Like GRAF but allows the user to make their own transformations for any language (I think).
+  * Gives you a graph to look at, not an object diagram like GRAF.
+  * http://www.isis.vanderbilt.edu/tools/GReAT
+  * Cannot demonstrate state machines
+
+== !PathMate ==
+*Action:* Awaiting response from company
+  * !PathMate is made by Pathfinder and uses IBM rational rose and eclipse
+  * http://www.pathfindermda.com/resources/whitepapers.php
+  * Can request trial at http://www.pathfindermda.com/products/pathmate_form.php
+
+== Kennedy Carter ==
+*Action:* Contacted Kennedy Carter, waiting for response
+  * not open source
+  * a single environment for the construction and testing of system models using Executable UML and includes requirements management, configuration management and multi-user capabilities. At the core of toolset is the iUML Modeller that allows the graphical input of UML models and associated descriptions. More than a just a graphical entry tool, the iUML Modeller maintains consistency between different views of the same element thus eliminating the need to enter the same information twice, even when multiple users are editing the same model.
+  * http://www.kc.com/PRODUCTS/iuml/index.php
+  * http://www.kc.com/DOWNLOADS/browse.php?dlgid=4 ~~You do not currently have permission to download these files, please contact Kennedy Carter if you are an existing customer or would like to set up an evaluation.~~
+
+== Artisan ==
+*Action:* Under investigation
+  * Artisan has many products but I think Studio UNO is the main UML tool
+  * http://www.artisansoftwaretools.com/downloads/evaluation/artisan-studio-uno/
+
+== [Rhapsody] ==
+*Action:* Abandoned for now, too complicated
+  * Does what we need
+  * http://www.ibm.com/developerworks/rational/products/rhapsody/
+  * 30 day free trial http://www.ibm.com/developerworks/downloads/r/rhapsodydeveloper/ (700 MB)
+  * Can do everything GRAF can do and more http://download.boulder.ibm.com/ibmdl/pub/software/dw/demos/rhapsodyradio/animating_the_radio_model_20090623_with_audio_viewlet_swf.html
+
+== eLEMinator ==
+*Action:* Save it as a last resort
+  * http://lem.berlios.de/wiki/index.php/Main_Page
+  * Another ANU software engineering project
+  * This will have inconsistencies, but it's not as useful to show them because no one uses this
