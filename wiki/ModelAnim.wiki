@@ -54,6 +54,7 @@
 
 == [Rhapsody] ==
 *Action:* Abandoned for now, too complicated
+  * [Rhapsody More detail]
   * Does what we need
   * http://www.ibm.com/developerworks/rational/products/rhapsody/
   * 30 day free trial http://www.ibm.com/developerworks/downloads/r/rhapsodydeveloper/ (700 MB)
