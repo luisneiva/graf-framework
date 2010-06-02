@@ -33,7 +33,10 @@ Vide
   * Install instructions: http://www.vide-ist.eu/reflib/cookbook.html
   * Vide isn't just an eclipse plugin. There's also various Vide articles that describe how UML actions work and many other things. 
   * *Action:* Try to set up
-
+TextUML
+  * Generates actions for the eclipse tree from Java-like syntax.
+  * Doesn't work. Nothing parses.
+  * *Action:* Abandon
 === Paid ===
 Enterprise Architect
   * Requires an Eclipse plugin as standard edition outputs XMI files that are not specific to Eclipse (unsure if this plugin would even allow this)
