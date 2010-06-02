@@ -1,0 +1,37 @@
+#summary Minutes 1/6/2010
+
+= Mentor Meeting 1/6/2010 =
+
+Date:
+<br>Location: CSIT N110
+<br>Present: Oscar, Stephen, Alice, Cameron, Hamish and Frank
+<br>Time: 5pm
+<br>Duration: 1 hr
+
+== Progress reports ==
+
+  * Oscar: Vide animator can translate actions into a UML tree. Also, a new WBS has been created based on the GPME data, so keep using GPME.
+
+== Times for exam-period meetings ==
+
+  * 5pm Friday 11th June
+  * 2pm Wednesday 23rd June
+
+== Discussion ==
+
+  * Review of surveyed UML animators
+  * Milestones - 'proof of concept' milestone reached today. Next goal - put all Greg's models into GRAF
+  * Clients are still developing/discussing success criteria
+  * Risk: exams interfering with projected work this month. Mitigation?
+  * Mentor recommendations:
+    * make 'idiot's guide' to ambiguity in our models
+    * take a definite position on the use of the term 'reference' in relation to GRAF.
+
+== Assign tasks ==
+
+  * Cameron: investigate Vide
+  * Hamish: analyse pseudo-code in Invoicer model
+    * expand into sequence diagrams and eg java syntax
+    * break down into individual actions
+  * Frank: work out process for fixing translation issue with state machines and upload complete models to GRAF
+  * Alice: add Add Variable Value Action and Create Object Action rules
