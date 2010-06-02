@@ -1,42 +1,51 @@
 _Author: Cameron Chisholm_
 
-Last year (2009) the microwave model (linkify later) was used to demonstrate the progress the team had made. It was created by manually editing an XML tree. This is a time consuming process. As GRAF will hopefully be demonstrating multiple models this year a semi(or ideally wholly) automated process to produce models in XMI is required.
+Last year (2009) the microwave model was used to demonstrate the progress the team had made. It was created by manually editing an XML tree. This is a time consuming process. As GRAF will hopefully be demonstrating multiple models this year a semi(or ideally wholly) automated process to produce models in XMI is required.
 
 The ideal tool will output the XMI in a format that GRAF will recognise - requires xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" or xmlns:uml="http://www.eclipse.org/uml2/2.1.1/UML". 
 
-The tools investigated include:
+The tools investigated are:
 
 === Free ===
 BOUML
   * Less user friendly than other tools
   * Allows for Eclipse specific output format but State Diagrams don't correctly nest with Classes creating an error when GRAF tries to load the .uml file
   * Unable to input action language
+  * *Action:* Test if it makes state diagrams properly (unlike Topcased), otherwise abandon
 ARGOUML
   * XMI files that are output are not specific to Eclipse
+  * *Action:* Possibly investigate what _can_ be done with output
 Visual Paradigm SDE Community Edition
   * Lacks the XMI output required to feed models into GRAF
   * Is available as an Eclipse plugin that allows the editing of UML models graphically
   * Unable to input action language
+  * *Action:* Use for state and class diagrams until we have something better
 Topcased
   * Allows for output in Eclipse specific format
   * No visual component - can use with Visual Paradigm to provide this functionality
   * Unable to input action language
+  * Doesn't write state machines the same way GRAF reads them
+  * *Action:* Use for state and class diagrams until we have something better
 Vide
   * http://www.vide-ist.eu/index.html
   * Vide _definitely_ provides a tool to generate UML actions in the eclipse tree from given code.
   * Vide is an eclipse plugin, but it's exceedingly difficult to set up.
   * Install instructions: http://www.vide-ist.eu/reflib/cookbook.html
-  * Vide isn't just an eclipse plugin. There's also various Vide articles that describe how UML actions work and many other things.
+  * Vide isn't just an eclipse plugin. There's also various Vide articles that describe how UML actions work and many other things. 
+  * *Action:* Try to set up
 
 === Paid ===
 Enterprise Architect
   * Requires an Eclipse plugin as standard edition outputs XMI files that are not specific to Eclipse (unsure if this plugin would even allow this)
   * Doesnt correctly nest state machines in classes
+  * *Action:* Abandon because of cost
 
 Visual Paradigm SDE
   * Modellers edition outputs XMI files
+  * *Action:* Abandon because of cost
 
 Omondo UML
+  * *Action:* ???
 
 == Conclusion ==
 
