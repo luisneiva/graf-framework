@@ -8,7 +8,7 @@ CLIENT MEETING (GREG O'KEEFE via phone)
 
 ==Discussion Items==
 
-*Outstanding tasks for Greg
+  * Outstanding tasks for Greg
   * Email Annete
     * Do the models she uses do what they are proposed to do?
     * Ask if she will be interested in viewing a demonstration of graph with the five chosen models implemented
@@ -18,11 +18,11 @@ CLIENT MEETING (GREG O'KEEFE via phone)
 
 ==Action Language Issues==
 
-* We have given up on textUML for the time being as it does not do what it is supposed to
+  * We have given up on textUML for the time being as it does not do what it is supposed to
 
 ==Action Items==
 
-* Work out the required actions to implement the five chosen models in graph by finding them in the standard UML definition and hand implement these into GRAF
-* Focus on getting at least one model running in GRAF with all the associated actions working
-* Turn ourselves into human UML compilers!
-* Oscar will contact Greg regarding next client meeting times
+  * Work out the required actions to implement the five chosen models in graph by finding them in the standard UML definition and hand implement these into GRAF
+  * Focus on getting at least one model running in GRAF with all the associated actions working
+  * Turn ourselves into human UML compilers!
+  * Oscar will contact Greg regarding next client meeting times
