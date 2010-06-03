@@ -1,7 +1,7 @@
-Meeting name
+CLIENT MEETING (GREG O'KEEFE via phone)
 
-Date:
-Location: CSIT N110
-Present: Oscar, Stephen, Alice, Cameron, Hamish and Frank
-Time: 10-11am
-Duration: 1 hour
+<br>Date:1/6/2010
+<br>Location: CSIT N110
+<br>Present: Oscar, Stephen, Alice, Cameron, Hamish and Frank
+<br>Time: 10-11am
+<br>Duration: 1 hour
