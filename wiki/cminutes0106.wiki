@@ -5,3 +5,13 @@ CLIENT MEETING (GREG O'KEEFE via phone)
 <br>Present: Oscar, Stephen, Alice, Cameron, Hamish and Frank
 <br>Time: 10-11am
 <br>Duration: 1 hour
+
+==Discussion Items==
+
+*Outstanding tasks for Greg
+  *email Annete
+    *Do the models she uses do what they are proposed to do?
+    *Ask if she will be interested in viewing a demonstration of graph with the five chosen models implemented
+    *Ask her if she has any contentious models
+    *
+  *provide team with updated and succinct success factors
