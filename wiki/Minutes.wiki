@@ -5,6 +5,7 @@
 || 25/5 || Team || [agenda2505 Agenda] || [minutes2505 Minutes] ||
 || 1/6 || Client || [cagenda0106 Agenda] || [cminutes0106 Minutes] ||
 || 1/6 || Mentor || [agenda0106 Agenda] || [minutes0106 Minutes] ||
+|| 11/6 || Team || [agenda1106 Agenda] || [minutes1106 Minutes] ||
 
 Agendas and minutes from before 12/5/2010 are on the [https://alliance.anu.edu.au/portal Alliance]. <br>
 [agendaTemplate Agenda Template] <br>
