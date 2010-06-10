@@ -1,0 +1,10 @@
+#summary agenda
+== Team title ==
+*Date:* 11/6/10
+<br>*Time:* 5pm
+<br>*Location:* N110
+<br>*Duration:* 1 hour
+
+=== Agenda Items ===
+  * Discuss Greg and Raj's success criteria
+  * Update risk log
