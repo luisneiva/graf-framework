@@ -1,4 +1,4 @@
-#Greg and Raj's Success Criteria
+=Greg and Raj's Success Criteria=
 
 Successful model driven engineering depends on all project
 stakeholders understanding and agreeing on the model.  This is only
@@ -51,18 +51,8 @@ For the second goal, we would like a proof-of-concept demonstration.
 We hope this can help us attract an industrial sponsor.  The most
 useful outcomes we would like to see for 2010 are as follows.
 
-* A definite and justifiable answer to the question "what does this
-  model do" for a small collection of published models, and the
-  ability to answer the question for any model of the "xtUML" [MB02]
-  subset of UML.  
+  * A definite and justifiable answer to the question "what does this model do" for a small collection of published models, and the ability to answer the question for any model of the "xtUML" [MB02] subset of UML.  
 
-* As part of the justification of the animator, an incremental
-  demonstration of UML language features.  This would show how the
-  features are officially defined, and how they are treated by the
-  animator.  The demonstration could take the form of an animator
-  assisted UML tutorial that could be taken up in university teaching,
-  another potential customer base.
+  * As part of the justification of the animator, an incremental demonstration of UML language features.  This would show how the features are officially defined, and how they are treated by the animator.  The demonstration could take the form of an animator assisted UML tutorial that could be taken up in university teaching, another potential customer base.
 
-* Demonstration/Presentation of the potential use of the animator in
-  practical model driven development, with the aim of attracting an
-  industrial sponsor for further GRAF development.
+  * Demonstration/Presentation of the potential use of the animator in practical model driven development, with the aim of attracting an industrial sponsor for further GRAF development.
