@@ -34,7 +34,7 @@
 || New requirements || Medium || Medium ||
 || (Success criteria 1) Can't give definite descriptions of given models' behaviour || Low || High ||
 || (Success criteria 2) Can't demonstrate animator features || Low || High ||
-|| (Success criteria 3) Can't attract industrial sponsor || High || Medium ||
+|| (Success criteria 3) Can't attract industrial sponsor || High || Low ||
 
 http://graf-framework.googlecode.com/files/Risk-Criteria.jpg <br>
 Only critical and high threat level risks will be mitigated
@@ -48,11 +48,17 @@ The team will look for other models that serve the same purpose but are more com
 *Action:* Reduce impact<br>
 The team will try to get more than two animators working. We will also look for other ways to demonstrate the problems with a lack of formality.
 
-=== Mitigation of risks that used to be critical or high risk ===
-
 ===== Project doesn't meet client's needs =====
-*Action:* Reduce probability<br>
-The team will meet with the client fortnightly to discuss the progress of the project.
+
+===== Can't convince anyone of the usefulness of GRAF =====
+
+===== Greg or Raj can no longer be involved as much =====
+
+===== A team member leaves temporarily or permanently =====
+
+===== Free UML animators don't work =====
+
+=== Mitigation of risks that used to be critical or high risk ===
 
 ===== Contacted stakeholders have no use for GRAF, have no ambiguous models =====
 *Action:* Reduce probability/transfer risk<br>
