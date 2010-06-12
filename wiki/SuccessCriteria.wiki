@@ -15,7 +15,7 @@ software industry often reject the "formal" approach of academia,
 implying that the definition is good enough.
 
 Greg O'Keefe has shown that the language can be given a clear and
-precise definition as a graph transformation system [O'K08].  Unlike
+precise definition as a graph transformation system (O'K08).  Unlike
 most academic work on UML, the proposed definition takes into account
 all parts of the language, and agrees as far as possible with the
 official definition.  Where the official definition is incoherent,
@@ -51,7 +51,7 @@ For the second goal, we would like a proof-of-concept demonstration.
 We hope this can help us attract an industrial sponsor.  The most
 useful outcomes we would like to see for 2010 are as follows.
 
-  * A definite and justifiable answer to the question "what does this model do" for a small collection of published models, and the ability to answer the question for any model of the "xtUML" [MB02] subset of UML.  
+  * A definite and justifiable answer to the question "what does this model do" for a small collection of published models, and the ability to answer the question for any model of the "xtUML" (MB02) subset of UML.  
 
   * As part of the justification of the animator, an incremental demonstration of UML language features.  This would show how the features are officially defined, and how they are treated by the animator.  The demonstration could take the form of an animator assisted UML tutorial that could be taken up in university teaching, another potential customer base.
 
