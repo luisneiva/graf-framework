@@ -1,36 +1,40 @@
 = Risk log =
 || Risk || Likelihood|| Impact ||
-|| No action language builder || High || High ||
-|| Work to make GRAF useable is unattainable in 2010 || Medium || Low ||
-|| Project scope is unattainable in 2010 || Medium || High ||
-|| Project doesn't meet client's needs || Low || High ||
+|| No action language builder || High || Low ||
+|| Work to make GRAF useable is unattainable in 2010 || High || Low ||
+|| Project doesn't meet client's needs || Medium || High ||
 || Latent defects discovered || Medium || Medium ||
 || If statements or select statements require excessive code rework || Medium || Medium ||
 || A new version of Eclipse isn't backwards compatible || Medium || Low||
 || GRAF runs too slowly || Low || Medium ||
-|| Adding new rules requires code change || Medium || Low ||
-|| Can't find anyone locally who will use GRAF || Medium || Low ||
+|| Adding new rules requires code change || High || Low ||
+|| ~~Can't find anyone locally who would use GRAF~~ || ~~Medium~~ || Low ||
+|| Can't convince anyone of the usefulness of GRAF || Medium || High ||
 || Competing product appears || Very low || Very low ||
 || Other animators aren't ambiguous || Low || High ||
 || 2 animators give the same results || High || Medium ||
 || No tool can be found to instantiate models for GRAF || High || Low ||
-|| Greg can no longer be involved || Medium || High ||
+|| Greg or Raj can no longer be involved as much || Medium || High ||
 || A team member leaves temporarily or permanently || High|| Medium ||
 || AGG disappears || Low || Low ||
 || GPME disappears || Low || Medium ||
 || Google code disappears || Low || High ||
-|| Alliance disappears || Low || High ||
+|| Alliance disappears || Low || Medium ||
 || Email history lost in part or entirely || Medium || Low ||
 || New requirements || Medium || Medium ||
 || Legal/license problems appear || Low || High ||
 || ~~There are no free UML animators~~ || ~~Medium~~ || High ||
+|| Free UML animators don't work || Medium || High ||
 || ~~Contacted stakeholders have no use for GRAF, have no ambiguous models~~ || ~~High~~|| High ||
 || Space on Google code used up || Low || Medium ||
-|| The models from Greg can't be entered into GRAF || High || High ||
+|| The models from Greg can't be entered into GRAF || Medium || High ||
 || Models' action language statements can't be manually added to a uml file || Low || High ||
 || The new UML action language syntax, when it comes out, makes our work out of date || Medium || Medium ||
 || The clients question the worth of their own project || Low || Medium ||
-
+|| New requirements || Medium || Medium ||
+|| (Success criteria 1) Can't give definite descriptions of given models' behaviour || Low || High ||
+|| (Success criteria 2) Can't demonstrate animator features || Low || High ||
+|| (Success criteria 3) Can't attract industrial sponsor || High || Medium ||
 
 http://graf-framework.googlecode.com/files/Risk-Criteria.jpg <br>
 Only critical and high threat level risks will be mitigated
@@ -39,14 +43,6 @@ Only critical and high threat level risks will be mitigated
 ===== The models from Greg can't be entered into GRAF =====
 *Action:* Reduce likelihood, reduce impact <br>
 The team will look for other models that serve the same purpose but are more compatible with GRAF. The team will make it a priority to find out what is needed to add the 4 models so it will become clear how feasible it is.
-
-===== No action language builder =====
-*Action:* Reduce impact<br>
-The team will make it a priority to determine whether any tool supports easily adding action language commands to a state machine. If none can be found, then we will make it part of the project to develop our own application to do so. GRAF cannot be used without a state machine with action commands and it is unreasonable to expect anyone to seriously use GRAF if they need to manually add each primitive UML action.
-
-===== Project scope is unattainable in 2010 =====
-*Action:* Reduce probability<br>
-The team will undertake proper estimating and planning so that we can set out to achieve everything we plan to do.
 
 ===== 2 animators give the same results ====
 *Action:* Reduce impact<br>
@@ -71,3 +67,7 @@ GRAF doesn't have to be _useable_ by 2011. Only the team needs to be able to use
 ===== There are no free UML animators =====
 *Action:* Reduce impact<br>
 The team will look into other ways to demonstrate ambiguities in models. The team will consider other approaches to acquire animators.
+
+===== No action language builder =====
+*Action:* Reduce impact<br>
+~~The team will make it a priority to determine whether any tool supports easily adding action language commands to a state machine. If none can be found, then we will make it part of the project to develop our own application to do so. GRAF cannot be used without a state machine with action commands and it is unreasonable to expect anyone to seriously use GRAF if they need to manually add each primitive UML action.~~ We reduced the impact of this to zero by deciding not to use an action language builder.
