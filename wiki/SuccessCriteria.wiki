@@ -1,0 +1,68 @@
+#Greg and Raj's Success Criteria
+
+Successful model driven engineering depends on all project
+stakeholders understanding and agreeing on the model.  This is only
+possible if the modelling language has a clear and definite meaning.
+Without an objective definition of the meaning, stakeholders can see
+what they want to see in the model, and apparent agreement can
+collapse at great expense late in the project timeline.
+
+UML is the most widely used software modelling language.  The language
+is defined and maintained by a computer industry consortium, the
+Object Management Group (OMG).  Many research papers on UML say that
+the official definition is confused and unclear, but opinions from the
+software industry often reject the "formal" approach of academia,
+implying that the definition is good enough.
+
+Greg O'Keefe has shown that the language can be given a clear and
+precise definition as a graph transformation system [O'K08].  Unlike
+most academic work on UML, the proposed definition takes into account
+all parts of the language, and agrees as far as possible with the
+official definition.  Where the official definition is incoherent,
+sympathetic repairs are proposed.
+
+The aim of the GRAF project is to realise O'Keefe's clarification of
+the official definition as a UML model animator.  Implementing the
+graph based formulation is much simpler than working directly with the
+official definition, because a large number of unclear ideas are
+reduced to a few well defined mathematical ideas, and because the tool
+can be built on top of existing graph transformation software.  The
+2009 GRAF project has established the architecture, and produced an
+initial version that can interactively animate a very simple model.
+
+There are two main uses for the animator.
+
+First, we want to demonstrate that the language is not well
+understood, by animating published models.  We expect to find
+discrepancies between the understanding of the model exhibited in the
+text, and the meaning of the model according to the language
+definition.  In order to exhibit these discrepancies, we will need to
+justify the animation in terms of the official definition.  
+
+The second purpose of the tool is as a model validation tool for use
+in model driven development.  Such tools already exist, but they are
+not faithful to the definition.  The most obvious shortcoming of these
+tools is that they give a single execution trace for a model, whereas
+UML is a non-deterministic language, so a model state could evolve in
+many different ways.
+
+For the 2010 GRAF project, the first of these goals is the main one.
+For the second goal, we would like a proof-of-concept demonstration.
+We hope this can help us attract an industrial sponsor.  The most
+useful outcomes we would like to see for 2010 are as follows.
+
+* A definite and justifiable answer to the question "what does this
+  model do" for a small collection of published models, and the
+  ability to answer the question for any model of the "xtUML" [MB02]
+  subset of UML.  
+
+* As part of the justification of the animator, an incremental
+  demonstration of UML language features.  This would show how the
+  features are officially defined, and how they are treated by the
+  animator.  The demonstration could take the form of an animator
+  assisted UML tutorial that could be taken up in university teaching,
+  another potential customer base.
+
+* Demonstration/Presentation of the potential use of the animator in
+  practical model driven development, with the aim of attracting an
+  industrial sponsor for further GRAF development.
