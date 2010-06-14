@@ -3,7 +3,7 @@
 = Group Meeting =
 Date: 11/06/10
 <br>Location: CSIT N110
-<br>Present: Oscar, Stephen, Alice, Cameron, Hamish and Frank
+<br>Present: Oscar, Alice, Cameron, Hamish and Frank
 <br>Time: 5pm
 <br>Duration: 1 hr
 
