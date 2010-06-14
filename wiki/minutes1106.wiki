@@ -1,0 +1,17 @@
+#Minutes 11/06/10
+
+= Group Meeting =
+Date: 11/06/10
+<br>Location: CSIT N110
+<br>Present: Oscar, Stephen, Alice, Cameron, Hamish and Frank
+<br>Time: 5pm
+<br>Duration: 1 hr
+
+== Success Criteria Analysis ==
+
+  * Are they achievable? One and two, yes - three requires further clarification.
+
+== Update Risk Log ==
+  
+  * No new risks
+  * Update existing based on project progress and new success criteria, including mitigation and impact.
