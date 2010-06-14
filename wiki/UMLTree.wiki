@@ -4,7 +4,7 @@ The tree is a file format to save UML diagrams. All types of UML diagrams can be
 = How the Eclipse UML tree works =
 All nodes contain a type and a large number of properties. Type is important but other than _name_, most of the properties can be ignored. (Note for GRAF to work, all name fields should be unqiue) The parent-child relationships of the nodes is the most important piece of information for a certain node.
 
-The tree contains nodes for class diagrams and state machines and basically everything in UML. What interest us is the Actions, because all the other things can be created easily by using other tools, rather than directly editting the tree. In the tree, actions will only occur within _Activity_ subtrees, which usually occur within state machine parts of the tree.
+The tree contains nodes for class diagrams and state machines and basically everything in UML. What interests us is the Actions, because all the other things can be created easily by using other tools, rather than directly editting the tree. In the tree, actions will only occur within _Activity_ subtrees, which usually occur within state machine parts of the tree.
 
 A simple action language statement like _generate cook across cooks_ is represented by a number of nodes (these are UML tree nodes, not to be confused with nodes in a graph).
 
