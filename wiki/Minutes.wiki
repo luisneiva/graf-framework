@@ -8,6 +8,6 @@
 || 11/6 || Team || [agenda1106 Agenda] || [minutes1106 Minutes] ||
 || 23/6 || Mentor || [agenda2306 Agenda] || [minutes2306 Minutes] ||
 
-Agendas and minutes from before 12/5/2010 are on the [https://alliance.anu.edu.au/portal Alliance]. <br>
+Agendas and minutes from before 12/5/2010 are on [https://alliance.anu.edu.au/portal Alliance]. <br>
 [agendaTemplate Agenda Template] <br>
 [minutesTemplate Minutes Template] <br>
