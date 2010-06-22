@@ -1,6 +1,6 @@
 #summary agenda
 == Mentor Meeting ==
-*Date:* 19/6/10
+*Date:* 23/6/10
 <br>*Time:* 2pm
 <br>*Location:* N110
 <br>*Duration:* 1 hour
@@ -9,4 +9,5 @@
   * Limited progress reports
   * Organise holiday meeting times
   * Make plan to achieve milestones 2 and 3
+  * Discussion of Review 2
   * Discussion of success criteria with James
