@@ -49,12 +49,20 @@ The team will look for other models that serve the same purpose but are more com
 The team will try to get more than two animators working. We will also look for other ways to demonstrate the problems with a lack of formality.
 
 ===== Project doesn't meet client's needs =====
+*Action:* Reduce impact and likelihood<br>
+Obviously avoiding this risk is equivalent to making the project as successful as possible. Beyond, trying to make the project a success, the group will also focus on creating documentation for whoever continues the project next year. That way, even if the project does not meet the client's needs, there will be a good chance of it being successful next year.
 
 ===== Can't convince anyone of the usefulness of GRAF =====
+*Action:* Reduce likelihood<br>
+Though the group can always present GRAF in the best light possible, this may not convince everyone that the concept behind GRAF is worthwhile. Furthermore, though this risk will affect the team, it is largely up to the clients to address this.
 
 ===== Greg or Raj can no longer be involved as much =====
+*Action:* Reduce impact<br>
+The team needs to develop a concrete, unchanging plan based on the success criteria. We cannot base the week's/month's activities on what happened at the last client meeting. That way, the team will have a plan whether or not the clients are available.
 
 ===== A team member leaves temporarily or permanently =====
+*Action:* Reduce impact<br>
+All the team can do is make sure that if this does happen, no information or skills are lost. For example, all files will be kept online.
 
 ===== Free UML animators don't work =====
 
