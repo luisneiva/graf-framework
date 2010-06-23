@@ -2,6 +2,7 @@ package model.modelTransformer;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 
 import model.ListGraph;
 import model.exceptions.GraphToModelException;
@@ -217,6 +218,7 @@ public class GraphToObjDiag implements GraphToModel {
 		eventOrder.add("source");
 
 		for(ODObject object : objects) {
+			System.out.println("from " + object);
 
 			ArrayList<String> toExternalEvent = new ArrayList<String>();
 			toExternalEvent.add("execution");
@@ -226,6 +228,16 @@ public class GraphToObjDiag implements GraphToModel {
 			toExternalEvent.add("trigger");
 			toExternalEvent.add("event");
 			ArrayList<Node> externalEvents = ListGraph.toTrace(toExternalEvent, object.getGraphNode());
+			
+			Iterator<Node> duplicateRemover = externalEvents.iterator();
+			ArrayList<String> found = new ArrayList<String>();
+			while(duplicateRemover.hasNext()) {
+				String current = ListGraph.getName(duplicateRemover.next());
+				if(found.contains(current))
+					duplicateRemover.remove();
+				else
+					found.add(current);
+			}
 			
 			for(Node node : externalEvents) {
 				object.addExternalEvent(node);
