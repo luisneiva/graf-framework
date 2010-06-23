@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="idModel" name="DefaultNameModel">
+  <packagedElement xmi:type="uml:Package" xmi:id="idPackage" name="DefaultNamePackage">
+    <packagedElement xmi:type="uml:Class" xmi:id="_q8mXYH61Ed-TKunu4J1dAA" name="Elevator" classifierBehavior="idStateMachine">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="idStateMachine" name="DefaultNameStateMachine">
+        <region xmi:id="idRegion" name="MainRegion">
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_Z46ggGeWEd-HKL1SIsqvhA" name="9"/>
+          <subvertex xmi:type="uml:State" xmi:id="_abFZcGeWEd-HKL1SIsqvhA" name="State1"/>
+          <transition xmi:id="_bvNTwGeWEd-HKL1SIsqvhA" name="" kind="local" source="_Z46ggGeWEd-HKL1SIsqvhA" target="_abFZcGeWEd-HKL1SIsqvhA"/>
+          <transition xmi:id="_crLMwGeWEd-HKL1SIsqvhA" name="request?f" kind="local" source="_abFZcGeWEd-HKL1SIsqvhA" target="_abFZcGeWEd-HKL1SIsqvhA"/>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

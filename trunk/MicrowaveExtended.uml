@@ -74,6 +74,7 @@
                 </fromAction>
               </argument>
             </node>
+            <node xmi:type="uml:CreateObjectAction" xmi:id="_V5OjcG4bEd-bSrbvyREAZg" name="createFood"/>
           </entry>
         </subvertex>
         <subvertex xmi:type="uml:State" xmi:id="_oehP8EZ4Ed6JvpGL0b827A" name="FinishedCooking">

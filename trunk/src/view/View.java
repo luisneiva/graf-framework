@@ -79,7 +79,6 @@ public class View extends ViewPart {
 	public View(boolean plugin, Shell parent) {
 		isPlugin = plugin;
 		contentDrawer = new ObjectDiagDrawer(this);
-		@SuppressWarnings("unused")
 		Controller controller = new Controller(this, plugin);
 		final Shell sh = parent.getShell();
 		final Display d = parent.getDisplay();
