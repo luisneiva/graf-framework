@@ -312,7 +312,7 @@ public class Controller {
 				animate(instancepath);
 			}			
 		});
-
+		
 		helpGetHelpItem.addHelpListener(new HelpListener() {
 			public void helpRequested(HelpEvent e) {
 			}			
@@ -391,5 +391,12 @@ public class Controller {
 		while (!shell.isDisposed())
 			while (!d.readAndDispatch())
 				d.sleep();
+	}
+
+	public void openNew() {
+		String instancepath = view.openFileChooser();
+		if (instancepath == null) 
+			return;
+		animate(instancepath);		
 	}
 }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="idModel" name="DefaultNameModel">
+  <packagedElement xmi:type="uml:Package" xmi:id="idPackage" name="DefaultNamePackage">
+    <packagedElement xmi:type="uml:Class" xmi:id="_b3muMX61Ed-TKunu4J1dAA" name="Elevator" classifierBehavior="idStateMachine">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="idStateMachine" name="DefaultNameStateMachine">
+        <region xmi:id="idRegion" name="MainRegion">
+          <subvertex xmi:type="uml:State" xmi:id="__rifkGeTEd-HKL1SIsqvhA" name="4"/>
+          <subvertex xmi:type="uml:State" xmi:id="_AFlXQGeUEd-HKL1SIsqvhA" name="5"/>
+          <subvertex xmi:type="uml:State" xmi:id="_AXhb0GeUEd-HKL1SIsqvhA" name="8"/>
+          <subvertex xmi:type="uml:State" xmi:id="_Amz1AGeUEd-HKL1SIsqvhA" name="7"/>
+          <subvertex xmi:type="uml:State" xmi:id="_A3zeYGeUEd-HKL1SIsqvhA" name="6"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_EibWAGeUEd-HKL1SIsqvhA" name="3"/>
+          <transition xmi:id="_HFIjUGeUEd-HKL1SIsqvhA" name="" kind="local" source="_EibWAGeUEd-HKL1SIsqvhA" target="__rifkGeTEd-HKL1SIsqvhA"/>
+          <transition xmi:id="_HdZSUGeUEd-HKL1SIsqvhA" name="start" kind="local" source="__rifkGeTEd-HKL1SIsqvhA" target="_AFlXQGeUEd-HKL1SIsqvhA"/>
+          <transition xmi:id="_IApJUGeUEd-HKL1SIsqvhA" name="closeDoor" kind="local" source="_AFlXQGeUEd-HKL1SIsqvhA" target="_A3zeYGeUEd-HKL1SIsqvhA"/>
+          <transition xmi:id="_IluzYGeUEd-HKL1SIsqvhA" name="up" kind="local" source="_A3zeYGeUEd-HKL1SIsqvhA" target="_Amz1AGeUEd-HKL1SIsqvhA"/>
+          <transition xmi:id="_JAqb4GeUEd-HKL1SIsqvhA" name="down" kind="local" source="_A3zeYGeUEd-HKL1SIsqvhA" target="_Amz1AGeUEd-HKL1SIsqvhA"/>
+          <transition xmi:id="_JdgI4GeUEd-HKL1SIsqvhA" name="passed" kind="local" source="_Amz1AGeUEd-HKL1SIsqvhA" target="_Amz1AGeUEd-HKL1SIsqvhA"/>
+          <transition xmi:id="_J--eQGeUEd-HKL1SIsqvhA" name="stop" kind="local" source="_Amz1AGeUEd-HKL1SIsqvhA" target="_AXhb0GeUEd-HKL1SIsqvhA"/>
+          <transition xmi:id="_KZnL0GeUEd-HKL1SIsqvhA" name="openDoor" kind="local" source="_AXhb0GeUEd-HKL1SIsqvhA" target="__rifkGeTEd-HKL1SIsqvhA"/>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>
