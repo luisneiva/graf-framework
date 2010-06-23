@@ -24,7 +24,7 @@
 || New requirements || Medium || Medium ||
 || Legal/license problems appear || Low || High ||
 || ~~There are no free UML animators~~ || ~~Medium~~ || High ||
-|| Free UML animators don't work || Medium || High ||
+|| Free UML animators don't work || High || High ||
 || ~~Contacted stakeholders have no use for GRAF, have no ambiguous models~~ || ~~High~~|| High ||
 || Space on Google code used up || Low || Medium ||
 || The models from Greg can't be entered into GRAF || Medium || High ||
