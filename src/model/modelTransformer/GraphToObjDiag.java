@@ -218,8 +218,6 @@ public class GraphToObjDiag implements GraphToModel {
 		eventOrder.add("source");
 
 		for(ODObject object : objects) {
-			System.out.println("from " + object);
-
 			ArrayList<String> toExternalEvent = new ArrayList<String>();
 			toExternalEvent.add("execution");
 			toExternalEvent.add("behavior");
@@ -242,7 +240,6 @@ public class GraphToObjDiag implements GraphToModel {
 			for(Node node : externalEvents) {
 				object.addExternalEvent(node);
 			}
-			
 
 			ArrayList<String> toReciept = new ArrayList<String>();
 			toReciept.add("pool");

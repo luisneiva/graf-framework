@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA">
-  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="Invoicer">
+  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="InvoicerPackage">
     <packagedElement xmi:type="uml:Class" xmi:id="_QDmQoGGVEd-wueUf9g8DcA" name="Invoicer" classifierBehavior="_UEZ-MGGWEd-wueUf9g8DcA">
-      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_UEZ-MGGWEd-wueUf9g8DcA" name="StateMachine">
-        <region xmi:id="_UEZ-MWGWEd-wueUf9g8DcA" name="Region">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_UEZ-MGGWEd-wueUf9g8DcA" name="InvoicerStateMachine">
+        <region xmi:id="_UEZ-MWGWEd-wueUf9g8DcA" name="InvoicerRegion">
           <subvertex xmi:type="uml:State" xmi:id="_cxHPoGGWEd-wueUf9g8DcA" name="State1"/>
           <subvertex xmi:type="uml:State" xmi:id="_kvQK4GGWEd-wueUf9g8DcA" name="Initial"/>
           <subvertex xmi:type="uml:Pseudostate" xmi:id="_nAAsk2GWEd-wueUf9g8DcA" name="Pseudos Init"/>
