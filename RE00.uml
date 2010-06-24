@@ -2,23 +2,31 @@
 <uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA">
   <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="RE00">
     <packagedElement xmi:type="uml:Class" xmi:id="_wIKVkGYEEd-8QvdEjO-jiQ" name="A" classifierBehavior="_CArPQGYFEd-8QvdEjO-jiQ">
-      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_CArPQGYFEd-8QvdEjO-jiQ" name="StateMachine">
-        <region xmi:id="_CArPQWYFEd-8QvdEjO-jiQ" name="Region">
-          <subvertex xmi:type="uml:State" xmi:id="_RnZFcGYFEd-8QvdEjO-jiQ" name="A"/>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_CArPQGYFEd-8QvdEjO-jiQ" name="StateMachineA">
+        <region xmi:id="_CArPQWYFEd-8QvdEjO-jiQ" name="RegionA">
+          <subvertex xmi:type="uml:State" xmi:id="_RnZFcGYFEd-8QvdEjO-jiQ" name="Astate1"/>
         </region>
       </ownedBehavior>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_wjPvGGYEEd-8QvdEjO-jiQ" name="B" classifierBehavior="_-UbnAGYEEd-8QvdEjO-jiQ">
-      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_-UbnAGYEEd-8QvdEjO-jiQ" name="StateMachine">
-        <region xmi:id="_-UbnAWYEEd-8QvdEjO-jiQ" name="Region">
-          <subvertex xmi:type="uml:State" xmi:id="_TxAdUGYFEd-8QvdEjO-jiQ" name="B"/>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_-UbnAGYEEd-8QvdEjO-jiQ" name="StateMachineB">
+        <region xmi:id="_-UbnAWYEEd-8QvdEjO-jiQ" name="RegionB">
+          <subvertex xmi:type="uml:State" xmi:id="_TxAdUGYFEd-8QvdEjO-jiQ" name="B1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_FpbJ0H97Ed-KFqvOJDRJYg" name="B2">
+            <entry xmi:type="uml:Activity" xmi:id="_sMGCkH90Ed-WA7ToVphs7Q" name="BActivity">
+              <node xmi:type="uml:CreateObjectAction" xmi:id="_u-TrgH90Ed-WA7ToVphs7Q" name="BCreateObject"/>
+            </entry>
+          </subvertex>
+          <transition xmi:id="_uOY_kH92Ed-KFqvOJDRJYg" name="Btrans" source="_TxAdUGYFEd-8QvdEjO-jiQ" target="_FpbJ0H97Ed-KFqvOJDRJYg">
+            <trigger xmi:id="_192loH92Ed-KFqvOJDRJYg" name="BReceiveSignal" event="_odIyoH92Ed-KFqvOJDRJYg"/>
+          </transition>
         </region>
       </ownedBehavior>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w8O22GYEEd-8QvdEjO-jiQ" name="C" classifierBehavior="_CwI9UGYFEd-8QvdEjO-jiQ">
-      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_CwI9UGYFEd-8QvdEjO-jiQ" name="StateMachine">
-        <region xmi:id="_CwI9UWYFEd-8QvdEjO-jiQ" name="Region">
-          <subvertex xmi:type="uml:State" xmi:id="_MWa7EmYFEd-8QvdEjO-jiQ" name="C"/>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_CwI9UGYFEd-8QvdEjO-jiQ" name="StateMachineC">
+        <region xmi:id="_CwI9UWYFEd-8QvdEjO-jiQ" name="RegionC">
+          <subvertex xmi:type="uml:State" xmi:id="_MWa7EmYFEd-8QvdEjO-jiQ" name="Cstate1"/>
         </region>
       </ownedBehavior>
     </packagedElement>
@@ -42,5 +50,7 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_514_MWYEEd-8QvdEjO-jiQ" value="1"/>
       </ownedEnd>
     </packagedElement>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_kHiEUH92Ed-KFqvOJDRJYg" name="BSignal"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_odIyoH92Ed-KFqvOJDRJYg" name="makeBDoStuff" signal="_kHiEUH92Ed-KFqvOJDRJYg"/>
   </packagedElement>
 </uml:Model>

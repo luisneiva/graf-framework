@@ -317,7 +317,7 @@ public class XMIToGraph implements ModelToGraph {
 	
 	/** Create the edges needed for the runtime part of the graph */
 	private void createRuntimePart() {
-		String actorname = "a1";
+		String actorname = "actor1";
 		graph.addIEdge(actorname, "Actor");
 		graph.addIEdge(actorname+"behaviorExecution", "BehaviorExecution");
 		graph.addEdge(actorname, "execution", actorname+"behaviorExecution");
