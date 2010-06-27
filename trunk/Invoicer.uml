@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA">
   <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="InvoicerPackage">
+    <elementImport xmi:id="_rlMmEIDyEd-HL_3tQGiR0Q">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </elementImport>
     <packagedElement xmi:type="uml:Class" xmi:id="_QDmQoGGVEd-wueUf9g8DcA" name="Invoicer" classifierBehavior="_UEZ-MGGWEd-wueUf9g8DcA">
+      <ownedAttribute xmi:id="_jmUV4IDwEd-HL_3tQGiR0Q" name="o" type="_YDVI8IDyEd-HL_3tQGiR0Q"/>
       <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_UEZ-MGGWEd-wueUf9g8DcA" name="InvoicerStateMachine">
         <region xmi:id="_UEZ-MWGWEd-wueUf9g8DcA" name="InvoicerRegion">
           <subvertex xmi:type="uml:State" xmi:id="_cxHPoGGWEd-wueUf9g8DcA" name="State1"/>
           <subvertex xmi:type="uml:State" xmi:id="_kvQK4GGWEd-wueUf9g8DcA" name="Initial"/>
           <subvertex xmi:type="uml:Pseudostate" xmi:id="_nAAsk2GWEd-wueUf9g8DcA" name="Pseudos Init"/>
-          <subvertex xmi:type="uml:State" xmi:id="_rqv9YGGWEd-wueUf9g8DcA" name="Invoicing"/>
+          <subvertex xmi:type="uml:State" xmi:id="_rqv9YGGWEd-wueUf9g8DcA" name="Invoicing">
+            <exit xmi:type="uml:Activity" xmi:id="_sFvOsIDvEd-HL_3tQGiR0Q" name="InvoicingActivity">
+              <variable xmi:id="_av_msID2Ed-HL_3tQGiR0Q"/>
+              <node xmi:type="uml:AddVariableValueAction" xmi:id="_zjxGgIDvEd-HL_3tQGiR0Q">
+                <insertAt xmi:type="uml:ActionInputPin" xmi:id="_SaBB8IDwEd-HL_3tQGiR0Q">
+                  <fromAction xmi:type="uml:ReadVariableAction" xmi:id="_QtUn4ID2Ed-HL_3tQGiR0Q"/>
+                </insertAt>
+              </node>
+            </exit>
+          </subvertex>
           <subvertex xmi:type="uml:Pseudostate" xmi:id="_3ehGYGGWEd-wueUf9g8DcA" name="Pseudo Teminate" kind="terminate"/>
           <subvertex xmi:type="uml:Pseudostate" xmi:id="_hwjJkGJQEd-00p05I7Yl0g" name="Pseudo Exit" kind="exitPoint"/>
           <transition xmi:id="_pBJd4GGWEd-wueUf9g8DcA" name="initialTrans" source="_nAAsk2GWEd-wueUf9g8DcA" target="_kvQK4GGWEd-wueUf9g8DcA"/>
@@ -41,5 +54,10 @@
     <packagedElement xmi:type="uml:Signal" xmi:id="_zI61MH6MEd-VRIfXnUISTA" name="sigStop1"/>
     <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_mDL4kH6NEd-VRIfXnUISTA" name="Invoice" signal="_gil90H6NEd-VRIfXnUISTA"/>
     <packagedElement xmi:type="uml:Signal" xmi:id="_gil90H6NEd-VRIfXnUISTA" name="SigInvoice"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_YDVI8IDyEd-HL_3tQGiR0Q" name="Order">
+      <ownedAttribute xmi:id="_ew7CUIDyEd-HL_3tQGiR0Q" name="quantity">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+    </packagedElement>
   </packagedElement>
 </uml:Model>

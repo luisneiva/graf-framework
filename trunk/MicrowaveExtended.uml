@@ -74,7 +74,11 @@
                 </fromAction>
               </argument>
             </node>
-            <node xmi:type="uml:CreateObjectAction" xmi:id="_V5OjcG4bEd-bSrbvyREAZg" name="createFood"/>
+            <node xmi:type="uml:CreateObjectAction" xmi:id="_V5OjcG4bEd-bSrbvyREAZg" name="createFood">
+              <result xmi:id="_IzyycH_bEd-sR9mIHJ0OXw" name="createdoutputpin">
+                <upperBound xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_O2oeoH_bEd-sR9mIHJ0OXw" value="*"/>
+              </result>
+            </node>
           </entry>
         </subvertex>
         <subvertex xmi:type="uml:State" xmi:id="_oehP8EZ4Ed6JvpGL0b827A" name="FinishedCooking">
