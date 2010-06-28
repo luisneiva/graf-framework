@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA">
-  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="RE00">
+  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="TE00">
     <packagedElement xmi:type="uml:Class" xmi:id="_wIKVkGYEEd-8QvdEjO-jiQ" name="A" classifierBehavior="_CArPQGYFEd-8QvdEjO-jiQ">
       <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_CArPQGYFEd-8QvdEjO-jiQ" name="StateMachineA">
         <region xmi:id="_CArPQWYFEd-8QvdEjO-jiQ" name="RegionA">
