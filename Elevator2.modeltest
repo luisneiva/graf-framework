@@ -1,4 +1,4 @@
 Elevator2.uml
 
-E1 : Elevator
-{4}
+e1 : Elevator2
+{10}
