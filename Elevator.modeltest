@@ -1,4 +1,5 @@
 Elevator.uml
 
 E1 : Elevator
-{4}
+o = o1
+{Initial}
