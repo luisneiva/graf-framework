@@ -8,8 +8,9 @@
   * Like GRAF but without the graph transformation stuff - it's not clear how it decides what system state to go to next.
   * See http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.94.4625&rep=rep1&type=pdf or just google UMLAnT
   * Download links are closed (checked in May 2010)
+
 == Bridgepoint ==
-*Action:* Seeking access to full version
+*Action:* Unable to access full version
   * A whole suite of tools for common UML diagrams and animation.
   * It's not clear how it decides what system state to go to next (there are probably inconsistencies between UMLAnT and Bridgepoint).
   * Commercial software that people actually use.
@@ -35,7 +36,7 @@
   * Cannot demonstrate state machines
 
 == !PathMate ==
-*Action:* Abandoned
+*Action:* Abandoned because it actually doesn't have an animator
   * Has no animator
   * !PathMate is made by Pathfinder and uses IBM rational rose and eclipse
   * http://www.pathfindermda.com/resources/whitepapers.php
@@ -49,7 +50,7 @@
   * http://www.kc.com/DOWNLOADS/browse.php?dlgid=4 ~~You do not currently have permission to download these files, please contact Kennedy Carter if you are an existing customer or would like to set up an evaluation.~~
 
 == Artisan ==
-*Action:* Under investigation
+*Action:* Abandoned because it's too hard because of license issues
   * Artisan has many products but I think Studio UNO is the main UML tool
   * http://www.artisansoftwaretools.com/downloads/evaluation/artisan-studio-uno/
 
