@@ -36,4 +36,7 @@
 	<action name="AddStructuralFeatureValueAction">
 		<rule>addStructuralFeatureValueAction</rule>
 	</action>
+	<action name="CreateObjectAction">
+		<rule>createObjectAction</rule>
+	</action>
 </GTSRules>
