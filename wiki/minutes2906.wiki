@@ -1,0 +1,15 @@
+#summary Minutes
+
+= Mentor name =
+Date: 29/6/10
+<br>Location: CSIT N110
+<br>Present: Oscar, Stephen, Cameron, Hamish and James
+<br>Time: 4pm
+<br>Duration: 1 hour
+
+  * Artisan is too hard due to license problems. Abandon it.
+  * Stephen will try again to contact Kennedy-Carter
+  * Oscar will try to email Clive
+  * James pointed out that the second part of the first dot point of the success criteria indicates that we'll have to implement all UML actions this year, which is of course wrong.
+  * We should edit the success criteria and hand them back to Raj and Greg for their approval
+  * Cameron's now going to add CF05, not Hamish.
