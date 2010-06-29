@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA">
+  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="DefaultName">
+    <packagedElement xmi:type="uml:Class" xmi:id="_giI6kINeEd-6vanutyaNVQ" name="Racer" classifierBehavior="_iJ7XwINeEd-6vanutyaNVQ">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_iJ7XwINeEd-6vanutyaNVQ" name="StateMachine">
+        <region xmi:id="_iJ7XwYNeEd-6vanutyaNVQ" name="Region">
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_icu_AINeEd-6vanutyaNVQ" name="waitStart"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jnCO8INeEd-6vanutyaNVQ" name="Run"/>
+          <subvertex xmi:type="uml:State" xmi:id="_kwxeMINeEd-6vanutyaNVQ" name="Stop"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_ltWbMINeEd-6vanutyaNVQ" name="FinalState1"/>
+          <transition xmi:id="_pK0AkINeEd-6vanutyaNVQ" name="fire" kind="local" source="_icu_AINeEd-6vanutyaNVQ" target="_jnCO8INeEd-6vanutyaNVQ"/>
+          <transition xmi:id="_qQ9wUINeEd-6vanutyaNVQ" name="end" kind="local" source="_jnCO8INeEd-6vanutyaNVQ" target="_kwxeMINeEd-6vanutyaNVQ"/>
+          <transition xmi:id="_qt15kINeEd-6vanutyaNVQ" name="winner" kind="local" source="_kwxeMINeEd-6vanutyaNVQ" target="_ltWbMINeEd-6vanutyaNVQ"/>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>
