@@ -25,7 +25,6 @@ For a brief description of this year's project go [http://cs.anu.edu.au/student/
 [http://www.omg.org/spec/UML/2.2/ The UML 2.2 Definition] <br>
 [http://java.sun.com/docs/codeconv/CodeConventions.pdf Java Coding Standards]<br>
 [http://gpme.anu.edu.au/gpme GPME]<br>
-[Models]<br>
 [SuccessCriteria Success Criteria]
 ==== GRAF ====
 [HowGRAFWorks How GRAF Works]<br>
