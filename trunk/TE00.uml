@@ -7,7 +7,9 @@
           <subvertex xmi:type="uml:State" xmi:id="_RnZFcGYFEd-8QvdEjO-jiQ" name="A1"/>
           <subvertex xmi:type="uml:State" xmi:id="_24z3EINdEd-yNZ353UYnYg" name="A2">
             <entry xmi:type="uml:Activity" xmi:id="_24z3EYNdEd-yNZ353UYnYg" name="AActivity">
-              <node xmi:type="uml:CreateObjectAction" xmi:id="_24z3EoNdEd-yNZ353UYnYg" name="ACreateObject"/>
+              <node xmi:type="uml:CreateObjectAction" xmi:id="_24z3EoNdEd-yNZ353UYnYg" name="ACreateObject" classifier="_xmVjymYEEd-8QvdEjO-jiQ">
+                <result xmi:id="_u3_oMIOSEd-FdpOkYNPM0g" name="ACreateObjectResult"/>
+              </node>
             </entry>
           </subvertex>
           <transition xmi:id="_SCorcINbEd-yNZ353UYnYg" name="ATrans" source="_RnZFcGYFEd-8QvdEjO-jiQ" target="_24z3EINdEd-yNZ353UYnYg">
@@ -22,7 +24,9 @@
           <subvertex xmi:type="uml:State" xmi:id="_TxAdUGYFEd-8QvdEjO-jiQ" name="B1"/>
           <subvertex xmi:type="uml:State" xmi:id="_FpbJ0H97Ed-KFqvOJDRJYg" name="B2">
             <entry xmi:type="uml:Activity" xmi:id="_sMGCkH90Ed-WA7ToVphs7Q" name="BActivity">
-              <node xmi:type="uml:CreateObjectAction" xmi:id="_u-TrgH90Ed-WA7ToVphs7Q" name="BCreateObject"/>
+              <node xmi:type="uml:CreateObjectAction" xmi:id="_u-TrgH90Ed-WA7ToVphs7Q" name="BCreateObject" classifier="_514_K2YEEd-8QvdEjO-jiQ">
+                <result xmi:id="_QHH40YOOEd-FdpOkYNPM0g" name="BCreateObjectResult"/>
+              </node>
             </entry>
           </subvertex>
           <transition xmi:id="_uOY_kH92Ed-KFqvOJDRJYg" name="Btrans" source="_TxAdUGYFEd-8QvdEjO-jiQ" target="_FpbJ0H97Ed-KFqvOJDRJYg">
