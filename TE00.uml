@@ -4,7 +4,15 @@
     <packagedElement xmi:type="uml:Class" xmi:id="_wIKVkGYEEd-8QvdEjO-jiQ" name="A" classifierBehavior="_CArPQGYFEd-8QvdEjO-jiQ">
       <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_CArPQGYFEd-8QvdEjO-jiQ" name="StateMachineA">
         <region xmi:id="_CArPQWYFEd-8QvdEjO-jiQ" name="RegionA">
-          <subvertex xmi:type="uml:State" xmi:id="_RnZFcGYFEd-8QvdEjO-jiQ" name="Astate1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_RnZFcGYFEd-8QvdEjO-jiQ" name="A1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_24z3EINdEd-yNZ353UYnYg" name="A2">
+            <entry xmi:type="uml:Activity" xmi:id="_24z3EYNdEd-yNZ353UYnYg" name="AActivity">
+              <node xmi:type="uml:CreateObjectAction" xmi:id="_24z3EoNdEd-yNZ353UYnYg" name="ACreateObject"/>
+            </entry>
+          </subvertex>
+          <transition xmi:id="_SCorcINbEd-yNZ353UYnYg" name="ATrans" source="_RnZFcGYFEd-8QvdEjO-jiQ" target="_24z3EINdEd-yNZ353UYnYg">
+            <trigger xmi:id="_cWncsINbEd-yNZ353UYnYg" name="ATrigger" event="_Xkr-wINbEd-yNZ353UYnYg"/>
+          </transition>
         </region>
       </ownedBehavior>
     </packagedElement>
@@ -18,7 +26,7 @@
             </entry>
           </subvertex>
           <transition xmi:id="_uOY_kH92Ed-KFqvOJDRJYg" name="Btrans" source="_TxAdUGYFEd-8QvdEjO-jiQ" target="_FpbJ0H97Ed-KFqvOJDRJYg">
-            <trigger xmi:id="_192loH92Ed-KFqvOJDRJYg" name="BReceiveSignal" event="_odIyoH92Ed-KFqvOJDRJYg"/>
+            <trigger xmi:id="_192loH92Ed-KFqvOJDRJYg" name="BTrigger" event="_odIyoH92Ed-KFqvOJDRJYg"/>
           </transition>
         </region>
       </ownedBehavior>
@@ -52,5 +60,7 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Signal" xmi:id="_kHiEUH92Ed-KFqvOJDRJYg" name="BSignal"/>
     <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_odIyoH92Ed-KFqvOJDRJYg" name="makeBDoStuff" signal="_kHiEUH92Ed-KFqvOJDRJYg"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_T5Gd0INbEd-yNZ353UYnYg" name="ASignal"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_Xkr-wINbEd-yNZ353UYnYg" name="makeADoStuff" signal="_T5Gd0INbEd-yNZ353UYnYg"/>
   </packagedElement>
 </uml:Model>
