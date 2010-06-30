@@ -12,7 +12,7 @@ Date: 29/6/10
 == First success criteria dot point ==
    * This first dot point in the success criteria can be achieved by doing 2 things:
 1. For each UML action we implement as a rule, we should write it up somewhere. There should be an image of the rule (using green, blue and red colours; not a before and after) and a description of what it does. Greg will look at this. <br><br>
-2. If 1 is completed then adding a model to GRAF will fulful dot point 1 of the success criteria
+2. If 1 is completed then adding a model to GRAF will fulfil dot point 1 of the success criteria
   * The rule images should be automatically generated from our file that contains the rules
 == Second success criteria dot point ==
   * For the second dot point in the success criteria we need to produce a tutorial that teaches UML.
