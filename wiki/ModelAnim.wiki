@@ -36,8 +36,8 @@
   * Cannot demonstrate state machines
 
 == !PathMate ==
-*Action:* Abandoned because it actually doesn't have an animator
-  * Has no animator
+*Action:* Further investigation needed
+  * Features listed http://www.pathfindermda.com/download/PathMATE_Datasheet.pdf
   * !PathMate is made by Pathfinder and uses IBM rational rose and eclipse
   * http://www.pathfindermda.com/resources/whitepapers.php
   * Can request trial at http://www.pathfindermda.com/products/pathmate_form.php
