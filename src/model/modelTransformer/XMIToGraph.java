@@ -58,6 +58,7 @@ public class XMIToGraph implements ModelToGraph {
 			metamodelroot = metamodeldoc.getRootElement();
 			graph = new ListGraph();
 			translateModelPart(modelURL);
+						
 			translateInstancePart(instanceURL);
 			createRuntimePart();
 			return graph;
@@ -162,7 +163,7 @@ public class XMIToGraph implements ModelToGraph {
 			}
 			
 			//some attribute values are xmi:id (_*) references to other objects - convert the name
-			if (attrval.startsWith("_")) {
+			if (attrval.startsWith("_") || attrval.startsWith("id")) {
 				Nodes idnodes = root.query("//@xmi:id", xpathctx);
 				for (int j = 0; j < idnodes.size(); j++) {
 					if (idnodes.get(j).getValue().equals(attrval)) {
