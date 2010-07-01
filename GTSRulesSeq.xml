@@ -37,6 +37,9 @@
 		<rule>addStructuralFeatureValueAction</rule>
 	</action>
 	<action name="CreateObjectAction">
-		<rule>createObjectAction</rule>
+		<exclusive-dependencies>
+			<rule>createObjectAction-SameType</rule>
+			<rule>createObjectAction-DiffType-SMInitialised</rule>
+			<rule>createObjectAction-DiffType-SM-Not-Initialised</rule></exclusive-dependencies>
 	</action>
 </GTSRules>
