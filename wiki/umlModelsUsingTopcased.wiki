@@ -1,0 +1,16 @@
+#labels Phase-Implementation
+*How to create .uml models to work in GRAF using Topcased (more to come: activity under states)*
+  * Create a signal for each transition by right clicking at a package -> new child -> packaged elements -> signal (you can press ‘s’ to find ‘signal’ faster)
+  * Specify a unique name for each signal
+  * Create a receive signal event for each signal by right clicking at a package -> new child -> packaged elements -> receive signal event (same rule applies: press ‘r’ to find it faster)
+  * Specify a signal (as created before) and a unique name for each receive signal event
+  * Expand all nodes under packages, classes, state machines, regions, and transitions.
+  * Add a trigger to each transition by right clicking at a transition -> new child -> trigger -> trigger
+  * Specify an event (choose a receive signal event) and name for a trigger
+
+
+Note:
+  * Almost everything should have unique names among anything else, such as packages, classes, state machines, states, signals, receive signal events, etc.
+  * Region should not be called Region. It should be something like InvoicerRegion.
+  * State Machine should not be called StateMachine. It should something like InvoicerStateMachine.
+
