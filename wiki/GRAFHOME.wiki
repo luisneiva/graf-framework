@@ -31,7 +31,7 @@ For a brief description of this year's project go [http://cs.anu.edu.au/student/
 
 === Tutorials ===
 [Installing Visual Paradigm and Topcased]<br>
-[Create uml models to work in GRAF using Topcased (more to come: activity under states)]<br>
+[umlModelsUsing Topcased Create uml models to work in GRAF using Topcased (more to come: activity under states)]<br>
 
 === Project Documentation ===
 [Scope Scope]
