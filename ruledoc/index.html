@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU">
+	<head>
+		<!-- u4411120 2/07/2010 -->
+		<title>RuleDoc - GRAF Rules Index</title>
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<link rel="stylesheet" type="text/css" href="styles/rules.css" media="screen" />
+		<style type="text/css" id="pageStyles">
+			table {
+				width: 100% ;
+				caption-side: bottom ;
+				margin-left: auto ;
+				margin-right: auto ;
+			}
+		</style>
+	</head>
+	<!-- ======================================== TODO 
+		create rule pages
+		work on automatically generating image files from GRAF
+	-->
+	
+	<body>
+		<div id="heading">
+			<h1>
+				<a href="index.html" title="Go to the index">
+					Ruledoc
+				</a>
+			</h1>
+		</div>
+		<div id ="content">
+			<div id="middlecolumn">
+				<h2>
+					Introduction
+				</h2>
+				<p>
+					GRAF is based on the hypothesis that UML models can be implemented or defined
+					using graph transformation rules ('rules'). The GRAF application attempts to
+					demonstrate this by interpreting UML models as graphs, and the Actions that 
+					define their behavior as rules. The models themselves are implemented using
+					the widely-used Eclipse platform's Modeling Framework. The rules are based on
+					the English descriptions of Actions in the UML specification. This Index
+					attempts to explain the implementation of the rules based on that specification
+					and other features of GRAF's environment.
+				</p>
+				<h2>
+					Related Documents
+				</h2>
+				<ul>
+					<li>The 
+						<a href="../UML_Superstructure_2-1-2_07-11-02.pdf" title="Open the UML Superstructure file">
+							UML Superstructure document
+						</a>
+					 	('US') published by OMG defines the UML Actions which will be referred to in this index.
+					<li>Within GRAF, the
+						<a href="../GTSRulesSeq.xml" title="Open the Rule Sequence file">
+							Rule Sequence File
+						</a>
+						defines the order in which the rules are executed when a particular action is chosen.
+					</li>
+				</ul>
+				<h2>
+					Rule Generation From GRAF
+				</h2>
+				<p>
+					<!--Requirements: dot program-->
+					GRAF can be configured to generate DOT <!--and image--> files of the various rules it
+					uses when it starts up. At the moment, this requires opening the 
+					<a href="../src/model/PluginModel.java">PluginModel.java file</a> in an editor,
+					and uncommenting the code at lines 72- . This code is commented out by default
+					as running the generation method slows GRAF down at startup, and generally the
+					existing rule files are up to date anyway. To generate new images from these files,
+					the 'dot' program from the <a href="http://www.graphviz.org/">Gaphviz suite</a>
+					 is required.
+				</p>
+				<h2>
+					Interpretation
+				</h2>
+					In the images of the rules,
+				<ul>
+					<li>Names prefixed with a ? are variables, that is, they can match any name.</li>
+					<li>Names prefixed with a # are allocated unique names by GRAF.</li>
+					<li>Red edges and nodes are Negative Application Conditions ('NACs'). If they occur in the graph the rule will not be applied.</li>
+					<li>Green edges are added to the graph when the rule is applied.</li>
+					<li>Red edges are deleted when the rule is applied.</li>
+				</ul>
+				<h2>
+					Index
+				</h2>
+				<table>
+					<tr>
+						<th>#</th>	<th>Action</th>	<th>Rule</th>
+					</tr>
+					<tr>
+						<td>0</td>	<td>US 11.3.2 AcceptEventAction</td>	<td>acceptEventAction-AndIgnore</td>
+					</tr>
+					<tr>
+						<td>1</td>	<td></td>	<td>acceptEventAction-WithActivity-ExecutableEdges</td>
+					</tr>
+					<tr>
+						<td>2</td>	<td></td>	<td>acceptEventAction-WithActivity-Main</td>
+					</tr>
+					<tr>
+						<td>3</td>	<td></td>	<td>acceptEventAction-WithoutActivity</td>
+					</tr>
+					<tr>
+						<td>4</td>	<td>US 11.3.45 SendSignalAction</td>	<td>actorSendSignal</td>
+					</tr>
+					<tr>
+						<td>5</td>	<td></td>	<td>sendSignalAction</td>
+					</tr>
+					<tr>
+						<td>6</td>	<td>US 11.3.5 AddStructuralFeatureValueAction</td>	<td>addStructuralFeatureValueAction</td>
+					</tr>
+					<tr>
+						<td>7</td>	<td>US 11.3.16 CreateObjectAction</td>	<td>createObjectAction-DiffType-SM-Not-Initialised</td>
+					</tr>
+					<tr>
+						<td>8</td>	<td></td>	<td>createObjectAction-DiffType-SMInitialised</td>
+					</tr>
+					<tr>
+						<td>9</td>	<td>US 11.3.36 ReadSelfAction</td>	<td>readSelfAction</td>
+					</tr>
+					<tr>
+						<td>10</td>	<td>US 11.3.37 ReadStructuralFeatureAction</td>	<td>readStructuralFeatureAction-SingleInt</td>
+					</tr>
+					<tr>
+						<td>11</td>	<td></td>	<td>readStructuralFeatureAction-TwoInts</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,64 @@
+/* Rules Stylesheet 
+	u4411120 2/07/2010
+*/
+
+/* ========================================== whole document */
+body {
+}
+
+img { /* center images in their container */
+	display: block ;
+	margin-left: auto ;
+	margin-right: auto ;
+}
+
+p {
+	text-align: left ;
+}
+
+p.extract {
+	background-color: #DCDCDC ;
+	font-family: Mono, serif ;
+}
+
+h1 {
+	text-align: center ;
+}
+
+/* ========================================== divisions */ 
+#heading {
+}
+
+#menu {
+	margin-left: auto ;
+	margin-right: auto ;
+}
+
+#menu li {
+	display: inline ;
+}
+
+#content {
+	margin-left: auto ;
+	margin-right: auto ;
+	width: 80% ;
+}
+
+#middlecolumn {
+	clear: both ;
+}
+
+#leftcolumn {
+	width: 50% ;
+	float: left ;
+}
+
+#rightcolumn {
+	width: 50% ;
+	float: right ;
+}
+
+#footer {
+	clear: both ;
+	font-size: 0.7em ;
+}
