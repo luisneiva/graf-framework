@@ -11,6 +11,5 @@
 
 Note:
   * Almost everything should have unique names among anything else, such as packages, classes, state machines, states, signals, receive signal events, etc.
-  * Region should not be called Region. It should be something like InvoicerRegion.
-  * State Machine should not be called StateMachine. It should something like InvoicerStateMachine.
-
+  * Region should not be called Region. It should be something like 'InvoicerRegion'.
+  * State Machine should not be called 'StateMachine'. It should something like 'InvoicerStateMachine'.
