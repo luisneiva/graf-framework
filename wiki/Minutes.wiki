@@ -9,7 +9,9 @@
 || 23/6 || Mentor || [agenda2306 Agenda] || [minutes2306 Minutes] ||
 || 29/6 || Client || Agenda || [cminutes2906 Minutes] ||
 || 29/6 || Mentor || Agenda || [minutes2906 Minutes] ||
-|| 6/7 || Team || [agenda0607 Agenda] || [minutes0607 Minutes] ||
+|| 5/7 || Client|| [cagenda0507 Agenda] || [cminutes0507 Minutes] ||
+|| 5/7 || Team || [agenda0507 Agenda] || [minutes0507 Minutes] ||
+
 
 
 Agendas and minutes from before 12/5/2010 are on [https://alliance.anu.edu.au/portal Alliance]. <br>
