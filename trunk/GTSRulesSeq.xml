@@ -38,8 +38,6 @@
 	</action>
 	<action name="CreateObjectAction">
 		<exclusive-dependencies>
-			<rule>createObjectAction-SameType</rule>
-			<rule>createObjectAction-DiffType-SMInitialised</rule>
-			<rule>createObjectAction-DiffType-SM-Not-Initialised</rule></exclusive-dependencies>
+			<rule>createObjectAction-SameType</rule></exclusive-dependencies>
 	</action>
 </GTSRules>

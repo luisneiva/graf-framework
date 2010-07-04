@@ -7,7 +7,7 @@
           <subvertex xmi:type="uml:State" xmi:id="_RnZFcGYFEd-8QvdEjO-jiQ" name="C1"/>
           <subvertex xmi:type="uml:State" xmi:id="_24z3EINdEd-yNZ353UYnYg" name="C2">
             <entry xmi:type="uml:Activity" xmi:id="_24z3EYNdEd-yNZ353UYnYg" name="CActivity">
-              <node xmi:type="uml:CreateObjectAction" xmi:id="_24z3EoNdEd-yNZ353UYnYg" name="CCreateObject" classifier="_xmVjymYEEd-8QvdEjO-jiQ">
+              <node xmi:type="uml:CreateObjectAction" xmi:id="_24z3EoNdEd-yNZ353UYnYg" name="CCreateObject" classifier="_wIKVkGYEEd-8QvdEjO-jiQ">
                 <result xmi:id="_u3_oMIOSEd-FdpOkYNPM0g" name="CCreateObjectResult"/>
               </node>
             </entry>
@@ -24,7 +24,7 @@
           <subvertex xmi:type="uml:State" xmi:id="_TxAdUGYFEd-8QvdEjO-jiQ" name="B1"/>
           <subvertex xmi:type="uml:State" xmi:id="_FpbJ0H97Ed-KFqvOJDRJYg" name="B2">
             <entry xmi:type="uml:Activity" xmi:id="_sMGCkH90Ed-WA7ToVphs7Q" name="BActivity">
-              <node xmi:type="uml:CreateObjectAction" xmi:id="_u-TrgH90Ed-WA7ToVphs7Q" name="BCreateObject" classifier="_514_K2YEEd-8QvdEjO-jiQ">
+              <node xmi:type="uml:CreateObjectAction" xmi:id="_u-TrgH90Ed-WA7ToVphs7Q" name="BCreateObject" classifier="_wjPvGGYEEd-8QvdEjO-jiQ">
                 <result xmi:id="_QHH40YOOEd-FdpOkYNPM0g" name="BCreateObjectResult"/>
               </node>
             </entry>
@@ -57,7 +57,7 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_514_LWYEEd-8QvdEjO-jiQ" value="*"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_514_LmYEEd-8QvdEjO-jiQ"/>
       </ownedEnd>
-      <ownedEnd xmi:id="_514_L2YEEd-8QvdEjO-jiQ" name="c" type="_w8O22GYEEd-8QvdEjO-jiQ" association="_514_K2YEEd-8QvdEjO-jiQ">
+      <ownedEnd xmi:id="_514_L2YEEd-8QvdEjO-jiQ" name="c" type="_wIKVkGYEEd-8QvdEjO-jiQ" association="_514_K2YEEd-8QvdEjO-jiQ">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_514_MGYEEd-8QvdEjO-jiQ" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_514_MWYEEd-8QvdEjO-jiQ" value="1"/>
       </ownedEnd>
