@@ -1,0 +1,13 @@
+#summary agenda
+== Client Meeting ==
+*Date:* 4/7/10
+<br>*Time:* 4pm
+<br>*Location:* Raj's office
+<br>*Duration:* 1 hour
+<br>*Attending:* Oscar, Stephen, Hamish, Cameron and Greg on the phone
+
+=== Agenda Items ===
+  * Options for using a state machine to represent class diagram method behaviour
+  * Options for implementing RCA01/AR02 (invoicer) model as Mealy or Moore and with state machine transition guards
+  * Request for a concrete low-level example of the perils of modelling language inconsistency
+  * Conclusion of last week's discussion of success criteria
