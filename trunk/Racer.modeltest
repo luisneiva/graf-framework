@@ -1,4 +1,4 @@
 Racer.uml
 
 r1 : Racer
-{Run}
+{WaitStart}

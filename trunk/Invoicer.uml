@@ -12,14 +12,7 @@
           <subvertex xmi:type="uml:State" xmi:id="_kvQK4GGWEd-wueUf9g8DcA" name="Initial"/>
           <subvertex xmi:type="uml:Pseudostate" xmi:id="_nAAsk2GWEd-wueUf9g8DcA" name="Pseudos Init"/>
           <subvertex xmi:type="uml:State" xmi:id="_rqv9YGGWEd-wueUf9g8DcA" name="Invoicing">
-            <exit xmi:type="uml:Activity" xmi:id="_sFvOsIDvEd-HL_3tQGiR0Q" name="InvoicingActivity">
-              <variable xmi:id="_av_msID2Ed-HL_3tQGiR0Q"/>
-              <node xmi:type="uml:AddVariableValueAction" xmi:id="_zjxGgIDvEd-HL_3tQGiR0Q">
-                <insertAt xmi:type="uml:ActionInputPin" xmi:id="_SaBB8IDwEd-HL_3tQGiR0Q">
-                  <fromAction xmi:type="uml:ReadVariableAction" xmi:id="_QtUn4ID2Ed-HL_3tQGiR0Q"/>
-                </insertAt>
-              </node>
-            </exit>
+            <exit xmi:type="uml:Activity" xmi:id="_sFvOsIDvEd-HL_3tQGiR0Q" name="InvoicingActivity"/>
           </subvertex>
           <subvertex xmi:type="uml:Pseudostate" xmi:id="_3ehGYGGWEd-wueUf9g8DcA" name="Pseudo Teminate" kind="terminate"/>
           <subvertex xmi:type="uml:Pseudostate" xmi:id="_hwjJkGJQEd-00p05I7Yl0g" name="Pseudo Exit" kind="exitPoint"/>
