@@ -1,6 +1,6 @@
 #summary Minutes
 
-= Mentor name =
+= Mentor meeting =
 Date: 29/6/10
 <br>Location: CSIT N110
 <br>Present: Oscar, Stephen, Cameron, Hamish and James
