@@ -339,11 +339,11 @@
                 <Mapping image="I61" orig="I24"/>
                 <Mapping image="I64" orig="I27"/>
                 <Mapping image="I70" orig="I30"/>
-                <Mapping image="I79" orig="I36"/>
+                <Mapping image="I85" orig="I42"/>
                 <Mapping image="I88" orig="I48"/>
+                <Mapping image="I79" orig="I36"/>
                 <Mapping image="I76" orig="I33"/>
                 <Mapping image="I91" orig="I51"/>
-                <Mapping image="I85" orig="I42"/>
                 <Mapping image="I82" orig="I39"/>
             </Morphism>
             <TaggedValue Tag="layer" TagValue="0"/>
@@ -859,17 +859,17 @@
                 <Mapping image="I176" orig="I130"/>
                 <Mapping image="I173" orig="I127"/>
                 <Mapping image="I179" orig="I103"/>
-                <Mapping image="I239" orig="I166"/>
-                <Mapping image="I215" orig="I142"/>
                 <Mapping image="I218" orig="I145"/>
-                <Mapping image="I212" orig="I139"/>
-                <Mapping image="I221" orig="I148"/>
                 <Mapping image="I233" orig="I160"/>
-                <Mapping image="I227" orig="I154"/>
                 <Mapping image="I236" orig="I163"/>
-                <Mapping image="I224" orig="I151"/>
-                <Mapping image="I230" orig="I157"/>
+                <Mapping image="I227" orig="I154"/>
                 <Mapping image="I209" orig="I136"/>
+                <Mapping image="I239" orig="I166"/>
+                <Mapping image="I224" orig="I151"/>
+                <Mapping image="I221" orig="I148"/>
+                <Mapping image="I215" orig="I142"/>
+                <Mapping image="I212" orig="I139"/>
+                <Mapping image="I230" orig="I157"/>
             </Morphism>
             <TaggedValue Tag="layer" TagValue="0"/>
             <TaggedValue Tag="priority" TagValue="0"/>
@@ -1370,17 +1370,17 @@
                 <Mapping image="I342" orig="I254"/>
                 <Mapping image="I345" orig="I278"/>
                 <Mapping image="I348" orig="I257"/>
-                <Mapping image="I357" orig="I287"/>
-                <Mapping image="I363" orig="I293"/>
-                <Mapping image="I381" orig="I314"/>
-                <Mapping image="I375" orig="I299"/>
-                <Mapping image="I366" orig="I302"/>
-                <Mapping image="I354" orig="I284"/>
-                <Mapping image="I351" orig="I281"/>
                 <Mapping image="I360" orig="I290"/>
-                <Mapping image="I372" orig="I296"/>
-                <Mapping image="I369" orig="I305"/>
+                <Mapping image="I375" orig="I299"/>
+                <Mapping image="I357" orig="I287"/>
                 <Mapping image="I378" orig="I311"/>
+                <Mapping image="I372" orig="I296"/>
+                <Mapping image="I351" orig="I281"/>
+                <Mapping image="I366" orig="I302"/>
+                <Mapping image="I369" orig="I305"/>
+                <Mapping image="I381" orig="I314"/>
+                <Mapping image="I363" orig="I293"/>
+                <Mapping image="I354" orig="I284"/>
             </Morphism>
             <TaggedValue Tag="layer" TagValue="0"/>
             <TaggedValue Tag="priority" TagValue="0"/>
@@ -2401,25 +2401,25 @@
                 <Mapping image="I568" orig="I396"/>
                 <Mapping image="I559" orig="I393"/>
                 <Mapping image="I553" orig="I390"/>
-                <Mapping image="I613" orig="I468"/>
-                <Mapping image="I637" orig="I492"/>
-                <Mapping image="I622" orig="I477"/>
-                <Mapping image="I634" orig="I489"/>
-                <Mapping image="I589" orig="I444"/>
-                <Mapping image="I607" orig="I462"/>
-                <Mapping image="I625" orig="I480"/>
-                <Mapping image="I643" orig="I498"/>
-                <Mapping image="I598" orig="I453"/>
                 <Mapping image="I592" orig="I447"/>
-                <Mapping image="I595" orig="I450"/>
+                <Mapping image="I589" orig="I444"/>
+                <Mapping image="I643" orig="I498"/>
                 <Mapping image="I610" orig="I465"/>
-                <Mapping image="I619" orig="I474"/>
-                <Mapping image="I631" orig="I486"/>
+                <Mapping image="I634" orig="I489"/>
                 <Mapping image="I616" orig="I471"/>
+                <Mapping image="I625" orig="I480"/>
+                <Mapping image="I598" orig="I453"/>
+                <Mapping image="I601" orig="I456"/>
+                <Mapping image="I637" orig="I492"/>
                 <Mapping image="I628" orig="I483"/>
                 <Mapping image="I604" orig="I459"/>
-                <Mapping image="I601" orig="I456"/>
+                <Mapping image="I631" orig="I486"/>
+                <Mapping image="I595" orig="I450"/>
+                <Mapping image="I622" orig="I477"/>
+                <Mapping image="I607" orig="I462"/>
+                <Mapping image="I619" orig="I474"/>
                 <Mapping image="I640" orig="I495"/>
+                <Mapping image="I613" orig="I468"/>
             </Morphism>
             <TaggedValue Tag="layer" TagValue="0"/>
             <TaggedValue Tag="priority" TagValue="0"/>
@@ -3943,37 +3943,37 @@
                 <Mapping image="I872" orig="I670"/>
                 <Mapping image="I878" orig="I727"/>
                 <Mapping image="I926" orig="I703"/>
-                <Mapping image="I1061" orig="I847"/>
-                <Mapping image="I971" orig="I754"/>
-                <Mapping image="I1055" orig="I838"/>
-                <Mapping image="I1037" orig="I820"/>
-                <Mapping image="I1034" orig="I817"/>
-                <Mapping image="I1010" orig="I793"/>
-                <Mapping image="I1031" orig="I814"/>
+                <Mapping image="I983" orig="I766"/>
+                <Mapping image="I1058" orig="I841"/>
                 <Mapping image="I1040" orig="I823"/>
-                <Mapping image="I1043" orig="I826"/>
-                <Mapping image="I1022" orig="I805"/>
-                <Mapping image="I977" orig="I760"/>
-                <Mapping image="I1001" orig="I784"/>
-                <Mapping image="I968" orig="I751"/>
+                <Mapping image="I1055" orig="I838"/>
                 <Mapping image="I1016" orig="I799"/>
+                <Mapping image="I1010" orig="I793"/>
+                <Mapping image="I1049" orig="I832"/>
+                <Mapping image="I998" orig="I781"/>
+                <Mapping image="I992" orig="I775"/>
+                <Mapping image="I971" orig="I754"/>
                 <Mapping image="I1052" orig="I835"/>
+                <Mapping image="I1019" orig="I802"/>
+                <Mapping image="I1028" orig="I811"/>
+                <Mapping image="I1034" orig="I817"/>
                 <Mapping image="I995" orig="I778"/>
+                <Mapping image="I1013" orig="I796"/>
+                <Mapping image="I1001" orig="I784"/>
+                <Mapping image="I1037" orig="I820"/>
+                <Mapping image="I977" orig="I760"/>
+                <Mapping image="I980" orig="I763"/>
+                <Mapping image="I1025" orig="I808"/>
+                <Mapping image="I1061" orig="I847"/>
+                <Mapping image="I974" orig="I757"/>
+                <Mapping image="I1031" orig="I814"/>
+                <Mapping image="I989" orig="I772"/>
+                <Mapping image="I1022" orig="I805"/>
+                <Mapping image="I986" orig="I769"/>
+                <Mapping image="I968" orig="I751"/>
+                <Mapping image="I1043" orig="I826"/>
                 <Mapping image="I1007" orig="I790"/>
                 <Mapping image="I1064" orig="I850"/>
-                <Mapping image="I986" orig="I769"/>
-                <Mapping image="I980" orig="I763"/>
-                <Mapping image="I1013" orig="I796"/>
-                <Mapping image="I1049" orig="I832"/>
-                <Mapping image="I1028" orig="I811"/>
-                <Mapping image="I992" orig="I775"/>
-                <Mapping image="I983" orig="I766"/>
-                <Mapping image="I998" orig="I781"/>
-                <Mapping image="I1019" orig="I802"/>
-                <Mapping image="I989" orig="I772"/>
-                <Mapping image="I1058" orig="I841"/>
-                <Mapping image="I974" orig="I757"/>
-                <Mapping image="I1025" orig="I808"/>
                 <Mapping image="I1004" orig="I787"/>
             </Morphism>
             <TaggedValue Tag="layer" TagValue="0"/>
@@ -4861,25 +4861,25 @@
                 <Mapping image="I1260" orig="I1100"/>
                 <Mapping image="I1266" orig="I1106"/>
                 <Mapping image="I1263" orig="I1103"/>
-                <Mapping image="I1269" orig="I1145"/>
-                <Mapping image="I1314" orig="I1196"/>
-                <Mapping image="I1332" orig="I1211"/>
-                <Mapping image="I1299" orig="I1178"/>
-                <Mapping image="I1302" orig="I1181"/>
-                <Mapping image="I1320" orig="I1202"/>
-                <Mapping image="I1281" orig="I1157"/>
-                <Mapping image="I1284" orig="I1160"/>
-                <Mapping image="I1272" orig="I1148"/>
-                <Mapping image="I1326" orig="I1208"/>
-                <Mapping image="I1296" orig="I1175"/>
-                <Mapping image="I1305" orig="I1187"/>
-                <Mapping image="I1308" orig="I1190"/>
-                <Mapping image="I1293" orig="I1169"/>
                 <Mapping image="I1278" orig="I1154"/>
+                <Mapping image="I1305" orig="I1187"/>
+                <Mapping image="I1320" orig="I1202"/>
+                <Mapping image="I1269" orig="I1145"/>
+                <Mapping image="I1281" orig="I1157"/>
+                <Mapping image="I1296" orig="I1175"/>
+                <Mapping image="I1299" orig="I1178"/>
                 <Mapping image="I1290" orig="I1166"/>
-                <Mapping image="I1323" orig="I1205"/>
+                <Mapping image="I1272" orig="I1148"/>
+                <Mapping image="I1293" orig="I1169"/>
                 <Mapping image="I1317" orig="I1199"/>
                 <Mapping image="I1311" orig="I1193"/>
+                <Mapping image="I1323" orig="I1205"/>
+                <Mapping image="I1332" orig="I1211"/>
+                <Mapping image="I1284" orig="I1160"/>
+                <Mapping image="I1308" orig="I1190"/>
+                <Mapping image="I1302" orig="I1181"/>
+                <Mapping image="I1314" orig="I1196"/>
+                <Mapping image="I1326" orig="I1208"/>
             </Morphism>
             <TaggedValue Tag="layer" TagValue="0"/>
             <TaggedValue Tag="priority" TagValue="0"/>
@@ -5911,29 +5911,29 @@
                 <Mapping image="I1528" orig="I1392"/>
                 <Mapping image="I1531" orig="I1395"/>
                 <Mapping image="I1525" orig="I1389"/>
+                <Mapping image="I1543" orig="I1404"/>
+                <Mapping image="I1600" orig="I1464"/>
+                <Mapping image="I1561" orig="I1422"/>
+                <Mapping image="I1603" orig="I1467"/>
+                <Mapping image="I1552" orig="I1413"/>
+                <Mapping image="I1558" orig="I1419"/>
                 <Mapping image="I1585" orig="I1452"/>
                 <Mapping image="I1573" orig="I1440"/>
-                <Mapping image="I1555" orig="I1416"/>
-                <Mapping image="I1600" orig="I1464"/>
-                <Mapping image="I1564" orig="I1428"/>
-                <Mapping image="I1588" orig="I1455"/>
-                <Mapping image="I1582" orig="I1449"/>
-                <Mapping image="I1603" orig="I1467"/>
+                <Mapping image="I1606" orig="I1470"/>
+                <Mapping image="I1591" orig="I1458"/>
                 <Mapping image="I1570" orig="I1434"/>
+                <Mapping image="I1579" orig="I1446"/>
+                <Mapping image="I1567" orig="I1431"/>
+                <Mapping image="I1540" orig="I1401"/>
+                <Mapping image="I1549" orig="I1410"/>
+                <Mapping image="I1576" orig="I1443"/>
+                <Mapping image="I1564" orig="I1428"/>
+                <Mapping image="I1582" orig="I1449"/>
+                <Mapping image="I1588" orig="I1455"/>
+                <Mapping image="I1594" orig="I1461"/>
+                <Mapping image="I1555" orig="I1416"/>
                 <Mapping image="I1537" orig="I1398"/>
                 <Mapping image="I1546" orig="I1407"/>
-                <Mapping image="I1558" orig="I1419"/>
-                <Mapping image="I1549" orig="I1410"/>
-                <Mapping image="I1594" orig="I1461"/>
-                <Mapping image="I1561" orig="I1422"/>
-                <Mapping image="I1576" orig="I1443"/>
-                <Mapping image="I1540" orig="I1401"/>
-                <Mapping image="I1591" orig="I1458"/>
-                <Mapping image="I1606" orig="I1470"/>
-                <Mapping image="I1579" orig="I1446"/>
-                <Mapping image="I1543" orig="I1404"/>
-                <Mapping image="I1567" orig="I1431"/>
-                <Mapping image="I1552" orig="I1413"/>
             </Morphism>
             <TaggedValue Tag="layer" TagValue="0"/>
             <TaggedValue Tag="priority" TagValue="0"/>
@@ -6564,21 +6564,21 @@
                 <Mapping image="I1742" orig="I1657"/>
                 <Mapping image="I1745" orig="I1654"/>
                 <Mapping image="I1748" orig="I1660"/>
-                <Mapping image="I1769" orig="I1684"/>
-                <Mapping image="I1757" orig="I1669"/>
-                <Mapping image="I1784" orig="I1699"/>
-                <Mapping image="I1772" orig="I1687"/>
-                <Mapping image="I1766" orig="I1681"/>
-                <Mapping image="I1787" orig="I1702"/>
-                <Mapping image="I1778" orig="I1693"/>
-                <Mapping image="I1781" orig="I1696"/>
-                <Mapping image="I1793" orig="I1708"/>
                 <Mapping image="I1775" orig="I1690"/>
-                <Mapping image="I1751" orig="I1663"/>
-                <Mapping image="I1760" orig="I1672"/>
+                <Mapping image="I1766" orig="I1681"/>
                 <Mapping image="I1790" orig="I1705"/>
+                <Mapping image="I1793" orig="I1708"/>
+                <Mapping image="I1787" orig="I1702"/>
+                <Mapping image="I1751" orig="I1663"/>
+                <Mapping image="I1769" orig="I1684"/>
+                <Mapping image="I1772" orig="I1687"/>
                 <Mapping image="I1754" orig="I1666"/>
+                <Mapping image="I1784" orig="I1699"/>
+                <Mapping image="I1760" orig="I1672"/>
+                <Mapping image="I1778" orig="I1693"/>
                 <Mapping image="I1763" orig="I1675"/>
+                <Mapping image="I1757" orig="I1669"/>
+                <Mapping image="I1781" orig="I1696"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -7807,33 +7807,33 @@
                 <Mapping image="I2038" orig="I1884"/>
                 <Mapping image="I2029" orig="I1875"/>
                 <Mapping image="I2026" orig="I1872"/>
-                <Mapping image="I2107" orig="I1953"/>
-                <Mapping image="I2065" orig="I1911"/>
-                <Mapping image="I2083" orig="I1929"/>
-                <Mapping image="I2116" orig="I1962"/>
+                <Mapping image="I2068" orig="I1914"/>
+                <Mapping image="I2125" orig="I1971"/>
                 <Mapping image="I2047" orig="I1893"/>
                 <Mapping image="I2059" orig="I1905"/>
-                <Mapping image="I2053" orig="I1899"/>
-                <Mapping image="I2101" orig="I1947"/>
+                <Mapping image="I2107" orig="I1953"/>
+                <Mapping image="I2116" orig="I1962"/>
                 <Mapping image="I2095" orig="I1941"/>
-                <Mapping image="I2080" orig="I1926"/>
-                <Mapping image="I2119" orig="I1965"/>
+                <Mapping image="I2098" orig="I1944"/>
+                <Mapping image="I2113" orig="I1959"/>
+                <Mapping image="I2101" orig="I1947"/>
                 <Mapping image="I2062" orig="I1908"/>
+                <Mapping image="I2050" orig="I1896"/>
+                <Mapping image="I2122" orig="I1968"/>
                 <Mapping image="I2128" orig="I1974"/>
                 <Mapping image="I2104" orig="I1950"/>
-                <Mapping image="I2110" orig="I1956"/>
-                <Mapping image="I2086" orig="I1932"/>
-                <Mapping image="I2125" orig="I1971"/>
-                <Mapping image="I2098" orig="I1944"/>
-                <Mapping image="I2050" orig="I1896"/>
                 <Mapping image="I2089" orig="I1935"/>
-                <Mapping image="I2122" orig="I1968"/>
+                <Mapping image="I2110" orig="I1956"/>
                 <Mapping image="I2074" orig="I1920"/>
-                <Mapping image="I2068" orig="I1914"/>
+                <Mapping image="I2119" orig="I1965"/>
                 <Mapping image="I2044" orig="I1890"/>
-                <Mapping image="I2077" orig="I1923"/>
-                <Mapping image="I2113" orig="I1959"/>
+                <Mapping image="I2065" orig="I1911"/>
+                <Mapping image="I2053" orig="I1899"/>
+                <Mapping image="I2086" orig="I1932"/>
+                <Mapping image="I2080" orig="I1926"/>
                 <Mapping image="I2092" orig="I1938"/>
+                <Mapping image="I2077" orig="I1923"/>
+                <Mapping image="I2083" orig="I1929"/>
                 <Mapping image="I2056" orig="I1902"/>
             </Morphism>
             <ApplCondition>
@@ -8469,280 +8469,161 @@
                 <Mapping image="I2262" orig="I2177"/>
                 <Mapping image="I2265" orig="I2180"/>
                 <Mapping image="I2268" orig="I2186"/>
-                <Mapping image="I2280" orig="I2195"/>
-                <Mapping image="I2295" orig="I2210"/>
                 <Mapping image="I2277" orig="I2192"/>
                 <Mapping image="I2304" orig="I2225"/>
-                <Mapping image="I2301" orig="I2219"/>
-                <Mapping image="I2292" orig="I2207"/>
+                <Mapping image="I2295" orig="I2210"/>
                 <Mapping image="I2289" orig="I2204"/>
-                <Mapping image="I2274" orig="I2189"/>
-                <Mapping image="I2283" orig="I2198"/>
                 <Mapping image="I2298" orig="I2216"/>
+                <Mapping image="I2283" orig="I2198"/>
+                <Mapping image="I2280" orig="I2195"/>
+                <Mapping image="I2274" orig="I2189"/>
+                <Mapping image="I2292" orig="I2207"/>
+                <Mapping image="I2301" orig="I2219"/>
                 <Mapping image="I2286" orig="I2201"/>
             </Morphism>
             <TaggedValue Tag="layer" TagValue="0"/>
             <TaggedValue Tag="priority" TagValue="0"/>
         </Rule>
-        <Rule ID="I2313" name="createObjectAction-DiffType-SMInitialised">
-            <Parameter name="behaviorExecution" type="String"/>
+        <Rule ID="I2313" name="createObjectAction-SameType">
             <Parameter name="createObjectAction" type="String"/>
             <Parameter name="result" type="String"/>
-            <Parameter name="association" type="String"/>
-            <Parameter name="b" type="String"/>
-            <Parameter name="B" type="String"/>
-            <Parameter name="b1" type="String"/>
-            <Parameter name="a" type="String"/>
-            <Parameter name="A" type="String"/>
-            <Parameter name="a1" type="String"/>
-            <Parameter name="b2" type="String"/>
-            <Parameter name="createdObject" type="String"/>
-            <Parameter name="aType" type="String"/>
-            <Parameter name="bType" type="String"/>
-            <Parameter name="instance1" type="String"/>
-            <Parameter name="callingInstance" type="String"/>
-            <Parameter name="classifierNode" type="String"/>
-            <Parameter name="associationEnd" type="String"/>
-            <Parameter name="fromEnd" type="String"/>
-            <Parameter name="callingInstanceType" type="String"/>
-            <Parameter name="toEnd" type="String"/>
-            <Parameter name="newInstanceType" type="String"/>
-            <Parameter name="callingObjectInstance" type="String"/>
-            <Parameter name="callingObjectType" type="String"/>
+            <Parameter name="resultPin" type="String"/>
+            <Parameter name="classifierToBeCreated" type="String"/>
+            <Parameter name="classifierToBeInstantiated" type="String"/>
+            <Parameter name="hostActivity" type="String"/>
+            <Parameter name="callingBehaviorExecution" type="String"/>
             <Parameter name="callingObject" type="String"/>
-            <Parameter name="newObjectType" type="String"/>
-            <Parameter name="newInstance" type="String"/>
-            <Parameter name="toEndType" type="String"/>
-            <Parameter name="i" type="String"/>
-            <Parameter name="createdInstance" type="String"/>
-            <Parameter name="classifierbehaviorExecution" type="String"/>
-            <Parameter name="stateMachine" type="String"/>
-            <Parameter name="classStateMachine" type="String"/>
-            <Parameter name="aState" type="String"/>
-            <Parameter name="aRegion" type="String"/>
-            <Parameter name="stateMachineRegion" type="String"/>
-            <Parameter name="state" type="String"/>
-            <Parameter name="classifierBehaviorExecution" type="String"/>
-            <Parameter name="callingClassStateMachine" type="String"/>
-            <Parameter name="callingStateMachineRegion" type="String"/>
-            <Parameter name="callingClassActiveState" type="String"/>
-            <Parameter name="callingClassifierBehaviorExecution" type="String"/>
-            <Parameter name="toEndStateMachine" type="String"/>
-            <Parameter name="toEndStateMachineRegion" type="String"/>
-            <Parameter name="toEndActiveState" type="String"/>
-            <Parameter name="callingInstanceActiveState" type="String"/>
-            <Parameter name="callingActiveState" type="String"/>
-            <Parameter name="toEndClassifierBehaviorExecution" type="String"/>
-            <Graph ID="I2315" kind="LHS" name="LeftOf_createObjectAction-DiffType">
+            <Parameter name="classifierStateMachine" type="String"/>
+            <Parameter name="cSMRegion" type="String"/>
+            <Parameter name="cSMState" type="String"/>
+            <Parameter name="callingObjectClassifierExecution" type="String"/>
+            <Graph ID="I2315" kind="LHS" name="Left">
                 <Node ID="I2316" type="I2">
-                    <Attribute constant="true" type="I4">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>BehaviorExecution</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="126" Y="111"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2319" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>callingClassifierBehaviorExecution</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="124" Y="261"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2322" type="I2">
                     <Attribute type="I4" variable="true">
                         <Value>
                             <string>createObjectAction</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="610" Y="108"/>
+                    <NodeLayout X="479" Y="134"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I2319" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
+                                <string>CreateObjectAction</string>
+                            </java>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="562" Y="33"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I2322" type="I2">
+                    <Attribute type="I4" variable="true">
+                        <Value>
+                            <string>resultPin</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="725" Y="324"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
                 <Node ID="I2325" type="I2">
                     <Attribute type="I4" variable="true">
                         <Value>
-                            <string>result</string>
+                            <string>classifierToBeInstantiated</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="779" Y="106"/>
+                    <NodeLayout X="497" Y="253"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
                 <Node ID="I2328" type="I2">
                     <Attribute constant="true" type="I4">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>OutputPin</string>
+                                <string>Class</string>
                             </java>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="920" Y="106"/>
+                    <NodeLayout X="615" Y="352"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
                 <Node ID="I2331" type="I2">
                     <Attribute constant="true" type="I4">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>CreateObjectAction</string>
+                                <string>OutputPin</string>
                             </java>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="608" Y="28"/>
+                    <NodeLayout X="715" Y="104"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
                 <Node ID="I2334" type="I2">
                     <Attribute type="I4" variable="true">
                         <Value>
-                            <string>callingInstance</string>
+                            <string>callingBehaviorExecution</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="382" Y="209"/>
+                    <NodeLayout X="290" Y="70"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
                 <Node ID="I2337" type="I2">
-                    <Attribute type="I4" variable="true">
+                    <Attribute constant="true" type="I4">
                         <Value>
-                            <string>association</string>
+                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
+                                <string>BehaviorExecution</string>
+                            </java>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="610" Y="271"/>
+                    <NodeLayout X="305" Y="138"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
                 <Node ID="I2340" type="I2">
                     <Attribute type="I4" variable="true">
                         <Value>
-                            <string>fromEnd</string>
+                            <string>callingObject</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="489" Y="329"/>
+                    <NodeLayout X="97" Y="59"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
                 <Node ID="I2343" type="I2">
                     <Attribute type="I4" variable="true">
                         <Value>
-                            <string>callingInstanceType</string>
+                            <string>classifierStateMachine</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="380" Y="356"/>
+                    <NodeLayout X="360" Y="325"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
                 <Node ID="I2346" type="I2">
                     <Attribute type="I4" variable="true">
                         <Value>
-                            <string>toEnd</string>
+                            <string>cSMRegion</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="610" Y="374"/>
+                    <NodeLayout X="318" Y="396"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
                 <Node ID="I2349" type="I2">
                     <Attribute type="I4" variable="true">
                         <Value>
-                            <string>toEndType</string>
+                            <string>cSMState</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="611" Y="446"/>
+                    <NodeLayout X="200" Y="460"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
                 <Node ID="I2352" type="I2">
                     <Attribute type="I4" variable="true">
                         <Value>
-                            <string>callingClassStateMachine</string>
+                            <string>callingObjectClassifierExecution</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="384" Y="444"/>
+                    <NodeLayout X="129" Y="266"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
-                <Node ID="I2355" type="I2">
-                    <Attribute constant="true" type="I4">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>StateMachine</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="382" Y="516"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2358" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>callingStateMachineRegion</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="126" Y="449"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2361" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>callingActiveState</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="124" Y="364"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2364" type="I2">
-                    <Attribute constant="true" type="I4">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>Region</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="126" Y="568"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2367" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>behaviorExecution</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="381" Y="109"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2370" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>toEndStateMachine</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="610" Y="519"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2373" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>toEndStateMachineRegion</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="612" Y="576"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2376" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>toEndActiveState</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="904" Y="569"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2379" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>toEndClassifierBehaviorExecution</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="951" Y="471"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Edge ID="I2382" source="I2319" target="I2316" type="I5">
+                <Edge ID="I2355" source="I2316" target="I2319" type="I5">
                     <Attribute constant="true" type="I7">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
@@ -8753,18 +8634,7 @@
                     <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
-                <Edge ID="I2385" source="I2322" target="I2331" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2388" source="I2322" target="I2325" type="I5">
+                <Edge ID="I2358" source="I2316" target="I2322" type="I5">
                     <Attribute constant="true" type="I7">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
@@ -8775,40 +8645,7 @@
                     <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
-                <Edge ID="I2391" source="I2325" target="I2328" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2394" source="I2334" target="I2319" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>execution</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2397" source="I2319" target="I2334" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>host</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="236" bendY="231" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2400" source="I2322" target="I2337" type="I5">
+                <Edge ID="I2361" source="I2316" target="I2325" type="I5">
                     <Attribute constant="true" type="I7">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
@@ -8819,29 +8656,7 @@
                     <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
-                <Edge ID="I2403" source="I2337" target="I2340" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>ownedEnd</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="-2" textOffsetY="-21"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2406" source="I2340" target="I2343" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>type</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2409" source="I2334" target="I2343" type="I5">
+                <Edge ID="I2364" source="I2325" target="I2328" type="I5">
                     <Attribute constant="true" type="I7">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
@@ -8852,29 +8667,7 @@
                     <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
-                <Edge ID="I2412" source="I2337" target="I2346" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>ownedEnd</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2415" source="I2346" target="I2349" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>type</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2418" source="I2352" target="I2355" type="I5">
+                <Edge ID="I2367" source="I2322" target="I2331" type="I5">
                     <Attribute constant="true" type="I7">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
@@ -8885,117 +8678,7 @@
                     <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
-                <Edge ID="I2421" source="I2343" target="I2352" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>classifierBehavior</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2424" source="I2343" target="I2352" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>ownedBehavior</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="366" bendY="411" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2427" source="I2319" target="I2352" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>behavior</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="-19" textOffsetY="9"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2430" source="I2352" target="I2358" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>region</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2433" source="I2358" target="I2361" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>subvertex</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2436" source="I2319" target="I2361" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>activeState</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2439" source="I2358" target="I2364" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2442" source="I2367" target="I2316" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2445" source="I2367" target="I2334" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>host</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2448" source="I2334" target="I2367" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>execution</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="388" bendY="178" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2451" source="I2367" target="I2322" type="I5">
+                <Edge ID="I2370" source="I2334" target="I2316" type="I5">
                     <Attribute constant="true" type="I7">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
@@ -9006,7 +8689,29 @@
                     <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
-                <Edge ID="I2454" source="I2349" target="I2370" type="I5">
+                <Edge ID="I2373" source="I2334" target="I2337" type="I5">
+                    <Attribute constant="true" type="I7">
+                        <Value>
+                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
+                                <string>i</string>
+                            </java>
+                        </Value>
+                    </Attribute>
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I2376" source="I2334" target="I2340" type="I5">
+                    <Attribute constant="true" type="I7">
+                        <Value>
+                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
+                                <string>host</string>
+                            </java>
+                        </Value>
+                    </Attribute>
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I2379" source="I2325" target="I2343" type="I5">
                     <Attribute constant="true" type="I7">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
@@ -9017,29 +8722,7 @@
                     <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
-                <Edge ID="I2457" source="I2349" target="I2370" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>ownedBehavior</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="624" bendY="484" textOffsetX="31" textOffsetY="-43"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2460" source="I2370" target="I2355" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2463" source="I2370" target="I2373" type="I5">
+                <Edge ID="I2382" source="I2343" target="I2346" type="I5">
                     <Attribute constant="true" type="I7">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
@@ -9050,18 +8733,7 @@
                     <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
-                <Edge ID="I2466" source="I2373" target="I2364" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2469" source="I2373" target="I2376" type="I5">
+                <Edge ID="I2385" source="I2346" target="I2349" type="I5">
                     <Attribute constant="true" type="I7">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
@@ -9072,18 +8744,18 @@
                     <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
-                <Edge ID="I2472" source="I2379" target="I2376" type="I5">
+                <Edge ID="I2388" source="I2340" target="I2352" type="I5">
                     <Attribute constant="true" type="I7">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>activeState</string>
+                                <string>execution</string>
                             </java>
                         </Value>
                     </Attribute>
                     <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
-                <Edge ID="I2475" source="I2379" target="I2370" type="I5">
+                <Edge ID="I2391" source="I2352" target="I2343" type="I5">
                     <Attribute constant="true" type="I7">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
@@ -9094,7 +8766,18 @@
                     <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
-                <Edge ID="I2478" source="I2379" target="I2316" type="I5">
+                <Edge ID="I2394" source="I2352" target="I2349" type="I5">
+                    <Attribute constant="true" type="I7">
+                        <Value>
+                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
+                                <string>activeState</string>
+                            </java>
+                        </Value>
+                    </Attribute>
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I2397" source="I2352" target="I2337" type="I5">
                     <Attribute constant="true" type="I7">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
@@ -9106,57 +8789,17 @@
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
             </Graph>
-            <Graph ID="I2481" kind="RHS" name="RightOf_createObjectAction-DiffType">
-                <Node ID="I2482" type="I2">
-                    <Attribute constant="true" type="I4">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>BehaviorExecution</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="126" Y="111"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2485" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>callingClassifierBehaviorExecution</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="124" Y="261"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2488" type="I2">
+            <Graph ID="I2400" kind="RHS" name="Right">
+                <Node ID="I2401" type="I2">
                     <Attribute type="I4" variable="true">
                         <Value>
                             <string>createObjectAction</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="610" Y="108"/>
+                    <NodeLayout X="479" Y="134"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
-                <Node ID="I2491" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>result</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="779" Y="106"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2494" type="I2">
-                    <Attribute constant="true" type="I4">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>OutputPin</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="920" Y="106"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2497" type="I2">
+                <Node ID="I2404" type="I2">
                     <Attribute constant="true" type="I4">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
@@ -9164,658 +8807,39 @@
                             </java>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="608" Y="28"/>
+                    <NodeLayout X="562" Y="33"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
-                <Node ID="I2500" type="I2">
+                <Node ID="I2407" type="I2">
                     <Attribute type="I4" variable="true">
                         <Value>
-                            <string>callingInstance</string>
+                            <string>resultPin</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="382" Y="209"/>
+                    <NodeLayout X="725" Y="324"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
-                <Node ID="I2503" type="I2">
+                <Node ID="I2410" type="I2">
                     <Attribute type="I4" variable="true">
                         <Value>
-                            <string>association</string>
+                            <string>classifierToBeInstantiated</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="610" Y="271"/>
+                    <NodeLayout X="497" Y="253"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
-                <Node ID="I2506" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>fromEnd</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="489" Y="329"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2509" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>callingInstanceType</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="380" Y="356"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2512" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>toEnd</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="610" Y="374"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2515" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>toEndType</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="611" Y="446"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2518" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>callingClassStateMachine</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="384" Y="444"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2521" type="I2">
+                <Node ID="I2413" type="I2">
                     <Attribute constant="true" type="I4">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>StateMachine</string>
+                                <string>Class</string>
                             </java>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="382" Y="516"/>
+                    <NodeLayout X="462" Y="310"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
-                <Node ID="I2524" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>callingStateMachineRegion</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="126" Y="449"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2527" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>callingActiveState</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="124" Y="364"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2530" type="I2">
-                    <Attribute constant="true" type="I4">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>Region</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="126" Y="568"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2533" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>behaviorExecution</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="381" Y="109"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2536" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>toEndStateMachine</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="610" Y="519"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2539" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>toEndStateMachineRegion</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="612" Y="576"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2542" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>toEndActiveState</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="829" Y="576"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2545" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>toEndClassifierBehaviorExecution</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="851" Y="445"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Edge ID="I2548" source="I2485" target="I2482" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2551" source="I2488" target="I2497" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2554" source="I2488" target="I2491" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>result</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2557" source="I2491" target="I2494" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2560" source="I2500" target="I2485" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>execution</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2563" source="I2485" target="I2500" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>host</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="236" bendY="231" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2566" source="I2488" target="I2503" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>classifier</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2569" source="I2503" target="I2506" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>ownedEnd</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="-2" textOffsetY="-21"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2572" source="I2506" target="I2509" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>type</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2575" source="I2500" target="I2509" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2578" source="I2503" target="I2512" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>ownedEnd</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2581" source="I2512" target="I2515" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>type</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2584" source="I2518" target="I2521" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2587" source="I2509" target="I2518" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>classifierBehavior</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2590" source="I2509" target="I2518" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>ownedBehavior</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="366" bendY="411" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2593" source="I2485" target="I2518" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>behavior</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="-19" textOffsetY="9"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2596" source="I2518" target="I2524" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>region</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2599" source="I2524" target="I2527" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>subvertex</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2602" source="I2485" target="I2527" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>activeState</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2605" source="I2524" target="I2530" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2608" source="I2533" target="I2482" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2611" source="I2533" target="I2500" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>host</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2614" source="I2500" target="I2533" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>execution</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="388" bendY="178" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2617" source="I2515" target="I2536" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>classifierBehavior</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2620" source="I2515" target="I2536" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>ownedBehavior</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="624" bendY="484" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2623" source="I2536" target="I2521" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2626" source="I2536" target="I2539" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>region</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2629" source="I2539" target="I2530" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2632" source="I2539" target="I2542" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>subvertex</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2635" source="I2545" target="I2542" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>activeState</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2638" source="I2545" target="I2536" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>behavior</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2641" source="I2545" target="I2482" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-            </Graph>
-            <Morphism name="createObjectAction-DiffType-SMInitialised">
-                <Mapping image="I2482" orig="I2316"/>
-                <Mapping image="I2485" orig="I2319"/>
-                <Mapping image="I2488" orig="I2322"/>
-                <Mapping image="I2491" orig="I2325"/>
-                <Mapping image="I2494" orig="I2328"/>
-                <Mapping image="I2497" orig="I2331"/>
-                <Mapping image="I2500" orig="I2334"/>
-                <Mapping image="I2503" orig="I2337"/>
-                <Mapping image="I2506" orig="I2340"/>
-                <Mapping image="I2509" orig="I2343"/>
-                <Mapping image="I2512" orig="I2346"/>
-                <Mapping image="I2515" orig="I2349"/>
-                <Mapping image="I2518" orig="I2352"/>
-                <Mapping image="I2521" orig="I2355"/>
-                <Mapping image="I2524" orig="I2358"/>
-                <Mapping image="I2527" orig="I2361"/>
-                <Mapping image="I2530" orig="I2364"/>
-                <Mapping image="I2533" orig="I2367"/>
-                <Mapping image="I2536" orig="I2370"/>
-                <Mapping image="I2539" orig="I2373"/>
-                <Mapping image="I2542" orig="I2376"/>
-                <Mapping image="I2545" orig="I2379"/>
-                <Mapping image="I2548" orig="I2382"/>
-                <Mapping image="I2551" orig="I2385"/>
-                <Mapping image="I2554" orig="I2388"/>
-                <Mapping image="I2557" orig="I2391"/>
-                <Mapping image="I2560" orig="I2394"/>
-                <Mapping image="I2563" orig="I2397"/>
-                <Mapping image="I2566" orig="I2400"/>
-                <Mapping image="I2569" orig="I2403"/>
-                <Mapping image="I2572" orig="I2406"/>
-                <Mapping image="I2575" orig="I2409"/>
-                <Mapping image="I2578" orig="I2412"/>
-                <Mapping image="I2581" orig="I2415"/>
-                <Mapping image="I2584" orig="I2418"/>
-                <Mapping image="I2587" orig="I2421"/>
-                <Mapping image="I2590" orig="I2424"/>
-                <Mapping image="I2593" orig="I2427"/>
-                <Mapping image="I2596" orig="I2430"/>
-                <Mapping image="I2599" orig="I2433"/>
-                <Mapping image="I2602" orig="I2436"/>
-                <Mapping image="I2605" orig="I2439"/>
-                <Mapping image="I2608" orig="I2442"/>
-                <Mapping image="I2611" orig="I2445"/>
-                <Mapping image="I2614" orig="I2448"/>
-                <Mapping image="I2617" orig="I2454"/>
-                <Mapping image="I2620" orig="I2457"/>
-                <Mapping image="I2623" orig="I2460"/>
-                <Mapping image="I2626" orig="I2463"/>
-                <Mapping image="I2629" orig="I2466"/>
-                <Mapping image="I2632" orig="I2469"/>
-                <Mapping image="I2635" orig="I2472"/>
-                <Mapping image="I2638" orig="I2475"/>
-                <Mapping image="I2641" orig="I2478"/>
-            </Morphism>
-            <TaggedValue Tag="layer" TagValue="0"/>
-            <TaggedValue Tag="priority" TagValue="0"/>
-        </Rule>
-        <Rule ID="I2644" name="createObjectAction-DiffType-SM-Not-Initialised">
-            <Parameter name="behaviorExecution" type="String"/>
-            <Parameter name="createObjectAction" type="String"/>
-            <Parameter name="result" type="String"/>
-            <Parameter name="association" type="String"/>
-            <Parameter name="b" type="String"/>
-            <Parameter name="B" type="String"/>
-            <Parameter name="b1" type="String"/>
-            <Parameter name="a" type="String"/>
-            <Parameter name="A" type="String"/>
-            <Parameter name="a1" type="String"/>
-            <Parameter name="b2" type="String"/>
-            <Parameter name="createdObject" type="String"/>
-            <Parameter name="aType" type="String"/>
-            <Parameter name="bType" type="String"/>
-            <Parameter name="instance1" type="String"/>
-            <Parameter name="callingInstance" type="String"/>
-            <Parameter name="classifierNode" type="String"/>
-            <Parameter name="associationEnd" type="String"/>
-            <Parameter name="fromEnd" type="String"/>
-            <Parameter name="callingInstanceType" type="String"/>
-            <Parameter name="toEnd" type="String"/>
-            <Parameter name="newInstanceType" type="String"/>
-            <Parameter name="callingObjectInstance" type="String"/>
-            <Parameter name="callingObjectType" type="String"/>
-            <Parameter name="callingObject" type="String"/>
-            <Parameter name="newObjectType" type="String"/>
-            <Parameter name="newInstance" type="String"/>
-            <Parameter name="toEndType" type="String"/>
-            <Parameter name="i" type="String"/>
-            <Parameter name="createdInstance" type="String"/>
-            <Parameter name="classifierbehaviorExecution" type="String"/>
-            <Parameter name="stateMachine" type="String"/>
-            <Parameter name="classStateMachine" type="String"/>
-            <Parameter name="aState" type="String"/>
-            <Parameter name="aRegion" type="String"/>
-            <Parameter name="stateMachineRegion" type="String"/>
-            <Parameter name="state" type="String"/>
-            <Parameter name="classifierBehaviorExecution" type="String"/>
-            <Parameter name="callingClassStateMachine" type="String"/>
-            <Parameter name="callingStateMachineRegion" type="String"/>
-            <Parameter name="callingClassActiveState" type="String"/>
-            <Parameter name="callingClassifierBehaviorExecution" type="String"/>
-            <Parameter name="toEndStateMachine" type="String"/>
-            <Parameter name="toEndStateMachineRegion" type="String"/>
-            <Parameter name="toEndActiveState" type="String"/>
-            <Parameter name="callingInstanceActiveState" type="String"/>
-            <Parameter name="callingActiveState" type="String"/>
-            <Parameter name="toEndClassifierBehaviorExecution" type="String"/>
-            <Graph ID="I2646" kind="LHS" name="Left">
-                <Node ID="I2647" type="I2">
-                    <Attribute constant="true" type="I4">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>BehaviorExecution</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="126" Y="111"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2650" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>callingClassifierBehaviorExecution</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="124" Y="261"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2653" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>createObjectAction</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="610" Y="108"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2656" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>result</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="779" Y="106"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2659" type="I2">
+                <Node ID="I2416" type="I2">
                     <Attribute constant="true" type="I4">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
@@ -9823,534 +8847,19 @@
                             </java>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="920" Y="106"/>
+                    <NodeLayout X="715" Y="104"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
-                <Node ID="I2662" type="I2">
-                    <Attribute constant="true" type="I4">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>CreateObjectAction</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="608" Y="28"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2665" type="I2">
+                <Node ID="I2419" type="I2">
                     <Attribute type="I4" variable="true">
                         <Value>
-                            <string>callingInstance</string>
+                            <string>callingBehaviorExecution</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="382" Y="209"/>
+                    <NodeLayout X="240" Y="439"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
-                <Node ID="I2668" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>association</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="610" Y="271"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2671" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>fromEnd</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="489" Y="329"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2674" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>callingInstanceType</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="380" Y="356"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2677" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>toEnd</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="610" Y="374"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2680" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>toEndType</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="611" Y="446"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2683" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>callingClassStateMachine</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="384" Y="444"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2686" type="I2">
-                    <Attribute constant="true" type="I4">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>StateMachine</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="382" Y="516"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2689" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>callingStateMachineRegion</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="126" Y="449"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2692" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>callingActiveState</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="124" Y="364"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2695" type="I2">
-                    <Attribute constant="true" type="I4">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>Region</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="126" Y="568"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2698" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>behaviorExecution</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="381" Y="109"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2701" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>toEndStateMachine</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="610" Y="519"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2704" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>toEndStateMachineRegion</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="612" Y="576"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2707" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>toEndActiveState</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="904" Y="569"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2710" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>toEndClassifierBehaviorExecution</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="951" Y="471"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Edge ID="I2713" source="I2650" target="I2647" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="154" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2716" source="I2653" target="I2662" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="80" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2719" source="I2653" target="I2656" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>result</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="134" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2722" source="I2656" target="I2659" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="156" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2725" source="I2665" target="I2650" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>execution</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="249" bendY="214" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="211" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2728" source="I2650" target="I2665" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>host</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="211" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2731" source="I2653" target="I2668" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>classifier</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="164" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2734" source="I2668" target="I2671" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>ownedEnd</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="-2" textOffsetY="-21"/>
-                    <additionalLayout aktlength="141" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2737" source="I2671" target="I2674" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>type</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="82" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2740" source="I2665" target="I2674" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="147" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2743" source="I2668" target="I2677" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>ownedEnd</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="104" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2746" source="I2677" target="I2680" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>type</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="73" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2749" source="I2683" target="I2686" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="79" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2752" source="I2674" target="I2683" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>classifierBehavior</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="404" bendY="399" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="90" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2755" source="I2674" target="I2683" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>ownedBehavior</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="90" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2758" source="I2650" target="I2683" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>behavior</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="-19" textOffsetY="9"/>
-                    <additionalLayout aktlength="299" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2761" source="I2683" target="I2689" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>region</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="255" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2764" source="I2689" target="I2692" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>subvertex</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="89" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2767" source="I2650" target="I2692" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>activeState</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="113" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2770" source="I2689" target="I2695" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="129" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2773" source="I2698" target="I2647" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="250" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2776" source="I2698" target="I2665" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>host</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="357" bendY="159" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="100" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2779" source="I2665" target="I2698" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>execution</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="100" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2782" source="I2698" target="I2653" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>executable</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="230" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2785" source="I2680" target="I2701" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>classifierBehavior</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="647" bendY="482" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="76" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2788" source="I2680" target="I2701" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>ownedBehavior</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="31" textOffsetY="-43"/>
-                    <additionalLayout aktlength="76" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2791" source="I2701" target="I2686" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="240" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2794" source="I2701" target="I2704" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>region</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="61" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2797" source="I2704" target="I2695" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="535" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2800" source="I2704" target="I2707" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>subvertex</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="265" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2803" source="I2710" target="I2701" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>behavior</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="384" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2806" source="I2710" target="I2647" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="935" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2809" source="I2710" target="I2680" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>activeState</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-            </Graph>
-            <Graph ID="I2812" kind="RHS" name="Right">
-                <Node ID="I2813" type="I2">
+                <Node ID="I2422" type="I2">
                     <Attribute constant="true" type="I4">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
@@ -10358,1005 +8867,55 @@
                             </java>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="126" Y="111"/>
+                    <NodeLayout X="348" Y="369"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
-                <Node ID="I2816" type="I2">
+                <Node ID="I2425" type="I2">
                     <Attribute type="I4" variable="true">
                         <Value>
-                            <string>callingClassifierBehaviorExecution</string>
+                            <string>callingObject</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="124" Y="261"/>
+                    <NodeLayout X="167" Y="380"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
-                <Node ID="I2819" type="I2">
+                <Node ID="I2428" type="I2">
                     <Attribute type="I4" variable="true">
                         <Value>
-                            <string>createObjectAction</string>
+                            <string>classifierStateMachine</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="610" Y="108"/>
+                    <NodeLayout X="244" Y="142"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
-                <Node ID="I2822" type="I2">
+                <Node ID="I2431" type="I2">
                     <Attribute type="I4" variable="true">
                         <Value>
-                            <string>result</string>
+                            <string>cSMRegion</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="779" Y="106"/>
+                    <NodeLayout X="67" Y="203"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
-                <Node ID="I2825" type="I2">
-                    <Attribute constant="true" type="I4">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>OutputPin</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="920" Y="106"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2828" type="I2">
-                    <Attribute constant="true" type="I4">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>CreateObjectAction</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="608" Y="28"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2831" type="I2">
+                <Node ID="I2434" type="I2">
                     <Attribute type="I4" variable="true">
                         <Value>
-                            <string>callingInstance</string>
+                            <string>cSMState</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="382" Y="209"/>
+                    <NodeLayout X="55" Y="345"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
-                <Node ID="I2834" type="I2">
+                <Node ID="I2437" type="I2">
                     <Attribute type="I4" variable="true">
                         <Value>
-                            <string>association</string>
+                            <string>callingObjectClassifierExecution</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="610" Y="271"/>
+                    <NodeLayout X="250" Y="272"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
-                <Node ID="I2837" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>fromEnd</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="489" Y="329"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2840" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>callingInstanceType</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="380" Y="356"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2843" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>toEnd</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="610" Y="374"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2846" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>toEndType</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="611" Y="446"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2849" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>callingClassStateMachine</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="384" Y="444"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2852" type="I2">
-                    <Attribute constant="true" type="I4">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>StateMachine</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="382" Y="516"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2855" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>callingStateMachineRegion</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="126" Y="449"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2858" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>callingActiveState</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="124" Y="364"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2861" type="I2">
-                    <Attribute constant="true" type="I4">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>Region</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="126" Y="568"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2864" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>behaviorExecution</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="381" Y="109"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2867" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>toEndStateMachine</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="610" Y="519"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2870" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>toEndStateMachineRegion</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="612" Y="576"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2873" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>toEndActiveState</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="904" Y="569"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2876" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>toEndClassifierBehaviorExecution</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="951" Y="471"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Edge ID="I2879" source="I2816" target="I2813" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2882" source="I2819" target="I2828" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2885" source="I2819" target="I2822" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>result</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2888" source="I2822" target="I2825" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2891" source="I2831" target="I2816" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>execution</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="249" bendY="214" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2894" source="I2816" target="I2831" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>host</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2897" source="I2819" target="I2834" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>classifier</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2900" source="I2834" target="I2837" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>ownedEnd</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="-2" textOffsetY="-21"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2903" source="I2837" target="I2840" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>type</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2906" source="I2831" target="I2840" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2909" source="I2834" target="I2843" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>ownedEnd</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2912" source="I2843" target="I2846" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>type</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2915" source="I2849" target="I2852" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2918" source="I2840" target="I2849" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>classifierBehavior</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="404" bendY="399" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2921" source="I2840" target="I2849" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>ownedBehavior</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2924" source="I2816" target="I2849" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>behavior</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="-19" textOffsetY="9"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2927" source="I2849" target="I2855" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>region</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2930" source="I2855" target="I2858" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>subvertex</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2933" source="I2816" target="I2858" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>activeState</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2936" source="I2855" target="I2861" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2939" source="I2864" target="I2813" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2942" source="I2864" target="I2831" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>host</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="357" bendY="159" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2945" source="I2831" target="I2864" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>execution</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2948" source="I2846" target="I2867" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>classifierBehavior</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="647" bendY="482" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2951" source="I2846" target="I2867" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>ownedBehavior</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="31" textOffsetY="-43"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2954" source="I2867" target="I2852" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2957" source="I2867" target="I2870" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>region</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2960" source="I2870" target="I2861" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2963" source="I2870" target="I2873" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>subvertex</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2966" source="I2876" target="I2867" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>behavior</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2969" source="I2876" target="I2813" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I2972" source="I2876" target="I2846" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>activeState</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-            </Graph>
-            <Morphism name="createObjectAction-DiffType-SM-Not-Initialised">
-                <Mapping image="I2813" orig="I2647"/>
-                <Mapping image="I2816" orig="I2650"/>
-                <Mapping image="I2819" orig="I2653"/>
-                <Mapping image="I2822" orig="I2656"/>
-                <Mapping image="I2825" orig="I2659"/>
-                <Mapping image="I2828" orig="I2662"/>
-                <Mapping image="I2831" orig="I2665"/>
-                <Mapping image="I2834" orig="I2668"/>
-                <Mapping image="I2837" orig="I2671"/>
-                <Mapping image="I2840" orig="I2674"/>
-                <Mapping image="I2843" orig="I2677"/>
-                <Mapping image="I2846" orig="I2680"/>
-                <Mapping image="I2849" orig="I2683"/>
-                <Mapping image="I2852" orig="I2686"/>
-                <Mapping image="I2855" orig="I2689"/>
-                <Mapping image="I2858" orig="I2692"/>
-                <Mapping image="I2861" orig="I2695"/>
-                <Mapping image="I2864" orig="I2698"/>
-                <Mapping image="I2867" orig="I2701"/>
-                <Mapping image="I2870" orig="I2704"/>
-                <Mapping image="I2873" orig="I2707"/>
-                <Mapping image="I2876" orig="I2710"/>
-                <Mapping image="I2879" orig="I2713"/>
-                <Mapping image="I2882" orig="I2716"/>
-                <Mapping image="I2885" orig="I2719"/>
-                <Mapping image="I2888" orig="I2722"/>
-                <Mapping image="I2891" orig="I2725"/>
-                <Mapping image="I2894" orig="I2728"/>
-                <Mapping image="I2897" orig="I2731"/>
-                <Mapping image="I2900" orig="I2734"/>
-                <Mapping image="I2903" orig="I2737"/>
-                <Mapping image="I2906" orig="I2740"/>
-                <Mapping image="I2909" orig="I2743"/>
-                <Mapping image="I2912" orig="I2746"/>
-                <Mapping image="I2915" orig="I2749"/>
-                <Mapping image="I2918" orig="I2752"/>
-                <Mapping image="I2921" orig="I2755"/>
-                <Mapping image="I2924" orig="I2758"/>
-                <Mapping image="I2927" orig="I2761"/>
-                <Mapping image="I2930" orig="I2764"/>
-                <Mapping image="I2933" orig="I2767"/>
-                <Mapping image="I2936" orig="I2770"/>
-                <Mapping image="I2939" orig="I2773"/>
-                <Mapping image="I2942" orig="I2776"/>
-                <Mapping image="I2945" orig="I2779"/>
-                <Mapping image="I2948" orig="I2785"/>
-                <Mapping image="I2951" orig="I2788"/>
-                <Mapping image="I2954" orig="I2791"/>
-                <Mapping image="I2957" orig="I2794"/>
-                <Mapping image="I2960" orig="I2797"/>
-                <Mapping image="I2963" orig="I2800"/>
-                <Mapping image="I2966" orig="I2803"/>
-                <Mapping image="I2969" orig="I2806"/>
-                <Mapping image="I2972" orig="I2809"/>
-            </Morphism>
-            <TaggedValue Tag="layer" TagValue="0"/>
-            <TaggedValue Tag="priority" TagValue="0"/>
-        </Rule>
-        <Rule ID="I2975" name="createObjectAction-SameType">
-            <Parameter name="behaviorExecution" type="String"/>
-            <Parameter name="createObjectAction" type="String"/>
-            <Parameter name="result" type="String"/>
-            <Parameter name="association" type="String"/>
-            <Parameter name="b" type="String"/>
-            <Parameter name="B" type="String"/>
-            <Parameter name="b1" type="String"/>
-            <Parameter name="a" type="String"/>
-            <Parameter name="A" type="String"/>
-            <Parameter name="a1" type="String"/>
-            <Parameter name="b2" type="String"/>
-            <Parameter name="createdObject" type="String"/>
-            <Parameter name="aType" type="String"/>
-            <Parameter name="bType" type="String"/>
-            <Parameter name="instance1" type="String"/>
-            <Parameter name="callingInstance" type="String"/>
-            <Parameter name="classifierNode" type="String"/>
-            <Parameter name="associationEnd" type="String"/>
-            <Parameter name="fromEnd" type="String"/>
-            <Parameter name="callingInstanceType" type="String"/>
-            <Parameter name="toEnd" type="String"/>
-            <Parameter name="newInstanceType" type="String"/>
-            <Parameter name="callingObjectInstance" type="String"/>
-            <Parameter name="callingObjectType" type="String"/>
-            <Parameter name="callingObject" type="String"/>
-            <Parameter name="newObjectType" type="String"/>
-            <Parameter name="newInstance" type="String"/>
-            <Parameter name="toEndType" type="String"/>
-            <Parameter name="i" type="String"/>
-            <Graph ID="I2977" kind="LHS" name="LeftOf_createObjectAction-SameType">
-                <Node ID="I2978" type="I2">
-                    <Attribute constant="true" type="I4">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>BehaviorExecution</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="99" Y="28"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2981" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>behaviorExecution</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="126" Y="100"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2984" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>createObjectAction</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="373" Y="96"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2987" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>result</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="562" Y="92"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2990" type="I2">
-                    <Attribute constant="true" type="I4">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>OutputPin</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="716" Y="106"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2993" type="I2">
-                    <Attribute constant="true" type="I4">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>CreateObjectAction</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="425" Y="26"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2996" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>callingInstance</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="105" Y="215"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I2999" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>association</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="511" Y="192"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I3002" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>fromEnd</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="375" Y="271"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I3005" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>callingInstanceType</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="113" Y="348"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I3008" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>toEnd</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="414" Y="364"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Edge ID="I3011" source="I2981" target="I2978" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I3014" source="I2981" target="I2984" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>executable</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I3017" source="I2984" target="I2993" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I3020" source="I2984" target="I2987" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>result</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I3023" source="I2987" target="I2990" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I3026" source="I2996" target="I2981" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>execution</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I3029" source="I2981" target="I2996" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>host</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="98" bendY="153" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I3032" source="I2984" target="I2999" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>classifier</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I3035" source="I2999" target="I3002" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>ownedEnd</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="-2" textOffsetY="-21"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I3038" source="I3002" target="I3005" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>type</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I3041" source="I2996" target="I3005" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I3044" source="I2999" target="I3008" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>ownedEnd</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I3047" source="I3008" target="I3005" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>type</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-            </Graph>
-            <Graph ID="I3050" kind="RHS" name="RightOf_createObjectAction-SameType">
-                <Node ID="I3051" type="I2">
-                    <Attribute constant="true" type="I4">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>BehaviorExecution</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="99" Y="28"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I3054" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>behaviorExecution</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="49" Y="94"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I3057" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>createObjectAction</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="373" Y="96"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I3060" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>result</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="322" Y="162"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I3063" type="I2">
-                    <Attribute constant="true" type="I4">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>OutputPin</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="249" Y="40"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I3066" type="I2">
-                    <Attribute constant="true" type="I4">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>CreateObjectAction</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="392" Y="39"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I3069" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>callingInstance</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="44" Y="216"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I3072" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>association</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="511" Y="192"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I3075" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>fromEnd</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="375" Y="271"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I3078" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>callingInstanceType</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="113" Y="348"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I3081" type="I2">
-                    <Attribute type="I4" variable="true">
-                        <Value>
-                            <string>toEnd</string>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="414" Y="364"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Node ID="I3084" type="I2">
+                <Node ID="I2440" type="I2">
                     <Attribute constant="true" type="I4">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
@@ -11364,21 +8923,10 @@
                             </java>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="243" Y="224"/>
+                    <NodeLayout X="663" Y="434"/>
                     <additionalLayout age="0" force="10" frozen="false" zone="50"/>
                 </Node>
-                <Node ID="I3087" type="I2">
-                    <Attribute constant="true" type="I4">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>#newBehaviorExecution</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <NodeLayout X="196" Y="142"/>
-                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
-                </Node>
-                <Edge ID="I3090" source="I3054" target="I3051" type="I5">
+                <Edge ID="I2443" source="I2401" target="I2404" type="I5">
                     <Attribute constant="true" type="I7">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
@@ -11387,20 +8935,9 @@
                         </Value>
                     </Attribute>
                     <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                    <additionalLayout aktlength="134" force="10" preflength="100"/>
                 </Edge>
-                <Edge ID="I3093" source="I3057" target="I3066" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I3096" source="I3057" target="I3060" type="I5">
+                <Edge ID="I2446" source="I2401" target="I2407" type="I5">
                     <Attribute constant="true" type="I7">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
@@ -11409,42 +8946,9 @@
                         </Value>
                     </Attribute>
                     <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                    <additionalLayout aktlength="290" force="10" preflength="100"/>
                 </Edge>
-                <Edge ID="I3099" source="I3060" target="I3063" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>i</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I3102" source="I3069" target="I3054" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>execution</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I3105" source="I3054" target="I3069" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>host</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="31" bendY="151" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I3108" source="I3057" target="I3072" type="I5">
+                <Edge ID="I2449" source="I2401" target="I2410" type="I5">
                     <Attribute constant="true" type="I7">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
@@ -11453,31 +8957,9 @@
                         </Value>
                     </Attribute>
                     <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                    <additionalLayout aktlength="125" force="10" preflength="100"/>
                 </Edge>
-                <Edge ID="I3111" source="I3072" target="I3075" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>ownedEnd</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="-2" textOffsetY="-21"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I3114" source="I3075" target="I3078" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>type</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I3117" source="I3069" target="I3078" type="I5">
+                <Edge ID="I2452" source="I2410" target="I2413" type="I5">
                     <Attribute constant="true" type="I7">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
@@ -11486,42 +8968,9 @@
                         </Value>
                     </Attribute>
                     <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                    <additionalLayout aktlength="102" force="10" preflength="100"/>
                 </Edge>
-                <Edge ID="I3120" source="I3072" target="I3081" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>ownedEnd</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I3123" source="I3081" target="I3078" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>type</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I3126" source="I3060" target="I3084" type="I5">
-                    <Attribute constant="true" type="I7">
-                        <Value>
-                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
-                                <string>createdInstance</string>
-                            </java>
-                        </Value>
-                    </Attribute>
-                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
-                </Edge>
-                <Edge ID="I3129" source="I3084" target="I3078" type="I5">
+                <Edge ID="I2455" source="I2407" target="I2416" type="I5">
                     <Attribute constant="true" type="I7">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
@@ -11530,9 +8979,119 @@
                         </Value>
                     </Attribute>
                     <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
-                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                    <additionalLayout aktlength="220" force="10" preflength="100"/>
                 </Edge>
-                <Edge ID="I3132" source="I3084" target="I3087" type="I5">
+                <Edge ID="I2458" source="I2419" target="I2422" type="I5">
+                    <Attribute constant="true" type="I7">
+                        <Value>
+                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
+                                <string>i</string>
+                            </java>
+                        </Value>
+                    </Attribute>
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="361" force="10" preflength="100"/>
+                </Edge>
+                <Edge ID="I2461" source="I2419" target="I2425" type="I5">
+                    <Attribute constant="true" type="I7">
+                        <Value>
+                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
+                                <string>host</string>
+                            </java>
+                        </Value>
+                    </Attribute>
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="225" force="10" preflength="100"/>
+                </Edge>
+                <Edge ID="I2464" source="I2410" target="I2428" type="I5">
+                    <Attribute constant="true" type="I7">
+                        <Value>
+                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
+                                <string>classifierBehavior</string>
+                            </java>
+                        </Value>
+                    </Attribute>
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="195" force="10" preflength="100"/>
+                </Edge>
+                <Edge ID="I2467" source="I2428" target="I2431" type="I5">
+                    <Attribute constant="true" type="I7">
+                        <Value>
+                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
+                                <string>region</string>
+                            </java>
+                        </Value>
+                    </Attribute>
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="301" force="10" preflength="100"/>
+                </Edge>
+                <Edge ID="I2470" source="I2431" target="I2434" type="I5">
+                    <Attribute constant="true" type="I7">
+                        <Value>
+                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
+                                <string>subvertex</string>
+                            </java>
+                        </Value>
+                    </Attribute>
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="164" force="10" preflength="100"/>
+                </Edge>
+                <Edge ID="I2473" source="I2425" target="I2437" type="I5">
+                    <Attribute constant="true" type="I7">
+                        <Value>
+                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
+                                <string>execution</string>
+                            </java>
+                        </Value>
+                    </Attribute>
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="150" force="10" preflength="100"/>
+                </Edge>
+                <Edge ID="I2476" source="I2437" target="I2428" type="I5">
+                    <Attribute constant="true" type="I7">
+                        <Value>
+                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
+                                <string>behavior</string>
+                            </java>
+                        </Value>
+                    </Attribute>
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="132" force="10" preflength="100"/>
+                </Edge>
+                <Edge ID="I2479" source="I2437" target="I2434" type="I5">
+                    <Attribute constant="true" type="I7">
+                        <Value>
+                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
+                                <string>activeState</string>
+                            </java>
+                        </Value>
+                    </Attribute>
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="310" force="10" preflength="100"/>
+                </Edge>
+                <Edge ID="I2482" source="I2437" target="I2422" type="I5">
+                    <Attribute constant="true" type="I7">
+                        <Value>
+                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
+                                <string>i</string>
+                            </java>
+                        </Value>
+                    </Attribute>
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="190" force="10" preflength="100"/>
+                </Edge>
+                <Edge ID="I2485" source="I2407" target="I2440" type="I5">
+                    <Attribute constant="true" type="I7">
+                        <Value>
+                            <java class="java.beans.XMLDecoder" version="1.6.0_20">
+                                <string>createdObject</string>
+                            </java>
+                        </Value>
+                    </Attribute>
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="112" force="10" preflength="100"/>
+                </Edge>
+                <Edge ID="I2488" source="I2440" target="I2437" type="I5">
                     <Attribute constant="true" type="I7">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
@@ -11543,7 +9102,7 @@
                     <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
-                <Edge ID="I3135" source="I3087" target="I3084" type="I5">
+                <Edge ID="I2491" source="I2437" target="I2440" type="I5">
                     <Attribute constant="true" type="I7">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
@@ -11551,10 +9110,10 @@
                             </java>
                         </Value>
                     </Attribute>
-                    <EdgeLayout bendX="207" bendY="190" textOffsetX="0" textOffsetY="-22"/>
+                    <EdgeLayout bendX="452" bendY="367" textOffsetX="0" textOffsetY="-22"/>
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
-                <Edge ID="I3138" source="I3087" target="I3051" type="I5">
+                <Edge ID="I2494" source="I2440" target="I2410" type="I5">
                     <Attribute constant="true" type="I7">
                         <Value>
                             <java class="java.beans.XMLDecoder" version="1.6.0_20">
@@ -11567,29 +9126,33 @@
                 </Edge>
             </Graph>
             <Morphism name="createObjectAction-SameType">
-                <Mapping image="I3051" orig="I2978"/>
-                <Mapping image="I3054" orig="I2981"/>
-                <Mapping image="I3057" orig="I2984"/>
-                <Mapping image="I3060" orig="I2987"/>
-                <Mapping image="I3063" orig="I2990"/>
-                <Mapping image="I3066" orig="I2993"/>
-                <Mapping image="I3069" orig="I2996"/>
-                <Mapping image="I3072" orig="I2999"/>
-                <Mapping image="I3075" orig="I3002"/>
-                <Mapping image="I3078" orig="I3005"/>
-                <Mapping image="I3081" orig="I3008"/>
-                <Mapping image="I3105" orig="I3029"/>
-                <Mapping image="I3108" orig="I3032"/>
-                <Mapping image="I3090" orig="I3011"/>
-                <Mapping image="I3099" orig="I3023"/>
-                <Mapping image="I3123" orig="I3047"/>
-                <Mapping image="I3117" orig="I3041"/>
-                <Mapping image="I3093" orig="I3017"/>
-                <Mapping image="I3096" orig="I3020"/>
-                <Mapping image="I3111" orig="I3035"/>
-                <Mapping image="I3114" orig="I3038"/>
-                <Mapping image="I3120" orig="I3044"/>
-                <Mapping image="I3102" orig="I3026"/>
+                <Mapping image="I2401" orig="I2316"/>
+                <Mapping image="I2404" orig="I2319"/>
+                <Mapping image="I2407" orig="I2322"/>
+                <Mapping image="I2410" orig="I2325"/>
+                <Mapping image="I2413" orig="I2328"/>
+                <Mapping image="I2416" orig="I2331"/>
+                <Mapping image="I2419" orig="I2334"/>
+                <Mapping image="I2422" orig="I2337"/>
+                <Mapping image="I2425" orig="I2340"/>
+                <Mapping image="I2428" orig="I2343"/>
+                <Mapping image="I2431" orig="I2346"/>
+                <Mapping image="I2434" orig="I2349"/>
+                <Mapping image="I2437" orig="I2352"/>
+                <Mapping image="I2443" orig="I2355"/>
+                <Mapping image="I2446" orig="I2358"/>
+                <Mapping image="I2449" orig="I2361"/>
+                <Mapping image="I2452" orig="I2364"/>
+                <Mapping image="I2455" orig="I2367"/>
+                <Mapping image="I2458" orig="I2373"/>
+                <Mapping image="I2461" orig="I2376"/>
+                <Mapping image="I2464" orig="I2379"/>
+                <Mapping image="I2467" orig="I2382"/>
+                <Mapping image="I2470" orig="I2385"/>
+                <Mapping image="I2473" orig="I2388"/>
+                <Mapping image="I2476" orig="I2391"/>
+                <Mapping image="I2479" orig="I2394"/>
+                <Mapping image="I2482" orig="I2397"/>
             </Morphism>
             <TaggedValue Tag="layer" TagValue="0"/>
             <TaggedValue Tag="priority" TagValue="0"/>
