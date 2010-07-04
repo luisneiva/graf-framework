@@ -3,6 +3,7 @@
 *Action:* Further investigation could be useful 
   * Eclipse plugin to make state machines and class diagrams
   * Download doesn't compile
+  * http://unimod.sourceforge.net/
 == UMLAnT ==
 *Action:* Abandoned
   * Like GRAF but without the graph transformation stuff - it's not clear how it decides what system state to go to next.
