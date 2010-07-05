@@ -10,6 +10,7 @@ img { /* center images in their container */
 	display: block ;
 	margin-left: auto ;
 	margin-right: auto ;
+	max-width: 100%
 }
 
 p {
@@ -45,17 +46,7 @@ h1 {
 }
 
 #middlecolumn {
-	clear: both ;
-}
-
-#leftcolumn {
-	width: 50% ;
-	float: left ;
-}
-
-#rightcolumn {
-	width: 50% ;
-	float: right ;
+	
 }
 
 #footer {
