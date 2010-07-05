@@ -1,0 +1,22 @@
+#Minutes for 5/7/2010
+
+_Present:_ Oscar, Stephen, Cameron, Hamish
+
+==Progress Reports==
+Cameron: 
+* Unimod installed
+* Emailed PathFinder
+* Eleminator not working yet
+Hamish:
+* Actions formulated for models
+* Worked out what invoice model was doing
+Alice:
+* Rule for the TOO model
+* Making a page that describes all rules
+Frank:
+* All models in GRAF
+
+==Megan Fox==
+* Hamish would do naughty things to her
+* How can we integrate her into GRAF?
+* Ruled irrelevant to GRAF
