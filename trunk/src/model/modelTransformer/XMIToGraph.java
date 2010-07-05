@@ -268,9 +268,10 @@ public class XMIToGraph implements ModelToGraph {
 					instanceErr("Unrecognised line: " + line);
 				}
 			}
-			if (stateDeclared == false) {
-				instanceErr("No state declaration for object " + objName + " : " + className);
-			}
+			// TODO!!!
+//			if (stateDeclared == false) {
+//				instanceErr("No state declaration for object " + objName + " : " + className);
+//			}
 		} catch (FileNotFoundException e) {
 			instanceErr("Could not find file " + instanceURL.getPath());
 		}

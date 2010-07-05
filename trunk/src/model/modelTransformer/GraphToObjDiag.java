@@ -19,20 +19,20 @@ import agg.xt_basis.Arc;
 import agg.xt_basis.Node;
 
 public class GraphToObjDiag implements GraphToModel {
-	
+
 	/** Object diagram representation of graph */
 	private ObjDiag objdiag;
-	
+
 	public void reset() {
 		objdiag = new ObjDiag();
-    	ODObject.resetRandomLocator();
+		ODObject.resetRandomLocator();
 	}
-	
+
 	public ObjectDisplay generateDisplayObjects(ListGraph graph) throws GraphToModelException {
-		
+
 		ArrayList<DisplayObject> objects = objdiag.getODObjs();
 		ArrayList<ODLink> odLinks = objdiag.getODLinks();
-		
+
 		// Get the names of objects not in event mode, current locations, and hide/show values
 		HashMap<String,Point> locations = new HashMap<String,Point>();
 		HashMap<String,Boolean[]> hideshow = new HashMap<String,Boolean[]>();
@@ -47,12 +47,12 @@ public class GraphToObjDiag implements GraphToModel {
 					odObj.isAttributesShowing(),odObj.isRuntimePoolShowing()});
 			}
 		}
-		
+
 		objdiag = generateObjectDiagram(graph);   
-		
+
 		objects = objdiag.getODObjs();
 		odLinks = objdiag.getODLinks();
-		
+
 		//Re-set remembered object propertes
 		for(DisplayObject object : objects) {
 			ODObject odObj = (ODObject)object;
@@ -64,12 +64,12 @@ public class GraphToObjDiag implements GraphToModel {
 				odObj.setRuntimePoolShowing(hideshow.get(odObj.getName())[1]);
 			}
 		}
-		
+
 		objdiag.setObjs(objects);
 		objdiag.setODLinks(odLinks);
 		return objdiag;
 	}
-	
+
 	private ObjDiag generateObjectDiagram(ListGraph graph) throws GraphToModelException {
 
 		ArrayList<ODObject> objects = new ArrayList<ODObject>();
@@ -90,7 +90,7 @@ public class GraphToObjDiag implements GraphToModel {
 		if(classNode == null) {
 			throw new GraphToModelException("the graph has no class node");
 		}
-		
+
 		// Find the classes.
 		ArrayList<ODClass> classes = new ArrayList<ODClass>();
 		for(Arc edgeToClass : classNode.getIncomingArcsVec()) {
@@ -193,7 +193,13 @@ public class GraphToObjDiag implements GraphToModel {
 			toState.add("execution");
 			toState.add("activeState");
 			ArrayList<Node> states = ListGraph.toTrace(toState,node);
-			object.setState(states.get(0));
+
+			//@author: Frank Su
+			if (states.size() != 0)
+			{
+				object.setState(states.get(0));
+			}
+			//			object.setState(states.get(0));
 		}
 
 		// Collect actions - collect the executable actions from the executing behavior
@@ -202,7 +208,7 @@ public class GraphToObjDiag implements GraphToModel {
 		for (ODObject object : objects) {
 
 			if(object.getGraphNode() != null) {
-				
+
 				ArrayList<String> traceOrder = new ArrayList<String>();
 				traceOrder.add("execution");
 				traceOrder.add("executable");
@@ -226,7 +232,7 @@ public class GraphToObjDiag implements GraphToModel {
 			toExternalEvent.add("trigger");
 			toExternalEvent.add("event");
 			ArrayList<Node> externalEvents = ListGraph.toTrace(toExternalEvent, object.getGraphNode());
-			
+
 			Iterator<Node> duplicateRemover = externalEvents.iterator();
 			ArrayList<String> found = new ArrayList<String>();
 			while(duplicateRemover.hasNext()) {
@@ -236,7 +242,7 @@ public class GraphToObjDiag implements GraphToModel {
 				else
 					found.add(current);
 			}
-			
+
 			for(Node node : externalEvents) {
 				object.addExternalEvent(node);
 			}
@@ -259,7 +265,7 @@ public class GraphToObjDiag implements GraphToModel {
 
 				ArrayList<Node> activeEvents = new ArrayList<Node>();
 				for(Node n : activeEventSignals) {
-					
+
 					ArrayList<Node> all = ListGraph.fromTrace(fromSignalToReceive, n);					
 					activeEvents.addAll(all);
 				}
@@ -283,7 +289,7 @@ public class GraphToObjDiag implements GraphToModel {
 				object.setEventMode(false);
 			}
 		}
-		
+
 		ObjDiag result = new ObjDiag(objects, associations);
 		return result;
 	}
