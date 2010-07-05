@@ -13,8 +13,8 @@ _Duration:_ 1 hour
 ==Progress Reports==
   * Cameron: 
     * Unimod installed
-    * Emailed PathFinder
-    * Eleminator not working yet
+    * Emailed !PathFinder
+    * Eleminator not working
   * Hamish:
     * Actions formulated for models
     * Worked out what invoice model was doing
@@ -28,6 +28,11 @@ _Duration:_ 1 hour
   * Hamish would do naughty things to her
   * How can we integrate her into GRAF?
   * Ruled irrelevant to GRAF
+
+==Invoicer model==
+  * No apparent UML action explanation for loops and conditionals
+  * Transition conditions will have to be explored in the UML tree
+  * One of the classes has an attribute that is a list. Lists are not defined in any particular way in GRAF at the moment
 
 ==Actions==
   * Timetables to Oscar & Stephen for tutorial planning
