@@ -11,20 +11,35 @@ _Present:_ Oscar, Stephen, Cameron, Hamish
 _Duration:_ 1 hour
 
 ==Progress Reports==
-Cameron: 
-  * Unimod installed
-  * Emailed PathFinder
-  * Eleminator not working yet
-Hamish:
-  * Actions formulated for models
-  * Worked out what invoice model was doing
-Alice:
-  * Rule for the TOO model
-  * Making a page that describes all rules
-Frank:
-  * All models in GRAF
+  * Cameron: 
+    * Unimod installed
+    * Emailed PathFinder
+    * Eleminator not working yet
+  * Hamish:
+    * Actions formulated for models
+    * Worked out what invoice model was doing
+  * Alice:
+    * Rule for the TOO model
+    * Making a page that describes all rules
+  * Frank:
+    * All models in GRAF
 
 ==Megan Fox==
   * Hamish would do naughty things to her
   * How can we integrate her into GRAF?
   * Ruled irrelevant to GRAF
+
+==Actions==
+  * Timetables to Oscar & Stephen for tutorial planning
+  * Frank:
+    * State machine error 
+  * Cameron:
+    * Add models to unimod
+  * Hamish:
+    * Model work with rhapsody
+  * Alice:
+    * Continuing what she's doing
+
+==Review==
+  * Demo of GRAF
+  * Rhapsody vs Unimod vs GRAF
