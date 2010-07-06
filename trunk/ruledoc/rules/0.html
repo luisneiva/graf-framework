@@ -58,9 +58,16 @@
 				<h2>
 					Rationale and Comments
 				</h2>
-					<p>
-						AcceptEventAction is 
-					</p>
+				<p>AcceptEventAction is 'an action that waits for the occurrence of an event meeting
+					a specified condition'. The Action has a Trigger (the event) and a Result (an
+					output pin that holds the accepted event).
+				</p>
+				<p>This variation is the first option considered when the action is called, as part of
+					an exclusive dependency, which acts as a set of if-conditions. It will be
+					applied if the instance is not in a state for which the received event is a
+					trigger, or alternatively not in active state at all. 
+					The result is that the event is ignored.
+				</p>
 			</div>
 		</div>
 	</body>

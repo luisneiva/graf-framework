@@ -61,8 +61,17 @@
 				<h2>
 					Rationale and Comments
 				</h2>
-					<p>
-						[Text here.]
+					<p>AcceptEventAction is 'an action that waits for the occurrence of an event meeting
+					a specified condition'. The Action has a Trigger (the event) and a Result (an
+					output pin that holds the accepted event).
+					</p>
+					<p>This variation is applied as step 2 of the second limb of the exclusive dependency 
+						(if-condition). The preceding step is <a href="2.html">here</a>. 
+						It is applied in a looping dependency, which acts like a while loop.
+						It connects a new state behavior node with each of the actions of the new state,
+						while there are still unconnected actions. The effect is to link up the instance
+						that has just transitioned into the new state (triggered by an event)
+						with all the executable actions in that state.
 					</p>
 			</div>
 		</div>

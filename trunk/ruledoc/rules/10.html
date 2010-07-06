@@ -62,8 +62,13 @@
 					Rationale and Comments
 				</h2>
 					<p>
-						[Text here.]
+						'ReadStructuralFeatureAction is a structural feature action that retrieves the values of a structural feature.'
+						The action has an output pin onto which the result is put.
 					</p>
+					<p>This rule assumes that a <a href="8.html">readSelfAction</a> has already been executed.
+					It is applied as part of an exclusive dependency (if-condition), and applies where the calling instance
+					was <em>not</em> the caller of the readSelfAction. Its effect is to link the calling node and a feature
+					of the readSelfAction caller, with an arc that has the same name as the action's output pin.
 			</div>
 		</div>
 	</body>
