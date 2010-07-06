@@ -61,8 +61,15 @@
 				<h2>
 					Rationale and Comments
 				</h2>
-					<p>
-						[Text here.]
+					<p>AcceptEventAction is 'an action that waits for the occurrence of an event meeting
+					a specified condition'. The Action has a Trigger (the event) and a Result (an
+					output pin that holds the accepted event).
+					</p>
+					<p>This variation is applied as the third and last option of the exclusive dependency
+						(if-condition). Whereas the preceding limb applies were the new state has activities
+						which must be executed, this rule will be applied where the new state is passive.
+						Its effect is to transition the instance into the new state, but without creating
+						any new executable behavior.
 					</p>
 			</div>
 		</div>

@@ -62,8 +62,17 @@
 					Rationale and Comments
 				</h2>
 					<p>
-						[Text here.]
+						'AddStructuralFeatureValueAction is a write structural feature action 
+						for adding values to a structural feature.'
 					</p>
+					<p>This variation applies where there is only one value to be added, and 
+						the old value is to be erased. It creates a new value node, links it
+						to the calling instance and calculates the appropriate value from its 
+						inputs. This implementation exploits AGG's ability to process simple
+						strings as Java expressions with variables, and includes a special 
+						'##' flag that tells GRAF to evaluate the result.
+					</p>
+					
 			</div>
 		</div>
 	</body>
