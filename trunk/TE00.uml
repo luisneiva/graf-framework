@@ -15,6 +15,9 @@
           <transition xmi:id="_SCorcINbEd-yNZ353UYnYg" name="CTrans" source="_RnZFcGYFEd-8QvdEjO-jiQ" target="_24z3EINdEd-yNZ353UYnYg">
             <trigger xmi:id="_cWncsINbEd-yNZ353UYnYg" name="CTrigger" event="_Xkr-wINbEd-yNZ353UYnYg"/>
           </transition>
+          <transition xmi:id="_gyc9gIj7Ed-odLBDQ1rMhQ" name="CTrans2" source="_24z3EINdEd-yNZ353UYnYg" target="_RnZFcGYFEd-8QvdEjO-jiQ">
+            <trigger xmi:id="_inInMIj7Ed-odLBDQ1rMhQ" name="CTrigger2" event="_bxV0EIj7Ed-odLBDQ1rMhQ"/>
+          </transition>
         </region>
       </ownedBehavior>
     </packagedElement>
@@ -31,6 +34,9 @@
           </subvertex>
           <transition xmi:id="_uOY_kH92Ed-KFqvOJDRJYg" name="Btrans" source="_TxAdUGYFEd-8QvdEjO-jiQ" target="_FpbJ0H97Ed-KFqvOJDRJYg">
             <trigger xmi:id="_192loH92Ed-KFqvOJDRJYg" name="BTrigger" event="_odIyoH92Ed-KFqvOJDRJYg"/>
+          </transition>
+          <transition xmi:id="_uEiUEIj6Ed-odLBDQ1rMhQ" name="BTrans2" source="_FpbJ0H97Ed-KFqvOJDRJYg" target="_TxAdUGYFEd-8QvdEjO-jiQ">
+            <trigger xmi:id="_wfD1wIj6Ed-odLBDQ1rMhQ" name="BTrigger2" event="_P8gUEIj7Ed-odLBDQ1rMhQ"/>
           </transition>
         </region>
       </ownedBehavior>
@@ -66,5 +72,9 @@
     <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_odIyoH92Ed-KFqvOJDRJYg" name="makeBDoStuff" signal="_kHiEUH92Ed-KFqvOJDRJYg"/>
     <packagedElement xmi:type="uml:Signal" xmi:id="_T5Gd0INbEd-yNZ353UYnYg" name="CSignal"/>
     <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_Xkr-wINbEd-yNZ353UYnYg" name="makeCDoStuff" signal="_T5Gd0INbEd-yNZ353UYnYg"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_OZHOsIj7Ed-odLBDQ1rMhQ" name="BSignal2"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_P8gUEIj7Ed-odLBDQ1rMhQ" name="resetB" signal="_OZHOsIj7Ed-odLBDQ1rMhQ"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_bRl9AIj7Ed-odLBDQ1rMhQ" name="CSignal2"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_bxV0EIj7Ed-odLBDQ1rMhQ" name="resetC" signal="_bRl9AIj7Ed-odLBDQ1rMhQ"/>
   </packagedElement>
 </uml:Model>
