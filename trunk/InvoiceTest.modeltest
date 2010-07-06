@@ -7,3 +7,11 @@ o = o1
 
 o1 : Order
 quantity = 2
+
+
+s1 : Stock
+pr = p1
+qu = 10
+
+
+p1 : Product

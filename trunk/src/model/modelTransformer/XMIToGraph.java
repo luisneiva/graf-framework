@@ -208,9 +208,9 @@ public class XMIToGraph implements ModelToGraph {
 				
 				if (line.matches("^.*:.*$")) {				// class declaration - eg m1 : Microwave
 					
-					if (stateDeclared == false) {
-						instanceErr("No state declared for " + objName + " : " + className);
-					}
+//					if (stateDeclared == false) {
+//						instanceErr("No state declared for " + objName + " : " + className);
+//					}
 					stateDeclared = false;
 					
 					String[] linesplit = line.split(":");
