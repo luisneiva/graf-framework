@@ -51,6 +51,19 @@
       <ownedAttribute xmi:id="_ew7CUIDyEd-HL_3tQGiR0Q" name="quantity">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
+      <ownedAttribute xmi:id="_6ZJZkIioEd-VKI3JTnnWpw" name="date">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_Ynj48IipEd-VKI3JTnnWpw" name="status">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Enumeration"/>
+      </ownedAttribute>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_FJoWEIioEd-VKI3JTnnWpw" name="Stock">
+      <ownedAttribute xmi:id="_VMqU0IioEd-VKI3JTnnWpw" name="pr" type="_KIM28IiqEd-VKI3JTnnWpw"/>
+      <ownedAttribute xmi:id="_UZgusIiqEd-VKI3JTnnWpw" name="qu">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_KIM28IiqEd-VKI3JTnnWpw" name="Product"/>
   </packagedElement>
 </uml:Model>
