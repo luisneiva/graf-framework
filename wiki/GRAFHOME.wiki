@@ -28,6 +28,7 @@ For a brief description of this year's project go [http://cs.anu.edu.au/student/
 [SuccessCriteria Success Criteria]
 ==== GRAF ====
 [HowGRAFWorks How GRAF Works]<br>
+[RefDiscussion 'Reference' Discussion]<br>
 
 === Tutorials ===
 [Installing Visual Paradigm and Topcased]<br>
