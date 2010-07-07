@@ -1,0 +1,46 @@
+#summary The 'R' in GRAF stands for Reference. What does that mean?
+
+= Why is GRAF a Reference? =
+
+The GRAF acronym stands for Graph-based Reference Animator Framework. The project statement sates that ‘the GRAF system is a reference animator for UML-like languages’. But what does the term ‘reference’ mean in this context? The GRAF googlecode homepage says that
+ 
+ The Graph-based Reference Animator Framework (GRAF) is a tool for animating modelling 
+ languages. It provides a framework allowing development of animators that implement 
+ graph transformation systems. Animators can be validated as providing correct run-time 
+ behaviour of models, and hence serve as a reference for the language. Modellers may then 
+ check, test and understand the real meaning of their models.
+
+This implies that GRAF’s character as a reference is based on its ability to provide a ‘correct’ interpretation of the run-time behavior of models. Other animators’ output can then be compared with GRAF’s, to determine whether they too produce ‘correct’ results. A second function may be as a check for individual modelers, to confirm that their proposed model behaves as they expect it to.<br>
+
+ _1.	GRAF is a reference because it correctly interprets the behavior of models._
+
+== What is correctness, and why is it important? ==
+
+ _2.	Correctness in an animator means that an animator’s implementation of UML  
+ conforms to the definition of the language._<br>
+ _3.	Correctness in a model means that, when interpreted by a correct animator or 
+ otherwise according to the definition, it performs as the modeler expected. Or, if a 
+ model produces an unexpected result when interpreted according to the definition, it is 
+ incorrect._
+
+It is the belief of the GRAF Project’s clients that modelers would benefit from a mathematically-testable definition of modeling languages such as UML. Current definitions rely on plain English definitions of UML elements, leaving them open to disagreements as to interpretation. In his thesis, Greg O’Keefe argued that this ambiguity could be resolved by using graph theory to define UML.<br>
+
+With the current definition, two animators could produce different results and still be ‘correct’. Similarly two different versions of a particular model could be ‘correct’, because they perform as the modeler expects them to according to the definition. If a fully testable definition were available, the creators of modeling software would be able to produce tools that fully conformed to the specification and would hopefully be negatively affected if they failed to do so. In that situation a model produced with one tool will execute in the same way as the same model created with a different tool. Further, individual modelers would be able to compare notes, using different tools, and come to the same conclusions about their work with absolute certainty. This is especially relevant in the context of model-driven engineering. The clients believe that without certainty, ‘stakeholders can see what they want to see in the model, and apparent agreement can collapse at great expense late in the project timeline.’ 
+
+ _4.	Correctness is important because it allows certainty about what a model 
+ represents. This is not possible with the current definition._
+
+== 'Reference' animators, correctness and GRAF ==
+
+Part of the mission statement of GRAF is to provide a ‘correct’ interpretation of UML. However, why is this any different to what other software is capable of, given the current definition? GRAF implements the current, ambiguous definition as graphs and graph-transformation rules, which are capable of being mathematically defined. However, in choosing a particular way to implement a given definition, GRAF is in the same situation as other model animators that select a particular implementation from a range of options. What is different about GRAF? <br>
+
+While differing implementations are potentially ‘correct’ according to the current definition, GRAF demonstrates that a ‘correct’, working, useable implementation of UML can be created using testable methods. Where the official definition is unclear, GRAF adopts the implementation suggested by our clients, in particular Greg O’Keefe, and act as a demonstration of his ideas in those areas. This is emphasized in the project’s success criteria:
+
+ The aim of the GRAF project is to realise O'Keefe's clarification of the official   
+ definition as a UML model animator.
+
+ _5.	GRAF demonstrates that a better type of correctness is available to modelers._
+
+== Why GRAF is not a Reference yet ==
+
+At the moment, GRAF is incomplete. It does not implement all of UML and therefore will not be able to ‘correctly interpret the behavior’ of all models – further work is required to make this possible. In addition, the likelihood that the approach demonstrated by GRAF will be adopted is slim. The Group has not endorsed the implementation decisions that GRAF has made, and the project is not ‘official’ in any way. However, the clients hope that by participating in the ongoing discussions in the modeling community, perhaps using GRAF as an example of their ideas, they can promote those ideas and facilitate the adoption of ideas the same as, or similar to, those implemented in GRAF.
