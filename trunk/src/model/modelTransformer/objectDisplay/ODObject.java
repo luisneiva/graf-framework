@@ -165,9 +165,10 @@ public class ODObject extends DisplayObject {
 	 * Creates an ODAction based on a node and adds it to this.
 	 * 
 	 * @param The node that represents the action.
+	 * @param The (optional) node(s) that represents the behavior execution executing actions
 	 */
-	public void addAction(Node node) {
-		ODAction action = new ODAction(node);
+	public void addAction(Node node, ArrayList<Node> actionBehEx) {
+		ODAction action = new ODAction(node, actionBehEx);
 		actionPool.add(action);		
 	}
 

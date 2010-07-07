@@ -209,12 +209,34 @@ public class GraphToObjDiag implements GraphToModel {
 
 			if(object.getGraphNode() != null) {
 
-				ArrayList<String> traceOrder = new ArrayList<String>();
-				traceOrder.add("execution");
-				traceOrder.add("executable");
-				ArrayList<Node> executableActions = ListGraph.toTrace(traceOrder,object.getGraphNode());
+				// actionBehExes solves google code defect 1
+				ArrayList<Node> actionBehExes = new ArrayList<Node>();
+				
+				ArrayList<String> traceOrderPartOne = new ArrayList<String>();
+				traceOrderPartOne.add("execution");
+				ArrayList<Node> potentialActionBehExes = ListGraph.toTrace(traceOrderPartOne, object.getGraphNode());
+				
+				// All we're doing here is looking behavior execution node
+				// that does not have an active state edge
+				for(Node potentialActionBehEx : potentialActionBehExes) {
+					Boolean thisIsIt = true;
+					for(Arc arc : potentialActionBehEx.getOutgoingArcsVec()) {
+						if(ListGraph.getName(arc).equals("activeState")) { //not the best way to contrast the 2 types of behavior executions, but it works
+							thisIsIt = false;
+							break;
+						}
+					}
+					if(thisIsIt) {
+						actionBehExes.add(potentialActionBehEx);
+					}
+				}
+				
+				ArrayList<String> traceOrderPartTwo = new ArrayList<String>();
+				traceOrderPartTwo.add("execution");
+				traceOrderPartTwo.add("executable");
+				ArrayList<Node> executableActions = ListGraph.toTrace(traceOrderPartTwo,object.getGraphNode());
 				for (Node action : executableActions) {
-					object.addAction(action);
+					object.addAction(action, actionBehExes);
 				}
 			}
 		}
