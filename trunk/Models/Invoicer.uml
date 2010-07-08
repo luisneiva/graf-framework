@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA">
+  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="InvoicerPackage">
+    <elementImport xmi:id="_rlMmEIDyEd-HL_3tQGiR0Q">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_QDmQoGGVEd-wueUf9g8DcA" name="Invoicer" classifierBehavior="_UEZ-MGGWEd-wueUf9g8DcA">
+      <ownedAttribute xmi:id="_jmUV4IDwEd-HL_3tQGiR0Q" name="o" type="_YDVI8IDyEd-HL_3tQGiR0Q"/>
+      <ownedAttribute xmi:id="_5ddHQIpyEd-LWfEk4LrGCw" name="ords" type="_YDVI8IDyEd-HL_3tQGiR0Q">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9zXXkIpyEd-LWfEk4LrGCw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__ZJCkIpyEd-LWfEk4LrGCw"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_UEZ-MGGWEd-wueUf9g8DcA" name="InvoicerStateMachine">
+        <region xmi:id="_UEZ-MWGWEd-wueUf9g8DcA" name="InvoicerRegion">
+          <subvertex xmi:type="uml:State" xmi:id="_cxHPoGGWEd-wueUf9g8DcA" name="State1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_kvQK4GGWEd-wueUf9g8DcA" name="Initial"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_nAAsk2GWEd-wueUf9g8DcA" name="Pseudos Init"/>
+          <subvertex xmi:type="uml:State" xmi:id="_rqv9YGGWEd-wueUf9g8DcA" name="Invoicing">
+            <exit xmi:type="uml:Activity" xmi:id="_sFvOsIDvEd-HL_3tQGiR0Q" name="InvoicingActivity"/>
+          </subvertex>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_QIlwgIp1Ed-LWfEk4LrGCw" name="InvoicerFinalState"/>
+          <transition xmi:id="_pBJd4GGWEd-wueUf9g8DcA" name="initialTrans" source="_nAAsk2GWEd-wueUf9g8DcA" target="_kvQK4GGWEd-wueUf9g8DcA"/>
+          <transition xmi:id="_uP4zoGGWEd-wueUf9g8DcA" name="InvoiceTrans" source="_kvQK4GGWEd-wueUf9g8DcA" target="_rqv9YGGWEd-wueUf9g8DcA">
+            <trigger xmi:id="_-8EIkX6LEd-VRIfXnUISTA" name="TriggerInvoice" event="_mDL4kH6NEd-VRIfXnUISTA"/>
+          </transition>
+          <transition xmi:id="_wls0dGGWEd-wueUf9g8DcA" name="DoTrans1" source="_rqv9YGGWEd-wueUf9g8DcA" target="_kvQK4GGWEd-wueUf9g8DcA">
+            <trigger xmi:id="_W_JRoH6NEd-VRIfXnUISTA" name="TriggerDo1" event="__uX50H6MEd-VRIfXnUISTA"/>
+          </transition>
+          <transition xmi:id="_z93qIGGWEd-wueUf9g8DcA" name="StopTrans1" source="_kvQK4GGWEd-wueUf9g8DcA" target="_QIlwgIp1Ed-LWfEk4LrGCw">
+            <trigger xmi:id="__HGpAH6NEd-VRIfXnUISTA" name="TriggerStop1" event="_TmFEEH6NEd-VRIfXnUISTA"/>
+          </transition>
+          <transition xmi:id="_7iIFxGGWEd-wueUf9g8DcA" name="StopTrans2" source="_rqv9YGGWEd-wueUf9g8DcA" target="_QIlwgIp1Ed-LWfEk4LrGCw">
+            <trigger xmi:id="_PAAbYH6OEd-VRIfXnUISTA" name="TriggerStop2" event="_TmFEEH6NEd-VRIfXnUISTA"/>
+          </transition>
+          <transition xmi:id="__XJ2kGGWEd-wueUf9g8DcA" name="DoTrans2" source="_rqv9YGGWEd-wueUf9g8DcA" target="_rqv9YGGWEd-wueUf9g8DcA">
+            <trigger xmi:id="_SX4WIH6OEd-VRIfXnUISTA" name="TriggerDo2" event="__uX50H6MEd-VRIfXnUISTA"/>
+          </transition>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="__uX50H6MEd-VRIfXnUISTA" name="Do" signal="_iF0gkH6MEd-VRIfXnUISTA"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_iF0gkH6MEd-VRIfXnUISTA" name="sigDo1"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_TmFEEH6NEd-VRIfXnUISTA" name="Stop" signal="_zI61MH6MEd-VRIfXnUISTA"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_zI61MH6MEd-VRIfXnUISTA" name="sigStop1"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_mDL4kH6NEd-VRIfXnUISTA" name="Invoice" signal="_gil90H6NEd-VRIfXnUISTA"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_gil90H6NEd-VRIfXnUISTA" name="SigInvoice"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_YDVI8IDyEd-HL_3tQGiR0Q" name="Order">
+      <ownedAttribute xmi:id="_ew7CUIDyEd-HL_3tQGiR0Q" name="quantity">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_6ZJZkIioEd-VKI3JTnnWpw" name="date">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_Ynj48IipEd-VKI3JTnnWpw" name="status" type="_U6mY4IpzEd-LWfEk4LrGCw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_FJoWEIioEd-VKI3JTnnWpw" name="Stock">
+      <ownedAttribute xmi:id="_VMqU0IioEd-VKI3JTnnWpw" name="pr" type="_KIM28IiqEd-VKI3JTnnWpw"/>
+      <ownedAttribute xmi:id="_UZgusIiqEd-VKI3JTnnWpw" name="qu">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_KIM28IiqEd-VKI3JTnnWpw" name="Product"/>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_U6mY4IpzEd-LWfEk4LrGCw" name="orderStatusEnum">
+      <ownedLiteral xmi:id="_g_QoIIp0Ed-LWfEk4LrGCw" name="pending"/>
+      <ownedLiteral xmi:id="_iSGwEIp0Ed-LWfEk4LrGCw" name="invoiced"/>
+      <ownedLiteral xmi:id="_kq2JEIp0Ed-LWfEk4LrGCw" name="cancelled"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

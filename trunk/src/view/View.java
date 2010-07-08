@@ -62,10 +62,6 @@ public class View extends ViewPart {
 	private ClickableLabel redo = new ClickableLabel(">");
 	private ClickableLabel reset = new ClickableLabel("<<");
 
-//	private Menu menuBar, fileMenu, editMenu, helpMenu;
-//	private MenuItem fileMenuHeader, editMenuHeader, helpMenuHeader;
-//	private MenuItem fileExitItem, fileNewItem, helpGetHelpItem, undoItem, redoItem;
-
 	/** Default constructor called by plugin runtime. Do not call this if standalone.
 	 * @see View(plugin)
 	 */
@@ -73,16 +69,27 @@ public class View extends ViewPart {
 	//	this(true);
 	//}
 
+	public Controller controller;
 	/** Construct View
 	 * @param plugin Is the system running as a plugin
 	 */
 	public View(boolean plugin, Shell parent) {
 		isPlugin = plugin;
 		contentDrawer = new ObjectDiagDrawer(this);
-		Controller controller = new Controller(this, plugin);
+		controller = new Controller(this, plugin);
 		final Shell sh = parent.getShell();
 		final Display d = parent.getDisplay();
 		controller.addMenuBar(sh, d);
+	}
+	
+	/**
+	 * Open file chooser automatically, as soon as Graf starts.
+	 */
+	public void openFirst() {
+		String instancepath = openFileChooser();
+		if (instancepath == null) 
+			return;
+		controller.animate(instancepath);		
 	}
 
 	/** Set the model for use by this view */
@@ -121,7 +128,6 @@ public class View extends ViewPart {
 	//	public void addFileNewListener(SelectionListener sl) {
 	//		fileNewItem.addSelectionListener(sl);
 	//	}
-	
 	//	public void addExitListener(SelectionListener sl) {
 	//		fileExitItem.addSelectionListener(sl);
 	//	}
@@ -135,6 +141,8 @@ public class View extends ViewPart {
 	/** Open a file chooser and return path to chosen file, or null if none chosen */
 	public String openFileChooser() {
 		FileDialog filedialog = new FileDialog(parent.getShell());
+		filedialog.setText("Choose a uml model:");
+		filedialog.setFilterPath("Models");
 		filedialog.setFilterExtensions(new String[]{"*.modeltest"});
 		return filedialog.open();
 	}
