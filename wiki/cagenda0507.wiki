@@ -1,6 +1,6 @@
 #summary agenda
 == Client Meeting ==
-*Date:* 4/7/10
+*Date:* 12/7/10
 <br>*Time:* 4pm
 <br>*Location:* Raj's office
 <br>*Duration:* 1 hour
