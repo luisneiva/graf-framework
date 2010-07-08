@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="RacerModel">
+  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="RacerPackage">
+    <packagedElement xmi:type="uml:Class" xmi:id="_giI6kINeEd-6vanutyaNVQ" name="Racer" classifierBehavior="_iJ7XwINeEd-6vanutyaNVQ">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_iJ7XwINeEd-6vanutyaNVQ" name="RacerStateMachine">
+        <region xmi:id="_iJ7XwYNeEd-6vanutyaNVQ" name="RacerSMRegion">
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_icu_AINeEd-6vanutyaNVQ" name="WaitStart"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jnCO8INeEd-6vanutyaNVQ" name="Run"/>
+          <subvertex xmi:type="uml:State" xmi:id="_kwxeMINeEd-6vanutyaNVQ" name="Stop"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_ltWbMINeEd-6vanutyaNVQ" name="Podium"/>
+          <transition xmi:id="_pK0AkINeEd-6vanutyaNVQ" name="fire" source="_icu_AINeEd-6vanutyaNVQ" target="_jnCO8INeEd-6vanutyaNVQ">
+            <trigger xmi:id="_Kd5REIdgEd-cgLrQlOV-6Q" name="triggerFire" event="_y_6jsIdfEd-cgLrQlOV-6Q"/>
+          </transition>
+          <transition xmi:id="_qQ9wUINeEd-6vanutyaNVQ" name="end" source="_jnCO8INeEd-6vanutyaNVQ" target="_kwxeMINeEd-6vanutyaNVQ">
+            <trigger xmi:id="_VjLjcIdgEd-cgLrQlOV-6Q" name="triggerEnd" event="_PiArMIdgEd-cgLrQlOV-6Q"/>
+          </transition>
+          <transition xmi:id="_qt15kINeEd-6vanutyaNVQ" name="winner" source="_kwxeMINeEd-6vanutyaNVQ" target="_ltWbMINeEd-6vanutyaNVQ">
+            <trigger xmi:id="_pAaYMIdgEd-cgLrQlOV-6Q" name="triggerWinner" event="_ks4GcIdgEd-cgLrQlOV-6Q"/>
+          </transition>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_iUpgQIdfEd-cgLrQlOV-6Q" name="sigFire"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_y_6jsIdfEd-cgLrQlOV-6Q" name="Fire" signal="_iUpgQIdfEd-cgLrQlOV-6Q"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_6qN88IdfEd-cgLrQlOV-6Q" name="sigEnd"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_PiArMIdgEd-cgLrQlOV-6Q" name="End" signal="_6qN88IdfEd-cgLrQlOV-6Q"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_iTnJAIdgEd-cgLrQlOV-6Q" name="sigWinner"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_ks4GcIdgEd-cgLrQlOV-6Q" name="Winner" signal="_iTnJAIdgEd-cgLrQlOV-6Q"/>
+  </packagedElement>
+</uml:Model>

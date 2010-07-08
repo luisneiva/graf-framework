@@ -176,7 +176,7 @@ public class Controller {
 	/**
 	 * Begin animation
 	 */
-	private void animate(String instancepath) {
+	public void animate(String instancepath) {
 		//take the first non-empty line of the instance file as the model path
 		String modelpath = "";
 		try {
@@ -386,6 +386,7 @@ public class Controller {
 		//run it
 		View view = new View(false, shell);
 		view.createPartControl(shell);
+		view.openFirst();
 
 		shell.open();
 		while (!shell.isDisposed())
@@ -393,10 +394,4 @@ public class Controller {
 				d.sleep();
 	}
 
-	public void openNew() {
-		String instancepath = view.openFileChooser();
-		if (instancepath == null) 
-			return;
-		animate(instancepath);		
-	}
 }

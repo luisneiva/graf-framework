@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="idModel" name="Elevator2Model">
+  <packagedElement xmi:type="uml:Package" xmi:id="idPackage" name="Elevator2Package">
+    <packagedElement xmi:type="uml:Class" xmi:id="_q8mXYH61Ed-TKunu4J1dAA" name="Elevator2" classifierBehavior="idStateMachine">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="idStateMachine" name="Elevator2StateMachine">
+        <region xmi:id="idRegion" name="Elevator2Region">
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_Z46ggGeWEd-HKL1SIsqvhA" name="State9"/>
+          <subvertex xmi:type="uml:State" xmi:id="_abFZcGeWEd-HKL1SIsqvhA" name="State10">
+            <doActivity xmi:type="uml:Activity" xmi:id="_YekpoIKWEd--sOo1fTRLBg" name="Activity10"/>
+          </subvertex>
+          <transition xmi:id="_bvNTwGeWEd-HKL1SIsqvhA" name="initialTrans" source="_Z46ggGeWEd-HKL1SIsqvhA" target="_abFZcGeWEd-HKL1SIsqvhA"/>
+          <transition xmi:id="_crLMwGeWEd-HKL1SIsqvhA" name="requestTrans" source="_abFZcGeWEd-HKL1SIsqvhA" target="_abFZcGeWEd-HKL1SIsqvhA">
+            <trigger xmi:id="_eMaysIKVEd--sOo1fTRLBg" name="RriggerRequest" event="_OeBnMIKVEd--sOo1fTRLBg"/>
+          </transition>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_KKA0UIKVEd--sOo1fTRLBg" name="sigRequest"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_OeBnMIKVEd--sOo1fTRLBg" name="Request" signal="_KKA0UIKVEd--sOo1fTRLBg"/>
+  </packagedElement>
+</uml:Model>
