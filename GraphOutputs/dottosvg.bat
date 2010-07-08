@@ -1,10 +1,1 @@
-dot -T svg -o state1.svg state1.dot
-dot -T svg -o state2.svg state2.dot
-dot -T svg -o state3.svg state3.dot
-dot -T svg -o state4.svg state4.dot
-dot -T svg -o state5.svg state5.dot
-dot -T svg -o state6.svg state6.dot
-dot -T svg -o state7.svg state7.dot
-dot -T svg -o state8.svg state8.dot
-dot -T svg -o state9.svg state9.dot
-dot -T svg -o state10.svg state10.dot
+dot -T svg -o state0.svg state0.dot

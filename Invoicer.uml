@@ -18,8 +18,7 @@
           <subvertex xmi:type="uml:State" xmi:id="_rqv9YGGWEd-wueUf9g8DcA" name="Invoicing">
             <exit xmi:type="uml:Activity" xmi:id="_sFvOsIDvEd-HL_3tQGiR0Q" name="InvoicingActivity"/>
           </subvertex>
-          <subvertex xmi:type="uml:Pseudostate" xmi:id="_3ehGYGGWEd-wueUf9g8DcA" name="Pseudo Teminate" kind="terminate"/>
-          <subvertex xmi:type="uml:Pseudostate" xmi:id="_hwjJkGJQEd-00p05I7Yl0g" name="Pseudo Exit" kind="exitPoint"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_QIlwgIp1Ed-LWfEk4LrGCw" name="InvoicerFinalState"/>
           <transition xmi:id="_pBJd4GGWEd-wueUf9g8DcA" name="initialTrans" source="_nAAsk2GWEd-wueUf9g8DcA" target="_kvQK4GGWEd-wueUf9g8DcA"/>
           <transition xmi:id="_uP4zoGGWEd-wueUf9g8DcA" name="InvoiceTrans" source="_kvQK4GGWEd-wueUf9g8DcA" target="_rqv9YGGWEd-wueUf9g8DcA">
             <trigger xmi:id="_-8EIkX6LEd-VRIfXnUISTA" name="TriggerInvoice" event="_mDL4kH6NEd-VRIfXnUISTA"/>
@@ -27,20 +26,14 @@
           <transition xmi:id="_wls0dGGWEd-wueUf9g8DcA" name="DoTrans1" source="_rqv9YGGWEd-wueUf9g8DcA" target="_kvQK4GGWEd-wueUf9g8DcA">
             <trigger xmi:id="_W_JRoH6NEd-VRIfXnUISTA" name="TriggerDo1" event="__uX50H6MEd-VRIfXnUISTA"/>
           </transition>
-          <transition xmi:id="_z93qIGGWEd-wueUf9g8DcA" name="StopTrans1" source="_kvQK4GGWEd-wueUf9g8DcA" target="_3ehGYGGWEd-wueUf9g8DcA">
+          <transition xmi:id="_z93qIGGWEd-wueUf9g8DcA" name="StopTrans1" source="_kvQK4GGWEd-wueUf9g8DcA" target="_QIlwgIp1Ed-LWfEk4LrGCw">
             <trigger xmi:id="__HGpAH6NEd-VRIfXnUISTA" name="TriggerStop1" event="_TmFEEH6NEd-VRIfXnUISTA"/>
           </transition>
-          <transition xmi:id="_7iIFxGGWEd-wueUf9g8DcA" name="StopTrans2" source="_rqv9YGGWEd-wueUf9g8DcA" target="_3ehGYGGWEd-wueUf9g8DcA">
+          <transition xmi:id="_7iIFxGGWEd-wueUf9g8DcA" name="StopTrans2" source="_rqv9YGGWEd-wueUf9g8DcA" target="_QIlwgIp1Ed-LWfEk4LrGCw">
             <trigger xmi:id="_PAAbYH6OEd-VRIfXnUISTA" name="TriggerStop2" event="_TmFEEH6NEd-VRIfXnUISTA"/>
           </transition>
           <transition xmi:id="__XJ2kGGWEd-wueUf9g8DcA" name="DoTrans2" source="_rqv9YGGWEd-wueUf9g8DcA" target="_rqv9YGGWEd-wueUf9g8DcA">
             <trigger xmi:id="_SX4WIH6OEd-VRIfXnUISTA" name="TriggerDo2" event="__uX50H6MEd-VRIfXnUISTA"/>
-          </transition>
-          <transition xmi:id="_nVwelGJQEd-00p05I7Yl0g" name="StopTrans3" source="_kvQK4GGWEd-wueUf9g8DcA" target="_hwjJkGJQEd-00p05I7Yl0g">
-            <trigger xmi:id="_V6KKEH6OEd-VRIfXnUISTA" name="TriggerStop3" event="_TmFEEH6NEd-VRIfXnUISTA"/>
-          </transition>
-          <transition xmi:id="_tW7W0GJQEd-00p05I7Yl0g" name="StopTrans4" source="_rqv9YGGWEd-wueUf9g8DcA" target="_hwjJkGJQEd-00p05I7Yl0g">
-            <trigger xmi:id="_Y7a7oH6OEd-VRIfXnUISTA" name="TriggerStop4" event="_TmFEEH6NEd-VRIfXnUISTA"/>
           </transition>
         </region>
       </ownedBehavior>
