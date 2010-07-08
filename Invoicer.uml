@@ -6,6 +6,10 @@
     </elementImport>
     <packagedElement xmi:type="uml:Class" xmi:id="_QDmQoGGVEd-wueUf9g8DcA" name="Invoicer" classifierBehavior="_UEZ-MGGWEd-wueUf9g8DcA">
       <ownedAttribute xmi:id="_jmUV4IDwEd-HL_3tQGiR0Q" name="o" type="_YDVI8IDyEd-HL_3tQGiR0Q"/>
+      <ownedAttribute xmi:id="_5ddHQIpyEd-LWfEk4LrGCw" name="ords" type="_YDVI8IDyEd-HL_3tQGiR0Q">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9zXXkIpyEd-LWfEk4LrGCw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__ZJCkIpyEd-LWfEk4LrGCw"/>
+      </ownedAttribute>
       <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_UEZ-MGGWEd-wueUf9g8DcA" name="InvoicerStateMachine">
         <region xmi:id="_UEZ-MWGWEd-wueUf9g8DcA" name="InvoicerRegion">
           <subvertex xmi:type="uml:State" xmi:id="_cxHPoGGWEd-wueUf9g8DcA" name="State1"/>
@@ -54,9 +58,7 @@
       <ownedAttribute xmi:id="_6ZJZkIioEd-VKI3JTnnWpw" name="date">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDate"/>
       </ownedAttribute>
-      <ownedAttribute xmi:id="_Ynj48IipEd-VKI3JTnnWpw" name="status">
-        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Enumeration"/>
-      </ownedAttribute>
+      <ownedAttribute xmi:id="_Ynj48IipEd-VKI3JTnnWpw" name="status" type="_U6mY4IpzEd-LWfEk4LrGCw"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_FJoWEIioEd-VKI3JTnnWpw" name="Stock">
       <ownedAttribute xmi:id="_VMqU0IioEd-VKI3JTnnWpw" name="pr" type="_KIM28IiqEd-VKI3JTnnWpw"/>
@@ -65,5 +67,10 @@
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_KIM28IiqEd-VKI3JTnnWpw" name="Product"/>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_U6mY4IpzEd-LWfEk4LrGCw" name="orderStatusEnum">
+      <ownedLiteral xmi:id="_g_QoIIp0Ed-LWfEk4LrGCw" name="pending"/>
+      <ownedLiteral xmi:id="_iSGwEIp0Ed-LWfEk4LrGCw" name="invoiced"/>
+      <ownedLiteral xmi:id="_kq2JEIp0Ed-LWfEk4LrGCw" name="cancelled"/>
+    </packagedElement>
   </packagedElement>
 </uml:Model>
