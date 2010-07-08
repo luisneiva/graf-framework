@@ -12,12 +12,14 @@
               </node>
             </entry>
           </subvertex>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_gpLtoIp4Ed-LWfEk4LrGCw" name="CInitial"/>
           <transition xmi:id="_SCorcINbEd-yNZ353UYnYg" name="CTrans" source="_RnZFcGYFEd-8QvdEjO-jiQ" target="_24z3EINdEd-yNZ353UYnYg">
             <trigger xmi:id="_cWncsINbEd-yNZ353UYnYg" name="CTrigger" event="_Xkr-wINbEd-yNZ353UYnYg"/>
           </transition>
           <transition xmi:id="_gyc9gIj7Ed-odLBDQ1rMhQ" name="CTrans2" source="_24z3EINdEd-yNZ353UYnYg" target="_RnZFcGYFEd-8QvdEjO-jiQ">
             <trigger xmi:id="_inInMIj7Ed-odLBDQ1rMhQ" name="CTrigger2" event="_bxV0EIj7Ed-odLBDQ1rMhQ"/>
           </transition>
+          <transition xmi:id="_ioItoIp4Ed-LWfEk4LrGCw" name="CInitialTrans" source="_gpLtoIp4Ed-LWfEk4LrGCw" target="_RnZFcGYFEd-8QvdEjO-jiQ"/>
         </region>
       </ownedBehavior>
     </packagedElement>
@@ -32,12 +34,14 @@
               </node>
             </entry>
           </subvertex>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_YPjJMIp4Ed-LWfEk4LrGCw" name="BInitial"/>
           <transition xmi:id="_uOY_kH92Ed-KFqvOJDRJYg" name="Btrans" source="_TxAdUGYFEd-8QvdEjO-jiQ" target="_FpbJ0H97Ed-KFqvOJDRJYg">
             <trigger xmi:id="_192loH92Ed-KFqvOJDRJYg" name="BTrigger" event="_odIyoH92Ed-KFqvOJDRJYg"/>
           </transition>
           <transition xmi:id="_uEiUEIj6Ed-odLBDQ1rMhQ" name="BTrans2" source="_FpbJ0H97Ed-KFqvOJDRJYg" target="_TxAdUGYFEd-8QvdEjO-jiQ">
             <trigger xmi:id="_wfD1wIj6Ed-odLBDQ1rMhQ" name="BTrigger2" event="_P8gUEIj7Ed-odLBDQ1rMhQ"/>
           </transition>
+          <transition xmi:id="_bjls0Ip4Ed-LWfEk4LrGCw" name="BInitialTrans" source="_YPjJMIp4Ed-LWfEk4LrGCw" target="_TxAdUGYFEd-8QvdEjO-jiQ"/>
         </region>
       </ownedBehavior>
     </packagedElement>
