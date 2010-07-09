@@ -12,7 +12,7 @@
 *Action:* Abandoned
   * Like GRAF but without the graph transformation stuff - it's not clear how it decides what system state to go to next.
   * See http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.94.4625&rep=rep1&type=pdf or just google UMLAnT
-  * Download links are closed (checked in May 2010)
+  * Download links are closed (checked in May and July 2010)
 
 == Bridgepoint ==
 *Action:* Unable to access full version
@@ -20,7 +20,7 @@
   * It's not clear how it decides what system state to go to next (there are probably inconsistencies between UMLAnT and Bridgepoint).
   * Commercial software that people actually use.
   * See http://www.mentor.com/products/sm/model_development/bridgepoint_uml_tutorials
-  * Free version does not support state machines (checked in May and July 2010)
+  * Free version does not support state machines (checked in May 2010)
   * http://www.mentor.com/products/sm/download/bridgepoint-eval
 
 == UGT ==
@@ -46,6 +46,8 @@
   * !PathMate is made by Pathfinder and uses IBM rational rose and eclipse
   * http://www.pathfindermda.com/resources/whitepapers.php
   * Can request trial at http://www.pathfindermda.com/products/pathmate_form.php
+  * Update:
+    * Emailed away to request a trial, response still pending (since 2/7/10)
 
 == Kennedy Carter ==
 *Action:* Contacted Kennedy Carter, waiting for response
