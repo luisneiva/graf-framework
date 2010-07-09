@@ -1,8 +1,12 @@
 = Comparison of other model animators =
 == Unimod ==
 *Action:* Further investigation could be useful 
-  * Eclipse plugin to make state machines and class diagrams
-  * Download doesn't compile
+  * Attempts to close the gap between modelling and development by merging them into one step
+  * Eclipse plugin that focuses on "designing and implementing actions behaviour"
+  * Installed and attempted to input basic racer model by following online tutorial:
+    * http://unimod.sourceforge.net/viewlet/animated-demo-eng.html
+  * No other guides are available making Unimod hard to use
+  * Provides text based trace through the state diagram created when modelling (text based version of what GRAF is doing)
   * http://unimod.sourceforge.net/
 == UMLAnT ==
 *Action:* Abandoned
