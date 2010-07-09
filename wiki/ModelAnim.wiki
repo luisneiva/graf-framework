@@ -3,6 +3,7 @@
 *Action:* Further investigation could be useful 
   * Attempts to close the gap between modelling and development by merging them into one step
   * Eclipse plugin that focuses on "designing and implementing actions behaviour"
+  * No physical drawing of Class Diagram is performed
   * Installed and attempted to input basic racer model by following online tutorial:
     * http://unimod.sourceforge.net/viewlet/animated-demo-eng.html
     * One feature (the drop down box to select class implementation of controlled object) doesn't work
