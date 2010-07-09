@@ -20,7 +20,7 @@
   * It's not clear how it decides what system state to go to next (there are probably inconsistencies between UMLAnT and Bridgepoint).
   * Commercial software that people actually use.
   * See http://www.mentor.com/products/sm/model_development/bridgepoint_uml_tutorials
-  * Free version does not support state machines (checked in May 2010)
+  * Free version does not support state machines (checked in May and July 2010)
   * http://www.mentor.com/products/sm/download/bridgepoint-eval
 
 == UGT ==
