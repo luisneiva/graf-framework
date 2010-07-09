@@ -6,12 +6,17 @@
 	
 	<action name="AcceptEventAction">
 		<exclusive-dependencies>
-			<rule>acceptEventAction-AndIgnore</rule>
-			<action>AcceptEventAction-WithActivity</action>
+			<rule>acceptEventAction-AndIgnore</rule><action>AcceptEventAction-WithActivity-HasBehavior</action>
+			<action>AcceptEventAction-WithActivity-Main</action>
 			<rule>acceptEventAction-WithoutActivity</rule>
+			
 		</exclusive-dependencies>
 	</action>
-	<action name="AcceptEventAction-WithActivity">
+	<action name="AcceptEventAction-WithActivity-HasBehavior">
+		<rule>acceptEventAction-WithActivity-HasBehavior</rule>
+		<looping-dependency>
+			<rule>acceptEventAction-WithActivity-ExecutableEdges</rule>
+		</looping-dependency></action><action name="AcceptEventAction-WithActivity-Main">
 		<rule>acceptEventAction-WithActivity-Main</rule>
 		<looping-dependency>
 			<rule>acceptEventAction-WithActivity-ExecutableEdges</rule>
@@ -40,4 +45,5 @@
 		<exclusive-dependencies>
 			<rule>createObjectAction-SameType</rule></exclusive-dependencies>
 	</action>
+	
 </GTSRules>
