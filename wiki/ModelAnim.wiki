@@ -5,7 +5,8 @@
   * Eclipse plugin that focuses on "designing and implementing actions behaviour"
   * Installed and attempted to input basic racer model by following online tutorial:
     * http://unimod.sourceforge.net/viewlet/animated-demo-eng.html
-  * No other guides are available making Unimod hard to use
+    * One feature (the drop down box to select class implementation of controlled object) doesn't work
+  * No other guides are available making Unimod hard to use (animated tutorial only demonstrates, it does not explain the theory behind how it works making understanding what is going on difficult)
   * Provides text based trace through the state diagram created when modelling (text based version of what GRAF is doing)
   * http://unimod.sourceforge.net/
 == UMLAnT ==
