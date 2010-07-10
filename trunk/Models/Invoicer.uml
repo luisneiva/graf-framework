@@ -33,13 +33,15 @@
             <trigger xmi:id="_PAAbYH6OEd-VRIfXnUISTA" name="TriggerStop2" event="_TmFEEH6NEd-VRIfXnUISTA"/>
           </transition>
           <transition xmi:id="__XJ2kGGWEd-wueUf9g8DcA" name="DoTrans2" source="_rqv9YGGWEd-wueUf9g8DcA" target="_rqv9YGGWEd-wueUf9g8DcA">
-            <trigger xmi:id="_SX4WIH6OEd-VRIfXnUISTA" name="TriggerDo2" event="__uX50H6MEd-VRIfXnUISTA"/>
+            <trigger xmi:id="_SX4WIH6OEd-VRIfXnUISTA" name="TriggerDo2" event="_WeOUAIvBEd-K-dAEXfMJwA"/>
           </transition>
         </region>
       </ownedBehavior>
     </packagedElement>
     <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="__uX50H6MEd-VRIfXnUISTA" name="Do" signal="_iF0gkH6MEd-VRIfXnUISTA"/>
     <packagedElement xmi:type="uml:Signal" xmi:id="_iF0gkH6MEd-VRIfXnUISTA" name="sigDo1"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_WeOUAIvBEd-K-dAEXfMJwA" name="Do(temp)" signal="_TogrIIvBEd-K-dAEXfMJwA"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_TogrIIvBEd-K-dAEXfMJwA" name="sigTempDo"/>
     <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_TmFEEH6NEd-VRIfXnUISTA" name="Stop" signal="_zI61MH6MEd-VRIfXnUISTA"/>
     <packagedElement xmi:type="uml:Signal" xmi:id="_zI61MH6MEd-VRIfXnUISTA" name="sigStop1"/>
     <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_mDL4kH6NEd-VRIfXnUISTA" name="Invoice" signal="_gil90H6NEd-VRIfXnUISTA"/>
