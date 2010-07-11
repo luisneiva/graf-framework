@@ -1,0 +1,21 @@
+#summary Overview of how and what the invoicer model does.
+
+= Invoicer Model =
+
+INVOICER MODEL
+This is what i can gather /deduce from the model:
+Once in the initial state the model is transferred to the invoicing state by the action of generating a sequence called OS which is all the instances of pending invoices. Once in the invoicing state, the do action transfers the model back to the initial state if the generated OS sequence is empty. If the sequence contains pending invoices then the do action transfers back to the invoicing state. It will continue doing this until it has looped over all the available pending invoices. At the end of each loop each request is removed from the sequence as it has now been sent and is no longer pending.  Once all the pending invoices have been sent the stop action transfers the model to the terminator state. If the sequence is empty and the machine is in the initial state and there are no more invoices to create a new sequence, then the stop action will move the machine into the terminator state.
+
+The main action this state machine performs is sending pending invoices to their appropriate mailer. It then has all the controls to handle null invoices etc. The main control loop contains Boolean, equality and assignment statements which at this point graph cannot handle so these may need to be implemented before we can get all the actions working in the animator. 
+
+From looking at the model and reviewing the list of actions available for xtUML, for  the action of moving from the initial to invoicing states the most viable action candidates that i can find would be either:
+	*AddVariableValueAction
+	*AddVariableValueAction
+
+For the loop of which im not sure how to do in action language, the actions for the body at least may be:
+	*ReadSelfAction
+	*AddVariableValueAction
+	*AddVariableValueAction
+
+Im not really sure how one would do the if statement inside the loop either. Maybe a self read of both things being checked. If this was the case, I’m still not sure how to do the equality as it seems most actions either read write or assign only one thing at a time.
+To move back to the initial state, or from the initial state to the finish state the only action that i think is needed is the ReadSelfAction
