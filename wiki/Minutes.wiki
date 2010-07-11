@@ -11,7 +11,7 @@
 || 29/6 || Mentor || No Agenda || [minutes2906 Minutes] ||
 || 5/7 || Team || [agenda0507 Agenda] || [minutes0507 Minutes] ||
 || 12/7 || Client|| [cagenda0507 Agenda] || [cminutes0507 Minutes] ||
-|| 12/7 || Mentor || [agenda1207 Agenda] || [minutes1207 Minutes] ||
+|| 12/7 || Team || [agenda1207 Agenda] || [minutes1207 Minutes] ||
 
 
 
