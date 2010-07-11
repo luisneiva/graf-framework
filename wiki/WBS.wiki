@@ -2,13 +2,20 @@
 
 = Work Breakdown Structure =
 
-The original WBS is [http://svn.anu.edu.au/SE_projects/GRAF/Admin/wbs.xls here] on SVN. It contains 2 tables, one with just the WBS and one with the WBS and time estimates. This page contains copies of each of those tables.
+The original WBS is [http://svn.anu.edu.au/SE_projects/GRAF/Admin/wbs.xls here] on SVN. It contains 2 tables, one with just the WBS and one with the WBS and time estimates for tasks not finished. This page contains copies of each of those tables.
 
 ===WBS===
 http://graf-framework.googlecode.com/files/wbs11-7-10.jpg
 
 ====WBS including time estimates====
 http://graf-framework.googlecode.com/files/wbs11-7-10times.jpg 
+
+=== Basis of estimates ===
+Estimated times are based on times logged in GPME including  times from completed tasks and data from last year and _ball-park_ guesses. 
+
+=== Conclusions ===
+From summing the individual packages, it's estimated the project will take 152 hours to complete.<br>
+If the third years put in 4*8 hours a week and the estimates are accurate, then the current tasks on the WBS will be completed by the 9th of August. 
 
 <br>
 ====The detail below is old====
