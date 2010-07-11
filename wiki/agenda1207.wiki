@@ -1,5 +1,5 @@
 #summary agenda
-== Mentor Meeting  ==
+== Team Meeting  ==
 *Date:* 12/7/10
 <br>*Time:* 5pm
 <br>*Location:* N110
@@ -8,5 +8,5 @@
 === Agenda Items ===
   * Progress Reports
   * Modifying success criteria
-  * Discussion of project review
+  * Update risk register
   * Task assignment
