@@ -2,32 +2,19 @@
 
 = Work Breakdown Structure =
 
-The original WBS file (which is easier to look at) is [http://svn.anu.edu.au/SE_projects/GRAF/Admin/wbs.xls here] on SVN. It contains 2 tables, one with just the WBS and one with the WBS and time estimates. This page contains copies of each of those tables.
+The original WBS is [http://svn.anu.edu.au/SE_projects/GRAF/Admin/wbs.xls here] on SVN. It contains 2 tables, one with just the WBS and one with the WBS and time estimates. This page contains copies of each of those tables.
 
-||*Project Management*||*Documentation*||*Research*||<wiki:comment></wiki:comment>||*UML Animators*||<wiki:comment></wiki:comment>||*Model Creation*||<wiki:comment></wiki:comment>||*Defect rework*||<wiki:comment></wiki:comment>||
-||Risk Management||Updating old documentation||Find other animators||<wiki:comment></wiki:comment>||Add models to other animators||<wiki:comment></wiki:comment>||RCA01/AR02||<wiki:comment></wiki:comment>||Multi state machine defect||<wiki:comment></wiki:comment>||
-||Estimation||Adding new documentation||<wiki:comment></wiki:comment>||>Rhapsody||<wiki:comment></wiki:comment>||>Add RW03||<wiki:comment></wiki:comment>||>Find features needed||<wiki:comment></wiki:comment>||>Diagnose||
-||Planning||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||>Kennedy Carter||<wiki:comment></wiki:comment>||>Add TE00||<wiki:comment></wiki:comment>||>Local variables||<wiki:comment></wiki:comment>||>Fix||
-||Requirements Elicitation||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||>Bridgepoint||<wiki:comment></wiki:comment>||>Add CF05||<wiki:comment></wiki:comment>||>If statements||(Contingent:) Other defects||<wiki:comment></wiki:comment>||
-||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||>Pathmate||<wiki:comment></wiki:comment>||>Add RCA01/AR02||<wiki:comment></wiki:comment>||>Find GTS rules needed||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||
-||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||>Artisan||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||>Add GTS rules needed||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||
-||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||>Other animators||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||RW03||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||
-||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||Find other models||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||>Find GTS rules needed||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||
-||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||>From Clive||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||>Add GTS rules needed||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||
-||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||>From other sources||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||>Find features needed||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||
-||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||Find other UML tools||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||TE00||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||
-||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||>TextUML||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||>Find GTS rules needed||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||
-||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||>Vide||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||>Add GTS rules needed||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||
-||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||>Other tools||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||>Find features needed||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||
-||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||CF05||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||
-||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||>Find model||
-||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||>Find GTS rules needed||
-||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||>Add GTS rules needed||
-||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||<wiki:comment></wiki:comment>||>Find features needed||
+===WBS===
+http://graf-framework.googlecode.com/files/wbs11-7-10.jpg
 
 ====WBS including time estimates====
-http://graf-framework.googlecode.com/files/wbstimes29-5-10.jpg
+http://graf-framework.googlecode.com/files/wbs11-7-10times.jpg 
 
+<br>
+====The detail below is old====
+<br>
+<br>
+<br>
 == PERT Diagram ==
 http://graf-framework.googlecode.com/files/pert29-5-10.jpg
 
