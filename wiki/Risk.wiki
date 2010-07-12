@@ -34,7 +34,8 @@
 || (Success criteria 2) Can't demonstrate animator features || Low || High ||
 || (Success criteria 3) Can't attract industrial sponsor || High || Low ||
 || New version of UML supercedes features of GRAF || Low || High ||
-|| Iterative requirements || High || Low
+|| Iterative requirements || High || Low ||
+|| Clients decide models aren't contentious || Medium || High ||
 
 http://graf-framework.googlecode.com/files/Risk-Criteria.jpg <br>
 Only critical and high threat level risks will be mitigated
@@ -87,3 +88,7 @@ The team will look into other ways to demonstrate ambiguities in models. The tea
 ===== No action language builder =====
 *Action:* Reduce impact<br>
 ~~The team will make it a priority to determine whether any tool supports easily adding action language commands to a state machine. If none can be found, then we will make it part of the project to develop our own application to do so. GRAF cannot be used without a state machine with action commands and it is unreasonable to expect anyone to seriously use GRAF if they need to manually add each primitive UML action.~~ We reduced the impact of this to zero by deciding not to use an action language builder.
+
+==== Clients decide models aren't contentious ====
+*Action:* Reduce impact<br>
+Already shifted focus slightly. Now focusing on other uses for the tool
