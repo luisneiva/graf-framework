@@ -1,6 +1,6 @@
 = Comparison of other model animators =
 == Unimod ==
-*Action:* Further investigation could be useful 
+*Action:* Abandoned due to lack of accurate instructions
   * Attempts to close the gap between modelling and development by merging them into one step
   * Eclipse plugin that focuses on "designing and implementing actions behaviour"
   * Installed and attempted to input basic racer model by following online tutorial:
@@ -43,7 +43,7 @@
   * Cannot demonstrate state machines
 
 == !PathMate ==
-*Action:* Further investigation needed
+*Action:* Waiting for response from company
   * Features listed http://www.pathfindermda.com/download/PathMATE_Datasheet.pdf
   * !PathMate is made by Pathfinder and uses IBM rational rose and eclipse
   * http://www.pathfindermda.com/resources/whitepapers.php
@@ -64,7 +64,7 @@
   * http://www.artisansoftwaretools.com/downloads/evaluation/artisan-studio-uno/
 
 == [Rhapsody] ==
-*Action:* Abandoned for now, too complicated
+*Action:* Under investigation
   * [Rhapsody More detail]
   * Does what we need
   * http://www.ibm.com/developerworks/rational/products/rhapsody/
@@ -72,7 +72,7 @@
   * Can do everything GRAF can do and more http://download.boulder.ibm.com/ibmdl/pub/software/dw/demos/rhapsodyradio/animating_the_radio_model_20090623_with_audio_viewlet_swf.html
 
 == eLEMinator ==
-*Action:* Save it as a last resort
+*Action:* Doesn't work due to Java issues
   * http://lem.berlios.de/wiki/index.php/Main_Page
   * Another ANU software engineering project
   * This will have inconsistencies, but it's not as useful to show them because no one uses this
