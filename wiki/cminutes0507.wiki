@@ -1,0 +1,33 @@
+#summary Minutes
+
+= Client meeting =
+Date: 12/7/10
+<br>Location: Raj's office
+<br>Present: Oscar, Stephen, Cameron, Hamish and Greg
+<br>Time: 4pm
+<br>Duration: 1 hour
+
+== The Review ==
+  * Greg will look into setting up Skype for the review
+  * It will be 7am in Dredsen so Raj won't be using Skype to participate in the review
+
+== RW05 - elevator model ==
+  * We will combine the 2 models we have now into one as it should be
+  * States can have regions and regions can have states, which is how the multiple state machine works
+  * Rules should be abstract enough on work on states in regions in states in regions etc.
+  * We may have to cut corners, eg. limit embedded states to 2, to do this this year, but we must justify the decision
+
+== TE00 ==
+  * We will no longer use state machines to imitate the method behaviour; we will add actual methods to GRAF
+  * We need to look in more detail into how objects calling each others' methods work.
+
+== RCA01/AR02 - invoicer model ==
+  * We will modify GRAF to use Mealy notation like in this model.
+  * We will look for if statement details in the UML definition. So will Greg.
+
+== Faithfulness to the UML defintion ==
+  * GRAF should be faithful to the UML definition.
+  * But there's multiple ways to implement the details of GRAF where the definition doesn't give enough information.
+  * As long as "Whatever way we do it has the same result"
+  * The group shall create a document listing all the times where we have had to deviate from the UML definition due to lack of information.
+    * Eg. the use of executable edges to indicate which actions aren't done
