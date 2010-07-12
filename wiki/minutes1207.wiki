@@ -3,14 +3,14 @@
 =Team Meeting=
 
 Date: 12/7/10
-Location: N111
-Present: Oscar, Stephen, Cameron and Hamish 
-Time: 5pm
-Duration: 1 hour
+<br>Location: N111
+<br>Present: Oscar, Stephen, Cameron and Hamish 
+<br>Time: 5pm
+<br>Duration: 1 hour
 
-==Weasel Words==
-  * Success criteria too optimistic, needs changing
-  * Changes:
-
-==Risk Logs==
-  * Updating risk logs
+  * Cameron worked on Unimod. We are giving up on Unimod because it doesn't work as the video said, and there are no other instructions.
+  * Hamish will install Rhapsody on windows and try to get it to run a simple model.
+  * Modified success criteria - added to paragraph 10 "if time permits".
+  * Updated risk log.
+  * 2pm monday looks like a good time for weekly meetings in the future.
+  * We will have a mentor meeting on 1pm sunday.
