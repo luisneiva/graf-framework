@@ -1,1 +1,16 @@
 #summary Minutes for team meeting on the 12th of July, 2010
+
+=Team Meeting=
+
+Date: 12/7/10
+Location: N111
+Present: Oscar, Stephen, Cameron and Hamish 
+Time: 5pm
+Duration: 1 hour
+
+==Weasel Words==
+  * Success criteria too optimistic, needs changing
+  * Changes:
+
+==Risk Logs==
+  * Updating risk logs
