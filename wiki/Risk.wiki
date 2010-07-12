@@ -1,6 +1,6 @@
 = Risk log =
 || Risk || Likelihood|| Impact ||
-|| ~~No action language builder~~ || ~~High~~ || ~~Low~~ ||
+|| ~~No action language builder~~ || ~~High~~ || Low ||
 || Work to make GRAF useable is unattainable in 2010 || High || Low ||
 || Project doesn't meet client's needs || Medium || High ||
 || Latent defects discovered || Medium || Medium ||
@@ -8,11 +8,11 @@
 || A new version of Eclipse isn't backwards compatible || Medium || Low||
 || GRAF runs too slowly || Low || Medium ||
 || Adding new rules requires code change || High || Low ||
-|| ~~Can't find anyone locally who would use GRAF~~ || ~~Medium~~ || ~~Low~~ ||
+|| ~~Can't find anyone locally who would use GRAF~~ || ~~Medium~~ || Low ||
 || Competing product appears || Very low || Very low ||
 || Other animators aren't ambiguous || Low || High ||
 || 2 animators give the same results || High || Medium ||
-|| ~~No tool can be found to instantiate models for GRAF~~ || ~~High~~ || ~~Low~~ ||
+|| ~~No tool can be found to instantiate models for GRAF~~ || ~~High~~ || Low ||
 || Greg or Raj can no longer be involved as much || Medium || High ||
 || A team member leaves temporarily or permanently || High|| Medium ||
 || AGG disappears || Low || Low ||
@@ -20,31 +20,24 @@
 || Google code disappears || Low || High ||
 || Alliance disappears || Low || Medium ||
 || Email history lost in part or entirely || Medium || Low ||
-|| New requirements || Medium || Medium ||
 || Legal/license problems appear || Low || High ||
 || ~~There are no free UML animators~~ || ~~Medium~~ || High ||
-|| ~~Free UML animators don't work~~ || ~~High~~ || ~~High~~ ||
+|| ~~Free UML animators don't work~~ || ~~High~~ || High ||
 || ~~Contacted stakeholders have no use for GRAF, have no ambiguous models~~ || ~~High~~|| High ||
 || Space on Google code used up || Low || Medium ||
 || The models from Greg can't be entered into GRAF || Low || Low ||
-|| ~~Models' action language statements can't be manually added to a uml file~~ || ~~Low~~ || ~~High~~ ||
-|| ~~The new UML action language syntax, when it comes out, makes our work out of date~~ || ~~Medium~~ || ~~Medium~~ ||
+|| ~~Models' action language statements can't be manually added to a uml file~~ || ~~Low~~ || High ||
 || The clients question the worth of their own project || Low || Medium ||
 || (Success criteria 1) Can't give definite descriptions of given models' behaviour || Low || High ||
-|| (Success criteria 2) Can't demonstrate animator features || Low || High ||
 || (Success criteria 3) Can't attract industrial sponsor || High || Low ||
 || New version of UML supercedes features of GRAF || Low || High ||
-|| Iterative requirements || High || Low ||
 || Clients decide models aren't contentious || Medium || High ||
+|| Constantly changing requirements || High || Low ||
 
 http://graf-framework.googlecode.com/files/Risk-Criteria.jpg <br>
 Only critical and high threat level risks will be mitigated
 
 === Mitigation of critical and high risks ===
-===== The models from Greg can't be entered into GRAF =====
-*Action:* Reduce likelihood, reduce impact <br>
-The team will look for other models that serve the same purpose but are more compatible with GRAF. The team will make it a priority to find out what is needed to add the 4 models so it will become clear how feasible it is.
-
 ===== 2 animators give the same results ====
 *Action:* Reduce impact<br>
 The team will try to get more than two animators working. We will also look for other ways to demonstrate the problems with a lack of formality.
@@ -52,10 +45,6 @@ The team will try to get more than two animators working. We will also look for 
 ===== Project doesn't meet client's needs =====
 *Action:* Reduce impact and likelihood<br>
 Obviously avoiding this risk is equivalent to making the project as successful as possible. Beyond, trying to make the project a success, the group will also focus on creating documentation for whoever continues the project next year. That way, even if the project does not meet the client's needs, there will be a good chance of it being successful next year.
-
-===== Can't convince anyone of the usefulness of GRAF =====
-*Action:* Reduce likelihood<br>
-Though the group can always present GRAF in the best light possible, this may not convince everyone that the concept behind GRAF is worthwhile. Furthermore, though this risk will affect the team, it is largely up to the clients to address this.
 
 ===== Greg or Raj can no longer be involved as much =====
 *Action:* Reduce impact<br>
@@ -69,7 +58,11 @@ All the team can do is make sure that if this does happen, no information or ski
 *Action:* Reduce impact<br>
 The lack of free UML animators will prove a point in itself. The team will investigate alternatives with the client.
 
-=== Mitigation of risks that used to be critical or high risk ===
+==== Clients decide models aren't contentious ====
+*Action:* Reduce impact<br>
+The team is focusing on other uses for GRAF.
+
+== Mitigation of risks that used to be critical or high risk ==
 
 ===== Contacted stakeholders have no use for GRAF, have no ambiguous models =====
 *Action:* Reduce probability/transfer risk<br>
@@ -89,6 +82,7 @@ The team will look into other ways to demonstrate ambiguities in models. The tea
 *Action:* Reduce impact<br>
 ~~The team will make it a priority to determine whether any tool supports easily adding action language commands to a state machine. If none can be found, then we will make it part of the project to develop our own application to do so. GRAF cannot be used without a state machine with action commands and it is unreasonable to expect anyone to seriously use GRAF if they need to manually add each primitive UML action.~~ We reduced the impact of this to zero by deciding not to use an action language builder.
 
-==== Clients decide models aren't contentious ====
-*Action:* Reduce impact<br>
-Already shifted focus slightly. Now focusing on other uses for the tool
+
+===== The models from Greg can't be entered into GRAF =====
+*Action:* Reduce likelihood, reduce impact <br>
+~~The team will look for other models that serve the same purpose but are more compatible with GRAF. The team will make it a priority to find out what is needed to add the 4 models so it will become clear how feasible it is.~~ The models have been entered into GRAF to some extent and it's clear that the job can be finished.
