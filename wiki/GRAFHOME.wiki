@@ -11,14 +11,11 @@ For a brief description of this year's project go [http://cs.anu.edu.au/student/
 [Minutes Minutes and agendas]<br>
 
 === Research ===
-[BugTrackingTools Bug Tracking Tools]<br>
-[SourceControl Source Control]<br>
-[TimeTracking Time Tracking]<br>
 [ModelTools Possible tools to produce models for GRAF]<br>
-[GregActionLanguage Greg's thoughts on Action Language]<br>
-[UMLBPMNDecision Decision on UML over BPMN]<br>
 [ModelAnim Other UML Animators]<br>
 [UMLTree The Eclipse UML 2 Tree]
+[UMLBPMNDecision Decision on UML over BPMN]<br>
+[GregActionLanguage Greg's thoughts on Action Language]<br>
 
 === Reference ===
 [http://graf-framework.googlecode.com/files/thesis.pdf Greg O’Keefe's thesis, The Meaning of UML Models]<br>
@@ -42,8 +39,10 @@ For a brief description of this year's project go [http://cs.anu.edu.au/student/
 <br>[Milestones Milestones]
 <br>[WBS Work Breakdown Structure]
 
-=== Project Review Documents ===
 
-=== Development Pages ===
+=== Old Stuff ===
 
+[BugTrackingTools Bug Tracking Tools]<br>
+[SourceControl Source Control]<br>
+[TimeTracking Time Tracking]<br>
 [side_column 2009 Home Page]<br>
