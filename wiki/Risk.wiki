@@ -1,6 +1,6 @@
 = Risk log =
 || Risk || Likelihood|| Impact ||
-|| No action language builder || High || Low ||
+|| ~~No action language builder~~ || ~~High~~ || ~~Low~~ ||
 || Work to make GRAF useable is unattainable in 2010 || High || Low ||
 || Project doesn't meet client's needs || Medium || High ||
 || Latent defects discovered || Medium || Medium ||
@@ -8,12 +8,11 @@
 || A new version of Eclipse isn't backwards compatible || Medium || Low||
 || GRAF runs too slowly || Low || Medium ||
 || Adding new rules requires code change || High || Low ||
-|| ~~Can't find anyone locally who would use GRAF~~ || ~~Medium~~ || Low ||
-|| Can't convince anyone of the usefulness of GRAF || Medium || High ||
+|| ~~Can't find anyone locally who would use GRAF~~ || ~~Medium~~ || ~~Low~~ ||
 || Competing product appears || Very low || Very low ||
 || Other animators aren't ambiguous || Low || High ||
 || 2 animators give the same results || High || Medium ||
-|| No tool can be found to instantiate models for GRAF || High || Low ||
+|| ~~No tool can be found to instantiate models for GRAF~~ || ~~High~~ || ~~Low~~ ||
 || Greg or Raj can no longer be involved as much || Medium || High ||
 || A team member leaves temporarily or permanently || High|| Medium ||
 || AGG disappears || Low || Low ||
@@ -24,17 +23,18 @@
 || New requirements || Medium || Medium ||
 || Legal/license problems appear || Low || High ||
 || ~~There are no free UML animators~~ || ~~Medium~~ || High ||
-|| Free UML animators don't work || High || High ||
+|| ~~Free UML animators don't work~~ || ~~High~~ || ~~High~~ ||
 || ~~Contacted stakeholders have no use for GRAF, have no ambiguous models~~ || ~~High~~|| High ||
 || Space on Google code used up || Low || Medium ||
-|| The models from Greg can't be entered into GRAF || Medium || High ||
-|| Models' action language statements can't be manually added to a uml file || Low || High ||
-|| The new UML action language syntax, when it comes out, makes our work out of date || Medium || Medium ||
+|| The models from Greg can't be entered into GRAF || Low || Low ||
+|| ~~Models' action language statements can't be manually added to a uml file~~ || ~~Low~~ || ~~High~~ ||
+|| ~~The new UML action language syntax, when it comes out, makes our work out of date~~ || ~~Medium~~ || ~~Medium~~ ||
 || The clients question the worth of their own project || Low || Medium ||
-|| New requirements || Medium || Medium ||
 || (Success criteria 1) Can't give definite descriptions of given models' behaviour || Low || High ||
 || (Success criteria 2) Can't demonstrate animator features || Low || High ||
 || (Success criteria 3) Can't attract industrial sponsor || High || Low ||
+|| New version of UML supercedes features of GRAF || Low || High ||
+|| Iterative requirements || High || Low
 
 http://graf-framework.googlecode.com/files/Risk-Criteria.jpg <br>
 Only critical and high threat level risks will be mitigated
