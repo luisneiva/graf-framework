@@ -7,8 +7,5 @@ __Oscar Wood__
 ----
 GRAF aims to have its implementation of UML extendable by adding more graph transformation rules, not adding more code. However, there are two outstanding issues that need to be addressed in the code before GRAF requires only rule changes.
 
-=== Arithmetic ===
-Operations such as addition and multiplication can’t be performed by graph transformation rules based on a before and after graph. The code in the AGGTransformer class would have to be extended to perform the equivalent java arithmetic operations.
-
 === Association centre labels ===
 Currently, the graphs of GRAF store the end labels of associations but not the centre label. Certain state machine actions involve getting associations by their centre label. To make this work, the ModelToGraph implementation and some rules would have to be changed to use a representation in graphs that features the association ends.
