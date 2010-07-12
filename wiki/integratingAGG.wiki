@@ -23,6 +23,3 @@ The accept event rule is slow because it contains sub-rules. The sub-rules have 
 === Unique names ===
 
 I have a process to give unique names but it won’t always work. First, follow an i edge from the node to be renamed. The name of the node beyond the i edge is the put into lower case then a number (starting at 1 and counting up) is added. Thus we get a name like “signaloccurence4”. It’s not impossible that the user would have already used a node with this name. For that matter, if the user uses names like Class or State this will also cause problems.
-
-=== Confused state machine instances ===
-This is another problem which I believe to be symptom of incorrect renaming. When there are 2 objects of the same class and the 2 objects both have the same state machine and they're both executing the state machine actions at the same time, actions in one state machine instance can affect the other state machine instance. I do not know the exact cause of this problem but I suspect it is renamings not being propagated. This is a serious problem which we do not have time to address.
