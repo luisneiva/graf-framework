@@ -1,5 +1,6 @@
 = Risk log =
 || Risk || Likelihood|| Impact ||
+|| The team can't find contentious models used in industry || High || High ||
 || ~~No action language builder~~ || ~~High~~ || Low ||
 || Work to make GRAF useable is unattainable in 2010 || High || Low ||
 || Project doesn't meet client's needs || Medium || High ||
@@ -38,7 +39,12 @@ http://graf-framework.googlecode.com/files/Risk-Criteria.jpg <br>
 Only critical and high threat level risks will be mitigated
 
 === Mitigation of critical and high risks ===
-===== 2 animators give the same results ====
+
+===== The team can't find contentious models used in industry =====
+*Action:* Reduce impact<br>
+This does not mean that the client's goal for the project is not met. As long as GRAF can demonstrate that models are or are not ambiguous, it fulfils its purpose. However, this is a serious risk because if it occurs then the future use of the GRAF software will be in question. The group is going to investigate using GRAF as a UML teaching tool. This is in addition to the search for ambiguity. The group will create a GRAF-UML tutorial by the end of the year.
+
+===== 2 animators give the same results =====
 *Action:* Reduce impact<br>
 The team will try to get more than two animators working. We will also look for other ways to demonstrate the problems with a lack of formality.
 
@@ -81,7 +87,6 @@ The team will look into other ways to demonstrate ambiguities in models. The tea
 ===== No action language builder =====
 *Action:* Reduce impact<br>
 ~~The team will make it a priority to determine whether any tool supports easily adding action language commands to a state machine. If none can be found, then we will make it part of the project to develop our own application to do so. GRAF cannot be used without a state machine with action commands and it is unreasonable to expect anyone to seriously use GRAF if they need to manually add each primitive UML action.~~ We reduced the impact of this to zero by deciding not to use an action language builder.
-
 
 ===== The models from Greg can't be entered into GRAF =====
 *Action:* Reduce likelihood, reduce impact <br>
