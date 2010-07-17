@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU">
+	<head>
+		<!-- u4411120 2/07/2010 -->
+		<title>RuleDoc - AcceptEventAction</title>
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<link rel="stylesheet" type="text/css" href="../styles/rules.css" media="screen" />
+		<style type="text/css" id="pageStyles">
+		</style>
+	</head>
+	<body>
+		<div id="heading">
+			<h1>
+				AcceptEventAction
+			</h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="#.html">Back</a>
+				</li>
+				<li>
+					<a href="../index.html">Up to Index</a>
+				</li>
+				<li>
+					<a href="sendSignalAction.html">Next</a>
+				</li>
+			</ul>
+		</div>
+		<div id="content">
+			<div id="middlecolumn">
+				<h2>
+					US Section 11.3.2
+				</h2>
+				<p>
+					To go to the page containing the full rule description in the US pdf document,
+					<a href="../../UML_Superstructure_2-1-2_07-11-02.pdf#page=251">
+						click here
+					</a>. Relevant sections are extracted below.
+				</p>
+				<div class="extract">
+					<h3>Description</h3>
+					<p>AcceptEventAction is an action that waits for the occurrence of an event meeting specified condition.</p>
+					<h3>Attributes</h3>
+					<p>isUnmarshall : Boolean = false <br />
+					Indicates whether there is a single output pin for the event, or multiple output pins for attributes of the event.</p>
+					<h3>Associations</h3>
+					<p>trigger : Trigger [1..*] <br />
+					The type of events accepted by the action, as specified by triggers. For triggers with signal events, a signal of the
+					specified type or any subtype of the specified signal type is accepted.</p>
+					<p>result: OutputPin [0..*] <br />
+					Pins holding the received event objects or their attributes. Event objects may be copied in transmission, so identity
+					might not be preserved. {Subsets Action::output}</p>
+					<h3>Constraints</h3>
+					<ol>
+						<li>AcceptEventActions may have no input pins.</li>
+						<li>There are no output pins if the trigger events are only ChangeEvents, or if they are only 
+						CallEvents when this action is an instance of AcceptEventAction and not an instance of a descendant of AcceptEventAction (such as AcceptCallAction).</li>
+						<li>If the trigger events are all TimeEvents, there is exactly one output pin.</li>
+						<li>If isUnmarshalled is true, there must be exactly one trigger for events of type SignalEvent. The number of result output
+						pins must be the same as the number of attributes of the signal. The type and ordering of each result output pin must be the
+						same as the corresponding attribute of the signal. The multiplicity of each result output pin must be compatible with the
+						multiplicity of the corresponding attribute.</li>		
+					</ol>
+					<h3>Semantics</h3>
+					<p>Accept event actions handle event occurrences detected by the object owning the behavior ... Event occurrences are detected 
+					independently of actions and the occurrences are stored by the object. The arrangement of detected events is not defined, but 
+					it is expected that extensions or profiles will specify such arrangements. If the accept event action is executed and the object 
+					detected an event occurrence matching one of the triggers on the action and the occurrence has not been accepted by another 
+					action or otherwise consumed by another behavior, the the accept event action completes and outputs a value describing the 
+					occurrence. If such a matching occurrence is not available, the action waits until such an occurrence becomes available, at 
+					which point the action may accept it. In a system with concurrency, several actions or other behaviors might contend for an 
+					available event occurrence. Unless otherwise specified by an extension or profile, only one action accepts a given occurrence, 
+					even if the occurrence would satisfy multiple concurrently executing actions.</p>
+					<p>If the occurrence is a signal event occurrence and isUnmarshall is false, the result value contains a signal object whose 
+					reception by the owning object caused the occurrence. If the occurrence is a signal event occurrence and isUnmarshall is
+					true, the attribute values of the signal are placed on the result output pins of the action. Signal objects may be copied in
+					transmission and storage by the owning object, so identity might not be preserved. An action whose trigger is a signal
+					event is informally called an accept signal action. If the occurrence is a time event occurrence, the result value contains
+					the time at which the occurrence transpired. Such an action is informally called a wait time action. If the occurrences are
+					all occurrences of ChangeEvent, or all CallEvent, or a combination of these, there are no output pins. See CommonBehavior for 
+					a description of Event specifications. If the triggers are a combination of SignalEvents and ChangeEvents, the result is a null 
+					value if a change event occurrence or a call event occurrence is accepted.</p>
+					<p>This action handles asynchronous messages, including asynchronous calls. It cannot be used with synchronous calls.</p>
+					<h3>Rationale</h3>
+					<p>Accept event actions are introduced to handle processing of events during the execution of a behavior.</p>
+				</div>
+				<h2>
+					Deviations/Assumptions in implementation
+				</h2>
+					<p>
+						AcceptEventAction is one of the more complex actions currently implemented in GRAF. Because there is a wide variety of situations in which this action
+						will be applied, a rule is required to handle each general case. For example, in the description 'if the accept event action is executed and the object detected of an
+						event occurrence matching on of the triggers on the action and the occurrence has not been accepted by another action or otherwise consumed ...' each
+						possibility must be accounted for. The current rules implement only those cases required by the particular models that have been implemented.
+						The Rule Sequence file defines the order in which GRAF attempts to apply the rules. 
+					</p>
+					<p>
+						The current rules do not implement the isUnmarshalled attribute for this action. Similarly, the association to a result Output pin is not implemented.
+						In the definition, these elements deal with the attributes of the received event. However, the GRAF implementation interprets the action as a series of
+						graph states rather than a defined set of nodes and arcs. Since there is no 'acceptEvent' node, that node can have no attributes or associations. Similarly, 
+						trigger nodes 'belong' to transitions defined in the UML model rather than to a discrete acceptEvent node. It is not clear how GRAF would handle events that
+						have attributes that need to be processed - possibly new rules would need to be written to handle this case.
+					</p>
+					<p>
+						Where an AcceptEventAction causes a transition into a new state, or otherwise indicates that an object must execute some behavior, 'executable' edges are 
+						used to link the object to the behavior that must be executed. These edges are not ordered. The Definition does not include executable edges.
+					</p>
+				<h2>
+					Rules that implement this action:
+				</h2>
+				<ul>
+					<li><a href="../rules/0.html">acceptEventAction-AndIgnore</a></li>
+					<li><a href="../rules/1.html">acceptEventAction-WithActivity-ExecutableEdges</a></li>
+					<li><a href="../rules/2.html">acceptEventAction-WithActivity-Main</a></li>
+					<li><a href="../rules/3.html">acceptEventAction-WithoutActivity</a></li>
+					<li><a href="../rules/11.html">acceptEventAciton-WithActivity-HasBehavior</a></li>
+					<li><a href="../rules/12.html">acceptEventAction-WithActivity-SameState</a></li>
+				</ul>
+				<p>
+					Below is the xml file which defines the order in which the rules are executed
+					when the action is called. 
+				</p>
+					<iframe src="../../GTSRulesSeq.xml">
+						Your browser does not support frames. 
+						<a href="../../GTSRulesSeq.xml" title="View the xml rule sequence file">
+							Click here
+						</a> to see the file.
+					</iframe>
+				
+			</div>
+		</div>
+	</body>
+</html>

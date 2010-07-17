@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU">
+	<head>
+		<!-- u4411120 2/07/2010 -->
+		<title>RuleDoc - ReadStructuralFeatureAction</title>
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<link rel="stylesheet" type="text/css" href="../styles/rules.css" media="screen" />
+		<style type="text/css" id="pageStyles">
+		</style>
+	</head>
+	<body>
+		<div id="heading">
+			<h1>
+				ReadStrucutralFeatureAction
+			</h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="readSelfAction.html">Back</a>
+				</li>
+				<li>
+					<a href="../index.html">Up to Index</a>
+				</li>
+				<li>
+					<a href="#.html">Next</a>
+				</li>
+			</ul>
+		</div>
+		<div id="content">
+			<div id="middlecolumn">
+				<h2>
+					US Section 11.3.37
+				</h2>
+				<p>
+					To go to the page containing the full rule description in the US pdf document,
+					<a href="../../UML_Superstructure_2-1-2_07-11-02.pdf#page=290">
+						click here
+					</a>. Relevant sections are extracted below.
+				</p>
+				<div class="extract">
+					<h3>Description</h3>
+					<p>This action reads the value of a variable in order if the variable is ordered.</p>
+					<h3>Associations</h3>
+					<p>result: OutputPin[1..1]<br />Gives the output pin on which the result is put.</p>
+					<h3>Constraints</h3>
+					<ol>
+						<li>The type and ordering of the result output pin of a read-variable action are the same
+						as the type and ordering of the variable.</li>
+						<li>The multiplicity of the variable must be compatible with the multiplicity of the output pin.</li>
+					</ol>
+					<h3>Semantics</h3>
+					<p>The values of the variable are placed on the output pin of the action. The type and ordering of the output pin are the same
+					as the specified variable. The order of the retrieved values in the output pin is the same as the ordering of the values of
+					the variable. The multiplicity of the variable must be compatible with the multiplicity of the output pin. For example, the
+					modeler can set the multiplicity of this pin to support multiple values even when the variable only allows a single value.
+					This way the action model will be unaffected by changes in the multiplicity of the variable.</p>
+					<h3>Rationale</h3>
+					<p>ReadStructuralFeatureAction is introduced to retrieve the values of a structural feature.</p>
+				</div>
+				<h2>
+					Discussion
+				</h2>
+					<p>
+						The current rules assume a single variable to be read, and therefore implement a single-multiplicity output pin.
+					</p>
+				<h2>
+					Rules that implement this action:
+				</h2>
+				<ul>
+					<li><a href="../rules/9.html">readStructuralFeatureAction-SingleInt</a></li>
+					<li><a href="../rules/10.html">readStructuralFeatureAction-TwoInts</a></li>
+				</ul>
+				<p>
+					Below is the xml file which defines the order in which the rules are executed
+					when a particular action is called. 
+				</p>
+					<iframe src="../../GTSRulesSeq.xml">
+						Your browser does not support frames. 
+						<a href="../../GTSRulesSeq.xml" title="View the xml rule sequence file">
+							Click here
+						</a> to see the file.
+					</iframe>
+				
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU">
+	<head>
+		<!-- u4411120 2/07/2010 -->
+		<title>RuleDoc - CreateObjectAction</title>
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<link rel="stylesheet" type="text/css" href="../styles/rules.css" media="screen" />
+		<style type="text/css" id="pageStyles">
+		</style>
+	</head>
+	<body>
+		<div id="heading">
+			<h1>
+				CreateObjectAction
+			</h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="addStructuralFeatureValueAction.html">Back</a>
+				</li>
+				<li>
+					<a href="../index.html">Up to Index</a>
+				</li>
+				<li>
+					<a href="readSelfAction.html">Next</a>
+				</li>
+			</ul>
+		</div>
+		<div id="content">
+			<div id="middlecolumn">
+				<h2>
+					US Section 11.3.16
+				</h2>
+				<p>
+					To go to the page containing the full rule description in the US pdf document,
+					<a href="../../UML_Superstructure_2-1-2_07-11-02.pdf#page=268">
+						click here
+					</a>. Relevant sections are extracted below.
+				</p>
+				<div class="extract">
+					<h3>Description</h3>
+					<p>This action instantiates a classifier.</p>
+					<h3>Associations</h3>
+					<p>classifier: Classifier[1..1]<br />Classifier to be instantiated.</p>
+					<p>result: OutputPin[1..1]<br />Gives the output pin on which the result is put.</p>
+					<h3>Constraints</h3>
+					<ol>
+						<li>The classifier cannot be abstract.</li>
+						<li>The classifier cannot be an association class.</li>
+						<li>The type of the result pin must be the same as the classifier of the action.</li>
+						<li>The multiplicity of the output pin is 1..1.</li>
+					</ol>
+					<h3>Semantics</h3>
+					<p>The new object is created, and the classifier of the object is set to the given
+					classifier. The new object is returned as the value of the action. The action has 
+					no other effect. In particular, no behaviors are executed, no initial expressions
+					are evaluated, and no state machine transitions are triggered. The new object has
+					no structural feature values and participates in no links.</p>
+					<h3>Rationale</h3>
+					<p>CreateObjectAction is introduced for creating new objects.</p>
+				</div>
+				<h2>
+					Discussion
+				</h2>
+					<p>GRAF does not explicitly implement the constraints listed above. As yet, no models have
+					featured abstract or association classes that might call the Action.</p>
+				<h2>
+					Rules that implement this action:
+				</h2>
+				<ul>
+					<li><a href="../rules/7.html">createObjectAction-SameType</a></li>
+				</ul>
+				<p>
+					Below is the xml file which defines the order in which the rules are executed
+					when a particular action is called. 
+				</p>
+					<iframe src="../../GTSRulesSeq.xml">
+						Your browser does not support frames. 
+						<a href="../../GTSRulesSeq.xml" title="View the xml rule sequence file">
+							Click here
+						</a> to see the file.
+					</iframe>
+				
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU">
+	<head>
+		<!-- u4411120 2/07/2010 -->
+		<title>RuleDoc - AddStructuralFeatureValueAction</title>
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<link rel="stylesheet" type="text/css" href="../styles/rules.css" media="screen" />
+		<style type="text/css" id="pageStyles">
+		</style>
+	</head>
+	<body>
+		<div id="heading">
+			<h1>
+				AddStructuralFeatureValueAction
+			</h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="sendSignalAction.html">Back</a>
+				</li>
+				<li>
+					<a href="../index.html">Up to Index</a>
+				</li>
+				<li>
+					<a href="createObjectAction.html">Next</a>
+				</li>
+			</ul>
+		</div>
+		<div id="content">
+			<div id="middlecolumn">
+				<h2>
+					US Section 11.3.5
+				</h2>
+				<p>
+					To go to the page containing the full rule description in the US pdf document,
+					<a href="../../UML_Superstructure_2-1-2_07-11-02.pdf#page=255">
+						click here
+					</a>. Relevant sections are extracted below.
+				</p>
+				<div class="extract">
+					<h3>Description</h3>
+					<p>Structural Features are potentially multi-valued and ordered, so the action supports
+					specification of insertion points for new values. It also supports the removal of existing
+					values of the structural feature before the new value is added.</p>
+					<p>The object to access is specified dynamically, by referring to an input pin on which the
+					object will be placed at runtime. The type of the value of this pin is the classifier that
+					owns the specified structural feature, and the value's multiplicity is 1..1.</p>
+					<h3>Attributes</h3>
+					<p>isReplaceAll: Boolean [1..1] = false <br />
+					Specifies whether existing values of the structural feature of the object should be removed
+					before adding the new value.
+					</p>
+					<h3>Associations</h3>
+					<p>insertAt: InputPin[0..1] <br />
+					Gives the position at which to insert a new value or move an existing value in ordered
+					structural features. The type of the pin is UnlimitedNatural, but the value cannot be zero.
+					This pin is omitted for unordered structural features. (Subsets Action::input).
+					</p>
+					<h3>Constraints</h3>
+					<ol>
+						<li>Actions adding a value to ordered structural features must have a single input pin
+						for the insertion point with type UnlimitedNatural and multiplicity of 1..1; otherwise,
+						the action has no input pin for the insertion point.</li>
+					</ol>
+					<h3>Semantics</h3>
+					<p>If isReplaceAll is true, then the existing values of the structural feature are removed before the new one added, except if
+					the new value already exists, then it is not removed under this option. If isReplaceAll is false and the structural feature is
+					unordered and unique, then adding an existing value has no effect. If the feature is an association end, the semantics are
+					the same as creating a link, the participants of which are the object owning the structural feature and the new value.</p>
+					<p>Values of a structural feature may be ordered or unordered, even if the multiplicity maximum is 1. Adding values to
+					ordered structural features requires an insertion point for a new value using the insertAt input pin. The insertion point is
+					a positive integer giving the position to insert the value, or unlimited, to insert at the end. A positive integer less than or
+					equal to the current number of values means to insert the new value at that position in the sequence of existing values,
+					with the integer one meaning the new value will be first in the sequence. A value of unlimited for insertAt means to insert
+					the new value at the end of the sequence. The semantics is undefined for a value of zero or an integer greater than the
+					number of existing values. The insertion point is required for ordered structural features and omitted for unordered
+					structural features. Reinserting an existing value at a new position in an ordered unique structural feature moves the value
+					to that position (this works because structural feature values are sets). The insertion point is ignored when replacing all
+					values.</p>
+					<p>The semantics is undefined for adding a value that violates the upper multiplicity of the structural feature. Removing a
+					value succeeds even when that violates the minimum multiplicity - the same as if the minimum were zero. The modeler
+					must determine when minimum multiplicity of structural features should be enforced.</p>
+					<p>The semantics is undefined for adding a new value for a structural feature with isReadonly=true after initialization of the
+					owning object.</p>
+					<h3>Rationale</h3>
+					<p>AddStructuralFeatureValueAction is introduced to add structural feature values. isReplaceAll is introduced to replace and
+					add in a single action, with no intermediate states of the object where only some of the existing values are present.</p>
+				</div>
+				<h2>
+					Discussion
+				</h2>
+					<p>
+					</p>
+				<h2>
+					Rules that implement this action:
+				</h2>
+				<ul>
+					<li><a href="../rules/6.html">addStructuralFeatureValueAction</a></li>
+				</ul>
+				<p>
+					Below is the xml file which defines the order in which the rules are executed
+					when a particular action is called. 
+				</p>
+					<iframe src="../../GTSRulesSeq.xml">
+						Your browser does not support frames. 
+						<a href="../../GTSRulesSeq.xml" title="View the xml rule sequence file">
+							Click here
+						</a> to see the file.
+					</iframe>
+				
+			</div>
+		</div>
+	</body>
+</html>

@@ -72,9 +72,13 @@
 					<p>This implementation applies where the calling instance and the created
 					instance are of the same type - that is, the calling instance is making a
 					new instance of itself. The rule creates a new instance of the desired 
-					type, and links it with the state machine of the calling class. It does not
-					directly link the output pin and the new instance, but links the calling behavior
+					type. It does not directly link the output pin and the new instance, but links the calling behavior
 					node and the new instance with an arc that has the same name as the output pin.
+					</p>
+					<p>The new object is linked up with the state machine of the desired class.
+					It is placed in the first state of the sate machine. This state is identified by
+					following the 'target' arc of the transition out of the initial pseudostate.
+					
 					</p>
 			</div>
 		</div>

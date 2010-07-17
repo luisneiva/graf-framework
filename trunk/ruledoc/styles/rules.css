@@ -17,13 +17,18 @@ p {
 	text-align: left ;
 }
 
-p.extract {
+.extract {
 	background-color: #DCDCDC ;
-	font-family: Mono, serif ;
+	font-size: smaller ;
 }
 
 h1 {
 	text-align: center ;
+}
+
+iframe {
+	width: 100% ;
+	height: 50em ;	
 }
 
 /* ========================================== divisions */ 
