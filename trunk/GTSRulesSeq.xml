@@ -7,6 +7,7 @@
 	<action name="AcceptEventAction">
 		<exclusive-dependencies>
 			<rule>acceptEventAction-AndIgnore</rule><action>AcceptEventAction-WithActivity-HasBehavior</action>
+			<action>AcceptEventAction-WithActivity-SameState</action>
 			<action>AcceptEventAction-WithActivity-Main</action>
 			<rule>acceptEventAction-WithoutActivity</rule>
 			
@@ -22,7 +23,12 @@
 			<rule>acceptEventAction-WithActivity-ExecutableEdges</rule>
 		</looping-dependency>
 	</action>
-	
+	<action name="AcceptEventAction-WithActivity-SameState">
+		<rule>acceptEventAction-WithActivity-SameState</rule>
+		<looping-dependency>
+			<rule>acceptEventAction-WithActivity-ExecutableEdges</rule>
+		</looping-dependency></action>
+
 	<action name="SendSignalAction">
 		<rule>sendSignalAction</rule>
 	</action>
