@@ -15,11 +15,6 @@
 			}
 		</style>
 	</head>
-	<!-- ======================================== TODO 
-		create rule pages
-		work on automatically generating image files from GRAF
-	-->
-	
 	<body>
 		<div id="heading">
 			<h1>
@@ -35,11 +30,16 @@
 					GRAF is based on the hypothesis that UML models can be implemented or defined
 					using graph transformation rules ('rules'). The GRAF application attempts to
 					demonstrate this by interpreting UML models as graphs, and the Actions that 
-					define their behavior as rules. The models themselves are implemented using
+					define their behavior as rules, or a set of rules. The models themselves are implemented using
 					the widely-used Eclipse platform's Modeling Framework. The rules are based on
 					the English descriptions of Actions in the UML specification. This Index
-					attempts to explain the implementation of the rules based on that specification
-					and other features of GRAF's environment, such as the rule sequence document.
+					contains both general comments on the GRAF implementation of Actions, and 
+					explanations of the specific rules that have been implemented.
+				</p>
+				<p>
+					Note that rules are implemented when required by a particular model, so that a
+					particular Action may not be completely implemented within GRAF. That is, rules
+					will be written for the variant of an Action that is required by the model.
 				</p>
 				<h2>
 					Related Documents
@@ -69,8 +69,7 @@
 					and uncommenting the code at lines 72- . This code is commented out by default
 					as running the generation method slows GRAF down at startup, and generally the
 					existing rule files are up to date anyway. To generate new images from these files,
-					the 'dot' program from the <a href="http://www.graphviz.org/">Gaphviz suite</a>
-					 is required.
+					the 'dot' program from the <a href="http://www.graphviz.org/">Gaphviz suite</a> is required.
 				</p>
 				<h2>
 					Interpretation
@@ -81,7 +80,7 @@
 					<li>Names prefixed with a # are allocated unique names by GRAF.</li>
 					<li>Red edges and nodes are Negative Application Conditions ('NACs'). If they occur in the graph the rule will not be applied.</li>
 					<li>Green edges are added to the graph when the rule is applied.</li>
-					<li>Red edges are deleted when the rule is applied.</li>
+					<li>Blue edges are deleted when the rule is applied.</li>
 				</ul>
 				<h2>
 					Index
@@ -91,7 +90,7 @@
 						<th>#</th>	<th>Action</th>	<th>Rule</th>
 					</tr>
 					<tr>
-						<td>0</td>	<td>US 11.3.2 AcceptEventAction</td>	<td><a href="rules/0.html">acceptEventAction-AndIgnore</a></td>
+						<td>0</td>	<td>US 11.3.2 <a href="actions/acceptEventAction.html">AcceptEventAction</a></td>	<td><a href="rules/0.html">acceptEventAction-AndIgnore</a></td>
 					</tr>
 					<tr>
 						<td>1</td>	<td></td>	<td><a href="rules/1.html">acceptEventAction-WithActivity-ExecutableEdges</a></td>
@@ -103,28 +102,31 @@
 						<td>3</td>	<td></td>	<td><a href="rules/3.html">acceptEventAction-WithoutActivity</a></td>
 					</tr>
 					<tr>
-						<td>4</td>	<td>US 11.3.45 SendSignalAction</td>	<td><a href="rules/4.html">actorSendSignal</a></td>
+						<td>4</td>	<td>US 11.3.45 <a href="actions/sendSignalAction.html">SendSignalAction</a></td>	<td><a href="rules/4.html">actorSendSignal</a></td>
 					</tr>
 					<tr>
 						<td>5</td>	<td></td>	<td><a href="rules/5.html">sendSignalAction</a></td>
 					</tr>
 					<tr>
-						<td>6</td>	<td>US 11.3.5 AddStructuralFeatureValueAction</td>	<td><a href="rules/6.html">addStructuralFeatureValueAction</a></td>
+						<td>6</td>	<td>US 11.3.5 <a href="actions/addStructuralFeatureValueAction.html">AddStructuralFeatureValueAction</a></td>	<td><a href="rules/6.html">addStructuralFeatureValueAction</a></td>
 					</tr>
 					<tr>
-						<td>7</td>	<td>US 11.3.16 CreateObjectAction</td>	<td><a href="rules/7.html">createObjectAction-SameType</a></td>
+						<td>7</td>	<td>US 11.3.16 <a href="actions/createObjectAction.html">CreateObjectAction</a></td>	<td><a href="rules/7.html">createObjectAction-SameType</a></td>
 					</tr>
 					<tr>
-						<td>8</td>	<td>US 11.3.36 ReadSelfAction</td>	<td><a href="rules/8.html">readSelfAction</a></td>
+						<td>8</td>	<td>US 11.3.36 <a href="actions/readSelfAction.html">ReadSelfAction</a></td>	<td><a href="rules/8.html">readSelfAction</a></td>
 					</tr>
 					<tr>
-						<td>9</td>	<td>US 11.3.37 ReadStructuralFeatureAction</td>	<td><a href="rules/9.html">readStructuralFeatureAction-SingleInt</a></td>
+						<td>9</td>	<td>US 11.3.37 <a href="actions/readStructuralFeatureAction.html">ReadStructuralFeatureAction</a></td>	<td><a href="rules/9.html">readStructuralFeatureAction-SingleInt</a></td>
 					</tr>
 					<tr>
 						<td>10</td>	<td></td>	<td><a href="rules/10.html">readStructuralFeatureAction-TwoInts</a></td>
 					</tr>
 					<tr>
-						<td>11</td> <td>US 11.3.2 AcceptEventAction</td> <td><a href="rules/11.html>acceptEventAction-WithActivity-HasBehavior</a></td>
+						<td>11</td> <td>US 11.3.2 <a href="actions/acceptEventAction.html">AcceptEventAction</a></td> <td><a href="rules/11.html">acceptEventAction-WithActivity-HasBehavior</a></td>
+					</tr>
+					<tr>
+						<td>12</td> <td></td>	<td><a href="rules/12.html">acceptEventAction-WithActivity-SameState</a></td>
 					</tr>
 				</table>
 			</div>

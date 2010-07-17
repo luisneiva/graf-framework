@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU">
+	<head>
+		<!-- u4411120 2/07/2010 -->
+		<title>RuleDoc - SendSignalAction</title>
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<link rel="stylesheet" type="text/css" href="../styles/rules.css" media="screen" />
+		<style type="text/css" id="pageStyles">
+		</style>
+	</head>
+	<body>
+		<div id="heading">
+			<h1>
+				SendSignalAction
+			</h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="acceptEventAction.html">Back</a>
+				</li>
+				<li>
+					<a href="../index.html">Up to Index</a>
+				</li>
+				<li>
+					<a href="addStructuralFeatureValueAction.html">Next</a>
+				</li>
+			</ul>
+		</div>
+		<div id="content">
+			<div id="middlecolumn">
+				<h2>
+					US Section 11.3.45
+				</h2>
+				<p>
+					To go to the page containing the full rule description in the US pdf document,
+					<a href="../../UML_Superstructure_2-1-2_07-11-02.pdf#page=299">
+						click here
+					</a>. Relevant sections are extracted below.
+				</p>
+				<div class="extract">
+					<h3>Description</h3>
+					<p>SendSignalAction is an action that creates a signal instance from its inputs, and transmits it to the target object, where it
+					may cause the firing of a state machine transition or the execution of an activity. The argument values are available to the
+					execution of associated behaviors. The requestor continues execution immediately. Any reply message is ignored and is
+					not transmitted to the requestor. If the input is already a signal instance, use SendObjectAction.</p>
+					<h3>Associations</h3>
+					<p>signal: Signal [1]<br />
+					The type of signal transmitted to the target object.</p>
+					<p>target: InputPin [1]<br />
+					The target object to which the signal is sent. {Subsets Action::input}</p>
+					<h3>Constraints</h3>
+					<ol>
+						<li>The number and order of argument pins must be the same as the number and order of attributes in the signal.</li>
+						<li>The type, ordering, and multiplicity of an argument pin must be the same as the corresponding attribute of the signal.</li>
+					</ol>
+					<h3>Semantics</h3>
+					<ol>
+						<li>When all the prerequisites of the action execution are satisfied, a signal instance of the type specified by signal is
+						generated from the argument values and this signal instance is transmitted to the identified target object. The target object
+						may be local or remote. The signal instance may be copied during transmission, so identity might not be preserved. The
+						manner of transmitting the signal object, the amount of time required to transmit it, the order in which the transmissions
+						reach the various target objects, and the path for reaching the target objects are undefined.</li>
+						<li>When a transmission arrives at a target object, it may invoke behavior in the target object. The effect of receiving a signal
+						object is specified in 13, "Common Behaviors." Such effects include executing activities and firing state machine
+						transitions.</li>
+						<li>A send signal action receives no reply from the invoked behavior; any attempted reply is simply ignored, and no
+						transmission is performed to the requestor.</li>
+					</ol>
+					<h3>Rationale</h3>
+					<p>Sends a signal to a specified target object.</p>
+				</div>
+				<h2>
+					Discussion
+				</h2>
+					<p></p>
+				<h2>
+					Rules that implement this action:
+				</h2>
+				<ul>
+					<li><a href="../rules/4.html">actorSendSignal</a></li>
+					<li><a href="../rules/5.html">sendSignalAction</a></li>
+				</ul>
+				<p>
+					Below is the xml file which defines the order in which the rules are executed
+					when a particular action is called. 
+				</p>
+					<iframe src="../../GTSRulesSeq.xml">
+						Your browser does not support frames. 
+						<a href="../../GTSRulesSeq.xml" title="View the xml rule sequence file">
+							Click here
+						</a> to see the file.
+					</iframe>
+				
+			</div>
+		</div>
+	</body>
+</html>
