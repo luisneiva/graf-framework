@@ -60,15 +60,15 @@ The team needs to develop a concrete, unchanging plan based on the success crite
 *Action:* Reduce impact<br>
 All the team can do is make sure that if this does happen, no information or skills are lost. For example, all files will be kept online.
 
-===== Free UML animators don't work =====
-*Action:* Reduce impact<br>
-The lack of free UML animators will prove a point in itself. The team will investigate alternatives with the client.
-
 ==== Clients decide models aren't contentious ====
 *Action:* Reduce impact<br>
 The team is focusing on other uses for GRAF.
 
 == Mitigation of risks that used to be critical or high risk ==
+
+===== Free UML animators don't work =====
+*Action:* Reduce impact<br>
+This happened. Free UML animators can't be made to work for whatever reasons. The team will focus on [RefDiscussion correctness] of models instead of correctness of animators. The team will also investigate using GRAF as a teaching tool.
 
 ===== Contacted stakeholders have no use for GRAF, have no ambiguous models =====
 *Action:* Reduce probability/transfer risk<br>
