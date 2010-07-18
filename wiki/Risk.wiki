@@ -66,10 +66,6 @@ The team is focusing on other uses for GRAF.
 
 == Mitigation of risks that used to be critical or high risk ==
 
-===== Free UML animators don't work =====
-*Action:* Reduce impact<br>
-This happened. Free UML animators can't be made to work for whatever reasons. The team will focus on [RefDiscussion correctness] of models instead of correctness of animators. The team will also investigate using GRAF as a teaching tool.
-
 ===== Contacted stakeholders have no use for GRAF, have no ambiguous models =====
 *Action:* Reduce probability/transfer risk<br>
 ~~First, the team will make it a priority to find out as soon as possible if this will be the case. Second, the team will consider other uses for GRAF and Graph Transformation Theory.~~
@@ -91,3 +87,9 @@ The team will look into other ways to demonstrate ambiguities in models. The tea
 ===== The models from Greg can't be entered into GRAF =====
 *Action:* Reduce likelihood, reduce impact <br>
 ~~The team will look for other models that serve the same purpose but are more compatible with GRAF. The team will make it a priority to find out what is needed to add the 4 models so it will become clear how feasible it is.~~ The models have been entered into GRAF to some extent and it's clear that the job can be finished.
+
+== Mitigation of Risks that have occured ==
+
+===== Free UML animators don't work =====
+*Action:* Reduce impact<br>
+This happened. Free UML animators can't be made to work for whatever reasons. The team will focus on [RefDiscussion correctness] of models instead of correctness of animators. The team will also investigate using GRAF as a teaching tool.
