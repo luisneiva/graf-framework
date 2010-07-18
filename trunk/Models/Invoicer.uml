@@ -15,9 +15,7 @@
           <subvertex xmi:type="uml:State" xmi:id="_cxHPoGGWEd-wueUf9g8DcA" name="State1"/>
           <subvertex xmi:type="uml:State" xmi:id="_kvQK4GGWEd-wueUf9g8DcA" name="Initial"/>
           <subvertex xmi:type="uml:Pseudostate" xmi:id="_nAAsk2GWEd-wueUf9g8DcA" name="Pseudos Init"/>
-          <subvertex xmi:type="uml:State" xmi:id="_rqv9YGGWEd-wueUf9g8DcA" name="Invoicing">
-            <exit xmi:type="uml:Activity" xmi:id="_sFvOsIDvEd-HL_3tQGiR0Q" name="InvoicingActivity"/>
-          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_rqv9YGGWEd-wueUf9g8DcA" name="Invoicing"/>
           <subvertex xmi:type="uml:FinalState" xmi:id="_QIlwgIp1Ed-LWfEk4LrGCw" name="InvoicerFinalState"/>
           <transition xmi:id="_pBJd4GGWEd-wueUf9g8DcA" name="initialTrans" source="_nAAsk2GWEd-wueUf9g8DcA" target="_kvQK4GGWEd-wueUf9g8DcA"/>
           <transition xmi:id="_uP4zoGGWEd-wueUf9g8DcA" name="InvoiceTrans" source="_kvQK4GGWEd-wueUf9g8DcA" target="_rqv9YGGWEd-wueUf9g8DcA">
@@ -33,6 +31,9 @@
             <trigger xmi:id="_PAAbYH6OEd-VRIfXnUISTA" name="TriggerStop2" event="_TmFEEH6NEd-VRIfXnUISTA"/>
           </transition>
           <transition xmi:id="__XJ2kGGWEd-wueUf9g8DcA" name="DoTrans2" source="_rqv9YGGWEd-wueUf9g8DcA" target="_rqv9YGGWEd-wueUf9g8DcA">
+            <effect xmi:type="uml:Activity" xmi:id="_sFvOsIDvEd-HL_3tQGiR0Q" name="InvoicingActivity">
+              <node xmi:type="uml:CreateObjectAction" xmi:id="_ltvG0JIyEd-iTLouFHoPLQ" name="testCreateObject" classifier="_QDmQoGGVEd-wueUf9g8DcA"/>
+            </effect>
             <trigger xmi:id="_SX4WIH6OEd-VRIfXnUISTA" name="TriggerDo2" event="_WeOUAIvBEd-K-dAEXfMJwA"/>
           </transition>
         </region>
