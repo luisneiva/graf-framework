@@ -6,4 +6,9 @@
     * Add other required functionality such as if-statements and ability to deal with ints, strings or booleans.
     * Create the needed .uml files for the models.
   * Look for inconsistencies between other UML animators.
-  * Search for contentious models in industry and academia.
+  * ~~Search for contentious models in industry and academia.~~
+  * Tool GRAF to be used as a learning environment
+  * Develop GRAF tutorials aimed at end users
+  * Add a number of models and implement the actions needed
+  * Document any ambiguities found
+  * Update existing and create documentation to better describe how GRAF works, the rationale behind building it and the processes that have gone into the project 
