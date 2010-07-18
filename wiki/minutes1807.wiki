@@ -1,0 +1,21 @@
+#summary Minutes
+
+= Group meeting =
+Date: 18/7/10
+<br>Location: CSIT N110
+<br>Present: Oscar, Stephen, Cameron and Hamish
+<br>Time: 1pm
+<br>Duration: 1 hour
+== General ==
+  * Postreview team meeting 5pm Tuesday
+  * Next client meeting 2pm Monday the 26th tentatively
+  * Hamish will be away from the 13th to 20th of August
+
+== Progress reports ==
+  * Hamish couldn't get Rhapsody to run 
+  * Cameron looked at 3110 lecture notes relevant to GRAF as an educational tool
+
+== Review ==
+  * Updated slides on SVN http://svn.anu.edu.au/SE_projects/GRAF
+  * Order: Oscar, Stephen Cameron, Hamish, Alice, Frank, Stephen, Oscar
+  * Demo of TE00 execution at the end
