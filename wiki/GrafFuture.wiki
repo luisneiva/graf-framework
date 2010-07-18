@@ -10,3 +10,4 @@ Some of GRAF's future ambitions include:
   ** Analyse and enforce model constraints (such as Object Constraint Language queries)
   ** Analyse feasibility of given system traces (for example, can a model satisfy a given  sequence diagram)
  * Development of reference animators for languages in need, including continuing development of our UML reference animator.
+ * Engagement of many different educational institutions to help develop a tool used for modelling classes
