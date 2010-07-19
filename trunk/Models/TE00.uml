@@ -22,6 +22,12 @@
           <transition xmi:id="_ioItoIp4Ed-LWfEk4LrGCw" name="CInitialTrans" source="_gpLtoIp4Ed-LWfEk4LrGCw" target="_RnZFcGYFEd-8QvdEjO-jiQ"/>
         </region>
       </ownedBehavior>
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_62KuUJLQEd-rAdRAOBcEiw" name="CMethodActivity" specification="_5l1H0JLQEd-rAdRAOBcEiw">
+        <node xmi:type="uml:CreateObjectAction" xmi:id="_d3EsUJLREd-rAdRAOBcEiw" name="CCreateObject2" classifier="_wIKVkGYEEd-8QvdEjO-jiQ">
+          <result xmi:id="_d3EsUZLREd-rAdRAOBcEiw" name="CCreateObjectResult2"/>
+        </node>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_5l1H0JLQEd-rAdRAOBcEiw" name="COperation" visibility="public" method="_62KuUJLQEd-rAdRAOBcEiw"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_wjPvGGYEEd-8QvdEjO-jiQ" name="B" classifierBehavior="_-UbnAGYEEd-8QvdEjO-jiQ">
       <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_-UbnAGYEEd-8QvdEjO-jiQ" name="StateMachineB">
@@ -44,6 +50,12 @@
           <transition xmi:id="_bjls0Ip4Ed-LWfEk4LrGCw" name="BInitialTrans" source="_YPjJMIp4Ed-LWfEk4LrGCw" target="_TxAdUGYFEd-8QvdEjO-jiQ"/>
         </region>
       </ownedBehavior>
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_meP9gJLREd-rAdRAOBcEiw" name="BMethodActivity" specification="_meWEIJLREd-rAdRAOBcEiw">
+        <node xmi:type="uml:CreateObjectAction" xmi:id="_meP9gZLREd-rAdRAOBcEiw" name="BCreateObject2" classifier="_wjPvGGYEEd-8QvdEjO-jiQ">
+          <result xmi:id="_meP9gpLREd-rAdRAOBcEiw" name="BCreateObjectResult2"/>
+        </node>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_meWEIJLREd-rAdRAOBcEiw" name="BOperation" visibility="public" method="_meP9gJLREd-rAdRAOBcEiw"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w8O22GYEEd-8QvdEjO-jiQ" name="A" classifierBehavior="_CwI9UGYFEd-8QvdEjO-jiQ">
       <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_CwI9UGYFEd-8QvdEjO-jiQ" name="StateMachineA">
