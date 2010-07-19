@@ -13,7 +13,8 @@
 || 12/7 || Client|| [cagenda0507 Agenda] || [cminutes0507 Minutes] ||
 || 12/7 || Team || [agenda1207 Agenda] || [minutes1207 Minutes] ||
 || 18/7 || Team || [agenda1807 Agenda] || [minutes1807 Minutes] ||
-
+|| 20/7 || Team || [agenda2007 Agenda] || [minutes2007 Minutes] ||
+|| 26/7 || Mentor || [agenda2607 Agenda] || [minutes2607 Minutes] ||
 
 
 Agendas and minutes from before 12/5/2010 are on [https://alliance.anu.edu.au/portal Alliance]. <br>
