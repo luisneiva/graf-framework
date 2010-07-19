@@ -1,12 +1,11 @@
 = Risk log =
 || Risk || Likelihood|| Impact ||
 || New structural feature functionality (eg. Mealy, methods) unachievable this year || Medium || High ||
-|| The team can't find contentious models used in industry || High || High ||
+|| ~~The team can't find contentious models used in industry~~ || ~~High~~ || High ||
 || ~~No action language builder~~ || ~~High~~ || Low ||
 || Work to make GRAF useable is unattainable in 2010 || High || Low ||
 || Project doesn't meet client's needs || Medium || High ||
 || Latent defects discovered || Medium || Medium ||
-|| If statements or select statements require excessive code rework || Medium || Medium ||
 || A new version of Eclipse isn't backwards compatible || Medium || Low||
 || GRAF runs too slowly || Low || Medium ||
 || Adding new rules requires code change || High || Low ||
@@ -33,7 +32,7 @@
 || (Success criteria 1) Can't give definite descriptions of given models' behaviour || Low || High ||
 || (Success criteria 3) Can't attract industrial sponsor || High || Low ||
 || New version of UML supercedes features of GRAF || Low || High ||
-|| Clients decide models aren't contentious || Medium || High ||
+|| ~~Clients decide models aren't contentious~~ || ~~Medium~~ || High ||
 || Constantly changing requirements || High || Low ||
 
 http://graf-framework.googlecode.com/files/Risk-Criteria.jpg <br>
@@ -44,10 +43,6 @@ Only critical and high threat level risks will be mitigated
 ===== New structural feature functionality (eg. Mealy, methods) unachievable this year =====
 * Action:* Reduce impact<br>
 Expedite getting the simplest of these new features working so we will know how long it takes and hence whether it can be achieved this year or not.
-
-===== The team can't find contentious models used in industry =====
-*Action:* Reduce impact<br>
-This does not mean that the client's goal for the project is not met. As long as GRAF can demonstrate that models are or are not ambiguous, it fulfils its purpose. However, this is a serious risk because if it occurs then the future use of the GRAF software will be in question. The group is going to investigate using GRAF as a UML teaching tool. This is in addition to the search for ambiguity. The group will create a GRAF-UML tutorial by the end of the year.
 
 ===== 2 animators give the same results =====
 *Action:* Reduce impact<br>
@@ -65,11 +60,15 @@ The team needs to develop a concrete, unchanging plan based on the success crite
 *Action:* Reduce impact<br>
 All the team can do is make sure that if this does happen, no information or skills are lost. For example, all files will be kept online.
 
-==== Clients decide models aren't contentious ====
-*Action:* Reduce impact<br>
-The team is focusing on other uses for GRAF.
-
 == Mitigation of risks that used to be critical or high risk ==
+
+===== The team can't find contentious models used in industry =====
+*Action:* Reduce impact<br>
+This does not mean that the client's goal for the project is not met. As long as GRAF can demonstrate that models are or are not ambiguous, it fulfils its purpose.
+
+===== Clients decide models aren't contentious ====
+*Action:* Reduce impact<br>
+Same as above
 
 ===== Contacted stakeholders have no use for GRAF, have no ambiguous models =====
 *Action:* Reduce probability/transfer risk<br>
