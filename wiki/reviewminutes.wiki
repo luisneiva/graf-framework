@@ -1,16 +1,23 @@
 #Notes from the second Review
 
 = Review 2 =
+Date: 19/7/10
+<br>Location: CSIT N101
+<br>Present: Oscar, Stephen, Alice, Cameron, Hamish, Frank, Shayne, Lynette and James
+<br>Time: 2:30pm
+<br>Duration: 90 minutes
+
 Points that arose out of the post-presentation discussion include:
  # The new goal of 'educational use' is still in its infancy, but will require stakeholders, requirements etc.
  # The purpose of GRAF can now be viewed over the short term to be to support the particular models nominated by the clients, and over the long term to be an educational tool for learning UML and/or research.
  # It may be beneficial to use the negative experience with other animators as a 'what not to do' for GRAF.
  # The priority at the moment is to implement enough of the UML language features to animate the models, to compare with the academic's own idea of what they do.
- # To further the 'education' goal, the team will give a presentation to possible stakeholders to convince them that a further iteration of GRAF could be useful. 
+ # To further the 'education' goal, the team will give a presentation to possible stakeholders (eg. Shayne) to convince them that a further iteration of GRAF could be useful. 
  # It may be useful for the team to have models to test specific actions rather than relying on the academic models to provide testing. Greg will look into providing these in the next two weeks.
  # Shayne called Annette to confirm her interest, and the team will set up a meeting.
  # The team may need to look further ahead when managing change.
  # Query whether there is enough time/resources left to complete the project - the WBS should be revised to reflect the stated goals.
- # Adding the structural features should be added to the risk management documentation.
+ # Adding the structural features (ie. Mealy notation, if statements, methods) should be added to the risk management documentation.
  # Any 'final' version of GRAF would need an easier way to add models, but is not critical for this year.
  # The team needs to ensure that there is documentation to extend project life eg for the process of adding models.
+ # Shayne would use GRAF as a teaching tool if it could do Mealy and Moore notation
