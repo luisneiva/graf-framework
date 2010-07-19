@@ -1,5 +1,6 @@
 = Risk log =
 || Risk || Likelihood|| Impact ||
+|| New structural feature functionality (eg. Mealy, methods) unachievable this year || Medium || High ||
 || The team can't find contentious models used in industry || High || High ||
 || ~~No action language builder~~ || ~~High~~ || Low ||
 || Work to make GRAF useable is unattainable in 2010 || High || Low ||
@@ -39,6 +40,10 @@ http://graf-framework.googlecode.com/files/Risk-Criteria.jpg <br>
 Only critical and high threat level risks will be mitigated
 
 === Mitigation of critical and high risks ===
+
+===== New structural feature functionality (eg. Mealy, methods) unachievable this year =====
+* Action:* Reduce impact<br>
+Expedite getting the simplest of these new features working so we will know how long it takes and hence whether it can be achieved this year or not.
 
 ===== The team can't find contentious models used in industry =====
 *Action:* Reduce impact<br>
