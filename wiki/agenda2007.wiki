@@ -1,0 +1,11 @@
+#summary agenda
+== Meeting title ==
+*Date:* 19/7/10
+<br>*Time:* 5pm
+<br>*Location:* N110
+<br>*Duration:* 1 hour
+
+=== Agenda Items ===
+  * Review discussion
+  * Plan for this semester
+  * Task allocation
