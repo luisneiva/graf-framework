@@ -11,3 +11,4 @@ Some of GRAF's future ambitions include:
   ** Analyse feasibility of given system traces (for example, can a model satisfy a given  sequence diagram)
  * Development of reference animators for languages in need, including continuing development of our UML reference animator.
  * Engagement of many different educational institutions to help develop a tool used for modelling classes
+ * Creating .uml files more easily - we could use annotations in the state machines in Topcased to represent actions and then add to GRAF the ability to translate these annotations into the proper actions
