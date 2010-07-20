@@ -26,6 +26,8 @@ public class ODObject extends DisplayObject {
 	private ArrayList<ODEvent> eventPool;
 	private ArrayList<ODEvent> externalEvents;
 
+	private ArrayList<ODMethod> methods;
+	
 	// If not eventMode then it is in action mode
 	private Boolean eventMode;
 
@@ -33,7 +35,7 @@ public class ODObject extends DisplayObject {
 	private boolean attributesShowing = true;
 	/** Is the event/action compartment showing */
 	private boolean runtimePoolShowing = true;
-		
+			
 	public ODObject(ODClass instantiation, Node graphNode, Boolean eventMode) {
 		this.eventMode = eventMode;
 
@@ -48,6 +50,10 @@ public class ODObject extends DisplayObject {
 		
 		//Set initial location to random point on screen (more structured placement would be better) 
 		setLocation(randomGenerator.nextInt(400),randomGenerator.nextInt(300));
+		
+		//TODO delete these 2 lines once ODMethod properly implemented
+		methods = new ArrayList<ODMethod>();
+		methods.add(new ODMethod("test method"));
 	}
 
 	public boolean isAttributesShowing() {
@@ -86,6 +92,10 @@ public class ODObject extends DisplayObject {
 	}
 	public ArrayList<ODEvent> getExternalEvents() {
 		return externalEvents;
+	}
+	
+	public ArrayList<ODMethod> getMethods() {
+		return methods;
 	}
 
 	public String toString() {
@@ -169,7 +179,7 @@ public class ODObject extends DisplayObject {
 	 */
 	public void addAction(Node node, ArrayList<Node> actionBehEx) {
 		ODAction action = new ODAction(node, actionBehEx);
-		actionPool.add(action);		
+		actionPool.add(action);
 	}
 
 	/**
