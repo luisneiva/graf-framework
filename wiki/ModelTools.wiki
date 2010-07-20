@@ -11,7 +11,7 @@ BOUML
   * Less user friendly than other tools
   * Allows for Eclipse specific output format but State Diagrams don't correctly nest with Classes creating an error when GRAF tries to load the .uml file
   * Unable to input action language
-  * *Action:* Test if it makes state diagrams properly (unlike Topcased), otherwise abandon
+  * *Action:* Use Topcased instead
 ARGOUML
   * XMI files that are output are not specific to Eclipse
   * *Action:* Possibly investigate what _can_ be done with output
@@ -32,7 +32,7 @@ Vide
   * Vide is an eclipse plugin, but it's exceedingly difficult to set up.
   * Install instructions: http://www.vide-ist.eu/reflib/cookbook.html
   * Vide isn't just an eclipse plugin. There's also various Vide articles that describe how UML actions work and many other things. 
-  * *Action:* Try to set up
+  * *Action:* Abandon as it couldn't be set up
 TextUML
   * Generates actions for the eclipse tree from Java-like syntax.
   * Doesn't work. Nothing parses.
@@ -49,6 +49,12 @@ Visual Paradigm SDE
 
 Omondo UML
   * *Action:* ???
+
+Poseidon for UML by Gentleware
+  * [http://www.gentleware.com/fileadmin/media/archives/userguides/poseidon_users_guide/statemachinediagram.html Link]
+  * Does what we need: add uml actions, state transition conditions, if statements and generate .uml file from it
+  * 30 day "free" trial but you have to provide credit card details and if you don't cancel in 30 days they start charging
+  * *Action:* Use as a last resort if we can't manually edit the uml files
 
 == Conclusion ==
 
