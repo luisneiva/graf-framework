@@ -21,3 +21,5 @@ Points that arose out of the post-presentation discussion include:
  # Any 'final' version of GRAF would need an easier way to add models, but is not critical for this year.
  # The team needs to ensure that there is documentation to extend project life eg for the process of adding models.
  # Shayne would use GRAF as a teaching tool if it could do Mealy and Moore notation
+ # Using GRAF to prove ambiguity in industry is a long term goal
+ # It's not that the authors don't know what the models do, it is a matter of their faulty understanding of the model
