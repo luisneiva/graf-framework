@@ -60,20 +60,4 @@ Poseidon for UML by Gentleware
 
 A combination of Visual Paradigm SDE Community Edition Eclipse plugin and Topcased allows for the creation of UML models and their associated State Diagrams in a format allows GRAF to display the classes and their associated attributes. Unfortunately, no solution that allows for action language to be entered directly into the State Diagrams was found.
 
-An issue where the classes could not properly transition between states was found. It may be due to the following:
-
-GRAF EXAMPLE
-{{{
-        <transition xmi:id="_53xiIEZ1Ed6JvpGL0b827A" name="foodInitialTrans" target="_1pduoEZ1Ed6JvpGL0b827A" source="_y2hF4EZ1Ed6JvpGL0b827A"/>
-        <transition xmi:id="_6sC3sEZ1Ed6JvpGL0b827A" name="foodFinalTrans" target="_zr7D4EZ1Ed6JvpGL0b827A" source="_2Tdt4EZ1Ed6JvpGL0b827A"/>
-        <transition xmi:id="_8zAkMEZ1Ed6JvpGL0b827A" name="cookedTrans" target="_2Tdt4EZ1Ed6JvpGL0b827A" source="_1pduoEZ1Ed6JvpGL0b827A">
-          <trigger xmi:id="_V2wVgEZ2Ed6JvpGL0b827A" name="cookedTrigger" event="_41b3MEZ8Ed6JvpGL0b827A"/>
-}}}
-TOPCASED PRODUCED
-{{{
-          <transition xmi:id="_BU22ZkbdEd-zkJFJMvy8JA" name="" kind="local" source="__YB9U0bcEd-zkJFJMvy8JA" target="__4dw4EbcEd-zkJFJMvy8JA"/>
-          <transition xmi:id="_CFpaJUbdEd-zkJFJMvy8JA" name="cook" kind="local" source="__4dw4EbcEd-zkJFJMvy8JA" target="_AeP-gEbdEd-zkJFJMvy8JA"/>
-          <transition xmi:id="_C_OthUbdEd-zkJFJMvy8JA" name="" kind="local" source="_AeP-gEbdEd-zkJFJMvy8JA" target="__uWLkkbcEd-zkJFJMvy8JA"/>
-
-}}}
- 
+Files created by Topcased aren't don't contain enough detail to work in GRAF. [umlModelsUsingTopcased Here] is a tutorial to solve the problem.
