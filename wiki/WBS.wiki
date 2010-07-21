@@ -5,12 +5,12 @@
 The original WBS is [http://svn.anu.edu.au/SE_projects/GRAF/Admin/wbs.xls here] on SVN. It contains 2 tables, one with just the WBS and one with the WBS and time estimates for tasks not finished. This page contains copies of each of those tables.
 
 ===WBS===
-http://graf-framework.googlecode.com/files/wbs19-7-10.jpg
+http://graf-framework.googlecode.com/files/wbs21-7-10.jpg
 
 Crossed out tasks are finished
 
 ====WBS including time estimates====
-http://graf-framework.googlecode.com/files/wbs+times19-7-10.jpg 
+http://graf-framework.googlecode.com/files/wbs+times21-7-10.jpg 
 
 === Basis of estimates ===
 Estimated times are based on times logged in GPME including  times from completed tasks and data from last year and _ball-park_ guesses. 
