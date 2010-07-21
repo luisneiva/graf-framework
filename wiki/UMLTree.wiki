@@ -1,5 +1,5 @@
 = What is the Eclipse UML tree? =
-The tree is a file format to save UML diagrams. All types of UML diagrams can be stored in the tree: class, state, object, use case, sequence etc. The advantage of the Eclipse Tree is that you can use it with different Eclipse plugins. You can use one plugin to add a class diagram and then another to add an object diagram for it.
+The tree is a file format to save UML diagrams. All types of UML diagrams can be stored in the tree: class, state, object, use case, sequence etc. The advantage of the Eclipse Tree is that you can use it with different Eclipse plugins. You can use one plugin to add a class diagram and then another to add an object diagram for it. [http://www.eclipse.org/modeling/mdt/uml2/docs/articles/Getting_Started_with_UML2/article.html This link] explains how to modify it.
 
 = How the Eclipse UML tree works =
 All nodes contain a type and a large number of properties. Type is important but other than _name_, most of the properties can be ignored. (Note for GRAF to work, all name fields should be unqiue) The parent-child relationships of the nodes is the most important piece of information for a certain node.
