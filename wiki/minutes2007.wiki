@@ -1,3 +1,34 @@
 #summary Minutes for the 20th of July 2010
 
-= Introduction =
+= Group Meeting =
+Date: 20/07/2010
+<br>Location: CSIT N110
+<br>Present: Oscar, Stephen, Alice, Cameron and Frank
+<br>Time: 5pm
+<br>Duration: 1 hour
+
+== Post-review discussion ==
+
+The examiners didn't seem to be too worried about the content or work of the project, but raised planning for the new 'education' goal/direction - and especially whether we had enough time to complete this goal, given our current stage.
+
+=== WBS review ===
+
+Given the new 'education' direction, what needs to change about the WBS? Is there anything else that needs to change?
+
+New sections/ changes:
+  * GRAF-UML tutorial to be given its own section.
+  * Presentations to stakeholders and potential sponsors (Annette, Shayne and Clive) should be added.
+
+The first new functionality to be added will be the ability to handle methods.
+
+== Task allocation ==
+
+  * Frank: add capability to display methods to the GUI,
+  * Alice: extend the graph search to look for methods,
+  * Cameron: add a model suitable for a UML tutorial to GRAF,
+  * Hamish: test accuracy of GRAF documentation.
+
+To be organised:
+  * Meeting with Annette to ask for a model and demonstrate GRAF.
+    ** Book N101.
+  * Meeting with Shayne to pitch GRAF as an educational tool.
