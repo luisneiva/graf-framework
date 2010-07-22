@@ -106,6 +106,9 @@
 					<p>
 						Where an AcceptEventAction causes a transition into a new state, or otherwise indicates that an object must execute some behavior, 'executable' edges are 
 						used to link the object to the behavior that must be executed. These edges are not ordered. The Definition does not include executable edges.
+						An executable edge indicates that an action has not been executed yet. When it is executed, the executable edge is removed. Therefore, all actions will involve 
+						deleting executable edges. The existence of an executable edge is necessary but not sufficient for the action to be executed. The action must also have its input pins 
+						satisfied.
 					</p>
 				<h2>
 					Rules that implement this action:
