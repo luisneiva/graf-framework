@@ -1,0 +1,11 @@
+#summary agenda
+== Stakeholder Meeting ==
+*Date:* 27/7/10
+<br>*Time:* 5pm
+<br>*Location:* N110
+<br>*Duration:* 1 hour
+<br>*Attending:* GRAF team and Annette Vincent
+
+=== Agenda Items ===
+  * Demonstration of GRAF
+  * Discussion of the use of GRAF in industry
