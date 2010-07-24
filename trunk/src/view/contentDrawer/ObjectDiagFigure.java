@@ -39,6 +39,9 @@ public class ObjectDiagFigure extends Figure {
 	private CompartmentFigure attributeFigure = new CompartmentFigure();
 	/** Will hold either events or actions, depending on the current mode of the object */
 	private CompartmentFigure runtimePoolFigure;
+	
+	// Methods
+	private CompartmentFigure methodFigure = new CompartmentFigure();
 
 	private ArrayList<ExternalEventHandler> externalEvents = new ArrayList<ExternalEventHandler>();
 	private class ExternalEventHandler {
@@ -93,6 +96,7 @@ public class ObjectDiagFigure extends Figure {
 		//		add(new Label("  {" + state + "}  "));
 		add(attributeFigure);	//each of these are seperate figures (each in their own 'row' of the UMLClassFigure)
 		add(runtimePoolFigure);
+		add(methodFigure);
 
 		//identify as in activity mode by changing the colour of the lower compartment 
 		if (!object.getEventMode()) {
@@ -162,6 +166,13 @@ public class ObjectDiagFigure extends Figure {
 		return odObj;
 	}
 
+	public void addMethod(String name)
+	{
+		Label label = new Label(name);
+		label.setFont(classTextFont);
+		methodFigure.add(label);
+	}
+	
 	public void addAttribute(String name) {
 		Label label = new Label(name);
 		label.setFont(classTextFont);

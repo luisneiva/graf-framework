@@ -9,6 +9,7 @@ import model.modelTransformer.objectDisplay.ODAction;
 import model.modelTransformer.objectDisplay.ODAttribute;
 import model.modelTransformer.objectDisplay.ODEvent;
 import model.modelTransformer.objectDisplay.ODLink;
+import model.modelTransformer.objectDisplay.ODMethod;
 import model.modelTransformer.objectDisplay.ODObject;
 import model.modelTransformer.objectDisplay.ObjDiag;
 import model.modelTransformer.objectDisplay.ObjectDisplay;
@@ -33,39 +34,46 @@ import view.View;
  * @author Kevin O'Shea 
  */
 public class ObjectDiagDrawer extends ContentDrawer {
-	
+
 	public ObjectDiagDrawer(View view) {
 		super(view);
 	}
 
 	public void draw(ObjectDisplay objdisplay) {
-		
+
 		//This class only draws object diagrams
 		if (!(objdisplay instanceof ObjDiag)) return;
-		
+
 		// get from model the object diagram representation of the graph.
 		ObjDiag objDiag = (ObjDiag)objdisplay;
 		ArrayList<DisplayObject> objects = objDiag.getODObjs();
 		ArrayList<ODLink> odLinks = objDiag.getODLinks();
 
 		if (objects.size()>0 && !(objects.get(0) instanceof ODObject)) return;
-		
+
 		HashMap<ODObject, ObjectDiagFigure> classFigureMap = new HashMap<ODObject, ObjectDiagFigure>();
 		for (DisplayObject object : objects) {
 			ODObject odObj = (ODObject)object;
 			final ObjectDiagFigure classFigure = new ObjectDiagFigure(odObj);
+			
+			// draw methods in a fourth compartment of the object diagram boxes
+			for(ODMethod method : odObj.getMethods())
+			{
+				classFigure.addMethod(method.getName());
+			}
+			
 			for (ODAttribute attr : odObj.getAttributes()) {
 				classFigure.addAttribute(attr.getName(), attr.getValue());
 			}
 			if (odObj.getEventMode()) {
 				for (ODEvent event : odObj.getEventPool()) {
 					classFigure.addEvent(event.getName(), transListener,
-						new TransitionAction(odObj, "AcceptEventAction", event.getOccurence()));
+							new TransitionAction(odObj, "AcceptEventAction", event.getOccurence()));
 				}
 			} else {
 				for (ODAction action : odObj.getActionPool()) {
 					classFigure.addAction(action.getName(), transListener, action.getEnabled(),
-						new TransitionAction(odObj, action.getType(), action.getName()));
+							new TransitionAction(odObj, action.getType(), action.getName()));
 				}
 			}
 			for (ODEvent extevent : odObj.getExternalEvents()) {
@@ -105,7 +113,7 @@ public class ObjectDiagDrawer extends ContentDrawer {
 					c, true);
 			targetEndpointLocator.setUDistance(5); // distance from class box
 			targetEndpointLocator.setVDistance(5); // distance from association
-			
+
 			Label targetMultiplicityLabel = new Label(odLink.getLinkLeftLabel());
 			c.add(targetMultiplicityLabel, targetEndpointLocator);
 			ConnectionEndpointLocator sourceEndpointLocator = new ConnectionEndpointLocator(
