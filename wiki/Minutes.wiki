@@ -15,7 +15,8 @@
 || 18/7 || Team || [agenda1807 Agenda] || [minutes1807 Minutes] ||
 || 19/7 || Review || [http://svn.anu.edu.au/SE_projects/GRAF/Review2.ppt Agenda] || [reviewminutes Minutes] ||
 || 20/7 || Team || [agenda2007 Agenda] || [minutes2007 Minutes] ||
-|| 26/7 || Mentor || [agenda2607 Agenda] || [minutes2607 Minutes] ||
+|| 26/7 || Team || [agenda2607 Agenda] || [minutes2607 Minutes] ||
+|| 27/7 || Stakeholder || [agenda2707 Agenda] || [minutes2707 Minutes] ||
 
 
 Agendas and minutes from before 12/5/2010 are on [https://alliance.anu.edu.au/portal Alliance]. <br>
