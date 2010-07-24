@@ -1,5 +1,5 @@
 #summary agenda
-== Meeting title ==
+== Team Meeting ==
 *Date:* 26/7/10
 <br>*Time:* 2pm
 <br>*Location:* N110
