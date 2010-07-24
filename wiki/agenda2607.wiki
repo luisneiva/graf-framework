@@ -1,0 +1,11 @@
+#summary agenda
+== Meeting title ==
+*Date:* 26/7/10
+<br>*Time:* 2pm
+<br>*Location:* N110
+<br>*Duration:* 1 hour
+
+=== Agenda Items ===
+  * Progress reports
+  * Work out next milestone
+  * Plan stakeholder meeting
