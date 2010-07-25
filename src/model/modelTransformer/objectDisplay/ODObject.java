@@ -201,4 +201,14 @@ public class ODObject extends DisplayObject {
 		ODEvent event = new ODEvent(eventNode, null);
 		externalEvents.add(event);
 	}
+	
+	/**
+	 * Creates an ODMethod based on a node and adds it to this.
+	 * 
+	 * @param methodNode The node for the method.
+	 */
+	public void addMethod(Node methodNode) {
+		ODMethod method = new ODMethod(methodNode);
+		methods.add(method);	
+	}
 }
