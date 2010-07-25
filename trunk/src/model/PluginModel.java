@@ -70,7 +70,7 @@ public class PluginModel {
 		graphtomodel = GraphToModelFactory.createGraphToModel();
 		graphTransformer = new AGGTransformer(gtsRulesPath, gtsRulesSeqPath);
 // 		Uncomment the following to generate rule .dot files on setup
-//		graphTransformer.outputRulesAsDot(this.graphOutputsPath);
+//		graphTransformer.outputRulesAsDot(this.graphOutputsPath);	
 	}
 
 	/** Reset model for new animation */

@@ -416,6 +416,5 @@ public class AGGTransformer {
 			}
 			
 		}
-		
 	}
 }
