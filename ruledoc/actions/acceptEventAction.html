@@ -89,6 +89,7 @@
 				<h2>
 					Deviations/Assumptions in implementation
 				</h2>
+					<h3>This Action requires multiple rules</h3>
 					<p>
 						AcceptEventAction is one of the more complex actions currently implemented in GRAF. Because there is a wide variety of situations in which this action
 						will be applied, a rule is required to handle each general case. For example, in the description 'if the accept event action is executed and the object detected of an
@@ -96,6 +97,7 @@
 						possibility must be accounted for. The current rules implement only those cases required by the particular models that have been implemented.
 						The Rule Sequence file defines the order in which GRAF attempts to apply the rules. 
 					</p>
+					<h3>The isUnmarshalled attribute is not implemented</h3>
 					<p>
 						The current rules do not implement the isUnmarshalled attribute for this action. Similarly, the association to a result Output pin is not implemented.
 						In the definition, these elements deal with the attributes of the received event. However, the GRAF implementation interprets the action as a series of
@@ -103,6 +105,7 @@
 						trigger nodes 'belong' to transitions defined in the UML model rather than to a discrete acceptEvent node. It is not clear how GRAF would handle events that
 						have attributes that need to be processed - possibly new rules would need to be written to handle this case.
 					</p>
+					<h3>'Executable' edges are used to keep track of execution</h3>
 					<p>
 						Where an AcceptEventAction causes a transition into a new state, or otherwise indicates that an object must execute some behavior, 'executable' edges are 
 						used to link the object to the behavior that must be executed. These edges are not ordered. The Definition does not include executable edges.
@@ -110,6 +113,16 @@
 						deleting executable edges. The existence of an executable edge is necessary but not sufficient for the action to be executed. The action must also have its input pins 
 						satisfied.
 					</p>
+					<h3>The implementation of the 'HasBehavior' rule may conflict with the Definition</h3>
+					<p>The HasBehavior rule implements the solution to <a href="http://code.google.com/p/graf-framework/issues/detail?id=4">Issue 4</a>. It checks whether there is an existing
+					behaviorExecution ('bE') node and re-uses it, rather than creating a new one. This implementation may conflict with the definition of BehaviorExecutionSpecifications
+					at <a href="../../UML_Superstructure_2-1-2_07-11-02.pdf#page=482">14.3.2</a>. That section contains little substantive information except a reference to its generalisation,
+					ExecutionSpecifications at <a href="../../UML_Superstructure_2-1-2_07-11-02.pdf#page=494">14.3.10</a>. That definition specifies that an ExecutionSpecification 'is a
+					specification of the execution of a unit of behavior or action within the Lifeline' - referring to the lifeline in a Sequence Diagram. ExecutionSpecifications also have a
+					'duration' that is represented by 'start' and 'finish' OccurrenceSpecifications. This implies that there should be one behaviorExecution node for each <em>execution of</em> an action or other behavior.
+					GRAF does not implement OccurrenceSpecifications, and the fact that Issue 4 arose indicates that it does not always 'clean up' bE nodes in a way that gives them a definite
+					'start' and 'finish'. By re-using a behavior's existing bE node rather than (for example) destroying it and creating a new node, GRAF may be departing from the definition.</p>
+					
 				<h2>
 					Rules that implement this action:
 				</h2>
