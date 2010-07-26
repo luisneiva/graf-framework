@@ -8,30 +8,30 @@ Add your content here.
 = Progress Reports =
 
  * Cameron:
- ** -Found and started to add model from Shayne Flints lecture notes
+   ** Found and started to add model from Shayne Flints lecture notes
  * Hamish:
- ** -Tried out different methods of running GRAF and realised that new documentation is needed
+   ** Tried out different methods of running GRAF and realised that new documentation is needed
  * Frank:
- ** -Added new compartment for methods in classes
+   ** Added new compartment for methods in classes
  * Alice:
- ** -Modified object diagram builder to add methods to the method array and displays in animation
+   ** Modified object diagram builder to add methods to the method array and displays in animation
 
 = Work Allocation =
 
  * Cameron:
- ** -Continue adding new model
- ** -Continue with making tutorial
+   ** Continue adding new model
+   ** Continue with making tutorial
  * Hamish:
- ** -Create quickstart guide
- ** -link to svn
- ** -how to install svn and GRAF
+   ** Create quickstart guide
+   ** link to svn
+   ** how to install svn and GRAF
  * Frank:
- ** -Get method to send a signal when clicked on in animation
- ** -Change name of method when clicked
- ** -Get mealy notation working if nothing else to do
+   ** Get method to send a signal when clicked on in animation
+   ** Change name of method when clicked
+   ** Get mealy notation working if nothing else to do
  * Alice
- ** -Accept event activity with executable edges rule that applies to methods
- ** -Implement click apply for rule step for methods 
+   ** Accept event activity with executable edges rule that applies to methods
+   ** Implement click apply for rule step for methods 
 
 = Tomorrow =
 
@@ -41,13 +41,13 @@ Add your content here.
 = Future =
 
  * Milestones
- ** -Get methods working 31 AUG
- ** -Get tutorial working enough to show shayne 10 SEP
- ** -All new implementation working 10 OCT
- *** -METHODS
- *** -IF STATEMENTS
- *** -MEALY NOTATION
- *** -STATE MACHINE REGIONS
+   ** Get methods working 31 AUG
+   ** Get tutorial working enough to show shayne 10 SEP
+   ** All new implementation working 10 OCT
+     *** METHODS
+     *** IF STATEMENTS
+     *** MEALY NOTATION
+     *** STATE MACHINE REGIONS
 
 = Next Meeting =
  * 5pm tomorrow 27/7
