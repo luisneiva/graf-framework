@@ -1,5 +1,9 @@
 #labels Phase-Implementation
 *How to create .uml models to work in GRAF using Topcased (more to come: activity under states)*
+  * Open the models .uml file in the UML model editor by:
+    * right click on the file
+    * open with
+    * UML model editor
   * Create a signal for each transition by right clicking at a package -> new child -> packaged elements -> signal (you can press ‘s’ to find ‘signal’ faster)
   * Specify a unique name for each signal
   * Create a receive signal event for each signal by right clicking at a package -> new child -> packaged elements -> receive signal event (same rule applies: press ‘r’ to find it faster)
