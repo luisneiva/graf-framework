@@ -168,9 +168,18 @@ public class ObjectDiagFigure extends Figure {
 
 	public void addMethod(String name)
 	{
-		Label label = new Label(name);
-		label.setFont(classTextFont);
-		methodFigure.add(label);
+		final Label methodLabel = new ClickableLabel(name);
+		methodLabel.setFont(classTextFont);
+		
+		methodLabel.addMouseListener(new MouseListener(){
+			public void mousePressed(MouseEvent me) {
+				methodLabel.setText(methodLabel.getText() + "1");
+			}
+			public void mouseReleased(MouseEvent me) {}
+			public void mouseDoubleClicked(MouseEvent me) {}
+		});
+		
+		methodFigure.add(methodLabel);
 	}
 	
 	public void addAttribute(String name) {
