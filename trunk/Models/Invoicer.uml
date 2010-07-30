@@ -33,6 +33,10 @@
           <transition xmi:id="__XJ2kGGWEd-wueUf9g8DcA" name="DoTrans2" source="_rqv9YGGWEd-wueUf9g8DcA" target="_rqv9YGGWEd-wueUf9g8DcA">
             <effect xmi:type="uml:Activity" xmi:id="_sFvOsIDvEd-HL_3tQGiR0Q" name="InvoicingActivity">
               <node xmi:type="uml:CreateObjectAction" xmi:id="_ltvG0JIyEd-iTLouFHoPLQ" name="testCreateObject" classifier="_QDmQoGGVEd-wueUf9g8DcA"/>
+              <group xmi:type="uml:ConditionalNode" xmi:id="_DoWmgJOeEd-MMLemzXVFQQ" name="IfNode">
+                <clause xmi:id="_OYYEcJOnEd-MMLemzXVFQQ"/>
+                <clause xmi:id="_a1KQ0JugEd-O_uhl1L-0Ng"/>
+              </group>
             </effect>
             <trigger xmi:id="_SX4WIH6OEd-VRIfXnUISTA" name="TriggerDo2" event="_WeOUAIvBEd-K-dAEXfMJwA"/>
           </transition>

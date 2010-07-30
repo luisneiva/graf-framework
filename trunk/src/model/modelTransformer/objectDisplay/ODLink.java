@@ -74,4 +74,19 @@ public class ODLink {
 			}
 		}
 	}
+
+	public ArrayList<ODAction> getActions() {
+		
+		ArrayList<ODAction> testList = new ArrayList<ODAction>();
+		
+		ODAction test1 = new ODAction("test1");
+		ODAction test2 = new ODAction("test2");
+		ODAction test3 = new ODAction("test3");
+		
+		testList.add(test3);
+		testList.add(test1);
+		testList.add(test2);
+		
+		return testList;
+	}
 }

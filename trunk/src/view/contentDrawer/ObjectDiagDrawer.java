@@ -26,6 +26,7 @@ import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.widgets.Menu;
 
+import view.ClickableLabel;
 import view.View;
 
 /** 
@@ -55,13 +56,13 @@ public class ObjectDiagDrawer extends ContentDrawer {
 		for (DisplayObject object : objects) {
 			ODObject odObj = (ODObject)object;
 			final ObjectDiagFigure classFigure = new ObjectDiagFigure(odObj);
-			
+
 			// draw methods in a fourth compartment of the object diagram boxes
 			for(ODMethod method : odObj.getMethods())
 			{
 				classFigure.addMethod(method.getName());
 			}
-			
+
 			for (ODAttribute attr : odObj.getAttributes()) {
 				classFigure.addAttribute(attr.getName(), attr.getValue());
 			}
@@ -100,7 +101,7 @@ public class ObjectDiagDrawer extends ContentDrawer {
 			contents.add(classFigure);
 		}
 		// create links
-		for (ODLink odLink : odLinks) {
+		for (final ODLink odLink : odLinks) {
 			PolylineConnection c = new PolylineConnection();
 			ChopboxAnchor sourceAnchor = new ChopboxAnchor(classFigureMap
 					.get(odLink.getLeftObj()));
@@ -108,6 +109,7 @@ public class ObjectDiagDrawer extends ContentDrawer {
 					.get(odLink.getRightObj()));
 			c.setSourceAnchor(sourceAnchor);
 			c.setTargetAnchor(targetAnchor);
+
 			// Add labels to the connections
 			ConnectionEndpointLocator targetEndpointLocator = new ConnectionEndpointLocator(
 					c, true);
@@ -126,8 +128,28 @@ public class ObjectDiagDrawer extends ContentDrawer {
 					ConnectionLocator.MIDDLE);
 			middlelocator.setRelativePosition(PositionConstants.NORTH);
 			middlelocator.setGap(5);
-			Label relationshipLabel = new Label(odLink.getLinkCentreLabel());
-			c.add(relationshipLabel, middlelocator);
+
+			ArrayList<ODAction> actions = odLink.getActions();
+			for(int n = 0; n < actions.size(); n++) {
+				
+				ODAction odaction = actions.get(n);
+				String newLines = "";
+				for(int m = 0; m < n; m++)
+					newLines = newLines + "\n";
+
+				final Label relationshipLabel = new ClickableLabel(odLink.getLinkCentreLabel() + "\n" + odaction.getName() + newLines);
+				relationshipLabel.addMouseListener(new MouseListener(){
+					public void mousePressed(MouseEvent me) {
+						relationshipLabel.setText(relationshipLabel.getText() + "1");
+					}
+					public void mouseReleased(MouseEvent me) {}
+					public void mouseDoubleClicked(MouseEvent me) {}
+				});
+
+				c.add(relationshipLabel, middlelocator);
+
+			}
+
 			contents.add(c);
 		}
 	}

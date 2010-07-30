@@ -56,6 +56,9 @@ public class ODObject extends DisplayObject {
 		methods.add(new ODMethod("test method"));
 	}
 
+	public ODObject() {
+	}
+	
 	public boolean isAttributesShowing() {
 		return attributesShowing;
 	}
