@@ -16,7 +16,16 @@
 ==Milestone 3 - 1st of July==
   * Run a model in GRAF and 1 or 2 other animators and show the 3 animators give different results
 
-==Milestone 4 - 1st of September==
-  * Have 5 contentious models
-    * 3 from academia to show that contentious models exist
-    * 2 from industry to show that contentious models exist in industry
+==~~Milestone 4 - 1st of September~~==
+  * ~~Have 5 contentious models~~
+    * ~~3 from academia to show that contentious models exist~~
+    * ~~2 from industry to show that contentious models exist in industry~~
+
+==Milestone 4 - 31st of August==
+  * Make GRAF able to deal with methods
+
+== Milestone 5 - 10th of September==
+  * Get the tutorial to the point where we have something to present
+
+== Milestone 6 - 10th of October==
+  * Add all the [wbs new functionality]
