@@ -28,4 +28,4 @@
   * Get the tutorial to the point where we have something to present
 
 == Milestone 6 - 10th of October==
-  * Add all the [wbs new functionality]
+  * Add all the [WBS new functionality]
