@@ -1,0 +1,11 @@
+#summary agenda
+== Mentor meeting ==
+*Date:* 2/8/10
+<br>*Time:* 2pm
+<br>*Location:* N110
+<br>*Duration:* 1 hour
+
+=== Agenda Items ===
+  * Progress reports
+  * Work assignment
+  * Discussion of project with James
