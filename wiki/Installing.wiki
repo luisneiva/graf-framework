@@ -15,4 +15,5 @@ Install [http://www.topcased.org/ Topcased] org.topcased.sdk-3.3.0.zip (a little
   * Open the .umldi file (graphical representation)
   * You should be able to add classes using the interface presented
   * To add a state machine double click on the class you want to build one for. A dialog box will appear. Select State Machine Diagram and click ok.
+  * When adding transitions use the 'External Transition' option
   * The .uml file with the same name as the .umldi file can be plugged into GRAF
