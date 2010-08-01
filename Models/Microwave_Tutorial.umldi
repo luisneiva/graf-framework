@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagrams:Diagrams xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.topcased.org/DI/1.0" xmlns:diagrams="http://www.topcased.org/Diagrams/1.0" xmi:id="_S75GwZQGEd-LqdIAqTArKw" activeDiagram="_S75GwpQGEd-LqdIAqTArKw">
+  <model href="Microwave_Tutorial.uml#_w8IxIM37EdqwVrslYOdUDA"/>
+  <diagrams xmi:id="_S75GwpQGEd-LqdIAqTArKw" position="0,0" size="100,100" name="Microwave_Tutorial" viewport="0,0">
+    <property xmi:id="_TApq8JQGEd-LqdIAqTArKw" key="pageFormatName" value="A4"/>
+    <property xmi:id="_TApq8ZQGEd-LqdIAqTArKw" key="diagramWidth" value="840"/>
+    <property xmi:id="_TApq8pQGEd-LqdIAqTArKw" key="diagramHeight" value="1188"/>
+    <property xmi:id="_TApq85QGEd-LqdIAqTArKw" key="pageMarginName" value="Small Margin"/>
+    <property xmi:id="_TApq9JQGEd-LqdIAqTArKw" key="diagramTopMargin" value="20"/>
+    <property xmi:id="_TApq9ZQGEd-LqdIAqTArKw" key="diagramBottomMargin" value="20"/>
+    <property xmi:id="_TApq9pQGEd-LqdIAqTArKw" key="diagramLeftMargin" value="20"/>
+    <property xmi:id="_TApq95QGEd-LqdIAqTArKw" key="diagramRightMargin" value="20"/>
+    <property xmi:id="_TApq-JQGEd-LqdIAqTArKw" key="orientation" value="portrait"/>
+    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_S75Gw5QGEd-LqdIAqTArKw" presentation="org.topcased.modeler.uml.classdiagram">
+      <element href="Microwave_Tutorial.uml#_w8IxIM37EdqwVrslYOdUDA"/>
+    </semanticModel>
+    <contained xsi:type="di:GraphNode" xmi:id="_aiOmAJQGEd-LqdIAqTArKw" position="340,108" size="100,-1">
+      <anchorage xmi:id="_fhf8YJQGEd-LqdIAqTArKw" graphEdge="_fiZUQJQGEd-LqdIAqTArKw _gBo1AZQGEd-LqdIAqTArKw"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_aiOmAZQGEd-LqdIAqTArKw" presentation="default">
+        <element href="Microwave_Tutorial.uml#_aiOmCJQGEd-LqdIAqTArKw"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_aiOmApQGEd-LqdIAqTArKw">
+        <property xmi:id="_aiOmA5QGEd-LqdIAqTArKw" key="eStructuralFeatureID" value="37"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_aiOmBJQGEd-LqdIAqTArKw" presentation="default">
+          <element href="Microwave_Tutorial.uml#_aiOmCJQGEd-LqdIAqTArKw"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_aiOmBZQGEd-LqdIAqTArKw">
+        <property xmi:id="_aiOmBpQGEd-LqdIAqTArKw" key="eStructuralFeatureID" value="47 50 "/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_aiOmB5QGEd-LqdIAqTArKw" presentation="default">
+          <element href="Microwave_Tutorial.uml#_aiOmCJQGEd-LqdIAqTArKw"/>
+        </semanticModel>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_btgtYJQGEd-LqdIAqTArKw" position="29,107" size="100,-1">
+      <anchorage xmi:id="_fhf8YZQGEd-LqdIAqTArKw" graphEdge="_fiZUQJQGEd-LqdIAqTArKw"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_btgtYZQGEd-LqdIAqTArKw" presentation="default">
+        <element href="Microwave_Tutorial.uml#_btp3UJQGEd-LqdIAqTArKw"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_btgtYpQGEd-LqdIAqTArKw">
+        <property xmi:id="_btgtY5QGEd-LqdIAqTArKw" key="eStructuralFeatureID" value="37"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_btgtZJQGEd-LqdIAqTArKw" presentation="default">
+          <element href="Microwave_Tutorial.uml#_btp3UJQGEd-LqdIAqTArKw"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_btgtZZQGEd-LqdIAqTArKw">
+        <property xmi:id="_btgtZpQGEd-LqdIAqTArKw" key="eStructuralFeatureID" value="47 50 "/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_btgtZ5QGEd-LqdIAqTArKw" presentation="default">
+          <element href="Microwave_Tutorial.uml#_btp3UJQGEd-LqdIAqTArKw"/>
+        </semanticModel>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_cRN3YJQGEd-LqdIAqTArKw" position="633,108" size="100,-1">
+      <anchorage xmi:id="_gBo1AJQGEd-LqdIAqTArKw" graphEdge="_gBo1AZQGEd-LqdIAqTArKw"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_cRN3YZQGEd-LqdIAqTArKw" presentation="default">
+        <element href="Microwave_Tutorial.uml#_cRN3aJQGEd-LqdIAqTArKw"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_cRN3YpQGEd-LqdIAqTArKw">
+        <property xmi:id="_cRN3Y5QGEd-LqdIAqTArKw" key="eStructuralFeatureID" value="37"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_cRN3ZJQGEd-LqdIAqTArKw" presentation="default">
+          <element href="Microwave_Tutorial.uml#_cRN3aJQGEd-LqdIAqTArKw"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_cRN3ZZQGEd-LqdIAqTArKw">
+        <property xmi:id="_cRN3ZpQGEd-LqdIAqTArKw" key="eStructuralFeatureID" value="47 50 "/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_cRN3Z5QGEd-LqdIAqTArKw" presentation="default">
+          <element href="Microwave_Tutorial.uml#_cRN3aJQGEd-LqdIAqTArKw"/>
+        </semanticModel>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_fiZUQJQGEd-LqdIAqTArKw" anchor="_fhf8YJQGEd-LqdIAqTArKw _fhf8YZQGEd-LqdIAqTArKw">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_fiZUQZQGEd-LqdIAqTArKw" presentation="default">
+        <element href="Microwave_Tutorial.uml#_fiZUSpQGEd-LqdIAqTArKw"/>
+      </semanticModel>
+      <contained xsi:type="di:EdgeObjectUV" xmi:id="_fiZUQpQGEd-LqdIAqTArKw" id="srcNameEdgeObject" uDistance="10" vDistance="10"/>
+      <contained xsi:type="di:EdgeObjectUV" xmi:id="_fiZUQ5QGEd-LqdIAqTArKw" id="srcPropertiesEdgeObject" uDistance="25" vDistance="10"/>
+      <contained xsi:type="di:EdgeObjectUV" xmi:id="_fiZURJQGEd-LqdIAqTArKw" id="srcCountEdgeObject" uDistance="10" vDistance="-10"/>
+      <contained xsi:type="di:EdgeObjectUV" xmi:id="_fiZURZQGEd-LqdIAqTArKw" id="targetNameEdgeObject" uDistance="10" vDistance="10"/>
+      <contained xsi:type="di:EdgeObjectUV" xmi:id="_fiZURpQGEd-LqdIAqTArKw" id="targetPropertiesEdgeObject" uDistance="25" vDistance="10"/>
+      <contained xsi:type="di:EdgeObjectUV" xmi:id="_fiZUR5QGEd-LqdIAqTArKw" id="targetCountEdgeObject" uDistance="10" vDistance="-10"/>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_fiZUSJQGEd-LqdIAqTArKw" visible="false" id="middleNameEdgeObject" offset="0,10"/>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_fiZUSZQGEd-LqdIAqTArKw" id="stereotypeEdgeObject" offset="0,-10"/>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_gBo1AZQGEd-LqdIAqTArKw" anchor="_fhf8YJQGEd-LqdIAqTArKw _gBo1AJQGEd-LqdIAqTArKw">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_gBo1ApQGEd-LqdIAqTArKw" presentation="default">
+        <element href="Microwave_Tutorial.uml#_gBo1C5QGEd-LqdIAqTArKw"/>
+      </semanticModel>
+      <contained xsi:type="di:EdgeObjectUV" xmi:id="_gBo1A5QGEd-LqdIAqTArKw" id="srcNameEdgeObject" uDistance="10" vDistance="10"/>
+      <contained xsi:type="di:EdgeObjectUV" xmi:id="_gBo1BJQGEd-LqdIAqTArKw" id="srcPropertiesEdgeObject" uDistance="25" vDistance="10"/>
+      <contained xsi:type="di:EdgeObjectUV" xmi:id="_gBo1BZQGEd-LqdIAqTArKw" id="srcCountEdgeObject" uDistance="10" vDistance="-10"/>
+      <contained xsi:type="di:EdgeObjectUV" xmi:id="_gBo1BpQGEd-LqdIAqTArKw" id="targetNameEdgeObject" uDistance="10" vDistance="10"/>
+      <contained xsi:type="di:EdgeObjectUV" xmi:id="_gBo1B5QGEd-LqdIAqTArKw" id="targetPropertiesEdgeObject" uDistance="25" vDistance="10"/>
+      <contained xsi:type="di:EdgeObjectUV" xmi:id="_gBo1CJQGEd-LqdIAqTArKw" id="targetCountEdgeObject" uDistance="10" vDistance="-10"/>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_gBo1CZQGEd-LqdIAqTArKw" visible="false" id="middleNameEdgeObject" offset="0,10"/>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_gBo1CpQGEd-LqdIAqTArKw" id="stereotypeEdgeObject" offset="0,-10"/>
+    </contained>
+  </diagrams>
+  <subdiagrams xmi:id="_ldxGgpQGEd-LqdIAqTArKw">
+    <model href="Microwave_Tutorial.uml#_ldxGgJQGEd-LqdIAqTArKw"/>
+    <diagrams xmi:id="_ldxGg5QGEd-LqdIAqTArKw" position="0,0" size="100,100" name="Plate" viewport="0,0">
+      <property xmi:id="_lfZeMJQGEd-LqdIAqTArKw" key="pageFormatName" value="A4"/>
+      <property xmi:id="_lfZeMZQGEd-LqdIAqTArKw" key="diagramWidth" value="840"/>
+      <property xmi:id="_lfZeMpQGEd-LqdIAqTArKw" key="diagramHeight" value="1188"/>
+      <property xmi:id="_lfZeM5QGEd-LqdIAqTArKw" key="pageMarginName" value="Small Margin"/>
+      <property xmi:id="_lfZeNJQGEd-LqdIAqTArKw" key="diagramTopMargin" value="20"/>
+      <property xmi:id="_lfZeNZQGEd-LqdIAqTArKw" key="diagramBottomMargin" value="20"/>
+      <property xmi:id="_lfZeNpQGEd-LqdIAqTArKw" key="diagramLeftMargin" value="20"/>
+      <property xmi:id="_lfZeN5QGEd-LqdIAqTArKw" key="diagramRightMargin" value="20"/>
+      <property xmi:id="_lfZeOJQGEd-LqdIAqTArKw" key="orientation" value="portrait"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_ldxGhJQGEd-LqdIAqTArKw" presentation="org.topcased.modeler.uml.statemachinediagram">
+        <element href="Microwave_Tutorial.uml#_ldxGgJQGEd-LqdIAqTArKw"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_lfQUQJQGEd-LqdIAqTArKw" size="-1,-1">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_lfQUQZQGEd-LqdIAqTArKw" presentation="default">
+          <element href="Microwave_Tutorial.uml#_ldxGgZQGEd-LqdIAqTArKw"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_nSGx8JQGEd-LqdIAqTArKw" position="181,130" size="158,57">
+          <anchorage xmi:id="_rKQvQZQGEd-LqdIAqTArKw" graphEdge="_rKZ5MJQGEd-LqdIAqTArKw _smy-sJQGEd-LqdIAqTArKw"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_nSGx8ZQGEd-LqdIAqTArKw" presentation="default">
+            <element href="Microwave_Tutorial.uml#_nSjd4JQGEd-LqdIAqTArKw"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_oCAk4JQGEd-LqdIAqTArKw" position="178,287" size="158,57">
+          <anchorage xmi:id="_rKQvQJQGEd-LqdIAqTArKw" graphEdge="_rKZ5MJQGEd-LqdIAqTArKw _smy-sJQGEd-LqdIAqTArKw"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_oCAk4ZQGEd-LqdIAqTArKw" presentation="default">
+            <element href="Microwave_Tutorial.uml#_oCAk4pQGEd-LqdIAqTArKw"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphEdge" xmi:id="_rKZ5MJQGEd-LqdIAqTArKw" anchor="_rKQvQJQGEd-LqdIAqTArKw _rKQvQZQGEd-LqdIAqTArKw">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_rKZ5MZQGEd-LqdIAqTArKw" presentation="default">
+            <element href="Microwave_Tutorial.uml#_rKZ5NJQGEd-LqdIAqTArKw"/>
+          </semanticModel>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_rKZ5MpQGEd-LqdIAqTArKw" id="nameEdgeObject"/>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_rKZ5M5QGEd-LqdIAqTArKw" visible="false" id="TransitionStereotypeEdgeObject"/>
+          <waypoints>[-139, -78, -142, 79]</waypoints>
+        </contained>
+        <contained xsi:type="di:GraphEdge" xmi:id="_smy-sJQGEd-LqdIAqTArKw" anchor="_rKQvQZQGEd-LqdIAqTArKw _rKQvQJQGEd-LqdIAqTArKw">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_smy-sZQGEd-LqdIAqTArKw" presentation="default">
+            <element href="Microwave_Tutorial.uml#_smy-tJQGEd-LqdIAqTArKw"/>
+          </semanticModel>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_smy-spQGEd-LqdIAqTArKw" id="nameEdgeObject" offset="6,0"/>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_smy-s5QGEd-LqdIAqTArKw" visible="false" id="TransitionStereotypeEdgeObject"/>
+          <waypoints>[141, 72, 144, -85]</waypoints>
+        </contained>
+      </contained>
+    </diagrams>
+  </subdiagrams>
+  <subdiagrams xmi:id="_wnbikpQGEd-LqdIAqTArKw">
+    <model href="Microwave_Tutorial.uml#_wnbikJQGEd-LqdIAqTArKw"/>
+    <diagrams xmi:id="_wnlTkJQGEd-LqdIAqTArKw" position="0,0" size="100,100" name="Beeper" viewport="0,0">
+      <property xmi:id="_wn4OgpQGEd-LqdIAqTArKw" key="pageFormatName" value="A4"/>
+      <property xmi:id="_wn4Og5QGEd-LqdIAqTArKw" key="diagramWidth" value="840"/>
+      <property xmi:id="_wn4OhJQGEd-LqdIAqTArKw" key="diagramHeight" value="1188"/>
+      <property xmi:id="_wn4OhZQGEd-LqdIAqTArKw" key="pageMarginName" value="Small Margin"/>
+      <property xmi:id="_wn4OhpQGEd-LqdIAqTArKw" key="diagramTopMargin" value="20"/>
+      <property xmi:id="_wn4Oh5QGEd-LqdIAqTArKw" key="diagramBottomMargin" value="20"/>
+      <property xmi:id="_wn4OiJQGEd-LqdIAqTArKw" key="diagramLeftMargin" value="20"/>
+      <property xmi:id="_wn4OiZQGEd-LqdIAqTArKw" key="diagramRightMargin" value="20"/>
+      <property xmi:id="_wn4OipQGEd-LqdIAqTArKw" key="orientation" value="portrait"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_wnlTkZQGEd-LqdIAqTArKw" presentation="org.topcased.modeler.uml.statemachinediagram">
+        <element href="Microwave_Tutorial.uml#_wnbikJQGEd-LqdIAqTArKw"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_wn4OgJQGEd-LqdIAqTArKw" size="-1,-1">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_wn4OgZQGEd-LqdIAqTArKw" presentation="default">
+          <element href="Microwave_Tutorial.uml#_wnbikZQGEd-LqdIAqTArKw"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_xu_nkJQGEd-LqdIAqTArKw" position="295,77" size="142,77">
+          <anchorage xmi:id="_0vp8MJQGEd-LqdIAqTArKw" graphEdge="_0vp8MpQGEd-LqdIAqTArKw _12dzQJQGEd-LqdIAqTArKw"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_xu_nkZQGEd-LqdIAqTArKw" presentation="default">
+            <element href="Microwave_Tutorial.uml#_xu_nkpQGEd-LqdIAqTArKw"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_yQUL8JQGEd-LqdIAqTArKw" position="297,282" size="142,77">
+          <anchorage xmi:id="_0vp8MZQGEd-LqdIAqTArKw" graphEdge="_0vp8MpQGEd-LqdIAqTArKw _12dzQJQGEd-LqdIAqTArKw"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_yQUL8ZQGEd-LqdIAqTArKw" presentation="default">
+            <element href="Microwave_Tutorial.uml#_yQUL8pQGEd-LqdIAqTArKw"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphEdge" xmi:id="_0vp8MpQGEd-LqdIAqTArKw" anchor="_0vp8MJQGEd-LqdIAqTArKw _0vp8MZQGEd-LqdIAqTArKw">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_0vp8M5QGEd-LqdIAqTArKw" presentation="default">
+            <element href="Microwave_Tutorial.uml#_0vp8NpQGEd-LqdIAqTArKw"/>
+          </semanticModel>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_0vp8NJQGEd-LqdIAqTArKw" id="nameEdgeObject" offset="1,-17"/>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_0vp8NZQGEd-LqdIAqTArKw" visible="false" id="TransitionStereotypeEdgeObject"/>
+          <waypoints>[-85, 111, -87, -94]</waypoints>
+        </contained>
+        <contained xsi:type="di:GraphEdge" xmi:id="_12dzQJQGEd-LqdIAqTArKw" anchor="_0vp8MZQGEd-LqdIAqTArKw _0vp8MJQGEd-LqdIAqTArKw">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_12dzQZQGEd-LqdIAqTArKw" presentation="default">
+            <element href="Microwave_Tutorial.uml#_12dzRJQGEd-LqdIAqTArKw"/>
+          </semanticModel>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_12dzQpQGEd-LqdIAqTArKw" id="nameEdgeObject"/>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_12dzQ5QGEd-LqdIAqTArKw" visible="false" id="TransitionStereotypeEdgeObject"/>
+          <waypoints>[119, -100, 121, 105]</waypoints>
+        </contained>
+      </contained>
+    </diagrams>
+  </subdiagrams>
+  <subdiagrams xmi:id="_BIAxkJeMEd-ieJ4hFLUisQ">
+    <model href="Microwave_Tutorial.uml#_BH8gIZeMEd-ieJ4hFLUisQ"/>
+    <diagrams xmi:id="_BIGRIJeMEd-ieJ4hFLUisQ" position="0,0" size="100,100" name="Oven" viewport="0,0">
+      <property xmi:id="_BIyNopeMEd-ieJ4hFLUisQ" key="pageFormatName" value="A4"/>
+      <property xmi:id="_BIyNo5eMEd-ieJ4hFLUisQ" key="diagramWidth" value="840"/>
+      <property xmi:id="_BIyNpJeMEd-ieJ4hFLUisQ" key="diagramHeight" value="1188"/>
+      <property xmi:id="_BIyNpZeMEd-ieJ4hFLUisQ" key="pageMarginName" value="Small Margin"/>
+      <property xmi:id="_BIyNppeMEd-ieJ4hFLUisQ" key="diagramTopMargin" value="20"/>
+      <property xmi:id="_BIyNp5eMEd-ieJ4hFLUisQ" key="diagramBottomMargin" value="20"/>
+      <property xmi:id="_BIy0sJeMEd-ieJ4hFLUisQ" key="diagramLeftMargin" value="20"/>
+      <property xmi:id="_BIy0sZeMEd-ieJ4hFLUisQ" key="diagramRightMargin" value="20"/>
+      <property xmi:id="_BIy0speMEd-ieJ4hFLUisQ" key="orientation" value="portrait"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_BIGRIZeMEd-ieJ4hFLUisQ" presentation="org.topcased.modeler.uml.statemachinediagram">
+        <element href="Microwave_Tutorial.uml#_BH8gIZeMEd-ieJ4hFLUisQ"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_BIyNoJeMEd-ieJ4hFLUisQ" size="-1,-1">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_BIyNoZeMEd-ieJ4hFLUisQ" presentation="default">
+          <element href="Microwave_Tutorial.uml#_BH8gIpeMEd-ieJ4hFLUisQ"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_CraeAJeMEd-ieJ4hFLUisQ" position="103,173" size="136,50">
+          <anchorage xmi:id="_HW6j0JeMEd-ieJ4hFLUisQ" graphEdge="_HW8ZAJeMEd-ieJ4hFLUisQ _Lol0YJeMEd-ieJ4hFLUisQ _CAdnEJeNEd-ieJ4hFLUisQ _O527YJeNEd-ieJ4hFLUisQ"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_CraeAZeMEd-ieJ4hFLUisQ" presentation="default">
+            <element href="Microwave_Tutorial.uml#_Crc6QJeMEd-ieJ4hFLUisQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_E0DlgJeMEd-ieJ4hFLUisQ" position="163,335" size="85,50">
+          <anchorage xmi:id="_HW6j0ZeMEd-ieJ4hFLUisQ" graphEdge="_HW8ZAJeMEd-ieJ4hFLUisQ _Lol0YJeMEd-ieJ4hFLUisQ _xzRKQJeNEd-ieJ4hFLUisQ"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_E0DlgZeMEd-ieJ4hFLUisQ" presentation="default">
+            <element href="Microwave_Tutorial.uml#_E0IeAJeMEd-ieJ4hFLUisQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphEdge" xmi:id="_HW8ZAJeMEd-ieJ4hFLUisQ" anchor="_HW6j0JeMEd-ieJ4hFLUisQ _HW6j0ZeMEd-ieJ4hFLUisQ">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_HW8ZAZeMEd-ieJ4hFLUisQ" presentation="default">
+            <element href="Microwave_Tutorial.uml#_HW9AEJeMEd-ieJ4hFLUisQ"/>
+          </semanticModel>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_HW8ZApeMEd-ieJ4hFLUisQ" id="nameEdgeObject" offset="14,-7"/>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_HW8ZA5eMEd-ieJ4hFLUisQ" visible="false" id="TransitionStereotypeEdgeObject"/>
+          <waypoints>[-63, 50, -97, -112]</waypoints>
+          <waypoints>[-49, 98, -83, -64]</waypoints>
+        </contained>
+        <contained xsi:type="di:GraphEdge" xmi:id="_Lol0YJeMEd-ieJ4hFLUisQ" anchor="_HW6j0ZeMEd-ieJ4hFLUisQ _HW6j0JeMEd-ieJ4hFLUisQ">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_Lol0YZeMEd-ieJ4hFLUisQ" presentation="default">
+            <element href="Microwave_Tutorial.uml#_LombcJeMEd-ieJ4hFLUisQ"/>
+          </semanticModel>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_Lol0YpeMEd-ieJ4hFLUisQ" id="nameEdgeObject" offset="-5,-17"/>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_Lol0Y5eMEd-ieJ4hFLUisQ" visible="false" id="TransitionStereotypeEdgeObject"/>
+          <waypoints>[35, -89, 69, 73]</waypoints>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_7n9z8JeMEd-ieJ4hFLUisQ" position="395,189" size="84,50">
+          <anchorage xmi:id="_CAcY8JeNEd-ieJ4hFLUisQ" graphEdge="_CAdnEJeNEd-ieJ4hFLUisQ _IgJnUJeNEd-ieJ4hFLUisQ _jSlvEJeNEd-ieJ4hFLUisQ _qRDWAJeNEd-ieJ4hFLUisQ"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_7n9z8ZeMEd-ieJ4hFLUisQ" presentation="default">
+            <element href="Microwave_Tutorial.uml#_7oDTgJeMEd-ieJ4hFLUisQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphEdge" xmi:id="_CAdnEJeNEd-ieJ4hFLUisQ" anchor="_HW6j0JeMEd-ieJ4hFLUisQ _CAcY8JeNEd-ieJ4hFLUisQ">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_CAdnEZeNEd-ieJ4hFLUisQ" presentation="default">
+            <element href="Microwave_Tutorial.uml#_CAdnFJeNEd-ieJ4hFLUisQ"/>
+          </semanticModel>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_CAdnEpeNEd-ieJ4hFLUisQ" id="nameEdgeObject" offset="2,-15"/>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_CAdnE5eNEd-ieJ4hFLUisQ" visible="false" id="TransitionStereotypeEdgeObject"/>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_FYy00JeNEd-ieJ4hFLUisQ" position="227,71" size="128,31">
+          <anchorage xmi:id="_IgIZMJeNEd-ieJ4hFLUisQ" graphEdge="_IgJnUJeNEd-ieJ4hFLUisQ _O527YJeNEd-ieJ4hFLUisQ"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_FYy00ZeNEd-ieJ4hFLUisQ" presentation="default">
+            <element href="Microwave_Tutorial.uml#_FY4UYJeNEd-ieJ4hFLUisQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphEdge" xmi:id="_IgJnUJeNEd-ieJ4hFLUisQ" anchor="_CAcY8JeNEd-ieJ4hFLUisQ _IgIZMJeNEd-ieJ4hFLUisQ">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IgJnUZeNEd-ieJ4hFLUisQ" presentation="default">
+            <element href="Microwave_Tutorial.uml#_IgKOYJeNEd-ieJ4hFLUisQ"/>
+          </semanticModel>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_IgJnUpeNEd-ieJ4hFLUisQ" id="nameEdgeObject" offset="29,-15"/>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_IgJnU5eNEd-ieJ4hFLUisQ" visible="false" id="TransitionStereotypeEdgeObject"/>
+          <waypoints>[-36, -83, 110, 45]</waypoints>
+        </contained>
+        <contained xsi:type="di:GraphEdge" xmi:id="_O527YJeNEd-ieJ4hFLUisQ" anchor="_IgIZMJeNEd-ieJ4hFLUisQ _HW6j0JeMEd-ieJ4hFLUisQ">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_O527YZeNEd-ieJ4hFLUisQ" presentation="default">
+            <element href="Microwave_Tutorial.uml#_O53icJeNEd-ieJ4hFLUisQ"/>
+          </semanticModel>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_O527YpeNEd-ieJ4hFLUisQ" id="nameEdgeObject" offset="-40,-15"/>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_O527Y5eNEd-ieJ4hFLUisQ" visible="false" id="TransitionStereotypeEdgeObject"/>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_gwbUUJeNEd-ieJ4hFLUisQ" position="392,348" size="168,50">
+          <anchorage xmi:id="_jSkg8JeNEd-ieJ4hFLUisQ" graphEdge="_jSlvEJeNEd-ieJ4hFLUisQ _qRDWAJeNEd-ieJ4hFLUisQ _xzRKQJeNEd-ieJ4hFLUisQ"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_gwbUUZeNEd-ieJ4hFLUisQ" presentation="default">
+            <element href="Microwave_Tutorial.uml#_gwha8JeNEd-ieJ4hFLUisQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphEdge" xmi:id="_jSlvEJeNEd-ieJ4hFLUisQ" anchor="_jSkg8JeNEd-ieJ4hFLUisQ _CAcY8JeNEd-ieJ4hFLUisQ">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_jSlvEZeNEd-ieJ4hFLUisQ" presentation="default">
+            <element href="Microwave_Tutorial.uml#_jSmWIJeNEd-ieJ4hFLUisQ"/>
+          </semanticModel>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_jSlvEpeNEd-ieJ4hFLUisQ" id="nameEdgeObject" offset="-54,-6"/>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_jSlvE5eNEd-ieJ4hFLUisQ" visible="false" id="TransitionStereotypeEdgeObject"/>
+          <waypoints>[-49, -32, -10, 127]</waypoints>
+          <waypoints>[-49, -72, -10, 87]</waypoints>
+          <waypoints>[-49, -118, -10, 41]</waypoints>
+        </contained>
+        <contained xsi:type="di:GraphEdge" xmi:id="_qRDWAJeNEd-ieJ4hFLUisQ" anchor="_CAcY8JeNEd-ieJ4hFLUisQ _jSkg8JeNEd-ieJ4hFLUisQ">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_qRDWAZeNEd-ieJ4hFLUisQ" presentation="default">
+            <element href="Microwave_Tutorial.uml#_qRD9EJeNEd-ieJ4hFLUisQ"/>
+          </semanticModel>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_qRDWApeNEd-ieJ4hFLUisQ" id="nameEdgeObject" offset="42,33"/>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_qRDWA5eNEd-ieJ4hFLUisQ" visible="false" id="TransitionStereotypeEdgeObject"/>
+          <waypoints>[39, 42, 0, -117]</waypoints>
+        </contained>
+        <contained xsi:type="di:GraphEdge" xmi:id="_xzRKQJeNEd-ieJ4hFLUisQ" anchor="_jSkg8JeNEd-ieJ4hFLUisQ _HW6j0ZeMEd-ieJ4hFLUisQ">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_xzRKQZeNEd-ieJ4hFLUisQ" presentation="default">
+            <element href="Microwave_Tutorial.uml#_xzRxUJeNEd-ieJ4hFLUisQ"/>
+          </semanticModel>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_xzRKQpeNEd-ieJ4hFLUisQ" id="nameEdgeObject" offset="-4,21"/>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_xzRKQ5eNEd-ieJ4hFLUisQ" visible="false" id="TransitionStereotypeEdgeObject"/>
+        </contained>
+      </contained>
+    </diagrams>
+  </subdiagrams>
+</diagrams:Diagrams>
