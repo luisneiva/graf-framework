@@ -44,11 +44,9 @@ With eclipse running, a new project must be created from the GRAF source code in
 
 From this point on GRAF can be run in two different ways:
  # Navigate inside the newly created project and select the src folder. Inside this is the controller package. Double click this to make the controller.java class visible. Right click on this and select the 'Run As' option. From this click the java application. This will launch the class as a java application and should bring up a filechooser of the models folder. Select a model and click ok. All going to plan GRAF should run and show you the model animation. To make the model do animate, right click on a class and chooose one of the following options.
-
  # select the window button at the top middle of the screen and select the 'show view' option. 
 
 http://graf-framework.googlecode.com/files/window.png
-
 In the next view select the other option which will bring up a list of folders. Open the 'Model Animator' folder and select the 'Animator' option and press ok.
 
 
