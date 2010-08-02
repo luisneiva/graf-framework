@@ -25,6 +25,17 @@ http://graf-framework.googlecode.com/files/tortoise.png
  
 In the’ URL of repository’ section copy the link from [http://code.google.com/p/graf-framework/source/checkout Source code] and paste. The Checkout directory should have automatically been filled out by the program and should point to the folder that you are currently inside.  If this is not the case, using the ‘...’  navigate to the desired folder. Press the ‘ok’ button to now checkout the most current revision of the repository.
 
+
+== Downloading and Installing eclipse ==
+
+To run the source code one must install and download eclipse. This can be obtained from the following link:
+
+
+[http://www.eclipse.org/downloads eclipse]
+
+
+To install eclipse, unpack the downloaded package and navigate inside the eclipse folder. Double click the 
+
 = Details =
 
 Add your content here.  Format your content with:
