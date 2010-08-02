@@ -1,0 +1,31 @@
+#summary Minutes for 02/08/10
+
+= Group Meeting =
+
+= Meeting name =
+Date: 02/08/10
+<br>Location: CSIT N110
+<br>Present: Oscar, Stephen, Alice, Cameron, Hamish and Frank
+<br>Time: 2pm
+<br>Duration: 20 min
+
+== Schedule Future Meetings ==
+
+  * Stakeholder meeting with Annette - 5pm Wednesday 4th August
+  * Client meeting with Greg - 2pm Monday 9th August
+  * Mentor meeting with James - 5pm Tuesday 10th August
+
+== Progress Reports ==
+
+  * Alice – continued working on minutes
+  * Cameron – continued working on models – make standardisation of names guide
+  * Hamish – started quickstart guide, broke GRAF plugin/application – error not in our code
+  * Frank – mealy notation ‘test’ implemented
+
+== Task Allocation ==
+
+  * Frank - try to work out if/how condition nodes work and try to find out how the regions work on the state machine in the elevator model. Create a new uml file for the elevator model that contains both of the state machines in the model. 
+  * Cameron – put together a presentation on what has been done – a draft for what we’ll show to Shayne
+  * Hamish – continue what you’re doing
+  * Alice – continue to work on the Method stuff
+  * Stephen - diagnose JAR file errors
