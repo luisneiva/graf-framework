@@ -34,7 +34,13 @@ To run the source code one must install and download eclipse. This can be obtain
 [http://www.eclipse.org/downloads eclipse]
 
 
-To install eclipse, unpack the downloaded package and navigate inside the eclipse folder. Double click the 
+To install eclipse, unpack the downloaded package and navigate inside the eclipse folder. Double click the eclipse.exe executable to launch eclipse. Whilst initialising, eclipse will ask for a location to setup its workspace. Navigate to any folder or the folder containing the GRAF source code and press ok:
+
+http://graf-framework.googlecode.com/files/workspace.png
+
+== Running GRAF ==
+
+With eclipse running, a new project must be created from the GRAF source code in order to run GRAF
 
 = Details =
 
