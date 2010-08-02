@@ -47,6 +47,7 @@ From this point on GRAF can be run in two different ways:
  # select the window button at the top middle of the screen and select the 'show view' option. 
 
 http://graf-framework.googlecode.com/files/window.png
+
 In the next view select the other option which will bring up a list of folders. Open the 'Model Animator' folder and select the 'Animator' option and press ok.
 
 
