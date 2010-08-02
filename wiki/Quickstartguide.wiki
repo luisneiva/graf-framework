@@ -40,7 +40,11 @@ http://graf-framework.googlecode.com/files/workspace.png
 
 == Running GRAF ==
 
-With eclipse running, a new project must be created from the GRAF source code in order to run GRAF
+With eclipse running, a new project must be created from the GRAF source code in order to run GRAF. To create a new java project select the file button in the top left of the screen. From this menu select new -> java project. This will bring up a box that will allow the user to select options for building a new java project. Uncheck the use default location and browse to the folder containing the checked out GRAF source code. With the location set the finish button can now be selected. This will create the correct build paths to the folder and will generate a new project that will show up in the top left of the eclipse window.
+
+From this point on GRAF can be run in two different ways:
+ # Navigate inside the newly created project and select the src folder. Inside this is the controller package. Double click this to make the controller.java class visible. Right click on this and select the 'Run As' option. From this click the java application. This will launch the class as a java application and should bring up a filechooser of the models folder. Select a model and click ok. All going to plan GRAF should run and show you the model animation. To make the model do animate, right click on a class and chooose one of the following options.
+ # 
 
 = Details =
 
