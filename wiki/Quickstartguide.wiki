@@ -16,6 +16,9 @@ Now that tortoise has been installed one can checkout a copy of the GRAF source 
  
 Select the SVN Checkout option which will bring up the following box:
 
+
+https://alliance.anu.edu.au/access/content/group/944d1b04-7284-49af-a71e-287371313ec8/Wiki%20attachments/tortoise.png
+
  
 In the’ URL of repository’ section copy the link from [http://code.google.com/p/graf-framework/source/checkout Source code] and paste. The Checkout directory should have automatically been filled out by the program and should point to the folder that you are currently inside.  If this is not the case, using the ‘...’  navigate to the desired folder. Press the ‘ok’ button to now checkout the most current revision of the repository.
 
