@@ -48,22 +48,18 @@ From this point on GRAF can be run in two different ways:
 
  # select the window button at the top middle of the screen and select the 'show view' option. 
 
-
 http://graf-framework.googlecode.com/files/window.png
-
 
 In the next view select the other option which will bring up a list of folders. Open the 'Model Animator' folder and select the 'Animator' option and press ok.
 
 
-
-http://graf-framework.googlecode.com/files/animate.png
-
+http://graf-framework.googlecode.com/files/animator.png
 
 
 This will enable the animator tab at the bottom of the screen. Now this has been enabled, navigate inside the new java project that has been created and open the models folder. Right click on and of the .modeltest files and select the 'Animate' option.
 
 
-http://graf-framework.googlecode.com/files/animator.png
+http://graf-framework.googlecode.com/files/animate.png
 
 
 Select the animator tab which will allow the user to see GRAF executing. To transfer states, right click on one of the clases and select an appropriate option.
