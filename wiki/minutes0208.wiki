@@ -2,7 +2,6 @@
 
 = Group Meeting =
 
-= Meeting name =
 Date: 02/08/10
 <br>Location: CSIT N110
 <br>Present: Oscar, Stephen, Alice, Cameron, Hamish and Frank
