@@ -31,6 +31,7 @@ For a brief description of this year's project go [http://cs.anu.edu.au/student/
 [Installing Visual Paradigm and Topcased]<br>
 [umlModelsUsingTopcased Create uml models to work in GRAF using Topcased (more to come: activity under states)]<br>
 [InvoicerModel Invoicer Model]<br>
+[Quick start guide Quick start guide]<br>
 
 === Project Documentation ===
 [Scope Scope]
