@@ -11,9 +11,11 @@ Download this program by clicking the ‘save file’ button and selecting an ap
 
 == Checking out the Source Code ==
 
-Now that tortoise has been installed one can checkout a copy of the GRAF source code from the Google code repository.  To do this, create a new folder in a logical place that you will remember. Once inside this folder right click the mouse and a list of options should<br /> appear similar to the following:<br /> 
+Now that tortoise has been installed one can checkout a copy of the GRAF source code from the Google code repository.  To do this, create a new folder in a logical place that you will remember. Once inside this folder right click the mouse and a list of options should appear similar to the following:
  
-Select the SVN Checkout option which will bring up the following box:<br />
+ 
+Select the SVN Checkout option which will bring up the following box:
+
  
 In the’ URL of repository’ section copy the link from [http://code.google.com/p/graf-framework/source/checkout Source code] and paste. The Checkout directory should have automatically been filled out by the program and should point to the folder that you are currently inside.  If this is not the case, using the ‘...’  navigate to the desired folder. Press the ‘ok’ button to now checkout the most current revision of the repository.
 
