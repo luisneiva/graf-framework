@@ -1,0 +1,14 @@
+#summary Page outlining how to get GRAF running for potential clients
+
+= Quick Start Guide =
+
+In order to obtain a copy of all the files needed to run and use GRAF version control client will be needed to extract these off the Google code repository. A useful svn client used by some of the team members is tortoise svn which can be found here: 
+ * [http://sourceforge.net/projects/tortoisesvn/files/Application/1.6.10/TortoiseSVN-1.6.10.19898-win32-svn-1.6.12.msi/download TortoiseSVN]
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
