@@ -16,7 +16,7 @@
 || 19/7 || Review || [http://svn.anu.edu.au/SE_projects/GRAF/Review2.ppt Agenda] || [reviewminutes Minutes] ||
 || 20/7 || Team || [agenda2007 Agenda] || [minutes2007 Minutes] ||
 || 26/7 || Team || [agenda2607 Agenda] || [minutes2607 Minutes] ||
-|| 2/8 || Mentor || [agenda0208 Agenda] || [minutes0208 Minutes] ||
+|| 2/8 || Team || [agenda0208 Agenda] || [minutes0208 Minutes] ||
 || 4/8 || Stakeholder || [agenda2707 Agenda] || [minutes2707 Minutes] ||
 
 
