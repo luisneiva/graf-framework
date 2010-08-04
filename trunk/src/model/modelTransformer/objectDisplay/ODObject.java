@@ -47,13 +47,10 @@ public class ODObject extends DisplayObject {
 		actionPool = new ArrayList<ODAction>();
 		eventPool = new ArrayList<ODEvent>();
 		externalEvents = new ArrayList<ODEvent>();
+		methods = new ArrayList<ODMethod>();
 		
 		//Set initial location to random point on screen (more structured placement would be better) 
-		setLocation(randomGenerator.nextInt(400),randomGenerator.nextInt(300));
-		
-		//TODO delete these 2 lines once ODMethod properly implemented
-		methods = new ArrayList<ODMethod>();
-		methods.add(new ODMethod("test method"));
+		setLocation(randomGenerator.nextInt(400),randomGenerator.nextInt(300));		
 	}
 
 	public boolean isAttributesShowing() {
