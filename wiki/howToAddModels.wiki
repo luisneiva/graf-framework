@@ -2,7 +2,7 @@ _This is the page where a more refined tutorial for putting models into GRAF wil
 
 == Installation ==
 
-Install [http://www.visual-paradigm.com/product/sde/ec/ Visual Paradigm Community Edition SDE for Eclipse]. A user guide is [http://www.visual-paradigm.com/support/documents/sdejavauserguide.jsp provided]. Open Eclipse and create a 
+Install [http://www.visual-paradigm.com/product/sde/ec/ Visual Paradigm Community Edition SDE for Eclipse]. A user guide is [http://www.visual-paradigm.com/support/documents/sdejavauserguide.jsp provided].  
 
 Once this is completed install [http://www.topcased.org/ Topcased] org.topcased.sdk-3.3.0.zip (a little bit under 30megs) by dragging and dropping the downloaded files into the Eclipse plugins directory. 
 
