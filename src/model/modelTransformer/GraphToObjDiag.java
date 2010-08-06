@@ -242,7 +242,6 @@ public class GraphToObjDiag implements GraphToModel {
 		}
 		
 		// Find the methods
-		// TODO Fill in the values and complete this section, compared to the actions above
 		for (ODObject object : objects) {
 			
 			if (object.getGraphNode() != null) {
@@ -250,28 +249,16 @@ public class GraphToObjDiag implements GraphToModel {
 				// Get the type node of the object (there should only be one)
 				ArrayList<String> traceToType = new ArrayList<String>();
 				traceToType.add("i");
-				ArrayList<Node> objectTypeNodes = ListGraph.toTrace(traceToType, object.getGraphNode());
+				Node objectTypeNode = ListGraph.toTrace(traceToType, object.getGraphNode()).get(0);
 				
-				// This sequence of edges leads from a class/'type' to a method node
+				// This sequence of edges leads from a class/'type' to a method node (if there is one)
 				ArrayList<String> traceToMethod = new ArrayList<String>();
 				traceToMethod.add("ownedOperation");
 				traceToMethod.add("method");
-				traceToMethod.add("node");
+				//traceToMethod.add("node");
 				
 				// Trace from the object's class node to any potential methods
-				ArrayList<Node> foundMethods = ListGraph.toTrace(traceToMethod, objectTypeNodes.get(0));
-				
-//				// Check whether the found nodes resemble methods?
-//				System.out.println("This is object " + object.getGraphNode().getAttribute() + " : " + objectTypeNodes.get(0).getAttribute());
-//				if (potentialMethods.isEmpty()) {
-//					System.out.println("No methods found.");
-//				} else {
-//					for (Node potentialMethod : potentialMethods) {
-//						
-//						System.out.println(potentialMethod.attributeToString());
-//						
-//					}
-//				}
+				ArrayList<Node> foundMethods = ListGraph.toTrace(traceToMethod, objectTypeNode);
 				
 				for (Node method : foundMethods) {
 					object.addMethod(method);
