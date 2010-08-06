@@ -1,0 +1,32 @@
+_This is the page where a more refined tutorial for putting models into GRAF will be placed._
+
+=== Installation ===
+
+Install [http://www.visual-paradigm.com/product/sde/ec/ Visual Paradigm Community Edition SDE for Eclipse]. A user guide is [http://www.visual-paradigm.com/support/documents/sdejavauserguide.jsp provided]. Open Eclipse and create a 
+
+Once this is completed install [http://www.topcased.org/ Topcased] org.topcased.sdk-3.3.0.zip (a little bit under 30megs) by dragging and dropping the downloaded files into the Eclipse plugins directory. 
+
+=== How to create a new model ===
+
+  * File
+  * New
+  * Project
+  * Expand Topcased
+  * Select Topcased Project
+  * Expand project in project explorer, models folder should appear
+  * Right click the models folder
+  * New
+  * Select UML model with TOPCASED
+  * Name the new model
+  * Open the .umldi file (graphical representation)
+  * 
+    * To add classes click the class icon and then click the blank space to create a class. Edit the name property of the class 
+    * To add a state machine double click on the class you want to build one for. A dialog box will appear. Select State Machine Diagram and click ok
+    * When adding transitions use the 'External Transition' option - this is essential for your model to work within GRAF
+
+http://graf-framework.googlecode.com/files/Interface_Example.png
+
+=== Editing the .uml file to make it work with GRAF ===
+
+_Use Franks Guide Here_
+Remember to put: name the receive operations as you would like them to be displayed in the interface
