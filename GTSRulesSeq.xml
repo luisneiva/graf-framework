@@ -51,5 +51,10 @@
 		<exclusive-dependencies>
 			<rule>createObjectAction-SameType</rule></exclusive-dependencies>
 	</action>
-	
+	<action name="MethodCall">
+		<rule>methodCall-WithActivity-Main</rule>
+		<looping-dependency>
+			<rule>methodCall-WithActivity-ExecutableEdges</rule></looping-dependency>
+	</action>
+
 </GTSRules>
