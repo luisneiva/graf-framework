@@ -165,7 +165,24 @@ public class ObjectDiagFigure extends Figure {
 	public ODObject getObj() {
 		return odObj;
 	}
+	
+	/**
+	 * Add a method and the listener to register with clicking on it
+	 * @param name Name of the event, to be displayed on GUI
+	 * @param transListener Listener to register as response to clicking on this event
+	 * @param data Data to be associated with this event label.
+	 */
+	public void addMethod(String name, MouseListener transListener, Object data) {
+		ClickableLabel methodLabel = new ClickableLabel(name);
+		methodLabel.setFont(classTextFont);
+		methodLabel.addMouseListener(transListener);
+		methodLabel.setData(data);
+		methodFigure.add(methodLabel);
+	}
 
+	/**
+	 * Dummy addMethod to be depreciated, for use with only name of method - creates test listener
+	 */
 	public void addMethod(String name)
 	{
 		final Label methodLabel = new ClickableLabel(name);
