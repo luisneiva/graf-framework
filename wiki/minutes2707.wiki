@@ -1,0 +1,29 @@
+#summary Minutes
+
+= Stakeholder Meeting =
+Date: 4/8/10
+<br>Location: Ian Ross Building Room 221
+<br>Present: Annette Vincent, Oscar, Stephen, Alice, Cameron, Hamish and Frank
+<br>Time: 5pm
+<br>Duration: 60 minutes
+
+== Annette's work at ARC ==
+  * They did use Kennedy Carter
+  * They use class diagrams and state machines
+  * One model has 100 classes, 20 of which have state machines, which use UML action language
+  * They have now written their own model compiler in Java
+
+== Annette's interest in GRAF ==
+  * Bridgepoint and Kennedy Carter are really hard to use, especially the output during model animation
+  * GRAF's use of graphs isn't a major selling point for Annette. She's fed up with Bridgepoint and Kennedy Carter and wants something easy to use
+  * Annette would use GRAF more to test and understand a model than to come to an understanding with her peers on a model
+  * Annette would use GRAF when it's done
+
+== Features Annette would use ==
+  * A system state editor, ie. the ability to change attributes and links in the middle of execution
+  * A model verifier to check eg. that 1 to 1 associations aren't violated
+  * Automatic testing, something like JUnit, automated
+  * Annette liked the way how instances are initialised in a text file (.modeltest)
+  * Annette uses models whose state machines have regions
+
+  * Annette will ask around for contentious models, but misunderstanding models isn't the main problem
