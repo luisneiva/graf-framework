@@ -38,9 +38,9 @@
           <subvertex xmi:type="uml:State" xmi:id="_GHaDgKHvEd-aSpRtShx1dQ" name="10">
             <doActivity xmi:type="uml:Activity" xmi:id="_SvdJIKHvEd-aSpRtShx1dQ" name="Activity10"/>
           </subvertex>
-          <transition xmi:id="_j6sGEKHvEd-aSpRtShx1dQ" name="initTrans"/>
-          <transition xmi:id="_l7uJsKHvEd-aSpRtShx1dQ" name="requestTrans">
-            <trigger xmi:id="_oHSpYKHvEd-aSpRtShx1dQ" name="TriggerRequest"/>
+          <transition xmi:id="_j6sGEKHvEd-aSpRtShx1dQ" name="initTrans" source="_3l_ogKHuEd-aSpRtShx1dQ" target="_GHaDgKHvEd-aSpRtShx1dQ"/>
+          <transition xmi:id="_l7uJsKHvEd-aSpRtShx1dQ" name="requestTrans" source="_GHaDgKHvEd-aSpRtShx1dQ" target="_GHaDgKHvEd-aSpRtShx1dQ">
+            <trigger xmi:id="_oHSpYKHvEd-aSpRtShx1dQ" name="TriggerRequest" event="_1plJsKHvEd-aSpRtShx1dQ"/>
           </transition>
         </region>
       </ownedBehavior>
@@ -60,6 +60,6 @@
     <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_C_X0YIJaEd-isfgEqfCRIg" name="OpenDoor" signal="_OwqtoIJZEd-isfgEqfCRIg"/>
     <packagedElement xmi:type="uml:Signal" xmi:id="_OwqtoIJZEd-isfgEqfCRIg" name="openDoorSig"/>
     <packagedElement xmi:type="uml:Signal" xmi:id="_vgCYkKHvEd-aSpRtShx1dQ" name="requestSig"/>
-    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_1plJsKHvEd-aSpRtShx1dQ" name="Request"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_1plJsKHvEd-aSpRtShx1dQ" name="Request" signal="_vgCYkKHvEd-aSpRtShx1dQ"/>
   </packagedElement>
 </uml:Model>
