@@ -33,6 +33,16 @@
             <trigger xmi:id="_iPYToIJaEd-isfgEqfCRIg" name="triggerOpenDoor" event="_C_X0YIJaEd-isfgEqfCRIg"/>
           </transition>
         </region>
+        <region xmi:id="_n1wC4KHuEd-aSpRtShx1dQ" name="Elevator2Region">
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_3l_ogKHuEd-aSpRtShx1dQ" name="9"/>
+          <subvertex xmi:type="uml:State" xmi:id="_GHaDgKHvEd-aSpRtShx1dQ" name="10">
+            <doActivity xmi:type="uml:Activity" xmi:id="_SvdJIKHvEd-aSpRtShx1dQ" name="Activity10"/>
+          </subvertex>
+          <transition xmi:id="_j6sGEKHvEd-aSpRtShx1dQ" name="initTrans"/>
+          <transition xmi:id="_l7uJsKHvEd-aSpRtShx1dQ" name="requestTrans">
+            <trigger xmi:id="_oHSpYKHvEd-aSpRtShx1dQ" name="TriggerRequest"/>
+          </transition>
+        </region>
       </ownedBehavior>
     </packagedElement>
     <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_bEkvQIJZEd-isfgEqfCRIg" name="Start" signal="_BRQ0IIJXEd-isfgEqfCRIg"/>
@@ -49,5 +59,7 @@
     <packagedElement xmi:type="uml:Signal" xmi:id="_KqficIJZEd-isfgEqfCRIg" name="stopSig"/>
     <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_C_X0YIJaEd-isfgEqfCRIg" name="OpenDoor" signal="_OwqtoIJZEd-isfgEqfCRIg"/>
     <packagedElement xmi:type="uml:Signal" xmi:id="_OwqtoIJZEd-isfgEqfCRIg" name="openDoorSig"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_vgCYkKHvEd-aSpRtShx1dQ" name="requestSig"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_1plJsKHvEd-aSpRtShx1dQ" name="Request"/>
   </packagedElement>
 </uml:Model>
