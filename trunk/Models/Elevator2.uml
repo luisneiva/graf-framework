@@ -10,7 +10,7 @@
           </subvertex>
           <transition xmi:id="_bvNTwGeWEd-HKL1SIsqvhA" name="initialTrans" source="_Z46ggGeWEd-HKL1SIsqvhA" target="_abFZcGeWEd-HKL1SIsqvhA"/>
           <transition xmi:id="_crLMwGeWEd-HKL1SIsqvhA" name="requestTrans" source="_abFZcGeWEd-HKL1SIsqvhA" target="_abFZcGeWEd-HKL1SIsqvhA">
-            <trigger xmi:id="_eMaysIKVEd--sOo1fTRLBg" name="RriggerRequest" event="_OeBnMIKVEd--sOo1fTRLBg"/>
+            <trigger xmi:id="_eMaysIKVEd--sOo1fTRLBg" name="TriggerRequest" event="_OeBnMIKVEd--sOo1fTRLBg"/>
           </transition>
         </region>
       </ownedBehavior>
