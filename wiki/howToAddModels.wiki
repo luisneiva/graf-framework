@@ -35,4 +35,28 @@ http://graf-framework.googlecode.com/files/Interface_Example.png
 === 2. Editing the .uml file to make it work with GRAF ===
 
 _Use Franks Guide Here_
+
+*How to create .uml models to work in GRAF using Topcased (more to come: activity under states)*
+  * Open the models .uml file in the UML model editor by:
+    * right click on the file
+    * open with
+    * UML model editor
+  * Create a signal for each transition by:
+    * right clicking at a package 
+    * new child
+    * packaged elements 
+    * signal (press 's' to fast track to elements beginning with s)
+  * Specify a unique name for each signal
+  * Create a receive signal event for each signal by:
+    * right clicking at a package 
+    * new child 
+    * packaged elements 
+    * receive signal event (press 'r' to fast track to elements beginning with r)
+  * Specify the related signal (one of those created before) and a unique name for each receive signal event
+
+_More To Come_
+  * Expand all nodes under packages, classes, state machines, regions, and transitions.
+  * Add a trigger to each transition by right clicking at a transition -> new child -> trigger -> trigger
+  * Specify an event (choose a receive signal event) and name for a trigger
+
 Remember to put: name the receive operations as you would like them to be displayed in the interface
