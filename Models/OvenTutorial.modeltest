@@ -1,0 +1,13 @@
+OvenTutorial.uml
+
+p1 : Plate
+{Still}
+
+o1: Oven
+{ReadyToCook}
+
+b1 : Beeper
+{Silent}
+
+p1 <plate,oven> o1
+b1 <beeper,oven> o1
