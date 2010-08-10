@@ -7,7 +7,7 @@
 || Project doesn't meet client's needs || Medium || High ||
 || Latent defects discovered || Medium || Medium ||
 || A new version of Eclipse isn't backwards compatible || Medium || Low||
-|| GRAF runs too slowly || Low || Medium ||
+|| GRAF runs too slowly || Medium || Medium ||
 || Adding new rules requires code change || High || Low ||
 || ~~Can't find anyone locally who would use GRAF~~ || ~~Medium~~ || Low ||
 || Competing product appears || Very low || Very low ||
