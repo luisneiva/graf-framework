@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA">
+  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="OvenTutorial">
+    <packagedElement xmi:type="uml:Class" xmi:id="_rk3NwJ1gEd--Qpb-1tHXpQ" name="Oven" classifierBehavior="_jAN2sJ1hEd--Qpb-1tHXpQ">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_jAN2sJ1hEd--Qpb-1tHXpQ" name="OvenStateMachine">
+        <region xmi:id="_jAN2sZ1hEd--Qpb-1tHXpQ" name="OvenRegion">
+          <subvertex xmi:type="uml:State" xmi:id="_jdOi0J1hEd--Qpb-1tHXpQ" name="ReadyToCook"/>
+          <subvertex xmi:type="uml:State" xmi:id="_mra9Ip1hEd--Qpb-1tHXpQ" name="DoorOpened"/>
+          <subvertex xmi:type="uml:State" xmi:id="_n6bG4J1hEd--Qpb-1tHXpQ" name="Cooking"/>
+          <subvertex xmi:type="uml:State" xmi:id="_pWgqYJ1hEd--Qpb-1tHXpQ" name="CookingInterrupted"/>
+          <subvertex xmi:type="uml:State" xmi:id="_qyv-4J1hEd--Qpb-1tHXpQ" name="CookingComplete"/>
+          <transition xmi:id="_1apKpp1hEd--Qpb-1tHXpQ" name="doorOpened3" source="_n6bG4J1hEd--Qpb-1tHXpQ" target="_pWgqYJ1hEd--Qpb-1tHXpQ">
+            <trigger xmi:id="_f363IaKSEd-GZ7YlDxZ02Q" name="doorOpened3Trig" event="_qInOAJ1nEd-EPf1QOena3A"/>
+          </transition>
+          <transition xmi:id="_4bdQRZ1hEd--Qpb-1tHXpQ" name="buttonPressed1" source="_jdOi0J1hEd--Qpb-1tHXpQ" target="_n6bG4J1hEd--Qpb-1tHXpQ">
+            <trigger xmi:id="_jtv5MKKSEd-GZ7YlDxZ02Q" name="buttonPressed1Trig" event="_ttXHIJ1nEd-EPf1QOena3A"/>
+          </transition>
+          <transition xmi:id="_9RDtRJ1hEd--Qpb-1tHXpQ" name="doorClosed2" source="_pWgqYJ1hEd--Qpb-1tHXpQ" target="_jdOi0J1hEd--Qpb-1tHXpQ">
+            <trigger xmi:id="_pPK6YKKSEd-GZ7YlDxZ02Q" name="doorClosed2Trig" event="_k1LlgJ1nEd-EPf1QOena3A"/>
+          </transition>
+          <transition xmi:id="_C5iYtZ1iEd--Qpb-1tHXpQ" name="doorOpened2" source="_jdOi0J1hEd--Qpb-1tHXpQ" target="_mra9Ip1hEd--Qpb-1tHXpQ">
+            <trigger xmi:id="_rcP18KKSEd-GZ7YlDxZ02Q" name="doorOpened2Trig" event="_qInOAJ1nEd-EPf1QOena3A"/>
+          </transition>
+          <transition xmi:id="_HqEvhJ1iEd--Qpb-1tHXpQ" name="doorClosed1" source="_mra9Ip1hEd--Qpb-1tHXpQ" target="_jdOi0J1hEd--Qpb-1tHXpQ">
+            <trigger xmi:id="_t3UxQKKSEd-GZ7YlDxZ02Q" name="doorClosed1Trig" event="_k1LlgJ1nEd-EPf1QOena3A"/>
+          </transition>
+          <transition xmi:id="_MzdEJZ1iEd--Qpb-1tHXpQ" name="timerExpired" source="_n6bG4J1hEd--Qpb-1tHXpQ" target="_qyv-4J1hEd--Qpb-1tHXpQ">
+            <trigger xmi:id="_vpWIgKKSEd-GZ7YlDxZ02Q" name="timerExpiredTrig" event="_z_z8oJ1nEd-EPf1QOena3A"/>
+          </transition>
+          <transition xmi:id="_QJsAJJ1iEd--Qpb-1tHXpQ" name="buttonPressed2" source="_qyv-4J1hEd--Qpb-1tHXpQ" target="_n6bG4J1hEd--Qpb-1tHXpQ">
+            <trigger xmi:id="_xzDnAKKSEd-GZ7YlDxZ02Q" name="buttonPressed2Trig" event="_ttXHIJ1nEd-EPf1QOena3A"/>
+          </transition>
+          <transition xmi:id="_UPYqNJ1iEd--Qpb-1tHXpQ" name="doorOpened1" source="_qyv-4J1hEd--Qpb-1tHXpQ" target="_mra9Ip1hEd--Qpb-1tHXpQ">
+            <trigger xmi:id="_3qXYoKKSEd-GZ7YlDxZ02Q" name="doorOpened1Trig" event="_qInOAJ1nEd-EPf1QOena3A"/>
+          </transition>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_scWPaJ1gEd--Qpb-1tHXpQ" name="Beeper" classifierBehavior="_vzUyQJ1gEd--Qpb-1tHXpQ">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_vzUyQJ1gEd--Qpb-1tHXpQ" name="BeeperStateMachine">
+        <region xmi:id="_vzUyQZ1gEd--Qpb-1tHXpQ" name="BeeperRegion">
+          <subvertex xmi:type="uml:State" xmi:id="_w7CoQJ1gEd--Qpb-1tHXpQ" name="Silent"/>
+          <subvertex xmi:type="uml:State" xmi:id="_ye3LcJ1gEd--Qpb-1tHXpQ" name="Sounding"/>
+          <transition xmi:id="_1hnKxJ1gEd--Qpb-1tHXpQ" name="soundBeeper" source="_w7CoQJ1gEd--Qpb-1tHXpQ" target="_ye3LcJ1gEd--Qpb-1tHXpQ">
+            <trigger xmi:id="_9NcmsKKSEd-GZ7YlDxZ02Q" name="soundBeeperTrig" event="_IRCksJ1pEd-EPf1QOena3A"/>
+          </transition>
+          <transition xmi:id="_3YU0xJ1gEd--Qpb-1tHXpQ" name="beeperTimeExpired" source="_ye3LcJ1gEd--Qpb-1tHXpQ" target="_w7CoQJ1gEd--Qpb-1tHXpQ">
+            <trigger xmi:id="__S5QQKKSEd-GZ7YlDxZ02Q" name="beeperTimeExpiredTrig" event="_OXdJUJ1pEd-EPf1QOena3A"/>
+          </transition>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_tBGiSJ1gEd--Qpb-1tHXpQ" name="Plate" classifierBehavior="_A8rf4J1hEd--Qpb-1tHXpQ">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_A8rf4J1hEd--Qpb-1tHXpQ" name="PlateStateMachine">
+        <region xmi:id="_A8rf4Z1hEd--Qpb-1tHXpQ" name="PlateRegion">
+          <subvertex xmi:type="uml:State" xmi:id="_BYf5MJ1hEd--Qpb-1tHXpQ" name="Still"/>
+          <subvertex xmi:type="uml:State" xmi:id="_CEYu0p1hEd--Qpb-1tHXpQ" name="Rotating"/>
+          <subvertex xmi:type="uml:State" xmi:id="_DBPYoJ1hEd--Qpb-1tHXpQ" name="Rotating"/>
+          <transition xmi:id="_FnQ_tJ1hEd--Qpb-1tHXpQ" name="startRotation" source="_BYf5MJ1hEd--Qpb-1tHXpQ" target="_DBPYoJ1hEd--Qpb-1tHXpQ">
+            <trigger xmi:id="_OWoVMKKTEd-GZ7YlDxZ02Q" name="startRotationTrig" event="_e6LKMJ1oEd-EPf1QOena3A"/>
+          </transition>
+          <transition xmi:id="_O1wIhJ1hEd--Qpb-1tHXpQ" name="stopRotation" source="_DBPYoJ1hEd--Qpb-1tHXpQ" target="_BYf5MJ1hEd--Qpb-1tHXpQ">
+            <trigger xmi:id="_QtMj8KKTEd-GZ7YlDxZ02Q" name="stopRotationTrig" event="_jeyk4J1oEd-EPf1QOena3A"/>
+          </transition>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_uA7Aip1gEd--Qpb-1tHXpQ" name="A_&lt;beeper>_&lt;oven>" memberEnd="_uA7Ai51gEd--Qpb-1tHXpQ _uA7Ajp1gEd--Qpb-1tHXpQ">
+      <ownedEnd xmi:id="_uA7Ai51gEd--Qpb-1tHXpQ" name="beeper" type="_scWPaJ1gEd--Qpb-1tHXpQ" association="_uA7Aip1gEd--Qpb-1tHXpQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uA7AjJ1gEd--Qpb-1tHXpQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uA7AjZ1gEd--Qpb-1tHXpQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_uA7Ajp1gEd--Qpb-1tHXpQ" name="oven" type="_rk3NwJ1gEd--Qpb-1tHXpQ" association="_uA7Aip1gEd--Qpb-1tHXpQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uA7Aj51gEd--Qpb-1tHXpQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uA7AkJ1gEd--Qpb-1tHXpQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ucmP651gEd--Qpb-1tHXpQ" name="A_&lt;oven>_&lt;plate>" memberEnd="_ucmP7J1gEd--Qpb-1tHXpQ _ucmP751gEd--Qpb-1tHXpQ">
+      <ownedEnd xmi:id="_ucmP7J1gEd--Qpb-1tHXpQ" name="oven" type="_rk3NwJ1gEd--Qpb-1tHXpQ" association="_ucmP651gEd--Qpb-1tHXpQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ucmP7Z1gEd--Qpb-1tHXpQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ucmP7p1gEd--Qpb-1tHXpQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_ucmP751gEd--Qpb-1tHXpQ" name="plate" type="_tBGiSJ1gEd--Qpb-1tHXpQ" association="_ucmP651gEd--Qpb-1tHXpQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ucmP8J1gEd--Qpb-1tHXpQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ucmP8Z1gEd--Qpb-1tHXpQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_lDOv8Z1kEd-EPf1QOena3A" name="doorClosedSignal"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_n52-0J1kEd-EPf1QOena3A" name="doorOpenedSignal"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_qlrr4J1kEd-EPf1QOena3A" name="buttonPressedSignal"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_sXY6EJ1kEd-EPf1QOena3A" name="timerExpiredSignal"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_k1LlgJ1nEd-EPf1QOena3A" name="doorClosed" signal="_lDOv8Z1kEd-EPf1QOena3A"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_qInOAJ1nEd-EPf1QOena3A" name="doorOpened" signal="_n52-0J1kEd-EPf1QOena3A"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_ttXHIJ1nEd-EPf1QOena3A" name="buttonPressed" signal="_qlrr4J1kEd-EPf1QOena3A"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_z_z8oJ1nEd-EPf1QOena3A" name="timerExpired" signal="_sXY6EJ1kEd-EPf1QOena3A"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_ZDOk8J1oEd-EPf1QOena3A" name="startRotationSignal"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_cZXaUJ1oEd-EPf1QOena3A" name="stopRotationSignal"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_e6LKMJ1oEd-EPf1QOena3A" name="startRotation" signal="_ZDOk8J1oEd-EPf1QOena3A"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_jeyk4J1oEd-EPf1QOena3A" name="stopRotation" signal="_cZXaUJ1oEd-EPf1QOena3A"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_7x3uQJ1oEd-EPf1QOena3A" name="soundBeeperSignal"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_-HI8gJ1oEd-EPf1QOena3A" name="beeperTimeExpiredSignal"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_IRCksJ1pEd-EPf1QOena3A" name="soundBeeper" signal="_7x3uQJ1oEd-EPf1QOena3A"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_OXdJUJ1pEd-EPf1QOena3A" name="beeperTimeExpired" signal="_-HI8gJ1oEd-EPf1QOena3A"/>
+  </packagedElement>
+</uml:Model>
