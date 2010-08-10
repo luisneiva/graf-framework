@@ -8,4 +8,5 @@
 === Agenda Items ===
   * Progress reports
   * Task allocations
+  * Debrief on meeting with Annette
   * Discussion of progress with James
