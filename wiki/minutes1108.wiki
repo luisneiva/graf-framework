@@ -5,36 +5,36 @@
 == Progress reports ==
 
  * Alice 
- ** Rule stuff getting methods working 2 - 2 and half weeks to implement methods stuff in intermediary code
+  ** Rule stuff getting methods working 2 - 2 and half weeks to implement methods stuff in intermediary code
 
  * Hamish
- ** Started peer and code review
+  ** Started peer and code review
 
  * Cameron
   ** Added new model (OvenTutorial.modeltest)
- ** Started preparing tutorial -> slides
+  ** Started preparing tutorial -> slides
 
  * Frank
- ** combined two state machines into the same diagram, keeping consistency
- ** If statements (Conditionals)
+  ** combined two state machines into the same diagram, keeping consistency
+  ** If statements (Conditionals)
 
  * Stephen
- ** buildfile review, assessed with ant. Does not work and needs attention
+  ** buildfile review, assessed with ant. Does not work and needs attention
 
 == Work Allocation ==
 
  * Alice
- ** Add page to ruleDoc for method action, grey out currently executing methods
- ** Methods completely done
+  ** Add page to ruleDoc for method action, grey out currently executing methods
+  ** Methods completely done
  
  * Hamish
- ** Modify one of the .modeltest files to have lots of classes and measure its performance.
+  ** Modify one of the .modeltest files to have lots of classes and measure its performance.
 
  * Cameron
- ** Activator problem. 
+  ** Activator problem. 
 
  * Frank
- ** Locate actions that are in the graph that are in mealy notation
+  ** Locate actions that are in the graph that are in mealy notation
 
 == Next Meetings ==
  * Normal meeting at 2:00
