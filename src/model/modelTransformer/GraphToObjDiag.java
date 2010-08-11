@@ -203,8 +203,6 @@ public class GraphToObjDiag implements GraphToModel {
 		}
 
 		// Collect actions - collect the executable actions from the executing behavior
-		//Precondition: If an instance has multiple behavior executions, only one
-		//of them may have executable edges.
 		for (ODObject object : objects) {
 
 			if(object.getGraphNode() != null) {
