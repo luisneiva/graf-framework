@@ -23,17 +23,17 @@
 
 == Work Allocation ==
 
- *Alice
+ * Alice
  ** Add page to ruleDoc for method action, grey out currently executing methods
  ** Methods completely done
  
- *Hamish
+ * Hamish
  ** Modify one of the .modeltest files to have lots of classes and measure its performance.
 
- *Cameron
+ * Cameron
  ** Activator problem. 
 
- *Frank
+ * Frank
  ** Locate actions that are in the graph that are in mealy notation
 
 == Next Meetings ==
