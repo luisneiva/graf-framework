@@ -11,7 +11,7 @@
  ** Started peer and code review
 
  * Cameron
- ** Added new model (OvenTutorial.modeltest)
+  ** Added new model (OvenTutorial.modeltest)
  ** Started preparing tutorial -> slides
 
  * Frank
