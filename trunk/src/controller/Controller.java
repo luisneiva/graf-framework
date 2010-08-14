@@ -45,6 +45,8 @@ public class Controller {
 
 	/** Is the system running as a plugin or stand-alone. True if plugin, False if standalone */
 	private Boolean isPlugin;
+	
+	private boolean isPrintRule, isPrintGraph;
 
 	/** Reference to controller instance, needed when running as plugin */
 	private static Controller inst;
@@ -59,12 +61,15 @@ public class Controller {
 	/**
 	 * Set up model and view. Create and register listeners in the view.
 	 */
-	public Controller(final View theview, boolean plugin) {
+	public Controller(final View theview, boolean plugin, boolean printRule, boolean printGraph) {
+		isPrintRule = printRule;
+		isPrintGraph = printGraph;
 		inst = this;
 		view = theview;
 		isPlugin = plugin;
-		debugmode = !isPlugin;	//only output dot files if standalone
-
+//		debugmode = !isPlugin;	//only output dot files if standalone
+		debugmode = printGraph;
+		
 		try {
 			String gtsRulesFilePath = "";
 			String gtsRulesSeqFilePath = "";
@@ -88,7 +93,7 @@ public class Controller {
 				gtsRulesFilePath = gtsRulesPath;
 				gtsRulesSeqFilePath = gtsRulesSeqPath;
 			}
-			model = new PluginModel(gtsRulesFilePath, gtsRulesSeqFilePath, debugmode, graphOutputsPath);
+			model = new PluginModel(gtsRulesFilePath, gtsRulesSeqFilePath, debugmode, graphOutputsPath, isPrintRule, isPrintGraph);
 			view.setModel(model);
 		} catch (Exception e) {
 			showError(e);

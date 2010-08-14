@@ -1,5 +1,9 @@
 package view;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 import model.PluginModel;
 import model.modelTransformer.objectDisplay.ObjectDisplay;
 
@@ -56,11 +60,15 @@ public class View extends ViewPart {
 	private ContentDrawer contentDrawer;
 
 	/** Button to choose model to animate */
-//	private Button newAnimButton = new Button("New");
+	//	private Button newAnimButton = new Button("New");
 
 	private ClickableLabel undo = new ClickableLabel("<");
 	private ClickableLabel redo = new ClickableLabel(">");
 	private ClickableLabel reset = new ClickableLabel("<<");
+
+	private boolean printRules, printGraphs;
+	private File propertyFile = new File("Properties.txt");
+
 
 	/** Default constructor called by plugin runtime. Do not call this if standalone.
 	 * @see View(plugin)
@@ -76,12 +84,44 @@ public class View extends ViewPart {
 	public View(boolean plugin, Shell parent) {
 		isPlugin = plugin;
 		contentDrawer = new ObjectDiagDrawer(this);
-		controller = new Controller(this, plugin);
+		try {
+			readRule();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+
+		controller = new Controller(this, plugin, printRules, printGraphs); 
 		final Shell sh = parent.getShell();
 		final Display d = parent.getDisplay();
 		controller.addMenuBar(sh, d);
 	}
-	
+
+	private void readRule() throws FileNotFoundException {
+		Scanner sc = new Scanner(propertyFile);
+		String lineStr = "";
+		String content[];
+		try {
+			//first use a Scanner to get each line
+			while(sc.hasNextLine()) {
+				lineStr = sc.nextLine();
+				content = lineStr.split(" ");
+				
+				if(lineStr.startsWith("PrintRules"))
+				{
+					printRules = Boolean.parseBoolean(content[1]);
+				}
+				else
+				{
+					printGraphs = Boolean.parseBoolean(content[1]);
+				}
+			}
+		}
+		finally {
+			//ensure the underlying stream is always closed
+			sc.close();
+		}
+	}
+
 	/**
 	 * Open file chooser automatically, as soon as Graf starts.
 	 */
@@ -98,9 +138,9 @@ public class View extends ViewPart {
 	}
 
 	/** Add listener to the 'New' button */
-//	public void addNewAnimListener(ActionListener newListener) {
-//		newAnimButton.addActionListener(newListener);
-//	}
+	//	public void addNewAnimListener(ActionListener newListener) {
+	//		newAnimButton.addActionListener(newListener);
+	//	}
 
 	/** Add listener to the 'Undo' button */
 	public void addUndoListener(MouseListener resetListener) {
@@ -178,10 +218,10 @@ public class View extends ViewPart {
 		contentDrawer.setContents(contents);
 
 		// if not a plugin, need ability to choose a file to animate
-//		if (!isPlugin) {
-//			rootFigure.getLayoutManager().setConstraint(newAnimButton, new Rectangle(430,10,40,20));
-//			rootFigure.add(newAnimButton);
-//		}
+		//		if (!isPlugin) {
+		//			rootFigure.getLayoutManager().setConstraint(newAnimButton, new Rectangle(430,10,40,20));
+		//			rootFigure.add(newAnimButton);
+		//		}
 	}
 
 	private boolean firstLoaded = true;

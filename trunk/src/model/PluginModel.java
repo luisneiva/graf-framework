@@ -55,22 +55,27 @@ public class PluginModel {
 	private final boolean debugmode;
 	/** Keeps track of the number of transitions performed (used in names for output dot files) */
 	private Integer transitionnumber = 0;
+	private boolean printRule, printGraph;
 
 	public ObjectDisplay getObjectDisplay() {
 		return objectdisplay;
 	}
 
 	public PluginModel(String gtsRulesPath, String gtsRulesSeqPath,
-			boolean debugmode, String graphOutputsPath) throws Exception {
+			boolean debugmode, String graphOutputsPath, boolean isPrintRule, boolean isPrintGraph) throws Exception {
 		this.debugmode = debugmode;
+		printRule = isPrintRule;
+		printGraph = isPrintGraph;
 		if (!graphOutputsPath.endsWith("/")) graphOutputsPath = graphOutputsPath + "/";
 		this.graphOutputsPath = graphOutputsPath;
 
 		modeltograph = ModelToGraphFactory.createModelToGraph();
 		graphtomodel = GraphToModelFactory.createGraphToModel();
 		graphTransformer = new AGGTransformer(gtsRulesPath, gtsRulesSeqPath);
-// 		Uncomment the following to generate rule .dot files on setup
-//		graphTransformer.outputRulesAsDot(this.graphOutputsPath);	
+		// 		Uncomment the following to generate rule .dot files on setup
+		if(printGraph) {
+			graphTransformer.outputRulesAsDot(this.graphOutputsPath);
+		}
 	}
 
 	/** Reset model for new animation */
@@ -97,7 +102,8 @@ public class PluginModel {
 		origGraph = new ListGraph(graph);
 
 		//if system is in debug mode, output graph as dot file
-		if (debugmode) try {
+		// printGraph
+		if (printGraph) try {   //debugmode
 			outputdot(graph, graph);
 		} catch(IOException e) {
 			throw new GraphToModelException(e.getMessage());
@@ -125,7 +131,7 @@ public class PluginModel {
 		graph = (ListGraph)graphTransformer.transition(
 				ListGraph.getName(obj.getGraphNode()), actionName, actionParam);
 		transitionnumber++;
-		if (debugmode) outputdot(graph, graphs.get(graphs.size()-1));
+		if (printGraph) outputdot(graph, graphs.get(graphs.size()-1));  //debugmode
 
 		objectdisplay = graphtomodel.generateDisplayObjects(graph);
 	}

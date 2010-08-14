@@ -23,9 +23,11 @@ digraph createObjectAction_SameType {
 	"#newClassifierBehaviorExecution" [color="green", fontcolor="green"]
 	"#newClassifierBehaviorExecution" -> "?classifierStateMachine" [label="behavior", color="green"]
 	"#newClassifierBehaviorExecution" [color="green", fontcolor="green"]
-	"#newClassifierBehaviorExecution" -> "?cSMState" [label="activeState", color="green"]
-	"#newClassifierBehaviorExecution" [color="green", fontcolor="green"]
 	"?callingBehaviorExecution" -> "#newObject" [label="?createObjectOutput", color="green"]
 	"#newObject" [color="green", fontcolor="green"]
+	"?initialTransition" -> "?firstState" [label="target"]
+	"?initialTransition" -> "?cSMState" [label="source"]
+	"#newClassifierBehaviorExecution" -> "?firstState" [label="activeState", color="green"]
+	"#newClassifierBehaviorExecution" [color="green", fontcolor="green"]
 	"?callingBehaviorExecution" -> "?createObjectAction" [label="executable", color="blue"]
 }
