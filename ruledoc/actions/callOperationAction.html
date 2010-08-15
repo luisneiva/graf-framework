@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU">
+	<head>
+		<!-- u4411120 2/07/2010 -->
+		<title>RuleDoc - CallOperationAction</title>
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<link rel="stylesheet" type="text/css" href="../styles/rules.css" media="screen" />
+		<style type="text/css" id="pageStyles">
+		</style>
+	</head>
+	<body>
+		<div id="heading">
+			<h1>
+				CallOperationAction
+			</h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="readStructuralFeatureAction.html">Back</a>
+				</li>
+				<li>
+					<a href="../index.html">Up to Index</a>
+				</li>
+				<li>
+					<a href="#.html">Next</a>
+				</li>
+			</ul>
+		</div>
+		<div id="content">
+			<div id="middlecolumn">
+				<h2>
+					US Section 11.3.10 CallOperationAction
+				</h2>
+				<p>
+					To go to the page containing the full rule description in the US pdf document,
+					<a href="../../UML_Superstructure_2-1-2_07-11-02.pdf#page=262">
+						click here
+					</a>. Relevant sections are extracted below.
+				</p>
+				<div class="extract">
+					<h3>Description</h3>
+					<p>
+						CallOperationAction is an action that transmits an operation call request to the target object, where it may cause the
+						invocation of associated behavior. The argument values of the action are available to the execution of the invoked
+						behavior. If the action is marked synchronous, the execution of the call operation action waits until the execution of the
+						invoked behavior completes and a reply transmission is returned to the caller; otherwise, execution of the action is
+						complete when the invocation of the operation is established and the execution of the invoked operation proceeds
+						concurrently with the execution of the calling behavior. Any values returned as part of the reply transmission are put on
+						the result output pins of the call operation action. Upon receipt of the reply transmission, execution of the call operation
+						action is complete.
+					</p>
+					<h3>Associations</h3>
+					<h3>Constraints</h3>
+					<ol>
+						<li>The number of argument pins and the number of owned parameters of the operation of type in and in-out must be equal.</li>
+						<li>The number of result pins and the number of owned parameters of the operation of type return, out, and in-out must be equal.</li>
+						<li>The type, ordering, and multiplicity of an argument or result pin is derived from the corresponding owned parameter of the operation.</li>
+						<li>The type of the target pin must be the same as the type that owns the operation.</li>
+					</ol>
+					<h3>Semantics</h3>
+					<h3>Rationale</h3>
+				</div>
+				<h2>
+					Discussion
+				</h2>
+					<p>
+						[Text here.]
+					</p>
+				<h2>
+					Rules that implement this action:
+				</h2>
+				<ul>
+					<li></li>
+				</ul>
+				<p>
+					Below is the xml file which defines the order in which the rules are executed
+					when a particular action is called. 
+				</p>
+					<iframe src="../../GTSRulesSeq.xml">
+						Your browser does not support frames. 
+						<a href="../../GTSRulesSeq.xml" title="View the xml rule sequence file">
+							Click here
+						</a> to see the file.
+					</iframe>
+				
+			</div>
+		</div>
+	</body>
+</html>

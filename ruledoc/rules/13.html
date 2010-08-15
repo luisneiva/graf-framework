@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU">
+	<head>
+		<!-- u4411120 2/07/2010 -->
+		<title>RuleDoc - methodCall-WithActivity-Main</title>
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<link rel="stylesheet" type="text/css" href="../styles/rules.css" media="screen" />
+		<style type="text/css" id="pageStyles">
+		</style>
+	</head>
+	<body>
+		<div id="heading">
+			<h1>
+				methodCall-WithActivity-Main
+			</h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="12.html">Back</a>
+				</li>
+				<li>
+					<a href="../index.html">Up to Index</a>
+				</li>
+				<li>
+					<a href="14.html">Next</a>
+				</li>
+			</ul>
+		</div>
+		<div id="content">
+			<div id="middlecolumn">
+				<h2>
+					US Section 11.3.10 CallOperationAction
+				</h2>
+				<p>
+					To go to the page containing the rule description in the US pdf document,
+					<a href="../../UML_Superstructure_2-1-2_07-11-02.pdf#page=262">
+						click here
+					</a>.
+				</p>
+				<a href="../../GraphOutputs/methodCall-WithActivity-Main.dot.png">
+					<img 
+						src="../../GraphOutputs/methodCall-WithActivity-Main.dot.png"
+						alt="The dot-generated rule image"
+						title="Click to see the full-size version"
+					/>
+				</a>
+				<h2>
+					Context
+				</h2>
+				<p>
+					Below is the xml file which defines the order in which the rules are executed. 
+				</p>
+					<iframe src="../../GTSRulesSeq.xml">
+						Your browser does not support frames. 
+						<a href="../../GTSRulesSeq.xml" title="View the xml rule sequence file">
+							Click here
+						</a> to see the file.
+					</iframe>
+				<h2>
+					Rationale
+				</h2>
+					<p>
+						The methodCall suite of rules simulate the effect of a series of actions that have the effect
+						of executing a class 'method' - a type of UML Operation. It is modeled on the acceptEventAction rules.
+						This rule adds the 'execution' node that connects the instance and the method activity, ready for activation
+						by the ExecutableEdges rule.
+					</p>
+					<p>
+						This variation is applied as step 1 of the MethodCall action in the xml (above). Unlike its 
+						acceptEventAction equivalent, this rule relies on an NAC to deal with the problem of duplicated
+						behaviorExecution nodes. If a behaviorExecution node already exists, GRAF will apply the NAC, skip this
+						rule and go straight to the ExecutableEdges rule, <a href="14.html">here</a>.
+					</p>
+				<h2>
+					Assumptions/Deviations from the Definition
+				</h2>
+					<p>
+						These rules do not directly implement the CallOperation Action - instead, they simulate their effects.
+						For more information on what this Action should look like on full implementation, see the explanation 
+						<a href="../actions/callOperationAction.html">here</a>.
+					</p>
+			</div>
+		</div>
+	</body>
+</html>
