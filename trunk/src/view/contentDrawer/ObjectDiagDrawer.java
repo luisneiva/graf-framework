@@ -60,7 +60,7 @@ public class ObjectDiagDrawer extends ContentDrawer {
 			// draw methods in a fourth compartment of the object diagram boxes
 			for(ODMethod method : odObj.getMethods())
 			{
-				classFigure.addMethod(method.getName(), transListener,
+				classFigure.addMethod(method.getName(),  method.getEnabled(), transListener,
 							new TransitionAction(odObj, method.getType(), method.getName()));
 			}
 

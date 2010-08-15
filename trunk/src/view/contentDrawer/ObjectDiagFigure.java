@@ -172,9 +172,10 @@ public class ObjectDiagFigure extends Figure {
 	 * @param transListener Listener to register as response to clicking on this event
 	 * @param data Data to be associated with this event label.
 	 */
-	public void addMethod(String name, MouseListener transListener, Object data) {
+	public void addMethod(String name, Boolean active, MouseListener transListener, Object data) {
 		ClickableLabel methodLabel = new ClickableLabel(name);
 		methodLabel.setFont(classTextFont);
+		methodLabel.setEnabled(active);
 		methodLabel.addMouseListener(transListener);
 		methodLabel.setData(data);
 		methodFigure.add(methodLabel);
