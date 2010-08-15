@@ -1,6 +1,7 @@
 package model;
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
@@ -72,9 +73,18 @@ public class PluginModel {
 		modeltograph = ModelToGraphFactory.createModelToGraph();
 		graphtomodel = GraphToModelFactory.createGraphToModel();
 		graphTransformer = new AGGTransformer(gtsRulesPath, gtsRulesSeqPath);
-		// 		Uncomment the following to generate rule .dot files on setup
-		if(printGraph) {
-			graphTransformer.outputRulesAsDot(this.graphOutputsPath);
+// 		Uncomment the following to generate rule .dot files on setup & convert them to images
+		if (printGraph) {
+//		try {
+//			graphTransformer.outputRulesAsDot(this.graphOutputsPath);
+//			String path = "GraphOutputs\\conversionFiles\\dotToImg";
+//			String[] command = {"cmd", "/C", "start " + path + " rules"};
+//			Process p = Runtime.getRuntime().exec(command);
+//			p.waitFor();
+//		} catch (Exception err) {
+//			System.out.println("Rule conversion failed!");
+//			err.printStackTrace();
+//		}
 		}
 	}
 
