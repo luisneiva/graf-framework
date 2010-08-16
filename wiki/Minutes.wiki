@@ -19,7 +19,9 @@
 || 2/8 || Team || [agenda0208 Agenda] || [minutes0208 Minutes] ||
 || 4/8 || Stakeholder || [agenda2707 Agenda] || [minutes2707 Minutes] ||
 || 11/8 || Mentor || [agenda1108 Agenda] || [minutes1108 Minutes] ||
+|| 16/8 || Team || [agenda1608 Agenda] || [minutes1608 Minutes] ||
 || 16/8 || Client || [cagenda1608 Agenda] || [cminutes1608 Minutes] ||
+|| 16/8 || Technical || [tagenda1608 Agenda] || [tminutes1608 Minutes] ||
 
 Agendas and minutes from before 12/5/2010 are on [https://alliance.anu.edu.au/portal Alliance]. <br>
 [agendaTemplate Agenda Template] <br>
