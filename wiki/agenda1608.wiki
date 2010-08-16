@@ -1,0 +1,11 @@
+#summary agenda
+== Team meeting ==
+*Date:* 16/8/10
+<br>*Time:* 2pm
+<br>*Location:* N110
+<br>*Duration:* 30 minutes
+
+=== Agenda Items ===
+  * Progress reports
+  * Work assignment
+  * Long-term project goals
