@@ -1,0 +1,10 @@
+#summary agenda
+== Technical Meeting ==
+*Date:* 16/8/10
+<br>*Time:* 3:30pm
+<br>*Location:* N110
+<br>*Duration:* 30 minutes
+
+=== Agenda Items ===
+  * Implementing Mealy notation actions
+  * Current technical issues
