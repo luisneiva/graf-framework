@@ -1,0 +1,18 @@
+#summary Minutes
+
+= Team Meeting =
+Date: 16/8/10
+<br>Location: CSIT N110
+<br>Present: Oscar, Alice, Cameron and Frank
+<br>Time: 2pm
+<br>Duration: 30 minutes
+
+== Progress Reports ==
+  * Alice worked on methods. They're done except for a bug (but see client meeting minutes, as this is no longer true)
+  * Frank got properties files happening
+  * Cameron worked on the plugin issue but solving it is more complicated than it seemed
+
+== Task assignment ==
+  * Oscar - solve oven model issue so Cameron's presentation works
+  * Cameron - fix plugin problem with Stephen's help + further work preparing slides for tutorial (some sequence diagram stuff)
+  * Frank & Alice - decided at [tminutes1608 technical meeting]
