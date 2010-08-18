@@ -1,0 +1,18 @@
+#summary Minutes
+
+= Client Meeting =
+Date: 16/8/10
+<br>Location: Raj's office
+<br>Present: Greg, Stephen, Oscar, Alice, Cameron and Frank
+<br>Time: 2:30pm
+<br>Duration: 1 hour
+
+== General ==
+  * Fortnightly at 2:30pm Canberra time is a good time to phone Greg.
+  * Next meeting 30th April 2:30pm
+  * Greg will discuss handover with Raj
+
+== TE00 and Methods == 
+  * The TE00 model is older than UML actions
+  * The sequence diagram notation of the event arrow pointing to the object name means it's constructing
+  * The methods in the class diagram are constructors
