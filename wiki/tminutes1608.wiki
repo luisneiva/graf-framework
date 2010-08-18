@@ -17,4 +17,4 @@ Date: 16/8/10
   * If so, then we only need to add a modified version of AddExecutableEdges
 
 == Task assignment ==
-  * To be decided at meeting tomorrow
+  * To be decided at meeting [minutes1708 tomorrow]
