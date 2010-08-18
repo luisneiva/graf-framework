@@ -1,0 +1,18 @@
+#summary Minutes
+
+= Technical Meeting =
+Date: 17/8/10
+<br>Location: CSIT N110
+<br>Present: Oscar, Alice and Frank
+<br>Time: 1-6
+
+== Mealy notation ==
+  * Manually added an executable edge to enable transition-action
+  * The action does appear in the GUI but for some reason it is greyed out
+  * Emailed Frank the code to add the executable edge so he can investigate why it's not working as expected
+
+== Methods & Constructors ==
+  * Tried to find faithful interpretation of TE00 in UML2
+  * UML has no explicit constructors, but you can use static methods/operations in classes as the same thing
+  * Methods should be implemented as parallel to AcceptEvent + SendSignal
+  * Emailed Greg about what to do
