@@ -12,7 +12,7 @@ Date: 16/8/10
   * 1 region in a region would be very complicated but the approach we took for AddExecutableEdges might work
 
 == Mealy notation ==
-  * __Links != Transitions__
+  * *Links != Transitions*
   * Possibly everything will work by itself once we add executable edges to the actions
   * If so, then we only need to add a modified version of AddExecutableEdges
 
