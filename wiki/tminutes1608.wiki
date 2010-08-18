@@ -1,0 +1,20 @@
+#summary Minutes
+
+= Technical Meeting =
+Date: 16/8/10
+<br>Location: CSIT N110
+<br>Present: Oscar, Alice Frank
+<br>Time: 3:30pm
+<br>Duration: 30 minutes
+
+== Regions ==
+  * 2 regions at the same level probably requires no change
+  * 1 region in a region would be very complicated but the approach we took for AddExecutableEdges might work
+
+== Mealy notation ==
+  * __Links != Transitions__
+  * Possibly everything will work by itself once we add executable edges to the actions
+  * If so, then we only need to add a modified version of AddExecutableEdges
+
+== Task assignment ==
+  * To be decided at meeting tomorrow
