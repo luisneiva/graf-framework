@@ -124,9 +124,6 @@ public class ODAction {
 			enabled = potentialInputPins.size() == 0;
 		}
 		
-		// testing!  TODO!!!
-		enabled = true;
-
 	}
 
 	public String getName() {

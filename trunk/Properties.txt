@@ -1,2 +1,2 @@
-PrintRules true
+PrintRules false
 PrintGraphs true
