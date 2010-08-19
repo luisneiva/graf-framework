@@ -1,4 +1,4 @@
-@ECHO OFF
+::@ECHO OFF
 
 :: Runs dot.exe
 :: dotToImg [rules,states,<filename.dot>]
@@ -23,10 +23,15 @@ for %%X in (..\*.dot) do (dot -Tpng -O "%%X")
 GOTO :JOBDONE
 
 :CONVR convert rule files only (best guess), starting from GRAF or this file
+:: Assume start from GRAF
 for %%X in (GraphOutputs\*Action*.dot) do (dot -Tpng -O "%%X")
-for %%X in (..\*Action*.dot) do (dot -Tpng -O "%%X")
 for %%X in (GraphOutputs\*Call*.dot) do (dot -Tpng -O "%%X")
+dot -Tpng -O "GraphOutputs\actorSendSignal.dot"
+
+:: Assume start from this file
+for %%X in (..\*Action*.dot) do (dot -Tpng -O "%%X")
 for %%X in (..\*Call*.dot) do (dot -Tpng -O "%%X")
+dot -Tpng -O "..\actorSendSignal.dot"
 GOTO :JOBDONE
 
 :CONVS convert state files only (best guess), assume start from this file
