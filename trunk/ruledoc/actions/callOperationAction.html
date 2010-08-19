@@ -52,6 +52,9 @@
 						action is complete.
 					</p>
 					<h3>Associations</h3>
+					<p>operation: Operation [1] <br /> The operation to be invoked by the action execution.</p>
+					<p>target: InputPin [1] <br /> The target object to which the request is sent. The classifier of the target object is used to 
+					dynamically determine a behavior to invoke. This object constitutes the context of the execution of the operation.</p>
 					<h3>Constraints</h3>
 					<ol>
 						<li>The number of argument pins and the number of owned parameters of the operation of type in and in-out must be equal.</li>
@@ -60,13 +63,41 @@
 						<li>The type of the target pin must be the same as the type that owns the operation.</li>
 					</ol>
 					<h3>Semantics</h3>
+					<p>The inputs to the action determine the target object and additional actual arguments of the call.</p>
+					<ol>
+						<li>When all the prerequisites of the action execution are satisfied, information comprising the operation and the argument
+						pin values of the action execution is created and transmitted to the target object. The target objects may be local or remote.
+						The manner of transmitting the call, the amount of time required to transmit it, the order in which the transmissions reach
+						the various target objects, and the path for reaching the target objects are undefined.</li>
+						<li>When a call arrives at a target object, it may invoke a behavior in the target object. The effect of receiving such call is
+						specified in 13, "Common Behaviors." Such effects include executing activities and firing state machine transitions.</li>
+						<li>If the call is synchronous, when the execution of the invoked behavior completes, its return results are transmitted back as
+						a reply to the calling action execution. The manner of transmitting the reply, the time required for transmission, the 
+						representation of the reply transmission, and the transmission path are unspecified. If the execution of the invoked
+						behavior yields an exception, the exception is transmitted to the caller where it is reraised as an exception in the execution
+						of the calling action. Possible exception types may be specified by attaching them to the called Operation using the
+						raisedException association.</li>
+						<li>If the call is asynchronous, the caller proceeds immediately and the execution of the call operation action is complete. Any
+						return or out values from the invoked operation are not passed back to the containing behavior. If the call is synchronous,
+						the caller is blocked from further execution until it receives a reply from the invoked behavior.</li>
+						<li>When the reply transmission arrives at the invoking action execution, the return result values are placed on the result pins
+						of the call operation action, and the execution of the action is complete.</li>
+					</ol>
 					<h3>Rationale</h3>
+					<p>Calls an operation on a specified target object.</p>
 				</div>
 				<h2>
 					Discussion
 				</h2>
 					<p>
-						[Text here.]
+						CallOperationAction is similar to SendSignalAction. Both allow communication between objects. However, a 'call' specifies the
+						behavior to be executed by the target object, rather than allowing the receiver to determine how to respond. In addition the 
+						call can be asynchronous or synchronous, whereas a signal can only be sent asynchronously. 
+					</p>
+					<p>
+						We note that it is possible for an operation to be 'static', that is, belonging to a classifier itself rather than the members of the class it
+						specifies. However, because the 'target' attribute of this Action must point to an <em>object</em> we conclude that it is not possible to use 
+						CallOperationAction to invoke a static behavior (as occurs in Java 'constructors').
 					</p>
 				<h2>
 					Rules that implement this action:
