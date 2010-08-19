@@ -187,6 +187,9 @@ public class UMLToGraph implements ModelToGraph {
 					if (stateDeclared) {
 						instanceErr("Duplicate state declaration for class "+className);
 					}
+					
+					// CHANGE to a list of strings and call on each of the strings.
+					// in dot file state0.dot there should be 2 labels = active state 4 and 6 
 					String state = line.substring(1,line.length()-1).trim();
 					String instBehavExecNode = objName + "classifierBehaviorExecution";
 					graph.addIEdge(instBehavExecNode, "BehaviorExecution");
@@ -210,6 +213,7 @@ public class UMLToGraph implements ModelToGraph {
 					}
 					stateDeclared = true;
 					
+					// TODO!!!
 					// Add activeState edge from the behaviour execution instance to the indicated model state
 					graph.addEdge(instBehavExecNode, "activeState", state);
 					

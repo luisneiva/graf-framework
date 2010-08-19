@@ -72,6 +72,9 @@ public class ObjectDiagFigure extends Figure {
 		String state = "";
 		if (states.size() != 0)
 		{
+			
+			// TODO!!!
+			// list of states.
 			state = ListGraph.getName(odObj.getState());
 		}
 		//		String state = ListGraph.getName(odObj.getState());
