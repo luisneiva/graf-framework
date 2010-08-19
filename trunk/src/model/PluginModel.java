@@ -64,8 +64,8 @@ public class PluginModel {
 
 	public PluginModel(String gtsRulesPath, String gtsRulesSeqPath,
 			boolean debugmode, String graphOutputsPath, boolean isPrintRule, boolean isPrintGraph) throws Exception {
-		this.debugmode = debugmode;
-		printRule = isPrintRule;
+		this.debugmode = debugmode;  // UNNECESSARY  debugMode
+		printRule = isPrintRule;   // BROKEN TODO!!!
 		printGraph = isPrintGraph;
 		if (!graphOutputsPath.endsWith("/")) graphOutputsPath = graphOutputsPath + "/";
 		this.graphOutputsPath = graphOutputsPath;
@@ -73,18 +73,20 @@ public class PluginModel {
 		modeltograph = ModelToGraphFactory.createModelToGraph();
 		graphtomodel = GraphToModelFactory.createGraphToModel();
 		graphTransformer = new AGGTransformer(gtsRulesPath, gtsRulesSeqPath);
-// 		Uncomment the following to generate rule .dot files on setup & convert them to images
-		if (printGraph) {
-//		try {
-//			graphTransformer.outputRulesAsDot(this.graphOutputsPath);
+
+		if (printRule) {
+		try {
+			graphTransformer.outputRulesAsDot(this.graphOutputsPath);
+			
+//	 		Uncomment the following to generate rule .dot files on setup & convert them to images
 //			String path = "GraphOutputs\\conversionFiles\\dotToImg";
 //			String[] command = {"cmd", "/C", "start " + path + " rules"};
 //			Process p = Runtime.getRuntime().exec(command);
 //			p.waitFor();
-//		} catch (Exception err) {
-//			System.out.println("Rule conversion failed!");
-//			err.printStackTrace();
-//		}
+		} catch (Exception err) {
+			System.out.println("Rule conversion failed!");
+			err.printStackTrace();
+		}
 		}
 	}
 
@@ -113,7 +115,7 @@ public class PluginModel {
 
 		//if system is in debug mode, output graph as dot file
 		// printGraph
-		if (printGraph) try {   //debugmode
+		if (printRule) try {   //debugmode
 			outputdot(graph, graph);
 		} catch(IOException e) {
 			throw new GraphToModelException(e.getMessage());

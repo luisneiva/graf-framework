@@ -20,6 +20,8 @@ public class ODObject extends DisplayObject {
 
 	private ArrayList<ODAttribute> attributes;
 
+	// TODO!!!
+	// CHANGE it to arraylist
 	private Node stateNode;
 
 	private ArrayList<ODAction> actionPool;
