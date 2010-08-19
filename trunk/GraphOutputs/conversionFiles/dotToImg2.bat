@@ -1,4 +1,4 @@
-::@ECHO OFF
+@ECHO OFF
 
 :: Runs dot.exe
 :: dotToImg [rules,states,<filename.dot>]
