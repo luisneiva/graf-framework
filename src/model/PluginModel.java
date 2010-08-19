@@ -75,12 +75,12 @@ public class PluginModel {
 				graphTransformer.outputRulesAsDot(this.graphOutputsPath);
 
 				//	 		Uncomment the following to generate rule .dot files on setup & convert them to images
-				//			String path = "GraphOutputs\\conversionFiles\\dotToImg";
-				//			String[] command = {"cmd", "/C", "start " + path + " rules"};
-				//			Process p = Runtime.getRuntime().exec(command);
-				//			p.waitFor();
+							String path = "GraphOutputs\\conversionFiles\\dotToImg2";
+							String[] command = {"cmd", "/C", "start " + path + " rules"};
+							Process p = Runtime.getRuntime().exec(command);
+							p.waitFor();
 			} catch (Exception err) {
-				System.out.println("Rule conversion failed!");
+				System.out.println("Rule generation or conversion failed!");
 				err.printStackTrace();
 			}
 		}
