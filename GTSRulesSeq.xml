@@ -6,7 +6,8 @@
 	
 	<action name="AcceptEventAction">
 		<exclusive-dependencies>
-			<rule>acceptEventAction-AndIgnore</rule><action>AcceptEventAction-WithActivity-HasBehavior</action>
+			<rule>acceptEventAction-AndIgnore</rule>
+			<action>AcceptEventAction-WithActivity-HasBehavior</action>
 			<action>AcceptEventAction-WithActivity-SameState</action>
 			<action>AcceptEventAction-WithActivity-Main</action>
 			<rule>acceptEventAction-WithoutActivity</rule>
