@@ -6,14 +6,21 @@
 	
 	<action name="AcceptEventAction">
 		<exclusive-dependencies>
-			<rule>acceptEventAction-AndIgnore</rule>
+			<action>AcceptEventAction-AndIgnore</action>
 			<action>AcceptEventAction-WithActivity-HasBehavior</action>
 			<action>AcceptEventAction-WithActivity-SameState</action>
 			<action>AcceptEventAction-WithActivity-Main</action>
 			<rule>acceptEventAction-WithoutActivity</rule>
-			
 		</exclusive-dependencies>
 	</action>
+
+	<action name="AcceptEventAction-AndIgnore">
+		<rule>acceptEventAction-AndIgnore</rule>
+		<rule>acceptEventAction-AndIgnore-TwoTriggers</rule>
+		<rule>acceptEventAction-AndIgnore-ThreeTriggers</rule>
+	</action>
+
+
 	<action name="AcceptEventAction-WithActivity-HasBehavior">
 		<rule>acceptEventAction-WithActivity-HasBehavior</rule>
 		<looping-dependency>
