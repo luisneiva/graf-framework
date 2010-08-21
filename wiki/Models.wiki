@@ -1,0 +1,7 @@
+#summary Models summary
+
+== Summary of Models ==
+This page contains descriptions of models in the Models folder in the GRAF code
+
+=== Oven Model ===
+[http://graf-framework.googlecode.com/files/Slides_to_base_tutorial_on_-_model_on_slide_12.pdf Click here.]
