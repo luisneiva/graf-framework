@@ -5,7 +5,7 @@
       <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_jAN2sJ1hEd--Qpb-1tHXpQ" name="OvenStateMachine">
         <region xmi:id="_jAN2sZ1hEd--Qpb-1tHXpQ" name="OvenRegion">
           <subvertex xmi:type="uml:State" xmi:id="_jdOi0J1hEd--Qpb-1tHXpQ" name="ReadyToCook"/>
-          <subvertex xmi:type="uml:State" xmi:id="_mra9Ip1hEd--Qpb-1tHXpQ" name="DoorOpened"/>
+          <subvertex xmi:type="uml:State" xmi:id="_mra9Ip1hEd--Qpb-1tHXpQ" name="DoorOpen"/>
           <subvertex xmi:type="uml:State" xmi:id="_n6bG4J1hEd--Qpb-1tHXpQ" name="Cooking"/>
           <subvertex xmi:type="uml:State" xmi:id="_pWgqYJ1hEd--Qpb-1tHXpQ" name="CookingInterrupted"/>
           <subvertex xmi:type="uml:State" xmi:id="_qyv-4J1hEd--Qpb-1tHXpQ" name="CookingComplete"/>
