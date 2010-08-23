@@ -1,0 +1,144 @@
+Microwave.uml
+
+m1 : Microwave
+{NotCooking}
+
+f1 : Food
+{NotCooked}
+temperature = 3
+
+b1 : Beeper
+{Silent}
+
+m1 <cookedBy, cooks> f1
+m1 <in,has> b1
+
+m2 : Microwave
+{NotCooking}
+
+f2 : Food
+{NotCooked}
+temperature = 3
+
+b2 : Beeper
+{Silent}
+
+m2 <cookedBy, cooks> f2
+m2 <in,has> b2
+
+m3 : Microwave
+{NotCooking}
+
+f3 : Food
+{NotCooked}
+temperature = 3
+
+b3 : Beeper
+{Silent}
+
+m3 <cookedBy, cooks> f3
+m3 <in,has> b3
+
+m4 : Microwave
+{NotCooking}
+
+f4 : Food
+{NotCooked}
+temperature = 3
+
+b4 : Beeper
+{Silent}
+
+m4 <cookedBy, cooks> f4
+m4 <in,has> b4
+
+m5 : Microwave
+{NotCooking}
+
+f5 : Food
+{NotCooked}
+temperature = 3
+
+b5 : Beeper
+{Silent}
+
+m5 <cookedBy, cooks> f5
+m5 <in,has> b5
+
+m6 : Microwave
+{NotCooking}
+
+f6 : Food
+{NotCooked}
+temperature = 3
+
+b6 : Beeper
+{Silent}
+
+m6 <cookedBy, cooks> f6
+m6 <in,has> b6
+
+m7 : Microwave
+{NotCooking}
+
+f7 : Food
+{NotCooked}
+temperature = 3
+
+b7 : Beeper
+{Silent}
+
+m7 <cookedBy, cooks> f7
+m7 <in,has> b7
+
+m8 : Microwave
+{NotCooking}
+
+f8 : Food
+{NotCooked}
+temperature = 3
+
+b8 : Beeper
+{Silent}
+
+m8 <cookedBy, cooks> f8
+m8 <in,has> b8
+
+m9 : Microwave
+{NotCooking}
+
+f9 : Food
+{NotCooked}
+temperature = 3
+
+b9 : Beeper
+{Silent}
+
+m9 <cookedBy, cooks> f9
+m9 <in,has> b9
+
+m10 : Microwave
+{NotCooking}
+
+f10 : Food
+{NotCooked}
+temperature = 3
+
+b10 : Beeper
+{Silent}
+
+m10 <cookedBy, cooks> f10
+m10 <in,has> b10
+
+m11 : Microwave
+{NotCooking}
+
+f11 : Food
+{NotCooked}
+temperature = 3
+
+b11 : Beeper
+{Silent}
+
+m11 <cookedBy, cooks> f11
+m11 <in,has> b11
