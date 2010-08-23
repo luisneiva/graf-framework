@@ -1,0 +1,37 @@
+#summary Minutes
+
+= Mentor Meeting =
+Date: 23/8/10
+<br>Location: CSIT N110
+<br>Present: James, Oscar, Alice, Cameron, Hamish and Frank
+<br>Time: 2pm
+<br>Duration: 1 hour
+
+== Progress Reports  ==
+
+  * Alice - worked on methods - in particular making call rules equivalent to the signal rules
+  * Frank - worked on making GRAF accept objects in multiple states at once
+  * Cameron - worked on plugin problem and slides for presentation
+  * Hamish - worked on limit testing and jumped off a cliff
+  * Oscar - fixed the problem with Oven model
+
+== Task Assignment ==
+  * Alice - continue method stuff
+  * Frank - make GUI recognise objects in multiple states
+  * Cameron - work on the presentation of using GRAF as a teaching tool. Give presentation at 30/8 meeting
+  * Hamish - time GRAF speeds under conditions  and report on what slows it down and what doesn't
+  * Oscar - arrange a meeting with Shayne - aiming for 5pm 31/8
+
+== Discussion with James ==
+  * We should aim to get Shayne using GRAF now
+  * We need to work out handover
+  * We should put the 2011 group in more contact with Annette
+
+== Discussion of what needs to be done in 2011 ==
+  * See [GrafFuture here]
+  * We need to create a document introducing the 2011 team to the project and advising them
+
+== Coming Meetings ==
+  * 2pm 23/8 Technical meeting - for Oscar, Alice and Frank
+  * 2pm 30/8 Team meeting - Cameron will present his GRAF lecture-tutorial
+  * 3pm 30/8 Client meeting - phone Greg or talk to Raj if he's back
