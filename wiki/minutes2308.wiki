@@ -30,6 +30,10 @@ Date: 23/8/10
 == Discussion of what needs to be done in 2011 ==
   * See [GrafFuture here]
   * We need to create a document introducing the 2011 team to the project and advising them
+  * Stuff we could actually do this year:
+    * Make the properties editable via the GUI
+    * Include the option to turn print line on and off in the properties file
+    * Stop object boxes being placed randomly. Lay them out properly spaced out and not overlapping 
 
 == Coming Meetings ==
   * 2pm 23/8 Technical meeting - for Oscar, Alice and Frank
