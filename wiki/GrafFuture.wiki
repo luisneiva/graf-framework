@@ -10,6 +10,15 @@
   * We could extend Topcased since it's open source
   * We could abandon .uml and generate the graph from a text file
 
+== General things ==
+  * Automated testing 
+    * Would require a list of steps of execution
+    * Annette would like this
+  * Model Verification
+    * Eg. that a 1:1 multiplicity isn't violated
+    * We could verify just the initial state (if rules can't create invalid system states) or every system state in an execution
+    * Annette would like this
+
 == Stuff from 2009 ==
 Some of GRAF's future ambitions include: 
  * Animation Features
