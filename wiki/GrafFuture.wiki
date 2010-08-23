@@ -1,5 +1,16 @@
 #summary stuff that won't happen in 2010
 
+== Creating model files ==
+  * This is the main thing preventing GRAF from being usable
+  * We need a way to create uml model files with all features of the uml file format
+  * Such a tool could be produced by someone else in the future
+  * Making the tool could be a whole year long project by itself
+  * It would be cool if it was part of GRAF
+  * Ideal features for this tool would be a view of state, class and sequence diagram, where modifying 1 would change the others
+  * We could extend Topcased since it's open source
+  * We could abandon .uml and generate the graph from a text file
+
+== Stuff from 2009 ==
 Some of GRAF's future ambitions include: 
  * Animation Features
   ** Intelligent display navigation (a minimap)
