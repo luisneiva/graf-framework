@@ -197,9 +197,13 @@ public class GraphToObjDiag implements GraphToModel {
 			//@author: Frank Su
 			if (states.size() != 0)
 			{
-				object.setState(states.get(0));
+//				object.setState(states.get(0));
+				
+				for(Node n : states)
+				{
+					object.addState(n);
+				}
 			}
-			//			object.setState(states.get(0));
 		}
 
 		// Collect actions - collect the executable actions from the executing behavior

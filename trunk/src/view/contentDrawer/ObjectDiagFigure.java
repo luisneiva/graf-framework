@@ -39,7 +39,7 @@ public class ObjectDiagFigure extends Figure {
 	private CompartmentFigure attributeFigure = new CompartmentFigure();
 	/** Will hold either events or actions, depending on the current mode of the object */
 	private CompartmentFigure runtimePoolFigure;
-	
+
 	// Methods
 	private CompartmentFigure methodFigure = new CompartmentFigure();
 
@@ -55,6 +55,7 @@ public class ObjectDiagFigure extends Figure {
 	 * @param contents 
 	 * @param pluginIndent */
 	public ObjectDiagFigure(ODObject object) {
+		String[] moreStates;
 		odObj = object;
 
 		String objName = odObj.getName();
@@ -70,13 +71,10 @@ public class ObjectDiagFigure extends Figure {
 
 		//@author: Frank Su
 		String state = "";
-		if (states.size() != 0)
-		{
-			
-			// TODO!!!
-			// list of states.
-			state = ListGraph.getName(odObj.getState());
-		}
+//		if (states.size() != 0)
+//		{
+//			state = ListGraph.getName(odObj.getState());
+//		}
 		//		String state = ListGraph.getName(odObj.getState());
 
 		runtimePoolFigure = new CompartmentFigure(new GridLayout(2,true));
@@ -94,9 +92,25 @@ public class ObjectDiagFigure extends Figure {
 		//@author: Frank Su
 		if (states.size() != 0)
 		{
-			add(new Label("  {" + state + "}  "));
+			for(Node n : odObj.getStates())
+			{
+				state += ListGraph.getName(n) + ";";
+			}
+			
+			// list of states.
+			if(state.contains(";"))
+			{
+				moreStates = state.split(";");
+				for(int i = 0; i < moreStates.length; i++)
+				{
+					add(new Label("  {" + moreStates[i] + "}  "));
+				}
+			}
+			else
+			{
+				add(new Label("  {" + state + "}  "));
+			}
 		}
-		//		add(new Label("  {" + state + "}  "));
 		add(attributeFigure);	//each of these are seperate figures (each in their own 'row' of the UMLClassFigure)
 		add(runtimePoolFigure);
 		add(methodFigure);
@@ -168,7 +182,7 @@ public class ObjectDiagFigure extends Figure {
 	public ODObject getObj() {
 		return odObj;
 	}
-	
+
 	/**
 	 * Add a method and the listener to register with clicking on it
 	 * @param name Name of the event, to be displayed on GUI
@@ -191,7 +205,7 @@ public class ObjectDiagFigure extends Figure {
 	{
 		final Label methodLabel = new ClickableLabel(name);
 		methodLabel.setFont(classTextFont);
-		
+
 		methodLabel.addMouseListener(new MouseListener(){
 			public void mousePressed(MouseEvent me) {
 				methodLabel.setText(methodLabel.getText() + "1");
@@ -199,10 +213,10 @@ public class ObjectDiagFigure extends Figure {
 			public void mouseReleased(MouseEvent me) {}
 			public void mouseDoubleClicked(MouseEvent me) {}
 		});
-		
+
 		methodFigure.add(methodLabel);
 	}
-	
+
 	public void addAttribute(String name) {
 		Label label = new Label(name);
 		label.setFont(classTextFont);
