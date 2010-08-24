@@ -8,6 +8,8 @@ import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Vector;
 
+import controller.Properties;
+
 import model.AGGAssignment;
 import model.ListGraph;
 import model.exceptions.RuleException;
@@ -55,7 +57,9 @@ public class AGGTransformer {
 	/** Determine what GTS rule or sequence to apply and apply it. */
 	public Graph transition(String objName, String actionName, String actionParam)
 	throws RuleException {
-		System.out.println("Action name is " + actionName);
+		if(Properties.printDebug) {
+			System.out.println("Action name is " + actionName);
+		}
 		Element gtsRulesSeqRoot = gtsRulesSeq.getRootElement();
 		Nodes actionnodes = gtsRulesSeqRoot.query("action[@name=\"" + actionName + "\"]");
 		if (actionnodes.size()==0)
@@ -90,9 +94,11 @@ public class AGGTransformer {
 					} catch (RuleNoMatchException e) {
 						//if the exclusive dependency did not fully complete, erase its work.
 						setGraph(graphBackup);
+						if(Properties.printDebug) {
 						System.out.println("Rule Cancelled: object="+objName+
 								", action="+child.getChildElements().get(j).getValue()+
 								", actionParam="+actionParam + " (" + e.getMessage() + ")");
+						}
 					}
 				}
 				if (!foundmatch) throw new RuleException("Could not complete " +
@@ -153,8 +159,10 @@ public class AGGTransformer {
 			apply(rule);
 		}
 
-		System.out.println("Rule Applied: object="+objName+", action="
-				+actionName+", actionParam="+actionParam);
+		if(Properties.printDebug) {
+			System.out.println("Rule Applied: object="+objName+", action="
+					+actionName+", actionParam="+actionParam);
+		}
 	}
 
 	/**
@@ -222,7 +230,7 @@ public class AGGTransformer {
 			{
 				String name = ListGraph.getName(arc);
 				ArrayList<String> toDelete = new ArrayList<String>();
-				
+
 				// add edges to be deleted here
 				/*	toDelete.add("source");
 				toDelete.add("i");
@@ -242,7 +250,7 @@ public class AGGTransformer {
 				toDelete.add("entry");
 				toDelete.add("behavior");
 				toDelete.add("execution");*/
-				
+
 				if(toDelete.contains(name))
 				{
 					arcsToDelete.add(arc);
@@ -273,7 +281,9 @@ public class AGGTransformer {
 				Integer arcsNum = node.getNumberOfArcs();
 				try
 				{
-					System.out.println(ListGraph.getName(node) + " " + arcsNum);
+					if(Properties.printDebug) {
+						System.out.println(ListGraph.getName(node) + " " + arcsNum);
+					}
 				}
 				catch(NullPointerException npe)
 				{
@@ -320,8 +330,8 @@ public class AGGTransformer {
 				Step step = new Step();
 				try {
 					Morphism comatch = step.execute(match);
-				//	System.out.println("RULE APPLIED (" +
-				//			match.getRule().getName() + ")");
+					//	System.out.println("RULE APPLIED (" +
+					//			match.getRule().getName() + ")");
 					((OrdinaryMorphism) comatch).dispose();
 				} catch (TypeException ex) {
 					//System.out.println("1"+match.getErrorMsg());
@@ -362,25 +372,25 @@ public class AGGTransformer {
 			rightGraph = new ListGraph(rule.getRight());
 			nac = rule.getNACs();
 			filepath = outputPath;
-			
+
 			dot = "digraph " + rule.getName().replace('-', '_') + " {\n";
 			/* Get the RHS (precondition) of the rule */
 			for (Arc edge : rightGraph.getArcsList()) {
-					/* Add the edge, with it's source and target nodes, to the .dot string */
-					dot += "\t\"" + ListGraph.getName(edge.getSource()) + "\" -> \"" + ListGraph.getName(edge.getTarget()) +
-					"\" [label=\"" + ListGraph.getName(edge) + "\"";
-					/* New edges are coloured green */
-					if (!leftGraph.containsThisEdge(edge)) {
-						dot += ", color=\"green\"";
-					}
-					dot += "]\n";
-					/* New nodes are coloured green */
-					if (!leftGraph.containsNode(ListGraph.getName(edge.getSource()))) {
-						dot += "\t\"" + ListGraph.getName(edge.getSource()) + "\" [color=\"green\", fontcolor=\"green\"]" + "\n";
-					}
-					if (!leftGraph.containsNode(ListGraph.getName(edge.getTarget()))) {
-						dot += "\t\"" + ListGraph.getName(edge.getTarget()) + "\" [color=\"green\", fontcolor=\"green\"]" + "\n";
-					}
+				/* Add the edge, with it's source and target nodes, to the .dot string */
+				dot += "\t\"" + ListGraph.getName(edge.getSource()) + "\" -> \"" + ListGraph.getName(edge.getTarget()) +
+				"\" [label=\"" + ListGraph.getName(edge) + "\"";
+				/* New edges are coloured green */
+				if (!leftGraph.containsThisEdge(edge)) {
+					dot += ", color=\"green\"";
+				}
+				dot += "]\n";
+				/* New nodes are coloured green */
+				if (!leftGraph.containsNode(ListGraph.getName(edge.getSource()))) {
+					dot += "\t\"" + ListGraph.getName(edge.getSource()) + "\" [color=\"green\", fontcolor=\"green\"]" + "\n";
+				}
+				if (!leftGraph.containsNode(ListGraph.getName(edge.getTarget()))) {
+					dot += "\t\"" + ListGraph.getName(edge.getTarget()) + "\" [color=\"green\", fontcolor=\"green\"]" + "\n";
+				}
 			}
 			/* Check for and add deleted edges */
 			for (Arc edge : leftGraph.getArcsList()) {
@@ -410,11 +420,13 @@ public class AGGTransformer {
 				BufferedWriter out = new BufferedWriter(new FileWriter(filepath));
 				out.write(dot);
 				out.close();
-				System.out.println("Dot code written: " + filepath);
+				if(Properties.printDebug) {
+					System.out.println("Dot code written: " + filepath);
+				}
 			} catch (Exception e) {
 				throw new IOException("Error writing dot file: " + e.getMessage());
 			}
-			
+
 		}
 	}
 }

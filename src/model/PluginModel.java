@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 
+import controller.Properties;
+
 import model.exceptions.GraphToModelException;
 import model.exceptions.ModelToGraphException;
 import model.graphTransformer.AGGTransformer;
@@ -53,16 +55,16 @@ public class PluginModel {
 
 	/** Keeps track of the number of transitions performed (used in names for output dot files) */
 	private Integer transitionnumber = 0;
-	private boolean printRule, printGraph;
+//	private boolean printRule, printGraph;
 
 	public ObjectDisplay getObjectDisplay() {
 		return objectdisplay;
 	}
 
 	public PluginModel(String gtsRulesPath, String gtsRulesSeqPath,
-			boolean debugmode, String graphOutputsPath, boolean isPrintRule, boolean isPrintGraph) throws Exception {
-		printRule = isPrintRule;
-		printGraph = isPrintGraph;
+			String graphOutputsPath) throws Exception {  // boolean debugmode, String graphOutputsPath, boolean isPrintRule, boolean isPrintGraph
+//		printRule = isPrintRule;
+//		printGraph = isPrintGraph;
 		if (!graphOutputsPath.endsWith("/")) graphOutputsPath = graphOutputsPath + "/";
 		this.graphOutputsPath = graphOutputsPath;
 
@@ -70,7 +72,7 @@ public class PluginModel {
 		graphtomodel = GraphToModelFactory.createGraphToModel();
 		graphTransformer = new AGGTransformer(gtsRulesPath, gtsRulesSeqPath);
 
-		if (printRule) {
+		if (Properties.printRules) {
 			try {
 				graphTransformer.outputRulesAsDot(this.graphOutputsPath);
 
@@ -110,7 +112,7 @@ public class PluginModel {
 		origGraph = new ListGraph(graph);
 
 		//if system is in debug mode, output graph as dot file
-		if (printGraph) try {
+		if (Properties.printGraphs) try {
 			outputdot(graph, graph);
 		} catch(IOException e) {
 			throw new GraphToModelException(e.getMessage());
@@ -138,7 +140,7 @@ public class PluginModel {
 		graph = (ListGraph)graphTransformer.transition(
 				ListGraph.getName(obj.getGraphNode()), actionName, actionParam);
 		transitionnumber++;
-		if (printGraph) outputdot(graph, graphs.get(graphs.size()-1));  //debugmode
+		if (Properties.printGraphs) outputdot(graph, graphs.get(graphs.size()-1));  //debugmode
 
 		objectdisplay = graphtomodel.generateDisplayObjects(graph);
 	}
@@ -217,7 +219,9 @@ public class PluginModel {
 			BufferedWriter out = new BufferedWriter(new FileWriter(filepath));
 			out.write(res);
 			out.close();
+			if(Properties.printDebug) {
 			System.out.println("Dot code written: " + filepath);
+			}
 		} catch (Exception e) {
 			throw new IOException("Error writing dot file: " + e.getMessage());
 		}

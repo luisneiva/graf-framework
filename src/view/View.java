@@ -32,6 +32,7 @@ import org.eclipse.ui.part.ViewPart;
 import view.contentDrawer.ContentDrawer;
 import view.contentDrawer.ObjectDiagDrawer;
 import controller.Controller;
+import controller.Properties;
 
 /**
  * Provides display for system.
@@ -66,7 +67,7 @@ public class View extends ViewPart {
 	private ClickableLabel redo = new ClickableLabel(">");
 	private ClickableLabel reset = new ClickableLabel("<<");
 
-	private boolean printRules, printGraphs;
+//	private boolean printRules, printGraphs, printDebug;
 	private File propertyFile = new File("Properties.txt");
 
 
@@ -90,7 +91,7 @@ public class View extends ViewPart {
 			e.printStackTrace();
 		}
 
-		controller = new Controller(this, plugin, printRules, printGraphs); 
+		controller = new Controller(this, plugin);  // Properties.printRules, Properties.printGraphs, Properties.printDebug 
 		final Shell sh = parent.getShell();
 		final Display d = parent.getDisplay();
 		controller.addMenuBar(sh, d);
@@ -106,14 +107,16 @@ public class View extends ViewPart {
 				lineStr = sc.nextLine();
 				content = lineStr.split(" ");
 				
-				if(lineStr.startsWith("PrintRules"))
-				{
-					printRules = Boolean.parseBoolean(content[1]);
-				}
-				else
-				{
-					printGraphs = Boolean.parseBoolean(content[1]);
-				}
+				Properties.readProperties();
+				
+//				if(lineStr.startsWith("PrintRules")) {
+//					printRules = Boolean.parseBoolean(content[1]);
+//				} else if(lineStr.startsWith("PrintGraphs")) {
+//					printGraphs = Boolean.parseBoolean(content[1]);
+//				}
+//				else {
+//					printDebug = Boolean.parseBoolean(content[1]);
+//				}
 			}
 		}
 		finally {
