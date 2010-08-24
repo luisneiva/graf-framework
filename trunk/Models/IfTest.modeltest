@@ -1,0 +1,6 @@
+IfTest.uml
+
+o1 : Invoicer
+{State1}
+FirstProperty = 2
+SecondProperty = 14

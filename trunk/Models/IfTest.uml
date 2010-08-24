@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA">
+  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="InvoicerPackage">
+    <elementImport xmi:id="_rlMmEIDyEd-HL_3tQGiR0Q">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_QDmQoGGVEd-wueUf9g8DcA" name="Invoicer" classifierBehavior="_UEZ-MGGWEd-wueUf9g8DcA">
+      <ownedAttribute xmi:id="_jmUV4IDwEd-HL_3tQGiR0Q" name="FirstProperty"/>
+      <ownedAttribute xmi:id="_Ijq3oK9CEd-LG9Xj56ZbmQ" name="SecondProperty"/>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_UEZ-MGGWEd-wueUf9g8DcA" name="InvoicerStateMachine">
+        <region xmi:id="_UEZ-MWGWEd-wueUf9g8DcA" name="InvoicerRegion">
+          <subvertex xmi:type="uml:State" xmi:id="_cxHPoGGWEd-wueUf9g8DcA" name="State1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_kvQK4GGWEd-wueUf9g8DcA" name="State2">
+            <entry xmi:type="uml:Activity" xmi:id="_ffvKwK9CEd-LG9Xj56ZbmQ" name="EntryActivity">
+              <node xmi:type="uml:ConditionalNode" xmi:id="_jvskEK9CEd-LG9Xj56ZbmQ" name="ConditionalNode1">
+                <node xmi:type="uml:AddStructuralFeatureValueAction" xmi:id="_nYYiAK9CEd-LG9Xj56ZbmQ" name="TestValue">
+                  <result xmi:id="_CxsKkK9FEd-LG9Xj56ZbmQ" name="TestOutputpin"/>
+                </node>
+                <node xmi:type="uml:CreateObjectAction" xmi:id="_zmCKoK9CEd-LG9Xj56ZbmQ" name="TrueAction" classifier="_QDmQoGGVEd-wueUf9g8DcA">
+                  <result xmi:id="_8iERgK9CEd-LG9Xj56ZbmQ" name="TrueActionOutputPin"/>
+                </node>
+                <clause xmi:id="_k9NgEK9CEd-LG9Xj56ZbmQ" test="_nYYiAK9CEd-LG9Xj56ZbmQ" body="_zmCKoK9CEd-LG9Xj56ZbmQ" bodyOutput="_8iERgK9CEd-LG9Xj56ZbmQ"/>
+              </node>
+            </entry>
+          </subvertex>
+          <transition xmi:id="_uP4zoGGWEd-wueUf9g8DcA" name="InvoiceTrans" source="_cxHPoGGWEd-wueUf9g8DcA" target="_kvQK4GGWEd-wueUf9g8DcA">
+            <trigger xmi:id="_-8EIkX6LEd-VRIfXnUISTA" name="TriggerInvoice" event="_2Dv1IK9AEd-LG9Xj56ZbmQ"/>
+          </transition>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_z-vQcK9AEd-LG9Xj56ZbmQ" name="DoStuffSignal"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_2Dv1IK9AEd-LG9Xj56ZbmQ" name="DoStuff" signal="_z-vQcK9AEd-LG9Xj56ZbmQ"/>
+  </packagedElement>
+</uml:Model>
