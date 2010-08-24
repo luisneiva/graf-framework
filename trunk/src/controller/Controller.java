@@ -1,5 +1,6 @@
 package controller;
 
+import java.awt.CheckboxMenuItem;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -46,12 +47,12 @@ public class Controller {
 	/** Is the system running as a plugin or stand-alone. True if plugin, False if standalone */
 	private Boolean isPlugin;
 	
-	private boolean isPrintRule, isPrintGraph;
+//	private boolean isPrintRule, isPrintGraph, isPrintDebug;
 
 	/** Reference to controller instance, needed when running as plugin */
 	private static Controller inst;
 	/** In debug mode, graph states are output (as dot) at every transition */
-	private final boolean debugmode;
+//	private final boolean debugmode;
 	/** Path to directory for storing graph states */
 	private final String graphOutputsPath = "GraphOutputs/";
 	private final String gtsRulesPath = "GTSRules.ggx";
@@ -61,14 +62,15 @@ public class Controller {
 	/**
 	 * Set up model and view. Create and register listeners in the view.
 	 */
-	public Controller(final View theview, boolean plugin, boolean printRule, boolean printGraph) {
-		isPrintRule = printRule;
-		isPrintGraph = printGraph;
+	public Controller(final View theview, boolean plugin) {  // boolean printRule, boolean printGraph, boolean printDebug
+//		isPrintRule = printRule;
+//		isPrintGraph = printGraph;
+//		isPrintDebug = printDebug;
 		inst = this;
 		view = theview;
 		isPlugin = plugin;
 //		debugmode = !isPlugin;	//only output dot files if standalone
-		debugmode = printGraph;
+//		debugmode = printGraph;
 		
 		try {
 			String gtsRulesFilePath = "";
@@ -93,7 +95,7 @@ public class Controller {
 				gtsRulesFilePath = gtsRulesPath;
 				gtsRulesSeqFilePath = gtsRulesSeqPath;
 			}
-			model = new PluginModel(gtsRulesFilePath, gtsRulesSeqFilePath, debugmode, graphOutputsPath, isPrintRule, isPrintGraph);
+			model = new PluginModel(gtsRulesFilePath, gtsRulesSeqFilePath, graphOutputsPath);  // debugmode, graphOutputsPath, isPrintRule, isPrintGraph
 			view.setModel(model);
 		} catch (Exception e) {
 			showError(e);
@@ -245,9 +247,10 @@ public class Controller {
 	 */
 	public void addMenuBar(final Shell shell, final Display d)
 	{
-		Menu menuBar, fileMenu, editMenu, helpMenu;
-		MenuItem fileMenuHeader, editMenuHeader, helpMenuHeader;
+		Menu menuBar, fileMenu, editMenu, helpMenu, properitesMenu;
+		MenuItem fileMenuHeader, editMenuHeader, helpMenuHeader, properitesMenuHeader;
 		MenuItem fileExitItem, fileNewItem, helpGetHelpItem, undoItem, redoItem, resetItem;
+		final MenuItem properitesPrintDebugItem;
 		
 		menuBar = new Menu(shell, SWT.BAR);
 		fileMenuHeader = new MenuItem(menuBar, SWT.CASCADE);
@@ -290,6 +293,23 @@ public class Controller {
 		helpGetHelpItem = new MenuItem(helpMenu, SWT.PUSH);
 		helpGetHelpItem.setText("&Get Help");
 
+		
+		properitesMenuHeader = new MenuItem(menuBar, SWT.CASCADE);
+		properitesMenuHeader.setText("&Properites");
+
+		properitesMenu = new Menu(shell, SWT.DROP_DOWN);
+		properitesMenuHeader.setMenu(properitesMenu);
+		
+		properitesPrintDebugItem = new MenuItem(properitesMenu, SWT.PUSH);
+		if(Properties.printDebug) {
+			properitesPrintDebugItem.setText("Turn Off Print Debug");
+		} else {
+			properitesPrintDebugItem.setText("Turn On Print Debug");
+		}
+		
+		// TODO: CHANGE Properties.txt
+		
+		
 		shell.setMenuBar(menuBar);
 
 		// file->exit
@@ -375,6 +395,29 @@ public class Controller {
 				
 			}			
 		});
+		
+		
+		//Properties->PrintDebug
+		properitesPrintDebugItem.addSelectionListener(new SelectionListener() {
+			public void widgetDefaultSelected(SelectionEvent e) {
+
+			}
+
+			public void widgetSelected(SelectionEvent e) {
+				if(Properties.printDebug){
+					Properties.printDebug = false;
+					properitesPrintDebugItem.setText("Turn On Print Debug");	
+				} else {
+					Properties.printDebug = true;
+					properitesPrintDebugItem.setText("Turn Off Print Debug");
+				}
+				
+			}			
+		});
+		
+		
+		
+		
 	}
 	
 	
