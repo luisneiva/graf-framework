@@ -84,10 +84,11 @@ public class ListGraph extends Graph {
 	 * first character
 	 */
 	public static String getName(GraphObject graphObj) {
+		String states[];
 		ValueMember value = (ValueMember) graphObj.getAttribute().getMemberAt("name");
 
 		String str = value.toString();
-
+		
 		if(str == null || str.equals(""))
 			return "(noname)";
 
@@ -96,8 +97,10 @@ public class ListGraph extends Graph {
 			str = str.substring(1, str.length()-1);
 		}
 		else
+		{
 			str = "?"+str;
-
+		}
+		
 		return str;
 	}
 

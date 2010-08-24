@@ -3,6 +3,7 @@ package model.modelTransformer.objectDisplay;
 import java.util.ArrayList;
 
 import model.ListGraph;
+import agg.xt_basis.GraphObject;
 import agg.xt_basis.Node;
 
 /** 
@@ -23,6 +24,9 @@ public class ODObject extends DisplayObject {
 	// TODO!!!
 	// CHANGE it to arraylist
 	private Node stateNode;
+	
+	//@author: Frank Su
+	private ArrayList<Node> stateNodes;
 
 	private ArrayList<ODAction> actionPool;
 	private ArrayList<ODEvent> eventPool;
@@ -50,6 +54,8 @@ public class ODObject extends DisplayObject {
 		eventPool = new ArrayList<ODEvent>();
 		externalEvents = new ArrayList<ODEvent>();
 		methods = new ArrayList<ODMethod>();
+		
+		stateNodes = new ArrayList<Node>();
 		
 		//Set initial location to random point on screen (more structured placement would be better) 
 		setLocation(randomGenerator.nextInt(400),randomGenerator.nextInt(300));		
@@ -165,11 +171,16 @@ public class ODObject extends DisplayObject {
 	public void setState(Node stateNode) {
 		this.stateNode = stateNode;
 	}
+	
+	public void addState(Node sn)
+	{
+		stateNodes.add(sn);
+	}
 
 	public Node getState() {
 		return stateNode;
 	}
-
+	
 	/**
 	 * Creates an ODAction based on a node and adds it to this.
 	 * 
@@ -209,5 +220,9 @@ public class ODObject extends DisplayObject {
 	public void addMethod(Node methodNode) {
 		ODMethod method = new ODMethod(methodNode);
 		methods.add(method);	
+	}
+
+	public ArrayList<Node> getStates() {
+		return stateNodes;
 	}
 }
