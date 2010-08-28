@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU">
+	<head>
+		<!-- u4411120 2/07/2010 -->
+		<title>RuleDoc - acceptCallAction-WithActivity-HasBehavior</title>
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<link rel="stylesheet" type="text/css" href="../styles/rules.css" media="screen" />
+		<style type="text/css" id="pageStyles">
+		</style>
+	</head>
+	<body>
+		<div id="heading">
+			<h1>
+				acceptCallAction-WithActivity-HasBehavior
+			</h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="14.html">Back</a>
+				</li>
+				<li>
+					<a href="../index.html">Up to Index</a>
+				</li>
+				<li>
+					<a href="16.html">Next</a>
+				</li>
+			</ul>
+		</div>
+		<div id="content">
+			<div id="middlecolumn">
+				<h2>
+					US Section 11.3.1 <a href="../actions/acceptCallAction.html">AcceptCallAction</a>
+				</h2>
+				<p>
+					To go to the page containing the rule description in the US pdf document,
+					<a href="../../UML_Superstructure_2-1-2_07-11-02.pdf#page=250">
+						click here
+					</a>.
+				</p>
+				<a href="../../GraphOutputs/acceptCallAction-WithActivity-HasBehavior.dot.png">
+					<img 
+						src="../../GraphOutputs/acceptCallAction-WithActivity-HasBehavior.dot.png"
+						alt="The dot-generated rule image"
+						title="Click to see the full-size version"
+					/>
+				</a>
+				<h2>
+					Context
+				</h2>
+				<p>
+					Below is the xml file which defines the order in which the rules are executed. 
+				</p>
+					<iframe src="../../GTSRulesSeq.xml">
+						Your browser does not support frames. 
+						<a href="../../GTSRulesSeq.xml" title="View the xml rule sequence file">
+							Click here
+						</a> to see the file.
+					</iframe>
+				<h2>
+					Rationale
+				</h2>
+					<p>
+						'AcceptCallAction is an accept event action representing the receipt of a synchronous call request.'
+						The overall application of this suite of rules is to generate a new behaviorExecution node in the instance
+						whose operation has been called (as this rule does), and then add executable edges to all the actions contained
+						in the method that implements the operation (done by <a href="16.html">acceptCallAction-WithActivity-ExecutableEdges</a>).
+						This has the effect of allowing the user to 'execute' the actions contained in the method that was called.  
+					</p>
+					<p>
+						Note that if we implement operations other than methods it may be wiser to generalise this rule than creating
+						a whole new suite. This could possibly be done by making the edge names under Operation less specific.
+					</p>
+					<p>
+						This variation deals with the case in which the targeted object instance already has a behaviorExecution node - this
+						can happen as behaviorExecution nodes are not cleaned up after all their executable edges are removed. If this rule
+						were not present, an instance could have multiple behaviorExecution nodes. When that happens, the application of the
+						*ExecutableEdges rules creates too many executable edges, each of which are added as 'clickable' actions by GRAF.
+					</p>
+				<h2>
+					Assumptions/Deviations from the Definition
+				</h2>
+					<p>
+						Recall that executable edges are not part of the UML Specification - they are a convenient way for GRAF to keep track 
+						of the actions still to be executed. See further the discussion of the <a href="../actions/acceptCallAction">AcceptCallAction</a> itself.
+					</p>
+			</div>
+		</div>
+	</body>
+</html>

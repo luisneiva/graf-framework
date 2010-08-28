@@ -104,6 +104,15 @@
 					<li>Names prefixed with a ? are variables, that is, they can match any name.</li>
 					<li>Names prefixed with a # are allocated unique names by GRAF.</li>
 					<li>Red edges and nodes are Negative Application Conditions ('NACs'). If they occur in the graph the rule will not be applied.</li>
+					<ul>
+						<li>In GRAF, the NACs are displayed as separated from the main body of the rule. This is because of a peculiarity of AGG - 
+						when the rule is built, the NAC nodes are 'mapped' so that AGG knows that they are 'the same' as the ones in the main body
+						of the rule. But if the NAC nodes have the same <em>name</em> as the original nodes, AGG won't apply the NAC properly. However, 
+						the only way that GRAF distinguishes between nodes is by name, so when the rule image is generated the NAC is displayed 
+						as being between entirely separate nodes.</li>
+						<li>For ease of interpretation, the 'new' names of the NAC nodes are simply the original names of the nodes with a '2' added.</li>
+						<li>An example is the <a href="rules/1.html">acceptEventAction-WithActivity-ExecutableEdges</a> rule.</li>
+					</ul>
 					<li>Green edges are added to the graph when the rule is applied.</li>
 					<li>Blue edges are deleted when the rule is applied.</li>
 				</ul>
@@ -157,13 +166,13 @@
 						<td>13</td> <td>US 11.3.10 <a href="actions/callOperationAction.html">CallOperationAction</a></td> <td><a href="rules/13.html">actorCallOperation</a></td>
 					</tr>
 					<tr>
-						<td>14</td> <td>US 11.3.1 <a href="actions/acceptCallAction.html">AcceptCallAction</a></td> <td>acceptCallAction-WithActivity-Main</td>
+						<td>14</td> <td>US 11.3.1 <a href="actions/acceptCallAction.html">AcceptCallAction</a></td> <td><a href="rules/14.html">acceptCallAction-WithActivity-Main</a></td>
 					</tr>
 					<tr>	
-						<td>15</td> <td></td>	<td>acceptCallAction-WithActivity-HasBehavior</td>
+						<td>15</td> <td></td>	<td><a href="rules/15.html">acceptCallAction-WithActivity-HasBehavior</a></td>
 					</tr>
 					<tr>	
-						<td>16</td> <td></td>	<td>acceptCallAction-WithActivity-ExecutableEdges</td>
+						<td>16</td> <td></td>	<td><a href="rules/16.html">acceptCallAction-WithActivity-ExecutableEdges</a></td>
 					</tr>
 				</table>
 			</div>

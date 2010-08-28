@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU">
+	<head>
+		<!-- u4411120 2/07/2010 -->
+		<title>RuleDoc - AcceptCallAction</title>
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<link rel="stylesheet" type="text/css" href="../styles/rules.css" media="screen" />
+		<style type="text/css" id="pageStyles">
+		</style>
+	</head>
+	<body>
+		<div id="heading">
+			<h1>
+				AcceptCallAction
+			</h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="callOperationAction.html">Back</a>
+				</li>
+				<li>
+					<a href="../index.html">Up to Index</a>
+				</li>
+				<li>
+					<a href="#.html">Next</a>
+				</li>
+			</ul>
+		</div>
+		<div id="content">
+			<div id="middlecolumn">
+				<h2>
+					US Section 11.3.1
+				</h2>
+				<p>
+					To go to the page containing the full rule description in the US pdf document,
+					<a href="../../UML_Superstructure_2-1-2_07-11-02.pdf#page=250">
+						click here
+					</a>. Relevant sections are extracted below.
+				</p>
+				<div class="extract">
+					<h3>Description</h3>
+					<p>AcceptCallAction is an accept event action representing the receipt of a synchronous call request. In addition to the
+					normal operation parameters, the action produces an output that is needed later to supply the information to the
+					ReplyAction necessary to return control to the caller.</p>
+					<p>This action is for synchronous calls. If it is used to handle an asynchronous call, execution of the subsequent reply action
+					will complete immediately with no effects.</p>
+					<h3>Attributes</h3>
+					<p>See <a href="acceptEventAction.html">AcceptEventAction</a>.</p>
+					<h3>Associations</h3>
+					<p>returnInformation: OutputPin[1..1]<br/>
+					Pin where the value is placed containing sufficient information to perform a subsequent reply and return control to the
+					caller. The contents of this value are opaque. It can be passed and copied but it cannot be manipulated by the model.</p>
+					<h3>Constraints</h3>
+					<ol>
+						<li>The result pins must match the in and out parameters of the operation specified by the trigger event in number,
+						type, and order.</li>
+						<li>The trigger event must be a CallEvent.</li>
+						<li>isUnmarshall must be true for an AcceptCallAction.</li>
+					</ol>
+					<h3>Semantics</h3>
+					<p>This action accepts (event) occurrences representing the receipt of calls on the operation specified by the trigger call
+					event. If an ongoing activity behavior has executed an accept call action that has not completed and the owning object has
+					an event occurrence representing a call of the specified operation, the accept call action claims the event occurrence and
+					removes it from the owning object. If several accept call actions concurrently request a call on the same operation, it is
+					unspecified which one claims the event occurrence, but one and only one action will claim the event. The argument
+					values of the call are placed on the result output pins of the action. Information sufficient to perform a subsequent reply
+					action is placed in the returnInformation output pin. The execution of the accept call action is then complete. This return
+					information value is opaque and may only be used by ReplyAction.</p>
+					<p>Note that the target class must not define a method for the operation being received; otherwise, the operation call will be
+					dispatched to that method instead of being put in the event buffer to be handled by AcceptCallAction. In general, classes
+					determine how operation calls are handled, namely by a method, by a behavior owned directly by the class, by a state
+					machine transition, and so on. The class must ensure that the operation call is handled in a way that AcceptCallAction has
+					access to the call event.</p>
+				</div>
+				<h2>
+					Discussion
+				</h2>
+					<p>
+						As a specialization of AcceptEventAction, the implementation of CallOperationAction follows the pattern established by 
+						the acceptEventAction rules. The naming conventions of those rules have been retained for ease of reference, although
+						there are some differences. For example, AcceptCallAction does not require a 'SameState' variant. This is because (so far)
+						we do not have an Operation that triggers a transition between states. 
+					</p>
+					<p>
+						Please refer to the discussion of <a href="acceptEventAction">AcceptEventAction</a> for further discussion on the
+						implementation of these Actions.
+					</p>
+				<h2>
+					Rules that implement this action:
+				</h2>
+				<ul>
+					<li><a href="../rules/14.html">acceptCallAction-WithActivity-Main</a></li>
+					<li><a href="../rules/15.html">acceptCallAction-WithActivity-HasBehavior</a></li>
+					<li><a href="../rules/16.html">acceptCallAction-WithActivity-ExecutableEdges</a></li>
+				</ul>
+				<p>
+					Below is the xml file which defines the order in which the rules are executed
+					when a particular action is called. 
+				</p>
+					<iframe src="../../GTSRulesSeq.xml">
+						Your browser does not support frames. 
+						<a href="../../GTSRulesSeq.xml" title="View the xml rule sequence file">
+							Click here
+						</a> to see the file.
+					</iframe>
+				
+			</div>
+		</div>
+	</body>
+</html>
