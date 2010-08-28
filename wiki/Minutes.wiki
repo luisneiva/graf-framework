@@ -24,6 +24,8 @@
 || 16/8 || Technical || [tagenda1608 Agenda] || [tminutes1608 Minutes] ||
 || 17/8 || Technical || No Agenda || [minutes1708 Minutes] ||
 || 23/8 || Mentor || [agenda2308 Agenda] || [minutes2308 Minutes] ||
+|| 30/8 || Team || [agenda3008 Agenda] || [minutes3008 Minutes] ||
+|| 30/8 || Client || [cagenda3008 Agenda] || [cminutes3008 Minutes] ||
 
 Agendas and minutes from before 12/5/2010 are on [https://alliance.anu.edu.au/portal Alliance]. <br>
 [agendaTemplate Agenda Template] <br>
