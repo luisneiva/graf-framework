@@ -2431,7 +2431,7 @@
             <Parameter name="classifierBehaviorExecution" type="String"/>
             <Parameter name="transition" type="String"/>
             <Parameter name="trigger" type="String"/>
-            <Parameter PTYPE="input" name="recieveSignal" type="String"/>
+            <Parameter name="recieveSignal" type="String"/>
             <Parameter name="signal" type="String"/>
             <Parameter name="stateMachine" type="String"/>
             <Parameter name="stateMachineRegion" type="String"/>
@@ -2440,7 +2440,7 @@
             <Parameter name="actor" type="String"/>
             <Parameter name="actorBehaviorExecution" type="String"/>
             <Parameter name="classifier" type="String"/>
-            <Parameter name="operation" type="String"/>
+            <Parameter PTYPE="input" name="operation" type="String"/>
             <Parameter name="method" type="String"/>
             <Graph ID="I669" kind="LHS" name="LeftOf_actorCallOperation">
                 <Node ID="I670" type="I2">
@@ -13952,13 +13952,13 @@
         <Rule ID="I3794" name="acceptCallAction-WithActivity-Main">
             <Parameter name="actorBehaviorExecution" type="String"/>
             <Parameter name="actor" type="String"/>
-            <Parameter name="instance" type="String"/>
+            <Parameter PTYPE="input" name="instance" type="String"/>
             <Parameter name="classifier" type="String"/>
             <Parameter name="operation" type="String"/>
             <Parameter name="method" type="String"/>
             <Parameter name="messageInstanceSent" type="String"/>
             <Parameter name="messageInstance" type="String"/>
-            <Parameter name="messageInstanceReceipt" type="String"/>
+            <Parameter PTYPE="input" name="messageInstanceReceipt" type="String"/>
             <Graph ID="I3796" kind="LHS" name="LeftOf_acceptCallAction-WithActivity-Main">
                 <Node ID="I3797" type="I2">
                     <Attribute type="I4" variable="true">
@@ -14676,14 +14676,14 @@
         <Rule ID="I3990" name="acceptCallAction-WithActivity-HasBehavior">
             <Parameter name="actorBehaviorExecution" type="String"/>
             <Parameter name="actor" type="String"/>
-            <Parameter name="instance" type="String"/>
+            <Parameter PTYPE="input" name="instance" type="String"/>
             <Parameter name="classifier" type="String"/>
             <Parameter name="operation" type="String"/>
             <Parameter name="method" type="String"/>
             <Parameter name="existingBehaviorExecution" type="String"/>
             <Parameter name="messageInstanceSent" type="String"/>
             <Parameter name="messageInstance" type="String"/>
-            <Parameter name="messageInstanceReceipt" type="String"/>
+            <Parameter PTYPE="input" name="messageInstanceReceipt" type="String"/>
             <Graph ID="I3992" kind="LHS" name="LeftOf_acceptCallAction-WithActivity-HasBehavior">
                 <Node ID="I3993" type="I2">
                     <Attribute type="I4" variable="true">
@@ -15443,12 +15443,12 @@
             <TaggedValue Tag="priority" TagValue="0"/>
         </Rule>
         <Rule ID="I4198" name="acceptCallAction-WithActivity-ExecutableEdges">
-            <Parameter name="instance" type="String"/>
+            <Parameter PTYPE="input" name="instance" type="String"/>
             <Parameter name="classifier" type="String"/>
             <Parameter name="operation" type="String"/>
             <Parameter name="method" type="String"/>
             <Parameter name="messageInstance" type="String"/>
-            <Parameter name="messageInstanceReceipt" type="String"/>
+            <Parameter PTYPE="input" name="messageInstanceReceipt" type="String"/>
             <Parameter name="messageInstanceSent" type="String"/>
             <Parameter name="existingBehaviorExecution" type="String"/>
             <Parameter name="action" type="String"/>
