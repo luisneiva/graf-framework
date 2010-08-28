@@ -1,0 +1,10 @@
+#summary agenda
+== Client Meeting ==
+*Date:* 30/8/10
+<br>*Time:* 3pm
+<br>*Location:* Raj's office
+<br>*Duration:* 1 hour
+
+=== Agenda Items ===
+  * Progress report
+  * Method implementation discussion
