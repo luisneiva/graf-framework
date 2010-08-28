@@ -88,13 +88,13 @@
 				</h2>
 				<p>
 					<!--Requirements: dot program-->
-					GRAF can be configured to generate DOT <!--and image--> files of the various rules it
+					GRAF can be configured to generate DOT and image files of the various rules it
 					uses when it starts up. At the moment, this requires opening the 
-					<a href="../src/model/PluginModel.java">PluginModel.java file</a> in an editor,
-					and uncommenting the code at lines 72- . This code is commented out by default
-					as running the generation method slows GRAF down at startup, and generally the
-					existing rule files are up to date anyway. To generate new images from these files,
-					the 'dot' program from the <a href="http://www.graphviz.org/">Gaphviz suite</a> is required.
+					<a href="../Properties.txt">Properties</a> file in an editor and changing the 
+					boolean value 'PrintRules' to 'true'. To convert the generated .dot files to 
+					images, GRAF uses the 'dot' command-line tool from the 
+					the <a href="http://www.graphviz.org/">Gaphviz suite</a>. If you do not have this
+					installed, the conversion to image format will not work.
 				</p>
 				<h2>
 					Interpretation
@@ -154,7 +154,16 @@
 						<td>12</td> <td></td>	<td><a href="rules/12.html">acceptEventAction-WithActivity-SameState</a></td>
 					</tr>
 					<tr>
-						<td>13</td> <td>US 11.3.10 <a href="actions/callOperationAction.html">CallOperationAction</a></td> <td></td>
+						<td>13</td> <td>US 11.3.10 <a href="actions/callOperationAction.html">CallOperationAction</a></td> <td><a href="rules/13.html">actorCallOperation</a></td>
+					</tr>
+					<tr>
+						<td>14</td> <td>US 11.3.1 <a href="actions/acceptCallAction.html">AcceptCallAction</a></td> <td>acceptCallAction-WithActivity-Main</td>
+					</tr>
+					<tr>	
+						<td>15</td> <td></td>	<td>acceptCallAction-WithActivity-HasBehavior</td>
+					</tr>
+					<tr>	
+						<td>16</td> <td></td>	<td>acceptCallAction-WithActivity-ExecutableEdges</td>
 					</tr>
 				</table>
 			</div>
