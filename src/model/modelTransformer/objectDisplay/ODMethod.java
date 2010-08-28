@@ -20,7 +20,7 @@ public class ODMethod {
 	public ODMethod(Node node) {
 		name = ListGraph.getName(node);
 		
-		type = "MethodCall";
+		type = "CallOperationAction";
 		
 		// The method will be available for execution when:
 		// 1) it has no behaviorExecution node (it has not been executed before)
