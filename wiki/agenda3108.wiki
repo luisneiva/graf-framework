@@ -1,0 +1,12 @@
+#summary agenda
+== Client Meeting ==
+*Date:* 31/8/10
+<br>*Time:* 5pm
+<br>*Location:* N101
+<br>*Duration:* 1 hour
+<br>*Attending:* Shayne Flint and GRAF team
+
+=== Agenda Items ===
+  * Presentation of GRAF's current features
+  * Discussion of how GRAF can be used - lectures vs tutorials
+  * Discussion of features needed to make GRAF usable
