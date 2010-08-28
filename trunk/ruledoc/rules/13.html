@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU">
+	<head>
+		<!-- u4411120 2/07/2010 -->
+		<title>RuleDoc - actorCallOperation</title>
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<link rel="stylesheet" type="text/css" href="../styles/rules.css" media="screen" />
+		<style type="text/css" id="pageStyles">
+		</style>
+	</head>
+	<body>
+		<div id="heading">
+			<h1>
+				actorCallOperation
+			</h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="12.html">Back</a>
+				</li>
+				<li>
+					<a href="../index.html">Up to Index</a>
+				</li>
+				<li>
+					<a href="14.html">Next</a>
+				</li>
+			</ul>
+		</div>
+		<div id="content">
+			<div id="middlecolumn">
+				<h2>
+					US Section 11.3.10 <a href="../actions/callOperationAction.html">CallOperationAction</a>
+				</h2>
+				<p>
+					To go to the page containing the rule description in the US pdf document,
+					<a href="../../UML_Superstructure_2-1-2_07-11-02.pdf#page=262">
+						click here
+					</a>.
+				</p>
+				<a href="../../GraphOutputs/actorCallOperation.dot.png">
+					<img 
+						src="../../GraphOutputs/actorCallOperation.dot.png"
+						alt="The dot-generated rule image"
+						title="Click to see the full-size version"
+					/>
+				</a>
+				<h2>
+					Context
+				</h2>
+				<p>
+					Below is the xml file which defines the order in which the rules are executed. 
+				</p>
+					<iframe src="../../GTSRulesSeq.xml">
+						Your browser does not support frames. 
+						<a href="../../GTSRulesSeq.xml" title="View the xml rule sequence file">
+							Click here
+						</a> to see the file.
+					</iframe>
+				<h2>
+					Rationale
+				</h2>
+					<p>
+						'CallOperationAction is an action that transmits an operation call request to the target object, where it may cause the
+						invocation of associated behavior.' The CallOperationAction is a type of AcceptEventAction, as is 
+						<a href="../actions/sendSignalAction">Send Signal Action</a>. Where SendSignalAction sends an asynchronous message to a
+						particular object, for the object to process as it chooses, CallOperationAction refers to a specific sequence of actions,
+						defined as an Operation. The call may be synchronous or asynchronous. A synchronous call requires a ReplyAction to be 
+						executed by the called object when the Operation completes, so that the calling object can return to its execution.
+					</p>
+					<p>
+						This variation, like <a href="4.html">actorSendSignal</a>, mirrors the situation in which an external actor calls an operation
+						inside one of the model's objects. Because the external actor does not have a defined state machine in the UML model, there is
+						no CallOperationAction node to hold the various attributes of the Action required by the specification, and so only the effects
+						of the execution are simulated. These are described in the UML Specification at <a href="../../UML_Superstructure_2-1-2_07-11-02.pdf#page=437">13.1</a>.
+						Briefly, the execution of CallOperationAction generates an InvocationOccurrence event, which 'has' a message. That message is
+						'sent' to the receiving object. When it arrives, it causes a CallOccurrence event, which also 'has' the message. The receiving
+						object then responds to the CallOccurrence event depending on the attributes of the event and the information contained in the
+						message.
+					</p>
+				<h2>
+					Assumptions/Deviations from the Definition
+				</h2>
+					<p>
+						As explained above, in this implementation there is no CallOperationAction node, and so the Action has no attributes.
+						The correct Operation to execute is determined through the user's actions - what Operation they clicked on in the GUI
+						representation of the object diagram. This is then marked with an "i" edge from the messageInstance to the Operation. 
+						Further, the message holds no information. A full implementation would require a variant for both asynchronous and synchronous calls. <!-- Because in an asynchronous implementation
+						the reply returns upon receipt and no information is sent back to the calling object, we are treating the above rule as sufficient 
+						to mirror the effects. -->
+					</p>
+			</div>
+		</div>
+	</body>
+</html>
