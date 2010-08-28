@@ -9,4 +9,4 @@
   * Confirm review time
   * Progress Reports
   * Cameron's presentation of GRAF as an educational tool
-  * Update risk
+  * Update risk log
