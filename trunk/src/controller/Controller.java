@@ -36,6 +36,8 @@ import view.View;
  * Coordinates the view and model major components.
  *  
  * @author Kevin O'Shea
+ * @author Oscar Wood
+ * @author Frank Su
  */
 public class Controller {
 
@@ -47,12 +49,9 @@ public class Controller {
 	/** Is the system running as a plugin or stand-alone. True if plugin, False if standalone */
 	private Boolean isPlugin;
 	
-//	private boolean isPrintRule, isPrintGraph, isPrintDebug;
-
 	/** Reference to controller instance, needed when running as plugin */
 	private static Controller inst;
-	/** In debug mode, graph states are output (as dot) at every transition */
-//	private final boolean debugmode;
+	
 	/** Path to directory for storing graph states */
 	private final String graphOutputsPath = "GraphOutputs/";
 	private final String gtsRulesPath = "GTSRules.ggx";
@@ -62,16 +61,10 @@ public class Controller {
 	/**
 	 * Set up model and view. Create and register listeners in the view.
 	 */
-	public Controller(final View theview, boolean plugin) {  // boolean printRule, boolean printGraph, boolean printDebug
-//		isPrintRule = printRule;
-//		isPrintGraph = printGraph;
-//		isPrintDebug = printDebug;
+	public Controller(final View theview, boolean plugin) {
 		inst = this;
 		view = theview;
 		isPlugin = plugin;
-//		debugmode = !isPlugin;	//only output dot files if standalone
-//		debugmode = printGraph;
-		
 		try {
 			String gtsRulesFilePath = "";
 			String gtsRulesSeqFilePath = "";
@@ -95,7 +88,7 @@ public class Controller {
 				gtsRulesFilePath = gtsRulesPath;
 				gtsRulesSeqFilePath = gtsRulesSeqPath;
 			}
-			model = new PluginModel(gtsRulesFilePath, gtsRulesSeqFilePath, graphOutputsPath);  // debugmode, graphOutputsPath, isPrintRule, isPrintGraph
+			model = new PluginModel(gtsRulesFilePath, gtsRulesSeqFilePath, graphOutputsPath);
 			view.setModel(model);
 		} catch (Exception e) {
 			showError(e);
@@ -250,7 +243,7 @@ public class Controller {
 		Menu menuBar, fileMenu, editMenu, helpMenu, properitesMenu;
 		MenuItem fileMenuHeader, editMenuHeader, helpMenuHeader, properitesMenuHeader;
 		MenuItem fileExitItem, fileNewItem, helpGetHelpItem, undoItem, redoItem, resetItem;
-		final MenuItem properitesPrintDebugItem;
+		final MenuItem properitesPrintDebugItem, properitesPrintRulesItem, properitesPrintGraphsItem;
 		
 		menuBar = new Menu(shell, SWT.BAR);
 		fileMenuHeader = new MenuItem(menuBar, SWT.CASCADE);
@@ -300,15 +293,26 @@ public class Controller {
 		properitesMenu = new Menu(shell, SWT.DROP_DOWN);
 		properitesMenuHeader.setMenu(properitesMenu);
 		
+		properitesPrintRulesItem = new MenuItem(properitesMenu, SWT.PUSH);
+		if(Properties.printDebug) {
+			properitesPrintRulesItem.setText("Turn Off Print Rules");
+		} else {
+			properitesPrintRulesItem.setText("Turn On Print Rules");
+		}
+		
+		properitesPrintGraphsItem = new MenuItem(properitesMenu, SWT.PUSH);
+		if(Properties.printDebug) {
+			properitesPrintGraphsItem.setText("Turn Off Print Graphs");
+		} else {
+			properitesPrintGraphsItem.setText("Turn On Print Graphs");
+		}
+		
 		properitesPrintDebugItem = new MenuItem(properitesMenu, SWT.PUSH);
 		if(Properties.printDebug) {
 			properitesPrintDebugItem.setText("Turn Off Print Debug");
 		} else {
 			properitesPrintDebugItem.setText("Turn On Print Debug");
 		}
-		
-		// TODO: CHANGE Properties.txt
-		
 		
 		shell.setMenuBar(menuBar);
 
@@ -397,6 +401,42 @@ public class Controller {
 		});
 		
 		
+		//Properties->PrintRules
+		properitesPrintRulesItem.addSelectionListener(new SelectionListener() {
+			public void widgetDefaultSelected(SelectionEvent e) {
+
+			}
+
+			public void widgetSelected(SelectionEvent e) {
+				if(Properties.printRules){
+					Properties.printRules = false;
+					properitesPrintRulesItem.setText("Turn On Print Rules");	
+				} else {
+					Properties.printRules = true;
+					properitesPrintRulesItem.setText("Turn Off Print Rules");
+				}
+			}			
+		});
+		
+		
+		//Properties->PrintGraphs
+		properitesPrintGraphsItem.addSelectionListener(new SelectionListener() {
+			public void widgetDefaultSelected(SelectionEvent e) {
+
+			}
+
+			public void widgetSelected(SelectionEvent e) {
+				if(Properties.printGraphs){
+					Properties.printGraphs = false;
+					properitesPrintGraphsItem.setText("Turn On Print Graphs");	
+				} else {
+					Properties.printGraphs = true;
+					properitesPrintGraphsItem.setText("Turn Off Print Graphs");
+				}
+			}			
+		});
+		
+		
 		//Properties->PrintDebug
 		properitesPrintDebugItem.addSelectionListener(new SelectionListener() {
 			public void widgetDefaultSelected(SelectionEvent e) {
@@ -411,13 +451,8 @@ public class Controller {
 					Properties.printDebug = true;
 					properitesPrintDebugItem.setText("Turn Off Print Debug");
 				}
-				
 			}			
 		});
-		
-		
-		
-		
 	}
 	
 	
