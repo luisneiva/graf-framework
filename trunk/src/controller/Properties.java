@@ -25,7 +25,6 @@ public class Properties
 			//first use a Scanner to get each line
 			while(sc.hasNextLine()) {
 				lineStr = sc.nextLine();
-				System.out.println("line is: " + lineStr);
 				content = lineStr.split(":");
 
 				if(lineStr.startsWith("PrintRules")) {

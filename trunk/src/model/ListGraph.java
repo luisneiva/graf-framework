@@ -84,7 +84,6 @@ public class ListGraph extends Graph {
 	 * first character
 	 */
 	public static String getName(GraphObject graphObj) {
-		String states[];
 		ValueMember value = (ValueMember) graphObj.getAttribute().getMemberAt("name");
 
 		String str = value.toString();
