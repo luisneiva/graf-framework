@@ -477,6 +477,9 @@ public class Controller {
 	 * Run the Animator as a stand-alone application
 	 */
 	public static void main(String[] args) {
+		
+		long time = System.currentTimeMillis();
+		
 		final Display d = new Display();
 		final Shell shell = new Shell(d);
 		shell.setSize(650, 420);
@@ -488,10 +491,18 @@ public class Controller {
 		view.createPartControl(shell);
 		view.openFirst();
 
+		long time1 = System.currentTimeMillis();
 		shell.open();
+		long time2 = System.currentTimeMillis();
 		while (!shell.isDisposed())
 			while (!d.readAndDispatch())
 				d.sleep();
+		
+		//Time how long the application runs for
+		long time3 = System.currentTimeMillis();
+		long setupTime = time2 - time1;
+		long totalTime = time3 - time;
+		System.out.println("Total setup time = " + setupTime + " milliseconds\n");
+		System.out.println("Total execution time = " + totalTime + " milliseconds\n");
 	}
-
 }
