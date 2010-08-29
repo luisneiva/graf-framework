@@ -1,7 +1,10 @@
 package controller;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -22,8 +25,9 @@ public class Properties
 			//first use a Scanner to get each line
 			while(sc.hasNextLine()) {
 				lineStr = sc.nextLine();
-				content = lineStr.split(" ");
-				
+				System.out.println("line is: " + lineStr);
+				content = lineStr.split(":");
+
 				if(lineStr.startsWith("PrintRules")) {
 					printRules = Boolean.parseBoolean(content[1]);
 				} else if(lineStr.startsWith("PrintGraphs")) {
@@ -39,6 +43,28 @@ public class Properties
 			sc.close();
 		}
 	}
-	
-	
+
+
+	public static void rewritePropertiesFile() throws FileNotFoundException {
+		// Create file 
+		FileWriter fstream;
+		String towrite = "";
+		
+		try {
+			fstream = new FileWriter("Properties.txt");
+			BufferedWriter out = new BufferedWriter(fstream);
+			towrite = "PrintRules:" + printRules + "\nPrintGraphs:" + printGraphs + "\nPrintDebug:" + printDebug; 
+			
+			out.write(towrite);
+			//Close the output stream
+			out.close();
+			
+			
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
 }
