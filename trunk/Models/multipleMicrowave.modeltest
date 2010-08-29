@@ -142,3 +142,185 @@ b11 : Beeper
 
 m11 <cookedBy, cooks> f11
 m11 <in,has> b11
+
+m12 : Microwave
+{NotCooking}
+
+f12 : Food
+{NotCooked}
+temperature = 3
+
+b12 : Beeper
+{Silent}
+
+m12 <cookedBy, cooks> f12
+m12 <in,has> b12
+
+m13 : Microwave
+{NotCooking}
+
+f13 : Food
+{NotCooked}
+temperature = 3
+
+b13 : Beeper
+{Silent}
+
+m13 <cookedBy, cooks> f13
+m13 <in,has> b13
+
+m14 : Microwave
+{NotCooking}
+
+f14 : Food
+{NotCooked}
+temperature = 3
+
+b14 : Beeper
+{Silent}
+
+m14 <cookedBy, cooks> f14
+m14 <in,has> b14
+
+m15 : Microwave
+{NotCooking}
+
+f15 : Food
+{NotCooked}
+temperature = 3
+
+b15 : Beeper
+{Silent}
+
+m15 <cookedBy, cooks> f15
+m15 <in,has> b15
+
+m16 : Microwave
+{NotCooking}
+
+f16 : Food
+{NotCooked}
+temperature = 3
+
+b16 : Beeper
+{Silent}
+
+m16 <cookedBy, cooks> f16
+m16 <in,has> b16
+
+m17 : Microwave
+{NotCooking}
+
+f17 : Food
+{NotCooked}
+temperature = 3
+
+b17 : Beeper
+{Silent}
+
+m17 <cookedBy, cooks> f17
+m17 <in,has> b17
+
+m18 : Microwave
+{NotCooking}
+
+f18 : Food
+{NotCooked}
+temperature = 3
+
+b18 : Beeper
+{Silent}
+
+m18 <cookedBy, cooks> f18
+m18 <in,has> b18
+
+m19 : Microwave
+{NotCooking}
+
+f19 : Food
+{NotCooked}
+temperature = 3
+
+b19 : Beeper
+{Silent}
+
+m19 <cookedBy, cooks> f19
+m19 <in,has> b19
+
+m20 : Microwave
+{NotCooking}
+
+f20 : Food
+{NotCooked}
+temperature = 3
+
+b20 : Beeper
+{Silent}
+
+m20 <cookedBy, cooks> f20
+m20 <in,has> b20
+
+m21 : Microwave
+{NotCooking}
+
+f21 : Food
+{NotCooked}
+temperature = 3
+
+b21 : Beeper
+{Silent}
+
+m21 <cookedBy, cooks> f21
+m21 <in,has> b21
+
+m22 : Microwave
+{NotCooking}
+
+f22 : Food
+{NotCooked}
+temperature = 3
+
+b22 : Beeper
+{Silent}
+
+m22 <cookedBy, cooks> f22
+m22 <in,has> b22
+
+m23 : Microwave
+{NotCooking}
+
+f23 : Food
+{NotCooked}
+temperature = 3
+
+b23 : Beeper
+{Silent}
+
+m23 <cookedBy, cooks> f23
+m23 <in,has> b23
+
+m24 : Microwave
+{NotCooking}
+
+f24 : Food
+{NotCooked}
+temperature = 3
+
+b24 : Beeper
+{Silent}
+
+m24 <cookedBy, cooks> f24
+m24 <in,has> b24
+
+m20 : Microwave
+{NotCooking}
+
+f25 : Food
+{NotCooked}
+temperature = 3
+
+b25 : Beeper
+{Silent}
+
+m25 <cookedBy, cooks> f25
+m25 <in,has> b25
