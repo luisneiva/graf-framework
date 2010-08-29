@@ -294,14 +294,14 @@ public class Controller {
 		properitesMenuHeader.setMenu(properitesMenu);
 		
 		properitesPrintRulesItem = new MenuItem(properitesMenu, SWT.PUSH);
-		if(Properties.printDebug) {
+		if(Properties.printRules) {
 			properitesPrintRulesItem.setText("Turn Off Print Rules");
 		} else {
 			properitesPrintRulesItem.setText("Turn On Print Rules");
 		}
 		
 		properitesPrintGraphsItem = new MenuItem(properitesMenu, SWT.PUSH);
-		if(Properties.printDebug) {
+		if(Properties.printGraphs) {
 			properitesPrintGraphsItem.setText("Turn Off Print Graphs");
 		} else {
 			properitesPrintGraphsItem.setText("Turn On Print Graphs");
