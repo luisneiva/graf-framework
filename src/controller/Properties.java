@@ -4,11 +4,16 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+/**
+ * A class that contains 3 static Boolean flags to turn on/off debug/status messages in the console.
+ * @author Frank Su
+ *
+ */
 public class Properties
 {
 	public static Boolean printRules, printGraphs, printDebug;
 
-	// NEW menu -> properties -> print...
+	// menu: Properties -> print...
 	public static void readProperties() throws FileNotFoundException {
 		Scanner sc = new Scanner(new File("Properties.txt"));
 		String lineStr = "";

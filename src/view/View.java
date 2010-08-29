@@ -67,7 +67,6 @@ public class View extends ViewPart {
 	private ClickableLabel redo = new ClickableLabel(">");
 	private ClickableLabel reset = new ClickableLabel("<<");
 
-//	private boolean printRules, printGraphs, printDebug;
 	private File propertyFile = new File("Properties.txt");
 
 
@@ -86,44 +85,17 @@ public class View extends ViewPart {
 		isPlugin = plugin;
 		contentDrawer = new ObjectDiagDrawer(this);
 		try {
-			readRule();
+			Properties.readProperties();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
 
-		controller = new Controller(this, plugin);  // Properties.printRules, Properties.printGraphs, Properties.printDebug 
+		controller = new Controller(this, plugin); 
 		final Shell sh = parent.getShell();
 		final Display d = parent.getDisplay();
 		controller.addMenuBar(sh, d);
 	}
 
-	private void readRule() throws FileNotFoundException {
-		Scanner sc = new Scanner(propertyFile);
-		String lineStr = "";
-		String content[];
-		try {
-			//first use a Scanner to get each line
-			while(sc.hasNextLine()) {
-				lineStr = sc.nextLine();
-				content = lineStr.split(" ");
-				
-				Properties.readProperties();
-				
-//				if(lineStr.startsWith("PrintRules")) {
-//					printRules = Boolean.parseBoolean(content[1]);
-//				} else if(lineStr.startsWith("PrintGraphs")) {
-//					printGraphs = Boolean.parseBoolean(content[1]);
-//				}
-//				else {
-//					printDebug = Boolean.parseBoolean(content[1]);
-//				}
-			}
-		}
-		finally {
-			//ensure the underlying stream is always closed
-			sc.close();
-		}
-	}
 
 	/**
 	 * Open file chooser automatically, as soon as Graf starts.
@@ -139,11 +111,6 @@ public class View extends ViewPart {
 	public void setModel(PluginModel model) {
 		this.model = model;
 	}
-
-	/** Add listener to the 'New' button */
-	//	public void addNewAnimListener(ActionListener newListener) {
-	//		newAnimButton.addActionListener(newListener);
-	//	}
 
 	/** Add listener to the 'Undo' button */
 	public void addUndoListener(MouseListener resetListener) {
@@ -168,12 +135,6 @@ public class View extends ViewPart {
 		contentDrawer.setPopupListener(popupListener);
 	}
 
-	//	public void addFileNewListener(SelectionListener sl) {
-	//		fileNewItem.addSelectionListener(sl);
-	//	}
-	//	public void addExitListener(SelectionListener sl) {
-	//		fileExitItem.addSelectionListener(sl);
-	//	}
 
 	/** Reset display for new animation */
 	public void reset() {
