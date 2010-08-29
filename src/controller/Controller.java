@@ -415,6 +415,12 @@ public class Controller {
 					Properties.printRules = true;
 					properitesPrintRulesItem.setText("Turn Off Print Rules");
 				}
+				
+				try {
+					Properties.rewritePropertiesFile();
+				} catch (FileNotFoundException e1) {
+					e1.printStackTrace();
+				}
 			}			
 		});
 		
@@ -433,6 +439,12 @@ public class Controller {
 					Properties.printGraphs = true;
 					properitesPrintGraphsItem.setText("Turn Off Print Graphs");
 				}
+				
+				try {
+					Properties.rewritePropertiesFile();
+				} catch (FileNotFoundException e1) {
+					e1.printStackTrace();
+				}
 			}			
 		});
 		
@@ -450,6 +462,12 @@ public class Controller {
 				} else {
 					Properties.printDebug = true;
 					properitesPrintDebugItem.setText("Turn Off Print Debug");
+				}
+				
+				try {
+					Properties.rewritePropertiesFile();
+				} catch (FileNotFoundException e1) {
+					e1.printStackTrace();
 				}
 			}			
 		});
