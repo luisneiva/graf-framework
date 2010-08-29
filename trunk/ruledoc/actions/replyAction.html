@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU">
+	<head>
+		<!-- u4411120 2/07/2010 -->
+		<title>RuleDoc - ReplyAction</title>
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<link rel="stylesheet" type="text/css" href="../styles/rules.css" media="screen" />
+		<style type="text/css" id="pageStyles">
+		</style>
+	</head>
+	<body>
+		<div id="heading">
+			<h1>
+				ReplyAction
+			</h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="acceptCallAction.html">Back</a>
+				</li>
+				<li>
+					<a href="../index.html">Up to Index</a>
+				</li>
+				<li>
+					<a href="#.html">Next</a>
+				</li>
+			</ul>
+		</div>
+		<div id="content">
+			<div id="middlecolumn">
+				<h2>
+					US Section 11.3.43
+				</h2>
+				<p>
+					To go to the page containing the full rule description in the US pdf document,
+					<a href="../../UML_Superstructure_2-1-2_07-11-02.pdf#page=297">
+						click here
+					</a>. Relevant sections are extracted below.
+				</p>
+				<div class="extract">
+					<h3>Description</h3>
+					<p>ReplyAction is an action that accepts a set of return values and a value containing return
+					information produced by a previous accept call action. The reply action returns the values to the
+					caller of the previous call, completing execution of the call.</p>
+					<h3>Associations</h3>
+					<ul>
+						<li>replyToCall: Trigger [1..1]
+						<br />The trigger specifying the operation whose call is being replied to.</li>
+						<li>replyValue: InputPin [0..*]
+						<br />A list of pins containing the reply values of the operation. These values are returned
+						to the caller.</li>
+						<li>returnInformation: InputPin[1..1]
+						<br />A pin containing the return information value produced by an earlier AcceptCallAction.s</li>
+					</ul>
+					<h3>Constraints</h3>
+					<ol>
+						<li>The reply value pins must match the return, out, and inout parameters of the operation on the
+						event on the trigger in number, type, and order.</li>
+						<li>The event on replyToCall trigger must be a CallEvent</li>
+					</ol>
+					<h3>Semantics</h3>
+					<p>The execution of a reply action completes the execution of a call that was initiated by a previous AcceptCallAction. The
+					two are connected by the returnInformation value, which is produced by the AcceptCallAction and consumed by the
+					ReplyAction. The information in this value is used by the execution engine to return the reply values to the caller and to
+					complete execution of the original call. The details of transmitting call requests, encoding return information, and
+					transmitting replies are opaque and unavailable to models, therefore they need not be and are not specified in this
+					document.</p>
+					<p>Return information may be copied, stored in objects, and passed around, but it may only be used in a reply action once.
+					If the same return information value is supplied to a second ReplyAction, the execution is in error and the behavior of the
+					system is unspecified. It is not intended that any profile give any other meaning the return information. The operation
+					specified by the call event on the trigger must be consistent with the information returned at runtime.</p>
+					<p>If the return information is lost to the execution or if a reply is never made, the caller will never receive a reply and
+					therefore will never complete execution. This is not inherently illegal but it represents an unusual situation at the very
+					least.</p>
+				</div>
+				<h2>
+					Discussion
+				</h2>
+					<p>
+						ReplyAction is an Action that is only used in the context of Operation calls. Its execution will differ depending on whether the
+						call is asynchronous. <a href="acceptCallAction">AcceptCallAction</a> specifies that '[i]f [AcceptCallAction] is used to handle 
+						an asynchronous call, execution of the subsequent reply action will complete immediately with no effects.' This requires two 
+						implementations of ReplyAction - one for asynchronous calls, that executes immediately and with no effect, and one for 
+						synchronous calls.
+					</p>
+				<h2>
+					Rules that implement this action:
+				</h2>
+				<ul>
+					<li><a href="../rules/17.html">replyAction-Async</a></li>
+				</ul>
+				<p>
+					Below is the xml file which defines the order in which the rules are executed
+					when a particular action is called. 
+				</p>
+					<iframe src="../../GTSRulesSeq.xml">
+						Your browser does not support frames. 
+						<a href="../../GTSRulesSeq.xml" title="View the xml rule sequence file">
+							Click here
+						</a> to see the file.
+					</iframe>
+				
+			</div>
+		</div>
+	</body>
+</html>
