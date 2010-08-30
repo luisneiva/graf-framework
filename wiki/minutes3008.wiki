@@ -1,0 +1,26 @@
+#summary Minutes
+
+= Team Meeting =
+Date: 30/8/10
+<br>Location: CSIT N110
+<br>Present: Oscar, Stephen, Alice, Cameron, Hamish and Frank
+<br>Time: 2pm
+<br>Duration: 1 hour
+
+== Progress Reports ==
+  * Frank got properties and multiple states happening
+  * Alice did lots of stuff on redoing the method stuff
+  * Hamish tested comparing GRAF startup times and started looking at how to position objects properly
+  * Cameron got slides and presentation set up to show Shayne
+
+== Task Assignment ==
+  * Alice - continue
+  * Frank - to be worked out at tech meeting tomorrow
+  * Hamish - further stress testing - including adding more actions to a single rule, and fixing object positions
+  * Cameron - until Tuesday prepare for meeting with Shayne
+
+== General ==
+  * Watched Cameron's presentation for Shayne
+  * Agreed on review time: Monday 13 September 14:30 - 16:00 
+  * Discussed risk
+  * Discussed benefits of an executable jar
