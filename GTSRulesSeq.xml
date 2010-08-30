@@ -59,7 +59,7 @@
 		<exclusive-dependencies>
 			<rule>createObjectAction-SameType</rule></exclusive-dependencies>
 	</action>
-	<action name="ActorCallOperation">
+	<action name="CallOperationAction">
 		<rule>actorCallOperation</rule>
 	</action>
 	<action name="AcceptCallAction">
