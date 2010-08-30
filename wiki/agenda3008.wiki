@@ -10,3 +10,4 @@
   * Progress Reports
   * Cameron's presentation of GRAF as an educational tool
   * Update risk log
+  * Discussion on distributable build packages and further abstraction of metadata
