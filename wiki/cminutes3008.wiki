@@ -1,0 +1,11 @@
+#summary Minutes template
+= Client Meeting =
+Date: 30/8/10
+<br>Location: Raj's office
+<br>Present: Greg, Oscar, Stephen, Alice, Cameron, Hamish and Frank
+<br>Time: 3pm
+<br>Duration: 1 hour
+
+  * Talked about method implementation, Greg approves of staying closer to the rules
+  * Actions are requiring more and more rules each to implement. We should estimate how many rules we'll need in the end for the next meeting
+  * Talked about implementing conditional nodes. We need to look into how it works in the definition in more detail. (It is related to Petri Nets)
