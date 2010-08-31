@@ -1,0 +1,47 @@
+#summary Explanation of why so many rules are needed
+= Rule Growth =
+
+UML defines 54 actions. Actions should be the only way to move from one system state to another. Actions are represented in GRAF by graph transformation rules. Ideally there should be rule per action. Sadly this is not the case. The aspects below all require that there be more rules per action.
+
+== Mealy, Moore, entry, looping and exiting ==
+*Affecting:* All actions <br>
+*Extra rules needed:* 2 to 4 times more <br>
+
+Actions go in activities and activities can be in states in state machines (Moore notation) or transitions in state machines (Mealy notation). Each alternative will make the underlying graph look different so rule will need a version for each notation.
+
+Furthermore, actions can be on entry, exit or looping in a state. This could mean another 2 versions of each action are needed. This problem could be avoided by designing rules with variable edges, though.
+
+And this isn't taking into account activites not in state machines, which could require even more rules.
+
+== Double node issue ==
+*Affecting:* Maybe 40% of actions <br>
+*Extra rules needed:* 2 times more<br>
+
+!ReadStructuralFeatureAction involves an object reading _something_. It could be reading _itself_ or it could be reading something else. The way graph transformations work in AGG, there's no way to notify the code that 2 nodes may or may not actually be the same node. And so we need 2 versions of the rule, one for each case.
+
+It's not just !ReadStructuralFeatureAction that has this problem. !CreateObjectAction may or may not involve an object creating another object of the same class, and I'm sure other actions have this problem too.
+
+== Looping requirement ==
+*Affecting:* Only about 5 or so actions<br>
+*Extra rules needed:* 2 times more<br>
+
+When !AcceptEventAction happens, we add Executable edges to actions that are now enabled. There's no way of knowing how many actions there may be. You can't in 1 rule add an edge an arbitrary number of times. Therefore we need to call the one rule in a loop until its Negative Application Condition stops it working.
+
+This isn't just bad because we need to add more rules. It's a problem because it slows down the code execution.
+
+== State Machine Regions ==
+*Affecting:* All actions<br>
+*Extra rules needed:* 2 times more<br>
+
+State machine regions can be embedded arbitrarily deep. But rules must have a set number of nodes.
+
+At this stage we aren't sure how to solve this problem, but it will probably involve adding more rules.
+
+== External Actors ==
+*Affecting:* Probably just 2 actions<br>
+*Extra rules needed:* 2 times more<br>
+
+It's useful to have an external actor do things like send events or call methods. Unless we represent the _external_ actor _inside_ the model, we will need to create special versions of rules that are cut down versions of the normal ones.
+
+
+54 + 54 + 0.4*54*2 + 5*2 + 54 + 2 =~ 217 rules
