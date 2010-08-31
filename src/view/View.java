@@ -89,7 +89,6 @@ public class View extends ViewPart {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-
 		controller = new Controller(this, plugin); 
 		final Shell sh = parent.getShell();
 		final Display d = parent.getDisplay();

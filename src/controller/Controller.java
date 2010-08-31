@@ -293,21 +293,24 @@ public class Controller {
 		properitesMenuHeader.setMenu(properitesMenu);
 		
 		properitesPrintRulesItem = new MenuItem(properitesMenu, SWT.PUSH);
-		if(Properties.printRules) {
+		Boolean printRules = Boolean.parseBoolean(Properties.getProperty("PrintRules"));
+		if(printRules) {
 			properitesPrintRulesItem.setText("Turn Off Print Rules");
 		} else {
 			properitesPrintRulesItem.setText("Turn On Print Rules");
 		}
 		
 		properitesPrintGraphsItem = new MenuItem(properitesMenu, SWT.PUSH);
-		if(Properties.printGraphs) {
+		Boolean printGraphs = Boolean.parseBoolean(Properties.getProperty("PrintGraphs"));
+		if(printGraphs) {
 			properitesPrintGraphsItem.setText("Turn Off Print Graphs");
 		} else {
 			properitesPrintGraphsItem.setText("Turn On Print Graphs");
 		}
 		
 		properitesPrintDebugItem = new MenuItem(properitesMenu, SWT.PUSH);
-		if(Properties.printDebug) {
+		Boolean printDebug = Boolean.parseBoolean(Properties.getProperty("PrintDebug"));
+		if(printDebug) {
 			properitesPrintDebugItem.setText("Turn Off Print Debug");
 		} else {
 			properitesPrintDebugItem.setText("Turn On Print Debug");
@@ -407,11 +410,12 @@ public class Controller {
 			}
 
 			public void widgetSelected(SelectionEvent e) {
-				if(Properties.printRules){
-					Properties.printRules = false;
+				Boolean printRules = Boolean.parseBoolean(Properties.getProperty("PrintRules"));
+				if(printRules){
+					Properties.setProperty("PrintRules", "false");
 					properitesPrintRulesItem.setText("Turn On Print Rules");	
 				} else {
-					Properties.printRules = true;
+					Properties.setProperty("PrintRules", "true");
 					properitesPrintRulesItem.setText("Turn Off Print Rules");
 				}
 				
@@ -431,11 +435,12 @@ public class Controller {
 			}
 
 			public void widgetSelected(SelectionEvent e) {
-				if(Properties.printGraphs){
-					Properties.printGraphs = false;
+				Boolean printGraphs = Boolean.parseBoolean(Properties.getProperty("PrintGraphs"));
+				if(printGraphs){
+					Properties.setProperty("PrintGraphs", "false");
 					properitesPrintGraphsItem.setText("Turn On Print Graphs");	
 				} else {
-					Properties.printGraphs = true;
+					Properties.setProperty("PrintGraphs", "true");
 					properitesPrintGraphsItem.setText("Turn Off Print Graphs");
 				}
 				
@@ -455,11 +460,12 @@ public class Controller {
 			}
 
 			public void widgetSelected(SelectionEvent e) {
-				if(Properties.printDebug){
-					Properties.printDebug = false;
+				Boolean printDebug = Boolean.parseBoolean(Properties.getProperty("PrintDebug"));
+				if(printDebug){
+					Properties.setProperty("PrintDebug", "false");
 					properitesPrintDebugItem.setText("Turn On Print Debug");	
 				} else {
-					Properties.printDebug = true;
+					Properties.setProperty("PrintDebug", "true");
 					properitesPrintDebugItem.setText("Turn Off Print Debug");
 				}
 				

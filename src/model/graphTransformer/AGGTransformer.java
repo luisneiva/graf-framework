@@ -57,7 +57,8 @@ public class AGGTransformer {
 	/** Determine what GTS rule or sequence to apply and apply it. */
 	public Graph transition(String objName, String actionName, String actionParam)
 	throws RuleException {
-		if(Properties.printDebug) {
+		Boolean printDebug = Boolean.parseBoolean(Properties.getProperty("PrintDebug"));
+		if(printDebug) {
 			System.out.println("Action name is " + actionName);
 		}
 		Element gtsRulesSeqRoot = gtsRulesSeq.getRootElement();
@@ -94,7 +95,7 @@ public class AGGTransformer {
 					} catch (RuleNoMatchException e) {
 						//if the exclusive dependency did not fully complete, erase its work.
 						setGraph(graphBackup);
-						if(Properties.printDebug) {
+						if(printDebug) {
 						System.out.println("Rule Cancelled: object="+objName+
 								", action="+child.getChildElements().get(j).getValue()+
 								", actionParam="+actionParam + " (" + e.getMessage() + ")");
@@ -158,8 +159,9 @@ public class AGGTransformer {
 			setInputParameters(rule, objName, actionParam, false);
 			apply(rule);
 		}
-
-		if(Properties.printDebug) {
+		
+		Boolean printDebug = Boolean.parseBoolean(Properties.getProperty("PrintDebug"));
+		if(printDebug) {
 			System.out.println("Rule Applied: object="+objName+", action="
 					+actionName+", actionParam="+actionParam);
 		}
@@ -281,7 +283,8 @@ public class AGGTransformer {
 				Integer arcsNum = node.getNumberOfArcs();
 				try
 				{
-					if(Properties.printDebug) {
+					Boolean printDebug = Boolean.parseBoolean(Properties.getProperty("PrintDebug"));
+					if(printDebug) {
 						System.out.println(ListGraph.getName(node) + " " + arcsNum);
 					}
 				}
@@ -420,7 +423,8 @@ public class AGGTransformer {
 				BufferedWriter out = new BufferedWriter(new FileWriter(filepath));
 				out.write(dot);
 				out.close();
-				if(Properties.printDebug) {
+				Boolean printDebug = Boolean.parseBoolean(Properties.getProperty("PrintDebug"));
+				if(printDebug) {
 					System.out.println("Dot code written: " + filepath);
 				}
 			} catch (Exception e) {
