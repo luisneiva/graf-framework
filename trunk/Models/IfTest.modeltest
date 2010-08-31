@@ -4,3 +4,8 @@ o1 : Invoicer
 {State1}
 FirstProperty = 2
 SecondProperty = 14
+
+i1 : Invoice
+BooleanTest = true
+
+o1 <isFrom, contains> i1
