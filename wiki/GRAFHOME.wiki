@@ -20,6 +20,7 @@
 [HowGRAFWorks How GRAF Works]<br>
 [RefDiscussion 'Reference' Discussion]<br>
 [Models]
+[RuleGrowth Rule Growth]
 
 === Tutorials ===
 [Installing Visual Paradigm and Topcased]<br>
