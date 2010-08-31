@@ -1,0 +1,26 @@
+#summary Minutes template
+
+= Stakeholder Meeting =
+Date: 31/8/10
+<br>Location: CSIT N101
+<br>Present: Shayne, Oscar, Stephen, Alice, Cameron and Hamish
+<br>Time: 5pm
+<br>Duration: 1 hour
+
+== How Shayne would like to use GRAF ==
+  * Shayne would use this in 1 lecture and 1 tutorial
+  * It doesn't matter that it's hard to set up new models. It's okay to just have one already set up and play with that
+  * Shayne would like to start with an empty object diagram and create objects and link them
+  * Shayne doesn't mind that the primitive UML actions are displayed
+  * Timers would be good, perhaps with some way to pause them
+
+== Overlap with other work ==
+  * If statements are unimportant to Shayne
+  * Methods are unimportant
+  * State machine regions aren't needed at all
+  * Mealy and Moore notation and hybrid would be really useful
+
+== Action Items ==
+  * Make uml files of Shayne's microwave model, both before and after adding new transition from state transition table
+  * Devise !CreateLinkAction rule, to be used initialising microwave model
+  * Do timers
