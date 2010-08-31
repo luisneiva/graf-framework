@@ -5,7 +5,7 @@
 == Downloading and Running the Standalone Package == 
 Download this archive:
  * [http://code.google.com/p/graf-framework/downloads/detail?name=graf.tar.bz2&can=2&q=]
-and extract it accordingly. On Windows you can use WinRar, on Linux/UNIX and Mac use the following command:
+and extract it accordingly. On Windows you can use WinRAR, on Linux/UNIX and Mac use the following command:
  * tar -xvvf graf.tar.bz2
 This should give you a folder called "graf". Run the JAR file in there either by double clicking or using:
  * java -jar graf.jar
