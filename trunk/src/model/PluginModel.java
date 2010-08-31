@@ -71,8 +71,9 @@ public class PluginModel {
 		modeltograph = ModelToGraphFactory.createModelToGraph();
 		graphtomodel = GraphToModelFactory.createGraphToModel();
 		graphTransformer = new AGGTransformer(gtsRulesPath, gtsRulesSeqPath);
-
-		if (Properties.printRules) {
+		
+		Boolean printRules = Boolean.parseBoolean(Properties.getProperty("PrintRules"));
+		if (printRules) {
 			try {
 				graphTransformer.outputRulesAsDot(this.graphOutputsPath);
 
@@ -112,7 +113,8 @@ public class PluginModel {
 		origGraph = new ListGraph(graph);
 
 		//if system is in debug mode, output graph as dot file
-		if (Properties.printGraphs) try {
+		Boolean printGraphs = Boolean.parseBoolean(Properties.getProperty("PrintGraphs"));
+		if (printGraphs) try {
 			outputdot(graph, graph);
 		} catch(IOException e) {
 			throw new GraphToModelException(e.getMessage());
@@ -140,7 +142,8 @@ public class PluginModel {
 		graph = (ListGraph)graphTransformer.transition(
 				ListGraph.getName(obj.getGraphNode()), actionName, actionParam);
 		transitionnumber++;
-		if (Properties.printGraphs) outputdot(graph, graphs.get(graphs.size()-1));  //debugmode
+		Boolean printGraphs = Boolean.parseBoolean(Properties.getProperty("PrintGraphs"));
+		if (printGraphs) outputdot(graph, graphs.get(graphs.size()-1));  //debugmode
 
 		objectdisplay = graphtomodel.generateDisplayObjects(graph);
 	}
@@ -219,7 +222,8 @@ public class PluginModel {
 			BufferedWriter out = new BufferedWriter(new FileWriter(filepath));
 			out.write(res);
 			out.close();
-			if(Properties.printDebug) {
+			Boolean printDebug = Boolean.parseBoolean(Properties.getProperty("PrintDebug"));
+			if(printDebug) {
 			System.out.println("Dot code written: " + filepath);
 			}
 		} catch (Exception e) {
