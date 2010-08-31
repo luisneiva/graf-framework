@@ -19,7 +19,7 @@
 [SuccessCriteria Success Criteria]<br>
 [HowGRAFWorks How GRAF Works]<br>
 [RefDiscussion 'Reference' Discussion]<br>
-[Models]
+[Models]<br>
 [RuleGrowth Rule Growth]
 
 === Tutorials ===
