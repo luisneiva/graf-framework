@@ -10,6 +10,11 @@ and extract it accordingly. On Windows you can use WinRar, on Linux/UNIX and Mac
 This should give you a folder called "graf". Run the JAR file in there either by double clicking or using:
  * java -jar graf.jar
 
+If you need the models, you can get them here:
+ * [http://code.google.com/p/graf-framework/downloads/detail?name=models.tar.bz2&can=2&q=]
+
+From this point on, follow the instructions in the "Running GRAF" section
+
 == Downloading and Installing a Version Control Client ==
 
 In order to obtain a copy of all the files needed to run and use GRAF, a version control client will be needed to extract these off the Google code repository. A simple svn client used by some of the team members is tortoise svn which can be found here: 
