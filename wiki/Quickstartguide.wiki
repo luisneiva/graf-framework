@@ -2,6 +2,14 @@
 
 = Quick Start Guide =
 
+== Downloading and Running the Standalone Package == 
+Download this archive:
+ * [http://code.google.com/p/graf-framework/downloads/detail?name=graf.tar.bz2&can=2&q=]
+and extract it accordingly. On Windows you can use WinRar, on *NIX and Mac use the following command:
+ * tar -xvvf graf.tar.bz2
+This should give you a folder called "graf". Run the JAR file in there either by double clicking or using:
+ * java -jar graf.jar
+
 == Downloading and Installing a Version Control Client ==
 
 In order to obtain a copy of all the files needed to run and use GRAF, a version control client will be needed to extract these off the Google code repository. A simple svn client used by some of the team members is tortoise svn which can be found here: 
