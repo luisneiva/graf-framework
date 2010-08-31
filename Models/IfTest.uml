@@ -13,13 +13,23 @@
           <subvertex xmi:type="uml:State" xmi:id="_kvQK4GGWEd-wueUf9g8DcA" name="State2">
             <entry xmi:type="uml:Activity" xmi:id="_ffvKwK9CEd-LG9Xj56ZbmQ" name="EntryActivity">
               <node xmi:type="uml:ConditionalNode" xmi:id="_jvskEK9CEd-LG9Xj56ZbmQ" name="ConditionalNode1">
-                <node xmi:type="uml:AddStructuralFeatureValueAction" xmi:id="_nYYiAK9CEd-LG9Xj56ZbmQ" name="TestValue">
-                  <result xmi:id="_CxsKkK9FEd-LG9Xj56ZbmQ" name="TestOutputpin"/>
+                <node xmi:type="uml:ReadStructuralFeatureAction" xmi:id="_4cS-cLSyEd-0jtbPopIvLA" name="TestValue" structuralFeature="_bO1wULSzEd-0jtbPopIvLA">
+                  <object xmi:type="uml:ActionInputPin" xmi:id="_4cS-cbSyEd-0jtbPopIvLA" name="foodPin">
+                    <fromAction xmi:type="uml:ReadStructuralFeatureAction" xmi:id="_4cS-crSyEd-0jtbPopIvLA" name="getFood" structuralFeature="_Nyxz0bSzEd-0jtbPopIvLA">
+                      <object xmi:type="uml:ActionInputPin" xmi:id="_4cS-c7SyEd-0jtbPopIvLA" name="selfActionInputPin">
+                        <fromAction xmi:type="uml:ReadSelfAction" xmi:id="_4cS-dLSyEd-0jtbPopIvLA" name="selfRead">
+                          <result xmi:id="_4cS-dbSyEd-0jtbPopIvLA" name="selfPin" isLeaf="true"/>
+                        </fromAction>
+                      </object>
+                      <result xmi:id="_4cS-drSyEd-0jtbPopIvLA" name="theFood" isLeaf="true"/>
+                    </fromAction>
+                  </object>
+                  <result xmi:id="_4cS-d7SyEd-0jtbPopIvLA" name="currentTemperature" isLeaf="true"/>
                 </node>
                 <node xmi:type="uml:CreateObjectAction" xmi:id="_zmCKoK9CEd-LG9Xj56ZbmQ" name="TrueAction" classifier="_QDmQoGGVEd-wueUf9g8DcA">
                   <result xmi:id="_8iERgK9CEd-LG9Xj56ZbmQ" name="TrueActionOutputPin"/>
                 </node>
-                <clause xmi:id="_k9NgEK9CEd-LG9Xj56ZbmQ" test="_nYYiAK9CEd-LG9Xj56ZbmQ" body="_zmCKoK9CEd-LG9Xj56ZbmQ" bodyOutput="_8iERgK9CEd-LG9Xj56ZbmQ"/>
+                <clause xmi:id="_k9NgEK9CEd-LG9Xj56ZbmQ" body="_zmCKoK9CEd-LG9Xj56ZbmQ" bodyOutput="_8iERgK9CEd-LG9Xj56ZbmQ"/>
               </node>
             </entry>
           </subvertex>
@@ -30,6 +40,19 @@
       </ownedBehavior>
     </packagedElement>
     <packagedElement xmi:type="uml:Signal" xmi:id="_z-vQcK9AEd-LG9Xj56ZbmQ" name="DoStuffSignal"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Nyxz0LSzEd-0jtbPopIvLA" name="AssociationA" memberEnd="_Nyxz0bSzEd-0jtbPopIvLA _Nyxz1LSzEd-0jtbPopIvLA">
+      <ownedEnd xmi:id="_Nyxz0bSzEd-0jtbPopIvLA" name="contains" type="_QDmQoGGVEd-wueUf9g8DcA" association="_Nyxz0LSzEd-0jtbPopIvLA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Nyxz0rSzEd-0jtbPopIvLA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Nyxz07SzEd-0jtbPopIvLA" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_Nyxz1LSzEd-0jtbPopIvLA" name="isFrom" type="_UZvgwLSzEd-0jtbPopIvLA" association="_Nyxz0LSzEd-0jtbPopIvLA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Nyxz1bSzEd-0jtbPopIvLA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Nyxz1rSzEd-0jtbPopIvLA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
     <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_2Dv1IK9AEd-LG9Xj56ZbmQ" name="DoStuff" signal="_z-vQcK9AEd-LG9Xj56ZbmQ"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_UZvgwLSzEd-0jtbPopIvLA" name="Invoice">
+      <ownedAttribute xmi:id="_bO1wULSzEd-0jtbPopIvLA" name="BooleanTest"/>
+    </packagedElement>
   </packagedElement>
 </uml:Model>
