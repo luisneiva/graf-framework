@@ -60,7 +60,7 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_514_MWYEEd-8QvdEjO-jiQ" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:CallEvent" xmi:id="_MVIvALPgEd-MwMXpdXP3CA" name="createBCallEvent" operation="_meWEIJLREd-rAdRAOBcEiw"/>
-    <packagedElement xmi:type="uml:CallEvent" xmi:id="_Y69tcLPoEd-2xdMgVqLzsQ" name="createCCallEvent"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_MVIvALPgEd-MwMXpdXP3CA" name="createBCallEvent" operation="_JyVW4LPnEd-2xdMgVqLzsQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_Y69tcLPoEd-2xdMgVqLzsQ" name="createCCallEvent" operation="_meWEIJLREd-rAdRAOBcEiw"/>
   </packagedElement>
 </uml:Model>
