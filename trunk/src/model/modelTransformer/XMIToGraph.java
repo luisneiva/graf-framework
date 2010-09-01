@@ -192,7 +192,6 @@ public class XMIToGraph implements ModelToGraph {
 		//for keeping track of the object (and class) that owns following state/attributes
 		String objName = null;
 		String className = null;
-		Boolean stateDeclared = true;
 		String[] states;
 
 
@@ -214,7 +213,6 @@ public class XMIToGraph implements ModelToGraph {
 					//					if (stateDeclared == false) {
 					//						instanceErr("No state declared for " + objName + " : " + className);
 					//					}
-					stateDeclared = false;
 
 					String[] linesplit = line.split(":");
 					//remember the object and class names for following lines
@@ -248,8 +246,6 @@ public class XMIToGraph implements ModelToGraph {
 					if (!statemachinefound) {
 						instanceErr("ERROR - no state machine found for class " + className);
 					}
-					stateDeclared = true;
-
 					// Add activeState edge from the behaviour execution instance to the indicated model state
 
 					for(int j = 0; j < states.length; j++)

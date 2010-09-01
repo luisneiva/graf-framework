@@ -1,8 +1,6 @@
 package view;
 
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Scanner;
 
 import model.PluginModel;
 import model.modelTransformer.objectDisplay.ObjectDisplay;
@@ -42,9 +40,6 @@ import controller.Properties;
 
 public class View extends ViewPart {
 
-	/** Is the system running as a plugin or stand-alone. True if plugin, False if standalone */
-	private Boolean isPlugin;
-
 	/** Reference to system model */
 	private PluginModel model;
 
@@ -67,9 +62,6 @@ public class View extends ViewPart {
 	private ClickableLabel redo = new ClickableLabel(">");
 	private ClickableLabel reset = new ClickableLabel("<<");
 
-	private File propertyFile = new File("Properties.txt");
-
-
 	/** Default constructor called by plugin runtime. Do not call this if standalone.
 	 * @see View(plugin)
 	 */
@@ -82,7 +74,6 @@ public class View extends ViewPart {
 	 * @param plugin Is the system running as a plugin
 	 */
 	public View(boolean plugin, Shell parent) {
-		isPlugin = plugin;
 		contentDrawer = new ObjectDiagDrawer(this);
 		try {
 			Properties.readProperties();
