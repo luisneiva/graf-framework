@@ -1,6 +1,6 @@
 #summary Models summary
 
-== Summary of Models ==
+= Summary of Models =
 This page contains descriptions of models in the Models folder in the GRAF code
 
 === Oven Model ===
@@ -8,3 +8,10 @@ This page contains descriptions of models in the Models folder in the GRAF code
 
 === Academic Models: TE00, Invoicer, Elevator, Racer ===
 [https://alliance.anu.edu.au/portal Click here.]
+
+=== Microwave Model ===
+The 4 versions of this model are variations of the following:
+
+http://graf-framework.googlecode.com/files/microwave.jpg
+
+!MicrowaveWithInteger contains an action to increment the temperature, the others don't. !MicrowaveError and !MicrowaveExtended were just used for testing.
