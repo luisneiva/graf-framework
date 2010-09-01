@@ -1,9 +1,6 @@
 package model.modelTransformer.objectDisplay;
 
-import java.util.ArrayList;
-
 import model.ListGraph;
-import agg.xt_basis.Arc;
 import agg.xt_basis.Node;
 
 //import agg.xt_basis.Node;

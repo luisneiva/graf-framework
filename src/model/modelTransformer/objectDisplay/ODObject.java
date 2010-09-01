@@ -3,7 +3,6 @@ package model.modelTransformer.objectDisplay;
 import java.util.ArrayList;
 
 import model.ListGraph;
-import agg.xt_basis.GraphObject;
 import agg.xt_basis.Node;
 
 /** 
@@ -20,10 +19,6 @@ public class ODObject extends DisplayObject {
 	private ODClass instantiation;
 
 	private ArrayList<ODAttribute> attributes;
-
-	// TODO!!!
-	// CHANGE it to arraylist
-	private Node stateNode;
 	
 	//@author: Frank Su
 	private ArrayList<Node> stateNodes;
@@ -49,7 +44,6 @@ public class ODObject extends DisplayObject {
 		attributes = new ArrayList<ODAttribute>();
 		this.graphNode = graphNode;
 		name = ListGraph.getName(graphNode);
-		stateNode = null;
 		actionPool = new ArrayList<ODAction>();
 		eventPool = new ArrayList<ODEvent>();
 		externalEvents = new ArrayList<ODEvent>();
@@ -168,17 +162,9 @@ public class ODObject extends DisplayObject {
 		return false;
 	}
 
-	public void setState(Node stateNode) {
-		this.stateNode = stateNode;
-	}
-	
 	public void addState(Node sn)
 	{
 		stateNodes.add(sn);
-	}
-
-	public Node getState() {
-		return stateNode;
 	}
 	
 	/**

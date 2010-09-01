@@ -1,3 +1,3 @@
-PrintGraphs:false
+PrintGraphs:true
 PrintRules:false
-PrintDebug:false
+PrintDebug:true
