@@ -17,6 +17,7 @@ import java.util.Iterator;
 
 import model.ListGraph;
 import agg.xt_basis.Arc;
+import agg.xt_basis.Graph;
 import agg.xt_basis.Node;
 
 public class ODAction {
@@ -43,7 +44,7 @@ public class ODAction {
 	 * @param node The node that instantiates the actionnode itself.
 	 * @param actionBehEx The node(s) that is the behavior execution executing this action
 	 */
-	ODAction(Node node, ArrayList<Node> actionBehEx) {
+	ODAction(Node node, ArrayList<Node> actionBehEx, Graph graph) {
 		name = ListGraph.getName(node);
 		enabled = false;
 
@@ -148,8 +149,8 @@ public class ODAction {
 					ArrayList<Node> testVal = ListGraph.toTrace(testValues, clause);
 					for(Node n : testVal)
 					{
-//						System.out.println("\ttest value is: " + ListGraph.getName(n));
-
+						//if(in the body of an if clause)
+						// enabled = false;
 						for(Node behaviourNode : actionBehEx)
 						{
 							ArrayList<String> conditions = new ArrayList<String>();
@@ -158,24 +159,21 @@ public class ODAction {
 							
 							for(Node cond : conditionNode)
 							{
-//							System.out.println("\tcondition is: " + ListGraph.getName(cond));
 								if(ListGraph.getName(cond).toLowerCase().equals("true"))
 								{
 									enabled = true;
+								}
+								else
+								{
+									((ListGraph) graph).deleteEdge(ListGraph.getName(behaviourNode), "executable", ListGraph.getName(node));
 								}
 							}
 						}
 					}
 					
-					
 				}
 			}
 		}
-
-
-
-		//if(in the body of an if clause)
-		// enabled = false;
 
 	}
 

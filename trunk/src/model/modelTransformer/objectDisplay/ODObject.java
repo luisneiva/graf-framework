@@ -3,6 +3,7 @@ package model.modelTransformer.objectDisplay;
 import java.util.ArrayList;
 
 import model.ListGraph;
+import agg.xt_basis.Graph;
 import agg.xt_basis.Node;
 
 /** 
@@ -173,8 +174,8 @@ public class ODObject extends DisplayObject {
 	 * @param The node that represents the action.
 	 * @param The (optional) node(s) that represents the behavior execution executing actions
 	 */
-	public void addAction(Node node, ArrayList<Node> actionBehEx) {
-		ODAction action = new ODAction(node, actionBehEx);
+	public void addAction(Node node, ArrayList<Node> actionBehEx, Graph graph) {
+		ODAction action = new ODAction(node, actionBehEx, graph);
 		actionPool.add(action);
 	}
 

@@ -238,7 +238,7 @@ public class GraphToObjDiag implements GraphToModel {
 				traceOrderPartTwo.add("executable");
 				ArrayList<Node> executableActions = ListGraph.toTrace(traceOrderPartTwo,object.getGraphNode());
 				for (Node action : executableActions) {
-					object.addAction(action, actionBehExes);
+					object.addAction(action, actionBehExes, graph);
 				}
 			}
 		}
