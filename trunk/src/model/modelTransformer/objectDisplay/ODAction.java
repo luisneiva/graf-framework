@@ -32,12 +32,12 @@ public class ODAction {
 	 */
 	private String type;
 
-	
+
 	/** temporary */
 	public ODAction(String name) {
 		this.name = name;
 	}
-	
+
 	/**
 	 * 
 	 * @param node The node that instantiates the actionnode itself.
@@ -123,7 +123,56 @@ public class ODAction {
 			}
 			enabled = potentialInputPins.size() == 0;
 		}
-		
+
+		ArrayList<String> upperNodes = new ArrayList<String>();
+		upperNodes.add("body");
+		ArrayList<Node> clauses = ListGraph.fromTrace(upperNodes, node);
+
+		ArrayList<String> lowerNodes = new ArrayList<String>();
+		lowerNodes.add("i");
+
+		ArrayList<String> testValues = new ArrayList<String>();
+		testValues.add("test");
+		testValues.add("result");
+
+		for(Node clause : clauses)
+		{
+			ArrayList<Node> nodeType = ListGraph.toTrace(lowerNodes, clause);
+
+			for(Node c : nodeType)
+			{
+				if(ListGraph.getName(c).equals("Clause"))
+				{
+					enabled = false;
+					
+					ArrayList<Node> testVal = ListGraph.toTrace(testValues, clause);
+					for(Node n : testVal)
+					{
+						System.out.println("\ttest value is: " + ListGraph.getName(n));
+
+						for(Node behaviourNode : actionBehEx)
+						{
+							ArrayList<String> conditions = new ArrayList<String>();
+							conditions.add(ListGraph.getName(n));
+							ArrayList<Node> conditionNode = ListGraph.toTrace(conditions, behaviourNode);
+							
+							for(Node cond : conditionNode)
+							{
+							System.out.println("\tcondition is: " + ListGraph.getName(cond));
+							}
+						}
+					}
+					
+					
+				}
+			}
+		}
+
+
+
+		//if(in the body of an if clause)
+		// enabled = false;
+
 	}
 
 	public String getName() {
