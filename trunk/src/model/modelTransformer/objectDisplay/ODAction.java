@@ -148,7 +148,7 @@ public class ODAction {
 					ArrayList<Node> testVal = ListGraph.toTrace(testValues, clause);
 					for(Node n : testVal)
 					{
-						System.out.println("\ttest value is: " + ListGraph.getName(n));
+//						System.out.println("\ttest value is: " + ListGraph.getName(n));
 
 						for(Node behaviourNode : actionBehEx)
 						{
@@ -158,7 +158,11 @@ public class ODAction {
 							
 							for(Node cond : conditionNode)
 							{
-							System.out.println("\tcondition is: " + ListGraph.getName(cond));
+//							System.out.println("\tcondition is: " + ListGraph.getName(cond));
+								if(ListGraph.getName(cond).toLowerCase().equals("true"))
+								{
+									enabled = true;
+								}
 							}
 						}
 					}
