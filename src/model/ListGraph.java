@@ -148,7 +148,6 @@ public class ListGraph extends Graph {
 						getName(arc.getSource()).equals(from)) {
 					
 					removeArc(arc);
-					
 					return;
 				}
 			}
