@@ -34,6 +34,9 @@
 || New version of UML supercedes features of GRAF || Low || High ||
 || ~~Clients decide models aren't contentious~~ || ~~Medium~~ || High ||
 || Constantly changing requirements || High || Low ||
+|| Raj isn't pleased with what we've done in his absence || Low || Medium ||
+|| The project is too complicated to make progres next year || High || High ||
+|| Too many rules are required || High || High ||
 
 http://graf-framework.googlecode.com/files/Risk-Criteria.jpg <br>
 Only critical and high threat level risks will be mitigated
@@ -41,8 +44,16 @@ Only critical and high threat level risks will be mitigated
 === Mitigation of critical and high risks ===
 
 ===== New structural feature functionality (eg. Mealy, methods) unachievable this year =====
-* Action:* Reduce impact<br>
+*Action:* Reduce impact<br>
 Expedite getting the simplest of these new features working so we will know how long it takes and hence whether it can be achieved this year or not.
+
+===== The project is too complicated to make progres next year =====
+*Action:* Reduce likelihood<br>
+Create detailed documententation to introduce the next team to the project and lead them through the process of modifying GRAF.
+
+===== Too many rules are required =====
+*Action:* Accept (for now)<br>
+See [RuleGrowth here]. There's not much we can do without ripping out AGG and finding something else. And it's very unlikely there is an alternative to AGG that will work easily with the existing code.
 
 ===== 2 animators give the same results =====
 *Action:* Reduce impact<br>
