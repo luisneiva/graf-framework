@@ -65,14 +65,19 @@
 	<action name="AcceptCallAction">
 		<exclusive-dependencies>
 			<action>AcceptCallAction-WithActivity-HasBehavior</action>
-			<action>AcceptCallAction-WithActivity-Main</action></exclusive-dependencies></action>
+			<action>AcceptCallAction-WithActivity-Main</action>
+		</exclusive-dependencies></action>
 	<action name="AcceptCallAction-WithActivity-HasBehavior">
 		<rule>acceptCallAction-WithActivity-HasBehavior</rule>
 		<looping-dependency>
-			<rule>acceptCallAction-WithActivity-ExecutableEdges</rule></looping-dependency></action>
+			<rule>acceptCallAction-WithActivity-ExecutableEdges</rule>
+		</looping-dependency>
+	</action>
 	<action name="AcceptCallAction-WithActivity-Main">
 		<rule>acceptCallAction-WithActivity-Main</rule>
 		<looping-dependency>
-			<rule>acceptCallAction-WithActivity-ExecutableEdges</rule></looping-dependency></action>
+			<rule>acceptCallAction-WithActivity-ExecutableEdges</rule>
+		</looping-dependency>
+	</action>
 
 </GTSRules>
