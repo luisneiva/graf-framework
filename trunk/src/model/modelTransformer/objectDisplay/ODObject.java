@@ -13,6 +13,7 @@ import agg.xt_basis.Node;
  *
  *	 @author Oscar Wood
  *	 @author Kevin O'Shea 
+ * 	 @author Frank Su
  *   
  */
 public class ODObject extends DisplayObject {
@@ -21,12 +22,12 @@ public class ODObject extends DisplayObject {
 
 	private ArrayList<ODAttribute> attributes;
 	
-	//@author: Frank Su
 	private ArrayList<Node> stateNodes;
 
 	private ArrayList<ODAction> actionPool;
 	private ArrayList<ODEvent> eventPool;
 	private ArrayList<ODEvent> externalEvents;
+	private ArrayList<ODCall> callPool;
 
 	private ArrayList<ODMethod> methods;
 	
@@ -46,6 +47,7 @@ public class ODObject extends DisplayObject {
 		this.graphNode = graphNode;
 		name = ListGraph.getName(graphNode);
 		actionPool = new ArrayList<ODAction>();
+		callPool = new ArrayList<ODCall>();
 		eventPool = new ArrayList<ODEvent>();
 		externalEvents = new ArrayList<ODEvent>();
 		methods = new ArrayList<ODMethod>();
@@ -92,6 +94,9 @@ public class ODObject extends DisplayObject {
 	}
 	public ArrayList<ODEvent> getExternalEvents() {
 		return externalEvents;
+	}
+	public ArrayList<ODCall> getCallPool() {
+		return callPool;
 	}
 	
 	public ArrayList<ODMethod> getMethods() {
@@ -177,6 +182,11 @@ public class ODObject extends DisplayObject {
 	public void addAction(Node node, ArrayList<Node> actionBehEx, Graph graph) {
 		ODAction action = new ODAction(node, actionBehEx, graph);
 		actionPool.add(action);
+	}
+	
+	public void addCall(Node node) {
+		ODCall call = new ODCall(node);
+		callPool.add(call);
 	}
 
 	/**
