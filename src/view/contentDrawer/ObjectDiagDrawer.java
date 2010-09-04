@@ -7,6 +7,7 @@ import model.TransitionAction;
 import model.modelTransformer.objectDisplay.DisplayObject;
 import model.modelTransformer.objectDisplay.ODAction;
 import model.modelTransformer.objectDisplay.ODAttribute;
+import model.modelTransformer.objectDisplay.ODCall;
 import model.modelTransformer.objectDisplay.ODEvent;
 import model.modelTransformer.objectDisplay.ODLink;
 import model.modelTransformer.objectDisplay.ODMethod;
@@ -82,6 +83,12 @@ public class ObjectDiagDrawer extends ContentDrawer {
 				classFigure.addExternalEvent(extevent.getName(), popupListener,
 						new TransitionAction(odObj, "ActorSendSignal", extevent.getName()));
 			}
+			
+			for(ODCall call : odObj.getCallPool()) {
+				classFigure.addEvent(call.getName(), transListener, 
+						new TransitionAction(odObj, "AcceptCallAction", call.getName()));
+			}
+			
 			if (!odObj.isAttributesShowing()) classFigure.hideAttributes();
 			if (!odObj.isRuntimePoolShowing()) classFigure.hideRuntimePool();
 			classFigure.addMouseListener(new MouseListener() {

@@ -194,13 +194,8 @@ public class GraphToObjDiag implements GraphToModel {
 			toState.add("activeState");
 			ArrayList<Node> states = ListGraph.toTrace(toState,node);
 
-			//@author: Frank Su
-			if (states.size() != 0)
-			{
-//				object.setState(states.get(0));
-				
-				for(Node n : states)
-				{
+			if (states.size() != 0) {
+				for(Node n : states) {
 					object.addState(n);
 				}
 			}
@@ -273,6 +268,21 @@ public class GraphToObjDiag implements GraphToModel {
 		eventOrder.add("source");
 
 		for(ODObject object : objects) {
+			
+			// Find the calls first
+			ArrayList<String> toExternalCalls = new ArrayList<String>();
+			toExternalCalls.add("pool");
+			ArrayList<Node> externalCalls = ListGraph.toTrace(toExternalCalls, object.getGraphNode());
+			for(Node call : externalCalls) {
+				ArrayList<String> toType = new ArrayList<String>();
+				toType.add("i");
+				for(Node callType : ListGraph.toTrace(toType, call)) {
+					if(ListGraph.getName(callType).equals("CallEvent")) {
+						object.addCall(call);
+					}
+				}
+			}
+			
 			ArrayList<String> toExternalEvent = new ArrayList<String>();
 			toExternalEvent.add("execution");
 			toExternalEvent.add("behavior");
@@ -281,7 +291,7 @@ public class GraphToObjDiag implements GraphToModel {
 			toExternalEvent.add("trigger");
 			toExternalEvent.add("event");
 			ArrayList<Node> externalEvents = ListGraph.toTrace(toExternalEvent, object.getGraphNode());
-
+			
 			Iterator<Node> duplicateRemover = externalEvents.iterator();
 			ArrayList<String> found = new ArrayList<String>();
 			while(duplicateRemover.hasNext()) {
@@ -308,20 +318,20 @@ public class GraphToObjDiag implements GraphToModel {
 
 			ArrayList<Node> recieptNodes = ListGraph.toTrace(toReciept, object.getGraphNode());
 			for(Node recieptNode : recieptNodes) {
-
+				
 				ArrayList<Node> activeEventSignals 
 				= ListGraph.toTrace(fromRecieptToEvent, recieptNode);
 
 				ArrayList<Node> activeEvents = new ArrayList<Node>();
 				for(Node n : activeEventSignals) {
-
-					ArrayList<Node> all = ListGraph.fromTrace(fromSignalToReceive, n);					
+					ArrayList<Node> all = ListGraph.fromTrace(fromSignalToReceive, n);
 					activeEvents.addAll(all);
 				}
 
 				ArrayList<String> check = new ArrayList<String>();
 				check.add("i");
 				for(Node evNode : activeEvents) {
+
 					Node type = ListGraph.toTrace(check,evNode).get(0);
 					if(ListGraph.getName(type).equals("ReceiveSignalEvent")) {
 						object.addEvent(evNode, recieptNode);
