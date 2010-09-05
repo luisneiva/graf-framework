@@ -1,0 +1,11 @@
+#summary agenda
+== Client Meeting ==
+*Date:* 6/9/10
+<br>*Time:* 3pm
+<br>*Location:* Raj's Office
+<br>*Duration:* 1 hour
+<br>*Attending:* Raj and GRAF team
+
+=== Agenda Items ===
+  * Summary of progress since Raj left
+  * Discussion of current direction - implementing academic models vs Shayne's use
