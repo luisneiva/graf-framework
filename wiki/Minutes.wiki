@@ -27,6 +27,8 @@
 || 30/8 || Team || [agenda3008 Agenda] || [minutes3008 Minutes] ||
 || 30/8 || Client || [cagenda3008 Agenda] || [cminutes3008 Minutes] ||
 || 31/8 || Stakeholder || [agenda3108 Agenda] || [minutes3108 Minutes] ||
+|| 6/9 || Mentor || [agenda0609 Agenda] || [mintes0609 Minutes] ||
+|| 6/9 || Client || [cagenda0609 Agenda] || [cmintes0609 Minutes] ||
 
 Agendas and minutes from before 12/5/2010 are on [https://alliance.anu.edu.au/portal Alliance]. <br>
 [agendaTemplate Agenda Template] <br>
