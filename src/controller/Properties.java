@@ -22,6 +22,12 @@ public class Properties
 	
 	public static String filePathStr = "";	
 	
+	//TODO
+	// Path to directory for storing graph states
+//	private final String graphOutputsPath = "GraphOutputs/";
+//	private final String gtsRulesPath = "GTSRules.ggx";
+//	private final String gtsRulesSeqPath = "GTSRulesSeq.xml";
+	
 	// menu: Properties -> print...
 	/**
 	 * Read in a properties file

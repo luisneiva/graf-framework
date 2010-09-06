@@ -47,14 +47,15 @@ public class Controller {
 
 	/** Is the system running as a plugin or stand-alone. True if plugin, False if standalone */
 	private Boolean isPlugin;
-	
+
 	/** Reference to controller instance, needed when running as plugin */
 	private static Controller inst;
-	
+
 	/** Path to directory for storing graph states */
 	private final String graphOutputsPath = "GraphOutputs/";
-	private final String gtsRulesPath = "GTSRules.ggx";
-	private final String gtsRulesSeqPath = "GTSRulesSeq.xml";
+	private String gtsRulesPath = Properties.getProperty("gtsRulesPath");  //"GTSRules.ggx";
+	
+	private String gtsRulesSeqPath = Properties.getProperty("gtsRulesSeqPath");  //"GTSRulesSeq.xml";
 
 	/**
 	 * Set up model and view. Create and register listeners in the view.
@@ -80,9 +81,19 @@ public class Controller {
 				gtsRulesSeqFilePath = gtsRulesSeqURL.getPath();
 			} else {
 				if (new File(gtsRulesPath).exists()==false)
-					throw new IOException("Cannot locate file: " + gtsRulesPath);
+				{
+					gtsRulesPath = view.openFileChooser();
+					Properties.setProperty("gtsRulesPath", gtsRulesPath);
+					Properties.rewritePropertiesFile();
+//					throw new IOException("Cannot locate file: " + gtsRulesPath);
+				}
 				if (new File(gtsRulesSeqPath).exists()==false)
-					throw new IOException("Cannot locate file: " + gtsRulesSeqPath);
+				{
+					gtsRulesSeqPath = view.openFileChooser();
+					Properties.setProperty("gtsRulesSeqPath", gtsRulesSeqPath);
+					Properties.rewritePropertiesFile();
+//					throw new IOException("Cannot locate file: " + gtsRulesSeqPath);
+				}
 				gtsRulesFilePath = gtsRulesPath;
 				gtsRulesSeqFilePath = gtsRulesSeqPath;
 			}
@@ -220,7 +231,7 @@ public class Controller {
 		}
 	}
 
-	
+
 	private void showError(Exception e) {
 		if (e!=null && e.getMessage()!=null){
 			view.showError(e.getMessage());
@@ -242,7 +253,7 @@ public class Controller {
 		MenuItem fileMenuHeader, editMenuHeader, helpMenuHeader, properitesMenuHeader;
 		MenuItem fileExitItem, fileNewItem, helpGetHelpItem, undoItem, redoItem, resetItem;
 		final MenuItem properitesPrintDebugItem, properitesPrintRulesItem, properitesPrintGraphsItem;
-		
+
 		menuBar = new Menu(shell, SWT.BAR);
 		fileMenuHeader = new MenuItem(menuBar, SWT.CASCADE);
 		fileMenuHeader.setText("&File");
@@ -270,7 +281,7 @@ public class Controller {
 		redoItem = new MenuItem(editMenu, SWT.PUSH);
 		redoItem.setText("&Redo\tCtrl+Y");
 		redoItem.setAccelerator(SWT.CTRL + 'Y');
-		
+
 		resetItem = new MenuItem(editMenu, SWT.PUSH);
 		resetItem.setText("&Reset\tCtrl+R");
 		resetItem.setAccelerator(SWT.CTRL + 'R');
@@ -284,13 +295,13 @@ public class Controller {
 		helpGetHelpItem = new MenuItem(helpMenu, SWT.PUSH);
 		helpGetHelpItem.setText("&Get Help");
 
-		
+
 		properitesMenuHeader = new MenuItem(menuBar, SWT.CASCADE);
 		properitesMenuHeader.setText("&Properites");
 
 		properitesMenu = new Menu(shell, SWT.DROP_DOWN);
 		properitesMenuHeader.setMenu(properitesMenu);
-		
+
 		properitesPrintRulesItem = new MenuItem(properitesMenu, SWT.PUSH);
 		Boolean printRules = Boolean.parseBoolean(Properties.getProperty("PrintRules"));
 		if(printRules) {
@@ -298,7 +309,7 @@ public class Controller {
 		} else {
 			properitesPrintRulesItem.setText("Turn On Print Rules");
 		}
-		
+
 		properitesPrintGraphsItem = new MenuItem(properitesMenu, SWT.PUSH);
 		Boolean printGraphs = Boolean.parseBoolean(Properties.getProperty("PrintGraphs"));
 		if(printGraphs) {
@@ -306,7 +317,7 @@ public class Controller {
 		} else {
 			properitesPrintGraphsItem.setText("Turn On Print Graphs");
 		}
-		
+
 		properitesPrintDebugItem = new MenuItem(properitesMenu, SWT.PUSH);
 		Boolean printDebug = Boolean.parseBoolean(Properties.getProperty("PrintDebug"));
 		if(printDebug) {
@@ -314,7 +325,7 @@ public class Controller {
 		} else {
 			properitesPrintDebugItem.setText("Turn On Print Debug");
 		}
-		
+
 		shell.setMenuBar(menuBar);
 
 		// file->exit
@@ -338,15 +349,15 @@ public class Controller {
 
 			public void widgetSelected(SelectionEvent e) {
 				String instancepath = view.openFileChooser();
-				
+
 				// save file path in string to Properties java class.
 				Properties.filePathStr = instancepath;
-				
+
 				if (instancepath == null) return;
 				animate(instancepath);
 			}			
 		});
-		
+
 		helpGetHelpItem.addHelpListener(new HelpListener() {
 			public void helpRequested(HelpEvent e) {
 			}			
@@ -359,7 +370,7 @@ public class Controller {
 			}
 
 			public void widgetSelected(SelectionEvent e) {
-				
+
 				try {
 					model.undoAction();
 					view.update();
@@ -386,7 +397,7 @@ public class Controller {
 				}
 			}			
 		});
-		
+
 		// reset
 		resetItem.addSelectionListener(new SelectionListener() {
 			public void widgetDefaultSelected(SelectionEvent e) {
@@ -401,11 +412,11 @@ public class Controller {
 				} catch (Exception exception) {
 					showError(exception);
 				}
-				
+
 			}			
 		});
-		
-		
+
+
 		//Properties->PrintRules
 		properitesPrintRulesItem.addSelectionListener(new SelectionListener() {
 			public void widgetDefaultSelected(SelectionEvent e) {
@@ -421,7 +432,7 @@ public class Controller {
 					Properties.setProperty("PrintRules", "true");
 					properitesPrintRulesItem.setText("Turn Off Print Rules");
 				}
-				
+
 				try {
 					Properties.rewritePropertiesFile();
 				} catch (FileNotFoundException e1) {
@@ -429,8 +440,8 @@ public class Controller {
 				}
 			}			
 		});
-		
-		
+
+
 		//Properties->PrintGraphs
 		properitesPrintGraphsItem.addSelectionListener(new SelectionListener() {
 			public void widgetDefaultSelected(SelectionEvent e) {
@@ -446,7 +457,7 @@ public class Controller {
 					Properties.setProperty("PrintGraphs", "true");
 					properitesPrintGraphsItem.setText("Turn Off Print Graphs");
 				}
-				
+
 				try {
 					Properties.rewritePropertiesFile();
 				} catch (FileNotFoundException e1) {
@@ -454,8 +465,8 @@ public class Controller {
 				}
 			}			
 		});
-		
-		
+
+
 		//Properties->PrintDebug
 		properitesPrintDebugItem.addSelectionListener(new SelectionListener() {
 			public void widgetDefaultSelected(SelectionEvent e) {
@@ -471,7 +482,7 @@ public class Controller {
 					Properties.setProperty("PrintDebug", "true");
 					properitesPrintDebugItem.setText("Turn Off Print Debug");
 				}
-				
+
 				try {
 					Properties.rewritePropertiesFile();
 				} catch (FileNotFoundException e1) {
@@ -480,21 +491,21 @@ public class Controller {
 			}			
 		});
 	}
-	
-	
+
+
 	/**
 	 * Run the Animator as a stand-alone application
 	 */
 	public static void main(String[] args) {
-		
+
 		long time = System.currentTimeMillis();
-		
+
 		final Display d = new Display();
 		final Shell shell = new Shell(d);
 		shell.setSize(650, 420);
 		shell.setText("Animator");
 		shell.setLayout(new FillLayout(SWT.VERTICAL));
-		
+
 		//run it
 		View view = new View(false, shell);
 		view.createPartControl(shell);
@@ -506,7 +517,7 @@ public class Controller {
 		while (!shell.isDisposed())
 			while (!d.readAndDispatch())
 				d.sleep();
-		
+
 		//Time how long the application runs for
 		long time3 = System.currentTimeMillis();
 		long setupTime = time2 - time1;
