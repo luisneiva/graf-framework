@@ -2,6 +2,8 @@ package view;
 
 import java.io.FileNotFoundException;
 
+import javax.swing.JFileChooser;
+
 import model.PluginModel;
 import model.modelTransformer.objectDisplay.ObjectDisplay;
 
@@ -146,6 +148,16 @@ public class View extends ViewPart {
 		return filedialog.open();
 	}
 
+	/** Open a file chooser and return path to chosen file, or null if none chosen */
+	public String openFileChooser(String prompt) {
+		//TODO: Add file chooser code
+		FileDialog filedialog = new FileDialog(parent.getShell());
+		filedialog.setText(prompt);
+		filedialog.setFilterPath("Models");
+		filedialog.setFilterExtensions(new String[]{"*.modeltest"});
+		return filedialog.open();
+	}
+	
 	/** Display error message to user */
 	// TODO!!!
 	public void showError(String msg) {
