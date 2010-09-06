@@ -6,6 +6,6 @@ FirstProperty = 2
 SecondProperty = 14
 
 i1 : Invoice
-BooleanTest = true
+BooleanTest = false
 
 o1 <isFrom, contains> i1

@@ -56,7 +56,6 @@ public class Controller {
 	private final String gtsRulesPath = "GTSRules.ggx";
 	private final String gtsRulesSeqPath = "GTSRulesSeq.xml";
 
-
 	/**
 	 * Set up model and view. Create and register listeners in the view.
 	 */
@@ -339,6 +338,10 @@ public class Controller {
 
 			public void widgetSelected(SelectionEvent e) {
 				String instancepath = view.openFileChooser();
+				
+				// save file path in string to Properties java class.
+				Properties.filePathStr = instancepath;
+				
 				if (instancepath == null) return;
 				animate(instancepath);
 			}			

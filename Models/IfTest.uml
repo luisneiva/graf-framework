@@ -29,7 +29,7 @@
                 <node xmi:type="uml:CreateObjectAction" xmi:id="_zmCKoK9CEd-LG9Xj56ZbmQ" name="TrueAction" classifier="_QDmQoGGVEd-wueUf9g8DcA">
                   <result xmi:id="_8iERgK9CEd-LG9Xj56ZbmQ" name="TrueActionOutputPin"/>
                 </node>
-                <clause xmi:id="_k9NgEK9CEd-LG9Xj56ZbmQ" body="_zmCKoK9CEd-LG9Xj56ZbmQ" bodyOutput="_8iERgK9CEd-LG9Xj56ZbmQ"/>
+                <clause xmi:id="_k9NgEK9CEd-LG9Xj56ZbmQ" test="_4cS-cLSyEd-0jtbPopIvLA" body="_zmCKoK9CEd-LG9Xj56ZbmQ" bodyOutput="_8iERgK9CEd-LG9Xj56ZbmQ"/>
               </node>
             </entry>
           </subvertex>

@@ -92,6 +92,11 @@ public class View extends ViewPart {
 	 */
 	public void openFirst() {
 		String instancepath = openFileChooser();
+		
+		// TODO!!! file path in string.
+		Properties.filePathStr = instancepath;
+		
+		
 		if (instancepath == null) 
 			return;
 		controller.animate(instancepath);		
@@ -142,6 +147,7 @@ public class View extends ViewPart {
 	}
 
 	/** Display error message to user */
+	// TODO!!!
 	public void showError(String msg) {
 		if (parent == null) {
 			MessageDialog.openError(null, "Animator Error", msg);

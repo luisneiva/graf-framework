@@ -20,6 +20,7 @@ public class Properties
 	private final static Hashtable<String,String> properties = new Hashtable<String,String>();
 	private static String propFile = "Properties.txt";
 	
+	public static String filePathStr = "";	
 	
 	// menu: Properties -> print...
 	/**
