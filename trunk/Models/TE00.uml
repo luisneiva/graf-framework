@@ -8,8 +8,8 @@
           <returnInformation xmi:type="uml:ActionInputPin" xmi:id="_MzV6sLPwEd-2xdMgVqLzsQ" name="createCReplyReturnInformation">
             <fromAction xmi:type="uml:AcceptCallAction" xmi:id="_QcS-YLPwEd-2xdMgVqLzsQ" name="createCAcceptCall">
               <result xmi:id="_rJYUwLPfEd-MwMXpdXP3CA" name="createCAcceptCallResult"/>
-              <result xmi:id="_4XswMLPfEd-MwMXpdXP3CA" name="createCAcceptCallReturnInformation"/>
               <trigger xmi:id="_mYLPkLPfEd-MwMXpdXP3CA" name="createCAcceptCallTrigger" event="_Y69tcLPoEd-2xdMgVqLzsQ"/>
+              <returnInformation xmi:id="_F5YNYLo_Ed-gANarbRVMCg" name="createCAcceptCallReturnInformation"/>
             </fromAction>
           </returnInformation>
           <replyValue xmi:type="uml:ActionInputPin" xmi:id="_CefxULPxEd-2xdMgVqLzsQ" name="createCReplyValue">
