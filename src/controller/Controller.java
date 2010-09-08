@@ -7,6 +7,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
 
+import javax.swing.JFileChooser;
+
 import model.PluginModel;
 import model.TransitionAction;
 
@@ -82,14 +84,22 @@ public class Controller {
 			} else {
 				if (new File(gtsRulesPath).exists()==false)
 				{
-					gtsRulesPath = view.openFileChooser();
+					JFileChooser fc2 = new JFileChooser();
+					fc2.setDialogTitle("Choose a Rule:");
+					fc2.showOpenDialog(null);
+					gtsRulesPath = fc2.getSelectedFile().getAbsolutePath();
+					
 					Properties.setProperty("gtsRulesPath", gtsRulesPath);
 					Properties.rewritePropertiesFile();
 //					throw new IOException("Cannot locate file: " + gtsRulesPath);
 				}
 				if (new File(gtsRulesSeqPath).exists()==false)
 				{
-					gtsRulesSeqPath = view.openFileChooser();
+					JFileChooser fc = new JFileChooser();
+					fc.setDialogTitle("Choose a Rule Seq:");
+					fc.showOpenDialog(null);
+					gtsRulesSeqPath = fc.getSelectedFile().getAbsolutePath();
+					
 					Properties.setProperty("gtsRulesSeqPath", gtsRulesSeqPath);
 					Properties.rewritePropertiesFile();
 //					throw new IOException("Cannot locate file: " + gtsRulesSeqPath);
