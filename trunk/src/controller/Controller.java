@@ -296,6 +296,10 @@ public class Controller {
 		resetItem.setText("&Reset\tCtrl+R");
 		resetItem.setAccelerator(SWT.CTRL + 'R');
 
+
+		properitesMenuHeader = new MenuItem(menuBar, SWT.CASCADE);
+		properitesMenuHeader.setText("&Properites");
+		
 		helpMenuHeader = new MenuItem(menuBar, SWT.CASCADE);
 		helpMenuHeader.setText("&Help");
 
@@ -304,10 +308,6 @@ public class Controller {
 
 		helpGetHelpItem = new MenuItem(helpMenu, SWT.PUSH);
 		helpGetHelpItem.setText("&Get Help");
-
-
-		properitesMenuHeader = new MenuItem(menuBar, SWT.CASCADE);
-		properitesMenuHeader.setText("&Properites");
 
 		properitesMenu = new Menu(shell, SWT.DROP_DOWN);
 		properitesMenuHeader.setMenu(properitesMenu);
