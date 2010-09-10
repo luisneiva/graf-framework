@@ -10,11 +10,11 @@ Date: 06-09-2010
 == Report to James ==
 
   * Meeting with Shayne
-  ** would like both versions of the microwave models. Requires:
-  *** CreateLinkAction
-  *** Timer
-  ** issues with state machine transitions - AGG limitation
-  *** requires inelegant solution
+    * would like both versions of the microwave models. Requires:
+      * CreateLinkAction
+      * Timer
+    * issues with state machine transitions - AGG limitation
+      * requires inelegant solution
 
 == Prep for project review ==
   * have everyone speak
@@ -38,17 +38,17 @@ Cameron
   * showcase
   * plan for winding down - what deliverables do we have?
   * what will they ask in the review
-  ** how well what we have matches up with what the clients wanted
-  ** looking for something that could animate more models than what it could do at the beginning of the year
-  ** need a transition/closing plan
-  *** success criteria: need to state them and demonstrate whether they have been met
-  *** need documentation of GRAF for the new team, and planning for it (need a transition plan with justificiation - do we need to put it on googlecode, do we need a hard copy? Yes, for submission)
-  *** state plan for closing in the review, including detail on all the activities
-  **** stuff that Shayne needs - including training
-  **** stuff that the future team needs - the code structure, 'how to debug GRAF' on a powerpoint or similar
-  **** including 'how to' guides for installing GRAF, perhaps present the materian in order of difficulty
-  ** need to leave time for testing - test cases, expected outcomes
-  ** need to be able to test the success criteria
+    * how well what we have matches up with what the clients wanted
+    * looking for something that could animate more models than what it could do at the beginning of the year
+    * need a transition/closing plan
+      * success criteria: need to state them and demonstrate whether they have been met
+      * need documentation of GRAF for the new team, and planning for it (need a transition plan with justificiation - do we need to put it on googlecode, do we need a hard copy? Yes, for submission)
+      * state plan for closing in the review, including detail on all the activities
+        * stuff that Shayne needs - including training
+        * stuff that the future team needs - the code structure, 'how to debug GRAF' on a powerpoint or similar
+        * including 'how to' guides for installing GRAF, perhaps present the materian in order of difficulty
+    * need to leave time for testing - test cases, expected outcomes
+    * need to be able to test the success criteria
 
 == Plan for the project review ==
   * what we've each been doing (don't get bogged down)
