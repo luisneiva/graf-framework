@@ -57,8 +57,16 @@
 	</action>
 	<action name="CreateObjectAction">
 		<exclusive-dependencies>
-			<rule>createObjectAction-SameType</rule></exclusive-dependencies>
+			<action>CreateObjectAction-Main</action>
+			<action>CreateObjectAction-AddStateMachineBehavior</action></exclusive-dependencies>
+		
+		
 	</action>
+	<action name="CreateObjectAction-Main">
+		<rule>createObjectAction-Main</rule></action>
+	<action name="CreateObjectAction-AddStateMachineBehavior">
+		<rule>createObjectAction-Main</rule>
+		<rule>createObjectAction-AddStateMachineBehavior</rule></action>
 	<action name="CallOperationAction">
 		<rule>actorCallOperation</rule>
 	</action>
