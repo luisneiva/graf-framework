@@ -62,9 +62,9 @@ Cameron
   * Hamish: documentation, testing
 
 == Delivarables ==
-1. the application
-2. user-level tutorial (audience - Shayne Flint)
-3. developer-level tutorial
-4. demonstration presentation of the potential use of the animator in model-driven development
-  (a) goal is to attract industrial sponsor - did we satisfy this by meeting with Annette?
-  (b) [in client meeting] probably close enough
+  # the application
+  # user-level tutorial (audience - Shayne Flint)
+  # developer-level tutorial
+  # demonstration presentation of the potential use of the animator in model-driven development
+    * goal is to attract industrial sponsor - did we satisfy this by meeting with Annette?
+    * [in client meeting] probably close enough
