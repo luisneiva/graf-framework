@@ -67,4 +67,4 @@ Cameron
   # developer-level tutorial
   # demonstration presentation of the potential use of the animator in model-driven development
     * goal is to attract industrial sponsor - did we satisfy this by meeting with Annette?
-    * [in client meeting] probably close enough
+    * in client meeting - probably close enough
