@@ -1,0 +1,70 @@
+#summary Minutes of Group Meeting
+
+= Group Meeting with Mentor=
+Date: 06-09-2010
+<br>Location: CSIT N110
+<br>Present: Oscar, Stephen, Alice, Cameron, Hamish and Frank
+<br>Time: 2pm
+<br>Duration: 1 hr
+
+== Report to James ==
+
+  * Meeting with Shayne
+  ** would like both versions of the microwave models. Requires:
+  *** CreateLinkAction
+  *** Timer
+  ** issues with state machine transitions - AGG limitation
+  *** requires inelegant solution
+
+== Prep for project review ==
+  * have everyone speak
+  * demonstration of GRAF
+
+== Progress reports ==
+Frank
+  * if statements working, but not displayed correctly
+  * modify the GUI to same the filepath of the model so that the filechooser doesn't pop up every time
+Hamish
+  * other assignments
+  * still got testing for the action calls and positioning the objects on the screen
+Alice
+  * still need to do reply action, resolve pin problems
+  * communication model powerpoint
+Cameron
+  * making the models for Shayne
+  * made a powerpoint presentation on GPME useage
+== Discussion ==
+  * timelines - we have 7-8 weeks left
+  * showcase
+  * plan for winding down - what deliverables do we have?
+  * what will they ask in the review
+  ** how well what we have matches up with what the clients wanted
+  ** looking for something that could animate more models than what it could do at the beginning of the year
+  ** need a transition/closing plan
+  *** success criteria: need to state them and demonstrate whether they have been met
+  *** need documentation of GRAF for the new team, and planning for it (need a transition plan with justificiation - do we need to put it on googlecode, do we need a hard copy? Yes, for submission)
+  *** state plan for closing in the review, including detail on all the activities
+  **** stuff that Shayne needs - including training
+  **** stuff that the future team needs - the code structure, 'how to debug GRAF' on a powerpoint or similar
+  **** including 'how to' guides for installing GRAF, perhaps present the materian in order of difficulty
+  ** need to leave time for testing - test cases, expected outcomes
+  ** need to be able to test the success criteria
+
+== Plan for the project review ==
+  * what we've each been doing (don't get bogged down)
+  * deliverables
+  * hand-over plan?
+
+== Project task assignment ==
+  * Alice: review talk about method stuff (and what it's adding to the project)
+  * Cameron: the stuff for Shayne and the general 'using GRAF as an educational tool'
+  * Frank: coding tasks - if statements, regions, methods, properties (mention what it's adding to GRAF)
+  * Hamish: documentation, testing
+
+== Delivarables ==
+1. the application
+2. user-level tutorial (audience - Shayne Flint)
+3. developer-level tutorial
+4. demonstration presentation of the potential use of the animator in model-driven development
+  (a) goal is to attract industrial sponsor - did we satisfy this by meeting with Annette?
+  (b) [in client meeting] probably close enough
