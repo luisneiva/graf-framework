@@ -96,9 +96,9 @@ public class AGGTransformer {
 						//if the exclusive dependency did not fully complete, erase its work.
 						setGraph(graphBackup);
 						if(printDebug) {
-						System.out.println("Rule Cancelled: object="+objName+
-								", action="+child.getChildElements().get(j).getValue()+
-								", actionParam="+actionParam + " (" + e.getMessage() + ")");
+							System.out.println("Rule Cancelled: object="+objName+
+									", action="+child.getChildElements().get(j).getValue()+
+									", actionParam="+actionParam + " (" + e.getMessage() + ")");
 						}
 					}
 				}
@@ -159,7 +159,7 @@ public class AGGTransformer {
 			setInputParameters(rule, objName, actionParam, false);
 			apply(rule);
 		}
-		
+
 		Boolean printDebug = Boolean.parseBoolean(Properties.getProperty("PrintDebug"));
 		if(printDebug) {
 			System.out.println("Rule Applied: object="+objName+", action="
