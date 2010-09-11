@@ -1,0 +1,59 @@
+#summary Client meeting minutes
+
+= Client Meeting (Raj) =
+Date: 06-Sep-2010
+<br>Location: Raj's office
+<br>Present: Oscar, Stephen, Alice, Cameron, Hamish and Frank
+<br>Time: 3pm
+<br>Duration: 30 mins
+
+== Review ==
+
+Booked time for Monday 13th September, 1420-1600
+
+== Progress Report ==
+  * added all of Greg's models
+    * gave up looking for a tool to automate this entirely – adopted a hybrid method of hand-creating and use of plugins
+    * simple model: done
+    * elevator model: done/close
+    * TE00: close
+    * Invoicer: requires if-statements, and some pseudocode – this second element might take time
+  * working on adding the functionality for Greg's models
+    * state machine regions
+    * if statements
+    * mealy notation
+    * methods
+  * finished looking at other animators and other tools
+    * none of the free tools were working
+  * spoke to 
+    * Shayne, as a potential user of GRAF as an educational tool
+doesn't mind that GRAF provides low-level detail
+      * hand-creating models not a problem because he can use only one or two that we make for him
+      * requires timers
+        * do we have the time to implement this?
+    * Annette
+      * liked that it was an animator
+      * gave a list of features – bigger than Shayne's, so we're not going to implement it now. But it demonstrates that there is a need – not just a 'solution without a problem'
+      * but Annette's not a customer at the moment
+  * need to prepare the project for the next set of users and developers - "hand-over"
+    * give Raj and Greg access to googlecode
+    * put up instructions/tutorials
+    * not that onerous, but we should start working on it now
+    * Finishing the Invoicer model could be a learning-curve task for next year's team
+
+== Discussion of review ==
+  * we should be able to finish most of the work we've started
+  * tactically it might be worth concentrating on Shayne's model – getting a user is a priority for the project, for feedback to the group and as a technology transfer from Greg's thesis to the 'real world'
+  * request that Raj looks at the wiki on googlecode, try looking at GRAF himself
+  * they might raise meta-level 'team' issues eg group cooperation 
+  * clarify that Raj's absence didn't affect the project too much, cite mitigation techniques
+
+== Next meeting with Greg ==
+  * not before the review – contact via emails
+  * ask Greg to look at GRAF from the standalone – can he animate a model to his satisfaction? This satisfies Raj's requirement of technology transfer from an academic perspective
+  * not necessary that he attend the review – difficult to be involved via skype
+== Problems? ==
+  * the state transition problem
+  * the difficulty is in AGG – it's too limited, but there might be a workaround
+  * need to mention this to Greg
+  * nb workload on the next seven weeks
