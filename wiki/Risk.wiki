@@ -91,10 +91,6 @@ GRAF doesn't have to be _useable_ by 2011. Only the team needs to be able to use
 *Action:* Reduce impact<br>
 The team will look into other ways to demonstrate ambiguities in models. The team will consider other approaches to acquire animators.
 
-===== No action language builder =====
-*Action:* Reduce impact<br>
-~~The team will make it a priority to determine whether any tool supports easily adding action language commands to a state machine. If none can be found, then we will make it part of the project to develop our own application to do so. GRAF cannot be used without a state machine with action commands and it is unreasonable to expect anyone to seriously use GRAF if they need to manually add each primitive UML action.~~ We reduced the impact of this to zero by deciding not to use an action language builder.
-
 ===== The models from Greg can't be entered into GRAF =====
 *Action:* Reduce likelihood, reduce impact <br>
 ~~The team will look for other models that serve the same purpose but are more compatible with GRAF. The team will make it a priority to find out what is needed to add the 4 models so it will become clear how feasible it is.~~ The models have been entered into GRAF to some extent and it's clear that the job can be finished.
@@ -109,3 +105,7 @@ We couldn't get any animators to give any results. We've changed the focus of th
 ===== Free UML animators don't work =====
 *Action:* Reduce impact<br>
 This happened. Free UML animators can't be made to work for whatever reasons. The team will focus on [RefDiscussion correctness] of models instead of correctness of animators. The team will also investigate using GRAF as a teaching tool.
+
+===== No action language builder =====
+*Action:* Reduce impact<br>
+~~The team will make it a priority to determine whether any tool supports easily adding action language commands to a state machine. If none can be found, then we will make it part of the project to develop our own application to do so. GRAF cannot be used without a state machine with action commands and it is unreasonable to expect anyone to seriously use GRAF if they need to manually add each primitive UML action.~~ We reduced the impact of this to zero by deciding not to use an action language builder.
