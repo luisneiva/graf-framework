@@ -1,7 +1,7 @@
 Invoicer.uml
 
 i1 : Invoicer
-{Initial}
+{Invoicing}
 o = o1
 
 

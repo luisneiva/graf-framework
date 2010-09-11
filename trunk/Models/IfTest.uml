@@ -15,7 +15,7 @@
               <node xmi:type="uml:ConditionalNode" xmi:id="_jvskEK9CEd-LG9Xj56ZbmQ" name="ConditionalNode1">
                 <node xmi:type="uml:ReadStructuralFeatureAction" xmi:id="_4cS-cLSyEd-0jtbPopIvLA" name="TestValue" structuralFeature="_bO1wULSzEd-0jtbPopIvLA">
                   <object xmi:type="uml:ActionInputPin" xmi:id="_4cS-cbSyEd-0jtbPopIvLA" name="foodPin">
-                    <fromAction xmi:type="uml:ReadStructuralFeatureAction" xmi:id="_4cS-crSyEd-0jtbPopIvLA" name="getFood" structuralFeature="_Nyxz0bSzEd-0jtbPopIvLA">
+                    <fromAction xmi:type="uml:ReadStructuralFeatureAction" xmi:id="_4cS-crSyEd-0jtbPopIvLA" name="readTestValue" structuralFeature="_Nyxz0bSzEd-0jtbPopIvLA">
                       <object xmi:type="uml:ActionInputPin" xmi:id="_4cS-c7SyEd-0jtbPopIvLA" name="selfActionInputPin">
                         <fromAction xmi:type="uml:ReadSelfAction" xmi:id="_4cS-dLSyEd-0jtbPopIvLA" name="selfRead">
                           <result xmi:id="_4cS-dbSyEd-0jtbPopIvLA" name="selfPin" isLeaf="true"/>
