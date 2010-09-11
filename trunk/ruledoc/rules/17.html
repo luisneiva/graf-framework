@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU">
+	<head>
+		<!-- u4411120 2/07/2010 -->
+		<title>RuleDoc - replyAction</title>
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<link rel="stylesheet" type="text/css" href="../styles/rules.css" media="screen" />
+		<style type="text/css" id="pageStyles">
+		</style>
+	</head>
+	<body>
+		<div id="heading">
+			<h1>
+				replyAction
+			</h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="16.html">Back</a>
+				</li>
+				<li>
+					<a href="../index.html">Up to Index</a>
+				</li>
+				<li>
+					<a href="18.html">Next</a>
+				</li>
+			</ul>
+		</div>
+		<div id="content">
+			<div id="middlecolumn">
+				<h2>
+					US Section 11.3.43 ReplyAction
+				</h2>
+				<p>
+					To go to the page containing the rule description in the US pdf document,
+					<a href="../../UML_Superstructure_2-1-2_07-11-02.pdf#page=297">
+						click here
+					</a>.
+				</p>
+				<a href="../../GraphOutputs/replyAction.dot.png">
+					<img 
+						src="../../GraphOutputs/replyAction.dot.png"
+						alt="The dot-generated rule image"
+						title="Click to see the full-size version"
+					/>
+				</a>
+				<h2>
+					Context
+				</h2>
+				<p>
+					Below is the xml file which defines the order in which the rules are executed. 
+				</p>
+					<iframe src="../../GTSRulesSeq.xml">
+						Your browser does not support frames. 
+						<a href="../../GTSRulesSeq.xml" title="View the xml rule sequence file">
+							Click here
+						</a> to see the file.
+					</iframe>
+				<h2>
+					Rationale
+				</h2>
+					<p>
+						This implementation of the Action works by placing the contents of the output 
+						pin of the method's nested Action on the the calling object (called sendingObject
+						in the rule)'s behaviorExecution node, using an arc with the same name as the Reply
+						Action's replyValue pin. 
+					</p>
+				<h2>
+					Assumptions/Deviations from the Definition
+				</h2>
+					<p>
+						The description of this Action is one of the most unclear in the Specification. Its
+						placement in the model structure, and the way that it interacts with AcceptCallAction (including
+						exactly what information is to constitute the 'returnInformation' - we use the CallEvent itself)
+						are largely assumptions based on what we thought was logical.
+					</p>
+				<h2>Problems</h2>
+					<p>
+						Currently, we only have models with one nested Action in their methods, but obviously there could be more. 
+						Theoretically, this is not a problem for AcceptCallAction, or the execution of the nested actions themselves 
+						on our implementation. However, the replyValue pin of ReplyAction has to hold "a list of pins containing the 
+						reply values of the operation."
+					</p>
+					<p>
+						This suggests that a future implementation might require a split of the rule into two parts - a Main part 
+						(that removes the executable edge) and a second part that loops across the method, adding the replyValue
+						arcs. Our implementation also relies on the output pin of the nested Action being an OutputPin rather 
+						than an ActionOutputPin.
+					</p>
+			</div>
+		</div>
+	</body>
+</html>
