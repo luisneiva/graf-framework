@@ -25,17 +25,25 @@
 		<rule>acceptEventAction-WithActivity-HasBehavior</rule>
 		<looping-dependency>
 			<rule>acceptEventAction-WithActivity-ExecutableEdges</rule>
-		</looping-dependency></action><action name="AcceptEventAction-WithActivity-Main">
-		<rule>acceptEventAction-WithActivity-Main</rule>
+		</looping-dependency></action>
+
+	<action name="AcceptEventAction-WithActivity-Main">
+		<exclusive-dependencies>
+			<rule>acceptEventAction-WithActivity-Main</rule>
+			<rule>acceptEventAction-WithActivity-Main-Mealy</rule>
+			<rule>acceptEventAction-WithActivity-Main-Mealy-SameState</rule>
+		</exclusive-dependencies>
 		<looping-dependency>
 			<rule>acceptEventAction-WithActivity-ExecutableEdges</rule>
 		</looping-dependency>
 	</action>
+
 	<action name="AcceptEventAction-WithActivity-SameState">
 		<rule>acceptEventAction-WithActivity-SameState</rule>
 		<looping-dependency>
 			<rule>acceptEventAction-WithActivity-ExecutableEdges</rule>
-		</looping-dependency></action>
+		</looping-dependency>
+	</action>
 
 	<action name="SendSignalAction">
 		<rule>sendSignalAction</rule>
