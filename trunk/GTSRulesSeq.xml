@@ -10,6 +10,8 @@
 			<action>AcceptEventAction-WithActivity-HasBehavior</action>
 			<action>AcceptEventAction-WithActivity-SameState</action>
 			<action>AcceptEventAction-WithActivity-Main</action>
+			<action>AcceptEventAction-WithActivity-Main-Mealy</action>
+			<action>AcceptEventAction-WithActivity-Main-Mealy-SameState</action>
 			<rule>acceptEventAction-WithoutActivity</rule>
 		</exclusive-dependencies>
 	</action>
@@ -28,15 +30,26 @@
 		</looping-dependency></action>
 
 	<action name="AcceptEventAction-WithActivity-Main">
-		<exclusive-dependencies>
-			<rule>acceptEventAction-WithActivity-Main</rule>
-			<rule>acceptEventAction-WithActivity-Main-Mealy</rule>
-			<rule>acceptEventAction-WithActivity-Main-Mealy-SameState</rule>
-		</exclusive-dependencies>
+		<rule>acceptEventAction-WithActivity-Main</rule>
 		<looping-dependency>
 			<rule>acceptEventAction-WithActivity-ExecutableEdges</rule>
 		</looping-dependency>
 	</action>
+
+	<action name="AcceptEventAction-WithActivity-Main-Mealy">
+		<rule>acceptEventAction-WithActivity-Main-Mealy</rule>
+		<looping-dependency>
+			<rule>acceptEventAction-WithActivity-ExecutableEdges</rule>
+		</looping-dependency>
+	</action>
+
+	<action name="AcceptEventAction-WithActivity-Main-Mealy-SameState">
+		<rule>acceptEventAction-WithActivity-Main-Mealy-SameState</rule>
+		<looping-dependency>
+			<rule>acceptEventAction-WithActivity-ExecutableEdges</rule>
+		</looping-dependency>
+	</action>
+
 
 	<action name="AcceptEventAction-WithActivity-SameState">
 		<rule>acceptEventAction-WithActivity-SameState</rule>
