@@ -8,11 +8,11 @@
 || Latent defects discovered || Medium || Medium ||
 || A new version of Eclipse isn't backwards compatible || Medium || Low||
 || GRAF runs too slowly || Medium || Medium ||
-|| Adding new rules requires code change || High || Low ||
-|| ~~Can't find anyone locally who would use GRAF~~ || ~~Medium~~ || Low ||
+|| ~~Adding new rules requires code change~~ || ~~High~~ || Low ||
+|| ~~Can't find anyone locally who would use GRAF~~ Found someone || ~~Medium~~ || Low ||
 || Competing product appears || Very low || Very low ||
 || Other animators aren't ambiguous || Low || High ||
-|| 2 animators give the same results || High || Medium ||
+|| 2 animators give the same results || Low || Medium ||
 || ~~No tool can be found to instantiate models for GRAF~~ || ~~High~~ || Low ||
 || Greg or Raj can no longer be involved as much || Medium || High ||
 || A team member leaves temporarily or permanently || High|| Medium ||
@@ -20,21 +20,21 @@
 || GPME disappears || Low || Medium ||
 || Google code disappears || Low || High ||
 || Alliance disappears || Low || Medium ||
-|| Email history lost in part or entirely || Medium || Low ||
+|| Email history lost in part or entirely || Low || Low ||
 || Legal/license problems appear || Low || High ||
 || ~~There are no free UML animators~~ || ~~Medium~~ || High ||
 || ~~Free UML animators don't work~~ || ~~High~~ || High ||
-|| ~~Contacted stakeholders have no use for GRAF, have no ambiguous models~~ || ~~High~~|| High ||
-|| Space on Google code used up || Low || Medium ||
-|| The models from Greg can't be entered into GRAF || Low || Low ||
-|| ~~Models' action language statements can't be manually added to a uml file~~ || ~~Low~~ || High ||
+|| ~~Contacted stakeholders have no use for GRAF, have no ambiguous models~~ This didn't happen || ~~High~~|| High ||
+|| Space on Google code used up || Low || Low ||
+|| ~~The models from Greg can't be entered into GRAF~~ They've been entered || ~~Low~~ || Low ||
+|| ~~Models' action language statements can't be manually added to a uml file~~ They've been added || ~~Low~~ || High ||
 || The clients question the worth of their own project || Low || Medium ||
 || (Success criteria 1) Can't give definite descriptions of given models' behaviour || Low || High ||
-|| (Success criteria 3) Can't attract industrial sponsor || High || Low ||
+|| ~~(Success criteria 3) Can't attract industrial sponsor~~ Done || ~~High~~ || Low ||
 || New version of UML supercedes features of GRAF || Low || High ||
 || ~~Clients decide models aren't contentious~~ || ~~Medium~~ || High ||
 || Constantly changing requirements || High || Low ||
-|| Raj isn't pleased with what we've done in his absence || Low || Medium ||
+|| ~~Raj isn't pleased with what we've done in his absence~~ Not the case || ~~Low~~ || Medium ||
 || The project is too complicated to make progres next year || High || High ||
 || Too many rules are required || High || High ||
 
@@ -55,13 +55,9 @@ Create detailed documententation to introduce the next team to the project and l
 *Action:* Accept (for now)<br>
 See [RuleGrowth here]. There's not much we can do without ripping out AGG and finding something else. And it's very unlikely there is an alternative to AGG that will work easily with the existing code.
 
-===== 2 animators give the same results =====
-*Action:* Reduce impact<br>
-The team will try to get more than two animators working. We will also look for other ways to demonstrate the problems with a lack of formality.
-
 ===== Project doesn't meet client's needs =====
 *Action:* Reduce impact and likelihood<br>
-Obviously avoiding this risk is equivalent to making the project as successful as possible. Beyond, trying to make the project a success, the group will also focus on creating documentation for whoever continues the project next year. That way, even if the project does not meet the client's needs, there will be a good chance of it being successful next year.
+Obviously avoiding this risk is equivalent to making the project as successful as possible. Beyond trying to make the project a success, the group will also focus on creating documentation for whoever continues the project next year. That way, even if the project does not meet the client's needs, there will be a good chance of it being successful next year.
 
 ===== Greg or Raj can no longer be involved as much =====
 *Action:* Reduce impact<br>
@@ -84,7 +80,7 @@ Same as above
 ===== Contacted stakeholders have no use for GRAF, have no ambiguous models =====
 *Action:* Reduce probability/transfer risk<br>
 ~~First, the team will make it a priority to find out as soon as possible if this will be the case. Second, the team will consider other uses for GRAF and Graph Transformation Theory.~~
-This risk did not eventuate Clive Boughton saw the value in GRAF, he had had situations where GRAF would have been beneficial and he would like to use the finished GRAF product. 
+This risk did not eventuate Clive Boughton saw the value in GRAF, he had had situations where GRAF would have been beneficial and he would like to use the finished GRAF product. Also, Annette and Shayne were interested.
 
 ===== Work to make GRAF useable is unattainable in 2010 =====
 *Action:* Reduce impact<br>
@@ -102,6 +98,11 @@ The team will look into other ways to demonstrate ambiguities in models. The tea
 ===== The models from Greg can't be entered into GRAF =====
 *Action:* Reduce likelihood, reduce impact <br>
 ~~The team will look for other models that serve the same purpose but are more compatible with GRAF. The team will make it a priority to find out what is needed to add the 4 models so it will become clear how feasible it is.~~ The models have been entered into GRAF to some extent and it's clear that the job can be finished.
+
+===== 2 animators give the same results =====
+~~*Action:* Reduce impact<br>~~
+~~The team will try to get more than two animators working. We will also look for other ways to demonstrate the problems with a lack of formality.~~
+We couldn't get any animators to give any results. We've changed the focus of the problem so this is no longer relevant.
 
 == Mitigation of Risks that have occured ==
 
