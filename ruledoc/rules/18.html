@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU">
 	<head>
 		<!-- u4411120 2/07/2010 -->
-		<title>RuleDoc - createObjectAction-Main</title>
+		<title>RuleDoc - createObjectAction-AddStateMachineBehavior</title>
 		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 		<link rel="stylesheet" type="text/css" href="../styles/rules.css" media="screen" />
@@ -12,19 +12,19 @@
 	<body>
 		<div id="heading">
 			<h1>
-				createObjectAction-Main
+				createObjectAction-AddStateMachineBehavior
 			</h1>
 		</div>
 		<div id="menu">
 			<ul>
 				<li>
-					<a href="6.html">Back</a>
+					<a href="17.html">Back</a>
 				</li>
 				<li>
 					<a href="../index.html">Up to Index</a>
 				</li>
 				<li>
-					<a href="8.html">Next</a>
+					<a href="19.html">Next</a>
 				</li>
 			</ul>
 		</div>
@@ -39,9 +39,9 @@
 						click here
 					</a>.
 				</p>
-				<a href="../../GraphOutputs/createObjectAction-Main.dot.png">
+				<a href="../../GraphOutputs/createObjectAction-AddStateMachineBehavior.dot.png">
 					<img 
-						src="../../GraphOutputs/createObjectAction-Main.dot.png"
+						src="../../GraphOutputs/createObjectAction-AddStateMachineBehavior.dot.png"
 						alt="The dot-generated rule image"
 						title="Click to see the full-size version"
 					/>
@@ -52,33 +52,23 @@
 				<p>
 					Below is the xml file which defines the order in which the rules are executed. 
 				</p>
-					<iframe src="../../GTSRulesSeq.xml" width="100%">
+					<iframe src="../../GTSRulesSeq.xml">
 						Your browser does not support frames. 
 						<a href="../../GTSRulesSeq.xml" title="View the xml rule sequence file">
 							Click here
 						</a> to see the file.
 					</iframe>
 				<h2>
-					Rationale and Comments
+					Rationale
 				</h2>
 					<p>
-						'CreateObjectAction is an action that creates an object that conforms to a 
-						statically specified classifier and puts it on an output pin at runtime.'
-						It has a classifier indicating the class of object to be created, and an
-						output pin on which the created object is to be placed. The action stands
-						alone, in that 'no behaviors are executed, no initial expressions are
-						evaluated, and no state machine transitions are triggered. The new object 
-						has no structural feature values and participates in no links.'
+						This rule is the second part of createObjectAction. The first part is <a href="7.html">here</a>. 
+						New objects may or may not have state machines. AGG will only apply this rule if there is a state machine 
+						attached to the classifier that is to be instantiated.
 					</p>
 					<p>
-						This is the first part of the Action. It creates the new object and its behaviorExecution node,
-						and puts it on the output pin (that is, an arc with the same name as the Action's output pin node).
-					</p>
-					<p>
-						The second part of the Action is <a href="rules/18.html">here</a>. If the new node's class has a
-						state machine, the second part adds the appropriate 'behavior' and 'activeState' edges to the 
-						behaviorExecution node. If the class doesn't have a state machine, then these edges are not necessary -
-						hence the division of the rule into two parts.
+						The new object is created in the first state after the initial pseudostate. This is identified by the 
+						'target' edge from the first transition from that state.
 					</p>
 			</div>
 		</div>

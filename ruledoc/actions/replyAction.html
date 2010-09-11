@@ -83,13 +83,18 @@
 						call is asynchronous. <a href="acceptCallAction">AcceptCallAction</a> specifies that '[i]f [AcceptCallAction] is used to handle 
 						an asynchronous call, execution of the subsequent reply action will complete immediately with no effects.' This requires two 
 						implementations of ReplyAction - one for asynchronous calls, that executes immediately and with no effect, and one for 
-						synchronous calls.
+						synchronous calls. However, we have implemented only one replyAction rule, that is to be used in both instances. At the moment,
+						however, there is no easy way to know whether a call is asynchronous or not, so we only have one rule.
+					</p>
+					<p>
+						Currently, however, our set-up only supports synchronous execution - the replyAction rule won't match until there is an output
+						from the nested Action.
 					</p>
 				<h2>
 					Rules that implement this action:
 				</h2>
 				<ul>
-					<li><a href="../rules/17.html">replyAction-Async</a></li>
+					<li><a href="../rules/17.html">replyAction</a></li>
 				</ul>
 				<p>
 					Below is the xml file which defines the order in which the rules are executed
