@@ -13,7 +13,7 @@
             </fromAction>
           </returnInformation>
           <replyValue xmi:type="uml:ActionInputPin" xmi:id="_CefxULPxEd-2xdMgVqLzsQ" name="createCReplyValue">
-            <fromAction xmi:type="uml:CreateObjectAction" xmi:id="_meP9gZLREd-rAdRAOBcEiw" name="createCCreateObject" classifier="_wjPvGGYEEd-8QvdEjO-jiQ">
+            <fromAction xmi:type="uml:CreateObjectAction" xmi:id="_meP9gZLREd-rAdRAOBcEiw" name="createCCreateObject" classifier="_wIKVkGYEEd-8QvdEjO-jiQ">
               <result xmi:id="_meP9gpLREd-rAdRAOBcEiw" name="createCCreateObjectResult"/>
             </fromAction>
           </replyValue>
@@ -23,7 +23,7 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w8O22GYEEd-8QvdEjO-jiQ" name="A">
       <ownedBehavior xmi:type="uml:Activity" xmi:id="_LbtvgLPnEd-2xdMgVqLzsQ" name="createBMethod" specification="_JyVW4LPnEd-2xdMgVqLzsQ">
-        <node xmi:type="uml:ReplyAction" xmi:id="_cBmjsLPnEd-2xdMgVqLzsQ" name="createBReply" replyToCall="_mYLPkLPfEd-MwMXpdXP3CA">
+        <node xmi:type="uml:ReplyAction" xmi:id="_cBmjsLPnEd-2xdMgVqLzsQ" name="createBReply" replyToCall="_tMAkwLPoEd-2xdMgVqLzsQ">
           <returnInformation xmi:type="uml:ActionInputPin" xmi:id="_4HoqMbP7Ed-cjowyqWEcHQ" name="createBReplyReturnInforamtion">
             <fromAction xmi:type="uml:AcceptCallAction" xmi:id="_XNjl4LPnEd-2xdMgVqLzsQ" name="createBAcceptCall">
               <result xmi:id="_l-3BkLPoEd-2xdMgVqLzsQ" name="createBAcceptCallResult"/>
@@ -32,7 +32,7 @@
             </fromAction>
           </returnInformation>
           <replyValue xmi:type="uml:ActionInputPin" xmi:id="_99WgYLP7Ed-cjowyqWEcHQ" name="createBReplyValue">
-            <fromAction xmi:type="uml:CreateObjectAction" xmi:id="_ZkJp0LPnEd-2xdMgVqLzsQ" name="createBCreateObject">
+            <fromAction xmi:type="uml:CreateObjectAction" xmi:id="_ZkJp0LPnEd-2xdMgVqLzsQ" name="createBCreateObject" classifier="_wjPvGGYEEd-8QvdEjO-jiQ">
               <result xmi:id="_6Q5XYLPoEd-2xdMgVqLzsQ" name="createBCreateObjectResult"/>
             </fromAction>
           </replyValue>
