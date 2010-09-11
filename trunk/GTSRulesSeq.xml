@@ -87,5 +87,7 @@
 			<rule>acceptCallAction-WithActivity-ExecutableEdges</rule>
 		</looping-dependency>
 	</action>
+	<action name="ReplyAction">
+		<rule>replyAction</rule></action>
 
 </GTSRules>
