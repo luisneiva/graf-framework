@@ -2,16 +2,12 @@ IfTest.uml
 
 o1 : Invoicer
 {State1}
-FirstProperty = 3
-SecondProperty = 4
 
 i1 : Invoice
 BooleanTest = true
 
 o2 : Invoicer
 {State1}
-FirstProperty = 1
-SecondProperty = 2
 
 i2 : Invoice
 BooleanTest = false

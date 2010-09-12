@@ -5,8 +5,6 @@
       <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
     </elementImport>
     <packagedElement xmi:type="uml:Class" xmi:id="_QDmQoGGVEd-wueUf9g8DcA" name="Invoicer" classifierBehavior="_UEZ-MGGWEd-wueUf9g8DcA">
-      <ownedAttribute xmi:id="_jmUV4IDwEd-HL_3tQGiR0Q" name="FirstProperty"/>
-      <ownedAttribute xmi:id="_Ijq3oK9CEd-LG9Xj56ZbmQ" name="SecondProperty"/>
       <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_UEZ-MGGWEd-wueUf9g8DcA" name="InvoicerStateMachine">
         <region xmi:id="_UEZ-MWGWEd-wueUf9g8DcA" name="InvoicerRegion">
           <subvertex xmi:type="uml:State" xmi:id="_cxHPoGGWEd-wueUf9g8DcA" name="State1"/>
@@ -26,7 +24,7 @@
                   </object>
                   <result xmi:id="_4cS-d7SyEd-0jtbPopIvLA" name="currentTemperature" isLeaf="true"/>
                 </node>
-                <node xmi:type="uml:CreateObjectAction" xmi:id="_zmCKoK9CEd-LG9Xj56ZbmQ" name="TrueAction" classifier="_QDmQoGGVEd-wueUf9g8DcA">
+                <node xmi:type="uml:CreateObjectAction" xmi:id="_zmCKoK9CEd-LG9Xj56ZbmQ" name="TrueAction" classifier="_UZvgwLSzEd-0jtbPopIvLA">
                   <result xmi:id="_8iERgK9CEd-LG9Xj56ZbmQ" name="TrueActionOutputPin"/>
                 </node>
                 <clause xmi:id="_k9NgEK9CEd-LG9Xj56ZbmQ" test="_4cS-cLSyEd-0jtbPopIvLA" body="_zmCKoK9CEd-LG9Xj56ZbmQ" bodyOutput="_8iERgK9CEd-LG9Xj56ZbmQ"/>
