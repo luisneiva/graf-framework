@@ -141,6 +141,8 @@ public class AGGTransformer {
 	private void applyRule(String objName, String actionName, String actionParam)
 	throws RuleException {
 
+		long time = System.currentTimeMillis();
+		
 		//System.out.println("[Trying to apply rule for " + actionName + "]");
 		Rule rule = gg.getRule(actionName);
 		if (rule==null)
@@ -165,6 +167,10 @@ public class AGGTransformer {
 			System.out.println("Rule Applied: object="+objName+", action="
 					+actionName+", actionParam="+actionParam);
 		}
+		
+		long time1 = System.currentTimeMillis();
+		long totalTime = time1 - time;
+		System.out.println("total rule application time = " + totalTime);
 	}
 
 	/**
