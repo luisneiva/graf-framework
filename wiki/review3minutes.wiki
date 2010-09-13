@@ -7,4 +7,18 @@ Date: 13/9/10
 <br>Time: 2:30pm
 <br>Duration: 1.5 hours
 
-Still to come...
+== Discussion ==
+  * Entering models was surprisingly the biggest problem in Raj's opinion.
+  * James wants to see state machines when he animates a state machine but Shayne is happy just seeing the model
+  * Helping Shayne is just a side project. The mainline is still making the models for Greg
+  * (You can have static state machines)
+  * Next year's parser could be based on the new action language thing coming out
+  * Steve Mellor's coming to visit. Shayne will arrange a meeting.
+
+== Action Items ==
+  * Duress testing must distinguish startup time vs model loading time.
+  * We need to get eclipse's state machine diagram generation working to satisfy people like James who want to see the state machine
+  * Constructors
+    * Raj suggested if this is a problem with UML we should fix it
+    * Check the UML forums for opinions on static methods
+  * Static methods should be added to the future works section
