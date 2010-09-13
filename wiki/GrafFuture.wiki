@@ -23,9 +23,10 @@ These are tasks that we don't plan to do in 2010 but they should be simple enoug
     * Eg. that a 1:1 multiplicity isn't violated
     * We could verify just the initial state (if rules can't create invalid system states) or every system state in an execution
     * Annette would like this
+  * Static methods (eg. constructors) - but no one is asking for this feature
 
 == Stuff from 2009 ==
-Some of GRAF's future ambitions include: 
+This stuff is really old and probably no longer as relevant
  * Animation Features
   ** Intelligent display navigation (a minimap)
   ** Display filtering (particularly important with large models)
