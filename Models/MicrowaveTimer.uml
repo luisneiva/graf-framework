@@ -86,7 +86,7 @@
           <trigger xmi:id="_AJ-NEEaDEd6JvpGL0b827A" name="cookTrigger" event="_S-gR0EZ9Ed6JvpGL0b827A"/>
         </transition>
         <transition xmi:id="_yxhJwEZ4Ed6JvpGL0b827A" name="stopCookingTrans" source="_dzM8xEZ4Ed6JvpGL0b827A" target="_oehP8EZ4Ed6JvpGL0b827A">
-          <trigger xmi:id="_CcXtgEaDEd6JvpGL0b827A" name="stopCookingTrigger" event="_HvZVEEZ9Ed6JvpGL0b827A"/>
+          <trigger xmi:id="_CcXtgEaDEd6JvpGL0b827A" name="stopCookingTrigger" event="_8oyJUL-wEd-pyI2TvVnCpA"/>
         </transition>
       </region>
     </ownedBehavior>
@@ -113,7 +113,7 @@
   <packagedElement xmi:type="uml:Signal" xmi:id="_MBrb4EZ4Ed6JvpGL0b827A" name="cookedSignal"/>
   <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_HvZVEEZ9Ed6JvpGL0b827A" name="stopCooking"/>
   <packagedElement xmi:type="uml:Signal" xmi:id="_MZ_b8EZ9Ed6JvpGL0b827A" name="stopCookingSignal"/>
-  <packagedElement xmi:type="uml:TimeEvent" xmi:id="_8oyJUL-wEd-pyI2TvVnCpA" name="timeEvent">
+  <packagedElement xmi:type="uml:TimeEvent" xmi:id="_8oyJUL-wEd-pyI2TvVnCpA" name="timeEvent" isRelative="true">
     <when xmi:id="_sP2hIL-yEd-pyI2TvVnCpA" name="timeEventsExpression">
       <nameExpression xmi:id="_6KjhcL-yEd-pyI2TvVnCpA" name="5"/>
       <expr xmi:type="uml:LiteralInteger" xmi:id="Class_EClass-extension_EClass-_lowerValue"/>
