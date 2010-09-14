@@ -1,0 +1,14 @@
+MicrowaveTimer.uml
+
+m1 : Microwave
+{NotCooking}
+
+f1 : Food
+{NotCooked}
+temperature = 3
+
+b1 : Beeper
+{Silent}
+
+m1 <cookedBy, cooks> f1
+m1 <in,has> b1
