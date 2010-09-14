@@ -3,6 +3,12 @@
 
 UML defines 54 actions. Actions should be the only way to move from one system state to another. Actions are represented in GRAF by graph transformation rules. Ideally there should be rule per action. Sadly this is not the case. The aspects below all require that there be more rules per action.
 
+== Different Cases ==
+*Affecting:* Maybe 20% of actions<br>
+*Extra rules needed:* At least 2 times more<br>
+
+Some actions, like AcceptEventAction and AcceptCallAction are just too broad to complete in 1 rule. We split it up into smaller sections for each case.
+
 == Mealy, Moore, entry, looping and exiting ==
 *Affecting:* All actions <br>
 *Extra rules needed:* 2 to 4 times more <br>
@@ -43,5 +49,6 @@ At this stage we aren't sure how to solve this problem, but it will probably inv
 
 It's useful to have an external actor do things like send events or call methods. Unless we represent the _external_ actor _inside_ the model, we will need to create special versions of rules that are cut down versions of the normal ones.
 
-
+<br>At the moment our most specific rule is acceptEventAction-WithActivity-Main-Mealy-SameState, which is a rule based on the Double Node issue, the Mealy issue and the Different Cases issue.
+<br>Taking the above into account:
 54 + 54 + 0.4*54*2 + 5*2 + 54 + 2 =~ 217 rules
