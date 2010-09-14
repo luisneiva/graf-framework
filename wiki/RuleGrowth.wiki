@@ -7,7 +7,7 @@ UML defines 54 actions. Actions should be the only way to move from one system s
 *Affecting:* Maybe 20% of actions<br>
 *Extra rules needed:* At least 2 times more<br>
 
-Some actions, like AcceptEventAction and AcceptCallAction are just too broad to complete in 1 rule. We split it up into smaller sections for each case.
+Some actions, like !AcceptEventAction and !AcceptCallAction are just too broad to complete in 1 rule. We split it up into smaller sections for each case.
 
 == Mealy, Moore, entry, looping and exiting ==
 *Affecting:* All actions <br>
