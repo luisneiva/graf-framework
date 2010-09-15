@@ -19,13 +19,15 @@ Furthermore, actions can be on entry, exit or looping in a state. This could mea
 
 And this isn't taking into account activites not in state machines, which could require even more rules.
 
-== Double node issue ==
+== Graph homomorphism injectiveness ==
 *Affecting:* Maybe 40% of actions <br>
 *Extra rules needed:* 2 times more<br>
 
-!ReadStructuralFeatureAction involves an object reading _something_. It could be reading _itself_ or it could be reading something else. The way graph transformations work in AGG, there's no way to notify the code that 2 nodes may or may not actually be the same node. And so we need 2 versions of the rule, one for each case.
+!ReadStructuralFeatureAction involves an object reading _something_. It could be reading _itself_ or it could be reading something else. So we need 2 versions of the rule, one for each case.
 
 It's not just !ReadStructuralFeatureAction that has this problem. !CreateObjectAction may or may not involve an object creating another object of the same class, and I'm sure other actions have this problem too.
+
+At the moment we're using non-injective graph homomorphisms. If we could use injective graph homomorphisms it would solve the problem. AGG does have options you can set that includes injectiveness, but it's deceptively hard to get the changes working.
 
 == Looping requirement ==
 *Affecting:* Only about 5 or so actions<br>
