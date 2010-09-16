@@ -31,7 +31,6 @@ digraph sendSignalAction {
 	"?SMRegion" -> "Region" [label="i"]
 	"?transition" -> "Transition" [label="i"]
 	"?trigger" -> "Trigger" [label="i"]
-	"?recieveSignal" -> "ReceiveSignalEvent" [label="i"]
 	"?stateMachine" -> "?SMRegion" [label="region"]
 	"?SMRegion" -> "?transition" [label="transition"]
 	"?transition" -> "?trigger" [label="trigger"]

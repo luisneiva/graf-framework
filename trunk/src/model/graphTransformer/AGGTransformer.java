@@ -4,8 +4,10 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.BitSet;
 import java.util.Enumeration;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Vector;
 
 import controller.Properties;
@@ -20,9 +22,12 @@ import nu.xom.Element;
 import nu.xom.Nodes;
 import agg.attribute.impl.VarMember;
 import agg.xt_basis.Arc;
+import agg.xt_basis.CompletionPropertyBits;
+import agg.xt_basis.Completion_CSP;
 import agg.xt_basis.GraGra;
 import agg.xt_basis.Graph;
 import agg.xt_basis.Match;
+import agg.xt_basis.MorphCompletionStrategy;
 import agg.xt_basis.Morphism;
 import agg.xt_basis.Node;
 import agg.xt_basis.OrdinaryMorphism;
@@ -325,14 +330,38 @@ public class AGGTransformer {
 	 */
 	private void apply(Rule rule) throws RuleNoMatchException {
 
-		Match match = gg.createMatch(rule);
+		// graTraOptions contains a string called "Injective"
+		// we want to remove this string but none of the code
+		// below will achieve this
+		/*Vector<String> options = gg.getGraTraOptions();
+		
+		System.out.println(">o>" + options.size());
+		
+		
+		Iterator<String> optionIterator = options.iterator();
+		while(optionIterator.hasNext()) {
+			String next = optionIterator.next();
+			if(next.equals("injective")) {
+				optionIterator.remove();
+			}
+		}
+		
+		MorphCompletionStrategy mcs = new Completion_CSP(false);
+		BitSet properties = new BitSet();
+		properties.set(CompletionPropertyBits.DANGLING);
+		properties.set(CompletionPropertyBits.INJECTIVE, false);
+		mcs.showProperties();
+		mcs.removeProperty("Injective");
+		System.out.println("allowed: "  +mcs.getSupportedProperties());
+		gg.setGraTraOptions(mcs);
 
-		/*System.out.println("Match attribute context:");  
-		AttrContext ac = match.getAttrContext();
-		for (int i = 0; i < ac.getVariables().getNumberOfEntries(); i++) {
-		   AttrInstanceMember am = (AttrInstanceMember) ac.getVariables().getMemberAt(i);
-		    System.out.println("Variable "+i+": name="+am.getName()+" value="+am.getExprAsText());
-		}*/
+		Vector<String> newOptions = gg.getGraTraOptions();
+		System.out.println(">>" + newOptions.size());
+		for(String option : newOptions)
+			System.out.println(">"+  option);*/
+		
+		
+		Match match = gg.createMatch(rule);
 
 		if (match.nextCompletion()) {
 			if (match.isValid()) {

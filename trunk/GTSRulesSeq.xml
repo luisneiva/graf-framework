@@ -13,6 +13,7 @@
 			<action>AcceptEventAction-WithActivity-Main-Mealy</action>
 			<action>AcceptEventAction-WithActivity-Main-Mealy-SameState</action>
 			<rule>acceptEventAction-WithoutActivity</rule>
+			<rule>acceptEventAction-WithoutActivity-SameState</rule>
 		</exclusive-dependencies>
 	</action>
 
@@ -68,8 +69,8 @@
 	
 	<action name="ReadStructuralFeatureAction">
 		<exclusive-dependencies>
-			<rule>readStructuralFeatureAction-SingleInt</rule>
 			<rule>readStructuralFeatureAction-TwoInts</rule>
+			<rule>readStructuralFeatureAction-SingleInt</rule>
 		</exclusive-dependencies>
 	</action>
 
