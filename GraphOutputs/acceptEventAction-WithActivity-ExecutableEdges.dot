@@ -6,7 +6,6 @@ digraph acceptEventAction_WithActivity_ExecutableEdges {
 	"?trigger" -> "Trigger" [label="i"]
 	"?transition" -> "Transition" [label="i"]
 	"?transition" -> "?trigger" [label="trigger"]
-	"?transition" -> "?state" [label="source"]
 	"?transition" -> "?state2" [label="target"]
 	"?classifierBehaviorExecution" -> "BehaviorExecution" [label="i"]
 	"?classifierBehaviorExecution" -> "?instance" [label="host"]

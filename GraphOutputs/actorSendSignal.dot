@@ -19,7 +19,6 @@ digraph actorSendSignal {
 	"SignalOccurrence" [color="green", fontcolor="green"]
 	"?transition" -> "Transition" [label="i"]
 	"?trigger" -> "Trigger" [label="i"]
-	"?recieveSignal" -> "ReceiveSignalEvent" [label="i"]
 	"?recieveSignal" -> "?signal" [label="signal"]
 	"?signal" -> "Signal" [label="i"]
 	"?stateMachineRegion" -> "?transition" [label="transition"]
