@@ -31,6 +31,7 @@ import org.eclipse.swt.widgets.Shell;
 import org.osgi.framework.Bundle;
 
 import view.ClickableLabel;
+import view.GRAFSplash;
 import view.View;
 
 /**
@@ -66,7 +67,11 @@ public class Controller {
 		inst = this;
 		view = theview;
 		isPlugin = plugin;
+		GRAFSplash splash = GRAFSplash.getInstance();
+		splash.setVisible(true);
 		try {
+			GRAFSplash.setPercent(0);
+			GRAFSplash.setActivityString("Loading rules...");
 			String gtsRulesFilePath = "";
 			String gtsRulesSeqFilePath = "";
 			if (isPlugin) {
@@ -86,7 +91,7 @@ public class Controller {
 				{
 					JFileChooser fc2 = new JFileChooser();
 					fc2.setDialogTitle("Choose a Rule:");
-					fc2.showOpenDialog(null);
+					fc2.showOpenDialog(splash);
 					gtsRulesPath = fc2.getSelectedFile().getAbsolutePath();
 					
 					Properties.setProperty("gtsRulesPath", gtsRulesPath);
@@ -97,7 +102,7 @@ public class Controller {
 				{
 					JFileChooser fc = new JFileChooser();
 					fc.setDialogTitle("Choose a Rule Seq:");
-					fc.showOpenDialog(null);
+					fc.showOpenDialog(splash);
 					gtsRulesSeqPath = fc.getSelectedFile().getAbsolutePath();
 					
 					Properties.setProperty("gtsRulesSeqPath", gtsRulesSeqPath);
@@ -107,12 +112,16 @@ public class Controller {
 				gtsRulesFilePath = gtsRulesPath;
 				gtsRulesSeqFilePath = gtsRulesSeqPath;
 			}
+			GRAFSplash.setPercent(30);
+			GRAFSplash.setActivityString("Creating model...");
 			model = new PluginModel(gtsRulesFilePath, gtsRulesSeqFilePath, graphOutputsPath);
 			view.setModel(model);
 		} catch (Exception e) {
 			showError(e);
 		}
-
+		
+		GRAFSplash.setPercent(60);
+		GRAFSplash.setActivityString("Loading UI");
 		//Undo (<) button
 		view.addUndoListener(new MouseListener() {
 			public void mouseDoubleClicked(MouseEvent me) {}
@@ -185,6 +194,10 @@ public class Controller {
 				}
 			}
 		});
+		GRAFSplash.setPercent(100);
+		GRAFSplash.setActivityString("Done loading");
+		splash.setVisible(false);
+		GRAFSplash.destroyInstance();
 	}
 
 	/** Execute animation, called when choosing file from plugin package explorer */
@@ -239,6 +252,7 @@ public class Controller {
 		} catch(Exception e) {
 			showError(e);
 		}
+		
 	}
 
 

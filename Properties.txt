@@ -3,3 +3,4 @@ gtsRulesSeqPath:GTSRulesSeq.xml
 PrintGraphs:true
 PrintRules:false
 PrintDebug:true
+LogoPath:./controller/defaults/graflogo.png
