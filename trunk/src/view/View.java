@@ -2,8 +2,6 @@ package view;
 
 import java.io.FileNotFoundException;
 
-import javax.swing.JFileChooser;
-
 import model.PluginModel;
 import model.modelTransformer.objectDisplay.ObjectDisplay;
 
@@ -17,6 +15,8 @@ import org.eclipse.draw2d.XYLayout;
 import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.DisposeEvent;
+import org.eclipse.swt.events.DisposeListener;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.Point;
@@ -82,6 +82,12 @@ public class View extends ViewPart {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
+		
+		parent.addDisposeListener(new DisposeListener (){
+			public void widgetDisposed(DisposeEvent e){
+				System.exit(0);
+			}
+		});
 		controller = new Controller(this, plugin); 
 		final Shell sh = parent.getShell();
 		final Display d = parent.getDisplay();
