@@ -30,6 +30,8 @@
 || 6/9 || Mentor || [agenda0609 Agenda] || [mintes0609 Minutes] ||
 || 6/9 || Client || [cagenda0609 Agenda] || [cmintes0609 Minutes] ||
 || 13/9 || Review || [http://svn.anu.edu.au/SE_projects/GRAF/Review3.ppt Agenda] || [review3minutes Minutes] ||
+|| 20/9 || Mentor || [agenda2009 Agenda] || [minutes2009 Minutes] ||
+|| 20/9 || Client || [cagenda2009 Agenda] || [cminutes2009 Minutes] ||
 
 Agendas and minutes from before 12/5/2010 are on [https://alliance.anu.edu.au/portal Alliance]. <br>
 [agendaTemplate Agenda Template] <br>
