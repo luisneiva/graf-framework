@@ -1,0 +1,9 @@
+#summary agenda
+== Client Meeting ==
+*Date:* 20/9
+<br>*Time:* 3pm
+<br>*Location:* Raj's office
+<br>*Duration:* 1 hour
+
+=== Agenda Items ===
+  * Discussion of what we will and won't do for the end of the year
