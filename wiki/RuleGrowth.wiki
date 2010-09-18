@@ -1,7 +1,7 @@
 #summary Explanation of why so many rules are needed
 = Rule Growth =
 
-UML defines 54 actions. Actions should be the only way to move from one system state to another. Actions are represented in GRAF by graph transformation rules. Ideally there should be rule per action. Sadly this is not the case. The aspects below all require that there be more rules per action.
+UML defines 54 actions. Actions are one of two ways to move from one system state to another (the other is accepting event occurences, without using AcceptEventAction). Actions are represented in GRAF by graph transformation rules. Ideally there should be rule per action. Sadly this is not the case. The aspects below all require that there be more rules per action.
 
 == Different Cases ==
 *Affecting:* Maybe 20% of actions<br>
