@@ -45,6 +45,8 @@ _Use Franks Guide Here_
     * right click on the file
     * open with
     * UML model editor
+    * At this stage the UML Tree should look like this:
+    ** http://graf-framework.googlecode.com/files/AfterSignalAdded.png
   * Create a signal for each transition by:
     * right clicking at a package 
     * new child
