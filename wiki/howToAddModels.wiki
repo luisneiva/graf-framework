@@ -32,7 +32,7 @@ There are 2 basic steps to adding models to GRAF:
 
 ==== Example ====
 
-The State Machine for the Simple Microwave, based on Shayne Flints lecture notes looks like
+The State Machine for the Simple Microwave, based on Shayne Flints lecture notes looks like this:
 
 http://graf-framework.googlecode.com/files/MicrowaveSimpleStateMachine.png
 
