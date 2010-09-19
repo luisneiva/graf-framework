@@ -1,5 +1,5 @@
 #labels Phase-Implementation
-*How to create .uml models to work in GRAF using Topcased (more to come: activity under states)*
+*How to create .uml models to work in GRAF using Topcased*
   * Open the models .uml file in the UML model editor by:
     * right click on the file
     * open with
