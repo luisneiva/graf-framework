@@ -1,0 +1,15 @@
+#summary One-sentence summary of this page.
+
+= TESTING =
+
+Testing has been carried out throughout the project to check system performance, test new implementations are working as they should, and for general maintenance. 
+
+System performance testing is important for the future of the project...
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
