@@ -46,14 +46,15 @@ _Use Franks Guide Here_
     * right click on the file
     * open with
     * UML model editor
-    * At this stage the UML Tree should look like this:
-       http://graf-framework.googlecode.com/files/AfterSignalAdded.png
   * Create a signal for each transition by:
     * right clicking at a package 
     * new child
     * packaged elements 
     * signal (press 's' to fast track to elements beginning with s)
+    * When a transition occurs in the model multiple times, the transition only requires one signal even though each transition has a unique name
   * Specify a unique name for each signal
+    * At this stage the UML Tree should look like this:
+       http://graf-framework.googlecode.com/files/AfterSignalAdded.png
   * Create a receive signal event for each signal by:
     * right clicking at a package 
     * new child 
