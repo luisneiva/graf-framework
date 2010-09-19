@@ -68,7 +68,8 @@ http://graf-framework.googlecode.com/files/MicrowaveSimpleStateMachine.png
       * an easy way to name triggers is to add the suffix 'Trig' to the transition name. This will ensure uniqueness provided previous steps were followed correctly
      http://graf-framework.googlecode.com/files/LinkingTransitionToSignal.png
 
+==== Example ====
 
-Once these instructions have been followed the UML Tree will resemble something like this (with a varying degree of complexity):
+The completed model based on Shayne Flints lecture notes like this in Eclipses UML Model Editor:
 
 http://graf-framework.googlecode.com/files/TriggerAddedUMLTree.png
