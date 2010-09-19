@@ -67,3 +67,4 @@ http://graf-framework.googlecode.com/files/MicrowaveSimpleStateMachine.png
     * trigger
     * trigger 
     * Specify an event (choose a receive signal event) and a unique name for the trigger
+      * an easy way to name triggers is to add the suffix 'Trig' to the transition name. This will ensure uniqueness provided previous steps were followed correctly
