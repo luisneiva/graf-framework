@@ -30,7 +30,9 @@ There are 2 basic steps to adding models to GRAF:
     * To add a state machine double click on the class you want to build one for. A dialog box will appear. Select State Machine Diagram and click ok
     * When adding transitions use the 'External Transition' option - this is essential for your model to work within GRAF. Transitions are added by clicking on the 'from' class and dragging to the 'to' class. The lines can be edited to make the diagram more attractive by clicking on a point on the line and dragging that point on the line to wherever you see fit
 
-http://graf-framework.googlecode.com/files/Interface_Example.png
+The State Machine for the Simple Microwave, based on Shayne Flints lecture notes looks like
+
+http://graf-framework.googlecode.com/files/MicrowaveSimpleStateMachine.png
 
 === 2. Editing the .uml file to make it work with GRAF ===
 
