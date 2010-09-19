@@ -10,13 +10,3 @@ These tests were performed to measure the time taken to load the initial models 
 The System.currentTimeMillis();java function is used to calculate the loading time of each model. The times reported are all in milliseconds.
 
 http://graf-framework.googlecode.com/files/testing.png
-
- 
-
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
