@@ -1,5 +1,3 @@
-_This is the page where a more refined tutorial for putting models into GRAF will be placed._
-
 == Installation ==
 
 Install [http://www.visual-paradigm.com/product/sde/ec/ Visual Paradigm Community Edition SDE for Eclipse]. A user guide is [http://www.visual-paradigm.com/support/documents/sdejavauserguide.jsp provided].  
@@ -70,5 +68,7 @@ http://graf-framework.googlecode.com/files/MicrowaveSimpleStateMachine.png
       * an easy way to name triggers is to add the suffix 'Trig' to the transition name. This will ensure uniqueness provided previous steps were followed correctly
      http://graf-framework.googlecode.com/files/LinkingTransitionToSignal.png
 
-Once these instructions have been followed the UML Tree will resemble something like this (with a varying degree of complexity)
+
+Once these instructions have been followed the UML Tree will resemble something like this (with a varying degree of complexity):
+
 http://graf-framework.googlecode.com/files/TriggerAddedUMLTree.png
