@@ -29,6 +29,7 @@
 [InvoicerModel Invoicer Model]<br>
 [Quickstartguide Quick start guide]<br>
 [howToAddModels How to add models to GRAF]<br>
+[How to test and debug using graphs]<br>
 
 === Project Documentation ===
 [Scope Scope]
