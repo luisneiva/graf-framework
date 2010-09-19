@@ -59,6 +59,7 @@ http://graf-framework.googlecode.com/files/MicrowaveSimpleStateMachine.png
     * packaged elements 
     * receive signal event (press 'r' to fast track to elements beginning with r)
   * Specify the related signal (one of those created before) and a unique name for each receive signal event
+       http://graf-framework.googlecode.com/files/LinkingSignalAndRecSignal.png
 
 _More To Come_
   * Expand all nodes under packages, classes, state machines, regions, and transitions.
