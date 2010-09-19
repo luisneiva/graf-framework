@@ -68,4 +68,7 @@ http://graf-framework.googlecode.com/files/MicrowaveSimpleStateMachine.png
     * trigger 
     * specify an event (choose a receive signal event) and a unique name for the trigger
       * an easy way to name triggers is to add the suffix 'Trig' to the transition name. This will ensure uniqueness provided previous steps were followed correctly
-       http://graf-framework.googlecode.com/files/LinkingTransitionToSignal.png
+     http://graf-framework.googlecode.com/files/LinkingTransitionToSignal.png
+
+Once these instructions have been followed the UML Tree will resemble something like this (with a varying degree of complexity)
+http://graf-framework.googlecode.com/files/TriggerAddedUMLTree.png
