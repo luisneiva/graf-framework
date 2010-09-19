@@ -28,7 +28,8 @@ There are 2 basic steps to adding models to GRAF:
   * Common operations include:
     * To add classes click the class icon and then click the blank space to create a class. To rename the class by editing its name property - should be in the properties section on the right hand side of the screen. If this isnt there check you are in the Unimod perspective (top right of the screen)
     * To add a state machine double click on the class you want to build one for. A dialog box will appear. Select State Machine Diagram and click ok
-    * When adding transitions use the 'External Transition' option - this is essential for your model to work within GRAF. Transitions are added by clicking on the 'from' class and dragging to the 'to' class. The lines can be edited to make the diagram more attractive by clicking on a point on the line and dragging that point on the line to wherever you see fit
+    * When adding transitions use the 'External Transition' option - this is essential for your model to work within GRAF. Transitions are added by clicking on the 'from' class and dragging to the 'to' class. The lines can be edited to make the diagram more attractive by clicking on a point on the line and dragging that point on the line to wherever you see fit i.e.
+     http://graf-framework.googlecode.com/files/AfterSignalAdded.png
 
 ==== Example ====
 
