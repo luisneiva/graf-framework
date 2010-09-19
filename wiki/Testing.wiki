@@ -9,6 +9,8 @@ System performance testing has been used to gauge how the system will cope with 
 These tests were performed to measure the time taken to load the initial models into GRAF.
 The System.currentTimeMillis();java function is used to calculate the loading time of each model. The times reported are all in milliseconds.
 
+http://graf-framework.googlecode.com/files/testing.png
+
  
 
 
