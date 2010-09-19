@@ -44,13 +44,14 @@ http://graf-framework.googlecode.com/files/MicrowaveSimpleStateMachine.png
     * right click on the file
     * open with
     * UML model editor
+  * If there is more than one Region and/or State Machine ensure they are uniquely named (change their name property)
   * Create a signal for each transition by:
     * right clicking at a package 
     * new child
     * packaged elements 
     * signal (press 's' to fast track to elements beginning with s)
     * When a transition occurs in the model multiple times, the transition only requires one signal even though each transition has a unique name
-  * Specify a unique name for each signal
+    * Specify a unique name for each signal with a suffix 'Signal' as the name of the receive signal event is what shows up in GRAF's GUI
     * At this stage the UML Tree should look like this:
        http://graf-framework.googlecode.com/files/AfterSignalAdded.png
   * Create a receive signal event for each signal by:
@@ -58,12 +59,10 @@ http://graf-framework.googlecode.com/files/MicrowaveSimpleStateMachine.png
     * new child 
     * packaged elements 
     * receive signal event (press 'r' to fast track to elements beginning with r)
-  * Specify the related signal (one of those created before) and a unique name for each receive signal event
+    * Specify the related signal (one of those created before) and a unique name for each receive signal event
        http://graf-framework.googlecode.com/files/LinkingSignalAndRecSignal.png
-
-_More To Come_
-  * Expand all nodes under packages, classes, state machines, regions, and transitions.
-  * Add a trigger to each transition by right clicking at a transition -> new child -> trigger -> trigger
-  * Specify an event (choose a receive signal event) and name for a trigger
+  * Add a trigger for each transition by:
+    * Add a trigger to each transition by right clicking at a transition -> new child -> trigger -> trigger
+    * Specify an event (choose a receive signal event) and name for a trigger
 
 Remember to put: name the receive operations as you would like them to be displayed in the interface
