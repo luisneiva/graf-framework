@@ -4,7 +4,12 @@
 
 Testing has been carried out throughout the project to check system performance, test new implementations are working as they should, and for general maintenance. 
 
-System performance testing is important for the future of the project...
+System performance testing has been used to gauge how the system will cope with 'industry' level models. This was brought to our attention by meeting with one of our stakeholders Annete Vincent, who informed us that some of the models she deals with contains up to hundreds of classes. 
+
+These tests were performed to measure the time taken to load the initial models into GRAF.
+The System.currentTimeMillis();java function is used to calculate the loading time of each model. The times reported are all in milliseconds.
+
+ 
 
 
 = Details =
