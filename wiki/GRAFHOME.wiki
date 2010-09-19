@@ -25,7 +25,7 @@
 
 === Tutorials ===
 [Installing Visual Paradigm and Topcased]<br>
-[umlModelsUsingTopcased Create uml models to work in GRAF using Topcased (more to come: activity under states)]<br>
+[umlModelsUsingTopcased Create uml models to work in GRAF using Topcased]<br>
 [InvoicerModel Invoicer Model]<br>
 [Quickstartguide Quick start guide]<br>
 [howToAddModels How to add models to GRAF]<br>
