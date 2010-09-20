@@ -4,11 +4,11 @@ WORK IN PROGRESS
 
 = Introduction =
 
-This tutorial uses CreateLinkAction as an example for how to add rules to GRAF.
+This tutorial uses Create Link Action as an example for how to add rules to GRAF.
 
 = 1. Identify the relevant UML Section =
 
-  * For CreateLinkAction, it's 11.3.14.
+  * For Create Link Action, it's 11.3.14.
   * The most important sections are:
     * Description: what the Action is supposed to do
 {{{
@@ -30,7 +30,7 @@ causes all links of the association emanating from the specified ends to be dest
 Attributes
 No additional attributes
 }}}
-'No additional attributes' may mean that the Action inherits attributes from a parent Action.
+    'No additional attributes' may mean that the Action inherits attributes from a parent Action.
 {{{
 Associations
 • end Data : Link End Creation Data [2..*]
@@ -50,7 +50,7 @@ This step might be unnecessary if the model already includes the Action.<br>
   # Run GRAF. Select the model you just edited and open it. Click through until the new Action becomes available - there's no need to click on it yet. 
   # Exit GRAF.
 
-= Editing the Rule Sequence File =
+= 3. Editing the Rule Sequence File =
 
 GRAF uses the GTSRulesSeq.xml file to determine which rule to apply when a particular Action is invoked. 
   # Add a new 'action' node to the file.
@@ -90,5 +90,5 @@ GRAF uses the GTSRulesSeq.xml file to determine which rule to apply when a parti
 == Stage 2: RHS ==
 Now that you know that the LHS of the rule matches, make the necessary changes to the RHS to implement the Description. Test the new rule in GRAF as before. Remember to check the underlying graph and generated rule image - logic errors will not necessarily be obvious from the object diagram view.
 
-= 6. Test and repeat =
+= 5. Test and repeat =
 When the rule is working, update the rule documentation to include the new rule, and any assumptions or deviations from the description that you made while implementing it.
