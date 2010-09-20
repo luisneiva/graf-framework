@@ -1,0 +1,37 @@
+#summary Minutes
+
+= Team Meeting =
+Date: 20/9
+<br>Location: CSIT N110
+<br>Present: Oscar, Stephen, Alice, Cameron, Hamish and Frank
+<br>Time: 2pm
+<br>Duration: 1 hour
+
+== Work asignment ==
+  * Alice - wrote discussion on different types of communication in UML
+  * Hamish - put up test results
+  * Cameron - put up Shayne's model simplest form
+  * Frank - made tutorial on debugging
+
+== Work asignment ==
+  * Alice -  keep working on !CreateLinkAction etc
+  * Hamish - work on object positioning
+  * Cameron - try to get Eclipse to generate a diagram of a state machine
+  * Frank - work on making events in embedded regions get found
+
+== Future meetings ==
+  * Tomorrow, after the lecture - tech meeting - Alice, Oscar and Frank
+  * 27/9 1pm mentor meeting - to be confirmed if James can come
+  * 28/9 1pm team meeting - work on preshowcase presentation
+  * 4/10 1pm team meeting (I may move this to 2pm)
+  * 4/10 3pm client meeting - with Raj and phoning Greg
+
+== Review discussion ==
+  * We should ask James what his problem with the project is
+
+== Preshowcase presentation discussion ==
+  * Seeking industrial support, it would be especially good if GRAF got to do the showcase
+  * It's easier to appeal to students - UML, Shayne's course
+  * It's harder to appeal to industry-people because they may not know so much about UML
+    * We can engage them by talking about the industry vs academic perspective of GRAF
+  * It's not clear how much detail we should go into with technical detail - how graphs work
