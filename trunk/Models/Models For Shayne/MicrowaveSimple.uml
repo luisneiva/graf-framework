@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA">
+  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="MicrowaveSimple">
+    <packagedElement xmi:type="uml:Class" xmi:id="_dcHe8Lo_Ed-iQL1AkZV5fQ" name="Microwave" classifierBehavior="_lcNiALo_Ed-iQL1AkZV5fQ">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_lcNiALo_Ed-iQL1AkZV5fQ" name="StateMachine">
+        <region xmi:id="_lcNiAbo_Ed-iQL1AkZV5fQ" name="Region">
+          <subvertex xmi:type="uml:State" xmi:id="_manD8Lo_Ed-iQL1AkZV5fQ" name="DoorOpened"/>
+          <subvertex xmi:type="uml:State" xmi:id="_noLDQLo_Ed-iQL1AkZV5fQ" name="ReadyToCook"/>
+          <subvertex xmi:type="uml:State" xmi:id="_tnHG4Lo_Ed-iQL1AkZV5fQ" name="Cooking"/>
+          <subvertex xmi:type="uml:State" xmi:id="_u7k_cLo_Ed-iQL1AkZV5fQ" name="CookingInterrupted"/>
+          <subvertex xmi:type="uml:State" xmi:id="_xriloLo_Ed-iQL1AkZV5fQ" name="CookingComplete"/>
+          <transition xmi:id="_EqFIlL44Ed-UVLmCpPolGA" name="doorClosed1" source="_manD8Lo_Ed-iQL1AkZV5fQ" target="_noLDQLo_Ed-iQL1AkZV5fQ">
+            <trigger xmi:id="_5mWxoMO3Ed-0ubkK5XNOFg" name="doorClosed1Trig" event="_MCsCgMOWEd-0ubkK5XNOFg"/>
+          </transition>
+          <transition xmi:id="_KZ_RtL44Ed-UVLmCpPolGA" name="doorOpened1" source="_noLDQLo_Ed-iQL1AkZV5fQ" target="_manD8Lo_Ed-iQL1AkZV5fQ">
+            <trigger xmi:id="_QpZ2gMO4Ed-0ubkK5XNOFg" name="doorOpened1Trig" event="_QbICYMOWEd-0ubkK5XNOFg"/>
+          </transition>
+          <transition xmi:id="_Q7vuhL44Ed-UVLmCpPolGA" name="buttonPressed" source="_noLDQLo_Ed-iQL1AkZV5fQ" target="_tnHG4Lo_Ed-iQL1AkZV5fQ">
+            <trigger xmi:id="_TZ190MO4Ed-0ubkK5XNOFg" name="buttonPressedTrig" event="_XU1sMMOWEd-0ubkK5XNOFg"/>
+          </transition>
+          <transition xmi:id="_VUyLVb44Ed-UVLmCpPolGA" name="doorClosed2" source="_u7k_cLo_Ed-iQL1AkZV5fQ" target="_noLDQLo_Ed-iQL1AkZV5fQ">
+            <trigger xmi:id="_VTZgcMO4Ed-0ubkK5XNOFg" name="doorClosed2Trig" event="_MCsCgMOWEd-0ubkK5XNOFg"/>
+          </transition>
+          <transition xmi:id="_dcvw9L44Ed-UVLmCpPolGA" name="doorOpened2" source="_tnHG4Lo_Ed-iQL1AkZV5fQ" target="_u7k_cLo_Ed-iQL1AkZV5fQ">
+            <trigger xmi:id="_xyWNUMO4Ed-0ubkK5XNOFg" name="doorOpened2Trig" event="_QbICYMOWEd-0ubkK5XNOFg"/>
+          </transition>
+          <transition xmi:id="_f5Gepb44Ed-UVLmCpPolGA" name="timerExpired" source="_tnHG4Lo_Ed-iQL1AkZV5fQ" target="_xriloLo_Ed-iQL1AkZV5fQ">
+            <trigger xmi:id="_z9nyEMO4Ed-0ubkK5XNOFg" name="timerExpiredTrig" event="_TS3EgMOWEd-0ubkK5XNOFg"/>
+          </transition>
+          <transition xmi:id="_h5MuJL44Ed-UVLmCpPolGA" name="doorOpened3" source="_xriloLo_Ed-iQL1AkZV5fQ" target="_manD8Lo_Ed-iQL1AkZV5fQ">
+            <trigger xmi:id="_15UCsMO4Ed-0ubkK5XNOFg" name="doorOpened3Trig" event="_QbICYMOWEd-0ubkK5XNOFg"/>
+          </transition>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_LbTkUMOUEd-0ubkK5XNOFg" name="doorClosedSignal"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_SxlOUMOUEd-0ubkK5XNOFg" name="doorOpenedSignal"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_e2ApgMOUEd-0ubkK5XNOFg" name="timerExpiredSignal"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_ilZFUMOUEd-0ubkK5XNOFg" name="buttonPressedSignal"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_MCsCgMOWEd-0ubkK5XNOFg" name="doorClosed" signal="_LbTkUMOUEd-0ubkK5XNOFg"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_QbICYMOWEd-0ubkK5XNOFg" name="doorOpened" signal="_SxlOUMOUEd-0ubkK5XNOFg"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_TS3EgMOWEd-0ubkK5XNOFg" name="timerExpired" signal="_e2ApgMOUEd-0ubkK5XNOFg"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_XU1sMMOWEd-0ubkK5XNOFg" name="buttonPressed" signal="_ilZFUMOUEd-0ubkK5XNOFg"/>
+  </packagedElement>
+</uml:Model>
