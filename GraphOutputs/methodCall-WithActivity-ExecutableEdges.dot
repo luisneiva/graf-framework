@@ -1,0 +1,15 @@
+digraph methodCall_WithActivity_ExecutableEdges {
+	"?classifier" -> "Class" [label="i"]
+	"?instance" -> "?classifier" [label="i"]
+	"?classifier" -> "?operation" [label="ownedOperation"]
+	"?method" -> "?operation" [label="specification"]
+	"?operation" -> "?method" [label="method"]
+	"?method" -> "Activity" [label="i"]
+	"?action" -> "?method" [label="activity"]
+	"?methodBehavior" -> "?instance" [label="host"]
+	"?instance" -> "?methodBehavior" [label="execution"]
+	"?methodBehavior" -> "?method" [label="behavior"]
+	"?methodBehavior" -> "BehaviorExecution" [label="i"]
+	"?methodBehavior" -> "?action" [label="executable", color="green"]
+	"?methodBehavior2" -> "?action2" [label="executable", color="red"]
+}

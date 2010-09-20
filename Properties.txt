@@ -1,6 +1,6 @@
-gtsRulesPath:GTSRules.ggx
 gtsRulesSeqPath:GTSRulesSeq.xml
+gtsRulesPath:GTSRules.ggx
 PrintGraphs:true
 PrintRules:false
-PrintDebug:true
 LogoPath:./controller/defaults/graflogo.png
+PrintDebug:true
