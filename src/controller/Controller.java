@@ -546,7 +546,7 @@ public class Controller {
 		long time3 = System.currentTimeMillis();
 		long setupTime = time2 - time1;
 		long totalTime = time3 - time;
-		System.out.println("Total setup time: " + setupTime + " milliseconds");
+		System.out.println("Total Main measured setup time: " + setupTime + " milliseconds");
 		System.out.println("Total execution time: " + totalTime + " milliseconds\n");
 	}
 }
