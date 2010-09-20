@@ -1,0 +1,35 @@
+#summary Minutes
+
+= Client Meeting =
+Date: 20/9
+<br>Location: Raj's office
+<br>Present: Raj, Oscar, Stephen, Alice, Cameron, Hamish and Frank
+<br>Time: 3pm
+<br>Duration: 1 hour
+
+== General ==
+  * Greg will be away from work for 3 weeks starting next week but we can still phone him
+  * Greg and Raj want the project to be continued next year
+    * They'd like Annette to have a more active role - deciding what features should be implemented
+  * We don't really know that animators like Rhapsody don't have some formalism stuff going on underneath. But the lack of transparency is just as bad.
+
+== Preshowcase Presentation ==
+  * At 10 minutes, it's just a sales pitch
+  * Different levels to animators:
+  # Surface
+  # UML
+  # Graphs
+  # ... deeper levels
+  * In other animators things can only be explained on the Surface level
+  * GRAF's ability to go deeper is what makes it different, this is how we say GRAF is better than other animators
+
+== Demo ==
+  * Show the audience an example model and ask what happens next. Then show the obvious answer isn't the only one
+  * A model with non-determinism might be the simplest way to show ambiguity. (Possibly the model on alliance, at the top of the models page)
+  * There might not be time in the presentation to do this
+
+== Possible slides ==
+  * 1 slide on project motivation
+  * 1 slide on why you would want to animate a model
+  * 1 slide on why GRAF is the best animator (including it's free)
+  * 1 or 2 slides on what we've done this year
