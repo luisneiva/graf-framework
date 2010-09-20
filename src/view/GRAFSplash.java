@@ -2,10 +2,10 @@ package view;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.Toolkit;
-import java.awt.image.BufferedImage;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -39,7 +39,7 @@ public class GRAFSplash extends JFrame{
 		
 	    Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 		
-		this.setLayout(new BorderLayout());
+		//this.setLayout(new FlowLayout());
 		this.setSize(400,20);
 //		this.setUndecorated(true);
 		this.setLocation(dim.width / 2 - 150, dim.height / 2 - 50);
@@ -57,8 +57,10 @@ public class GRAFSplash extends JFrame{
 		progress.add(activityLabel, BorderLayout.CENTER);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
+		progress.setIndeterminate(true);
+		
 //		this.add(logoPanel, BorderLayout.CENTER);
-		this.add(progress, BorderLayout.CENTER);
+		this.add(progress);
 	}
 	
 	public void setVisible(Boolean b){
