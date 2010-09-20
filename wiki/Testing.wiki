@@ -1,4 +1,3 @@
-
 = TESTING =
 
 Testing has been carried out throughout the project to check system performance, test new implementations are working as they should, and for general maintenance. 
@@ -13,3 +12,5 @@ http://graf-framework.googlecode.com/files/testing.png
 As we can see, the multipleMicrowave model takes the longest time to load. This contains roughly 25 classes as oppopsed to the 4 or 5 most of the other tested models contain. The load time is still quite low with the larger model file. This file was however created with multiple microwave, food items and beepers which do not contain excessive amounts of information.
 
 In the future when enough uml actions are implemented to load a real 'industry' example some more testing to see how the performance of the system scales would be interesting.
+
+http://graf-framework.googlecode.com/files/actionTest.png
