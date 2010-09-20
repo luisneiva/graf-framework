@@ -30,6 +30,8 @@ public class GraphToObjDiag implements GraphToModel {
 
 	public ObjectDisplay generateDisplayObjects(ListGraph graph) throws GraphToModelException {
 
+		long time = System.currentTimeMillis();
+
 		ArrayList<DisplayObject> objects = objdiag.getODObjs();
 		ArrayList<ODLink> odLinks = objdiag.getODLinks();
 
@@ -47,7 +49,7 @@ public class GraphToObjDiag implements GraphToModel {
 					odObj.isAttributesShowing(),odObj.isRuntimePoolShowing()});
 			}
 		}
-
+		
 		objdiag = generateObjectDiagram(graph);   
 
 		objects = objdiag.getODObjs();
@@ -67,8 +69,12 @@ public class GraphToObjDiag implements GraphToModel {
 
 		objdiag.setObjs(objects);
 		objdiag.setODLinks(odLinks);
+		long time1 = System.currentTimeMillis();
+		long totalTime = time1 - time;
+		System.out.println("Total model loading time: " + totalTime + " milliseconds\n");
 		return objdiag;
 	}
+	
 
 	private ObjDiag generateObjectDiagram(ListGraph graph) throws GraphToModelException {
 
@@ -201,7 +207,7 @@ public class GraphToObjDiag implements GraphToModel {
 			}
 		}
 
-		// Collect actions - collect the executable actions from the executing behavior
+		// Collect actions - collect the executable actions from the executing behaviour
 		for (ODObject object : objects) {
 
 			if(object.getGraphNode() != null) {
@@ -213,7 +219,7 @@ public class GraphToObjDiag implements GraphToModel {
 				traceOrderPartOne.add("execution");
 				ArrayList<Node> potentialActionBehExes = ListGraph.toTrace(traceOrderPartOne, object.getGraphNode());
 				
-				// All we're doing here is looking behavior execution node
+				// All we're doing here is looking behaviour execution node
 				// that does not have an active state edge
 				for(Node potentialActionBehEx : potentialActionBehExes) {
 					Boolean thisIsIt = true;
