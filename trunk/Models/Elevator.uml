@@ -3,45 +3,49 @@
   <packagedElement xmi:type="uml:Package" xmi:id="idPackage" name="ElevatorPackage">
     <packagedElement xmi:type="uml:Class" xmi:id="_b3muMX61Ed-TKunu4J1dAA" name="Elevator" classifierBehavior="idStateMachine">
       <ownedBehavior xmi:type="uml:StateMachine" xmi:id="idStateMachine" name="ElevatorStateMachine">
-        <region xmi:id="idRegion" name="ElevatorRegion">
-          <subvertex xmi:type="uml:State" xmi:id="__rifkGeTEd-HKL1SIsqvhA" name="4"/>
-          <subvertex xmi:type="uml:State" xmi:id="_AFlXQGeUEd-HKL1SIsqvhA" name="5"/>
-          <subvertex xmi:type="uml:State" xmi:id="_AXhb0GeUEd-HKL1SIsqvhA" name="8"/>
-          <subvertex xmi:type="uml:State" xmi:id="_Amz1AGeUEd-HKL1SIsqvhA" name="7"/>
-          <subvertex xmi:type="uml:State" xmi:id="_A3zeYGeUEd-HKL1SIsqvhA" name="6"/>
-          <subvertex xmi:type="uml:Pseudostate" xmi:id="_EibWAGeUEd-HKL1SIsqvhA" name="3"/>
-          <transition xmi:id="_HFIjUGeUEd-HKL1SIsqvhA" name="initialTrans" source="_EibWAGeUEd-HKL1SIsqvhA" target="__rifkGeTEd-HKL1SIsqvhA"/>
-          <transition xmi:id="_HdZSUGeUEd-HKL1SIsqvhA" name="startTrans" source="__rifkGeTEd-HKL1SIsqvhA" target="_AFlXQGeUEd-HKL1SIsqvhA">
-            <trigger xmi:id="_GukC8IJaEd-isfgEqfCRIg" name="triggerStart" event="_bEkvQIJZEd-isfgEqfCRIg"/>
-          </transition>
-          <transition xmi:id="_IApJUGeUEd-HKL1SIsqvhA" name="closeDoorTrans" source="_AFlXQGeUEd-HKL1SIsqvhA" target="_A3zeYGeUEd-HKL1SIsqvhA">
-            <trigger xmi:id="_OxohgIJaEd-isfgEqfCRIg" name="triggerCloseDoor" event="_fxua4IJZEd-isfgEqfCRIg"/>
-          </transition>
-          <transition xmi:id="_IluzYGeUEd-HKL1SIsqvhA" name="upTrans" source="_A3zeYGeUEd-HKL1SIsqvhA" target="_Amz1AGeUEd-HKL1SIsqvhA">
-            <trigger xmi:id="_RjSw0IJaEd-isfgEqfCRIg" name="triggerUp" event="_jZ3mQIJZEd-isfgEqfCRIg"/>
-          </transition>
-          <transition xmi:id="_JAqb4GeUEd-HKL1SIsqvhA" name="downTrans" source="_A3zeYGeUEd-HKL1SIsqvhA" target="_Amz1AGeUEd-HKL1SIsqvhA">
-            <trigger xmi:id="_bKsv8IJaEd-isfgEqfCRIg" name="triggerDown" event="_1IKM8IJZEd-isfgEqfCRIg"/>
-          </transition>
-          <transition xmi:id="_JdgI4GeUEd-HKL1SIsqvhA" name="passedTrans" source="_Amz1AGeUEd-HKL1SIsqvhA" target="_Amz1AGeUEd-HKL1SIsqvhA">
-            <trigger xmi:id="_eblR4IJaEd-isfgEqfCRIg" name="triggerPassed" event="_4ti_QIJZEd-isfgEqfCRIg"/>
-          </transition>
-          <transition xmi:id="_J--eQGeUEd-HKL1SIsqvhA" name="stopTrans" source="_Amz1AGeUEd-HKL1SIsqvhA" target="_AXhb0GeUEd-HKL1SIsqvhA">
-            <trigger xmi:id="_gPEowIJaEd-isfgEqfCRIg" name="triggerStop" event="_-e1ocIJZEd-isfgEqfCRIg"/>
-          </transition>
-          <transition xmi:id="_KZnL0GeUEd-HKL1SIsqvhA" name="openDoorTrans" source="_AXhb0GeUEd-HKL1SIsqvhA" target="__rifkGeTEd-HKL1SIsqvhA">
-            <trigger xmi:id="_iPYToIJaEd-isfgEqfCRIg" name="triggerOpenDoor" event="_C_X0YIJaEd-isfgEqfCRIg"/>
-          </transition>
-        </region>
-        <region xmi:id="_n1wC4KHuEd-aSpRtShx1dQ" name="Elevator2Region">
-          <subvertex xmi:type="uml:Pseudostate" xmi:id="_3l_ogKHuEd-aSpRtShx1dQ" name="9"/>
-          <subvertex xmi:type="uml:State" xmi:id="_GHaDgKHvEd-aSpRtShx1dQ" name="10">
-            <doActivity xmi:type="uml:Activity" xmi:id="_SvdJIKHvEd-aSpRtShx1dQ" name="Activity10"/>
+        <region xmi:id="_B2QiUMRoEd-8gYqjvrhDPg" name="TopRegion">
+          <subvertex xmi:type="uml:State" xmi:id="_Ffi9MMRoEd-8gYqjvrhDPg" name="1">
+            <region xmi:id="_n1wC4KHuEd-aSpRtShx1dQ" name="Elevator2Region">
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_3l_ogKHuEd-aSpRtShx1dQ" name="9"/>
+              <subvertex xmi:type="uml:State" xmi:id="_GHaDgKHvEd-aSpRtShx1dQ" name="10">
+                <doActivity xmi:type="uml:Activity" xmi:id="_SvdJIKHvEd-aSpRtShx1dQ" name="Activity10"/>
+              </subvertex>
+              <transition xmi:id="_j6sGEKHvEd-aSpRtShx1dQ" name="initTrans" source="_3l_ogKHuEd-aSpRtShx1dQ" target="_GHaDgKHvEd-aSpRtShx1dQ"/>
+              <transition xmi:id="_l7uJsKHvEd-aSpRtShx1dQ" name="requestTrans" source="_GHaDgKHvEd-aSpRtShx1dQ" target="_GHaDgKHvEd-aSpRtShx1dQ">
+                <trigger xmi:id="_oHSpYKHvEd-aSpRtShx1dQ" name="TriggerRequest" event="_1plJsKHvEd-aSpRtShx1dQ"/>
+              </transition>
+            </region>
+            <region xmi:id="idRegion" name="ElevatorRegion">
+              <subvertex xmi:type="uml:State" xmi:id="__rifkGeTEd-HKL1SIsqvhA" name="4"/>
+              <subvertex xmi:type="uml:State" xmi:id="_AFlXQGeUEd-HKL1SIsqvhA" name="5"/>
+              <subvertex xmi:type="uml:State" xmi:id="_AXhb0GeUEd-HKL1SIsqvhA" name="8"/>
+              <subvertex xmi:type="uml:State" xmi:id="_Amz1AGeUEd-HKL1SIsqvhA" name="7"/>
+              <subvertex xmi:type="uml:State" xmi:id="_A3zeYGeUEd-HKL1SIsqvhA" name="6"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_EibWAGeUEd-HKL1SIsqvhA" name="3"/>
+              <transition xmi:id="_HFIjUGeUEd-HKL1SIsqvhA" name="initialTrans" source="_EibWAGeUEd-HKL1SIsqvhA" target="__rifkGeTEd-HKL1SIsqvhA"/>
+              <transition xmi:id="_HdZSUGeUEd-HKL1SIsqvhA" name="startTrans" source="__rifkGeTEd-HKL1SIsqvhA" target="_AFlXQGeUEd-HKL1SIsqvhA">
+                <trigger xmi:id="_GukC8IJaEd-isfgEqfCRIg" name="triggerStart" event="_bEkvQIJZEd-isfgEqfCRIg"/>
+              </transition>
+              <transition xmi:id="_IApJUGeUEd-HKL1SIsqvhA" name="closeDoorTrans" source="_AFlXQGeUEd-HKL1SIsqvhA" target="_A3zeYGeUEd-HKL1SIsqvhA">
+                <trigger xmi:id="_OxohgIJaEd-isfgEqfCRIg" name="triggerCloseDoor" event="_fxua4IJZEd-isfgEqfCRIg"/>
+              </transition>
+              <transition xmi:id="_IluzYGeUEd-HKL1SIsqvhA" name="upTrans" source="_A3zeYGeUEd-HKL1SIsqvhA" target="_Amz1AGeUEd-HKL1SIsqvhA">
+                <trigger xmi:id="_RjSw0IJaEd-isfgEqfCRIg" name="triggerUp" event="_jZ3mQIJZEd-isfgEqfCRIg"/>
+              </transition>
+              <transition xmi:id="_JAqb4GeUEd-HKL1SIsqvhA" name="downTrans" source="_A3zeYGeUEd-HKL1SIsqvhA" target="_Amz1AGeUEd-HKL1SIsqvhA">
+                <trigger xmi:id="_bKsv8IJaEd-isfgEqfCRIg" name="triggerDown" event="_1IKM8IJZEd-isfgEqfCRIg"/>
+              </transition>
+              <transition xmi:id="_JdgI4GeUEd-HKL1SIsqvhA" name="passedTrans" source="_Amz1AGeUEd-HKL1SIsqvhA" target="_Amz1AGeUEd-HKL1SIsqvhA">
+                <trigger xmi:id="_eblR4IJaEd-isfgEqfCRIg" name="triggerPassed" event="_4ti_QIJZEd-isfgEqfCRIg"/>
+              </transition>
+              <transition xmi:id="_J--eQGeUEd-HKL1SIsqvhA" name="stopTrans" source="_Amz1AGeUEd-HKL1SIsqvhA" target="_AXhb0GeUEd-HKL1SIsqvhA">
+                <trigger xmi:id="_gPEowIJaEd-isfgEqfCRIg" name="triggerStop" event="_-e1ocIJZEd-isfgEqfCRIg"/>
+              </transition>
+              <transition xmi:id="_KZnL0GeUEd-HKL1SIsqvhA" name="openDoorTrans" source="_AXhb0GeUEd-HKL1SIsqvhA" target="__rifkGeTEd-HKL1SIsqvhA">
+                <trigger xmi:id="_iPYToIJaEd-isfgEqfCRIg" name="triggerOpenDoor" event="_C_X0YIJaEd-isfgEqfCRIg"/>
+              </transition>
+            </region>
           </subvertex>
-          <transition xmi:id="_j6sGEKHvEd-aSpRtShx1dQ" name="initTrans" source="_3l_ogKHuEd-aSpRtShx1dQ" target="_GHaDgKHvEd-aSpRtShx1dQ"/>
-          <transition xmi:id="_l7uJsKHvEd-aSpRtShx1dQ" name="requestTrans" source="_GHaDgKHvEd-aSpRtShx1dQ" target="_GHaDgKHvEd-aSpRtShx1dQ">
-            <trigger xmi:id="_oHSpYKHvEd-aSpRtShx1dQ" name="TriggerRequest" event="_1plJsKHvEd-aSpRtShx1dQ"/>
-          </transition>
         </region>
       </ownedBehavior>
     </packagedElement>

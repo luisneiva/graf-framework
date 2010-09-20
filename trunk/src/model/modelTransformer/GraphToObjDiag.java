@@ -287,6 +287,7 @@ public class GraphToObjDiag implements GraphToModel {
 			toExternalEvent.add("execution");
 			toExternalEvent.add("behavior");
 			toExternalEvent.add("region");
+			//TODO dig deeper in transitions
 			toExternalEvent.add("transition");
 			toExternalEvent.add("trigger");
 			toExternalEvent.add("event");
