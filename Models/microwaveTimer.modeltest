@@ -12,3 +12,4 @@ b1 : Beeper
 
 m1 <cookedBy, cooks> f1
 m1 <in,has> b1
+m1 <fromMicrowave,toActor> actor1

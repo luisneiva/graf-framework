@@ -63,7 +63,7 @@
             <node xmi:type="uml:SendSignalAction" xmi:id="_iFprUH9NEd6qzudwZW-ZIQ" name="sendBeep" signal="_t3cqMUZ9Ed6JvpGL0b827A">
               <target xmi:type="uml:ActionInputPin" xmi:id="_tj-v0H9NEd6qzudwZW-ZIQ" name="beeperPin">
                 <upperBound xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sHUvIH9OEd6qzudwZW-ZIQ" value="*"/>
-                <fromAction xmi:type="uml:ReadStructuralFeatureAction" xmi:id="_zTJSEH9NEd6qzudwZW-ZIQ" name="getBeeper" structuralFeature="_EE7AwWfiEd67COU_hE_xjQ">
+                <fromAction xmi:type="uml:ReadStructuralFeatureAction" xmi:id="_zTJSEH9NEd6qzudwZW-ZIQ" name="getBeeper" structuralFeature="_DQBZE2fiEd67COU_hE_xjQ">
                   <object xmi:type="uml:ActionInputPin" xmi:id="_hguj4H9OEd6qzudwZW-ZIQ" name="selfActionInputPin">
                     <upperBound xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xNqW0H9OEd6qzudwZW-ZIQ" value="*"/>
                     <fromAction xmi:type="uml:ReadSelfAction" xmi:id="_lqaWEH9OEd6qzudwZW-ZIQ" name="selfRead">
@@ -110,7 +110,11 @@
     </ownedBehavior>
   </packagedElement>
   <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_41b3MEZ8Ed6JvpGL0b827A" name="cooked" signal="_MBrb4EZ4Ed6JvpGL0b827A"/>
-  <packagedElement xmi:type="uml:Signal" xmi:id="_MBrb4EZ4Ed6JvpGL0b827A" name="cookedSignal"/>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_MBrb4EZ4Ed6JvpGL0b827A" name="cookedSignal">
+    <ownedAttribute xmi:id="_sQwFgMVDEd-TL5TPOfrgdw">
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_6wWioMVDEd-TL5TPOfrgdw"/>
+    </ownedAttribute>
+  </packagedElement>
   <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_HvZVEEZ9Ed6JvpGL0b827A" name="stopCooking"/>
   <packagedElement xmi:type="uml:Signal" xmi:id="_MZ_b8EZ9Ed6JvpGL0b827A" name="stopCookingSignal"/>
   <packagedElement xmi:type="uml:TimeEvent" xmi:id="_8oyJUL-wEd-pyI2TvVnCpA" name="timeEvent" isRelative="true">
@@ -143,6 +147,18 @@
     <ownedEnd xmi:id="_EE7AxGfiEd67COU_hE_xjQ" name="in" type="_WcejoEZ0Ed6JvpGL0b827A" association="_EE7AwGfiEd67COU_hE_xjQ">
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EE7AxmfiEd67COU_hE_xjQ" value="1"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EE7AxWfiEd67COU_hE_xjQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Profile" xmi:id="_jvUFYMVCEd-TL5TPOfrgdw"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_7HYYAMVCEd-TL5TPOfrgdw" name="a1"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_-gNDEMVEEd-TL5TPOfrgdw" name="linkToActor" memberEnd="_-gNDEcVEEd-TL5TPOfrgdw _-gNDFMVEEd-TL5TPOfrgdw">
+    <ownedEnd xmi:id="_-gNDEcVEEd-TL5TPOfrgdw" name="toActor" type="_7HYYAMVCEd-TL5TPOfrgdw" association="_-gNDEMVEEd-TL5TPOfrgdw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-gNDEsVEEd-TL5TPOfrgdw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-gNDE8VEEd-TL5TPOfrgdw" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_-gNDFMVEEd-TL5TPOfrgdw" name="fromMicrowave" type="_WcejoEZ0Ed6JvpGL0b827A" association="_-gNDEMVEEd-TL5TPOfrgdw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-gNDFcVEEd-TL5TPOfrgdw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-gNDFsVEEd-TL5TPOfrgdw" value="1"/>
     </ownedEnd>
   </packagedElement>
 </uml:Package>
