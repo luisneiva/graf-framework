@@ -289,15 +289,39 @@ public class GraphToObjDiag implements GraphToModel {
 				}
 			}
 			
-			ArrayList<String> toExternalEvent = new ArrayList<String>();
-			toExternalEvent.add("execution");
-			toExternalEvent.add("behavior");
-			toExternalEvent.add("region");
-			//TODO dig deeper in transitions
-			toExternalEvent.add("transition");
-			toExternalEvent.add("trigger");
-			toExternalEvent.add("event");
-			ArrayList<Node> externalEvents = ListGraph.toTrace(toExternalEvent, object.getGraphNode());
+			ArrayList<String> toExternalEventlevel1 = new ArrayList<String>();
+			ArrayList<String> toExternalEventlevel0 = new ArrayList<String>();
+			
+			ArrayList<String> toTopRegion = new ArrayList<String>();
+			ArrayList<String> toSubRegion = new ArrayList<String>();
+			ArrayList<String> toEvent = new ArrayList<String>();
+			
+			
+			toTopRegion.add("execution");
+			toTopRegion.add("behavior");
+			toTopRegion.add("region");
+			
+			
+			toSubRegion.add("subvertex");
+			toSubRegion.add("region");
+			
+			
+			toEvent.add("transition");
+			toEvent.add("trigger");
+			toEvent.add("event");
+			
+			
+			
+			toExternalEventlevel1.addAll(toTopRegion);
+			toExternalEventlevel1.addAll(toSubRegion);
+			toExternalEventlevel1.addAll(toEvent);
+
+			toExternalEventlevel0.addAll(toTopRegion);
+			toExternalEventlevel0.addAll(toEvent);			
+			
+			ArrayList<Node> externalEvents = ListGraph.toTrace(toExternalEventlevel1, object.getGraphNode());
+			
+			externalEvents.addAll(ListGraph.toTrace(toExternalEventlevel0, object.getGraphNode()));
 			
 			Iterator<Node> duplicateRemover = externalEvents.iterator();
 			ArrayList<String> found = new ArrayList<String>();
