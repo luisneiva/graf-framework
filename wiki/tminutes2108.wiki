@@ -1,0 +1,29 @@
+#summary Minutes of 21/08 technical meeting
+
+= Technical Meeting =
+
+In this meeting we discussed Timer implementation and the Region problem.
+
+= Timers =
+
+We will implement a 'real-time' timer that is based on the system clock.
+
+== xtUML Version ==
+
+We looked at the xtUML implementation of timers first. This is the implementation in the model that we are looking at. xtUML used the External Actor concept to handle timers. In the model, the timer both sends and receives signals, and modifies its behavior based on the signals it receives. At the time of writing, we have not found any more detailed treatment of timers in xtUML. Our broad plan for implementation of this version of timers is as follows:
+
+  # use the existing 'generic' external actor that GRAF has already
+  # objects can send and receive signals to the Actor and it can send signals to objects
+  # the 'internal' behavior of the timer will be defined by java code rather than rules - since it is an external actor rather than part of the model and it requires time keeping
+  # this approach will use the existing sendSignal rules as far as possible
+
+We also note that at the begining of this year we elected to implement xtUML functionality.
+
+== OMG SPTS Profile ==
+
+We also looked at the OMG-adopted Schedulability, Performance, and Time Specification Profile. This Profile defines additional elements like _clocks_ and _timers_ to add real-time functionality. These elements are not included in the Eclipse UML file format, and would have to be added independently. However, this also provides automatic separation of 'pure' UML and the Profile. Our broad plan for implementation of this version of timers is as follows:
+
+  # use existing UML file structure as far as possible
+  # where profile elements are not in UML, add the required nodes to the graph using code
+  # have the user specify in the modeltest file which events etc communicate with the timer
+  # write new sets of rules for handling profile functionality
