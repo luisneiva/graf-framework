@@ -1,6 +1,13 @@
 package view;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
 import java.io.FileNotFoundException;
+
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.filechooser.FileFilter;
 
 import model.PluginModel;
 import model.modelTransformer.objectDisplay.ObjectDisplay;
@@ -82,7 +89,7 @@ public class View extends ViewPart {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		
+
 		parent.addDisposeListener(new DisposeListener (){
 			public void widgetDisposed(DisposeEvent e){
 				System.exit(0);
@@ -100,11 +107,11 @@ public class View extends ViewPart {
 	 */
 	public void openFirst() {
 		String instancepath = openFileChooser();
-		
+
 		// TODO!!! file path in string.
 		Properties.filePathStr = instancepath;
-		
-		
+
+
 		if (instancepath == null) 
 			return;
 		controller.animate(instancepath);		
@@ -145,13 +152,75 @@ public class View extends ViewPart {
 		contents.setScale(1.0);
 	}
 
+	/**
+	 * Opening a file chooser should be just 2 lines of code. But that won't make the
+	 * file chooser always on top. To ensure the file chooser is always on top, this
+	 * unfortunate hack is needed 
+	 */
+	private class SelectListener implements ActionListener {
+		String result;
+		JFileChooser chooser;
+		JFrame frame;
+		
+		public SelectListener(JFileChooser chooser, JFrame frame) {
+			this.chooser = chooser;
+			this.frame = frame;
+		}
+		
+		public void actionPerformed(ActionEvent e) {
+			
+			if (e.getActionCommand().equals(JFileChooser.APPROVE_SELECTION)) {
+				result = chooser.getSelectedFile().getAbsolutePath();
+			} else if (e.getActionCommand().equals(JFileChooser.CANCEL_SELECTION)) {
+				result = null;
+			}
+			
+			frame.dispose();
+		//	JOptionPane.showMessageDialog(null, getSelectedFile());
+		}
+		
+	}
+	
 	/** Open a file chooser and return path to chosen file, or null if none chosen */
 	public String openFileChooser() {
-		FileDialog filedialog = new FileDialog(parent.getShell());
+
+		JFrame frame = new JFrame("Select a modeltest file");
+
+		JFileChooser chooser = new JFileChooser();
+		chooser.setCurrentDirectory(new File("Models"));
+		chooser.addChoosableFileFilter(new FileFilter() {
+			
+			public String getDescription() {
+				return null;
+			}
+			public boolean accept(File arg0) {
+				return arg0.getName().contains(".modeltest")
+				|| arg0.isDirectory();
+			}
+		});
+		
+		SelectListener listener = new SelectListener(chooser, frame);
+		
+		chooser.addActionListener(listener);
+
+		frame.add(chooser);
+		frame.pack();
+
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		frame.setLocationRelativeTo(null);
+		frame.setAlwaysOnTop(true);
+		frame.setVisible(true);
+
+		//make it wait for the user to make a selection
+		chooser.showOpenDialog(frame);
+		
+		return listener.result;
+
+		/*FileDialog filedialog = new FileDialog(parent.getShell());
 		filedialog.setText("Choose a uml model:");
 		filedialog.setFilterPath("Models");
 		filedialog.setFilterExtensions(new String[]{"*.modeltest"});
-		return filedialog.open();
+		return filedialog.open();*/
 	}
 
 	/** Open a file chooser and return path to chosen file, or null if none chosen */
@@ -163,7 +232,7 @@ public class View extends ViewPart {
 		filedialog.setFilterExtensions(new String[]{"*.modeltest"});
 		return filedialog.open();
 	}
-	
+
 	/** Display error message to user */
 	// TODO!!!
 	public void showError(String msg) {
