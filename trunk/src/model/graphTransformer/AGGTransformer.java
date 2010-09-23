@@ -330,36 +330,11 @@ public class AGGTransformer {
 	 */
 	private void apply(Rule rule) throws RuleNoMatchException {
 
-		// graTraOptions contains a string called "Injective"
-		// we want to remove this string but none of the code
-		// below will achieve this
 		/*Vector<String> options = gg.getGraTraOptions();
 		
-		System.out.println(">o>" + options.size());
-		
-		
-		Iterator<String> optionIterator = options.iterator();
-		while(optionIterator.hasNext()) {
-			String next = optionIterator.next();
-			if(next.equals("injective")) {
-				optionIterator.remove();
-			}
-		}
-		
-		MorphCompletionStrategy mcs = new Completion_CSP(false);
-		BitSet properties = new BitSet();
-		properties.set(CompletionPropertyBits.DANGLING);
-		properties.set(CompletionPropertyBits.INJECTIVE, false);
-		mcs.showProperties();
-		mcs.removeProperty("Injective");
-		System.out.println("allowed: "  +mcs.getSupportedProperties());
-		gg.setGraTraOptions(mcs);
-
-		Vector<String> newOptions = gg.getGraTraOptions();
-		System.out.println(">>" + newOptions.size());
-		for(String option : newOptions)
-			System.out.println(">"+  option);*/
-		
+		for(String str : options)
+			System.out.println(str);
+		*/
 		
 		Match match = gg.createMatch(rule);
 
