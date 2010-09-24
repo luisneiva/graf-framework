@@ -2,7 +2,7 @@
 
 Executable UML allows for a signal to be sent at some time in the future:
 
-*generate* _&lt;signal&gt;_ *to* _&lt;object reference&gt;_ *delay* _&lt;duration&gt;_*;*
+*generate* _`<`signal`>`_ *to* _`<`object reference`>`_ *delay* _`<`duration`>`_*;*
 
 This action causes the signal to be received after the duration expires. (It is not relevant whether the sender delays sending the signal, or the receiver delays receipt. That decision is properly the domain of the model compiler.)
 
@@ -10,12 +10,12 @@ A delayed signal cannot be manipulated directly by the application, because the 
 
 However, there remains a need to refer to a delayed signal, for example, to cancel it:
 
-*cancel* _&lt;signal&gt;_ *from* _&lt;instance handle&gt;_ *to* _&lt;instance handle&gt;_*;*
+*cancel* _`<`signal`>`_ *from* _`<`instance handle`>`_ *to* _`<`instance handle`>`_*;*
 
 There can be at most one delayed signal of a given name (an event specification) outstanding for each sender-receiver instance pair at any one time.
 
 Finally, a delayed signal can be cause to be produced at an exact time. The "exact time" is determined by the sender or receiver, according to the wishes of the model compiler.
 
-*generate* _&lt;signal&gt;_ *to* _&lt;object reference&gt;_ *at* _&lt;exact time&gt;_*;*
+*generate* _`<`signal`>`_ *to* _`<`object reference`>`_ *at* _`<`exact time`>`_*;*
 
 This type of signal can be canceled too, using the same _cancel_ action
