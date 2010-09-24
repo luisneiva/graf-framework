@@ -22,6 +22,7 @@
 [RefDiscussion 'Reference' Discussion]<br>
 [Models]<br>
 [RuleGrowth Rule Growth]
+[xtUML Timers]
 
 === Tutorials ===
 [Installing Visual Paradigm and Topcased]<br>
