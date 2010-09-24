@@ -21,7 +21,7 @@
 [HowGRAFWorks How GRAF Works]<br>
 [RefDiscussion 'Reference' Discussion]<br>
 [Models]<br>
-[RuleGrowth Rule Growth]
+[RuleGrowth Rule Growth]<br>
 [xtUML Timers]
 
 === Tutorials ===
