@@ -19,3 +19,6 @@ Finally, a delayed signal can be cause to be produced at an exact time. The "exa
 *generate* _`<`signal`>`_ *to* _`<`object reference`>`_ *at* _`<`exact time`>`_*;*
 
 This type of signal can be canceled too, using the same _cancel_ action
+
+*Related Links:*
+ * [http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.73.3143&rep=rep1&type=pdf Synchronizing clocks in the presence of faults, Lamport, L and P.M. Melliar-Smith]
