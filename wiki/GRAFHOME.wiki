@@ -3,7 +3,6 @@
 == GRAF 2010 Wiki ==
 
 [Minutes Minutes and agendas]<br><br>
-[http://code.google.com/feeds/p/graf-framework/svnchanges/basic Updates]<br>
 
 === Research ===
 [ModelTools Possible tools to produce models for GRAF]<br>
