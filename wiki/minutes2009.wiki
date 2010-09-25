@@ -7,7 +7,7 @@ Date: 20/9
 <br>Time: 2pm
 <br>Duration: 1 hour
 
-== Work asignment ==
+== Progress Reports ==
   * Alice - wrote discussion on different types of communication in UML
   * Hamish - put up test results
   * Cameron - put up Shayne's model simplest form
