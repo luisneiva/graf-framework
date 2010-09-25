@@ -1,0 +1,9 @@
+#summary agenda
+== Team Meeting ==
+*Date:* 28/9
+<br>*Time:* 1pm
+<br>*Location:* N110
+<br>*Duration:* 1 hour
+
+=== Agenda Items ===
+  * Prepare preshowcase presentation
