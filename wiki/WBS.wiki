@@ -13,7 +13,7 @@ Crossed out tasks are finished
 http://graf-framework.googlecode.com/files/wbs+times-12-9-10.jpg 
 
 ====Gantt Chart plan to end of semester====
-<http://svn.anu.edu.au/SE_projects/GRAF/Admin/gantt.xls On SVN>
+[http://svn.anu.edu.au/SE_projects/GRAF/Admin/gantt.xls On SVN]
 
 === Basis of estimates ===
 Estimated times are based on times logged in GPME including  times from completed tasks and data from last year and _ball-park_ guesses. 
