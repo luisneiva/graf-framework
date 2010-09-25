@@ -6,4 +6,4 @@
 <br>*Duration:* 1 hour
 
 === Agenda Items ===
-  * Presentation of preshowcase presentation and feedback
+  * Preshowcase presentation feedback
