@@ -15,6 +15,8 @@ import model.modelTransformer.objectDisplay.ObjectDisplay;
 
 import org.eclipse.swt.graphics.Point;
 
+import controller.Timer;
+
 import agg.xt_basis.Arc;
 import agg.xt_basis.Node;
 
@@ -379,7 +381,14 @@ public class GraphToObjDiag implements GraphToModel {
 			}
 		}
 
-		ObjDiag result = new ObjDiag(objects, associations);
+		ObjDiag result;
+		
+		if(Timer.isTimerNeeded(graph)) {
+			result = new ObjDiag(objects, associations, new Timer(graph, objects));
+		}
+		else {
+			result = new ObjDiag(objects, associations);
+		}
 		return result;
 	}
 }

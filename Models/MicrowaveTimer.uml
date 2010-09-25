@@ -25,7 +25,7 @@
         <transition xmi:id="_53xiIEZ1Ed6JvpGL0b827A" name="foodInitialTrans" source="_y2hF4EZ1Ed6JvpGL0b827A" target="_1pduoEZ1Ed6JvpGL0b827A"/>
         <transition xmi:id="_6sC3sEZ1Ed6JvpGL0b827A" name="foodFinalTrans" source="_2Tdt4EZ1Ed6JvpGL0b827A" target="_zr7D4EZ1Ed6JvpGL0b827A"/>
         <transition xmi:id="_8zAkMEZ1Ed6JvpGL0b827A" name="cookedTrans" source="_1pduoEZ1Ed6JvpGL0b827A" target="_2Tdt4EZ1Ed6JvpGL0b827A">
-          <trigger xmi:id="_V2wVgEZ2Ed6JvpGL0b827A" name="cookedTrigger" event="_8oyJUL-wEd-pyI2TvVnCpA"/>
+          <trigger xmi:id="_V2wVgEZ2Ed6JvpGL0b827A" name="cookedTrigger"/>
         </transition>
       </region>
     </ownedBehavior>
@@ -38,10 +38,10 @@
         <subvertex xmi:type="uml:State" xmi:id="_dzM8w0Z4Ed6JvpGL0b827A" name="NotCooking"/>
         <subvertex xmi:type="uml:State" xmi:id="_dzM8xEZ4Ed6JvpGL0b827A" name="Cooking">
           <entry xmi:type="uml:Activity" xmi:id="_kv068H8_Ed6qzudwZW-ZIQ" name="CookingEntry">
-            <node xmi:type="uml:SendSignalAction" xmi:id="_p3zhYH8_Ed6qzudwZW-ZIQ" name="sendCooked" signal="_MBrb4EZ4Ed6JvpGL0b827A">
+            <node xmi:type="uml:SendSignalAction" xmi:id="_p3zhYH8_Ed6qzudwZW-ZIQ" name="sendCooked" signal="_06Xjcch0Ed-8V_aBLrSBsA">
               <target xmi:type="uml:ActionInputPin" xmi:id="_tMch8H8_Ed6qzudwZW-ZIQ" name="foodPinB">
                 <upperBound xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uSMrQH9OEd6qzudwZW-ZIQ" value="*"/>
-                <fromAction xmi:type="uml:ReadStructuralFeatureAction" xmi:id="_RGpfcH9AEd6qzudwZW-ZIQ" name="getFoodB" structuralFeature="_DQBZEGfiEd67COU_hE_xjQ">
+                <fromAction xmi:type="uml:ReadStructuralFeatureAction" xmi:id="_RGpfcH9AEd6qzudwZW-ZIQ" name="getFoodB" structuralFeature="_-gNDEcVEEd-TL5TPOfrgdw">
                   <object xmi:type="uml:ActionInputPin" xmi:id="_66ctkH9AEd6qzudwZW-ZIQ" name="selfActionInputPinB">
                     <upperBound xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0OoNcH9OEd6qzudwZW-ZIQ" value="*"/>
                     <fromAction xmi:type="uml:ReadSelfAction" xmi:id="__dBg4H9AEd6qzudwZW-ZIQ" name="selfReadB">
@@ -86,7 +86,7 @@
           <trigger xmi:id="_AJ-NEEaDEd6JvpGL0b827A" name="cookTrigger" event="_S-gR0EZ9Ed6JvpGL0b827A"/>
         </transition>
         <transition xmi:id="_yxhJwEZ4Ed6JvpGL0b827A" name="stopCookingTrans" source="_dzM8xEZ4Ed6JvpGL0b827A" target="_oehP8EZ4Ed6JvpGL0b827A">
-          <trigger xmi:id="_CcXtgEaDEd6JvpGL0b827A" name="stopCookingTrigger" event="_8oyJUL-wEd-pyI2TvVnCpA"/>
+          <trigger xmi:id="_CcXtgEaDEd6JvpGL0b827A" name="stopCookingTrigger"/>
         </transition>
       </region>
     </ownedBehavior>
@@ -110,19 +110,9 @@
     </ownedBehavior>
   </packagedElement>
   <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_41b3MEZ8Ed6JvpGL0b827A" name="cooked" signal="_MBrb4EZ4Ed6JvpGL0b827A"/>
-  <packagedElement xmi:type="uml:Signal" xmi:id="_MBrb4EZ4Ed6JvpGL0b827A" name="cookedSignal">
-    <ownedAttribute xmi:id="_sQwFgMVDEd-TL5TPOfrgdw">
-      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_6wWioMVDEd-TL5TPOfrgdw"/>
-    </ownedAttribute>
-  </packagedElement>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_MBrb4EZ4Ed6JvpGL0b827A" name="cookedSignal"/>
   <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_HvZVEEZ9Ed6JvpGL0b827A" name="stopCooking"/>
   <packagedElement xmi:type="uml:Signal" xmi:id="_MZ_b8EZ9Ed6JvpGL0b827A" name="stopCookingSignal"/>
-  <packagedElement xmi:type="uml:TimeEvent" xmi:id="_8oyJUL-wEd-pyI2TvVnCpA" name="timeEvent" isRelative="true">
-    <when xmi:id="_sP2hIL-yEd-pyI2TvVnCpA" name="timeEventsExpression">
-      <nameExpression xmi:id="_6KjhcL-yEd-pyI2TvVnCpA" name="5"/>
-      <expr xmi:type="uml:LiteralInteger" xmi:id="Class_EClass-extension_EClass-_lowerValue"/>
-    </when>
-  </packagedElement>
   <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_S-gR0EZ9Ed6JvpGL0b827A" name="cook" signal="_U-InQEZ9Ed6JvpGL0b827A"/>
   <packagedElement xmi:type="uml:Signal" xmi:id="_U-InQEZ9Ed6JvpGL0b827A" name="cookSignal"/>
   <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_ZqLfoEZ9Ed6JvpGL0b827A" name="stopBeeping" signal="_cgZe0EZ9Ed6JvpGL0b827A"/>
@@ -149,10 +139,8 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EE7AxWfiEd67COU_hE_xjQ" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Profile" xmi:id="_jvUFYMVCEd-TL5TPOfrgdw"/>
-  <packagedElement xmi:type="uml:Actor" xmi:id="_7HYYAMVCEd-TL5TPOfrgdw" name="a1"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_-gNDEMVEEd-TL5TPOfrgdw" name="linkToActor" memberEnd="_-gNDEcVEEd-TL5TPOfrgdw _-gNDFMVEEd-TL5TPOfrgdw">
-    <ownedEnd xmi:id="_-gNDEcVEEd-TL5TPOfrgdw" name="toActor" type="_7HYYAMVCEd-TL5TPOfrgdw" association="_-gNDEMVEEd-TL5TPOfrgdw">
+    <ownedEnd xmi:id="_-gNDEcVEEd-TL5TPOfrgdw" name="toActor" association="_-gNDEMVEEd-TL5TPOfrgdw">
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-gNDEsVEEd-TL5TPOfrgdw" value="1"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-gNDE8VEEd-TL5TPOfrgdw" value="1"/>
     </ownedEnd>
@@ -160,5 +148,11 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-gNDFcVEEd-TL5TPOfrgdw" value="1"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-gNDFsVEEd-TL5TPOfrgdw" value="1"/>
     </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_06XjcMh0Ed-8V_aBLrSBsA" name="startTimer" signal="_06Xjcch0Ed-8V_aBLrSBsA"/>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_06Xjcch0Ed-8V_aBLrSBsA" name="startTimerSignal">
+    <ownedAttribute xmi:id="_t_ILcMh7Ed-8V_aBLrSBsA" name="setTimer">
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_x_kiEMh7Ed-8V_aBLrSBsA" value="5"/>
+    </ownedAttribute>
   </packagedElement>
 </uml:Package>
