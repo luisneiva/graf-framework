@@ -158,8 +158,7 @@ public class GraphToObjDiag implements GraphToModel {
 			}
 		}
 
-		// Deal with the possible associations found when
-		// looking for attributes.
+		// Deal with the possible associations found when looking for attributes.
 		ArrayList<ODLink> associations = new ArrayList<ODLink>();
 		for(Object[] assoc : possibleAssociations) {
 
@@ -176,9 +175,7 @@ public class GraphToObjDiag implements GraphToModel {
 				}
 			} 
 
-			//Check if the object name is the name of any already
-			//found object.
-
+			//Check if the object name is the name of any already found object.
 			for(ODObject obj : objects) {
 				if(obj.getName().equals(ListGraph.getName(leftNode))) {
 					associations.add(new ODLink(left,leftLabel,right));
@@ -192,8 +189,7 @@ public class GraphToObjDiag implements GraphToModel {
 			}
 		}
 
-		// Follow execution and activeState edges to find 
-		// the current state.
+		// Follow execution and activeState edges to find the current state.
 		for(ODObject object : objects) {
 			Node node = object.getGraphNode();
 
