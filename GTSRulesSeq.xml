@@ -115,5 +115,10 @@
 	</action>
 	<action name="ReplyAction">
 		<rule>replyAction</rule></action>
+	<action name="CreateLinkAction">
+		<rule>createLinkAction-Initialise</rule>
+		<looping-dependency><rule>createLinkAction-TraverseN</rule></looping-dependency><rule>createLinkAction-Traverse1</rule>
+		<rule>createLinkAction-Main</rule>
+	</action>
 
 </GTSRules>
