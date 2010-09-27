@@ -1,2 +1,21 @@
 = An Introduction to GRAF =
-An intro to GRAF for the 2011 group will go here.
+
+== Models ==
+
+=== Elevator ===
+
+=== If Test ===
+
+=== Invoicer ===
+
+http://graf-framework.googlecode.com/files/invoicer.png
+
+=== Microwave Tutorial ===
+
+=== Microwave Timer ===
+
+=== Microwave with Integer ===
+
+=== Racer === 
+
+=== TE00 ===
