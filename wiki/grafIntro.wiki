@@ -6,10 +6,6 @@
 
 === If Test ===
 
-=== Invoicer ===
-
-http://graf-framework.googlecode.com/files/Invoicer.png
-
 === Microwave Tutorial ===
 
 === Microwave Timer ===
