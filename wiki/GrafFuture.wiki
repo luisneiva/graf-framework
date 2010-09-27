@@ -4,6 +4,7 @@
 These are tasks that we don't plan to do in 2010 but they should be simple enough to give the 2011 team an idea of how to modify GRAF.
   # Create the rule !SendSignalAction-Mealy, add it to the !GTSRuleSeq file and create a model that will use the rule.
   # Complete the invoicer model (!InvoiceTest.modeltest and Invoicer.uml in the Models folder) according to how the papers describe it.
+  http://graf-framework.googlecode.com/files/Invoicer.png
 
 == Creating model files ==
   * This is the main thing preventing GRAF from being usable
