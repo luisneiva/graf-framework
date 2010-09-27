@@ -8,7 +8,7 @@
 
 === Invoicer ===
 
-http://graf-framework.googlecode.com/files/invoicer.png
+http://graf-framework.googlecode.com/files/Invoicer.png
 
 === Microwave Tutorial ===
 
