@@ -12,7 +12,8 @@ The Elevator model contains state machine regions. In order to implement this, w
 The Active-State edge without regions:
 http://graf-framework.googlecode.com/files/updated%20graph%20verification.jpg
 
-The Active-State edge appears in the graph when taking into account regions: //TODO: upload a picture to here
+The Active-State edge appears in the graph when taking into account regions:
+http://graf-framework.googlecode.com/files/regions%20output%20graph.jpg
 
 
 Code changes: We changed the code in the GraphToObjDiag class (under the package: model/modelTransformer).
