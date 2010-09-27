@@ -2,6 +2,7 @@ package view;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.GridLayout;
@@ -39,17 +40,18 @@ public class GRAFSplash extends JFrame{
 		
 	    Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 		
-		this.setSize(400,20);
+		this.setSize(300,20);
 		
-		this.setLayout(new GridLayout(1,1));
+		//this.setLayout(new GridLayout(1,1));
 //		this.setUndecorated(true);
 		this.setLocation(dim.width / 2 - 150, dim.height / 2 - 50);
 		
 		logoPanel = new JPanel();
-		logoPanel.setSize(300, 80);
+		logoPanel.setSize(300, 20);
 		progress = new JProgressBar(0,100);
 		progress.setSize(300, 20);
-		logoIcon = new ImageIcon(controller.Properties.getProperty("LogoPath"));
+		logoPanel.setLayout(new GridLayout(1,1));
+		//logoIcon = new ImageIcon(controller.Properties.getProperty("LogoPath"));
 		activityLabel = new JLabel();
 		activityLabel.setHorizontalAlignment(JLabel.CENTER);
 		activityLabel.setVerticalAlignment(JLabel.CENTER);
@@ -57,12 +59,15 @@ public class GRAFSplash extends JFrame{
 		progress.setLayout(new BorderLayout());
 		progress.add(activityLabel, BorderLayout.CENTER);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.pack();
+		//this.pack();
 		
 		progress.setIndeterminate(true);
 		
 //		this.add(logoPanel, BorderLayout.CENTER);
-		this.add(progress);
+		//this.add(progress);
+		logoPanel.add(progress);
+		this.add(logoPanel);
+		this.pack();
 	}
 	
 	public void setVisible(Boolean b){
