@@ -31,6 +31,7 @@
 [howToAddModels How to add models to GRAF]<br>
 [TestingDebuggingGraphs How to test and debug using graphs]<br>
 [creatingRulesForGRAF How to make new rules for GRAF]<br>
+[grafIntro A quick introduction to GRAF]
 
 === Project Documentation ===
 [Scope Scope]
