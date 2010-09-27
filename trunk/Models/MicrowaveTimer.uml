@@ -38,10 +38,10 @@
         <subvertex xmi:type="uml:State" xmi:id="_dzM8w0Z4Ed6JvpGL0b827A" name="NotCooking"/>
         <subvertex xmi:type="uml:State" xmi:id="_dzM8xEZ4Ed6JvpGL0b827A" name="Cooking">
           <entry xmi:type="uml:Activity" xmi:id="_kv068H8_Ed6qzudwZW-ZIQ" name="CookingEntry">
-            <node xmi:type="uml:SendSignalAction" xmi:id="_p3zhYH8_Ed6qzudwZW-ZIQ" name="sendCooked" signal="_06Xjcch0Ed-8V_aBLrSBsA">
+            <node xmi:type="uml:SendSignalAction" xmi:id="_p3zhYH8_Ed6qzudwZW-ZIQ" name="sendStartTimer" signal="_06Xjcch0Ed-8V_aBLrSBsA">
               <target xmi:type="uml:ActionInputPin" xmi:id="_tMch8H8_Ed6qzudwZW-ZIQ" name="foodPinB">
                 <upperBound xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uSMrQH9OEd6qzudwZW-ZIQ" value="*"/>
-                <fromAction xmi:type="uml:ReadStructuralFeatureAction" xmi:id="_RGpfcH9AEd6qzudwZW-ZIQ" name="getFoodB" structuralFeature="_-gNDEcVEEd-TL5TPOfrgdw">
+                <fromAction xmi:type="uml:ReadStructuralFeatureAction" xmi:id="_RGpfcH9AEd6qzudwZW-ZIQ" name="getActor" structuralFeature="_-gNDEcVEEd-TL5TPOfrgdw">
                   <object xmi:type="uml:ActionInputPin" xmi:id="_66ctkH9AEd6qzudwZW-ZIQ" name="selfActionInputPinB">
                     <upperBound xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0OoNcH9OEd6qzudwZW-ZIQ" value="*"/>
                     <fromAction xmi:type="uml:ReadSelfAction" xmi:id="__dBg4H9AEd6qzudwZW-ZIQ" name="selfReadB">
