@@ -57,6 +57,7 @@ public class GRAFSplash extends JFrame{
 		progress.setLayout(new BorderLayout());
 		progress.add(activityLabel, BorderLayout.CENTER);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.pack();
 		
 		progress.setIndeterminate(true);
 		
@@ -78,7 +79,7 @@ public class GRAFSplash extends JFrame{
 	}
 	
 	public static void setActivityString(String ac){
-		INSTANCE.activityLabel.setText(INSTANCE.progress.getValue() + "%: " + ac);
+		INSTANCE.activityLabel.setText(ac);
 	}
 	
 	public void repaint(){
