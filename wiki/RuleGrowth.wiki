@@ -9,15 +9,13 @@ UML defines 54 actions. Actions are one of two ways to move from one system stat
 
 Some actions, like !AcceptEventAction and !AcceptCallAction are just too broad to complete in 1 rule. We split it up into smaller sections for each case.
 
-== Mealy, Moore, entry, looping and exiting ==
+== Mealy and Moore ==
 *Affecting:* All actions <br>
-*Extra rules needed:* 2 to 4 times more <br>
+*Extra rules needed:* 2 times more <br>
 
 Actions go in activities and activities can be in states in state machines (Moore notation) or transitions in state machines (Mealy notation). Each alternative will make the underlying graph look different so rule will need a version for each notation.
 
-Furthermore, actions can be on entry, exit or looping in a state. This could mean another 2 versions of each action are needed. This problem could be avoided by designing rules with variable edges, though.
-
-And this isn't taking into account activites not in state machines, which could require even more rules.
+The difference between the 2 underlying graphs is too complicated to be dealt with by variable edges and nodes.
 
 == Graph homomorphism injectiveness ==
 *Affecting:* Maybe 40% of actions <br>
