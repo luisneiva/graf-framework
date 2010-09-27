@@ -2,9 +2,9 @@ package view;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.Graphics2D;
+import java.awt.GridLayout;
 import java.awt.Toolkit;
 
 import javax.swing.ImageIcon;
@@ -39,8 +39,9 @@ public class GRAFSplash extends JFrame{
 		
 	    Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 		
-		//this.setLayout(new FlowLayout());
 		this.setSize(400,20);
+		
+		this.setLayout(new GridLayout(1,1));
 //		this.setUndecorated(true);
 		this.setLocation(dim.width / 2 - 150, dim.height / 2 - 50);
 		
