@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU">
 	<head>
-		<!-- u4411120 2/07/2010 -->
-		<title>RuleDoc - acceptEventAction-WithActivity-Main-Mealy</title>
+		<!-- u4400154 16/09/2010 -->
+		<title>RuleDoc - acceptEventAction-WithoutActivity-SameState</title>
 		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 		<link rel="stylesheet" type="text/css" href="../styles/rules.css" media="screen" />
@@ -12,7 +12,7 @@
 	<body>
 		<div id="heading">
 			<h1>
-				acceptEventAction-WithActivity-Main-Mealy
+				acceptEventAction-WithoutActivity-SameState
 			</h1>
 		</div>
 		<div id="menu">
@@ -34,14 +34,14 @@
 					US Section 11.3.2 AcceptEventAction
 				</h2>
 				<p>
-					To see the rule description in the US pdf document,
+					To go to the page containing the rule description in the US pdf document,
 					<a href="../../UML_Superstructure_2-1-2_07-11-02.pdf#page=251">
 						click here
 					</a>.
 				</p>
-				<a href="../../GraphOutputs/acceptEventAction-WithActivity-Main-Mealy.dot.png">
+				<a href="../../GraphOutputs/acceptEventAction-WithoutActivity-SameState.dot.png">
 					<img 
-						src="../../GraphOutputs/acceptEventAction-WithActivity-Main-Mealy.dot.png"
+						src="../../GraphOutputs/acceptEventAction-WithoutActivity-SameState.dot.png"
 						alt="The dot-generated rule image"
 						title="Click to see the full-size version"
 					/>
@@ -52,7 +52,7 @@
 				<p>
 					Below is the xml file which defines the order in which the rules are executed. 
 				</p>
-					<iframe src="../../GTSRulesSeq.xml" width="100%">
+					<iframe src="../../GTSRulesSeq.xml">
 						Your browser does not support frames. 
 						<a href="../../GTSRulesSeq.xml" title="View the xml rule sequence file">
 							Click here
@@ -61,11 +61,15 @@
 				<h2>
 					Rationale
 				</h2>
-					<p>
-						This is an unremarkable variation of <a href="2.html">acceptEventAction-WithActivity-Main</a>.
-						If actions are on transitions (Mealy notation) rather than states (Moore notation) then the
-						graph will use different edges. This rule accounts for those differences.
+					<p>This variation deals with the special case in which the source and target of the transition are
+					the same state. The activeState remains the same, but a new behaviorExecution node is
+					created.
 					</p>
+				<!-- <h2>
+					Assumptions/Deviations from the Definition
+				</h2>
+					<p>
+					</p> -->
 			</div>
 		</div>
 	</body>
