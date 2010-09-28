@@ -35,11 +35,11 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Signal" xmi:id="_LbTkUMOUEd-0ubkK5XNOFg" name="doorClosedSignal"/>
     <packagedElement xmi:type="uml:Signal" xmi:id="_SxlOUMOUEd-0ubkK5XNOFg" name="doorOpenedSignal"/>
-    <packagedElement xmi:type="uml:Signal" xmi:id="_e2ApgMOUEd-0ubkK5XNOFg" name="timerExpiredSignal"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_e2ApgMOUEd-0ubkK5XNOFg" name="timerEaaaxpiredSignal"/>
     <packagedElement xmi:type="uml:Signal" xmi:id="_ilZFUMOUEd-0ubkK5XNOFg" name="buttonPressedSignal"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_TS3EgMOWEd-0ubkK5XNOFg" name="timerExpired  " signal="_e2ApgMOUEd-0ubkK5XNOFg"/>
+    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_XU1sMMOWEd-0ubkK5XNOFg" name="buttonPressed  " signal="_ilZFUMOUEd-0ubkK5XNOFg"/>
     <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_MCsCgMOWEd-0ubkK5XNOFg" name="doorClosed" signal="_LbTkUMOUEd-0ubkK5XNOFg"/>
     <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_QbICYMOWEd-0ubkK5XNOFg" name="doorOpened" signal="_SxlOUMOUEd-0ubkK5XNOFg"/>
-    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_TS3EgMOWEd-0ubkK5XNOFg" name="timerExpired" signal="_e2ApgMOUEd-0ubkK5XNOFg"/>
-    <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_XU1sMMOWEd-0ubkK5XNOFg" name="buttonPressed" signal="_ilZFUMOUEd-0ubkK5XNOFg"/>
   </packagedElement>
 </uml:Model>
