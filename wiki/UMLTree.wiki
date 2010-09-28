@@ -55,7 +55,7 @@ This [http://research.cs.queensu.ca/~stl/internal/uml2/unlocked/working/actions/
 These are most of the actions listed in the UML definition. Some of these actions might be generalisations of other actions, which means we don’t need to implement them.
 
 || Section in UML Definition and Name || Status ||
-|| 11.3.1 !AcceptCallAction || Research needed || 
+|| 11.3.1 !AcceptCallAction || DONE || 
 || 11.3.2 !AcceptEventAction || DONE || 
 || 11.3.5 !AddStructuralFeatureValueAction || DONE ||  
 || 11.3.6 !AddVariableValueAction || Research needed ||  
@@ -67,7 +67,7 @@ These are most of the actions listed in the UML definition. Some of these action
 || 11.3.12 !ClearStructuralFeatureAction || Research needed ||  
 || 11.3.13 !ClearVariableAction || Research needed || 
 || 11.3.14 !CreateLinkAction || Research needed ||  
-|| 11.3.15 !CreateLinkObjectAction || Research needed ||  
+|| 11.3.15 !CreateLinkObjectAction || DONE ||  
 || 11.3.16 !CreateObjectAction || DONE ||  
 || 11.3.17 !DestroyLinkAction || Research needed ||  
 || 11.3.18 !DestroyObjectAction || Research needed ||  
@@ -87,7 +87,7 @@ These are most of the actions listed in the UML definition. Some of these action
 || 11.3.40 !ReduceAction || Research needed ||  
 || 11.3.41 !RemoveStructuralFeatureValueAction || Research needed ||  
 || 11.3.42 !RemoveVariableValueAction || Research needed ||  
-|| 11.3.43 !ReplyAction || Research needed ||  
+|| 11.3.43 !ReplyAction || DONE ||  
 || 11.3.44 !SendObjectAction || Research needed ||  
 || 11.3.45 !SendSignalAction || DONE || 
 || 11.3.46 !StartClassifierBehaviorAction || Research needed ||  
