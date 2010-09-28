@@ -17,4 +17,4 @@ Date: 27/9/10
   * Alice - ruledoc and developer doc
   * Hamish - something from Stephen
   * Frank - implement timers
-  * Cameron - test the 4 new items of functionality
+  * Cameron - test the 4 new items of functionality and add introduction to the 4 new pieces of functionality in the 4 main models
