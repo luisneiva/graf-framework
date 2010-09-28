@@ -32,8 +32,8 @@
 || 13/9 || Review || [http://svn.anu.edu.au/SE_projects/GRAF/Review3.ppt Agenda] || [review3minutes Minutes] ||
 || 20/9 || Mentor || [agenda2009 Agenda] || [minutes2009 Minutes] ||
 || 20/9 || Client || [cagenda2009 Agenda] || [cminutes2009 Minutes] ||
-|| 21/9 || Technical || No Agenda || [tminutes2108 Minutes] ||
-|| 27/9 || Team || [agenda2709 Agenda] || [minutes2709 Minute] ||
+|| 21/9 || Technical || No Agenda || [tminutes2108 Minutess] ||
+|| 27/9 || Team || [agenda2709 Agenda] || [minutes2709 Minutes] ||
 || 28/9 || Mentor || [agenda2809 Agenda] || [minutes2809 Minutes] ||
 || 4/10 || Team || [agenda0410 Agenda] || [minutes0410 Minutes] ||
 || 4/10 || Client || [cagenda0410 Agenda] || [cminutes0410 Minutes] ||
