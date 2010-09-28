@@ -62,7 +62,7 @@ These are most of the actions listed in the UML definition. Some of these action
 || 11.3.7 !BroadcastSignalAction || Research needed ||  
 || 11.3.8 !CallAction || Research needed || 
 || 11.3.9 !CallBehaviorAction || Research needed ||  
-|| 11.3.10 !CallOperationAction || Research needed ||  
+|| 11.3.10 !CallOperationAction || DONE ||  
 || 11.3.11 !ClearAssociationAction || Research needed ||  
 || 11.3.12 !ClearStructuralFeatureAction || Research needed ||  
 || 11.3.13 !ClearVariableAction || Research needed || 
