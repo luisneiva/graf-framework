@@ -1,0 +1,20 @@
+#summary Minutes
+
+= Team Meeting =
+Date: 27/9/10
+<br>Location: CSIT N110
+<br>Present: Oscar, Stephen, Alice, Cameron, Hamish and Frank
+<br>Time: 1pm
+<br>Duration: 1 hour
+
+== Progress Reports ==
+  * Alice - made CreateLinkAction
+  * Hamish - discovered a defect
+  * Frank - improved debug tutorial
+  * Cameron - state machine images cannot be generated from Eclipse
+
+== Task Assignment ==
+  * Alice - ruledoc and developer doc
+  * Hamish - something from Stephen
+  * Frank - implement timers
+  * Cameron - test the 4 new items of functionality
