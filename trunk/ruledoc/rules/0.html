@@ -62,32 +62,14 @@
 					a specified condition'. The Action has a Trigger (the event) and a Result (an
 					output pin that holds the accepted event).
 				</p>
-				<p>This variation is the first option considered when the action is called, as part of
-					an exclusive dependency, which acts as a set of if-conditions. It will be
-					applied if the instance is not in a state for which the received event is a
-					trigger, or alternatively not in active state at all. 
-					The result is that the event is ignored.
+				<p>
+					At the bottom of the Exclusive Dependency, this rule executes if nothing else fits. It's the
+					simplest case possible - it just removes the pool edge.
 				</p>
 				<p>
-					In response to <a href="http://code.google.com/p/graf-framework/issues/detail?id=7">Issue 7</a>,
-					the following solution was implemented:
+					This event is for cases like when you send an ON signal to a light, but the light is already on -
+					the signal is just ignored.
 				</p>
-				<div class="extract">
-				acceptEventAction-AndIgnore was the problem. The NAC did fit onto the graph, but the NAC didn't stop the execution because other parallel parts of the graph were also available. See the new image attached.
-				<img src="../../GraphOutputs/issue7version2.png" />
-				<br />AGG will only apply the NAC once, even if it fits in multiple places.
-				<br />AGG needs a whole new NAC on each of the multiple fits for it to stop execution.
-				<br />This is very bad for us because we want the rule to not execute if the NAC fits ANYWHERE not if it fits EVERYWHERE.
-				<br/ >I've solved the problem, but the solution is massively inelegant. I added 2 more versions of acceptEventAction-AndIgnore. These 3 rules go in a new action. The 2 new rules are like the original but they have duplicate event-trigger-source branches. See attachment. This is very undesirable because it only works if there's 1, 2 or 3 transitions going out of 1 state. If there were 4 then we'd need to add another rule.
-				<br />The model now works fine, but I'm keeping this issue open because we need to find a better solution.
-				</div>
-				<p>
-					The additional rules are the following:
-				</p>
-				<ul>
-					<li><a href="../../GraphOutputs/acceptEventAction-AndIgnore-TwoTriggers.dot.png">acceptEventAction-AndIgnore-TwoTriggers</a></li>
-					<li><a href="../../GraphOutputs/acceptEventAction-AndIgnore-ThreeTriggers.dot.png">acceptEventAction-AndIgnore-ThreeTriggers</a></li>
-				</ul>
 			</div>
 		</div>
 	</body>
