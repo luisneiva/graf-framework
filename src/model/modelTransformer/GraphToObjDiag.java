@@ -363,7 +363,7 @@ public class GraphToObjDiag implements GraphToModel {
 					Node type = ListGraph.toTrace(check,evNode).get(0);
 					if(ListGraph.getName(type).equals("ReceiveSignalEvent")) {
 						object.addEvent(evNode, recieptNode);
-					}					
+					}
 				}
 			}
 		}
