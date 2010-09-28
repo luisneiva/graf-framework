@@ -52,7 +52,7 @@ The action nodes are connected by !ActionInputPins. I'm not sure what they do ex
 = Relevant link =
 This [http://research.cs.queensu.ca/~stl/internal/uml2/unlocked/working/actions/PrioritizingActions_v1.doc link] categorizes the actions really well.
 
-These are most of the actions listed in the UML definition. Some of these actions might be generalisations of other actions, which means we don’t need to implement them.
+These are most of the actions listed in the UML definition. Some of these actions might be generalisations of other actions, which means we don’t need to implement them. This doesn't include abstract actions.
 
 || Section in UML Definition and Name || Status ||
 || 11.3.1 !AcceptCallAction || DONE || 
@@ -60,7 +60,6 @@ These are most of the actions listed in the UML definition. Some of these action
 || 11.3.5 !AddStructuralFeatureValueAction || DONE ||  
 || 11.3.6 !AddVariableValueAction || Research needed ||  
 || 11.3.7 !BroadcastSignalAction || Research needed ||  
-|| 11.3.8 !CallAction || Research needed || 
 || 11.3.9 !CallBehaviorAction || Research needed ||  
 || 11.3.10 !CallOperationAction || DONE ||  
 || 11.3.11 !ClearAssociationAction || Research needed ||  
@@ -71,8 +70,6 @@ These are most of the actions listed in the UML definition. Some of these action
 || 11.3.16 !CreateObjectAction || DONE ||  
 || 11.3.17 !DestroyLinkAction || Research needed ||  
 || 11.3.18 !DestroyObjectAction || Research needed ||  
-|| 11.3.20 !InvocationAction || Research needed ||  
-|| 11.3.21 1LinkAction || Research needed ||  
 || 11.3.26 !OpaqueAction || Research needed ||  
 || 11.3.30 !RaiseExceptionAction || Research needed ||  
 || 11.3.31 !ReadExtentAction || Research needed ||  
@@ -91,11 +88,6 @@ These are most of the actions listed in the UML definition. Some of these action
 || 11.3.44 !SendObjectAction || Research needed ||  
 || 11.3.45 !SendSignalAction || DONE || 
 || 11.3.46 !StartClassifierBehaviorAction || Research needed ||  
-|| 11.3.47 !StructuralFeatureAction || Research needed ||  
 || 11.3.48 !TestIdentityAction || Research needed ||  
 || 11.3.49 !UnmarshallAction || Research needed ||  
 || 11.3.51 !ValueSpecificationAction || Research needed ||  
-|| 11.3.52 !VariableAction || Research needed ||  
-|| 11.3.53 !WriteLinkAction || Research needed ||  
-|| 11.3.54 !WriteStructuralFeatureAction || Research needed ||  
-|| 11.3.55 !WriteVariableAction || Research needed ||  
