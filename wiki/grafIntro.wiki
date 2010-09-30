@@ -20,6 +20,6 @@ This model was produced by the 2009 group.
 
 === Racer === 
 
-[http://code.google.com/p/graf-framework/downloads/detail?name=microwave.jpg&can=2&q=]
+http://graf-framework.googlecode.com/files/microwave.jpg
 
 === TE00 ===
