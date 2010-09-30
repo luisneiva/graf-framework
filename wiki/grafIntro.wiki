@@ -4,14 +4,22 @@
 
 === Elevator ===
 
+
+
 === If Test ===
 
-=== Microwave Tutorial ===
+This model was used to test the teams implementation of if statements within GRAF
 
 === Microwave Timer ===
 
+This model is the simpler of the 2 models supplied to Shayne Flint for potential use in conjunction with the teaching of COMP 3110
+
 === Microwave with Integer ===
 
+This model was produced by the 2009 group.
+
 === Racer === 
+
+[http://code.google.com/p/graf-framework/downloads/detail?name=microwave.jpg&can=2&q=]
 
 === TE00 ===
