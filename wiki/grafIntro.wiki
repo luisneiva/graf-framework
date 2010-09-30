@@ -16,7 +16,7 @@ This model is the simpler of the 2 models supplied to Shayne Flint for potential
 
 === Microwave with Integer ===
 
-This model was produced by the 2009 group.
+This model was intially added to GRAF by the 2009 project team
 
 http://graf-framework.googlecode.com/files/microwave.jpg
 
