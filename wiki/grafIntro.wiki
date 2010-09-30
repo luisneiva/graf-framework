@@ -18,8 +18,12 @@ This model is the simpler of the 2 models supplied to Shayne Flint for potential
 
 This model was produced by the 2009 group.
 
-=== Racer === 
-
 http://graf-framework.googlecode.com/files/microwave.jpg
 
+=== Racer === 
+
+Blah Bitty Blah
+
 === TE00 ===
+
+CreateObjectInstance Test
