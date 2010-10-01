@@ -12,7 +12,7 @@ Date: 28/9
 
 == General Discussion == 
   * James thinks we got about 7.5/10 for the review and the group is ranked 4
-  * James doesn't think any company would have the time to spend using GRAF
+  * James doesn't think any company would have time to use GRAF
 
 == Decisions ==
   * We won't implement any "refresh" on if-statements returning false because it's clearer what's happening the way it is
