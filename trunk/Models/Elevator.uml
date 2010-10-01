@@ -4,7 +4,7 @@
     <packagedElement xmi:type="uml:Class" xmi:id="_b3muMX61Ed-TKunu4J1dAA" name="Elevator" classifierBehavior="idStateMachine">
       <ownedBehavior xmi:type="uml:StateMachine" xmi:id="idStateMachine" name="ElevatorStateMachine">
         <region xmi:id="_B2QiUMRoEd-8gYqjvrhDPg" name="TopRegion">
-          <subvertex xmi:type="uml:State" xmi:id="_Ffi9MMRoEd-8gYqjvrhDPg" name="1">
+          <subvertex xmi:type="uml:State" xmi:id="_Ffi9MMRoEd-8gYqjvrhDPg" name="2">
             <region xmi:id="_n1wC4KHuEd-aSpRtShx1dQ" name="Elevator2Region">
               <subvertex xmi:type="uml:Pseudostate" xmi:id="_3l_ogKHuEd-aSpRtShx1dQ" name="9"/>
               <subvertex xmi:type="uml:State" xmi:id="_GHaDgKHvEd-aSpRtShx1dQ" name="10">
@@ -46,6 +46,8 @@
               </transition>
             </region>
           </subvertex>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_8OEEEc0VEd-qSdNLlVlWHg" name="1"/>
+          <transition xmi:id="_AhSz0M0WEd-qSdNLlVlWHg" name="topInitialTrans" source="_8OEEEc0VEd-qSdNLlVlWHg" target="_Ffi9MMRoEd-8gYqjvrhDPg"/>
         </region>
       </ownedBehavior>
     </packagedElement>
