@@ -1,0 +1,19 @@
+#summary Minutes
+
+= Mentor Meeting =
+Date: 28/9
+<br>Location: In the sunshine
+<br>Present: James, Oscar, Stephen, Alice, Cameron, Hamish and Frank
+<br>Time: 1pm
+<br>Duration: 1 hour
+
+== Preshowcase Presentation ==
+  * Developed plan, which will be put up somewhere
+
+== General Discussion == 
+  * James thinks we got about 7.5/10 for the review and the group is ranked 4
+  * James doesn't think any company would have the time to spend using GRAF
+
+== Decisions ==
+  * We won't implement any "refresh" on if-statements returning false because it's clearer what's happening the way it is
+  * We'll abandon proper object placement because we have no big models
