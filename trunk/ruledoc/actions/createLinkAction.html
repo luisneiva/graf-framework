@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU">
+	<head>
+		<!-- u4411120 2/07/2010 -->
+		<title>RuleDoc - CreateLinkAction</title>
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<link rel="stylesheet" type="text/css" href="../styles/rules.css" media="screen" />
+		<style type="text/css" id="pageStyles">
+		</style>
+	</head>
+	<body>
+		<div id="heading">
+			<h1>
+				CreateLinkAction
+			</h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="createObjectAction.html">Back</a>
+				</li>
+				<li>
+					<a href="../index.html">Up to Index</a>
+				</li>
+				<li>
+					<a href="#.html">Next</a>
+				</li>
+			</ul>
+		</div>
+		<div id="content">
+			<div id="middlecolumn">
+				<h2>
+					US Section 11.3.14
+				</h2>
+				<p>
+					To go to the page containing the full rule description in the US pdf document,
+					<a href="../../UML_Superstructure_2-1-2_07-11-02.pdf#page=266">
+						click here
+					</a>. Relevant sections are extracted below.
+				</p>
+				<div class="extract">
+				<h3>
+					Generalizations
+				</h3>
+				<p>
+					WriteLinkAction (from IntermediateActions) on page 291
+				</p>
+				<h3>
+					Description
+				</h3>
+				<p>
+					This action can be used to create links and link objects. There is no return value in either case. This is so that no change
+					of the action is required if the association is changed to an association class or vice versa. CreateLinkAction uses a
+					specialization of LinkEndData called LinkEndCreationData, to support ordered associations. The insertion point is
+					specified at runtime by an additional input pin, which is required for ordered association ends and omitted for unordered
+					ends. The insertion point is an integer greater than 0 giving the position to insert the link, or unlimited, to insert at the
+					end. Reinserting an existing end at a new position in an ordered unique structural feature moves the end to that position.
+					CreateLinkAction also uses LinkEndCreationData to support the destruction of existing links of the association that
+					connect any of the objects of the new link. When the link is created, this option is available on an end-by-end basis, and
+					causes all links of the association emanating from the specified ends to be destroyed before the new link is created.
+				</p>	
+				<h3>	
+					Associations
+				</h3>
+					<ul>
+						<li>endData : LinkEndCreationData [2..*]<br />
+						Specifies ends of association and inputs. (Redefines LinkAction::endData)</li>
+					</ul>
+				<h3>
+					Constraints
+				</h3>
+					<ol>
+						<li>The association cannot be an abstract classifier.</li>
+					</ol>
+				<h3>
+					Semantics
+				</h3>
+				<p>
+					CreateLinkAction creates a link or link object for an association or association class. It has no output pin, because links
+					are not necessarily values that can be passed to and from actions. When the action creates a link object, the object could
+					be returned on output pin, but it is not for consistency with links. This allows actions to remain unchanged when an
+					association is changed to an association class or vice versa. The semantics of CreateLinkObjectAction applies to creating
+					link objects with CreateLinkAction.
+				</p>	
+				<p>	
+					This action also supports the destruction of existing links of the association that connect any of the objects of the new
+					link. This option is available on an end-by-end basis, and causes all links of the association emanating from the specified
+					ends to be destroyed before the new link is created. If the link already exists, then it is not destroyed under this option;
+					otherwise, recreating an existing link has no effect if the structural feature is unordered and non-unique.
+					The semantics is undefined for creating a link for an association class that is abstract. The semantics is undefined for
+					creating a link that violates the upper multiplicity of one of its association ends. A new link violates the upper multiplicity
+					of an end if the cardinality of that end after the link is created would be greater than the upper multiplicity of that end.
+					The cardinality of an end is equal to the number of links with objects participating in the other ends that are the same as
+					those participating in those other ends in the new link, and with qualifier values on all ends the same as the new link, if
+					any.
+				</p>
+				<p>	
+					The semantics is undefined for creating a link that has an association end with isReadOnly=true after initialization of the
+					other end objects, unless the link being created already exists. Objects participating in the association across from a
+					writeable end can have links created as long as the objects across from all read only ends are still being initialized. This
+					means that objects participating in links with two or more read only ends cannot have links created unless all the linked
+					objects are being initialized.
+				</p>	
+				<p>	
+					Creating ordered association ends requires an insertion point for a new link using the insertAt input pin of
+					LinkEndCreationData. The pin is of type UnlimitedNatural with multiplicity of 1..1. A pin value that is a positive integer
+					less than or equal to the current number of links means to insert the new link at that position in the sequence of existing
+					links, with the integer one meaning the new link will be first in the sequence. A value of unlimited for insertAt means to
+					insert the new link at the end of the sequence. The semantics is undefined for value of zero or an integer greater than the
+					number of existing links. The insertAt input pin does not exist for unordered association ends. Reinserting an existing end
+					at a new position in an ordered unique structural feature moves the end so that it is in the position specified after the
+					action is complete.
+				</p>
+				</div>
+				<h2>
+					Discussion
+				</h2>
+					<p>
+						Note that this Action inherits an input pin from its grandparent "LinkAction" - the pin is defined as inputValue : InputPin [1..*]. 
+						This input pin allows us to specify which object/s is/are to be linked.
+					</p>
+					<p>
+						There are many circumstances in which this Action could be executed. In our implementation, we assume that the calling object wants to link itself
+						to a second object, which is placed on the input pin. However, on the above definition the calling object could also create a link between
+						two other objects. 
+					</p>
+					<p>
+						A further point is that this Action can only create new instances of links that are specified in the model. Further, it will only link objects
+						of different types.
+					</p>
+					<p>
+						The model which we used to implement and test this Action involved the calling object first creating a new object, then linking itself to it.
+						This meant that the Action's inputPin did not link to an existing object, but to an Action which would create the object and place it on its
+						own outputPin. In implementing the rule, I tried to make a general solution that will apply where the target object is nested several layers 
+						deep in this manner, but also where the object is placed directly on the pin. This pattern of implementation could be used for any rule that
+						has to 'traverse' a tree in this way - such as more complex instances of ReplyAction.
+					</p>
+					<p>
+						In brief, the idea is that the 'Initialise' stage creates a special arc ('toLink') between the Action node and the node on the output pin. If this is an object,
+						the following two rules won't apply and the Main rule will execute. If the object on the output pin is an Action, with another Action on its output pin, the
+						TraverseN rule will apply and move the toLink arc to the output pin of the second Action (ie moving one step further down the tree). This is applied in a loop
+						until the rule no longer matches, traversing the tree. If the object on the output pin is an Action, but that Action's output pin holds an object (ie the bottom
+						of the tree has been reached), the Traverse1 rule will apply, adding the toLink arc to the object on the output pin. The Main rule can then apply, adding the 
+						association arcs and removing the toLink arc.
+					</p>
+					<p>
+						Clearly, none of this is provided for by the Specification - it is merely for solving the problem of tree traversal. Problems with this method include that if
+						the tree branches at any point (for example if one of the nested actions has two action output pins), it is possible that the rules will 'follow' the wrong 
+						branch and either link the wrong object, or find no object to link. More rules, and a more sophisticated use of the loop and XOR structures in the .seq file
+						should be able to solve this problem, however.
+					</p>
+					<p>
+						We have not implemented the destruction-of-links function mentioned in the second paragraph of the Semantics section above.
+					</p>
+				<h2>
+					Rules that implement this action:
+				</h2>
+				<ul>
+					<li><a href="../rules/20.html">createLinkAction-Initialise</a></li>
+					<li><a href="../rules/21.html">createLinkAction-TraverseN</a></li>
+					<li><a href="../rules/22.html">createLinkAction-Traverse1</a></li>
+					<li><a href="../rules/23.html">createLinkAction-Main</a></li>
+				</ul>
+				<p>
+					Below is the xml file which defines the order in which the rules are executed
+					when a particular action is called. 
+				</p>
+					<iframe src="../../GTSRulesSeq.xml">
+						Your browser does not support frames. 
+						<a href="../../GTSRulesSeq.xml" title="View the xml rule sequence file">
+							Click here
+						</a> to see the file.
+					</iframe>
+				
+			</div>
+		</div>
+	</body>
+</html>
