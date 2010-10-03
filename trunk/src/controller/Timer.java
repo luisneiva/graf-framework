@@ -28,8 +28,43 @@ public class Timer {
 	//TODO add a listener attribute
 	
 	public Timer(ListGraph graph, ArrayList<ODObject> objects) {
-		//TODO set timedObjects
+		//TODO set timedObjects:
 		// timedObjects is the objects which have sent a message to the actor
+		
+		// First find the Actor node
+		Node actor = null;
+		for(Arc edge : graph.getArcsList()) {
+			if(ListGraph.getName(edge.getTarget()).equals("Actor")) {
+				actor = (Node)edge.getTarget();
+				break;
+			}
+			if(ListGraph.getName(edge.getSource()).equals("Actor")) {
+				actor = (Node)edge.getSource();
+				break;
+			}
+		}
+		
+		ArrayList<String> fromInstances = new ArrayList<String>();
+		fromInstances.add("i");
+		
+		ArrayList<Node> actorInstances = ListGraph.fromTrace(fromInstances, actor);
+		
+		ArrayList<String> findObjectRoute = new ArrayList<String>();
+		findObjectRoute.add("pool");
+		findObjectRoute.add("message");
+		findObjectRoute.add("sender");
+
+		// Find objects
+		ArrayList<Node> findObjects = new ArrayList<Node>(); 
+		for(Node actorInstance : actorInstances) {
+			findObjects = ListGraph.toTrace(findObjectRoute, actorInstance);
+			System.out.println("Timer: Find an object -> size: " + findObjects.size());
+			for (Node objectNode : findObjects) {
+				System.out.println("Find an object -> name: " + ListGraph.getName(objectNode));
+			}
+		}
+		
+		
 		
 		//TODO set time by looking at the property of the received signal
 	}
