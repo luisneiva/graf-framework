@@ -152,7 +152,7 @@
   <packagedElement xmi:type="uml:ReceiveSignalEvent" xmi:id="_06XjcMh0Ed-8V_aBLrSBsA" name="startTimer" signal="_06Xjcch0Ed-8V_aBLrSBsA"/>
   <packagedElement xmi:type="uml:Signal" xmi:id="_06Xjcch0Ed-8V_aBLrSBsA" name="startTimerSignal">
     <ownedAttribute xmi:id="_t_ILcMh7Ed-8V_aBLrSBsA" name="setTimer">
-      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_x_kiEMh7Ed-8V_aBLrSBsA" value="5"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_x_kiEMh7Ed-8V_aBLrSBsA" value="20"/>
     </ownedAttribute>
   </packagedElement>
 </uml:Package>
