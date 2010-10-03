@@ -32,7 +32,7 @@ public class GrafTimer {
 	private Integer timerValue = 0;
 	
 	private Timer t;
-	private Integer delaySec;  // milliseconds between timer ticks
+	private Integer delaySec, initDelaySec;  // milliseconds between timer ticks
 	
 	//TODO add a listener attribute
 	
@@ -78,12 +78,12 @@ public class GrafTimer {
 		
 		for(Node actorInstance : actorInstances) {
 			findObjects = ListGraph.toTrace(findObjectRoute, actorInstance);
-			System.out.println("Timer: Find an object -> size: " + findObjects.size());
+//			System.out.println("Timer: Find an object -> size: " + findObjects.size());
 			for (Node objectNode : findObjects) {
-				System.out.println("Find an object -> name: " + ListGraph.getName(objectNode));
+//				System.out.println("Find an object -> name: " + ListGraph.getName(objectNode));
 				//add object to timedObjects. add to timedObjects the ODObject in the input parameter "objects" that has the same name m1.
 				for(ODObject odo : objects) {
-					System.out.println("odo's name: " + odo.getName());
+//					System.out.println("odo's name: " + odo.getName());
 					if(odo.getName().equals(ListGraph.getName(objectNode))) {
 						timedObjects.add(odo);
 					}
@@ -93,21 +93,30 @@ public class GrafTimer {
 			findTimerProperty = ListGraph.toTrace(findSetTimerRoute, actorInstance);
 			for (Node timerPropNode : findTimerProperty) {
 				timerValue = Integer.parseInt(ListGraph.getName(timerPropNode));
-				System.out.println("Find Timer property -> timer value: " + timerValue);
+//				System.out.println("Find Timer property -> timer value: " + timerValue);
 				delaySec = timerValue * 1000;
+//				initDelaySec = delaySec;
+				System.out.println("\tTimer STARTS:");
 				
-				class AntMovementTimerListener implements ActionListener
-				{
-					int randX = 0, randY = 0;
-					Double d;
-					public void actionPerformed(ActionEvent event) {
-						
-					}
+//				class AntMovementTimerListener implements ActionListener
+//				{
+//					public void actionPerformed(ActionEvent event) {
+//						t.stop();
+//					}
+//				}
+//
+//				ActionListener antMoveListener = new AntMovementTimerListener();
+//				t = new Timer(delaySec, antMoveListener);
+//				t.setInitialDelay(initDelaySec);
+//				t.start();
+				
+				try {
+					Thread.sleep(delaySec);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
 				}
-
-				ActionListener antMoveListener = new AntMovementTimerListener();
-				t = new Timer(delaySec, antMoveListener);
-				t.start();
+				
+				System.out.println("\tTimer OVER.");
 			}
 		}
 		
