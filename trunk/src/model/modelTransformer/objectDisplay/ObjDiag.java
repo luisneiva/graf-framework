@@ -2,17 +2,17 @@ package model.modelTransformer.objectDisplay;
 
 import java.util.ArrayList;
 
-import controller.Timer;
+import controller.GrafTimer;
 
 public class ObjDiag extends ObjectDisplay {
 	
 	/** Links in object diagram representation of graph */
 	private ArrayList<ODLink> odLinks;
 	
-	private Timer timer;
+	private GrafTimer timer;
 
 	public ObjDiag() {}
-	public ObjDiag(ArrayList<ODObject> objects, ArrayList<ODLink> links, Timer timer) {
+	public ObjDiag(ArrayList<ODObject> objects, ArrayList<ODLink> links, GrafTimer timer) {
 		this(objects, links);
 		this.timer = timer;
 	}
