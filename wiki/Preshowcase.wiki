@@ -1,0 +1,60 @@
+#summary Preshowcase presentation preparation
+
+==3100 Pre-Showcase Presentation==
+1.Statement of Purpose<br>
+2.Define GRAF<br>
+ a.Define: Animator<br>
+  i.What it is<br>
+  ii.Why animate?<br>
+   1.Educate (yourself and others)<br>
+   2.Understand (the model. The client seeks to address the scenario in which a model is ‘sketched’ as a loose concept and then presented to others as a definition of what needs to be done. How can we guarantee that the author’s idea is captured? One way might be for the author to verify their own model by ‘stepping through’ (animating) and making sure that it works as they expect. That way others can do the same thing and get the same result, and everyone has the same view of what the model should do)<br>
+   3.Part of a tool-chain to create a high-level view of code. This is necessary if we are to take MDD seriously.<br>
+  iii.Other examples & problems with them including:<br>
+   1.Expense<br>
+   2.Unavailability<br>
+   3.No ‘definitive’ implementation of UML - or attention paid to differences/assumptions/deviations. UML isn’t just diagrams. It also defines behaviour. UML is large and complex. The proprietary tools give an 0th level answer as to what a model means and does – there is no explanation and the user must take it on faith. Because UML is loosely defined, any animator’s interpretation is just that – one of several possible interpretations. Generally, animators will not make this explicit. Why should they? Their interpretation may not be wrong, exactly, But realising that different interpretations are possible is important. <br>
+   4.Demonstration of ‘semaphore’ model – pose question “what happens next?” Answer: it’s a trick question. UML is defined as non-deterministic, so either result is valid.<br>
+   5.In GRAF, we aim to explicitly ‘drill down’ to the underlying UML. It is possible to view GRAF’s operations from the:<br>
+    a.Conceptual level (same as other animators)<br>
+    b.UML<br>
+    c.UML + Graph-Transformations<br>
+    d.UML + Graph-Transformations + Greg’s thesis research (provability)<br>
+   6.While GRAF makes assumptions and deviates from the definition in some ways, we have attempted to document how and where this has occurred. <br>
+ b.Define: Graph-transformations<br>
+  i.What are they?<br>
+  ii.How is that applied to UML?<br>
+   1.Give a simple example<br>
+  iii.Why is that useful?<br>
+ c.Define: Reference<br>
+  i.What it originally meant v what it means to GRAF<br>
+ d.Define: Framework (i.e. GRAF should be extensible to languages other than UML)<br>
+ e.Re-state definitions as one sentence (refer to statement of purpose)<br>
+ f.Technology used by GRAF<br>
+ i.Eclipse/java<br>
+  1.Why did we choose Eclipse?<br>
+ ii.AGG<br>
+  1.Why AGG?<br>
+ g.Step-through simple transformation with “cross-section” style view of what is happening on different levels of GRAF<br>
+  i.Conceptual<br>
+  ii.UML<br>
+  iii.Graph-transformations<br>
+3.This Year’s Project<br>
+  a.What we’ve done<br>
+   i.Coverage of GRAF as a % of UML Actions<br>
+   ii.Additional new functionality<br>
+   iii.Evaluation of what we’ve done with reference to the success criteria<br>
+  b.How will this help our client?<br>
+   i.State the client’s original goals and their context (Greg’s thesis, desire to create ‘technology transfer’ across from academia to industry)<br>
+   ii.Conceptual/ practical problems with GRAF as an industry project<br>
+   iii.Emerging/ changed goals<br>
+    1.Education (how/why this happened)<br>
+    2.Other changes eg to scope<br>
+4.GRAF in the Future<br>
+ a.Challenges<br>
+  i.New functionality<br>
+  ii.New users/ uses for GRAF<br>
+  iii.Extending the GUI interface<br>
+  iv.Integrating with existing tools<br>
+ b.Opportunities<br>
+  i.UML – one of the most widely-used, most misunderstood languages <br>
+  ii.‘technology transfer’<br>
