@@ -32,7 +32,8 @@ public class GrafTimer {
 	private Integer timerValue = 0;
 	
 	private Timer t;
-	private Integer delaySec, initDelaySec;  // milliseconds between timer ticks
+	private Integer delaySec;  // milliseconds between timer ticks  initDelaySec
+	private Boolean isFirst = true;
 	
 	//TODO add a listener attribute
 	
@@ -98,29 +99,26 @@ public class GrafTimer {
 //				initDelaySec = delaySec;
 				System.out.println("\tTimer STARTS:");
 				
-//				class AntMovementTimerListener implements ActionListener
-//				{
-//					public void actionPerformed(ActionEvent event) {
-//						t.stop();
-//					}
-//				}
-//
-//				ActionListener antMoveListener = new AntMovementTimerListener();
-//				t = new Timer(delaySec, antMoveListener);
-//				t.setInitialDelay(initDelaySec);
-//				t.start();
-				
-				try {
-					Thread.sleep(delaySec);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
+				class AntMovementTimerListener implements ActionListener
+				{
+					public void actionPerformed(ActionEvent event) {
+						if(!isFirst) {
+							System.out.println("ONLY ONCE.");
+							t.stop();
+						}
+						else {
+							isFirst = false;
+						}
+					}
 				}
-				
-				System.out.println("\tTimer OVER.");
+
+				ActionListener antMoveListener = new AntMovementTimerListener();
+				t = new Timer(delaySec, antMoveListener);
+				t.start();
 			}
 		}
 		
-		System.out.println("\tFinding object OVER. Look for Timer property");
+		System.out.println("\tAll OVER.");
 		
 		//TODO set time by looking at the property of the received signal
 	}
