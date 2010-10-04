@@ -1,0 +1,46 @@
+#summary Minutes for team meeting 4-Oct-2010
+
+= Progress Reports & Task Setting =
+
+Cameron - finding errors in GRAF
+  * GRAF opens behind Eclipse
+  * invoice test
+    * change an attribute to something different - it creates an association
+    * make an attribute anything other than the string it's supposed to be - the attribute will disappear
+    * what happens when incorrectly naming one end of an association? Nothing
+    * create two associations betweeen objects - the text and lines perfectly overlap
+  * TODO finish Shayne's complex model, find errors in new functionality
+
+Oscar
+  * setting times for next meetings (Wednesday afternoon)
+  * reviewing notes from presentation discussions with mentor & client
+  * what could the group have used at the beginning of the year that we didn't have 
+    * extended graph transformation tutorial
+  * TODO post Techincal Details email series to googlecode
+
+Frank
+  * Added code to the timer class - at the moment it pauses GRAF. The _message_ should be delayed for 5 seconds instead - should still be able to use the rest of the application
+  * TODO keep working on timers
+
+Alice
+  * Done CreateLinkAction documentation
+  * TODO Rule Tutorial, bash script for image conversion
+
+Stephen
+  * TODO updated quickstart guide
+
+= Document Review =
+
+  * The How GRAF Works page: Cameron to review
+  * Why is GRAF a reference?: Not relevant - move off main page
+  * A quick intro to GRAF: Cameron to complete
+  * Model Tools: Alice to review - the main thing is that there is a conclusion about each model that makes sense
+  * Other UML Animators: Frank to review
+  * Eclipse UML Tree: Hamish to review
+  * Visual Paradigm and Topcased: Alice to review 
+  * How to make models for GRAF using Topcased: Alice to integrate into the above page
+  * How to add models to GRAF - may incorporate both of the above: Alice to rationalise
+  * Invoicer model: to be moved off main page
+  * Quickstart Guide: Frank to review
+  * How to test and debug using GRAF: Cameron to review 
+  * How to make new rules to GRAF: Alice to complete
