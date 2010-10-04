@@ -99,7 +99,7 @@ public class GrafTimer {
 //				initDelaySec = delaySec;
 				System.out.println("\tTimer STARTS:");
 				
-				class AntMovementTimerListener implements ActionListener
+				class TimerListener implements ActionListener
 				{
 					public void actionPerformed(ActionEvent event) {
 						if(!isFirst) {
@@ -112,8 +112,8 @@ public class GrafTimer {
 					}
 				}
 
-				ActionListener antMoveListener = new AntMovementTimerListener();
-				t = new Timer(delaySec, antMoveListener);
+				ActionListener timerListener = new TimerListener();
+				t = new Timer(delaySec, timerListener);
 				t.start();
 			}
 		}
