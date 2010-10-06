@@ -2,53 +2,47 @@
 
 WORK IN PROGRESS
 
-= Introduction =
-
-This tutorial uses Create Link Action as an example for how to add rules to GRAF.
+This tutorial describes the steps required to add an Action to GRAF - including how to add the Action to the model file and how to make Rules that implement its execution.
 
 = 1. Identify the relevant UML Section =
 
-  * For Create Link Action, it's 11.3.14.
-  * The most important sections are:
-    * Description: what the Action is supposed to do
-{{{
-Description 
+Find the section in the Specification that talks about the Action you want to implement. It should be part of Chapter 13. Once you've found it, the most important sub-sections are:
+  * Description: what the Action is supposed to do
+  * Attributes, Associations: these features are used during execution - they may need to be added to the model
+    * Note that 'no additional attributes/associations' may indicate that the Action inherits attributes or associations from a parent Action.  
 
-This action can be used to create links and link objects. There is no return value in either case. This is so that no change
-of the action is required if the association is changed to an association class or vice versa. CreateLinkAction uses a
-specialization of LinkEndData called LinkEndCreationData, to support ordered associations. The insertion point is
-specified at runtime by an additional input pin, which is required for ordered association ends and omitted for unordered
-ends. The insertion point is an integer greater than 0 giving the position to insert the link, or unlimited, to insert at the
-end. Reinserting an existing end at a new position in an ordered unique structural feature moves the end to that position.
-CreateLinkAction also uses LinkEndCreationData to support the destruction of existing links of the association that
-connect any of the objects of the new link. When the link is created, this option is available on an end-by-end basis, and
-causes all links of the association emanating from the specified ends to be destroyed before the new link is created.
-}}}
+= 2. Add the Action to the UML Model =
 
-    * Attributes, Associations: these features are used during execution - they may need to be added to the model. 
-{{{
-Attributes
-No additional attributes
-}}}
-    'No additional attributes' may mean that the Action inherits attributes from a parent Action.
-{{{
-Associations
-• end Data : Link End Creation Data [2..*]
-Specifies ends of association and inputs. (Redefines Link Action::end Data)
-}}}
+  # Open the .uml file in Eclipse's UML Editor
+  # Add the Action to the model tree
+    # Actions can be added as part of a State Machine, or a Method. 
+      # State Machine:
+        * Add an Activity to the State (right-click on the state, then select New Child -> Do Activity -> Activity)
+        * Right-click on the Activity, then select New Child -> Node -> [the Action]
+      # Method:
+        * Add an Activity to the Class (right-click on the class, then select New Child -> Classifier Behavior -> Activity). This Activity is treated like a Method by UML. Give the Activity a unique name by editing the Properties view (right-click on the Activity, select Show Properties View)
+        * Right-click on the Activity, then select New Child -> Node -> [Action]
+        * Add an Operation to the Class. Give the Operation a unique name. The Operation acts as an interface for other classes to access the Method.
+        * Click on the Method field in the Operation's Properties view, then the [...] button that appears, to open a dialogue. Select the method Activity and click OK. 
+  # Fill in any other Properties that will be used in implementing the rule. These are the Action's Attributes from the Specification.
+  # Add 'child' objects that correspond to the Action's Associations (right-click, New Child -> [Association] -> [Object]).
+    # Name and fill in the required properties of the child objects - you may not need all the fields.
+  # Open and edit the Properties.txt file so that `Printgraphs` is set to true.
+  # Run GRAF. Select the model you just edited and open it. Click through until the new Action becomes available to generate the .dot file 'image' of the underlying GRAF.
+  # Click on the new Action when it appears - you should see an error message.
+  # Exit GRAF.
 
-= 2. Modifying the UML Model =
-This step might be unnecessary if the model already includes the Action.<br>
+= A more complicated Example =
 
-  # Add the Action to the model tree. Create Link Action is part of a Method in this model, so it should be added to one of Reply Action's Action Output Pins.
+    # All Methods should include ReplyAction as the 'topmost' Action. This is because a Method should always return its result to the object that calls it. 
+    # For this example, our Method will create a new object, create a link between the new object and an existing object, and return the result to the calling object.
+      * That is, the Method will contain CreateObjectAction, CreateLinkAction, and ReplyAction.
+    # The Method is set up as described above:
+    # ReplyAction is added:
+    # ReplyAction has two input pins, ReturnValue and ReplyValue. The ReturnValue doesn't concern us, as it is 
     # Add the Action Input Pin, and give it a unique name by editing the 'Name' field in the Properties view
     # Add Create Link Action as a child of the input pin, and give it a unique name
-    # Fill in any other properties that will be used in implementing the rule. These are the Action's Attributes from the Specification
-  # Add 'child' objects that correspond to the Action's Associations. Create Link Action needs at least two Link End Creation Data objects
-    # Name and fill in the required properties of the child objects - you may not need all the fields.
-  # Edit the Properties.txt file so that `Printgraphs` is set to true.
-  # Run GRAF. Select the model you just edited and open it. Click through until the new Action becomes available - there's no need to click on it yet. 
-  # Exit GRAF.
+
 
 = 3. Editing the Rule Sequence File =
 
