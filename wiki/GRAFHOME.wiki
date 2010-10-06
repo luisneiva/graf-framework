@@ -24,14 +24,12 @@
 [xtUMLTimers xtUML Timers]
 
 === Tutorials ===
-[Installing Visual Paradigm and Topcased]<br>
-[umlModelsUsingTopcased How to create models for GRAF using Topcased]<br>
-[InvoicerModel Invoicer Model]<br>
 [Quickstartguide Quick start guide]<br>
+[grafIntro A quick introduction to GRAF]<br>
 [howToAddModels How to add models to GRAF]<br>
+[InvoicerModel Invoicer Model]<br>
 [TestingDebuggingGraphs How to test and debug using graphs]<br>
 [creatingRulesForGRAF How to make new rules for GRAF]<br>
-[grafIntro A quick introduction to GRAF]
 
 === Project Documentation ===
 [Scope Scope]
