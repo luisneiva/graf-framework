@@ -18,14 +18,14 @@ Find the section in the Specification that talks about the Action you want to im
     # Actions can be added as part of a State Machine, or a Method. 
       # State Machine:
         * Add an Activity to the State (right-click on the state, then select New Child -> Do Activity -> Activity)
-        * Right-click on the Activity, then select New Child -> Node -> [the Action]
+        * Right-click on the Activity, then select New Child -> Node -> `[`the Action`]`
       # Method:
         * Add an Activity to the Class (right-click on the class, then select New Child -> Classifier Behavior -> Activity). This Activity is treated like a Method by UML. Give the Activity a unique name by editing the Properties view (right-click on the Activity, select Show Properties View)
-        * Right-click on the Activity, then select New Child -> Node -> [Action]
+        * Right-click on the Activity, then select New Child -> Node -> `[`Action`]`
         * Add an Operation to the Class. Give the Operation a unique name. The Operation acts as an interface for other classes to access the Method.
-        * Click on the Method field in the Operation's Properties view, then the [...] button that appears, to open a dialogue. Select the method Activity and click OK. 
+        * Click on the Method field in the Operation's Properties view, then the `[`...`]` button that appears, to open a dialogue. Select the method Activity and click OK. 
   # Fill in any other Properties that will be used in implementing the rule. These are the Action's Attributes from the Specification.
-  # Add 'child' objects that correspond to the Action's Associations (right-click, New Child -> [Association] -> [Object]).
+  # Add 'child' objects that correspond to the Action's Associations (right-click, New Child -> `[`Association`]` -> `[`Object`]`).
     # Name and fill in the required properties of the child objects - you may not need all the fields.
   # Open and edit the Properties.txt file so that `Printgraphs` is set to true.
   # Run GRAF. Select the model you just edited and open it. Click through until the new Action becomes available to generate the .dot file 'image' of the underlying GRAF.
