@@ -32,16 +32,21 @@ Find the section in the Specification that talks about the Action you want to im
   # Click on the new Action when it appears - you should see an error message.
   # Exit GRAF.
 
-= A more complicated Example =
+== A more complicated Example ==
 
-    # All Methods should include ReplyAction as the 'topmost' Action. This is because a Method should always return its result to the object that calls it. 
-    # For this example, our Method will create a new object, create a link between the new object and an existing object, and return the result to the calling object.
-      * That is, the Method will contain CreateObjectAction, CreateLinkAction, and ReplyAction.
-    # The Method is set up as described above:
-    # ReplyAction is added:
-    # ReplyAction has two input pins, ReturnValue and ReplyValue. The ReturnValue doesn't concern us, as it is 
-    # Add the Action Input Pin, and give it a unique name by editing the 'Name' field in the Properties view
-    # Add Create Link Action as a child of the input pin, and give it a unique name
+For this example, our Method will create a new object, create a link between the new object and an existing object, and return the result to the calling object. In UML, methods always return the result to the calling object.
+  * That is, the Method will contain !AcceptCallAction, !CreateObjectAction, !CreateLinkAction, and !ReplyAction.
+# Set up the Method as described above.
+# Add !ReplyAction.
+  * Note that !ReplyAction is added at the 'top' of the Action tree, because it is the _last_ thing to be executed.
+# !ReplyAction has two input pins, !ReturnInformation and !ReplyValue. 
+  * The !ReturnInformaton holds the 'address' of the calling object.
+  * !ReplyValue holds the value that is to be returned to the caller. In this case, it should hold the new, linked object.
+# ReturnInformation gets its data from the execution of !AcceptCallAction, so right-click on !ReplyAction, select Return Information -> Action Input Pin. Name the Action Input Pin something like !ReplyAction-ReturnInformation.
+# Put !AcceptCallAction 'on' the Action Input Pin (right-click the Action Input Pin, select New Child -> From Action -> !AcceptCallAction.
+# !AcceptCallAction requires two ordinary Output Pins and a Trigger. Add these as described above.
+  * Note that the Event Property value of the trigger should be a Call Event - you will need to create one if it doesn't already exist
+# 
 
 
 = 3. Editing the Rule Sequence File =
