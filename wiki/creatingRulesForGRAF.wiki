@@ -24,29 +24,31 @@ Find the section in the Specification that talks about the Action you want to im
         * Right-click on the Activity, then select New Child -> Node -> `[`Action`]`
         * Add an Operation to the Class. Give the Operation a unique name. The Operation acts as an interface for other classes to access the Method.
         * Click on the Method field in the Operation's Properties view, then the `[`...`]` button that appears, to open a dialogue. Select the method Activity and click OK. 
-  # Fill in any other Properties that will be used in implementing the rule. These are the Action's Attributes from the Specification.
+  # Fill in any other Properties that will be used in implementing the rule. These are the Action's Attributes from the Specification. You may not need to fill them all in.
   # Add 'child' objects that correspond to the Action's Associations (right-click, New Child -> `[`Association`]` -> `[`Object`]`).
     # Name and fill in the required properties of the child objects - you may not need all the fields.
   # Open and edit the Properties.txt file so that `Printgraphs` is set to true.
   # Run GRAF. Select the model you just edited and open it. Click through until the new Action becomes available to generate the .dot file 'image' of the underlying GRAF.
-  # Click on the new Action when it appears - you should see an error message.
+  # Click on the new Action when it appears - you should see an error message, since we haven't made the rules for the Action yet.
   # Exit GRAF.
 
 == A more complicated Example ==
 
 For this example, our Method will create a new object, create a link between the new object and an existing object, and return the result to the calling object. In UML, methods always return the result to the calling object.
-  * That is, the Method will contain !AcceptCallAction, !CreateObjectAction, !CreateLinkAction, and !ReplyAction.
+    * That is, the Method will contain !AcceptCallAction, !CreateObjectAction, !CreateLinkAction, and !ReplyAction.
   # Set up the Method as described above.
   # Add !ReplyAction.
     * Note that !ReplyAction is added at the 'top' of the Action tree, because it is the _last_ thing to be executed.
   # !ReplyAction has two input pins, !ReturnInformation and !ReplyValue. 
-    * The !ReturnInformaton holds the 'address' of the calling object.
-    * !ReplyValue holds the value that is to be returned to the caller. In this case, it should hold the new, linked object.
-  # ReturnInformation gets its data from the execution of !AcceptCallAction, so right-click on !ReplyAction, select Return Information -> Action Input Pin. Name the Action Input Pin something like !ReplyAction-ReturnInformation.
-  # Put !AcceptCallAction 'on' the Action Input Pin (right-click the Action Input Pin, select New Child -> From Action -> !AcceptCallAction.
-  # !AcceptCallAction requires two ordinary Output Pins and a Trigger. Add these as described above.
-    * Note that the Event Property value of the trigger should be a Call Event - you will need to create one if it doesn't already exist
-  # 
+    * The !ReturnInformaton pin holds the 'address' of the calling object.
+      # !ReturnInformation gets its data from the execution of !AcceptCallAction, so right-click on !ReplyAction, select Return Information -> Action Input Pin. Name the Action Input Pin something like !ReplyAction-!ReturnInformation.
+      # Put !AcceptCallAction 'on' the Action Input Pin (right-click the Action Input Pin, select New Child -> From Action -> !AcceptCallAction.
+      # !AcceptCallAction requires two ordinary Output Pins and a Trigger. Add these as described above.
+        * Note that the Event Property value of the trigger should be a Call Event - you will need to create one if it doesn't already exist
+    * The !ReplyValue pin holds the value that is to be returned to the caller. In this case, it should hold the new, linked object.
+      # The object must first be created, then linked. We add these Actions in reverse order, so add an Action Input Pin for ReplyValue, and put CreateLinkAction 'on' it.
+      # CreateLinkAction requires two !endDatas and one !inputValue. The !endDatas' End property values refer to the classes of the objects that are to be linked.
+      # The !inputValue holds the object that is to be linked. In this case, that object is to be created by !CreateObjectAction, so !inputValue should be an Action Input Pin holding !CreateObjectAction.
 
 
 = 3. Editing the Rule Sequence File =
