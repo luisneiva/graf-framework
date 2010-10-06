@@ -20,7 +20,7 @@ Date: 5/10/10
     * But UML 2.5 is being developed by people who have an interest in it being usable
   * ALF will have actions sequential by default unless the user explicitly says it's parallel
   * [http://www.magicdraw.com MagicDraw] is a proper tool for making UML models that should be exportable to Eclipse
-  * [fuml.modeldriven.org Foundational UML]
+  * [http://fuml.modeldriven.org Foundational UML]
   * ALF will have 3 compliance levels
   # You can type into it (looks like Java)
   # Parses syntax (looks like OCL)
