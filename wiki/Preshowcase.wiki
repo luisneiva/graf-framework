@@ -39,7 +39,7 @@
   i.Conceptual<br>
   ii.UML<br>
   iii.Graph-transformations<br>
-3.This Year’s Project<br>
+4.This Year’s Project<br>
   a.What we’ve done<br>
    i.Coverage of GRAF as a % of UML Actions<br>
    ii.Additional new functionality<br>
@@ -50,7 +50,7 @@
    iii.Emerging/ changed goals<br>
     1.Education (how/why this happened)<br>
     2.Other changes eg to scope<br>
-4.GRAF in the Future<br>
+5.GRAF in the Future<br>
  a.Challenges<br>
   i.New functionality<br>
   ii.New users/ uses for GRAF<br>
