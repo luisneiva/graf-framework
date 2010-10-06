@@ -48,8 +48,9 @@ http://graf-framework.googlecode.com/files/MicrowaveSimpleStateMachine.png
     * new child
     * packaged elements 
     * signal (press 's' to fast track to elements beginning with s)
-    * when a transition occurs in the model multiple times, the transition only requires one signal even though each transition has a unique name
-    * specify a unique name for each signal with a suffix 'Signal' as the name of the receive signal event is what shows up in GRAF's GUI
+      * note that even though each transition has to be unique, you don't need a unique signal for each transition. Signals can be re-used. 
+      * That is, sending signal X to state A might trigger transition 1, whereas sending signal X to state B might trigger transition 2.
+    * Right-click on the signal and select 'Show Properties View'. In the Properties view, specify a unique name for each signal with a suffix 'Signal' as the name of the receive signal event is what shows up in GRAF's GUI
     * at this stage the UML Tree should look like this:
        http://graf-framework.googlecode.com/files/AfterSignalAdded.png
   * Create a receive signal event for each signal by:
