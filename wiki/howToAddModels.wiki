@@ -1,8 +1,8 @@
 == Installation ==
 
-Install [http://www.visual-paradigm.com/product/sde/ec/ Visual Paradigm Community Edition SDE for Eclipse]. A user guide is [http://www.visual-paradigm.com/support/documents/sdejavauserguide.jsp provided].  
+Install [http://www.visual-paradigm.com/download/sdeec.jsp?edition=ce Visual Paradigm Community Edition SDE for Eclipse]. A user guide is [http://www.visual-paradigm.com/support/documents/sdejavauserguide.jsp provided].  
 
-Once this is completed install [http://www.topcased.org/ Topcased] org.topcased.sdk-3.3.0.zip (a little bit under 30megs) by dragging and dropping the downloaded files into the Eclipse plugins directory. 
+Once this is completed install [http://www.topcased.org/ Topcased] from the org.topcased.sdk-3.3.0.zip (a little bit under 30megs) by dragging and dropping the extracted files into the Eclipse plugins directory. 
 
 == Usage ==
 
@@ -12,6 +12,7 @@ There are 2 basic steps to adding models to GRAF:
 
 === 1. How to create a new model ===
 
+In Eclipse,
   * File
   * New
   * Project
@@ -37,7 +38,7 @@ http://graf-framework.googlecode.com/files/MicrowaveSimpleStateMachine.png
 
 === 2. Editing the .uml file to make it work with GRAF ===
 
-*How to create .uml models to work in GRAF using Topcased (more to come: activity under states)*
+*How to create .uml models to work in GRAF using Topcased in Eclipse (more to come: activity under states)*
   * Open the models .uml file in the UML model editor by:
     * right click on the file
     * open with
