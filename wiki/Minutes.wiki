@@ -36,6 +36,7 @@
 || 27/9 || Team || [agenda2709 Agenda] || [minutes2709 Minutes] ||
 || 28/9 || Mentor || [agenda2809 Agenda] || [minutes2809 Minutes] ||
 || 4/10 || Team || [agenda0410 Agenda] || [minutes0410 Minutes] ||
+|| 5/10 || Stakeholder || No Agenda || [minutes0610] ||
 || 8/10 || Client || [cagenda0410 Agenda] || [cminutes0410 Minutes] ||
 
 Agendas and minutes from before 12/5/2010 are on [https://alliance.anu.edu.au/portal Alliance]. <br>
