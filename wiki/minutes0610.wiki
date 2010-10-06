@@ -9,7 +9,7 @@ Date: 5/10/10
 
 == Summary ==
   * Described GRAF to Stephen
-  * Stephen described the new action language syntax to us
+  * Stephen described [http://www.omg.org/spec/ALF/1.0/Source/ ALF] to us
   * Discussed UML being a mess
 
 == Key points ==
@@ -18,5 +18,10 @@ Date: 5/10/10
   * In 18 months, UML 2.5 will come out which is supposed to be a simplification
     * But UML 2.0 was also supposed to be a simplification and that was more complicated then the previous versions
     * But UML 2.5 is being developed by people who have an interest in it being usable
-  * The new action language will have actions sequential by default unless the user explicitly says it's parallel
-  * [http://www.magicdraw.com Magic Draw] is a proper tool for making UML models that should be exportable to Eclipse
+  * ALF will have actions sequential by default unless the user explicitly says it's parallel
+  * [http://www.magicdraw.com MagicDraw] is a proper tool for making UML models that should be exportable to Eclipse
+  * [fuml.modeldriven.org Foundational UML]
+  * ALF will have 3 compliance levels
+  # You can type into it (looks like Java)
+  # Parses syntax (looks like OCL)
+  # Generates the model
