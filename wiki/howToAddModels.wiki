@@ -38,7 +38,7 @@ http://graf-framework.googlecode.com/files/MicrowaveSimpleStateMachine.png
 
 === 2. Editing the .uml file to make it work with GRAF ===
 
-*How to create .uml models to work in GRAF using Topcased in Eclipse (more to come: activity under states)*
+*How to create .uml models to work in GRAF using Topcased in Eclipse*
   * Open the models .uml file in the UML model editor by:
     * right click on the file
     * open with
