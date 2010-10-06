@@ -47,8 +47,9 @@ For this example, our Method will create a new object, create a link between the
         * Note that the Event Property value of the trigger should be a Call Event - you will need to create one if it doesn't already exist
     * The !ReplyValue pin holds the value that is to be returned to the caller. In this case, it should hold the new, linked object.
       # The object must first be created, then linked. We add these Actions in reverse order, so add an Action Input Pin for !ReplyValue, and put !CreateLinkAction 'on' it.
-      # !CreateLinkAction requires two !endDatas and one !inputValue. The !endDatas' End property values refer to the classes of the objects that are to be linked.
+      # !CreateLinkAction requires two !endDatas and one !inputValue. The endDatas' End property values refer to the classes of the objects that are to be linked.
       # The !inputValue holds the object that is to be linked. In this case, that object is to be created by !CreateObjectAction, so !inputValue should be an Action Input Pin holding !CreateObjectAction.
+      # !CreateObjectAction has a single ordinary Output Pin called 'result'. Add this to complete the Method tree structure.
 
 
 = 3. Editing the Rule Sequence File =
