@@ -1,0 +1,20 @@
+#summary summary of meeting with Stephen Mellor
+
+= Meeting with Stephen Mellor =
+Date: 5/10/10
+<br>Location: CSIT N101
+<br>Present: Stephen Mellor (minus his voice), Shayne, James, Raj, Oscar, Stephen, Alice, Cameron, Hamish and Frank
+<br>Time: 4:30pm
+<br>Duration: 1 hour
+
+== Summary ==
+  * Described GRAF to Stephen
+  * Stephen described the new action language syntax to us
+  * Discussed UML being a mess
+
+== Key points ==
+  * Stephen would like to be able take apart UML and start again, building it properly with a formal definition.
+  * Stephen thinks there is a point to GRAF
+  * In 18 months, UML 2.5 will come out which is supposed to be a simplification
+    * But UML 2.0 was also supposed to be a simplification and that was more complicated then the previous versions
+    * But UML 2.5 is being developed by people who have an interest in it being usable
