@@ -19,3 +19,4 @@ Date: 5/10/10
     * But UML 2.0 was also supposed to be a simplification and that was more complicated then the previous versions
     * But UML 2.5 is being developed by people who have an interest in it being usable
   * The new action language will have actions sequential by default unless the user explicitly says it's parallel
+  * [www.magicdraw.com MagicDraw] is a proper tool for making UML models that should be exportable to Eclipse
