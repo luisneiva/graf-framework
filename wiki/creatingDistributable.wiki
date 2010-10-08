@@ -1,0 +1,36 @@
+=Creating a Distributable Tarball=
+
+Ideally, this is done in *NIX, but can also be done with WinRAR. The process contains three steps:
+  # Create the JAR file
+  # Tarball and Bzip the JAR along with the required files to run
+  # Upload it to Google code
+These steps will be outlined below.
+
+==Step 1: Create the JAR==
+
+Right click the GRAF project in Eclipse and click "Export"
+
+http://graf-framework.googlecode.com/files/export_context.png
+
+This should bring up the following menu:
+
+http://graf-framework.googlecode.com/files/export_menu.png
+
+Ensure the option "Runnable JAR file" is selected and click next. The following screen is next:
+
+http://graf-framework.googlecode.com/files/spec_menu.png
+
+Ensure that the JAR will be in the GRAF folder "dist" and that required libraries will be packaged into the JAR. Hit finish and it should create the JAR
+
+==Step 2: Tarball the JAR and the required files==
+
+If you are running *NIX, there is a script in the GRAF folder you can run called "create_tarball.sh" in the main GRAF folder. If you are using WinRAR, then create a new archive (RAR shouldn't matter, so long as the link on the main page is kept current) and be sure to include
+  * /dist/graf.jar - The GRAF runnable JAR 
+  * GTSRules.ggx and GTSRulesSeq.xml - The rules files
+  * UMLMetamodel - The UML Metamodel folder
+  * Properties.txt - The properties file
+  * Models - The models folder
+
+==Step 3: Upload the archive onto Google code==
+
+The final step simply involves uploading the file into the "Downloads" section on Google code and updating all the download links
