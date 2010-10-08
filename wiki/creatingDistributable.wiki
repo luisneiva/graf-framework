@@ -1,6 +1,6 @@
 =Creating a Distributable Tarball=
 
-Ideally, this is done in *NIX, but can also be done with WinRAR. The process contains three steps:
+Ideally, this is done in &42;NIX, but can also be done with WinRAR. The process contains three steps:
   # Create the JAR file
   # Tarball and Bzip the JAR along with the required files to run
   # Upload it to Google code
@@ -24,7 +24,7 @@ Ensure that the JAR will be in the GRAF folder "dist" and that required librarie
 
 ==Step 2: Tarball the JAR and the required files==
 
-If you are running *NIX, there is a script in the GRAF folder you can run called "create_tarball.sh" in the main GRAF folder. If you are using WinRAR, then create a new archive (RAR shouldn't matter, so long as the link on the main page is kept current) and be sure to include
+If you are running &42;NIX, there is a script in the GRAF folder you can run called "create_tarball.sh" in the main GRAF folder. If you are using WinRAR, then create a new archive (RAR shouldn't matter, so long as the link on the main page is kept current) and be sure to include
   * /dist/graf.jar - The GRAF runnable JAR 
   * GTSRules.ggx and GTSRulesSeq.xml - The rules files
   * UMLMetamodel - The UML Metamodel folder
