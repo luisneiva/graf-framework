@@ -30,6 +30,7 @@
 [InvoicerModel Invoicer Model]<br>
 [TestingDebuggingGraphs How to test and debug using graphs]<br>
 [creatingRulesForGRAF How to make new rules for GRAF]<br>
+[creatingDistributable How to make a distributable tarball]<br>
 
 === Project Documentation ===
 [Scope Scope]
