@@ -31,10 +31,10 @@
  d.Define: Framework (i.e. GRAF should be extensible to languages other than UML) - just a quick mention<br>
  e.Re-state definitions as one sentence (refer to statement of purpose)<br>
  f.Technology used by GRAF<br>
- i.Eclipse/java<br>
-  1.Why did we choose Eclipse?<br>
- ii.AGG<br>
-  1.Why AGG?<br>
+  i.Eclipse/java<br>
+   1.Why did we choose Eclipse?<br>
+  ii.AGG<br>
+   1.Why AGG?<br>
  g.Step-through simple transformation with “cross-section” style view of what is happening on different levels of GRAF<br>
   i.Conceptual<br>
   ii.UML<br>
