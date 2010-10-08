@@ -1,0 +1,25 @@
+#summary Minutes
+
+= Mentor Meeting =
+Date: 8/10/10
+<br>Location: Raj's office
+<br>Present: Oscar, Stephen, Alice, Greg and Raj
+<br>Time: 2pm
+<br>Duration: 1 hour
+
+== Discussion of meeting with Stephen Mellor ==
+  * ALF could be really important to the project next year
+  * ALF should be the higher level language in our planned _model generator tool_
+    * We don't want to make this tool if Mellor + co make their own shiny, more robust version at the same time
+      * Unless we have the advantage of being free and open
+        * But it wouldn't be nice to steal Mellor + co's profits from his own tool
+    * Maybe Mellor + co need a team of developers to make the tool -> next year's team?
+
+== Preshowcase Presentations ==
+  * We need to email Lynette to get to go first in the presentations so that Raj can make it
+  * Considered the pros and cons of tongue-in-cheek CEA mock explosion video
+    * Plan as if we're not going to do this, and only put it in if it works really well
+  * Show the ambiguous model, ask for a hand count of who thinks it will go left, who thinks it will go right
+
+== General stuff ==
+  * We need to email Greg a distributable package so he can try everything and get it working
