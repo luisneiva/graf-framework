@@ -39,7 +39,7 @@
 || 5/10 || Stakeholder || No Agenda || [minutes0610 Minutes] ||
 || 8/10 || Client || [cagenda0410 Agenda] || [cminutes0410 Minutes] ||
 || 11/10 || Mentor || [agenda1110 Agenda] || [minutes1110 Minutes] ||
-|| 13/10 || Client || [agenda1310 Agenda] || [minutes1310 Minutes] ||
+|| 12/10 || Client || [agenda1310 Agenda] || [minutes1310 Minutes] ||
 
 Agendas and minutes from before 12/5/2010 are on [https://alliance.anu.edu.au/portal Alliance]. <br>
 [agendaTemplate Agenda Template] <br>
