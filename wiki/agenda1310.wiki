@@ -6,5 +6,4 @@
 <br>*Duration:* 1 hour
 
 === Agenda Items ===
-  *
-  *
+  * Pre-showcase presentation discussion
