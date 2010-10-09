@@ -6,5 +6,7 @@
 <br>*Duration:* 1 hour
 
 === Agenda Items ===
-  *
-  *
+  * Update for James
+  * Debrief on meeting Stephen Mellor
+  * Progress reports
+  * Pre-showcase presentation discussion
