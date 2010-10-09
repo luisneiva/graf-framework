@@ -114,6 +114,12 @@ public class Controller {
 			}
 			GRAFSplash.setPercent(30);
 			GRAFSplash.setActivityString("Creating model...");
+			File tmp = new File(graphOutputsPath);
+			if(!tmp.exists()){
+				if(!tmp.mkdir()){
+					throw new FileNotFoundException();
+				}
+			}
 			model = new PluginModel(gtsRulesFilePath, gtsRulesSeqFilePath, graphOutputsPath);
 			view.setModel(model);
 		} catch (Exception e) {
