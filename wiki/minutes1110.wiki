@@ -13,21 +13,21 @@
  * Animators
   ** Too expensive
   ** Lack of availability
- ** Complicating setup and steep learning curve
+  ** Complicating setup and steep learning curve
 
  * Example model
- ** Need to decide on how to present the model in a way that will make most sense to the audience.
+  ** Need to decide on how to present the model in a way that will make most sense to the audience.
 
  * Ambiguities 
- ** Uml is word based, words contain ambiguities in interpretation hence does uml. A better way to do this is using graf transformations.
+  ** Uml is word based, words contain ambiguities in interpretation hence does uml. A better way to do this is using graf transformations.
  * As uml grows and becomes more complicated the need for a more formal definition will become apparant.
 
  * Levels
- ** Need to say why the levels help and make this animator attractive.
- ** Help with testing and understanding the model. Debugging, why graf did what it did.
+  ** Need to say why the levels help and make this animator attractive.
+  ** Help with testing and understanding the model. Debugging, why graf did what it did.
 
  * Achievements
- ** Need to state and make a clear connection with how the achievements made throughout the year satisfy the clients criteria.
+  ** Need to state and make a clear connection with how the achievements made throughout the year satisfy the clients criteria.
 
 
 = Progress reports =
