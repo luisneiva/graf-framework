@@ -20,7 +20,7 @@
 
  * Ambiguities 
   ** Uml is word based, words contain ambiguities in interpretation hence does uml. A better way to do this is using graf transformations.
- * As uml grows and becomes more complicated the need for a more formal definition will become apparant.
+  ** As uml grows and becomes more complicated the need for a more formal definition will become apparant.
 
  * Levels
   ** Need to say why the levels help and make this animator attractive.
