@@ -16,6 +16,15 @@ These are tasks that we don't plan to do in 2010 but they should be simple enoug
   * We could extend Topcased since it's open source
   * We could abandon .uml and generate the graph from a text file
 
+
+== Action language ==
+There are currently standardisation efforts for the ALF action language going through the OMG. The 2011 team could seek to implement a high level action language parser based on this specification (more at http://www.omg.org/spec/ALF/). 
+The benefits of this include:
+  * Models would no longer be such a kludge
+  * Behavior could be read in more easily
+  * Relationships and operations would be easier to define
+
+
 == General things ==
   * Automated testing 
     * Would require a list of steps of execution
@@ -25,6 +34,7 @@ These are tasks that we don't plan to do in 2010 but they should be simple enoug
     * We could verify just the initial state (if rules can't create invalid system states) or every system state in an execution
     * Annette would like this
   * Static methods (eg. constructors) - but no one is asking for this feature
+
 
 == Stuff from 2009 ==
 This stuff is really old and probably no longer as relevant
