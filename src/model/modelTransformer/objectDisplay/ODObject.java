@@ -2,7 +2,13 @@ package model.modelTransformer.objectDisplay;
 
 import java.util.ArrayList;
 
+import controller.Properties;
+
 import model.ListGraph;
+import model.TransitionAction;
+import model.exceptions.RuleException;
+import model.graphTransformer.AGGTransformer;
+import agg.xt_basis.Arc;
 import agg.xt_basis.Graph;
 import agg.xt_basis.Node;
 
@@ -21,7 +27,7 @@ public class ODObject extends DisplayObject {
 	private ODClass instantiation;
 
 	private ArrayList<ODAttribute> attributes;
-	
+
 	private ArrayList<Node> stateNodes;
 
 	private ArrayList<ODAction> actionPool;
@@ -30,7 +36,7 @@ public class ODObject extends DisplayObject {
 	private ArrayList<ODCall> callPool;
 
 	private ArrayList<ODMethod> methods;
-	
+
 	// If not eventMode then it is in action mode
 	private Boolean eventMode;
 
@@ -38,7 +44,7 @@ public class ODObject extends DisplayObject {
 	private boolean attributesShowing = true;
 	/** Is the event/action compartment showing */
 	private boolean runtimePoolShowing = true;
-			
+
 	public ODObject(ODClass instantiation, Node graphNode, Boolean eventMode) {
 		this.eventMode = eventMode;
 
@@ -51,9 +57,9 @@ public class ODObject extends DisplayObject {
 		eventPool = new ArrayList<ODEvent>();
 		externalEvents = new ArrayList<ODEvent>();
 		methods = new ArrayList<ODMethod>();
-		
+
 		stateNodes = new ArrayList<Node>();
-		
+
 		//Set initial location to random point on screen (more structured placement would be better) 
 		setLocation(randomGenerator.nextInt(400),randomGenerator.nextInt(300));		
 	}
@@ -70,7 +76,7 @@ public class ODObject extends DisplayObject {
 	public void setRuntimePoolShowing(boolean show) {
 		runtimePoolShowing = show;
 	}
-	
+
 	public Boolean getEventMode() {
 		return eventMode;
 	}
@@ -98,7 +104,7 @@ public class ODObject extends DisplayObject {
 	public ArrayList<ODCall> getCallPool() {
 		return callPool;
 	}
-	
+
 	public ArrayList<ODMethod> getMethods() {
 		return methods;
 	}
@@ -172,7 +178,7 @@ public class ODObject extends DisplayObject {
 	{
 		stateNodes.add(sn);
 	}
-	
+
 	/**
 	 * Creates an ODAction based on a node and adds it to this.
 	 * 
@@ -183,7 +189,7 @@ public class ODObject extends DisplayObject {
 		ODAction action = new ODAction(node, actionBehEx, graph);
 		actionPool.add(action);
 	}
-	
+
 	public void addCall(Node node) {
 		ODCall call = new ODCall(node);
 		callPool.add(call);
@@ -198,7 +204,7 @@ public class ODObject extends DisplayObject {
 		ODEvent event = new ODEvent(eventNode, occurenceNode);
 		eventPool.add(event);
 	}
-	
+
 	/**
 	 * Creates an ODEvent based on a node and adds it to this.
 	 * 
@@ -208,7 +214,7 @@ public class ODObject extends DisplayObject {
 		ODEvent event = new ODEvent(eventNode, null);
 		externalEvents.add(event);
 	}
-	
+
 	/**
 	 * Creates an ODMethod based on a node and adds it to this.
 	 * 
@@ -221,5 +227,64 @@ public class ODObject extends DisplayObject {
 
 	public ArrayList<Node> getStates() {
 		return stateNodes;
+	}
+
+	// TODO!!! call transition()
+	public void createDelayEvent(ODObject odObj, ListGraph graph) {
+		String actName = "", actParam = "";
+		
+		// First find the Actor node
+		Node actor = null;
+		for(Arc edge : graph.getArcsList()) {
+			if(ListGraph.getName(edge.getTarget()).equals("Actor")) {
+				actor = (Node)edge.getTarget();
+				break;
+			}
+			if(ListGraph.getName(edge.getSource()).equals("Actor")) {
+				actor = (Node)edge.getSource();
+				break;
+			}
+		}
+		
+		ArrayList<String> fromInstances = new ArrayList<String>();
+		fromInstances.add("i");
+		
+		ArrayList<Node> actorInstances = ListGraph.fromTrace(fromInstances, actor);
+		
+		ArrayList<String> findObjectRoute = new ArrayList<String>();
+		findObjectRoute.add("pool");
+		findObjectRoute.add("message");
+		findObjectRoute.add("sender");
+		
+		// Find objects
+		ArrayList<Node> findObjects = new ArrayList<Node>();
+		
+		for(Node actorInstance : actorInstances) {
+			findObjects = ListGraph.toTrace(findObjectRoute, actorInstance);
+//			System.out.println("Timer: Find an object -> size: " + findObjects.size());
+			for (Node objectNode : findObjects) {
+				
+			}
+		}
+		
+		
+		
+		
+		
+//		TransitionAction transAction = new TransitionAction(odObj, actName, actParam);
+		String gtsRulesPath = Properties.getProperty("gtsRulesPath");
+		String gtsRulesSeqPath = Properties.getProperty("gtsRulesSeqPath");
+		
+		
+		//transition(String objName, String actionName, String actionParam)
+		try {
+			AGGTransformer transformer;
+			transformer = new AGGTransformer(gtsRulesPath, gtsRulesSeqPath);
+			graph = (ListGraph) transformer.transition(odObj.getName(), actName, actParam);
+		} catch (RuleException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
