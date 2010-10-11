@@ -1,0 +1,70 @@
+#Mentor Meeting
+
+=Meeting with Stephen Mellor=
+
+ *No one knows the whole definition bar one person thus making it hard to use.
+ *Stephen agreed that uml was 'all over the place'.
+ *Seemed to feel there was worth in the project, although he thought it would be much more useful if it were integrated into a larger development tool
+ *We didn't get the chance to ask Stephen where he thought the animator would be most useful in the modeling pipeline.
+ *James was disappointed in the lack of sponsors in the form of large corporate sponsors for ALF.
+ 
+= Presentation =
+
+ *Animators
+ **too expensive
+ **lack of availability
+ **complicating setup and steep learning curve
+
+ *Example model
+ **need to decide on how to present the model in a way that will make most sense to the audience.
+
+ *Ambiguities 
+ **Uml is word based, words contain ambiguities in interpretation hence does uml. A better way to do this is using graf transformations.
+ *As uml grows and becomes more complicated the need for a more formal definition will become apparant.
+
+ *Levels
+ **Need to say why the levels help and make this animator attractive.
+ **Help with testing and understanding the model. Debugging, why graf did what it did.
+
+ *Achievements
+ **Need to state and make a clear connection with how the achievements made throughout the year satisfy the clients criteria.
+
+
+= Progress reports =
+
+Hamish and Stephen
+ *packaging executable version of graf.
+
+Cameron
+ *Testing
+ *discovered need for if statement instructions.
+ *need instructions for how to get agg for next years team.
+ *need instructions for how to open .dot files.
+
+Frank
+ *Timers
+
+Alice
+ slide and notes preparation for presentation
+
+= Work Allocation =
+
+Hamish and Stephen
+ *Continue with executable.
+
+Cameron
+ *Continue testing. 
+ *Upload model for shayne.
+ 
+Frank
+ *Continue with timers.
+ 
+Alice
+ *Documentation on how to make new rules.
+
+Team
+ *Send email to Stephen Mellor.
+ *Is there any point in GRAF.
+ *Will there ever be a formalized version of uml (ask nicely).
+ *How do they define the processes to create uml under the hood.
+ 
