@@ -380,7 +380,7 @@ public class GraphToObjDiag implements GraphToModel {
 		ObjDiag result;
 		
 		if(GrafTimer.isTimerNeeded(graph)) {
-			result = new ObjDiag(objects, associations, new GrafTimer(graph, objects));
+			result = new ObjDiag(objects, associations, new GrafTimer(graph, objects, objdiag));  // TODO
 		}
 		else {
 			result = new ObjDiag(objects, associations);

@@ -6,10 +6,15 @@ import java.util.ArrayList;
 
 import javax.swing.Timer;
 
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.widgets.List;
+
 import agg.xt_basis.Arc;
 import agg.xt_basis.Node;
 import model.ListGraph;
 import model.modelTransformer.objectDisplay.ODObject;
+import model.modelTransformer.objectDisplay.ObjDiag;
 
 public class GrafTimer {
 
@@ -37,7 +42,7 @@ public class GrafTimer {
 	
 	//TODO add a listener attribute
 	
-	public GrafTimer(ListGraph graph, ArrayList<ODObject> objects) {
+	public GrafTimer(ListGraph graph, ArrayList<ODObject> objects, final ObjDiag objdiag) {
 		//TODO set timedObjects:
 		// timedObjects is the objects which have sent a message to the actor
 		
@@ -84,9 +89,9 @@ public class GrafTimer {
 //				System.out.println("Find an object -> name: " + ListGraph.getName(objectNode));
 				//add object to timedObjects. add to timedObjects the ODObject in the input parameter "objects" that has the same name m1.
 				for(ODObject odo : objects) {
-//					System.out.println("odo's name: " + odo.getName());
 					if(odo.getName().equals(ListGraph.getName(objectNode))) {
 						timedObjects.add(odo);
+						System.out.println("odo's name: " + odo.getName());
 					}
 				}
 			}
@@ -101,10 +106,18 @@ public class GrafTimer {
 				
 				class TimerListener implements ActionListener
 				{
+					ListGraph delayEventGraph;
+					public TimerListener(ListGraph g) {
+						delayEventGraph = g;
+					}
 					public void actionPerformed(ActionEvent event) {
 						if(!isFirst) {
 							System.out.println("ONLY ONCE.");
+							for (ODObject odObj : timedObjects) {
+								odObj.createDelayEvent(odObj, delayEventGraph);
+							}
 							t.stop();
+							
 						}
 						else {
 							isFirst = false;
@@ -112,7 +125,7 @@ public class GrafTimer {
 					}
 				}
 
-				ActionListener timerListener = new TimerListener();
+				TimerListener timerListener = new TimerListener(graph);
 				t = new Timer(delaySec, timerListener);
 				t.start();
 			}
