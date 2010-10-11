@@ -11,8 +11,8 @@
 = Presentation =
 
  * Animators
- ** Too expensive
- ** Lack of availability
+  ** Too expensive
+  ** Lack of availability
  ** Complicating setup and steep learning curve
 
  * Example model
