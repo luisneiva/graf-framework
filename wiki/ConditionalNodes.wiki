@@ -7,6 +7,13 @@ http://graf-framework.googlecode.com/files/conditionalnode.png
 
 The above image shows how conditional nodes fit in the UML file. The Conditional Node must have a Clause. The body and the test fields fields in the clause are the important ones. I don't think Body Output does anything. In the case of if x then y, x is the Test and y is the Body.
 
+The above image represents something along the lines of
+{{{
+if TestValue == true then
+   create object
+end if
+}}}
+
 == How Conditional Nodes are implemented ==
 In GRAF only the execution of an action will change the graph, except for conditional nodes. If the condition returns false then we need to make it impossible to execute the action. We do this by deleting the _executable_ edge in the graph. Thus we have changed the graph without executing an action.
 
