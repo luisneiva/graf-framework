@@ -6,12 +6,12 @@
 
 2.UML and its problems<br> ("What is the problem?")
 
-  0. UML - the Unified Modelling Language. As we know, it's the lingua franca for describing software systems
-  a. The current UML definition is large and overly complex. Because it's written by not just one, but several committees, it is also internally inconsistent. But the larger problem is that it is defined in words, which are inherently ambiguous.
+  0. UML - the Unified Modelling Language. As we know, it's the lingua franca for describing software systems. It is defined by the UML Specification - two 700-page documents that describe both the diagrams that we are familiar with, and the low-level execution that most of us aren't.
+  a. This definition is large and overly complex. Because it's written by not just one, but several committees, it is also internally inconsistent. But the larger problem is that it is defined in words, which are inherently ambiguous.
 
 2B. Why is it a problem?
 
-  a. The ambiguity of UML is a problem when we use it to covey information, especially the detailed design of a system. If the definition is ambiguous, so that two experienced, knowledgeable people could disagree on the meaning of a particular part of the Specification, then we can't rely on a model to communicate our intention accurately.
+  a. The ambiguity of UML is a problem when we use it to covey information, especially the detailed design of a system. If the definition is ambiguous, so that two experienced, knowledgeable people could disagree on the meaning of a particular part of the Specification, then we can't rely on a model to communicate our intention accurately. This is true when a model is being used to describe a system that we want to implement, or when it is being used by a model compiler to generate code.
  
   b. This might not be a problem if there was an 'official' interpretation or implementation of UML, but the Object Management Group doesn't authorise 'official' implementations. Therefore, every individual implementation can claim that they are consistent with the UML Specification, and there is no way to check whether they are consistent with each other - you could say that they provide an 0th-level view of your model, rather than explaining the details of their implementation.
 
