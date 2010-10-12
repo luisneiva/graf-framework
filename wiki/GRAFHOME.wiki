@@ -38,14 +38,9 @@
 
 === Project Documentation ===
 <br>[GrafFuture GRAF in 2011]
-<br>[Testing]
+
 <br>[Preshowcase Preshowcase Presentation]
 
-
 === Old Stuff ===
-
-[BugTrackingTools Bug Tracking Tools]<br>
-[SourceControl Source Control]<br>
-[TimeTracking Time Tracking]<br>
 [side_column 2009 Home Page]<br>
 [graf2010PM 2010 Project Management]<br>
