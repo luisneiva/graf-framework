@@ -25,6 +25,7 @@
 [ConditionalNodes Conditional Nodes]<br>
 [http://graf-framework.googlecode.com/files/2009%20technical%20emails.doc Technical Emails From 2009]<br>
 [http://graf-framework.googlecode.com/files/graf%20emails%202010.doc Technical Emails From 2010]<br>
+[http://graf-framework.googlecode.com/files/Communicating%20in%20UML Communication in UML]<br>
 
 === Tutorials ===
 [Quickstartguide Quick start guide]<br>
