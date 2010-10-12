@@ -5,6 +5,8 @@
 1.Introduction + Statement of Purpose<br>
 
 2.UML and its problems<br> ("What is the problem?")
+
+  0. UML - the Unified Modelling Language. As we know, it's the lingua franca for describing software systems
   a. The current UML definition is large and overly complex. Because it's written by not just one, but several committees, it is also internally inconsistent. But the larger problem is that it is defined in words, which are inherently ambiguous.
 
 2B. Why is it a problem?
@@ -73,5 +75,3 @@
   * Hamish - 4
   * Oscar - 4B
   * Stephen - 5
-
-
