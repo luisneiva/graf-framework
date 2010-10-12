@@ -231,7 +231,7 @@ public class ODObject extends DisplayObject {
 
 	// TODO!!! call transition()
 	public void createDelayEvent(ODObject odObj, ListGraph graph) {
-		String actName = "", actParam = "";
+		String actName = "SendSignalAction", actParam = "";  //object=m1, action=sendSignalAction, actionParam=sendCooked
 		
 		// First find the Actor node
 		Node actor = null;
@@ -256,20 +256,44 @@ public class ODObject extends DisplayObject {
 		findObjectRoute.add("message");
 		findObjectRoute.add("sender");
 		
+		ArrayList<String> backToSender = new ArrayList<String>();
+		backToSender.add("sender");
+		
+		ArrayList<String> findSignalRoute = new ArrayList<String>();
+		findSignalRoute.add("i");
+		
+		ArrayList<String> backToActionParam = new ArrayList<String>();
+		backToActionParam.add("signal");
+		
 		// Find objects
 		ArrayList<Node> findObjects = new ArrayList<Node>();
+		ArrayList<Node> senderInstances = new ArrayList<Node>();
+		ArrayList<Node> findSignals = new ArrayList<Node>();
+		ArrayList<Node> findActions = new ArrayList<Node>();
 		
 		for(Node actorInstance : actorInstances) {
 			findObjects = ListGraph.toTrace(findObjectRoute, actorInstance);
 //			System.out.println("Timer: Find an object -> size: " + findObjects.size());
 			for (Node objectNode : findObjects) {
+				System.out.println("\tFind obj: " + ListGraph.getName(objectNode));
 				
+				senderInstances = ListGraph.fromTrace(backToSender, objectNode);
+				for(Node senderNode : senderInstances) {
+					System.out.println("\tFind sender: " + ListGraph.getName(senderNode));
+					
+					findSignals = ListGraph.toTrace(findSignalRoute, senderNode);
+					for(Node sigalNode : findSignals) {
+						System.out.println("\tFind signal node: " + ListGraph.getName(senderNode));
+						
+						findActions = ListGraph.fromTrace(backToActionParam, sigalNode);
+						for(Node actParamNode : findActions){
+							actParam = ListGraph.getName(actParamNode);
+							System.out.println("\tFind action param is: " + actParam);
+						}
+					}
+				}
 			}
 		}
-		
-		
-		
-		
 		
 //		TransitionAction transAction = new TransitionAction(odObj, actName, actParam);
 		String gtsRulesPath = Properties.getProperty("gtsRulesPath");
@@ -280,6 +304,9 @@ public class ODObject extends DisplayObject {
 		try {
 			AGGTransformer transformer;
 			transformer = new AGGTransformer(gtsRulesPath, gtsRulesSeqPath);
+			
+			System.out.println("\t Ready? action param is: " + actParam);
+			
 			graph = (ListGraph) transformer.transition(odObj.getName(), actName, actParam);
 		} catch (RuleException e) {
 			e.printStackTrace();
