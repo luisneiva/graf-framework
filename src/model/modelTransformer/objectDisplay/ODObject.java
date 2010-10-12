@@ -2,15 +2,13 @@ package model.modelTransformer.objectDisplay;
 
 import java.util.ArrayList;
 
-import controller.Properties;
-
 import model.ListGraph;
-import model.TransitionAction;
 import model.exceptions.RuleException;
 import model.graphTransformer.AGGTransformer;
 import agg.xt_basis.Arc;
 import agg.xt_basis.Graph;
 import agg.xt_basis.Node;
+import controller.Properties;
 
 /** 
  *   ODObject
@@ -229,9 +227,8 @@ public class ODObject extends DisplayObject {
 		return stateNodes;
 	}
 
-	// TODO!!! call transition()
 	public void createDelayEvent(ODObject odObj, ListGraph graph) {
-		String actName = "SendSignalAction", actParam = "";  //object=m1, action=sendSignalAction, actionParam=sendCooked
+		String actParam = "";  
 		
 		// First find the Actor node
 		Node actor = null;
@@ -273,7 +270,6 @@ public class ODObject extends DisplayObject {
 		
 		for(Node actorInstance : actorInstances) {
 			findObjects = ListGraph.toTrace(findObjectRoute, actorInstance);
-//			System.out.println("Timer: Find an object -> size: " + findObjects.size());
 			for (Node objectNode : findObjects) {
 				System.out.println("\tFind obj: " + ListGraph.getName(objectNode));
 				
@@ -295,19 +291,14 @@ public class ODObject extends DisplayObject {
 			}
 		}
 		
-//		TransitionAction transAction = new TransitionAction(odObj, actName, actParam);
 		String gtsRulesPath = Properties.getProperty("gtsRulesPath");
 		String gtsRulesSeqPath = Properties.getProperty("gtsRulesSeqPath");
 		
-		
-		//transition(String objName, String actionName, String actionParam)
 		try {
 			AGGTransformer transformer;
 			transformer = new AGGTransformer(gtsRulesPath, gtsRulesSeqPath);
-			
-			System.out.println("\t Ready? action param is: " + actParam);
-			
-			graph = (ListGraph) transformer.transition(odObj.getName(), actName, actParam);
+			System.out.println(odObj.getName() + " ---- " + actParam);
+			graph = (ListGraph) transformer.transition(odObj.getName(), "ActorSendSignal", actParam);
 		} catch (RuleException e) {
 			e.printStackTrace();
 		} catch (Exception e) {

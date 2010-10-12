@@ -6,28 +6,14 @@ import java.util.ArrayList;
 
 import javax.swing.Timer;
 
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.layout.GridData;
-import org.eclipse.swt.widgets.List;
-
-import agg.xt_basis.Arc;
-import agg.xt_basis.Node;
 import model.ListGraph;
 import model.modelTransformer.objectDisplay.ODObject;
 import model.modelTransformer.objectDisplay.ObjDiag;
+import agg.xt_basis.Arc;
+import agg.xt_basis.Node;
 
 public class GrafTimer {
 
-	/** 
-	 * current time must be static because a new timer object
-	 * is created for each transition and we want to keep timers
-	 * going over multiple transitions
-	 * 
-	 * TODO to make it possible to time multiple objects, we'll have to move this
-	 * attribute into ODObject or something
-	 */
-	private static Integer time;
-	
 	/**
 	 * This is only the ODObjects that have sent timer signals to the actor
 	 * and so are waiting for replies 
@@ -37,15 +23,11 @@ public class GrafTimer {
 	private Integer timerValue = 0;
 	
 	private Timer t;
-	private Integer delaySec;  // milliseconds between timer ticks  initDelaySec
+	private Integer delaySec;  // milliseconds between timer ticks
 	private Boolean isFirst = true;
 	
-	//TODO add a listener attribute
-	
 	public GrafTimer(ListGraph graph, ArrayList<ODObject> objects, final ObjDiag objdiag) {
-		//TODO set timedObjects:
-		// timedObjects is the objects which have sent a message to the actor
-		
+		// timedObjects is the objects which have sent a message to the actor		
 		timedObjects = new ArrayList<ODObject>();
 		// First find the Actor node
 		Node actor = null;
@@ -84,14 +66,10 @@ public class GrafTimer {
 		
 		for(Node actorInstance : actorInstances) {
 			findObjects = ListGraph.toTrace(findObjectRoute, actorInstance);
-//			System.out.println("Timer: Find an object -> size: " + findObjects.size());
 			for (Node objectNode : findObjects) {
-//				System.out.println("Find an object -> name: " + ListGraph.getName(objectNode));
-				//add object to timedObjects. add to timedObjects the ODObject in the input parameter "objects" that has the same name m1.
 				for(ODObject odo : objects) {
 					if(odo.getName().equals(ListGraph.getName(objectNode))) {
 						timedObjects.add(odo);
-						System.out.println("odo's name: " + odo.getName());
 					}
 				}
 			}
@@ -99,10 +77,7 @@ public class GrafTimer {
 			findTimerProperty = ListGraph.toTrace(findSetTimerRoute, actorInstance);
 			for (Node timerPropNode : findTimerProperty) {
 				timerValue = Integer.parseInt(ListGraph.getName(timerPropNode));
-//				System.out.println("Find Timer property -> timer value: " + timerValue);
 				delaySec = timerValue * 1000;
-//				initDelaySec = delaySec;
-				System.out.println("\tTimer STARTS:");
 				
 				class TimerListener implements ActionListener
 				{
@@ -112,7 +87,6 @@ public class GrafTimer {
 					}
 					public void actionPerformed(ActionEvent event) {
 						if(!isFirst) {
-							System.out.println("ONLY ONCE.");
 							for (ODObject odObj : timedObjects) {
 								odObj.createDelayEvent(odObj, delayEventGraph);
 							}
@@ -129,11 +103,7 @@ public class GrafTimer {
 				t = new Timer(delaySec, timerListener);
 				t.start();
 			}
-		}
-		
-		System.out.println("\tAll OVER.");
-		
-		//TODO set time by looking at the property of the received signal
+		}		
 	}
 
 	/**
