@@ -1,46 +1,57 @@
 #summary Preshowcase presentation preparation
 
 ==3100 Pre-Showcase Presentation==
+
 1.Introduction + Statement of Purpose<br>
-2.UML and its problems<br>
- a.Expense<br>
- b.Unavailability<br>
- c.No ‘definitive’ implementation of UML - or attention paid to differences/assumptions/deviations. UML isn’t just diagrams. It also defines behaviour. UML is large and complex. The proprietary tools give an 0th level answer as to what a model means and does – there is no explanation and the user must take it on faith. Because UML is loosely defined, any animator’s interpretation is just that – one of several possible interpretations. Generally, animators will not make this explicit. Why should they? Their interpretation may not be wrong, exactly, But realising that different interpretations are possible is important. <br>
- d.Demonstration of ‘semaphore’ model – pose question “what happens next?” Answer: it’s a trick question. UML is defined as non-deterministic, so either result is valid.<br>
-3.    Define GRAF
-  a.    Define: Animator
-    i.    What it is
+
+2.UML and its problems<br> ("What is the problem?")
+  a. The current UML definition is large and overly complex. Because it's written by not just one, but several committees, it is also internally inconsistent. But the larger problem is that it is defined in words, which are inherently ambiguous.
+
+2B. Why is it a problem?
+
+  a. The ambiguity of UML is a problem when we use it to covey information, especially the detailed design of a system. If the definition is ambiguous, so that two experienced, knowledgeable people could disagree on the meaning of a particular part of the Specification, then we can't rely on a model to communicate our intention accurately.
+ 
+  b. This might not be a problem if there was an 'official' interpretation or implementation of UML, but the Object Management Group doesn't authorise 'official' implementations. Therefore, every individual implementation can claim that they are consistent with the UML Specification, and there is no way to check whether they are consistent with each other - you could say that they provide an 0th-level view of your model, rather than explaining the details of their implementation.
+
+3. Define GRAF ("What's our solution?")
+
+  0. Our client feels that one solution to this problem would be to define UML using formal mathematical notation. This would remove the ambiguity from the definition, and gives us the ability to 'prove' that our model does what we say it does. In his thesis, Greg O'Keefe argued that the best notation to use would be graph notation. Our project  - GRAF - implements this solution to the problem of ambiguity.
+
+  a. Define: Animator
+    i.    GRAF takes the form of a UML Animator. 
       1.    An ‘animator’ is an application that displays an instance of a model, which can mock-executed according to the rules that the model defines. It lets us see the ‘behavior’ of the model in a dynamic way, instead of just looking at a state machine or sequence diagram
-    ii.    Why animate?
+    ii.    Why is an animator useful?
       1.    Educate (yourself and others) about your model
         a.    The client seeks to address the scenario in which a model is ‘sketched’ as a loose concept and then presented to others as a definition of what needs to be done. How can we guarantee that the author’s idea is captured correctly? One way might be for the author to verify their own model by ‘stepping through’ (animating) and making sure that it works as they expect. And of course others – not just the author of the model – could do this too
       2.    Part of a tool-chain to create a high-level view of code 
-        a.    This is necessary if we are to take MDD seriously. While our clients aren’t advocating Model Driven Development specifically, they do see GRAF’s educational function as being particularly applicable for Model Driven Development
-    b.    Define: Graph-transformations
-      i.    What are they?
-        1.    Wikipedia: “graph-transformation concerns the technique of creating a new graph out of an original graph using some automatic machine”
-        2.    You start with a base graph – some nodes and arcs between the nodes
-        3.    And a rule – this is two smaller graphs – a ‘before’ stage and an ‘after’ stage
-        4.    If the ‘before’ stage matches some part of your base graph, then you change the base graph to match the ‘after’ stage
-        5.    That is, the graph is transformed
-      ii.    How is that applied to UML?
-        1.    One of our clients argued in his thesis that you can represent a model’s state as a graph – a set of nodes and edges
-        2.    Once you’ve done this, you can define graph-transformation rules to mimic the operation of the most basic UML behavior – Actions
-      iii.    Why is that useful?
-        1.    We’ve already said why animators can be useful. Using graphs and graph-transformation rules allows us to formally define the implementation of Actions, rather than relying on code and hand-waving. Defining UML in this way at the lowest level will reduce the complexity and ambiguity of the language
-    c.    Define: Reference
-      i.    What it originally meant v what it means to GRAF
-      ii.    Classically, a ‘reference’ animator would be an authoritative implementation of UML against which all others can be judged. However, the OMG does not endorse UML implementations in this way
-      iii.    So we use reference in a weaker sense – that GRAF can be used as a reference in the same way a dictionary can – you can use it to find out stuff about your model
-    d.    Define: Framework 
-      i.    GRAF provides an animator framework – meaning that it should be extensible to languages other than UML
-    e.    Re-state definitions as one sentence (refer to statement of purpose)
-      i.    So GRAF is a reference animator that explicitly uses graph-transformation theory to provide a clear, low-level formal definition of UML
+        a.    This is necessary if we are to take MDD seriously. While our clients aren’t advocating Model Driven Development specifically, they do see GRAF’s educational function as being particularly applicable for Model Driven Development.
+  b.    Define: Graph-transformations
+    i.    What are they?
+      1.    Wikipedia: “graph-transformation concerns the technique of creating a new graph out of an original graph using some automatic machine”
+      2.    You start with a base graph – some nodes and arcs between the nodes
+      3.    And a rule – this is two smaller graphs – a ‘before’ stage and an ‘after’ stage
+      4.    If the ‘before’ stage matches some part of your base graph, then you change the base graph to match the ‘after’ stage
+      5.    That is, the graph is transformed
+    ii.    How is that applied to UML?
+      1.    One of our clients argued in his thesis that you can represent a model’s state as a graph – a set of nodes and edges
+      2.    Once you’ve done this, you can define graph-transformation rules to mimic the operation of the most basic UML behavior – Actions
+    iii.    Why is that useful?
+      1.    We’ve already said why animators can be useful. Using graphs and graph-transformation rules allows us to formally define the implementation of Actions, rather than relying on code and hand-waving. Defining UML in this way at the lowest level will reduce the complexity and ambiguity of the language
+  c.    Define: Reference
+    i.    What it originally meant vs. what it means to GRAF
+    ii.    Classically, a ‘reference’ animator would be an authoritative implementation of UML against which all others can be judged. However, as we mentioned the OMG does not endorse UML implementations in this way
+    iii.    So we use reference in a weaker sense – that GRAF can be used as a reference in the same way a dictionary can – you can use it to find out stuff about your model
+  d.    Define: Framework 
+    i.    GRAF provides an animator framework – meaning that it should be extensible to languages other than UML
+  e.    Re-state definitions as one sentence (refer to statement of purpose)
+    i.    So GRAF is a reference animator that explicitly uses graph-transformation theory to provide a clear, low-level formal definition of UML
 3b.    Technology used by GRAF
   a.    Eclipse/java
     i.    We – or rather the 2009 team – chose Eclipse because it is a widely-used, freely available platform with a culture of extensibility. It’s not just that we developed GRAF using Eclipse – it is based on the Eclipse UML implementation and runs as an Eclipse plugin. By tying GRAF to a recognized platform, we hope to make it more accessible to users
   b.    AGG
     i.    AGG is a graph-transformation engine implemented in java. We use it to do that actual work of applying the graph-transformation rules.
+
+3B. Demonstration of ‘semaphore’ model – pose question “what happens next?” Answer: it’s a trick question. UML is defined as non-deterministic, so either result is valid.<br>
 
 4.This Year’s Project<br>
   a.What we’ve done<br>
@@ -53,6 +64,7 @@
    iii.Emerging/ changed goals<br>
     1.Education (how/why this happened)<br>
     2.Other changes eg to scope<br>
+
 5.GRAF in the Future<br>
  a.Challenges<br>
   i.New functionality<br>
