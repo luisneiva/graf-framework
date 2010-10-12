@@ -22,7 +22,9 @@
 [Models]<br>
 [RuleGrowth Rule Growth]<br>
 [xtUMLTimers xtUML Timers]<br>
-[ConditionalNodes Conditional Nodes]
+[ConditionalNodes Conditional Nodes]<br>
+[http://graf-framework.googlecode.com/files/2009 technical emails.doc Technical Emails From 2009]<br>
+[http://graf-framework.googlecode.com/files/graf emails 2010.doc Technical Emails From 2010]<br>
 
 === Tutorials ===
 [Quickstartguide Quick start guide]<br>
