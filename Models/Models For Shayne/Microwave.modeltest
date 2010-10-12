@@ -1,0 +1,4 @@
+Microwave.uml
+
+m1 : Microwave
+{ReadyToCook}
