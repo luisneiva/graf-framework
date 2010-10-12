@@ -1,0 +1,5 @@
+#summary 2010 project management pages
+[Scope Scope]
+<br>[Risk Risk Log]
+<br>[WBS Work Breakdown Structure]
+<br>[Milestones Milestones]
