@@ -21,7 +21,8 @@
 [RefDiscussion 'Reference' Discussion]<br>
 [Models]<br>
 [RuleGrowth Rule Growth]<br>
-[xtUMLTimers xtUML Timers]
+[xtUMLTimers xtUML Timers]<br>
+[ConditionalNodes Conditional Nodes]
 
 === Tutorials ===
 [Quickstartguide Quick start guide]<br>
