@@ -37,11 +37,7 @@
 [creatingDistributable How to make a distributable tarball]<br>
 
 === Project Documentation ===
-[Scope Scope]
-<br>[Risk Risk Log]
 <br>[GrafFuture GRAF in 2011]
-<br>[Milestones Milestones]
-<br>[WBS Work Breakdown Structure]
 <br>[Testing]
 <br>[Preshowcase Preshowcase Presentation]
 
@@ -52,3 +48,4 @@
 [SourceControl Source Control]<br>
 [TimeTracking Time Tracking]<br>
 [side_column 2009 Home Page]<br>
+[graf2010PM 2010 Project Management]<br>
