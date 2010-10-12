@@ -43,8 +43,6 @@
   b.    AGG
     i.    AGG is a graph-transformation engine implemented in java. We use it to do that actual work of applying the graph-transformation rules.
 
-3B. Demonstration of GRAF
-
 4.This Year’s Project<br>
   a.What we’ve done<br>
    i.Coverage of GRAF as a % of UML Actions<br>
@@ -57,6 +55,8 @@
     1.Education (how/why this happened)<br>
     2.Other changes eg to scope<br>
 
+4B. Demonstration of GRAF
+
 5.GRAF in the Future<br>
  a.Challenges<br>
   i.New functionality<br>
@@ -66,3 +66,12 @@
  b.Opportunities<br>
   i.UML – one of the most widely-used, most misunderstood languages <br>
   ii.‘technology transfer’<br>
+
+=== Assigned parts ===
+  * Oscar - 1
+  * Alice - 2-3
+  * Hamish - 4
+  * Oscar - 4B
+  * Stephen - 5
+
+
