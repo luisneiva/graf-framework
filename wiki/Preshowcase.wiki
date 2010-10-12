@@ -28,15 +28,7 @@
   b.    Define: Graph-transformations
     i.    What are they?
       1.    Wikipedia: “graph-transformation concerns the technique of creating a new graph out of an original graph using some automatic machine”
-      2.    You start with a base graph – some nodes and arcs between the nodes
-      3.    And a rule – this is two smaller graphs – a ‘before’ stage and an ‘after’ stage
-      4.    If the ‘before’ stage matches some part of your base graph, then you change the base graph to match the ‘after’ stage
-      5.    That is, the graph is transformed
-    ii.    How is that applied to UML?
-      1.    One of our clients argued in his thesis that you can represent a model’s state as a graph – a set of nodes and edges
-      2.    Once you’ve done this, you can define graph-transformation rules to mimic the operation of the most basic UML behavior – Actions
-    iii.    Why is that useful?
-      1.    We’ve already said why animators can be useful. Using graphs and graph-transformation rules allows us to formally define the implementation of Actions, rather than relying on code and hand-waving. Defining UML in this way at the lowest level will reduce the complexity and ambiguity of the language
+      2.    We combine all the information from all the different UML diagrams into a single graph, and transform that graph to walk the model through its states using the most low-level unit of UML behavior - Actions. In implementing each Action, we define it formally using graph-transformation rules. Defining UML in this way at the lowest level will reduce the complexity and ambiguity of the language
   c.    Define: Reference
     i.    What it originally meant vs. what it means to GRAF
     ii.    Classically, a ‘reference’ animator would be an authoritative implementation of UML against which all others can be judged. However, as we mentioned the OMG does not endorse UML implementations in this way
@@ -51,7 +43,7 @@
   b.    AGG
     i.    AGG is a graph-transformation engine implemented in java. We use it to do that actual work of applying the graph-transformation rules.
 
-3B. Demonstration of ‘semaphore’ model – pose question “what happens next?” Answer: it’s a trick question. UML is defined as non-deterministic, so either result is valid.<br>
+3B. Demonstration of GRAF
 
 4.This Year’s Project<br>
   a.What we’ve done<br>
