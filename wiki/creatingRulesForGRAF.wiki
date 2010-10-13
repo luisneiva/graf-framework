@@ -67,7 +67,7 @@ GRAF uses the GTSRulesSeq.xml file to determine which rule to apply when a parti
   # Use '!GraphOutputs/conversionFiles/dotToImg2 stateN.dot' (where N is the state just before the rule is applied) or the dotty.exe Graphviz program to view the stateN.dot file generated from the model as a graph.
   # Find the Action in the graph image. Keep this file open. You might want to sketch the nodes involved in the Action - especially if they are scattered across the graph. Use this to make a draft of the rule using the Description from the Specification.
   # Open AGG from the 'agg_V164' folder in the GRAF repository.
-    * A detailed explanation of AGG's interface and functionality can be found [here howToCreateRulesInAGG]. The following is a brief description of the recommended process.
+    * A detailed explanation of AGG's interface and functionality can be found [howToCreateRulesInAGG here]. The following is a brief description of the recommended process.
     # Open the GRAF graph grammar.
     # Create a new blank rule and give it a name - the name you added to the GTSRulesSeq.xml file.
     # Open the LHS window for that rule.
