@@ -1,0 +1,21 @@
+#summary Minutes template
+
+= Stakeholder Meeting =
+Date: 12/10/10
+<br>Location: CSIT N101
+<br>Present: Oscar, Stephen, Alice, Cameron, Frank and Hamish
+<br>Time: 2pm
+<br>Duration: 1 hour
+
+== Presentation ==
+
+* Frank and Cameron will not be speaking
+  * Alice takes Camerons part -> 2a,b,c
+  * Hamish takes Franks Part -> 4
+* Success Criteria
+  * Place in table and match up with what we did to achieve each item
+* Presentation will be on the ANU repository (sepository?)
+
+== Other ==
+
+* Next meeting will be at Monday 20/10 2pm unless otherwise specified
