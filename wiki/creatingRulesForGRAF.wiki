@@ -64,33 +64,34 @@ GRAF uses the GTSRulesSeq.xml file to determine which rule to apply when a parti
 
 == Stage 1: LHS ==
   # If you haven't already done so, run GRAF with Printgraphs set to true. Load the relevant model and click through to the state just before the new Action would be executed, then exit.
-  # Use 'GraphOutputs/conversionFiles/dotToImg2 stateN.dot' (where N is the state just before the rule is applied) or the dotty.exe Graphviz program to view the state0.dot file generated from the model as a graph.
-  # Find the Action that you added in the graph image and check that it 'makes sense'. Keep this file open. You might want to sketch the nodes involved in the Action - especially if they are scattered across the graph. Use this to make a draft of the rule using the Description from the Specification.
+  # Use '!GraphOutputs/conversionFiles/dotToImg2 stateN.dot' (where N is the state just before the rule is applied) or the dotty.exe Graphviz program to view the stateN.dot file generated from the model as a graph.
+  # Find the Action in the graph image. Keep this file open. You might want to sketch the nodes involved in the Action - especially if they are scattered across the graph. Use this to make a draft of the rule using the Description from the Specification.
   # Open AGG from the 'agg_V164' folder in the GRAF repository.
+    * A detailed explanation of AGG's interface and functionality can be found [here howToCreateRulesInAGG]. The following is a brief description of the recommended process.
     # Open the GRAF graph grammar.
-    # Create the new rule node - give it an appropriate name.
+    # Create a new blank rule and give it a name - the name you added to the GTSRulesSeq.xml file.
     # Open the LHS window for that rule.
-    # Add the nodes and edges to the LHS (pre-condition). Make sure that every node that will be used in the rule is included. 
+    # Add the nodes and edges for the LHS (pre-condition). Make sure that every node that will be used in the rule is included. 
       # Give the nodes and edges unique names, using the Attributes view.
       # Where you want to match a node or edge name to the graph, put the name in "double quotes". Where the name is a variable, don't use quotes.
     # Use the 'IR' button to generate a mapped right-hand-side for the rule.
     # Open the 'Attributes' view.
     # Open the 'Attribute Context' tab.
-    # 'Check' the box in the 'In' column belonging to the nodes representing the host instance and the instance of the Action itself. This tells AGG what input parameters to expect when applying the rule, which it uses to 'match' to the graph. This also means that you don't have to worry as much about multiple matches.
+    # 'Check' the box in the 'In' column belonging to the nodes representing the host instance and the instance of the Action itself. This tells AGG what input parameters to expect when applying the rule, which it uses to 'match' to the graph.
     # Save the file. Keep AGG open.
   # Edit the Properties.txt file so that 'PrintRules' is set to true.
-  # Run GRAF. The generated rule.dot files should be converted to images automatically. Open the new rule and check that it 'makes sense' - eg that there are no unexpected edges or spelling mistakes. If there are errors, return to AGG and fix the problem (if you need to do this, obviously close GRAF and restart).
+  # Run GRAF. The generated rule.dot files should be converted to images automatically. Open the new rule and check that looks ok. If there are errors, return to AGG and fix the problem, and repeat.
   # Then click through the model until the new Action is available. Click on the Action. If the rule is applied with no errors, proceed to the next stage. Otherwise, there are two possible problems:
     # In the .xml file: either the Action name is not correct or the rule name doesn't match. If this occurs, simply fix the .xml file, save and try again.
     # In the rule file: the rule doesn't match. Usually, either:
       # The inputs are incorrect.
       # The "name" of a node or edge doesn't match the graph.
-      # An edge is pointing in the wrong direction(!)
+      # An edge is pointing in the wrong direction.
     # Use the stateN.dot (where N is the state just before the rule was applied) file to check that the rule LHS is accurate. Remember to create a new identic RHS and save before retrying.
     # If all else fails, remove nodes one by one until the rule matches. Then add the nodes and edges back in one at a time, testing each time.
 
 == Stage 2: RHS ==
 Now that you know that the LHS of the rule matches, make the necessary changes to the RHS to implement the Description. Test the new rule in GRAF as before. Remember to check the underlying graph and generated rule image - logic errors will not necessarily be obvious from the object diagram view.
 
-= 5. Test and repeat =
+= 5. Update Documentation =
 When the rule is working, update the rule documentation to include the new rule, and any assumptions or deviations from the description that you made while implementing it.
