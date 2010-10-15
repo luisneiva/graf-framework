@@ -24,7 +24,7 @@ m1 will have to be an existing object in the .modeltest file. actor1 will have t
 
 The second step is to set up the .uml file. See the image below.
 
-______
+http://graf-framework.googlecode.com/files/timerform.jpg
 
 The beep and beepSignal nodes are normal untimed nodes. startTimer and startTimerSignal are the equivalent nodes, but timed. A timed signal needs a property called _setTimer_ to be interpreted as a timed signal. The literal integer child of this is the time that the signal will be delayed. You'll need a !SendSignalAction somewhere else in the file to send the signal (external actors currrently can't send timed signals).
 
