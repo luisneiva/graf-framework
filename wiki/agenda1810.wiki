@@ -1,0 +1,9 @@
+#summary agenda
+== Client Meeting ==
+*Date:* 18/10/10
+<br>*Time:* 2pm
+<br>*Location:* Raj's office then N110
+<br>*Duration:* 2 hours
+
+=== Agenda Items ===
+  * Pre-showcase presentation rehearsal and discussion
