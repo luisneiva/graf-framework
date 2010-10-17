@@ -282,7 +282,7 @@ public class Controller {
 		Menu menuBar, fileMenu, editMenu, helpMenu, properitesMenu;
 		MenuItem fileMenuHeader, editMenuHeader, helpMenuHeader, properitesMenuHeader;
 		MenuItem fileExitItem, fileNewItem, helpGetHelpItem, undoItem, redoItem, resetItem;
-		final MenuItem properitesPrintDebugItem, properitesPrintRulesItem, properitesPrintGraphsItem;
+		final MenuItem properitesPrintDebugItem, properitesPrintRulesItem, properitesPrintGraphsItem, properitesPrintTimingItem;
 
 		menuBar = new Menu(shell, SWT.BAR);
 		fileMenuHeader = new MenuItem(menuBar, SWT.CASCADE);
@@ -356,6 +356,14 @@ public class Controller {
 			properitesPrintDebugItem.setText("Turn On Print Debug");
 		}
 
+		properitesPrintTimingItem = new MenuItem(properitesMenu, SWT.PUSH);
+		Boolean printTiming = Boolean.parseBoolean(Properties.getProperty("PrintTiming"));
+		if(printTiming) {
+			properitesPrintTimingItem.setText("Turn Off Timing");
+		} else {
+			properitesPrintTimingItem.setText("Turn On Timing");
+		}
+		
 		shell.setMenuBar(menuBar);
 
 		// file->exit
@@ -520,6 +528,31 @@ public class Controller {
 				}
 			}			
 		});
+		
+		//Properties -> PrintTiming
+		properitesPrintTimingItem.addSelectionListener(new SelectionListener() {
+			public void widgetDefaultSelected(SelectionEvent e) {
+
+			}
+
+			public void widgetSelected(SelectionEvent e) {
+				Boolean printTiming = Boolean.parseBoolean(Properties.getProperty("PrintTiming"));
+				if(printTiming){
+					Properties.setProperty("PrintTiming", "false");
+					properitesPrintTimingItem.setText("Turn On Print Timing");	
+				} else {
+					Properties.setProperty("PrintTiming", "true");
+					properitesPrintTimingItem.setText("Turn Off Print Timing");
+				}
+
+				try {
+					Properties.rewritePropertiesFile();
+				} catch (FileNotFoundException e1) {
+					e1.printStackTrace();
+				}
+			}			
+		});
+		
 	}
 
 
@@ -527,8 +560,6 @@ public class Controller {
 	 * Run the Animator as a stand-alone application
 	 */
 	public static void main(String[] args) {
-
-		long time = System.currentTimeMillis();
 
 		final Display d = new Display();
 		final Shell shell = new Shell(d);
@@ -547,12 +578,5 @@ public class Controller {
 		while (!shell.isDisposed())
 			while (!d.readAndDispatch())
 				d.sleep();
-
-		//Time how long the application runs for
-		long time3 = System.currentTimeMillis();
-		long setupTime = time2 - time1;
-		long totalTime = time3 - time;
-		System.out.println("Total Main measured setup time: " + setupTime + " milliseconds");
-		System.out.println("Total execution time: " + totalTime + " milliseconds\n");
 	}
 }

@@ -183,7 +183,7 @@ public class View extends ViewPart {
 	
 	/** Open a file chooser and return path to chosen file, or null if none chosen */
 	public String openFileChooser() {
-
+/*
 		JFrame frame = new JFrame("Select a modeltest file");
 
 		JFileChooser chooser = new JFileChooser();
@@ -215,12 +215,12 @@ public class View extends ViewPart {
 		chooser.showOpenDialog(frame);
 		
 		return listener.result;
-
-		/*FileDialog filedialog = new FileDialog(parent.getShell());
+*/
+		FileDialog filedialog = new FileDialog(parent.getShell());
 		filedialog.setText("Choose a uml model:");
 		filedialog.setFilterPath("Models");
 		filedialog.setFilterExtensions(new String[]{"*.modeltest"});
-		return filedialog.open();*/
+		return filedialog.open();
 	}
 
 	/** Open a file chooser and return path to chosen file, or null if none chosen */

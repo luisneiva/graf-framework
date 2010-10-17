@@ -16,6 +16,7 @@ import model.modelTransformer.objectDisplay.ObjectDisplay;
 import org.eclipse.swt.graphics.Point;
 
 import controller.GrafTimer;
+import controller.Properties;
 
 import agg.xt_basis.Arc;
 import agg.xt_basis.Node;
@@ -73,7 +74,10 @@ public class GraphToObjDiag implements GraphToModel {
 		objdiag.setODLinks(odLinks);
 		long time1 = System.currentTimeMillis();
 		long totalTime = time1 - time;
-		System.out.println("Total model loading time: " + totalTime + " milliseconds\n");
+		Boolean printTiming = Boolean.parseBoolean(Properties.getProperty("PrintTiming"));
+		if(printTiming) {
+			System.out.println("Total model loading time: " + totalTime + " milliseconds\n");
+		}
 		return objdiag;
 	}
 	
