@@ -1,0 +1,21 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+This page has been created to outline all the major events that have occurred throughout the life of the project during 2010 including, important decisions, road blocks, where the animator is at the end of 2010 and what is expected for the future years. This page will also contain useful links to most of the important project related documents.
+
+
+= Decisions =
+
+= Road Blocks =
+
+= GRAF's current state =
+
+= Future Roadmap =
+
+= Initial Setup =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
