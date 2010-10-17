@@ -175,7 +175,10 @@ public class AGGTransformer {
 		
 		long time1 = System.currentTimeMillis();
 		long totalTime = time1 - time;
-		System.out.println("total rule application time = " + totalTime);
+		Boolean printTiming = Boolean.parseBoolean(Properties.getProperty("PrintTiming"));
+		if(printTiming) {
+			System.out.println("total rule application time = " + totalTime + " milliseconds");
+		}
 	}
 
 	/**
