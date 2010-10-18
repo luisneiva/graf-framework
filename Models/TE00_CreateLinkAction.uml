@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA">
+  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="TE00">
+    <packagedElement xmi:type="uml:Class" xmi:id="_wIKVkGYEEd-8QvdEjO-jiQ" name="C"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_wjPvGGYEEd-8QvdEjO-jiQ" name="B">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_meP9gJLREd-rAdRAOBcEiw" name="createCMethod" specification="_meWEIJLREd-rAdRAOBcEiw">
+        <node xmi:type="uml:ReplyAction" xmi:id="_wn7ysLPgEd-MwMXpdXP3CA" name="createCReply" replyToCall="_mYLPkLPfEd-MwMXpdXP3CA">
+          <returnInformation xmi:type="uml:ActionInputPin" xmi:id="_MzV6sLPwEd-2xdMgVqLzsQ" name="createCReplyReturnInformation">
+            <fromAction xmi:type="uml:AcceptCallAction" xmi:id="_QcS-YLPwEd-2xdMgVqLzsQ" name="createCAcceptCall">
+              <result xmi:id="_rJYUwLPfEd-MwMXpdXP3CA" name="createCAcceptCallResult"/>
+              <result xmi:id="_4XswMLPfEd-MwMXpdXP3CA" name="createCAcceptCallReturnInformation"/>
+              <result xmi:id="_fkY3MLVWEd-0548mubOy8w" name="createCAcceptCallReturnInformation"/>
+              <trigger xmi:id="_mYLPkLPfEd-MwMXpdXP3CA" name="createCAcceptCallTrigger" event="_Y69tcLPoEd-2xdMgVqLzsQ"/>
+              <returnInformation xmi:id="_bwzQ0bVWEd-0548mubOy8w" name="createCAcceptCallReturnInformation"/>
+            </fromAction>
+          </returnInformation>
+          <replyValue xmi:type="uml:ActionInputPin" xmi:id="_CefxULPxEd-2xdMgVqLzsQ" name="createCReplyValue"/>
+          <replyValue xmi:type="uml:ActionInputPin" xmi:id="_bI4SociFEd--F_by6t4o3w" name="createCReplyValue2">
+            <fromAction xmi:type="uml:CreateLinkAction" xmi:id="_cxAuEMiFEd--F_by6t4o3w" name="createCCreateLink">
+              <endData xmi:type="uml:LinkEndCreationData" xmi:id="_h7JQoMiFEd--F_by6t4o3w" end="_514_LGYEEd-8QvdEjO-jiQ"/>
+              <endData xmi:type="uml:LinkEndCreationData" xmi:id="_j0jpUMiFEd--F_by6t4o3w" end="_514_L2YEEd-8QvdEjO-jiQ"/>
+              <inputValue xmi:type="uml:ActionInputPin" xmi:id="_qc4f0ciTEd-R2eZ0JRIANg">
+                <fromAction xmi:type="uml:CreateObjectAction" xmi:id="_meP9gZLREd-rAdRAOBcEiw" name="createCCreateObject" classifier="_wIKVkGYEEd-8QvdEjO-jiQ">
+                  <result xmi:id="_meP9gpLREd-rAdRAOBcEiw" name="createCCreateObjectResult"/>
+                </fromAction>
+              </inputValue>
+            </fromAction>
+          </replyValue>
+        </node>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_meWEIJLREd-rAdRAOBcEiw" name="createC" visibility="public" method="_meP9gJLREd-rAdRAOBcEiw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_w8O22GYEEd-8QvdEjO-jiQ" name="A">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_LbtvgLPnEd-2xdMgVqLzsQ" name="createBMethod" specification="_JyVW4LPnEd-2xdMgVqLzsQ">
+        <node xmi:type="uml:ReplyAction" xmi:id="_cBmjsLPnEd-2xdMgVqLzsQ" name="createBReply" replyToCall="_tMAkwLPoEd-2xdMgVqLzsQ">
+          <returnInformation xmi:type="uml:ActionInputPin" xmi:id="_4HoqMbP7Ed-cjowyqWEcHQ" name="createBReplyReturnInforamtion">
+            <fromAction xmi:type="uml:AcceptCallAction" xmi:id="_XNjl4LPnEd-2xdMgVqLzsQ" name="createBAcceptCall">
+              <result xmi:id="_l-3BkLPoEd-2xdMgVqLzsQ" name="createBAcceptCallResult"/>
+              <trigger xmi:id="_tMAkwLPoEd-2xdMgVqLzsQ" name="createBAcceptCallTrigger" event="_MVIvALPgEd-MwMXpdXP3CA"/>
+              <returnInformation xmi:id="_p54FoLPoEd-2xdMgVqLzsQ" name="createBAcceptCallReturnInformation"/>
+            </fromAction>
+          </returnInformation>
+          <replyValue xmi:type="uml:ActionInputPin" xmi:id="_99WgYLP7Ed-cjowyqWEcHQ" name="createBReplyValue">
+            <fromAction xmi:type="uml:CreateObjectAction" xmi:id="_ZkJp0LPnEd-2xdMgVqLzsQ" name="createBCreateObject" classifier="_wjPvGGYEEd-8QvdEjO-jiQ">
+              <result xmi:id="_6Q5XYLPoEd-2xdMgVqLzsQ" name="createBCreateObjectResult"/>
+            </fromAction>
+          </replyValue>
+        </node>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_JyVW4LPnEd-2xdMgVqLzsQ" name="createB" method="_LbtvgLPnEd-2xdMgVqLzsQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_xmVjymYEEd-8QvdEjO-jiQ" name="A_&lt;a>_&lt;b>" memberEnd="_xmVjy2YEEd-8QvdEjO-jiQ _xmVjzmYEEd-8QvdEjO-jiQ">
+      <ownedEnd xmi:id="_xmVjy2YEEd-8QvdEjO-jiQ" name="a" type="_wIKVkGYEEd-8QvdEjO-jiQ" isUnique="false" association="_xmVjymYEEd-8QvdEjO-jiQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xmVjzGYEEd-8QvdEjO-jiQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xmVjzWYEEd-8QvdEjO-jiQ"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_xmVjzmYEEd-8QvdEjO-jiQ" name="b" type="_wjPvGGYEEd-8QvdEjO-jiQ" isUnique="false" association="_xmVjymYEEd-8QvdEjO-jiQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xmVjz2YEEd-8QvdEjO-jiQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xmVj0GYEEd-8QvdEjO-jiQ"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_514_K2YEEd-8QvdEjO-jiQ" name="A_&lt;b>_&lt;c>" memberEnd="_514_LGYEEd-8QvdEjO-jiQ _514_L2YEEd-8QvdEjO-jiQ">
+      <ownedEnd xmi:id="_514_LGYEEd-8QvdEjO-jiQ" name="b" type="_wjPvGGYEEd-8QvdEjO-jiQ" isUnique="false" association="_514_K2YEEd-8QvdEjO-jiQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_514_LWYEEd-8QvdEjO-jiQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_514_LmYEEd-8QvdEjO-jiQ"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_514_L2YEEd-8QvdEjO-jiQ" name="c" type="_wIKVkGYEEd-8QvdEjO-jiQ" association="_514_K2YEEd-8QvdEjO-jiQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_514_MGYEEd-8QvdEjO-jiQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_514_MWYEEd-8QvdEjO-jiQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_MVIvALPgEd-MwMXpdXP3CA" name="createBCallEvent" operation="_JyVW4LPnEd-2xdMgVqLzsQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_Y69tcLPoEd-2xdMgVqLzsQ" name="createCCallEvent" operation="_meWEIJLREd-rAdRAOBcEiw"/>
+  </packagedElement>
+</uml:Model>
