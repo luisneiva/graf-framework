@@ -108,9 +108,7 @@ public class View extends ViewPart {
 	public void openFirst() {
 		String instancepath = openFileChooser();
 
-		// TODO!!! file path in string.
 		Properties.filePathStr = instancepath;
-
 
 		if (instancepath == null) 
 			return;
@@ -181,9 +179,19 @@ public class View extends ViewPart {
 		
 	}
 	
-	/** Open a file chooser and return path to chosen file, or null if none chosen */
+	
+	/**
+     * Open a file chooser and return path to chosen file, or null if none chosen 
+     * 
+     * See defect 12. There's 2 versions of the code here. Both versions work on windows.
+     * The first version doesn't work Linux10.04
+     * Both versions work on windows but the second version doesn't work as well
+     *  - the file chooser window always appears behind everything else
+     *  
+     *  So if it's not working just uncomment one part a comment the other part
+	 */
 	public String openFileChooser() {
-/*
+
 		JFrame frame = new JFrame("Select a modeltest file");
 
 		JFileChooser chooser = new JFileChooser();
@@ -215,17 +223,16 @@ public class View extends ViewPart {
 		chooser.showOpenDialog(frame);
 		
 		return listener.result;
-*/
-		FileDialog filedialog = new FileDialog(parent.getShell());
+
+	/*	FileDialog filedialog = new FileDialog(parent.getShell());
 		filedialog.setText("Choose a uml model:");
 		filedialog.setFilterPath("Models");
 		filedialog.setFilterExtensions(new String[]{"*.modeltest"});
-		return filedialog.open();
+		return filedialog.open(); */
 	}
 
 	/** Open a file chooser and return path to chosen file, or null if none chosen */
 	public String openFileChooser(String prompt) {
-		//TODO: Add file chooser code
 		FileDialog filedialog = new FileDialog(parent.getShell());
 		filedialog.setText(prompt);
 		filedialog.setFilterPath("Models");
@@ -234,7 +241,6 @@ public class View extends ViewPart {
 	}
 
 	/** Display error message to user */
-	// TODO!!!
 	public void showError(String msg) {
 		if (parent == null) {
 			MessageDialog.openError(null, "Animator Error", msg);
