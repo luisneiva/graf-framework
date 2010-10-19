@@ -1,12 +1,11 @@
 package model;
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
-
-import controller.Properties;
 
 import model.exceptions.GraphToModelException;
 import model.exceptions.ModelToGraphException;
@@ -18,6 +17,7 @@ import model.modelTransformer.ModelToGraphFactory;
 import model.modelTransformer.objectDisplay.DisplayObject;
 import model.modelTransformer.objectDisplay.ObjectDisplay;
 import agg.xt_basis.Arc;
+import controller.Properties;
 
 /**
  * Facade to model. Holds graph and coordinates model logic.
@@ -80,8 +80,12 @@ public class PluginModel {
 				//	 		Uncomment the following to generate rule .dot files on setup & convert them to images
 							String path = "GraphOutputs\\conversionFiles\\dotToImg2";
 							String[] command = {"cmd", "/C", "start " + path + " rules"};
-							Process p = Runtime.getRuntime().exec(command);
-							p.waitFor();
+							File f = new File(path);
+							if(f.exists()){
+								Process p = Runtime.getRuntime().exec(command);
+								p.waitFor();
+								p.destroy(); 
+							}
 			} catch (Exception err) {
 				System.out.println("Rule generation or conversion failed!");
 				err.printStackTrace();
