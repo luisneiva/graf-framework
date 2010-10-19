@@ -50,8 +50,6 @@ public class ObjectDiagDrawer extends ContentDrawer {
 		ObjDiag objDiag = (ObjDiag)objdisplay;
 		ArrayList<DisplayObject> objects = objDiag.getODObjs();
 		ArrayList<ODLink> odLinks = objDiag.getODLinks();
-		ArrayList<Integer> checkerX = new ArrayList<Integer>();
-		ArrayList<Integer> checkerY = new ArrayList<Integer>();
 
 		if (objects.size()>0 && !(objects.get(0) instanceof ODObject)) return;
 
@@ -108,13 +106,6 @@ public class ObjectDiagDrawer extends ContentDrawer {
 					classFigure,
 					new Rectangle(odObj.getLocation().x, odObj.getLocation().y,
 							-1, -1));
-					checkerX.add(odObj.getLocation().x);
-					checkerY.add(odObj.getLocation().y);
-					for(int i = 0; i < checkerX.size(); i++){
-						//if(odObj.getLocation().x == checkerX.get(i)){
-						//System.out.println(checkerX.get(i));	
-						//}
-					}
 			contents.add(classFigure);
 		}
 		// create links
