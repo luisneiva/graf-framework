@@ -12,7 +12,9 @@ This model was used to test the teams implementation of if statements within GRA
 
 === Microwave Timer ===
 
-This model is the simpler of the 2 models supplied to Shayne Flint for potential use in conjunction with the teaching of COMP 3110
+This model is the simpler of the 2 models supplied to Shayne Flint for potential use in conjunction with the teaching of COMP 3110. The timer function is used with this model.
+
+http://graf-framework.googlecode.com/files/MicrowaveSimpleStateMachine.png
 
 === Microwave with Integer ===
 
@@ -28,4 +30,6 @@ http://graf-framework.googlecode.com/files/Racer.png
 
 === TE00 ===
 
-CreateObjectInstance Test
+Uses the Create Object Instance UML Action
+
+http://graf-framework.googlecode.com/files/TE00.png
