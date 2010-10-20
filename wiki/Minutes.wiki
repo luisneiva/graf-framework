@@ -41,6 +41,8 @@
 || 11/10 || Mentor || [agenda1110 Agenda] || [minutes1110 Minutes] ||
 || 12/10 || Team || [agenda1310 Agenda] || [minutes1310 Minutes] ||
 || 18/10 || Client || [agenda1810 Agenda] || [minutes1810 Minutes] ||
+|| 19/10 || Team || No Agenda || [minutes1910 Minutes] ||
+|| 25/10 || Client || [agenda2510 Agenda] || [minutes2510 Minutes] ||
 
 Agendas and minutes from before 12/5/2010 are on [https://alliance.anu.edu.au/portal Alliance]. <br>
 [agendaTemplate Agenda Template] <br>
