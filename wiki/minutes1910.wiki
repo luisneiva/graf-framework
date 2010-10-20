@@ -1,0 +1,16 @@
+#summary Minutes
+
+= Team Meeting =
+Date: 19/10/10
+<br>Location: CSIT N110
+<br>Present: Oscar, Stephen, Alice, Cameron, Hamish
+<br>Time: 3pm
+<br>Duration: 1 hour
+
+== Assigned tasks ==
+  * Stephen – make executable
+  * Hamish – do 2010 overview
+  * Alice – fix command prompt stuff and make bash version and list miscellaneous things somewhere
+  * Cameron – 2011 homepage and finish list of models
+  * Frank – investigate defects 9, 13, 14, 15
+  * Oscar – dismantle timers
