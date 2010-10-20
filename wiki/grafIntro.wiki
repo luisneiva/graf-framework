@@ -22,7 +22,9 @@ http://graf-framework.googlecode.com/files/microwave.jpg
 
 === Racer === 
 
-Blah Bitty Blah
+A simple UML model
+
+http://graf-framework.googlecode.com/files/Racer.png
 
 === TE00 ===
 
