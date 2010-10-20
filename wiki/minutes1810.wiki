@@ -1,0 +1,3 @@
+#summary Minutes
+
+Worked on Pre-showcase presentation - see http://svn.anu.edu.au/SE_projects/GRAF/PreShowcasePresentation.ppt
