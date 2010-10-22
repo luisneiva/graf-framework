@@ -7,6 +7,9 @@ Date: 19/10/10
 <br>Time: 3pm
 <br>Duration: 1 hour
 
+== General ==
+  * Decided to dismantle timer implementation and leave instructions for next year on how to do it better
+
 == Assigned tasks ==
   * Stephen – make executable
   * Hamish – do 2010 overview
