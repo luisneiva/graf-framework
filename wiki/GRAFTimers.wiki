@@ -25,4 +25,4 @@ http://graf-framework.googlecode.com/files/HighLevelDesign.png
 
 In a correct implementation you should not have to duplicate any of the code that applies graph transformations.
 
-Note that !EventTimer.java and the !createDelayEvent method in ODObject.java are still on svn and it could be worth having a look at. But EventTimer.java isn't used and all the other timer code has been taken out.
+Note that !EventTimer.java and the !createDelayEvent method in ODObject.java are still on svn and it could be worth having a look at. But !EventTimer.java isn't used and all the other timer code has been taken out.
