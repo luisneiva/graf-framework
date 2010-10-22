@@ -3,12 +3,8 @@ package model.modelTransformer.objectDisplay;
 import java.util.ArrayList;
 
 import model.ListGraph;
-import model.exceptions.RuleException;
-import model.graphTransformer.AGGTransformer;
-import agg.xt_basis.Arc;
 import agg.xt_basis.Graph;
 import agg.xt_basis.Node;
-import controller.Properties;
 
 /** 
  *   ODObject
@@ -42,7 +38,7 @@ public class ODObject extends DisplayObject {
 	private boolean attributesShowing = true;
 	/** Is the event/action compartment showing */
 	private boolean runtimePoolShowing = true;
-
+	
 	public ODObject(ODClass instantiation, Node graphNode, Boolean eventMode) {
 		this.eventMode = eventMode;
 
@@ -227,8 +223,19 @@ public class ODObject extends DisplayObject {
 		return stateNodes;
 	}
 
-	public void createDelayEvent(ODObject odObj, ListGraph graph) {
-		String actParam = "";  
+	/**
+	 * 
+	 * ABANDONED
+	 * 
+	 * See http://code.google.com/p/graf-framework/wiki/GRAFTimers for details
+	 * 
+	 * createDelayEvent can be deleted. It's only still here to give instructions
+	 * on how to implement a better timer system
+	 * 
+	 * @author Oscar
+	 */
+	/*public void createDelayEvent(ODObject odObj, ListGraph graph) {
+		String actParam = "";
 		
 		// First find the Actor node
 		Node actor = null;
@@ -271,38 +278,40 @@ public class ODObject extends DisplayObject {
 		for(Node actorInstance : actorInstances) {
 			findObjects = ListGraph.toTrace(findObjectRoute, actorInstance);
 			for (Node objectNode : findObjects) {
-				System.out.println("\tFind obj: " + ListGraph.getName(objectNode));
 				
 				senderInstances = ListGraph.fromTrace(backToSender, objectNode);
 				for(Node senderNode : senderInstances) {
-					System.out.println("\tFind sender: " + ListGraph.getName(senderNode));
 					
 					findSignals = ListGraph.toTrace(findSignalRoute, senderNode);
 					for(Node sigalNode : findSignals) {
-						System.out.println("\tFind signal node: " + ListGraph.getName(senderNode));
 						
 						findActions = ListGraph.fromTrace(backToActionParam, sigalNode);
 						for(Node actParamNode : findActions){
 							actParam = ListGraph.getName(actParamNode);
-							System.out.println("\tFind action param is: " + actParam);
 						}
 					}
 				}
 			}
 		}
-		
+
 		String gtsRulesPath = Properties.getProperty("gtsRulesPath");
 		String gtsRulesSeqPath = Properties.getProperty("gtsRulesSeqPath");
-		
+
 		try {
 			AGGTransformer transformer;
 			transformer = new AGGTransformer(gtsRulesPath, gtsRulesSeqPath);
-			System.out.println(odObj.getName() + " ---- " + actParam);
+			transformer.setGraph(graph);
 			graph = (ListGraph) transformer.transition(odObj.getName(), "ActorSendSignal", actParam);
+
+			ObjectDisplay newDisplay = GraphToModelFactory.createGraphToModel().generateDisplayObjects(graph);
+			plugin.refresh(newDisplay);
+
+			if(Boolean.parseBoolean(Properties.getProperty("PrintDebug")))
+				System.out.println("Timer transformation complete! Parameters: " + odObj.getName() + ", " + actParam);
 		} catch (RuleException e) {
 			e.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}
+	}*/
 }

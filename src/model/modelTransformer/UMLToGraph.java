@@ -237,10 +237,6 @@ public class UMLToGraph implements ModelToGraph {
 					instanceErr("Unrecognised line: " + line);
 				}
 			}
-			// TODO!!!
-//			if (stateDeclared == false) {
-//				instanceErr("No state declaration for object " + objName + " : " + className);
-//			}
 		} catch (FileNotFoundException e) {
 			instanceErr("Could not find file " + instanceURL.getPath());
 		} catch (IOException e) {
