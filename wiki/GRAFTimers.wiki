@@ -1,38 +1,28 @@
 #summary How timers work in GRAF
 =Timers=
-There's a partial, ideosyncratic implementation of timers in GRAF. This page explains it, but you should also take a look the microwaveTimer model and try executing it.
+At the end of the 2010 project, the GRAF team attempted to implement [xtUMLTimers xtUML style timers] in GRAF. It became apparent that our implementation method was not optimal and there wasn't enough time to finish it and it was a kludge. Though timers aren't part of the UML definition, they're common in xtUML. This page serves as a guide for how not to implement timers if a future group chooses to do so.
 
-== Purpose ==
-We implemented timers to enable the animation of Shayne Flint's [http://cs.anu.edu.au/student/comp3110/ microwave model]. This is an xtUML model and contains statements like Generate x to y delay 20.
+==UML vs xtUML==
+The first thing you need to decide when implementing timers is whether to do it according to UML or xtUML. UML doesn't have timers so you'd have to build them from the ground up using such things as Durations and !DurationIntervals. This would take a lot of effort and research into the UML definition.
 
-== UML vs xtUML ==
-UML doesn't have timers because they're too high level. See [xtUMLTimers this explanation]. We take thorough care in implementing UML features according to the definition (even if it is in informal English). But xtUML has no section on semantics, formal or informal. Therefore we have taken a more flexible approach in implementing timers, doing what fits the existing code best.
+We followed xtUML. Our implementation of GRAF is for UML not xtUML, but we aimed to put in some kind of switch which would turn on xtUML mode and enable timers. Since xtUML has no explicit semantics unlike UML (informal English though it may be) we can take some more liberties in how we interpret and implement it.
 
-== Design Overview ==
-Instead of sending a signal which takes 20 seconds to arrive, we send a signal to an actor object. The actor waits for 20 seconds and then sends a signal back.
+Or, you could follow a profile of UML that is designed for timers. This would be similar to the xtUML option.
 
-We try and implement all features as low down as possible. That is, graphs, not code. But in the case of timers we necessarily use a lot of high level code to deal with it.
+==Failed Implementation==
+We connected objects to the Actor object. When an object sent a timed signal, it went to the Actor (!SendSignalAction). A timer would run and then the timed signal would be received (!ActorSendSignal). The use of the Actor node was an arbitrary kludge. Don't do this.
 
-== How to use a timer ==
-To set up a timer at the moment is an involved process. If timers are popular then it would be beneficial to simplify this.
+An old page dealing our failed implementation is [OldGrafTimers here].
 
-The first step is to change the .modeltest file. Add a line like the following:
-{{{
-m1 <fromMicrowave,toActor> actor1
-}}}
-m1 will have to be an existing object in the .modeltest file. actor1 will have to be an object that _does not_ exist in the .modeltest file. actor1 is the instance of the Actor which is automatically created in GRAF. This line creates a link from the object to be timed to the actor, which we hijack to do the timer stuff. We use the link as a means of getting the signal to the actor.
+==Challenges==
+The main challenge is we use the .uml files to define our models. If you do an xtUML implementation of timers then you won't be able to put it in the .uml file because it only has UML elements, which doesn't include timers. An alternative might be to add something in the .modeltest file.
 
-The second step is to set up the .uml file. See the image below.
+In GRAF we should do all the behaviour stuff at the graph level using graph transformations. But we can't do this using timers. A timer will have to exist somewhere higher up in the code, using the Java Timer class or something like that.
 
-http://graf-framework.googlecode.com/files/timerform.jpg
+In our failed implementation, the timed events worked but when the timers expired you couldn't see the changes in the graph reflected in the object diagram. This was because we didn't implement the transformations in the normal part of the code. !EventTimer objects stored the timed events and executed the delayed graph transformations. A refresh action would have been needed to update the object diagram to reflect the graph. But doing a refresh would have seriously violated the connections in the architecture:
 
-The beep and beepSignal nodes are normal untimed nodes. startTimer and startTimerSignal are the equivalent nodes, but timed. A timed signal needs a property called _setTimer_ to be interpreted as a timed signal. The literal integer child of this is the time that the signal will be delayed. You'll need a !SendSignalAction somewhere else in the file to send the signal (external actors currrently can't send timed signals).
+http://graf-framework.googlecode.com/files/HighLevelDesign.png
 
-== How timers work ==
-The sequence begins at the graph level. A normal signal is sent. The code then examines it and discovers it's a timed object. It can tell it's a timed object because it's being sent to the actor (an arbitrary kludge in the implementation). At this point the code takes over and stores who sent the signal and the time of the signal. When the timer expires the code executes !ActorSendSignal. This will send a signal back to the sender, bringing it back to the graph level.
+In a correct implementation you should not have to duplicate any of the code that applies graph transformations.
 
-== Limitations ==
-  * Only one timed event can happen at a time
-  * Timed objects can only send timed signals to themselves
-  * Timed events don't use the normal code due to the need for concurrency. Therefore there's some nasty duplication, specifically in ODObject.createDelayEvent() of !PluginModel
-  * (to be confirmed) This may not be completed by the end of the year
+Note that !EventTimer.java is still on svn and it could be worth having a look at. But EventTimer.java isn't used and all the other timer code has been taken out.
