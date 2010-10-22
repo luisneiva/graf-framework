@@ -15,11 +15,9 @@ import model.modelTransformer.objectDisplay.ObjectDisplay;
 
 import org.eclipse.swt.graphics.Point;
 
-import controller.GrafTimer;
-import controller.Properties;
-
 import agg.xt_basis.Arc;
 import agg.xt_basis.Node;
+import controller.Properties;
 
 public class GraphToObjDiag implements GraphToModel {
 
@@ -53,7 +51,7 @@ public class GraphToObjDiag implements GraphToModel {
 			}
 		}
 		
-		objdiag = generateObjectDiagram(graph);   
+		objdiag = generateObjectDiagram(graph);
 
 		objects = objdiag.getODObjs();
 		odLinks = objdiag.getODLinks();
@@ -80,7 +78,6 @@ public class GraphToObjDiag implements GraphToModel {
 		}
 		return objdiag;
 	}
-	
 
 	private ObjDiag generateObjectDiagram(ListGraph graph) throws GraphToModelException {
 
@@ -383,12 +380,13 @@ public class GraphToObjDiag implements GraphToModel {
 
 		ObjDiag result;
 		
-		if(GrafTimer.isTimerNeeded(graph)) {
-			result = new ObjDiag(objects, associations, new GrafTimer(graph, objects, objdiag));  // TODO
-		}
-		else {
+		//if(EventTimer.isTimerNeeded(graph)) {
+		//	new EventTimer(graph, objects, objdiag);
+		//	result = new ObjDiag(objects, associations);
+		//}
+		//else {
 			result = new ObjDiag(objects, associations);
-		}
+		//}
 		return result;
 	}
 }

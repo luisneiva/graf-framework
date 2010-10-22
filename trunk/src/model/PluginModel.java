@@ -126,6 +126,7 @@ public class PluginModel {
 
 		//Construct the object diagram representation of the new graph
 		objectdisplay = graphtomodel.generateDisplayObjects(graph);
+
 	}
 	/** Apply a GTS rule and construct object display of new system state. */
 	public void transition(TransitionAction transAction) throws Exception {
@@ -150,6 +151,7 @@ public class PluginModel {
 		if (printGraphs) outputdot(graph, graphs.get(graphs.size()-1));  //debugmode
 
 		objectdisplay = graphtomodel.generateDisplayObjects(graph);
+
 	}
 
 	/** Returns the number of 'undo's that can be performed */
@@ -170,6 +172,7 @@ public class PluginModel {
 		undosRemaining--;
 		transitionnumber--;
 		objectdisplay = graphtomodel.generateDisplayObjects(graph);
+
 	}
 	/** Redo the last transition that occured */
 	public void redoAction() throws GraphToModelException {
@@ -181,6 +184,7 @@ public class PluginModel {
 		undosRemaining++;
 		transitionnumber++;
 		objectdisplay = graphtomodel.generateDisplayObjects(graph);
+
 	}
 
 	/** Outputs dot code for newgraph and colours edges in comparison with oldGraph.

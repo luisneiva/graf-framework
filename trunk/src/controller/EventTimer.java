@@ -12,7 +12,18 @@ import model.modelTransformer.objectDisplay.ObjDiag;
 import agg.xt_basis.Arc;
 import agg.xt_basis.Node;
 
-public class GrafTimer {
+/**
+ * 
+ * ABANDONED
+ * 
+ * See http://code.google.com/p/graf-framework/wiki/GRAFTimers for details
+ * 
+ * This class can be deleted. It's only still here to give instructions
+ * on how to implement a better timer system
+ * 
+ * @author Oscar
+ */
+public class EventTimer {
 
 	/**
 	 * This is only the ODObjects that have sent timer signals to the actor
@@ -22,11 +33,12 @@ public class GrafTimer {
 	
 	private Integer timerValue = 0;
 	
-	private Timer t;
+	private Timer timer;
 	private Integer delaySec;  // milliseconds between timer ticks
 	private Boolean isFirst = true;
 	
-	public GrafTimer(ListGraph graph, ArrayList<ODObject> objects, final ObjDiag objdiag) {
+	public EventTimer(ListGraph graph, ArrayList<ODObject> objects, final ObjDiag objdiag) {
+
 		// timedObjects is the objects which have sent a message to the actor		
 		timedObjects = new ArrayList<ODObject>();
 		// First find the Actor node
@@ -88,10 +100,12 @@ public class GrafTimer {
 					public void actionPerformed(ActionEvent event) {
 						if(!isFirst) {
 							for (ODObject odObj : timedObjects) {
-								odObj.createDelayEvent(odObj, delayEventGraph);
+								if(Boolean.parseBoolean(Properties.getProperty("PrintDebug")))
+									System.out.println("A timer has expired");
+								//odObj.createDelayEvent(odObj, delayEventGraph);
 							}
-							t.stop();
-							
+							timer.stop();
+							timer = null;
 						}
 						else {
 							isFirst = false;
@@ -100,8 +114,8 @@ public class GrafTimer {
 				}
 
 				TimerListener timerListener = new TimerListener(graph);
-				t = new Timer(delaySec, timerListener);
-				t.start();
+				timer = new Timer(delaySec, timerListener);
+				timer.start();
 			}
 		}		
 	}
@@ -114,7 +128,7 @@ public class GrafTimer {
 	 * that a timed event will exist if there's a pool edge going out from an
 	 * actor instance.
 	 * 
-	 * TODO This should also check if there's a switch somewhere to use xtUML
+	 * It would be nice to have a check if there's a switch somewhere to use xtUML
 	 * and if that switch is false then this always returns false
 	 */
 	public static Boolean isTimerNeeded(ListGraph graph) {
