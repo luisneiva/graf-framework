@@ -24,6 +24,7 @@ The benefits of this include:
   * Relationships and operations would be easier to define
 
 == General things ==
+  * Implement [GRAFTimers timers]
   * Automated testing 
     * Would require a list of steps of execution
     * Annette would like this
