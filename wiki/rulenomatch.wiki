@@ -1,0 +1,44 @@
+#summary What to do when a rule doesn't match
+=What to do when a rule doesn't match=
+A common development error you will encounter in GRAF is _Rule x did not match_. This page explains what you can do if this happens to you.
+
+First, generate the graph for the last state generated before the error.
+{{{
+Dot code written: GraphOutputs/state6.dot
+Action name is ReplyAction
+model.exceptions.RuleNoMatchException: Rule replyAction did not match
+}}}
+If you get the above then generate the graph image for state6.dot. (In the conversionFiles folder:> dotToImg2 state6.dot)<br>
+<br>
+Second, find the image of the rule. Open the index of the !RuleDoc and there should be a link to the rule's page. The rule's page should have an image of the rule.<br>
+<br>
+If this doesn't work then run GRAF again with the !PrintRules property in properties.txt set to true. An image of the rule will be created in the !GraphOutputs folder.<br>
+<br>
+Third, find the input parameters. This will be a guaranteed mapping between 2 nodes on the rule and the graph.
+{{{
+Rule Applied: object=a1, action=acceptCallAction-!WithActivity-!ExecutableEdges, actionParam=createBCallEvent
+}}}
+There should be a line in the output like the above. This tells us that the input parameters are set to *a1* and *createBCallEvent* in the system state graph. To find out what they are mapped to in the rule, open the AGG GUI by clicking on agg_V164/agg.bat. In AGG open the rule and double click on any node to bring up the properties. Select Attribute Context and you can see replyAction and callingInstance are the input parameters.<br>
+<br>
+So now we know callingInstance := a1 and replyAction := createBCallEvent (they could be swapped around but GRAF tests both combinations).<br>
+<br>
+Now, starting at one of these mappings we can look at every single node and edge in the rule and see if they correspond to something in the graph. You might want to print out the rule image for this so you can tick off each node and edge. <br>
+<br>
+Remember:
+  * Nodes and edges with question marks are variables which means the names do not matter.
+  * In the rule image, red nodes and edges are NACs which must _not_ be present for a match to occur.
+  * In the rule image, NACs may misleadingly appear using duplicate nodes. For example, in the image for acceptEventAction-!WithActivity-!ExecutableEdges ?newStateBehavior2 is actually the same node as ?newStateBehavior.
+  * In the rule image, green nodes and edges will be created, which means they don't have to be present for a match to occur.
+  * In the graph image, red nodes and edges have been deleted which means they're not really in the graph.
+
+If all the nodes and edges in the rule correspond to nodes and edges in the graph and the nodes and edges in the NAC do not then the rule should match.
+
+==Improvements==
+If you think this is ridiculous then you're not wrong.
+  * A improvement to GRAF that would make it vastly more useful to developers would be to improve the _Rule x did not match_ error message. A message like _Rule x did not match because the following nodes in the rule were not in the graph: y, z_ would be a godsend.
+  * If we put the rules' input parameters in the ruledoc then we wouldn't have to open AGG just to check input parameters.
+
+
+
+
+
