@@ -27,6 +27,11 @@ import agg.xt_basis.Node;
 
 import view.ClickableLabel;
 
+/**
+ * Object diagrams from ObjDiag class.
+ * @author Frank Su
+ *
+ */
 public class ObjectDiagFigure extends Figure {
 	public static Color classColor = new Color(null, 255, 255, 206);
 
@@ -61,22 +66,14 @@ public class ObjectDiagFigure extends Figure {
 		String objName = odObj.getName();
 		String className = odObj.getTheClass().getName();
 
-		// Follow execution and activeState edges to find 
-		// the current state.
+		// Follow execution and activeState edges to find the current state.
 		Node node = object.getGraphNode();
 		ArrayList<String> toState = new ArrayList<String>();
 		toState.add("execution");
 		toState.add("activeState");
 		ArrayList<Node> states = ListGraph.toTrace(toState,node);
 
-		//@author: Frank Su
 		String state = "";
-//		if (states.size() != 0)
-//		{
-//			state = ListGraph.getName(odObj.getState());
-//		}
-		//		String state = ListGraph.getName(odObj.getState());
-
 		runtimePoolFigure = new CompartmentFigure(new GridLayout(2,true));
 
 		ToolbarLayout layout = new ToolbarLayout();	//arranges components in a single column
@@ -89,25 +86,18 @@ public class ObjectDiagFigure extends Figure {
 		nameLabel.setFont(classNameFont);
 		add(nameLabel);					//(including the name) (a Label is a Figure)
 
-		//@author: Frank Su
-		if (states.size() != 0)
-		{
-			for(Node n : odObj.getStates())
-			{
+		if (states.size() != 0) {
+			for(Node n : odObj.getStates()) {
 				state += ListGraph.getName(n) + ";";
 			}
 			
 			// list of states.
-			if(state.contains(";"))
-			{
+			if(state.contains(";")) {
 				moreStates = state.split(";");
-				for(int i = 0; i < moreStates.length; i++)
-				{
+				for(int i = 0; i < moreStates.length; i++) {
 					add(new Label("  {" + moreStates[i] + "}  "));
 				}
-			}
-			else
-			{
+			} else {
 				add(new Label("  {" + state + "}  "));
 			}
 		}
@@ -163,7 +153,7 @@ public class ObjectDiagFigure extends Figure {
 		});
 	}
 
-	class MouseDownListener implements MouseListener {	//TODO
+	class MouseDownListener implements MouseListener {
 		boolean mouseDown = false;
 		int relStartX=0, relStartY=0;
 		public void mousePressed(MouseEvent me) {

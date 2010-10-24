@@ -21,7 +21,8 @@ import agg.xt_basis.Node;
  * This class can be deleted. It's only still here to give instructions
  * on how to implement a better timer system
  * 
- * @author Oscar
+ * @author Oscar Wood
+ * @author Frank Su
  */
 public class EventTimer {
 

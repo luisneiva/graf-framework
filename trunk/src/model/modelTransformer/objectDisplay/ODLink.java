@@ -37,7 +37,6 @@ public class ODLink {
 		return right; 
 	}
 	public String getLinkCentreLabel() { 
-		//TODO
 		return ""; 
 	}
 

@@ -21,8 +21,6 @@ public class GRAFSplash extends JFrame{
 	private JPanel logoPanel;
 	private JLabel activityLabel;
 	
-	
-	
 	public static GRAFSplash getInstance(){
 		if(INSTANCE == null)
 			GRAFSplash.INSTANCE = new GRAFSplash();
