@@ -14,6 +14,9 @@ The decisions that had the most impact on the project:
 
 = Road Blocks =
 
+throughout the year roadblocks a plenty were encountered. The hardest most time consuming ones to over come were:
+
+ * Inputting the small group of models provided to us by our clients into the GRAF animator proved quite a hard task. The reason for this was in all of the [http://www.eclipse.org/modeling/emf/ EMF] (Eclipse Modeling Framework) there were no formats available to enable us to input a uml model with its associated action language in the one format. Two freely available tools were used in unison to enable us to create a workaround and input the models into the animator, Topcased and Visual Paradigm.
 = GRAF's current state =
 
 = Future Roadmap =
