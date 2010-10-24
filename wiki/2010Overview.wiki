@@ -35,7 +35,7 @@ throughout the year roadblocks a plenty were encountered. The hardest most time 
 
  * GRAF is available as a runnable jar file.
  * Has registered interest for industry by Annette Vincent, Shayne Flint and Stephen Mellor.
- * Has 10 of the 36 behavioral UML actions implemented.
+ * Has 10 of the 36 behavioral UML [http://code.google.com/p/graf-framework/wiki/UMLTree#List_of_UML_Actions actions] implemented.
  
 = Future Roadmap =
 
