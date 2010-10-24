@@ -14,8 +14,6 @@ This model was used to test the teams implementation of if statements within GRA
 
 This model is the simpler of the 2 models supplied to Shayne Flint for potential use in conjunction with the teaching of COMP 3110. The timer function is used with this model.
 
-http://graf-framework.googlecode.com/files/MicrowaveSimpleStateMachine.png
-
 === Microwave with Integer ===
 
 This model was intially added to GRAF by the 2009 project team
