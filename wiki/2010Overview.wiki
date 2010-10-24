@@ -22,7 +22,7 @@ throughout the year roadblocks a plenty were encountered. The hardest most time 
 
  * One of the main ways we were going to show ambiguity in UML was to find two animators already available, animate the same model in both of them and compare the results. Theoretically as both of the animators would be based on the definition of UML, which is ambiguous, the implementers of the animators would have interpreted the definition differently, thus giving differing results when both animating the same model.
    
-   Upon searching for available animators, many were found yet installing them and making them actually animate one our chosen models was another story.
+   Upon searching for available animators, many were found yet installing them and making them actually animate one our chosen models was another story. Of the model animators we found, we could not actually get any of them to animate any of our chosen models. This was due to licensing issues, complicated installation, and availability ([http://code.google.com/p/graf-framework/wiki/ModelAnim Animator Overview]).
 
 = GRAF's current state =
 
