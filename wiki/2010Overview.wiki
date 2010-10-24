@@ -43,3 +43,4 @@ throughout the year roadblocks a plenty were encountered. The hardest most time 
 
 = Useful Links =
 [http://code.google.com/p/graf-framework/wiki/Quickstartguide QuickStart guide]
+[http://code.google.com/p/graf-framework/wiki/howToAddModels How to add models to GRAF]
