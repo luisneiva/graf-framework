@@ -60,4 +60,4 @@ Poseidon for UML by Gentleware
 
 A combination of Visual Paradigm SDE Community Edition Eclipse plugin and Topcased allows for the creation of UML models and their associated State Diagrams in a format allows GRAF to display the classes and their associated attributes. Unfortunately, no solution that allows for action language to be entered directly into the State Diagrams was found.
 
-Files created by Topcased aren't don't contain enough detail to work in GRAF. [umlModelsUsingTopcased Here] is a tutorial to solve the problem.
+Files created by Topcased aren't don't contain enough detail to work in GRAF. [http://code.google.com/p/graf-framework/wiki/howToAddModels Here] is a tutorial to solve the problem.
