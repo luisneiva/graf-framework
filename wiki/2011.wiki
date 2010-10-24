@@ -4,5 +4,6 @@ Welcome 2011 GRAFers.
 
 Some things you might like to visit before getting started:
 
- * [http://code.google.com/p/graf-framework/files/thesis.pdf Gregs thesis] [http://code.google.com/p/graf-framework/wiki/Quickstartguide Quick Start Guide] - 
+ * [http://code.google.com/p/graf-framework/files/thesis.pdf Gregs thesis]  
+ * [http://code.google.com/p/graf-framework/wiki/Quickstartguide Quick Start Guide] - Installing GRAF 
  * [http://code.google.com/p/graf-framework/wiki/grafIntro Quick Start Guide] - An explanation of some of the models supplied with GRAF
