@@ -27,11 +27,11 @@ throughout the year roadblocks a plenty were encountered. The hardest most time 
 = GRAF's current state =
 
  * Added Features for 2010 to enable us to animate the collection of models provided by the clients.
- ** Mealy Notation
- ** Methods
- ** State machine regions
- ** If statements
- ** Convenience features 
+  * Mealy Notation
+  * Methods
+  * State machine regions
+  * If statements
+  * Convenience features 
 
 = Future Roadmap =
 
