@@ -3,7 +3,9 @@
 Welcome 2011 GRAFers.
 
 Some things you might like to visit before getting started:
-
+ * [http://code.google.com/p/graf-framework/wiki/GrafFuture Future] - Where the 2011 project may be headed
  * [http://code.google.com/p/graf-framework/files/thesis.pdf Gregs thesis]  
  * [http://code.google.com/p/graf-framework/wiki/Quickstartguide Quick Start Guide] - Installing GRAF 
  * [http://code.google.com/p/graf-framework/wiki/grafIntro Models] - An explanation of some of the models supplied with GRAF
+ * [http://code.google.com/p/graf-framework/wiki/howToAddModels Adding Models] - How to add models to GRAF
+ *  [http://code.google.com/p/graf-framework/wiki/creatingRulesForGRAF Rules] - How to add rules to GRAF
