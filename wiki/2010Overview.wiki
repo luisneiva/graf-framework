@@ -9,7 +9,7 @@ This page has been created to outline all the major events that have occurred th
 
 Throughout the year many decisions had to be made to get the project to its current stage.
 The decisions that had the most impact on the project:
-* BMPN vs xtUML - xtUML emerging the winner with the animator being based on animating UML.
+ * BMPN vs xtUML - xtUML emerging the winner with the animator being based on animating UML.
 *
 
 = Road Blocks =
