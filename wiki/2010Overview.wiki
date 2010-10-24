@@ -38,8 +38,9 @@ throughout the year roadblocks a plenty were encountered. The hardest most time 
 = Future Roadmap =
 
  * Create a way of inputing models such that an end user can easily add them into the animator
- * Implement the remaining behavior actions  Listed in the uml definition
+ * Implement the remaining behavior actions  Listed in the UML definition
  * Get the animator used in industry
+ * Allow GRAF to cover languages other than UML
 
 = Useful Links =
 [http://code.google.com/p/graf-framework/wiki/Quickstartguide QuickStart guide]
