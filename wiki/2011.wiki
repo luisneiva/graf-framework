@@ -1,0 +1,7 @@
+#Guide for 2011 peoples
+
+Welcome 2011 GRAFers.
+
+Some things you might like to visit before getting started:
+
+ * [http://code.google.com/p/graf-framework/wiki/Quickstartguide Quick Start Guide] - 
