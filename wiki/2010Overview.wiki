@@ -8,7 +8,7 @@ This page has been created to outline all the major events that have occurred th
 Throughout the year many decisions had to be made to get the project to its current stage.
 The decisions that had the most impact on the project:
  * [http://code.google.com/p/graf-framework/wiki/UMLBPMNDecision xtUML vs BMPN] - xtUML emerging the winner with the animator being based on animating UML.
- * Early in the project when the problem with inputing models was discovered, there were talks of writing a parser to allow for much faster and easier input of models into GRAF, but this was abandoned due to time and resource limitations and constraints.
+ * Early in the project when the problem with inputing models was discovered, there were talks of writing a parser to allow for much faster and easier input of models into GRAF, this was abandoned due to time and resource limitations and constraints.
 
 = Road Blocks =
 
@@ -37,11 +37,8 @@ throughout the year roadblocks a plenty were encountered. The hardest most time 
  
 = Future Roadmap =
 
- * Create an easier way of inputing models be they runlike a own personality
+ * Create a way of inputing models such that an end user can easily add them into the animator
+ * Implement the remaining behavior actions  Listed in the uml definition
+ * Get the animator used in industry
 
-= Initial Setup =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+= Useful Links =
