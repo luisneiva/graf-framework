@@ -42,3 +42,4 @@ throughout the year roadblocks a plenty were encountered. The hardest most time 
  * Get the animator used in industry
 
 = Useful Links =
+[http://code.google.com/p/graf-framework/wiki/Quickstartguide QuickStart guide]
