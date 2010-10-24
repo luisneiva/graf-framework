@@ -24,6 +24,7 @@ import controller.Properties;
  * 
  * @author Kevin O'Shea
  * @author Oscar Wood
+ * @author Frank Su
  */
 public class PluginModel {
 
@@ -55,16 +56,13 @@ public class PluginModel {
 
 	/** Keeps track of the number of transitions performed (used in names for output dot files) */
 	private Integer transitionnumber = 0;
-//	private boolean printRule, printGraph;
 
 	public ObjectDisplay getObjectDisplay() {
 		return objectdisplay;
 	}
 
 	public PluginModel(String gtsRulesPath, String gtsRulesSeqPath,
-			String graphOutputsPath) throws Exception {  // boolean debugmode, String graphOutputsPath, boolean isPrintRule, boolean isPrintGraph
-//		printRule = isPrintRule;
-//		printGraph = isPrintGraph;
+			String graphOutputsPath) throws Exception {
 		if (!graphOutputsPath.endsWith("/")) graphOutputsPath = graphOutputsPath + "/";
 		this.graphOutputsPath = graphOutputsPath;
 

@@ -19,15 +19,14 @@ public class Properties
 {
 	private final static Hashtable<String,String> properties = new Hashtable<String,String>();
 	private static String propFile = "Properties.txt";
-	
+
 	public static String filePathStr = "";	
-	
-	//TODO
-	// Path to directory for storing graph states
-//	private final String graphOutputsPath = "GraphOutputs/";
-//	private final String gtsRulesPath = "GTSRules.ggx";
-//	private final String gtsRulesSeqPath = "GTSRulesSeq.xml";
-	
+
+	//  Path to directory for storing graph states
+	//	private final String graphOutputsPath = "GraphOutputs/";
+	//	private final String gtsRulesPath = "GTSRules.ggx";
+	//	private final String gtsRulesSeqPath = "GTSRulesSeq.xml";
+
 	// menu: Properties -> print...
 	/**
 	 * Read in a properties file
@@ -54,7 +53,7 @@ public class Properties
 			sc.close();
 		}
 	}
-	
+
 	/**
 	 * Read in a properties file
 	 * @param filePath Path to the properties file to be read
@@ -91,30 +90,28 @@ public class Properties
 		// Create file 
 		FileWriter fstream;
 		String towrite = "";
-		
+
 		try {
 			fstream = new FileWriter(propFile);
 			BufferedWriter out = new BufferedWriter(fstream);
-			//towrite = "PrintRules:" + printRules + "\nPrintGraphs:" + printGraphs + "\nPrintDebug:" + printDebug; 
 			Enumeration<String> keys = properties.keys();
 			while(keys.hasMoreElements()){
 				String key = keys.nextElement();
 				towrite = towrite + key + ":" + properties.get(key) + "\n";
-//				System.out.printf("Wrote %s:%s\n",key,properties.get(key));
 			}
 			out.write(towrite);
 			//Close the output stream
 			out.close();
-			
-			
-			
+
+
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		
+
+
 	}
-	
+
 	/**
 	 * Get a property from the table
 	 * @param property The property name
@@ -123,7 +120,7 @@ public class Properties
 	public synchronized static String getProperty(String property){
 		return properties.get(property);
 	}
-	
+
 	/**
 	 * Set a property in the table
 	 * @param property The property name

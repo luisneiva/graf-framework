@@ -9,6 +9,7 @@ package model.modelTransformer.objectDisplay;
  *   If not active then in the GUI it will be greyed out.
  *
  *	 @author Oscar Wood 
+ *   @author Frank Su
  *
  */
 

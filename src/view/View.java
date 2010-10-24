@@ -45,6 +45,7 @@ import controller.Properties;
  * Provides display for system.
  * 
  * @author Kevin O'Shea
+ * @author Frank Su
  */
 
 public class View extends ViewPart {
@@ -74,11 +75,8 @@ public class View extends ViewPart {
 	/** Default constructor called by plugin runtime. Do not call this if standalone.
 	 * @see View(plugin)
 	 */
-	//public View() {
-	//	this(true);
-	//}
-
 	public Controller controller;
+	
 	/** Construct View
 	 * @param plugin Is the system running as a plugin
 	 */
@@ -174,7 +172,6 @@ public class View extends ViewPart {
 			}
 			
 			frame.dispose();
-		//	JOptionPane.showMessageDialog(null, getSelectedFile());
 		}
 		
 	}
@@ -223,12 +220,6 @@ public class View extends ViewPart {
 		chooser.showOpenDialog(frame);
 		
 		return listener.result;
-
-	/*	FileDialog filedialog = new FileDialog(parent.getShell());
-		filedialog.setText("Choose a uml model:");
-		filedialog.setFilterPath("Models");
-		filedialog.setFilterExtensions(new String[]{"*.modeltest"});
-		return filedialog.open(); */
 	}
 
 	/** Open a file chooser and return path to chosen file, or null if none chosen */
@@ -269,12 +260,6 @@ public class View extends ViewPart {
 		lws.setContents(rootFigure);
 
 		contentDrawer.setContents(contents);
-
-		// if not a plugin, need ability to choose a file to animate
-		//		if (!isPlugin) {
-		//			rootFigure.getLayoutManager().setConstraint(newAnimButton, new Rectangle(430,10,40,20));
-		//			rootFigure.add(newAnimButton);
-		//		}
 	}
 
 	private boolean firstLoaded = true;

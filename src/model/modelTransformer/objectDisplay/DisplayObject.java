@@ -1,9 +1,7 @@
 package model.modelTransformer.objectDisplay;
 
 import java.util.Random;
-
 import org.eclipse.swt.graphics.Point;
-
 import agg.xt_basis.Node;
 
 /** An object to be displayed */

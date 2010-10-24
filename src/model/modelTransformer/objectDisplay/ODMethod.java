@@ -3,8 +3,6 @@ package model.modelTransformer.objectDisplay;
 import model.ListGraph;
 import agg.xt_basis.Node;
 
-//import agg.xt_basis.Node;
-
 public class ODMethod {
 	
 	private String name;
