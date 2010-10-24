@@ -18,6 +18,8 @@ throughout the year roadblocks a plenty were encountered. The hardest most time 
 
  * Inputting the small group of models provided to us by our clients into the GRAF animator proved quite a hard task. The reason for this was in all of the [http://www.eclipse.org/modeling/emf/ EMF] (Eclipse Modeling Framework) there were no formats available to enable us to input a uml model with its associated action language in the one format. Two freely available tools were used in unison to enable us to create a workaround and input the models into the animator, Topcased and Visual Paradigm ([http://code.google.com/p/graf-framework/wiki/howToAddModels tutorial] on how to do this).
 
+As GRAF stands, each model to be input has to re-drawn in the right format. The action language then needs to be added, which in turn takes quite a lot of time. This in itself is too time consuming and complicated for an end user. This issue must be rectified in order for GRAF to be used in industry and is a major goal for future teams. 
+
 = GRAF's current state =
 
 = Future Roadmap =
