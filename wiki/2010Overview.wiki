@@ -1,5 +1,3 @@
-#summary One-sentence summary of this page.
-
 = Introduction =
 
 This page has been created to outline all the major events that have occurred throughout the life of the project during 2010 including, important decisions, road blocks, where the animator is at the end of 2010 and what is expected for the future years. This page will also contain useful links to most of the important project related documents.
@@ -10,7 +8,7 @@ This page has been created to outline all the major events that have occurred th
 Throughout the year many decisions had to be made to get the project to its current stage.
 The decisions that had the most impact on the project:
  * [http://code.google.com/p/graf-framework/wiki/UMLBPMNDecision xtUML vs BMPN] - xtUML emerging the winner with the animator being based on animating UML.
- *
+ * Early in the project when the problem with inputing models was discovered, there were talks of writing a parser to allow for much faster and easier input of models into GRAF, but this was abandoned due to time and resource limitations.
 
 = Road Blocks =
 
