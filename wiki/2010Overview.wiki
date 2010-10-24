@@ -33,6 +33,10 @@ throughout the year roadblocks a plenty were encountered. The hardest most time 
   * If statements
   * Convenience features 
 
+ * GRAF is available as a runnable jar file.
+ * Has registered interest for industry by Annette Vincent, Shayne Flint and Stephen Mellor.
+ * Has 10 of the 36 behavioral UML actions implemented.
+ 
 = Future Roadmap =
 
 = Initial Setup =
