@@ -1,5 +1,7 @@
 #summary stuff that won't happen in 2010
 
+ * [http://code.google.com/p/graf-framework/wiki/2011 2011 thingy]
+
 == 2011 Introductory Work ==
 These are tasks that we don't plan to do in 2010 but they should be simple enough to give the 2011 team an idea of how to modify GRAF.
   # Create the rule !SendSignalAction-Mealy, add it to the !GTSRuleSeq file and create a model that will use the rule.
