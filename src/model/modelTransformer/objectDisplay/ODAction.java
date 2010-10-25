@@ -102,8 +102,7 @@ public class ODAction {
 
 		if(actionBehEx.size() == 0) {
 			enabled = false;
-		}
-		else {
+		} else {
 
 			for(Node actionBehExInst : actionBehEx) {
 				// Check if any edges from behavior execution are pins
@@ -131,45 +130,35 @@ public class ODAction {
 		testValues.add("test");
 		testValues.add("result");
 
-		for(Node clause : clauses)
-		{
+		for(Node clause : clauses) {
 			ArrayList<Node> nodeType = ListGraph.toTrace(lowerNodes, clause);
 
-			for(Node c : nodeType)
-			{
-				if(ListGraph.getName(c).equals("Clause"))
-				{
+			for(Node c : nodeType) {
+				if(ListGraph.getName(c).equals("Clause")) {
 					enabled = false;
 					
 					ArrayList<Node> testVal = ListGraph.toTrace(testValues, clause);
-					for(Node n : testVal)
-					{
+					for(Node n : testVal) {
 						//if(in the body of an if clause)
 						// enabled = false;
-						for(Node behaviourNode : actionBehEx)
-						{
+						for(Node behaviourNode : actionBehEx) {
 							ArrayList<String> conditions = new ArrayList<String>();
 							conditions.add(ListGraph.getName(n));
 							ArrayList<Node> conditionNode = ListGraph.toTrace(conditions, behaviourNode);
 							
-							for(Node cond : conditionNode)
-							{
-								if(ListGraph.getName(cond).toLowerCase().equals("true"))
-								{
+							for(Node cond : conditionNode) {
+								if(ListGraph.getName(cond).toLowerCase().equals("true")) {
 									enabled = true;
 								}
-								else
-								{
+								else {
 									((ListGraph) graph).deleteEdge(ListGraph.getName(behaviourNode), "executable", ListGraph.getName(node));
 								}
 							}
 						}
 					}
-					
 				}
 			}
 		}
-
 	}
 
 	public String getName() {

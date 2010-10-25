@@ -3,7 +3,7 @@ package model.modelTransformer.objectDisplay;
 import java.util.ArrayList;
 
 public class ObjDiag extends ObjectDisplay {
-	
+
 	/** Links in object diagram representation of graph */
 	private ArrayList<ODLink> odLinks;
 
