@@ -1,0 +1,29 @@
+#summary Client Meeting minutes
+
+= Client Meeting =
+
+Date: 25/10/10
+<br>Location: RSISE N110
+<br>Present: Oscar, Stephen, Alice, Cameron, Hamish and Frank
+<br>Time: 2pm
+<br>Duration: 45 mins
+
+== Feedback on Presentation ==
+
+  * Presenters were nervous
+  * too understated - could have been more positive
+    * James still not convinced, but says that the "reference" quality is still the most important aspect and should be emphasised
+
+== Vital To-Dos ==
+
+  * must have something that people can download and play with
+  * for next year, 'future work' pages on wiki
+  * Raj will look over the website and email feedback
+  * Greg should go over the website and email feedback
+
+== Problems ==
+
+  * find a small UML model that is ambiguous. Greg suggests the model on p 67 of his thesis
+  * Timer development aborted, but documented
+  * Need 'seal of approval' from Greg as part of final submission
+   
