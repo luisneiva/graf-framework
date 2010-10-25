@@ -16,7 +16,7 @@ If this doesn't work then run GRAF again with the !PrintRules property in proper
 <br>
 Third, find the input parameters. This will be a guaranteed mapping between 2 nodes on the rule and the graph.
 {{{
-Rule Applied: object=a1, action=acceptCallAction-!WithActivity-!ExecutableEdges, actionParam=createBCallEvent
+Rule Applied: object=a1, action=acceptCallAction-WithActivity-ExecutableEdges, actionParam=createBCallEvent
 }}}
 There should be a line in the output like the above. This tells us that the input parameters are set to *a1* and *createBCallEvent* in the system state graph. To find out what they are mapped to in the rule, open the AGG GUI by clicking on agg_V164/agg.bat. In AGG open the rule and double click on any node to bring up the properties. Select Attribute Context and you can see replyAction and callingInstance are the input parameters.<br>
 <br>
@@ -37,8 +37,6 @@ If all the nodes and edges in the rule correspond to nodes and edges in the grap
 If you think this is ridiculous then you're not wrong.
   * A improvement to GRAF that would make it vastly more useful to developers would be to improve the _Rule x did not match_ error message. A message like _Rule x did not match because the following nodes in the rule were not in the graph: y, z_ would be a godsend.
   * If we put the rules' input parameters in the ruledoc then we wouldn't have to open AGG just to check input parameters.
-
-
 
 
 
