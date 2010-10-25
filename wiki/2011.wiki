@@ -14,5 +14,6 @@
  * [http://code.google.com/p/graf-framework/wiki/howToAddModels Adding Models] - How to add models to GRAF
  *  [http://code.google.com/p/graf-framework/wiki/creatingRulesForGRAF Rules] - How to add rules to GRAF
  *  [http://code.google.com/p/graf-framework/wiki/TestingDebuggingGraphs Graphs] - How to test anything implemented using graphs
+ * [http://code.google.com/p/graf-framework/wiki/rulenomatch Rule Matching] - How to solve a rule not found error
 
 To change the side bar -> Go to 'Administer' then 'Wiki' and its near the bottom of the page!
