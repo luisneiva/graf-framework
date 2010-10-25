@@ -10,7 +10,7 @@ Testing has been performed throughout the project to ensure GRAF both continues 
 
 To test regions the model elevator.uml was used.
 
-http://graf-framework.googlecode.com/files/RegionTesting.png
+http://graf-framework.googlecode.com/files/RegionTest.png
 
 === 2 - If Statements ===
 
