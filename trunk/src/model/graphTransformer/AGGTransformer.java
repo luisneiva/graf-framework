@@ -4,13 +4,9 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.BitSet;
 import java.util.Enumeration;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Vector;
-
-import controller.Properties;
 
 import model.AGGAssignment;
 import model.ListGraph;
@@ -22,18 +18,16 @@ import nu.xom.Element;
 import nu.xom.Nodes;
 import agg.attribute.impl.VarMember;
 import agg.xt_basis.Arc;
-import agg.xt_basis.CompletionPropertyBits;
-import agg.xt_basis.Completion_CSP;
 import agg.xt_basis.GraGra;
 import agg.xt_basis.Graph;
 import agg.xt_basis.Match;
-import agg.xt_basis.MorphCompletionStrategy;
 import agg.xt_basis.Morphism;
 import agg.xt_basis.Node;
 import agg.xt_basis.OrdinaryMorphism;
 import agg.xt_basis.Rule;
 import agg.xt_basis.Step;
 import agg.xt_basis.TypeException;
+import controller.Properties;
 
 /**
  * Applies the AGG methods to transform a graph.

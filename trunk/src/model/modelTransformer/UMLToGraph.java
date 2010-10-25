@@ -24,6 +24,19 @@ import org.eclipse.uml2.uml.resource.UMLResource;
 import agg.xt_basis.Arc;
 
 /**
+ * @deprecated mostly
+ * 
+ * Originally we had UMLToGraph and XMIToGraph to translate 2 different filetypes
+ * into graphs for GRAF.
+ * 
+ * But since XMIToGraph worked fine we kept using that and didn't update UMLToGraph
+ * with the newest features. So UMLToGraph now doesn't work on multiple states for 
+ * 1 object and possibly other things
+ * 
+ * If necessary, this could be brought up to date and dedeprecated
+ * 
+ * 
+ * 
  * Transforms an EMF model into a graph. It is currently set up to read UML2 models.
  * 
  * @author Kevin O'Shea
