@@ -93,5 +93,12 @@ GRAF uses the GTSRulesSeq.xml file to determine which rule to apply when a parti
 == Stage 2: RHS ==
 Now that you know that the LHS of the rule matches, make the necessary changes to the RHS to implement the Description. Test the new rule in GRAF as before. Remember to check the underlying graph and generated rule image - logic errors will not necessarily be obvious from the object diagram view.
 
+== Stage 3: NACs ==
+Some rules will require an Negative Application Condition. If this graph matches the graph, the rule will not be applied but AGG will still read it as a 'match' (so no error messages are generated in GRAF).
+
+Make the graph as in the above description. Use the 'NAC' button to map your rule to the NAC, and 'trim' it by deleting nodes so that only the necessary nodes are included (it is good for the NAC to be as small as possible). 
+
+Although the nodes are mapped, AGG will not process the NAC correctly if the _names_ of the nodes are the same as in the actual rule. For ease of understanding, add a '1' on the end of each node name so that it's easy to tell which is which.
+
 = 5. Update Documentation =
 When the rule is working, update the rule documentation to include the new rule, and any assumptions or deviations from the description that you made while implementing it.
