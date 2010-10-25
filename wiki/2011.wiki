@@ -18,4 +18,4 @@
  *  [http://code.google.com/p/graf-framework/wiki/TestingDebuggingGraphs Graphs] - How to test anything implemented using graphs
  * [http://code.google.com/p/graf-framework/wiki/rulenomatch Rule Matching] - How to solve a rule not found error
 
-To change the side bar -> Go to 'Administer' then 'Wiki' and its near the bottom of the page!
+To change the side bar -> Go to 'Administer' then 'Wiki' and its near the bottom of the page! As a word of advice when editing and viewing wiki pages its best not to use internet explorer 8 or earlier as it seems to not agree with what Chrome, Firefox and Safari see!
