@@ -23,9 +23,9 @@ To test the implementation of if statements the model If Test.uml was used.
 
 To test the implementation of if statements the model Invoice Test.uml was used.
 
-=== 5 - Convenience Features ===
+http://graf-framework.googlecode.com/files/InvoicerTest.png
 
-
+=== 6 - Convenience Features ===
 
 == Performance & Scalability ==
 
