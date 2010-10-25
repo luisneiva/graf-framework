@@ -2,4 +2,10 @@
 
 = Testing =
 
-Testing has been performed throughout the project to ensure GRAF both continues to perform at an acceptable level and that added functionality is in working order.
+Testing has been performed throughout the project to ensure GRAF both continues to perform at an acceptable level and that added functionality is in working order. <br>
+
+== Added Functionality ==
+
+=== Regions ===
+
+To test regions the elevator model was used.
