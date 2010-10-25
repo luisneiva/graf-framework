@@ -12,20 +12,19 @@ To test regions the model elevator.uml was used.
 
 http://graf-framework.googlecode.com/files/RegionTest.png
 
-=== 2 - If Statements ===
-
-To test the implementation of if statements the model If Test.uml was used.
-
-=== 3 - Methods ===
-
-
 === 4 - Mealy Notation ===
 
 To test the implementation of if statements the model Invoice Test.uml was used.
 
 http://graf-framework.googlecode.com/files/InvoicerTest.png
 
-=== 6 - Convenience Features ===
+=== 3 - If Statements ===
+
+To test the implementation of if statements the model If Test.uml was used.
+
+=== 4 - Methods ===
+
+=== 5 - Convenience Features ===
 
 == Performance & Scalability ==
 
