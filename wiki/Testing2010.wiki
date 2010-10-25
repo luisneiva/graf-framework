@@ -8,17 +8,24 @@ Testing has been performed throughout the project to ensure GRAF both continues 
 
 === 1 - Regions ===
 
-To test regions the elevator model was used.
+To test regions the model elevator.uml was used.
 
 http://graf-framework.googlecode.com/files/trial%20test%20cases.png
 
 === 2 - If Statements ===
 
+To test the implementation of if statements the model IfTest.uml was used.
+
 === 3 - Methods ===
+
 
 === 4 - Mealy Notation ===
 
+To test the implementation of if statements the model InvoiceTest.uml was used.
+
 === 5 - Convenience Features ===
+
+
 
 == Performance & Scalability ==
 
