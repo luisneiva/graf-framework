@@ -6,7 +6,7 @@
 
 This model uses State Machine Regions
 
-http://graf-framework.googlecode.com/files/elevator.png
+http://graf-framework.googlecode.com/files/Elevator.png
 
 === If Test ===
 
