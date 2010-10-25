@@ -36,7 +36,7 @@ Date: 25/10/10
   * Alice:
     * tutorial page
     * integrate bash script with GRAF
-    * add ReplyAction fix to future work page
+    * add !ReplyAction fix to future work page
     * review 'how to test and debug using graphs'
   * Cameron:
     * document testing use cases
