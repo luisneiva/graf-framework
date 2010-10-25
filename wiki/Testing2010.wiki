@@ -1,0 +1,5 @@
+#testing undertaken by the 2010 team
+
+= Testing =
+
+Testing has been performed throughout the project to ensure GRAF both continues to perform at an acceptable level and that added functionality is in working order.
