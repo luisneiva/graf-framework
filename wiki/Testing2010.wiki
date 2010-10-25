@@ -19,3 +19,7 @@ http://graf-framework.googlecode.com/files/trial%20test%20cases.png
 === 4 - Mealy Notation ===
 
 === 5 - Convenience Features ===
+
+== Performance & Scalability ==
+
+Hamish's work goes here
