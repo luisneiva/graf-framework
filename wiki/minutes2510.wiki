@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Group Meeting minutes
 
 = Meeting name =
 Date: 25/10/10
