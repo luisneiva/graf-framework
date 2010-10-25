@@ -20,7 +20,7 @@ http://graf-framework.googlecode.com/files/InvoicerTest.png
 
 === 3 - If Statements ===
 
-To test the implementation of if statements the model If Test.uml was used. When this model is created 2 instances of the invoice to invoicer relationship are instantiated. 1 instances Boolean test is set to true the other false. When traversing through the signals and subsequent actions (DoStuff, selfRead, readTestValue, TestValue, TrueAction) both instances will perform until TestValue is completed. The False instance will have TrueAction greyed out (as it is unavailable as the value is set to false) and the True instance will allow it to be clicked and subsequently create a standalone instance of the Invoice class. This test case has been carried out and confirmed to work. 
+To test the implementation of if statements the model If Test.uml was used. When this model is created 2 instances of the invoice to invoicer relationship are instantiated. 1 instances Boolean test is set to true the other false. When traversing through the signals and subsequent actions (Do Stuff, self Read, read Test Value, Test Value, True Action) both instances will perform until Test Value is completed. The False instance will have True Action greyed out (as it is unavailable as the value is set to false) and the True instance will allow it to be clicked and subsequently create a standalone instance of the Invoice class. This test case has been carried out and confirmed to work. 
 
 === 4 - Methods ===
 
