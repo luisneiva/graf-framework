@@ -4,6 +4,7 @@
 
 == Some things you might like to visit before getting started ==
 
+ * [http://code.google.com/p/graf-framework/wiki/HowGRAFWorks GRAF] - A brief rundown on how GRAF works
  * [http://code.google.com/p/graf-framework/wiki/2010Overview 2010] - What went on in 2010
  * [http://code.google.com/p/graf-framework/wiki/GrafFuture Future] - Where the 2011 project may be headed
  * [http://code.google.com/p/graf-framework/files/thesis.pdf Gregs thesis] - The inspiration for GRAF  
