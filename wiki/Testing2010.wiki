@@ -6,6 +6,6 @@ Testing has been performed throughout the project to ensure GRAF both continues 
 
 == Added Functionality ==
 
-=== Regions ===
+=== 1 - Regions ===
 
 To test regions the elevator model was used.
