@@ -76,7 +76,7 @@ public class View extends ViewPart {
 	 * @see View(plugin)
 	 */
 	public Controller controller;
-	
+
 	/** Construct View
 	 * @param plugin Is the system running as a plugin
 	 */
@@ -157,35 +157,35 @@ public class View extends ViewPart {
 		String result;
 		JFileChooser chooser;
 		JFrame frame;
-		
+
 		public SelectListener(JFileChooser chooser, JFrame frame) {
 			this.chooser = chooser;
 			this.frame = frame;
 		}
-		
+
 		public void actionPerformed(ActionEvent e) {
-			
+
 			if (e.getActionCommand().equals(JFileChooser.APPROVE_SELECTION)) {
 				result = chooser.getSelectedFile().getAbsolutePath();
 			} else if (e.getActionCommand().equals(JFileChooser.CANCEL_SELECTION)) {
 				result = null;
 			}
-			
+
 			frame.dispose();
 		}
-		
+
 	}
-	
-	
+
+
 	/**
-     * Open a file chooser and return path to chosen file, or null if none chosen 
-     * 
-     * See defect 12. There's 2 versions of the code here. Both versions work on windows.
-     * The first version doesn't work Linux10.04
-     * Both versions work on windows but the second version doesn't work as well
-     *  - the file chooser window always appears behind everything else
-     *  
-     *  So if it's not working just uncomment one part a comment the other part
+	 * Open a file chooser and return path to chosen file, or null if none chosen 
+	 * 
+	 * See defect 12. There's 2 versions of the code here. Both versions work on windows.
+	 * The first version doesn't work Linux10.04
+	 * Both versions work on windows but the second version doesn't work as well
+	 *  - the file chooser window always appears behind everything else
+	 *  
+	 *  So if it's not working just uncomment one part a comment the other part
 	 */
 	public String openFileChooser() {
 
@@ -194,7 +194,7 @@ public class View extends ViewPart {
 		JFileChooser chooser = new JFileChooser();
 		chooser.setCurrentDirectory(new File("Models"));
 		chooser.addChoosableFileFilter(new FileFilter() {
-			
+
 			public String getDescription() {
 				return null;
 			}
@@ -203,9 +203,9 @@ public class View extends ViewPart {
 				|| arg0.isDirectory();
 			}
 		});
-		
+
 		SelectListener listener = new SelectListener(chooser, frame);
-		
+
 		chooser.addActionListener(listener);
 
 		frame.add(chooser);
@@ -218,184 +218,193 @@ public class View extends ViewPart {
 
 		//make it wait for the user to make a selection
 		chooser.showOpenDialog(frame);
-		
-		return listener.result;
-	}
 
-	/** Open a file chooser and return path to chosen file, or null if none chosen */
-	public String openFileChooser(String prompt) {
+		return listener.result;
+
+		/*	old version
 		FileDialog filedialog = new FileDialog(parent.getShell());
-		filedialog.setText(prompt);
+		filedialog.setText("Choose a uml model:");
 		filedialog.setFilterPath("Models");
 		filedialog.setFilterExtensions(new String[]{"*.modeltest"});
-		return filedialog.open();
+		return filedialog.open(); 
+		 */
 	}
 
-	/** Display error message to user */
-	public void showError(String msg) {
-		if (parent == null) {
-			MessageDialog.openError(null, "Animator Error", msg);
-		} else {
-			MessageDialog.openError(parent.getShell(), "Animator Error", msg);
-		}
+
+/** Open a file chooser and return path to chosen file, or null if none chosen */
+public String openFileChooser(String prompt) {
+	FileDialog filedialog = new FileDialog(parent.getShell());
+	filedialog.setText(prompt);
+	filedialog.setFilterPath("Models");
+	filedialog.setFilterExtensions(new String[]{"*.modeltest"});
+	return filedialog.open();
+}
+
+/** Display error message to user */
+public void showError(String msg) {
+	if (parent == null) {
+		MessageDialog.openError(null, "Animator Error", msg);
+	} else {
+		MessageDialog.openError(parent.getShell(), "Animator Error", msg);
 	}
+}
 
-	/** Creates the initial view - ie the view upon Animator startup */
-	public void createPartControl(Composite parent) {
-		this.parent = parent;
+/** Creates the initial view - ie the view upon Animator startup */
+public void createPartControl(Composite parent) {
+	this.parent = parent;
 
-		FigureCanvas canvas = new FigureCanvas(parent);
-		canvas.setLayout(new RowLayout(SWT.VERTICAL));
+	FigureCanvas canvas = new FigureCanvas(parent);
+	canvas.setLayout(new RowLayout(SWT.VERTICAL));
 
-		LightweightSystem lws = new LightweightSystem(canvas);
-		rootFigure = new Figure();
-		contents = new ScalableFreeformLayeredPane();
-		contents.setSize(3000,3000);
-		rootFigure.setLayoutManager(new XYLayout());
-		contents.setLayoutManager(new XYLayout());
-		rootFigure.setBackgroundColor(new Color(null,255,255,255));
-		rootFigure.setOpaque(true);
-		contents.setSize(3000,3000);
-		rootFigure.add(contents);
-		lws.setContents(rootFigure);
+	LightweightSystem lws = new LightweightSystem(canvas);
+	rootFigure = new Figure();
+	contents = new ScalableFreeformLayeredPane();
+	contents.setSize(3000,3000);
+	rootFigure.setLayoutManager(new XYLayout());
+	contents.setLayoutManager(new XYLayout());
+	rootFigure.setBackgroundColor(new Color(null,255,255,255));
+	rootFigure.setOpaque(true);
+	contents.setSize(3000,3000);
+	rootFigure.add(contents);
+	lws.setContents(rootFigure);
 
-		contentDrawer.setContents(contents);
+	contentDrawer.setContents(contents);
+}
+
+private boolean firstLoaded = true;
+/** Draws new contents */
+public void update() {
+	contents.removeAll();
+
+	ObjectDisplay objdisplay = model.getObjectDisplay();
+
+	//if a model is not currently loaded then don't continue
+	if (objdisplay==null) return;
+
+	if (firstLoaded) {
+		addNavControls();
+		firstLoaded = false;
 	}
+	if (model.getUndosRemaining()>0) undo.setEnabled(true);
+	else undo.setEnabled(false);
+	if (model.getRedosRemaining()>0) redo.setEnabled(true);
+	else redo.setEnabled(false);
+	undo.repaint();
+	redo.repaint();
 
-	private boolean firstLoaded = true;
-	/** Draws new contents */
-	public void update() {
-		contents.removeAll();
+	contentDrawer.draw(objdisplay);
 
-		ObjectDisplay objdisplay = model.getObjectDisplay();
+	contents.revalidate();
+}
 
-		//if a model is not currently loaded then don't continue
-		if (objdisplay==null) return;
+/**
+ * Passing the focus request to the viewer's control.
+ */
+public void setFocus() {
+}
 
-		if (firstLoaded) {
-			addNavControls();
-			firstLoaded = false;
-		}
-		if (model.getUndosRemaining()>0) undo.setEnabled(true);
-		else undo.setEnabled(false);
-		if (model.getRedosRemaining()>0) redo.setEnabled(true);
-		else redo.setEnabled(false);
-		undo.repaint();
-		redo.repaint();
+/** Create menu at the specified location
+ * @return Reference to the menu created 
+ */
+public Menu createPopupMenu(Point menupos) {
+	menupos.x *= contents.getScale();
+	menupos.y *= contents.getScale();
+	menupos = parent.toDisplay(menupos);
+	Menu menu = new Menu (parent.getShell(), SWT.POP_UP);
+	menu.setLocation(menupos);
+	menu.setVisible (true);
+	return menu;
+}
 
-		contentDrawer.draw(objdisplay);
+/** Create and attach navigation controls to rootFigure */
+private void addNavControls() {
+	ClickableLabel left = new ClickableLabel("<");
+	ClickableLabel right = new ClickableLabel(">");
+	ClickableLabel up = new ClickableLabel("/\\");
+	ClickableLabel down = new ClickableLabel("\\/");
+	ClickableLabel zoomin = new ClickableLabel("+");
+	ClickableLabel zoomout = new ClickableLabel("-");
 
-		contents.revalidate();
+	Font boldfont = new Font(null, "Arial", 13, SWT.BOLD);
+	Font largeboldfont = new Font(null, "Arial", 15, SWT.BOLD);
+	left.setFont(boldfont); right.setFont(boldfont);
+	up.setFont(boldfont); down.setFont(boldfont);
+	zoomin.setFont(largeboldfont); zoomout.setFont(largeboldfont);
+	undo.setFont(boldfont); redo.setFont(boldfont); reset.setFont(boldfont);
+
+	Color cyan = new Color(null,0,255,255);
+	left.setBackgroundColor(cyan); right.setBackgroundColor(cyan);
+	up.setBackgroundColor(cyan); down.setBackgroundColor(cyan);
+	zoomin.setBackgroundColor(cyan); zoomout.setBackgroundColor(cyan);
+	undo.setBackgroundColor(cyan); redo.setBackgroundColor(cyan);
+	reset.setBackgroundColor(cyan);
+	left.setOpaque(true); right.setOpaque(true); up.setOpaque(true); down.setOpaque(true);
+	zoomin.setOpaque(true); zoomout.setOpaque(true);
+	undo.setOpaque(true); redo.setOpaque(true); reset.setOpaque(true);
+
+	final double moveunit = 20.0;
+	final int move = (int)(moveunit/contents.getScale()+0.05);
+	left.addMouseListener(new PanListener(new Point(move,0)));
+	right.addMouseListener(new PanListener(new Point(-move,0)));
+	up.addMouseListener(new PanListener(new Point(0,move)));
+	down.addMouseListener(new PanListener(new Point(0,-move)));
+	zoomin.addMouseListener(new ZoomListener(0.2));
+	zoomout.addMouseListener(new ZoomListener(-0.2));
+	//listeners for undo, redo, and reset are given through methods.
+
+	final int l = 490;	//left of control
+	final int t = 10;	//top of control
+	final int w = 20;	//width of each 'button'
+	rootFigure.getLayoutManager().setConstraint(left,    new Rectangle(l,t+w,w,w));
+	rootFigure.getLayoutManager().setConstraint(right,   new Rectangle(l+w+w,t+w,w,w));
+	rootFigure.getLayoutManager().setConstraint(up,      new Rectangle(l+w,t,w,w));
+	rootFigure.getLayoutManager().setConstraint(down,    new Rectangle(l+w,t+w+w,w,w));
+	rootFigure.getLayoutManager().setConstraint(zoomin,  new Rectangle(l+w*3+w/2,t+w/2-1,w,w));
+	rootFigure.getLayoutManager().setConstraint(zoomout, new Rectangle(l+w*3+w/2,t+w/2+w,w,w));
+	rootFigure.getLayoutManager().setConstraint(reset,   new Rectangle(l+w*5,t+w/2-1,w*2+1,w));
+	rootFigure.getLayoutManager().setConstraint(undo,    new Rectangle(l+w*5,t+w/2+w,w,w));
+	rootFigure.getLayoutManager().setConstraint(redo,    new Rectangle(l+w*6+1,t+w/2+w,w,w));
+	rootFigure.add(left);
+	rootFigure.add(right);
+	rootFigure.add(up);
+	rootFigure.add(down);
+	rootFigure.add(zoomin);
+	rootFigure.add(zoomout);
+	rootFigure.add(undo);
+	rootFigure.add(redo);
+	rootFigure.add(reset);
+}
+
+/** Shifts the display by a given translation vector */
+private class PanListener implements MouseListener {
+	Point translation;
+	/** Construct listener to shift the display by the given translation vector */
+	PanListener(Point translation) {
+		this.translation = translation;
 	}
-
-	/**
-	 * Passing the focus request to the viewer's control.
-	 */
-	public void setFocus() {
+	public void mouseDoubleClicked(MouseEvent me) {}
+	public void mouseReleased(MouseEvent me) {}
+	public void mousePressed(MouseEvent me) {
+		model.getObjectDisplay().move(translation.x,translation.y);
+		update();
 	}
-
-	/** Create menu at the specified location
-	 * @return Reference to the menu created 
-	 */
-	public Menu createPopupMenu(Point menupos) {
-		menupos.x *= contents.getScale();
-		menupos.y *= contents.getScale();
-		menupos = parent.toDisplay(menupos);
-		Menu menu = new Menu (parent.getShell(), SWT.POP_UP);
-		menu.setLocation(menupos);
-		menu.setVisible (true);
-		return menu;
+}
+/** Zooms the display by a given zoom factor vector */
+private class ZoomListener implements MouseListener {
+	Double zoomFactor;
+	final double zoomMin = 0.1;
+	final double zoomMax = 2.4;
+	/** Construct listener to zoom the display by the given zoom factor */
+	ZoomListener(Double zoomFactor) {
+		this.zoomFactor = zoomFactor;
 	}
-
-	/** Create and attach navigation controls to rootFigure */
-	private void addNavControls() {
-		ClickableLabel left = new ClickableLabel("<");
-		ClickableLabel right = new ClickableLabel(">");
-		ClickableLabel up = new ClickableLabel("/\\");
-		ClickableLabel down = new ClickableLabel("\\/");
-		ClickableLabel zoomin = new ClickableLabel("+");
-		ClickableLabel zoomout = new ClickableLabel("-");
-
-		Font boldfont = new Font(null, "Arial", 13, SWT.BOLD);
-		Font largeboldfont = new Font(null, "Arial", 15, SWT.BOLD);
-		left.setFont(boldfont); right.setFont(boldfont);
-		up.setFont(boldfont); down.setFont(boldfont);
-		zoomin.setFont(largeboldfont); zoomout.setFont(largeboldfont);
-		undo.setFont(boldfont); redo.setFont(boldfont); reset.setFont(boldfont);
-
-		Color cyan = new Color(null,0,255,255);
-		left.setBackgroundColor(cyan); right.setBackgroundColor(cyan);
-		up.setBackgroundColor(cyan); down.setBackgroundColor(cyan);
-		zoomin.setBackgroundColor(cyan); zoomout.setBackgroundColor(cyan);
-		undo.setBackgroundColor(cyan); redo.setBackgroundColor(cyan);
-		reset.setBackgroundColor(cyan);
-		left.setOpaque(true); right.setOpaque(true); up.setOpaque(true); down.setOpaque(true);
-		zoomin.setOpaque(true); zoomout.setOpaque(true);
-		undo.setOpaque(true); redo.setOpaque(true); reset.setOpaque(true);
-
-		final double moveunit = 20.0;
-		final int move = (int)(moveunit/contents.getScale()+0.05);
-		left.addMouseListener(new PanListener(new Point(move,0)));
-		right.addMouseListener(new PanListener(new Point(-move,0)));
-		up.addMouseListener(new PanListener(new Point(0,move)));
-		down.addMouseListener(new PanListener(new Point(0,-move)));
-		zoomin.addMouseListener(new ZoomListener(0.2));
-		zoomout.addMouseListener(new ZoomListener(-0.2));
-		//listeners for undo, redo, and reset are given through methods.
-
-		final int l = 490;	//left of control
-		final int t = 10;	//top of control
-		final int w = 20;	//width of each 'button'
-		rootFigure.getLayoutManager().setConstraint(left,    new Rectangle(l,t+w,w,w));
-		rootFigure.getLayoutManager().setConstraint(right,   new Rectangle(l+w+w,t+w,w,w));
-		rootFigure.getLayoutManager().setConstraint(up,      new Rectangle(l+w,t,w,w));
-		rootFigure.getLayoutManager().setConstraint(down,    new Rectangle(l+w,t+w+w,w,w));
-		rootFigure.getLayoutManager().setConstraint(zoomin,  new Rectangle(l+w*3+w/2,t+w/2-1,w,w));
-		rootFigure.getLayoutManager().setConstraint(zoomout, new Rectangle(l+w*3+w/2,t+w/2+w,w,w));
-		rootFigure.getLayoutManager().setConstraint(reset,   new Rectangle(l+w*5,t+w/2-1,w*2+1,w));
-		rootFigure.getLayoutManager().setConstraint(undo,    new Rectangle(l+w*5,t+w/2+w,w,w));
-		rootFigure.getLayoutManager().setConstraint(redo,    new Rectangle(l+w*6+1,t+w/2+w,w,w));
-		rootFigure.add(left);
-		rootFigure.add(right);
-		rootFigure.add(up);
-		rootFigure.add(down);
-		rootFigure.add(zoomin);
-		rootFigure.add(zoomout);
-		rootFigure.add(undo);
-		rootFigure.add(redo);
-		rootFigure.add(reset);
+	public void mouseDoubleClicked(MouseEvent me) {}
+	public void mouseReleased(MouseEvent me) {}
+	public void mousePressed(MouseEvent me) {
+		Double zoom = contents.getScale() + zoomFactor;
+		if (zoom < zoomMin) zoom = zoomMin;
+		if (zoom > zoomMax) zoom = zoomMax;
+		contents.setScale(zoom);
 	}
-
-	/** Shifts the display by a given translation vector */
-	private class PanListener implements MouseListener {
-		Point translation;
-		/** Construct listener to shift the display by the given translation vector */
-		PanListener(Point translation) {
-			this.translation = translation;
-		}
-		public void mouseDoubleClicked(MouseEvent me) {}
-		public void mouseReleased(MouseEvent me) {}
-		public void mousePressed(MouseEvent me) {
-			model.getObjectDisplay().move(translation.x,translation.y);
-			update();
-		}
-	}
-	/** Zooms the display by a given zoom factor vector */
-	private class ZoomListener implements MouseListener {
-		Double zoomFactor;
-		final double zoomMin = 0.1;
-		final double zoomMax = 2.4;
-		/** Construct listener to zoom the display by the given zoom factor */
-		ZoomListener(Double zoomFactor) {
-			this.zoomFactor = zoomFactor;
-		}
-		public void mouseDoubleClicked(MouseEvent me) {}
-		public void mouseReleased(MouseEvent me) {}
-		public void mousePressed(MouseEvent me) {
-			Double zoom = contents.getScale() + zoomFactor;
-			if (zoom < zoomMin) zoom = zoomMin;
-			if (zoom > zoomMax) zoom = zoomMax;
-			contents.setScale(zoom);
-		}
-	}
+}
 }

@@ -28,7 +28,8 @@ import agg.xt_basis.Node;
 import view.ClickableLabel;
 
 /**
- * Object diagrams from ObjDiag class.
+ * An object in an object diagram
+ * @author Kevin O'Shea
  * @author Frank Su
  *
  */

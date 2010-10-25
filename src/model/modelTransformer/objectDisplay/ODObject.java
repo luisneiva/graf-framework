@@ -168,8 +168,7 @@ public class ODObject extends DisplayObject {
 		return false;
 	}
 
-	public void addState(Node sn)
-	{
+	public void addState(Node sn) {
 		stateNodes.add(sn);
 	}
 

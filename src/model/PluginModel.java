@@ -69,21 +69,19 @@ public class PluginModel {
 		modeltograph = ModelToGraphFactory.createModelToGraph();
 		graphtomodel = GraphToModelFactory.createGraphToModel();
 		graphTransformer = new AGGTransformer(gtsRulesPath, gtsRulesSeqPath);
-		
+
 		Boolean printRules = Boolean.parseBoolean(Properties.getProperty("PrintRules"));
 		if (printRules) {
 			try {
 				graphTransformer.outputRulesAsDot(this.graphOutputsPath);
-
-				//	 		Uncomment the following to generate rule .dot files on setup & convert them to images
-							String path = "GraphOutputs\\conversionFiles\\dotToImg2";
-							String[] command = {"cmd", "/C", "start " + path + " rules"};
-							File f = new File(path);
-							if(f.exists()){
-								Process p = Runtime.getRuntime().exec(command);
-								p.waitFor();
-								p.destroy(); 
-							}
+				String path = "GraphOutputs\\conversionFiles\\dotToImg2";
+				String[] command = {"cmd", "/C", "start " + path + " rules"};
+				File f = new File(path);
+				if(f.exists()){
+					Process p = Runtime.getRuntime().exec(command);
+					p.waitFor();
+					p.destroy(); 
+				}
 			} catch (Exception err) {
 				System.out.println("Rule generation or conversion failed!");
 				err.printStackTrace();
@@ -230,7 +228,7 @@ public class PluginModel {
 			out.close();
 			Boolean printDebug = Boolean.parseBoolean(Properties.getProperty("PrintDebug"));
 			if(printDebug) {
-			System.out.println("Dot code written: " + filepath);
+				System.out.println("Dot code written: " + filepath);
 			}
 		} catch (Exception e) {
 			throw new IOException("Error writing dot file: " + e.getMessage());

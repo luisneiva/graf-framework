@@ -572,9 +572,7 @@ public class Controller {
 		view.createPartControl(shell);
 		view.openFirst();
 
-		long time1 = System.currentTimeMillis();
 		shell.open();
-		long time2 = System.currentTimeMillis();
 		while (!shell.isDisposed())
 			while (!d.readAndDispatch())
 				d.sleep();

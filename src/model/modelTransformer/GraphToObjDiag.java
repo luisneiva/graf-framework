@@ -50,7 +50,7 @@ public class GraphToObjDiag implements GraphToModel {
 					odObj.isAttributesShowing(),odObj.isRuntimePoolShowing()});
 			}
 		}
-		
+
 		objdiag = generateObjectDiagram(graph);
 
 		objects = objdiag.getODObjs();
@@ -190,7 +190,7 @@ public class GraphToObjDiag implements GraphToModel {
 			}
 		}
 
-		// Follow execution and activeState edges to find the current state.
+		// Follow execution and activeState edges to find the current state(s).
 		for(ODObject object : objects) {
 			Node node = object.getGraphNode();
 
@@ -213,11 +213,11 @@ public class GraphToObjDiag implements GraphToModel {
 
 				// actionBehExes solves google code defect 1
 				ArrayList<Node> actionBehExes = new ArrayList<Node>();
-				
+
 				ArrayList<String> traceOrderPartOne = new ArrayList<String>();
 				traceOrderPartOne.add("execution");
 				ArrayList<Node> potentialActionBehExes = ListGraph.toTrace(traceOrderPartOne, object.getGraphNode());
-				
+
 				// All we're doing here is looking behaviour execution node
 				// that does not have an active state edge
 				for(Node potentialActionBehEx : potentialActionBehExes) {
@@ -232,7 +232,7 @@ public class GraphToObjDiag implements GraphToModel {
 						actionBehExes.add(potentialActionBehEx);
 					}
 				}
-				
+
 				ArrayList<String> traceOrderPartTwo = new ArrayList<String>();
 				traceOrderPartTwo.add("execution");
 				traceOrderPartTwo.add("executable");
@@ -242,26 +242,26 @@ public class GraphToObjDiag implements GraphToModel {
 				}
 			}
 		}
-		
+
 		// Find the methods
 		for (ODObject object : objects) {
-			
+
 			if (object.getGraphNode() != null) {
-				
+
 				// Get the type node of the object (there should only be one)
 				ArrayList<String> traceToType = new ArrayList<String>();
 				traceToType.add("i");
 				Node objectTypeNode = ListGraph.toTrace(traceToType, object.getGraphNode()).get(0);
-				
+
 				// This sequence of edges leads from a class/'type' to a method node (if there is one)
 				ArrayList<String> traceToMethod = new ArrayList<String>();
 				traceToMethod.add("ownedOperation");
 				traceToMethod.add("method");
 				//traceToMethod.add("node");
-				
+
 				// Trace from the object's class node to any potential methods
 				ArrayList<Node> foundMethods = ListGraph.toTrace(traceToMethod, objectTypeNode);
-				
+
 				for (Node method : foundMethods) {
 					object.addMethod(method);
 				}
@@ -273,7 +273,7 @@ public class GraphToObjDiag implements GraphToModel {
 		eventOrder.add("source");
 
 		for(ODObject object : objects) {
-			
+
 			// Find the calls first
 			ArrayList<String> toExternalCalls = new ArrayList<String>();
 			toExternalCalls.add("pool");
@@ -287,28 +287,28 @@ public class GraphToObjDiag implements GraphToModel {
 					}
 				}
 			}
-			
+
 			ArrayList<String> mainRegionTraceRoute = new ArrayList<String>();
-			
+
 			ArrayList<String> toTopRegion = new ArrayList<String>();
 			ArrayList<String> toSubRegion = new ArrayList<String>();
 			ArrayList<String> toEvent = new ArrayList<String>();
-						
+
 			toTopRegion.add("execution");
 			toTopRegion.add("behavior");
 			toTopRegion.add("region");
-						
+
 			toSubRegion.add("subvertex");
 			toSubRegion.add("region");
-						
+
 			toEvent.add("transition");
 			toEvent.add("trigger");
 			toEvent.add("event");
-						
+
 			mainRegionTraceRoute.addAll(toTopRegion);
-			
+
 			ArrayList<Node> mainRegionTrace = ListGraph.toTrace(mainRegionTraceRoute, object.getGraphNode());
-			
+
 			ArrayList<Node> regionTrace = new ArrayList<Node>();
 			ArrayList<Node> externalEvents = new ArrayList<Node>();
 
@@ -320,7 +320,7 @@ public class GraphToObjDiag implements GraphToModel {
 				}
 				mainRegionTrace = regionTrace;
 			}
-			
+
 			Iterator<Node> duplicateRemover = externalEvents.iterator();
 			ArrayList<String> found = new ArrayList<String>();
 			while(duplicateRemover.hasNext()) {
@@ -347,7 +347,7 @@ public class GraphToObjDiag implements GraphToModel {
 
 			ArrayList<Node> recieptNodes = ListGraph.toTrace(toReciept, object.getGraphNode());
 			for(Node recieptNode : recieptNodes) {
-				
+
 				ArrayList<Node> activeEventSignals 
 				= ListGraph.toTrace(fromRecieptToEvent, recieptNode);
 
@@ -379,13 +379,13 @@ public class GraphToObjDiag implements GraphToModel {
 		}
 
 		ObjDiag result;
-		
+
 		//if(EventTimer.isTimerNeeded(graph)) {
 		//	new EventTimer(graph, objects, objdiag);
 		//	result = new ObjDiag(objects, associations);
 		//}
 		//else {
-			result = new ObjDiag(objects, associations);
+		result = new ObjDiag(objects, associations);
 		//}
 		return result;
 	}

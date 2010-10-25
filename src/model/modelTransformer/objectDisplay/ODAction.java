@@ -34,12 +34,6 @@ public class ODAction {
 	 */
 	private String type;
 
-
-	/** temporary */
-	public ODAction(String name) {
-		this.name = name;
-	}
-
 	/**
 	 * 
 	 * @param node The node that instantiates the actionnode itself.

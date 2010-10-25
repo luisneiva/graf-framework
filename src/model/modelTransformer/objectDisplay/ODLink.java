@@ -36,6 +36,12 @@ public class ODLink {
 	public ODObject getRightObj() { 
 		return right; 
 	}
+	/**
+	 * Unimplemented
+	 * At the moment GRAF doesn't take into consideration the possibility
+	 * that a link could have a label on the middle (often R1, R2 etc), 
+	 * not just the 2 ends
+	 */
 	public String getLinkCentreLabel() { 
 		return ""; 
 	}
