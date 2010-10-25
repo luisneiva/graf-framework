@@ -14,7 +14,7 @@ http://graf-framework.googlecode.com/files/trial%20test%20cases.png
 
 === 2 - If Statements ===
 
-To test the implementation of if statements the model IfTest.uml was used.
+To test the implementation of if statements the model If Test.uml was used.
 
 === 3 - Methods ===
 
