@@ -11,3 +11,11 @@ Testing has been performed throughout the project to ensure GRAF both continues 
 To test regions the elevator model was used.
 
 http://graf-framework.googlecode.com/files/trial%20test%20cases.png
+
+=== 2 - If Statements ===
+
+=== 3 - Methods ===
+
+=== 4 - Mealy Notation ===
+
+=== 5 - Convenience Features ===
