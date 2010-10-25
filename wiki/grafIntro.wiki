@@ -6,6 +6,8 @@
 
 This model uses State Machine Regions
 
+http://graf-framework.googlecode.com/files/elevator.png
+
 === If Test ===
 
 This model was used to test the teams implementation of if statements within GRAF
