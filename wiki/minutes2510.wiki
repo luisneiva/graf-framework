@@ -1,0 +1,48 @@
+#summary One-sentence summary of this page.
+
+= Meeting name =
+Date: 25/10/10
+<br>Location: CSIT N110
+<br>Present: Oscar, Stephen, Alice, Cameron, Hamish and Frank
+<br>Time: 3pm
+<br>Duration: 1 hr
+
+== Work Done ==
+
+  * Hamish: wiki on issues this year
+  * Group task: bring lollies for Thursday
+  * Frank: fixed debugging tutorial
+  * Alice: bash script
+  * Cameron: testing
+  * Stephen:
+
+== Handover ==
+
+  * recommend that next year's group do a requirements-gathering process
+  * final sumbission: dual-purpose as an 'introduction' to the project for the next year's group. It should contain:
+    * README (on the ANU svn)
+    * index to the contents (possibly in html, containing links to the project stuff) (on the ANU svn)
+          * include link to the 2011 'welcome' page
+    * GRAF itself in its own folder
+    * both executables
+
+== Task Assignment ==
+
+  * Hamish: 
+    * rename pages logically
+    * review the two timers pages
+  * Frank:
+    * review 'how to make rules using GRAF'
+  * Alice:
+    * tutorial page
+    * integrate bash script with GRAF
+    * add ReplyAction fix to future work page
+    * review 'how to test and debug using graphs'
+  * Cameron:
+    * document testing use cases
+    * review 'conditional-nodes' page
+  * Stephen:
+    * review 'what to do when a rule doesn't match'
+  * Oscar:
+    * review 'how to make a distributable tarball'
+    * HTML index to final submission cd
