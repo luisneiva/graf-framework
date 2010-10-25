@@ -12,7 +12,7 @@ To test regions the model elevator.uml was used.
 
 http://graf-framework.googlecode.com/files/RegionTest.png
 
-=== 4 - Mealy Notation ===
+=== 2 - Mealy Notation ===
 
 To test the implementation of if statements the model Invoice Test.uml was used.
 
