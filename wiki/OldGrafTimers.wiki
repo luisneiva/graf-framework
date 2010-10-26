@@ -33,7 +33,7 @@ http://graf-framework.googlecode.com/files/timerform.jpg
 The beep and beepSignal nodes are normal untimed nodes. startTimer and startTimerSignal are the equivalent nodes, but timed. A timed signal needs a property called _setTimer_ to be interpreted as a timed signal. The literal integer child of this is the time that the signal will be delayed. You'll need a !SendSignalAction somewhere else in the file to send the signal (external actors currrently can't send timed signals).
 
 == How timers work ==
-The sequence begins at the graph level. A normal signal is sent. The code then examines it and discovers it's a timed object. It can tell it's a timed object because it's being sent to the actor (an arbitrary kludge in the implementation). At this point the code takes over and stores who sent the signal and the time of the signal. When the timer expires the code executes !ActorSendSignal. This will send a signal back to the sender, bringing it back to the graph level.
+The sequence begins at the graph level. A normal signal is sent. The code then examines it and discovers it's a timed object. It can tell it's a timed object because it's being sent to the actor (an arbitrary work around in the implementation). At this point the code takes over and stores who sent the signal and the time of the signal. When the timer expires the code executes !ActorSendSignal. This will send a signal back to the sender, bringing it back to the graph level.
 
 == Limitations ==
   * Only one timed event can happen at a time
