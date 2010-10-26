@@ -1,6 +1,6 @@
 #summary How timers once worked in GRAF
 
-*This page is out of date*<br>
+*This page is out of date(deprecated)*<br>
 *The stuff on this page is no longer part of GRAF*
 
 =Timers=
