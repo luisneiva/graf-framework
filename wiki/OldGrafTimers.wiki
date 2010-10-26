@@ -39,4 +39,4 @@ The sequence begins at the graph level. A normal signal is sent. The code then e
   * Only one timed event can happen at a time
   * Timed objects can only send timed signals to themselves
   * Timed events don't use the normal code due to the need for concurrency. Therefore there's some nasty duplication, specifically in ODObject.createDelayEvent() of !PluginModel
-  * (to be confirmed) This may not be completed by the end of the year
+  * Unfortunately this will not be completed by the end of the year
