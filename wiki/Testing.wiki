@@ -1,4 +1,4 @@
-= TESTING =
+= Performance Testing and Scalability =
 
 Testing has been carried out throughout the project to check system performance, test new implementations are working as they should, and for general maintenance. 
 
