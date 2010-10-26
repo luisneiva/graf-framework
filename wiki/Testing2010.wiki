@@ -2,7 +2,7 @@
 
 = Testing =
 
-Testing has been performed throughout the project to ensure GRAF both continues to perform at an acceptable level and that added functionality is in working order. <br>
+Testing has been performed throughout the project to ensure GRAF both continues to perform at an acceptable level and that added functionality is in working order. Testing on this page was performed within Eclipse on the Windows 7 Operating System.<br>
 
 == Added Functionality ==
 
@@ -30,6 +30,7 @@ To test the implementation of if statements the model If Test.uml was used. When
 
 To test the convenience features in GRAF each feature was turned on individually and evaluated, and then each possible combination of the 4 features (Rules, Graphs, Debug and Timing). Each combination was performed over 1 run of the Racer.uml model following the signal action pair pattern Fire, End, End, Winner, Fire. This pattern was chosen as it ensured that the program was performing what was required and that it still worked when a signal action pair that did not have an effect in the current state was performed.
 
+Example outputs from the first Fire action accepted.
 {{{
 Action name is AcceptEventAction
 Action name is AcceptEventAction-WithActivity-HasBehavior
