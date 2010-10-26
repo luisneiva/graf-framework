@@ -48,3 +48,5 @@ throughout the year roadblocks a plenty were encountered. The hardest most time 
 [http://code.google.com/p/graf-framework/wiki/howToAddModels How to add models to GRAF]
 
 [http://code.google.com/p/graf-framework/wiki/2010Overview?ts=1287960027&updated=2010Overview#Tutorials Tutorials] (left hand side of the page).
+
+[http://code.google.com/p/graf-framework/wiki/GrafFuture graf in 2011]
