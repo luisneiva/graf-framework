@@ -13,7 +13,7 @@ This should give you a folder called "graf". Run the JAR file in there either by
 If you need the models, you can get them here:
  * [http://code.google.com/p/graf-framework/downloads/detail?name=models.tar.bz2&can=2&q=]
 
-From this point on, follow the instructions in the "Running GRAF" section
+From this point on, follow the instructions in the [Quickstartguide#Running_GRAF Running GRAF] section.
 
 == Downloading and Installing a Version Control Client ==
 
