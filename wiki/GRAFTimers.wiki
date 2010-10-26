@@ -10,7 +10,7 @@ We followed xtUML. Our implementation of GRAF is for UML not xtUML, but we aimed
 Or, you could follow a profile of UML that is designed for timers. This would be similar to the xtUML option.
 
 ==Failed Implementation==
-We connected objects to the Actor object. When an object sent a timed signal, it went to the Actor (!SendSignalAction). A timer would run and then the timed signal would be received (!ActorSendSignal). The use of the Actor node was an arbitrary kludge. Don't do this.
+We connected objects to the Actor object. When an object sent a timed signal, it went to the Actor (!SendSignalAction). A timer would run and then the timed signal would be received (!ActorSendSignal). The use of the Actor node was an arbitrary work around. Don't do this.
 
 An old page dealing our failed implementation is [OldGrafTimers here].
 
