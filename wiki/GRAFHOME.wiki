@@ -38,7 +38,8 @@
 [TestingDebuggingGraphs How to test and debug using graphs]<br>
 [creatingRulesForGRAF How to make new rules for GRAF]<br>
 [creatingDistributable How to make a distributable tarball]<br>
-[rulenomatch What to do when a rule doesn't match]
+[rulenomatch What to do when a rule doesn't match]<br>
+[howToAnimate How to animate a model in GRAF]
 
 === Project Documentation ===
 <br>[GrafFuture GRAF in 2011]
