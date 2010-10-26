@@ -1,6 +1,6 @@
 #summary How timers work in GRAF
 =Timers=
-At the end of the 2010 project, the GRAF team attempted to implement [xtUMLTimers xtUML style timers] in GRAF. It became apparent that our implementation method was not optimal and there wasn't enough time to finish it and it was a kludge. Though timers aren't part of the UML definition, they're common in xtUML. This page serves as a guide for how not to implement timers if a future group chooses to do so.
+At the end of the 2010 project, the GRAF team attempted to implement [xtUMLTimers xtUML style timers] in GRAF. It became apparent that our implementation method was not optimal and there wasn't enough time to finish it. Though timers aren't part of the UML definition, they're common in xtUML. This page serves as a guide for how not to implement timers if a future group chooses to do so.
 
 ==UML vs xtUML==
 The first thing you need to decide when implementing timers is whether to do it according to UML or xtUML. UML doesn't have timers so you'd have to build them from the ground up using such things as Durations and !DurationIntervals. This would take a lot of effort and research into the UML definition.
