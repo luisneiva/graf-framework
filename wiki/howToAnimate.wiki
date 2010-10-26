@@ -17,7 +17,7 @@ Some models use methods as an alternative to modelling behaviour in state machin
 The (<) button is undo (4). The (>) button is redo (5). You can undo up to ten times and redo ten times. The (<<) button resets the graph but it does not reload the file (6). To reload the file, select it as a new animation.
 
 == Show and Hide ==
-To hide irrelevant information, use the show and hide options (7). Attributes, event, methods and actions can be hidden. This can be useful when the loaded object diagram is large. Click on the [Show] or [Hide] links in the object diagram to switch between them.
+To hide irrelevant information, use the show and hide options (7). Attributes, event, methods and actions can be hidden. This can be useful when the loaded object diagram is large. Click on the [[Show]] or [Hide] links in the object diagram to switch between them.
 Navigating through and rearranging the model
 
     * To zoom in or out on the model on the UML model, click the (+) or (-) buttons. The (+) button indicates a zoom in and a (-) indicates a zoom out (8).
