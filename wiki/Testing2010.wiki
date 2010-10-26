@@ -32,4 +32,4 @@ To test the convenience features in GRAF each feature was turned on individually
 
 == Performance & Scalability ==
 
-Hamish's work goes here
+Performance testing and a scalability analysis was performed. See [http://code.google.com/p/graf-framework/wiki/Testing here] for more details.
