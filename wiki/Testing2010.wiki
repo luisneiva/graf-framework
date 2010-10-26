@@ -30,6 +30,24 @@ To test the implementation of if statements the model If Test.uml was used. When
 
 To test the convenience features in GRAF each feature was turned on individually and evaluated, and then each possible combination of the 4 features (Rules, Graphs, Debug and Timing). Each combination was performed over 1 run of the Racer.uml model following the signal action pair pattern Fire, End, End, Winner, Fire. This pattern was chosen as it ensured that the program was performing what was required and that it still worked when a signal action pair that did not have an effect in the current state was performed.
 
+{{{
+Action name is AcceptEventAction
+Action name is AcceptEventAction-WithActivity-HasBehavior
+Rule Cancelled: object=r1, action=AcceptEventAction-WithActivity-HasBehavior, actionParam=signaloccurrence3 (Rule acceptEventAction-WithActivity-HasBehavior did not match)
+Action name is AcceptEventAction-WithActivity-SameState
+Rule Cancelled: object=r1, action=AcceptEventAction-WithActivity-SameState, actionParam=signaloccurrence3 (Rule acceptEventAction-WithActivity-SameState did not match)
+Action name is AcceptEventAction-WithActivity-Main
+Rule Cancelled: object=r1, action=AcceptEventAction-WithActivity-Main, actionParam=signaloccurrence3 (Rule acceptEventAction-WithActivity-Main did not match)
+Action name is AcceptEventAction-WithActivity-Main-Mealy
+Rule Cancelled: object=r1, action=AcceptEventAction-WithActivity-Main-Mealy, actionParam=signaloccurrence3 (Rule acceptEventAction-WithActivity-Main-Mealy did not match)
+Action name is AcceptEventAction-WithActivity-Main-Mealy-SameState
+Rule Cancelled: object=r1, action=AcceptEventAction-WithActivity-Main-Mealy-SameState, actionParam=signaloccurrence3 (Rule acceptEventAction-WithActivity-Main-Mealy-SameState did not match)
+Rule Applied: object=r1, action=acceptEventAction-WithoutActivity, actionParam=signaloccurrence3
+total rule application time = 97 milliseconds
+Dot code written: GraphOutputs/state2.dot
+Total model loading time: 0 milliseconds
+}}}
+
 == Performance & Scalability ==
 
 Performance testing and a scalability analysis was performed. See [http://code.google.com/p/graf-framework/wiki/Testing here] for more details.
