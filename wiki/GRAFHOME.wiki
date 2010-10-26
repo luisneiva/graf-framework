@@ -32,7 +32,7 @@
 
 === Tutorials ===
 [Quickstartguide Quick start guide]<br>
-[grafIntro A quick introduction to GRAF]<br>
+[grafIntro The models in GRAF]<br>
 [howToAddModels How to add models to GRAF]<br>
 [InvoicerModel Invoicer Model]<br>
 [TestingDebuggingGraphs How to test and debug using graphs]<br>
