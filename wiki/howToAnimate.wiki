@@ -1,0 +1,27 @@
+#summary How to use the gui
+= Animating a model =
+
+== Sending an external event from an actor ==
+Right-click on an object and a menu will appear displaying possible external events to send to the object. Select an event and an actor will send the event.
+
+== Receiving an event ==
+Objects contain a pool of events that have been sent but not received (1 in the diagram below). This is the third compartment of the object’s box (except when executing actions). Click an event for the object to receive the event.
+
+== Executing actions ==
+Once an object receives an event it will begin executing actions according to its state machine. In this implementation of UML, the primitive actions of UML are displayed, not the high level actions specified in the state machine. Click on the actions to execute them (2). Greyed out actions cannot be executed until another action is exectued (3). When an object is executing actions the bottom compartment will be coloured off-yellow.
+
+== Method calls ==
+Some models use methods as an alternative to modelling behaviour in state machines. Methods appear in the bottom compartment of an object if there are any. Clicking on the method will create an occurrence of the method call to appear in the third compartment. Clicking on this will cause the object to accept the call.
+
+== Undo, redo and reset ==
+The (<) button is undo (4). The (>) button is redo (5). You can undo up to ten times and redo ten times. The (<<) button resets the graph but it does not reload the file (6). To reload the file, select it as a new animation.
+
+== Show and Hide ==
+To hide irrelevant information, use the show and hide options (7). Attributes, event, methods and actions can be hidden. This can be useful when the loaded object diagram is large. Click on the [Show] or [Hide] links in the object diagram to switch between them.
+Navigating through and rearranging the model
+
+    * To zoom in or out on the model on the UML model, click the (+) or (-) buttons. The (+) button indicates a zoom in and a (-) indicates a zoom out (8).
+    * To navigate through the movel click on the (<), (>), (/\), (\/) navigation buttons to pan the screen left, right, up, and down respectively (9).
+    * To rearrange the objects within the model, simply click and hold on the object and drag it to the specified location.
+
+http://graf-framework.googlecode.com/files/userinterface-2.png
