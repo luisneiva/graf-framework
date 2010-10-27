@@ -5,7 +5,7 @@
 The original WBS is [http://svn.anu.edu.au/SE_projects/GRAF/Admin/wbs.xls here] on SVN. It contains 2 tables, one with just the WBS and one with the WBS and time estimates for tasks not finished. This page contains copies of each of those tables.
 
 ===WBS===
-http://graf-framework.googlecode.com/files/wbs-12-9-10.jpg
+http://graf-framework.googlecode.com/files/wbs28-10-10.jpg
 
 Crossed out tasks are finished
 
