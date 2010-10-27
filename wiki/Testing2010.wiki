@@ -22,9 +22,13 @@ http://graf-framework.googlecode.com/files/InvoicerTest.png
 
 To test the implementation of if statements the model If Test.uml was used. When this model is created 2 instances of the invoice to invoicer relationship are instantiated. 1 instances Boolean test is set to true the other false. When traversing through the signals and subsequent actions (Do Stuff, self Read, read Test Value, Test Value, True Action) both instances will perform identically until the Test Value signal action pair is completed. The False instance will have True Action greyed out (as it is unavailable as the value is set to false) and the True instance will allow it to be clicked and subsequently create a standalone instance of the Invoice class. This test case has been carried out and confirmed to work. 
 
-=== 4 - Convenience Features ===
+=== 4 - Methods ===
 
-==== 4.1 - Properties menu bar items ====
+To test the implementation of methods the model TE00.uml was used.
+
+=== 5 - Convenience Features ===
+
+==== 5.1 - Properties menu bar items ====
 
 To test the convenience features in GRAF each feature was turned on individually and evaluated, and then each possible combination of the 4 features (Rules, Graphs, Debug and Timing). Each combination was performed over 1 run of the Racer.uml model following the signal action pair pattern Fire, End, End, Winner, Fire. This pattern was chosen as it ensured that the program was performing what was required and that it still worked when a signal action pair that did not have an effect in the current state was performed.
 
