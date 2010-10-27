@@ -16,7 +16,6 @@
 [http://www.omg.org/spec/UML/2.2/ The UML 2.2 Definition] <br>
 [http://java.sun.com/docs/codeconv/CodeConventions.pdf Java Coding Standards]<br>
 [http://gpme.anu.edu.au/gpme GPME]<br>
-[SuccessCriteria Success Criteria]<br>
 [HowGRAFWorks How GRAF Works]<br>
 [RefDiscussion 'Reference' Discussion]<br>
 [Models]<br>
