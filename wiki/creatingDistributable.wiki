@@ -1,6 +1,6 @@
 =Creating a Distributable Tarball=
 
-Ideally, this is done in **NIX, but can also be done with WinRAR. The process contains three steps:
+Ideally, this is done in **[http://nixos.org/ NIX], but can also be done with WinRAR. The process contains three steps:
   # Create the JAR file
   # Tarball and Bzip the JAR along with the required files to run
   # Upload it to Google code
@@ -30,6 +30,7 @@ If you are running **NIX, there is a script in the GRAF folder you can run calle
   * UMLMetamodel - The UML Metamodel folder
   * Properties.txt - The properties file
   * Models - The models folder
+  * !GraphOutputs - Or at least the conversionFiles folder in !GraphOutputs
 
 ==Step 3: Upload the archive onto Google code==
 
