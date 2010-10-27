@@ -26,6 +26,8 @@ To test the implementation of if statements the model If Test.uml was used. When
 
 To test the implementation of methods the model TE00.uml was used.
 
+http://graf-framework.googlecode.com/files/MethodTesting.png
+
 === 5 - Convenience Features ===
 
 ==== 5.1 - Properties menu bar items ====
