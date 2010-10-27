@@ -6,6 +6,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
+import controller.Properties;
 
 import model.exceptions.GraphToModelException;
 import model.exceptions.ModelToGraphException;
@@ -17,14 +20,12 @@ import model.modelTransformer.ModelToGraphFactory;
 import model.modelTransformer.objectDisplay.DisplayObject;
 import model.modelTransformer.objectDisplay.ObjectDisplay;
 import agg.xt_basis.Arc;
-import controller.Properties;
 
 /**
  * Facade to model. Holds graph and coordinates model logic.
  * 
  * @author Kevin O'Shea
  * @author Oscar Wood
- * @author Frank Su
  */
 public class PluginModel {
 
@@ -56,31 +57,52 @@ public class PluginModel {
 
 	/** Keeps track of the number of transitions performed (used in names for output dot files) */
 	private Integer transitionnumber = 0;
+//	private boolean printRule, printGraph;
 
 	public ObjectDisplay getObjectDisplay() {
 		return objectdisplay;
 	}
 
 	public PluginModel(String gtsRulesPath, String gtsRulesSeqPath,
-			String graphOutputsPath) throws Exception {
+			String graphOutputsPath) throws Exception {  // boolean debugmode, String graphOutputsPath, boolean isPrintRule, boolean isPrintGraph
+//		printRule = isPrintRule;
+//		printGraph = isPrintGraph;
 		if (!graphOutputsPath.endsWith("/")) graphOutputsPath = graphOutputsPath + "/";
 		this.graphOutputsPath = graphOutputsPath;
 
 		modeltograph = ModelToGraphFactory.createModelToGraph();
 		graphtomodel = GraphToModelFactory.createGraphToModel();
 		graphTransformer = new AGGTransformer(gtsRulesPath, gtsRulesSeqPath);
-
+		
 		Boolean printRules = Boolean.parseBoolean(Properties.getProperty("PrintRules"));
 		if (printRules) {
 			try {
 				graphTransformer.outputRulesAsDot(this.graphOutputsPath);
-				String path = "GraphOutputs\\conversionFiles\\dotToImg2";
-				String[] command = {"cmd", "/C", "start " + path + " rules"};
-				File f = new File(path);
-				if(f.exists()){
-					Process p = Runtime.getRuntime().exec(command);
-					p.waitFor();
-					p.destroy(); 
+
+				String path_win = "GraphOutputs\\conversionFiles\\dotToImg2";
+				String[] command_win = {"cmd", "/C", "start " + path_win + " rules"};
+
+				String path_lin = "GraphOutputs\\conversionFiles\\dotToImg.sh";
+				String[] command_lin = {"bash" + path_lin};
+				
+				String nameOS = System.getProperty("os.name");
+				int index = nameOS.indexOf("Win");
+				if (index != -1) {	//The OS is Windows
+					File f = new File(path_win + ".bat");
+					if(f.exists()){
+						JOptionPane.showMessageDialog(null,"Running the dot script", "Alert", JOptionPane.ERROR_MESSAGE);
+						Process p = Runtime.getRuntime().exec(command_win);
+						p.waitFor();
+						p.destroy(); 
+					}
+				} else {			//The OS is not Windows
+					File f = new File(path_lin);
+					if(f.exists()){
+						JOptionPane.showMessageDialog(null,"Running the dot script", "Alert", JOptionPane.ERROR_MESSAGE);
+						Process p = Runtime.getRuntime().exec(command_lin);
+						p.waitFor();
+						p.destroy(); 
+					}
 				}
 			} catch (Exception err) {
 				System.out.println("Rule generation or conversion failed!");
@@ -122,7 +144,6 @@ public class PluginModel {
 
 		//Construct the object diagram representation of the new graph
 		objectdisplay = graphtomodel.generateDisplayObjects(graph);
-
 	}
 	/** Apply a GTS rule and construct object display of new system state. */
 	public void transition(TransitionAction transAction) throws Exception {
@@ -147,7 +168,6 @@ public class PluginModel {
 		if (printGraphs) outputdot(graph, graphs.get(graphs.size()-1));  //debugmode
 
 		objectdisplay = graphtomodel.generateDisplayObjects(graph);
-
 	}
 
 	/** Returns the number of 'undo's that can be performed */
@@ -168,7 +188,6 @@ public class PluginModel {
 		undosRemaining--;
 		transitionnumber--;
 		objectdisplay = graphtomodel.generateDisplayObjects(graph);
-
 	}
 	/** Redo the last transition that occured */
 	public void redoAction() throws GraphToModelException {
@@ -180,7 +199,6 @@ public class PluginModel {
 		undosRemaining++;
 		transitionnumber++;
 		objectdisplay = graphtomodel.generateDisplayObjects(graph);
-
 	}
 
 	/** Outputs dot code for newgraph and colours edges in comparison with oldGraph.
@@ -228,7 +246,7 @@ public class PluginModel {
 			out.close();
 			Boolean printDebug = Boolean.parseBoolean(Properties.getProperty("PrintDebug"));
 			if(printDebug) {
-				System.out.println("Dot code written: " + filepath);
+			System.out.println("Dot code written: " + filepath);
 			}
 		} catch (Exception e) {
 			throw new IOException("Error writing dot file: " + e.getMessage());
