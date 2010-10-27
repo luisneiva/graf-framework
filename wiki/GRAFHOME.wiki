@@ -2,11 +2,20 @@
 #sidebar TableOfContents
 == GRAF 2010 Wiki ==
 
-[Minutes Minutes and agendas]<br><br>
+=== Introduction for the 2011 Team ===
+[GrafFuture GRAF in 2011]
+<br>[2010Overview 2010 Project Overview]
+<br>[Quickstartguide Quick start guide]<br>
 
-=== Research ===
+=== Key Documents ===
 [ModelTools Possible tools to produce models for GRAF]<br>
 [ModelAnim Other UML Animators]<br>
+[HowGRAFWorks How GRAF Works]<br>
+[grafIntro The models in GRAF]<br>
+
+<br>[Minutes Minutes and agendas]<br><br>
+
+=== Research ===
 [UMLTree The Eclipse UML 2 Tree]<br>
 [UMLBPMNDecision Decision on UML over BPMN]<br>
 [GregActionLanguage Greg's thoughts on Action Language]<br>
@@ -16,7 +25,7 @@
 [http://www.omg.org/spec/UML/2.2/ The UML 2.2 Definition] <br>
 [http://java.sun.com/docs/codeconv/CodeConventions.pdf Java Coding Standards]<br>
 [http://gpme.anu.edu.au/gpme GPME]<br>
-[HowGRAFWorks How GRAF Works]<br>
+
 [RefDiscussion 'Reference' Discussion]<br>
 [Models]<br>
 [RuleGrowth Rule Growth]<br>
@@ -30,8 +39,7 @@
 [Testing2010 Testing]<br>
 
 === Tutorials ===
-[Quickstartguide Quick start guide]<br>
-[grafIntro The models in GRAF]<br>
+
 [howToAddModels How to add models to GRAF]<br>
 [InvoicerModel Invoicer Model]<br>
 [TestingDebuggingGraphs How to test and debug using graphs]<br>
@@ -41,8 +49,6 @@
 [howToAnimate How to animate a model in GRAF]
 
 === Project Documentation ===
-<br>[GrafFuture GRAF in 2011]
-<br>[2010Overview 2010 Project Overview]
 
 === Old Stuff ===
 [side_column 2009 Home Page]<br>
