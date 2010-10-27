@@ -13,21 +13,29 @@
 [HowGRAFWorks How GRAF Works]<br>
 [grafIntro The models in GRAF]<br>
 
-<br>[Minutes Minutes and agendas]<br><br>
+=== How Tos ===
+[howToAddModels How to add models to GRAF]<br>
+[howToAnimate How to animate a model in GRAF]<br>
+[TestingDebuggingGraphs How to test and debug using graphs]<br>
+[creatingRulesForGRAF How to make new rules for GRAF]<br>
+[creatingDistributable How to make a distributable tarball]<br>
+[rulenomatch What to do when a rule doesn't match]<br>
 
-=== Research ===
-[UMLTree The Eclipse UML 2 Tree]<br>
-[UMLBPMNDecision Decision on UML over BPMN]<br>
-[GregActionLanguage Greg's thoughts on Action Language]<br>
-
-=== Reference ===
+=== Useful Links ===
 [http://graf-framework.googlecode.com/files/thesis.pdf Greg O’Keefe's thesis, The Meaning of UML Models]<br>
 [http://www.omg.org/spec/UML/2.2/ The UML 2.2 Definition] <br>
 [http://java.sun.com/docs/codeconv/CodeConventions.pdf Java Coding Standards]<br>
 [http://gpme.anu.edu.au/gpme GPME]<br>
 
+=== Other Wiki Pages ===
+[side_column 2009 Home Page]<br>
+[graf2010PM 2010 Project Management]<br>
+[Minutes Minutes and agendas]<br>
+[Testing2010 Testing]<br>
+[UMLTree The Eclipse UML 2 Tree]<br>
+[UMLBPMNDecision Decision on UML over BPMN]<br>
+[GregActionLanguage Greg's thoughts on Action Language]<br>
 [RefDiscussion 'Reference' Discussion]<br>
-[Models]<br>
 [RuleGrowth Rule Growth]<br>
 [xtUMLTimers xtUML Timers]<br>
 [ConditionalNodes Conditional Nodes]<br>
@@ -36,20 +44,5 @@
 [http://graf-framework.googlecode.com/files/graf%20emails%202010.doc Technical Emails From 2010]<br>
 [http://graf-framework.googlecode.com/files/smemail.doc Email discussion with Stephen Mellor]<br>
 [http://graf-framework.googlecode.com/files/Communicating%20in%20UML.pdf Communication in UML]<br>
-[Testing2010 Testing]<br>
-
-=== Tutorials ===
-
-[howToAddModels How to add models to GRAF]<br>
 [InvoicerModel Invoicer Model]<br>
-[TestingDebuggingGraphs How to test and debug using graphs]<br>
-[creatingRulesForGRAF How to make new rules for GRAF]<br>
-[creatingDistributable How to make a distributable tarball]<br>
-[rulenomatch What to do when a rule doesn't match]<br>
-[howToAnimate How to animate a model in GRAF]
-
-=== Project Documentation ===
-
-=== Old Stuff ===
-[side_column 2009 Home Page]<br>
-[graf2010PM 2010 Project Management]<br>
+[Models]<br>
