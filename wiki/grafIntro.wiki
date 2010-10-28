@@ -9,20 +9,20 @@
 For the original academic papers these came from [https://alliance.anu.edu.au/portal click here.]
 
 ==== Elevator ====
-
-This model uses State Machine Regions
+This model uses multiple State Machine Regions.
 
 http://graf-framework.googlecode.com/files/Elevator.png
 
 ==== Racer ==== 
-
 A simple UML model
 
 http://graf-framework.googlecode.com/files/Racer.png
 
-==== TE00 ====
+==== Invoicer ====
+At the end of 2010 this model was not fully implemented.
 
-Uses the Create Object Instance UML Action
+==== TE00 ====
+Uses the !CreateObjectAction UML Action. TE00_!CreateLinkAction is a variation that demonstrates !CreateLinkAction.
 
 http://graf-framework.googlecode.com/files/TE00.png
 
@@ -31,8 +31,7 @@ The 4 versions of this model are variations of the following:
 
 http://graf-framework.googlecode.com/files/microwave.jpg
 
-!MicrowaveWithInteger contains an action to increment the temperature, the others don't. !MicrowaveError and !MicrowaveExtended were just used for testing.
+!MicrowaveWithInteger contains an action to increment the temperature, the others don't. !MicrowaveError and !MicrowaveExtended were just used for testing. !MicrowaveTimer was used for our old failed implementation of [GRAFTimers timers], and is now pretty much useless.
 
 === If Test ===
-
-This model was used to test the teams implementation of if statements within GRAF
+This model was used to test the teams implementation of if statements within GRAF. The Invoice objects create an object depending on a boolean value in the Invoicer object they're connected to.
