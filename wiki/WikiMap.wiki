@@ -1,0 +1,3 @@
+#summary A guide to the wiki.
+
+In this wiki most pages can be accessed by clicking on the side bar. However, some pages are only linked from other wiki pages. The map below shows how you can access every page on this wiki. This is up to date as of 27/10/10,
