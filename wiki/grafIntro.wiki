@@ -2,9 +2,6 @@
 
 == Models ==
 
-=== Oven Model ===
-[http://graf-framework.googlecode.com/files/Slides_to_base_tutorial_on_-_model_on_slide_12.pdf Click here.]
-
 === Academic Models: TE00, Invoicer, Elevator, Racer ===
 For the original academic papers these came from [https://alliance.anu.edu.au/portal click here.]
 
@@ -25,6 +22,12 @@ At the end of 2010 this model was not fully implemented.
 Uses the !CreateObjectAction UML Action. TE00 !CreateLinkAction is a variation that demonstrates !CreateLinkAction.
 
 http://graf-framework.googlecode.com/files/TE00.png
+
+=== Oven Model ===
+[http://graf-framework.googlecode.com/files/Slides_to_base_tutorial_on_-_model_on_slide_12.pdf Click here.]
+
+=== Models for Shayne ===
+Models from the [http://cs.anu.edu.au/student/comp3110/schedule.html COMP3110 lecture notes].
 
 === Microwave Model ===
 The 4 versions of this model are variations of the following:
