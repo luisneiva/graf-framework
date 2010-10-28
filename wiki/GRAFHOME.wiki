@@ -32,6 +32,7 @@
 [graf2010PM 2010 Project Management]<br>
 [Minutes Minutes and agendas]<br>
 [Testing2010 Testing]<br>
+[Testing Duress Testing]<br>
 [UMLTree The Eclipse UML 2 Tree]<br>
 [UMLBPMNDecision Decision on UML over BPMN]<br>
 [GregActionLanguage Greg's thoughts on Action Language]<br>
