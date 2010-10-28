@@ -1,11 +1,29 @@
 #labels Phase-QA
+=Using Graph Images in GRAF Development=
+
 ==Background==
 This page aims to demonstrate the role that graph images play in developing GRAF. To illustrate this point we will use an example of a feature that was implemented in 2010 and how we had to examine graphs to do this.
 
-GRAF originally supported only single regions in state machines. The Elevator model, which we implemented in 2010, contains multiple state machine regions. Therefore we give GRAF this piece of UML functionality in order to be able to animate the model.
+GRAF originally supported only single regions in state machines. The Elevator model, which we implemented in 2010, contains multiple state machine regions. Therefore we had to give GRAF this piece of UML functionality in order to be able to animate the model.
 
-The Active-State edge appears in the graph when taking into account regions:
+http://graf-framework.googlecode.com/files/Elevator.png
+
+==Procedure==
+We must first identify what needs to be changed. First, the .modeltest file format must be modified so it is possible to create models in multiple states at once. Second, the code must be changed to read and display the multiple states for one object. In this case the graph transformation rules themselves do not need to be changed.
+
+The modification to the part of the code that reads the modeltest file is simple. This code used to add one activeState edge to the state specified in the file. We just make it so it adds an activeState edge to each state specified in the file.
+
+We can now animate the model and examine the image for state 0. We should be able to see the multiple activeState edges from the behaviour execution of a single object.
+
+But at this point the object diagram will still only be displaying one state. We must find the code that traces the edges in the graph to find this state and modify it so it finds multiple states. This will also involve changing the state attribute into an array list.
+
+Using the existing code we see how the states are found by using toTrace() and fromTrace(), starting from the behaviour execution node and following edges down into the mass of nodes that is the state machine.
+
 http://graf-framework.googlecode.com/files/regions%20output%20graph.jpg
+
+
+
+
 
 Nodes 1,2,3,4 etc are the nodes for states. In a modeltest file, {state1;state2} means an object can be in both state1 and state2.
 ==Code changes==
