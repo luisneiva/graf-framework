@@ -22,7 +22,7 @@ http://graf-framework.googlecode.com/files/Racer.png
 At the end of 2010 this model was not fully implemented.
 
 ==== TE00 ====
-Uses the !CreateObjectAction UML Action. TE00_!CreateLinkAction is a variation that demonstrates !CreateLinkAction.
+Uses the !CreateObjectAction UML Action. TE00 !CreateLinkAction is a variation that demonstrates !CreateLinkAction.
 
 http://graf-framework.googlecode.com/files/TE00.png
 
