@@ -9,16 +9,10 @@
  * [http://code.google.com/p/graf-framework/wiki/GrafFuture Future] - Where the 2011 project may be headed
  * [http://code.google.com/p/graf-framework/files/thesis.pdf Gregs thesis] - The inspiration for GRAF  
  * [http://code.google.com/p/graf-framework/wiki/Quickstartguide Quick Start Guide] - Installing GRAF 
-
-=== To get you going ===
-
  * [http://code.google.com/p/graf-framework/wiki/grafIntro Models] - An explanation of some of the models supplied with GRAF
- * [http://code.google.com/p/graf-framework/wiki/howToAddModels Adding Models] - How to add models to GRAF
- *  [http://code.google.com/p/graf-framework/wiki/creatingRulesForGRAF Adding Rules] - How to add rules to GRAF
- *  [http://code.google.com/p/graf-framework/wiki/TestingDebuggingGraphs Graphs] - How to test anything implemented using graphs
- * [http://code.google.com/p/graf-framework/wiki/rulenomatch Rule Matching] - How to solve a rule not found error
- * [http://code.google.com/p/graf-framework/wiki/GRAFTimers Timers] - Describes timers within the context of GRAF and links to the 2010 teams failed attempt to implement them
 
-To change the side bar -> Go to 'Administer' then 'Wiki' and its near the bottom of the page! 
+To change the side bar and set up a new wiki index -> Go to 'Administer' then 'Wiki' and its near the bottom of the page! 
+
+Make sure you get access to the 2010 and 2009 alliance sites too.
 
 As a word of advice when editing and viewing wiki pages its best not to use Internet Explorer 8 or earlier as it seems to not agree with what Chrome and Firefox see!
