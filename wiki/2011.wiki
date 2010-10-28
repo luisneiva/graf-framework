@@ -1,4 +1,4 @@
-#Guide for 2011 peoples
+#summary Guide for 2011 peoples
 
 = Welcome 2011 GRAFers =
 
