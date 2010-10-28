@@ -12,15 +12,18 @@ http://graf-framework.googlecode.com/files/Elevator.png
 
 This model was used to test the teams implementation of if statements within GRAF
 
-=== Microwave Timer ===
-
-This model is the simpler of the 2 models supplied to Shayne Flint for potential use in conjunction with the teaching of COMP 3110. The timer function is used with this model.
-
 === Microwave with Integer ===
 
 This model was intially added to GRAF by the 2009 project team
 
 http://graf-framework.googlecode.com/files/microwave.jpg
+
+
+=== Microwave Timer ===
+
+Uses a slightly modified version of the Microwave with Integer model to include the function of a timer. The Integer part of the original model is removed in this model.
+
+The timer function is based on the 2010 teams implementation at this stage.
 
 === Racer === 
 
