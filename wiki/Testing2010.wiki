@@ -1,4 +1,4 @@
-#testing undertaken by the 2010 team
+#summary testing undertaken by the 2010 team
 
 = Testing =
 
