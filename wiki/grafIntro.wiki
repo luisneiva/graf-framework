@@ -2,37 +2,37 @@
 
 == Models ==
 
-=== Elevator ===
+=== Oven Model ===
+[http://graf-framework.googlecode.com/files/Slides_to_base_tutorial_on_-_model_on_slide_12.pdf Click here.]
+
+=== Academic Models: TE00, Invoicer, Elevator, Racer ===
+For the original academic papers these came from [https://alliance.anu.edu.au/portal click here.]
+
+==== Elevator ====
 
 This model uses State Machine Regions
 
 http://graf-framework.googlecode.com/files/Elevator.png
 
-=== If Test ===
-
-This model was used to test the teams implementation of if statements within GRAF
-
-=== Microwave with Integer ===
-
-This model was intially added to GRAF by the 2009 project team
-
-http://graf-framework.googlecode.com/files/microwave.jpg
-
-
-=== Microwave Timer ===
-
-Uses a slightly modified version of the Microwave with Integer model to include the function of a timer. The Integer part of the original model is removed in this model.
-
-The timer function is based on the 2010 teams implementation at this stage.
-
-=== Racer === 
+==== Racer ==== 
 
 A simple UML model
 
 http://graf-framework.googlecode.com/files/Racer.png
 
-=== TE00 ===
+==== TE00 ====
 
 Uses the Create Object Instance UML Action
 
 http://graf-framework.googlecode.com/files/TE00.png
+
+=== Microwave Model ===
+The 4 versions of this model are variations of the following:
+
+http://graf-framework.googlecode.com/files/microwave.jpg
+
+!MicrowaveWithInteger contains an action to increment the temperature, the others don't. !MicrowaveError and !MicrowaveExtended were just used for testing.
+
+=== If Test ===
+
+This model was used to test the teams implementation of if statements within GRAF
