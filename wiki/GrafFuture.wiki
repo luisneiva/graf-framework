@@ -3,9 +3,9 @@
 == 2011 Introductory Work ==
 These are tasks that we don't plan to do in 2010 but they should be simple enough to give the 2011 team an idea of how to modify GRAF.
   # *Understanding Rules* Create the rule !SendSignalAction-Mealy, add it to the GTSRuleSeq file and create a model that will use the rule.
+  # *Understanding the GRAF code* Make it so objects aren't randomly placed on the screen. Make it so they're placed in such a way that they never overlap
   # *Understanding UML files* Complete the invoicer model (!InvoiceTest.modeltest and Invoicer.uml in the Models folder) according to how the papers describe it.
   http://graf-framework.googlecode.com/files/Invoicer.png
-  # *Understanding the GRAF code* Make it so objects aren't randomly placed on the screen. Make it so they're placed in such a way that they never overlap
 
 == Creating model files ==
   * This is the main thing preventing GRAF from being usable
