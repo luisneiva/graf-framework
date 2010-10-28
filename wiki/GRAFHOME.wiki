@@ -3,7 +3,8 @@
 == GRAF 2010 Wiki ==
 
 === Introduction for the 2011 Team ===
-[GrafFuture GRAF in 2011]
+[WikiMap A guide to this wiki]
+<br>[GrafFuture GRAF in 2011]
 <br>[2010Overview 2010 Project Overview]
 <br>[Quickstartguide Quick start guide]<br>
 
