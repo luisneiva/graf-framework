@@ -10,5 +10,4 @@
 [BugTrackingTools Bug Tracking Tools]<br>
 [SourceControl Source Control]<br>
 [TimeTracking Time Tracking]<br>
-<br>[Testing Duress Testing]<br>
-<br>[Preshowcase Preshowcase Presentation]
+[Preshowcase Preshowcase Presentation]
