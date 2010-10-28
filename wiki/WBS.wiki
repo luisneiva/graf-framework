@@ -10,7 +10,7 @@ http://graf-framework.googlecode.com/files/wbs28-10-10.jpg
 Crossed out tasks are finished
 
 ====WBS including time estimates====
-http://graf-framework.googlecode.com/files/wbs+times-12-9-10.jpg 
+http://graf-framework.googlecode.com/files/wbs-28-10-10+times.jpg
 
 ====Plan to end of semester====
 [http://svn.anu.edu.au/SE_projects/GRAF/Admin/gantt.xls On SVN]
