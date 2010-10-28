@@ -1,16 +1,16 @@
-= Introduction =
+== Introduction ==
 
 This page has been created to outline all the major events that have occurred throughout the life of the project during 2010 including, important decisions, road blocks, where the animator is at the end of 2010 and what is expected for the future years. This page will also contain useful links to most of the important project related documents.
 
 
-= Decisions =
+== Decisions ==
 
 Throughout the year many decisions had to be made to get the project to its current stage.
 The decisions that had the most impact on the project:
  * [http://code.google.com/p/graf-framework/wiki/UMLBPMNDecision xtUML vs BMPN] - xtUML emerging the winner with the animator being based on animating UML.
  * Early in the project when the problem with inputing models was discovered, there were talks of writing a parser to allow for much faster and easier input of models into GRAF, this was abandoned due to time and resource limitations and constraints.
 
-= Road Blocks =
+== Road Blocks ==
 
 throughout the year roadblocks a plenty were encountered. The hardest most time consuming ones to over come were:
 
@@ -22,7 +22,7 @@ throughout the year roadblocks a plenty were encountered. The hardest most time 
    
    Upon searching for available animators, many were found yet installing them and making them actually animate one our chosen models was another story. Of the model animators we found, we could not actually get any of them to animate any of our chosen models. This was due to licensing issues, complicated installation, and availability ([http://code.google.com/p/graf-framework/wiki/ModelAnim Animator Overview]).
 
-= GRAF's current state =
+== GRAF's current state ==
 
  * Added Features for 2010 to enable us to animate the collection of models provided by the clients.
   * Mealy Notation
@@ -35,18 +35,52 @@ throughout the year roadblocks a plenty were encountered. The hardest most time 
  * Has registered interest for industry by Annette Vincent, Shayne Flint and Stephen Mellor.
  * Has 10 of the 36 behavioral UML [http://code.google.com/p/graf-framework/wiki/UMLTree#List_of_UML_Actions actions] implemented.
  
-= Future Roadmap =
+== Future Roadmap ==
 
  * Create a way of inputing models such that an end user can easily add them into the animator
  * Implement the remaining behavior actions  Listed in the UML definition
  * Get the animator used in industry
  * Allow GRAF to cover languages other than UML
 
-= Useful Links =
-[http://code.google.com/p/graf-framework/wiki/Quickstartguide QuickStart guide]
+== Greg's Summary ==
+{{{
+My thesis is only an outline of a proposed UML semantics, and so, a lot
+of the team's work has been resolving issues about the semantics of UML,
+and how to manage the collection of graph transformation rules needed to
+implement them.  In addition, documentation is required to enable a
+smooth transition to next years project team, and of course, to help
+Users of the system.
 
-[http://code.google.com/p/graf-framework/wiki/howToAddModels How to add models to GRAF]
+The group investigated UML editing tools, with a view to graphically
+producing models in the UML standard XML format XMI that Graf and
+Eclipse uses.  Surprisingly, there does not seem to be any such tool
+freely available.  The team investigated over 10 offerings, both free
+and proprietary.  The notes on these investigations will save a lot of
+work when this issue is followed up. 
 
-[http://code.google.com/p/graf-framework/wiki/2010Overview?ts=1287960027&updated=2010Overview#Tutorials Tutorials] (left hand side of the page).
+Similarly, existing UML animators were surveyed. Many were broken and
+Abandoned. Some current working animators were found, but the only
+viable competitor to Graf was a very expensive IBM product.
 
-[http://code.google.com/p/graf-framework/wiki/GrafFuture graf in 2011]
+Several rather technical issues arose regarding UML and its redefinition
+as a graph transformation system.  These included a worrying growth in
+the number of graph transformation rules, the inclusion of ``timers'' in
+the language, conditional nodes, and the whole complicated story of
+inter-object communication.  Each of these were investigated, and the
+conclusions reached documented in brief illustrated pages in the wiki,
+or pdf presentation slides.
+
+Several pages have been written especially for the next Graf project
+team.  These pages will help get them ``up to speed'' quickly, and shows
+how typical Graf development tasks such as building a tarball are
+accomplished. Another page outlines work that has been identified as
+important, but beyond what can be achieved this year.
+
+For users, an illustrated "quick start guide" has been provided, showing
+how to download, build and run the example models.
+
+In summary, this documentation establishes the project as a solid body
+of well justified work that is ready to handed over and built on.
+
+Greg O'Keefe
+}}}
