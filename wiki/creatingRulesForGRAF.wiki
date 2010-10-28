@@ -1,7 +1,5 @@
 #summary Tutorial on how to add rules
 
-WORK IN PROGRESS
-
 This tutorial describes the steps required to add an Action to GRAF - including how to add the Action to the model file and how to make Rules that implement its execution.
 
 = 1. Identify the relevant UML Section =
