@@ -79,16 +79,16 @@ public class PluginModel {
 			try {
 				graphTransformer.outputRulesAsDot(this.graphOutputsPath);
 
-				String path_win = "GraphOutputs\\conversionFiles\\dotToImg2";
+				String path_win = "GraphOutputs\\conversionFiles\\dotToImg2.bat";
 				String[] command_win = {"cmd", "/C", "start " + path_win + " rules"};
 
-				String path_lin = "GraphOutputs\\conversionFiles\\dotToImg.sh";
-				String[] command_lin = {"bash" + path_lin};
+				String path_lin = "GraphOutputs/conversionFiles/dotToImg.sh";
+				String[] command_lin = {"bash", path_lin};
 				
 				String nameOS = System.getProperty("os.name");
 				int index = nameOS.indexOf("Win");
 				if (index != -1) {	//The OS is Windows
-					File f = new File(path_win + ".bat");
+					File f = new File(path_win);
 					if(f.exists()){
 						JOptionPane.showMessageDialog(null,"Running the dot script", "Alert", JOptionPane.ERROR_MESSAGE);
 						Process p = Runtime.getRuntime().exec(command_win);

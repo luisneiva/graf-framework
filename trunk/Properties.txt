@@ -1,5 +1,5 @@
-gtsRulesPath:GTSRules.ggx
 gtsRulesSeqPath:GTSRulesSeq.xml
+gtsRulesPath:GTSRules.ggx
 PrintGraphs:true
 PrintRules:true
 PrintTiming:false
