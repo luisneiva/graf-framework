@@ -15,9 +15,13 @@ XMIToGraph reads the modeltest file among other things. This code used to add on
 
 We can now animate the model and examine the image for state 0. We should be able to see the multiple activeState edges from the behaviour execution of a single object.
 
-But at this point the object diagram will still only be displaying one state. We must find the code that searches the graph for the state to display and make it account for the possibility of multiple active states.
+But at this point the object diagram will still only be displaying one state. We must find the code that searches the graph for the state to display and make it account for the possibility of multiple active states. GraphToObjDiag is the class to change.
 
-Using the existing code we see how the states are found by using toTrace() and fromTrace(), starting from the behaviour execution node and following edges down into the mass of nodes that is the state machine.
+There's one more problem that has appeared. With just the two changes above we can now have multiple active states, but right-clicking an object will not reveal all the possible actions for all active states. 
+
+We need to change the code that locates external events in GraphToObjDiag. The code used to only look at external events in the top regions. We make it so it loops down to regions in regions as deep as necessary.
+
+Using the existing code we see how the edges are followed using toTrace() and fromTrace(), starting from the object and behaviour execution nodes and following edges down into the mass of nodes that is the state machine.
 
 http://graf-framework.googlecode.com/files/regions%20output%20graph.jpg
 
