@@ -15,11 +15,11 @@ XMIToGraph reads the modeltest file among other things. This code used to add on
 
 We can now animate the model and examine the image for state 0. We should be able to see the multiple activeState edges from the behaviour execution of a single object.
 
-But at this point the object diagram will still only be displaying one state. We must find the code that searches the graph for the state to display and make it account for the possibility of multiple active states. GraphToObjDiag is the class to change.
+But at this point the object diagram will still only be displaying one state. We must find the code that searches the graph for the state to display and make it account for the possibility of multiple active states. !GraphToObjDiag is the class to change.
 
 There's one more problem that has appeared. With just the two changes above we can now have multiple active states, but right-clicking an object will not reveal all the possible actions for all active states. 
 
-We need to change the code that locates external events in GraphToObjDiag. The code used to only look at external events in the top regions. We make it so it loops down to regions in regions as deep as necessary.
+We need to change the code that locates external events in !GraphToObjDiag. The code used to only look at external events in the top regions. We make it so it loops down to regions in regions as deep as necessary.
 
 Using the existing code we see how the edges are followed using toTrace() and fromTrace(), starting from the object and behaviour execution nodes and following edges down into the mass of nodes that is the state machine.
 
@@ -27,5 +27,8 @@ http://graf-framework.googlecode.com/files/regions%20output%20graph.jpg
 
 (Note nodes 1,2,3,4 etc are the nodes for states. The states in this model are called 1,2,3 etc)
 
-  * First, in order to find the top region node, we used ListGraph.toTrace to trace from elevator1 to top region following ‘execution’ edge, ‘behaviour’ edge, and ‘region’ edge (as marked in blue). This sequence suits all models in GRAF.
+  * First, in order to find the top region node, we used !ListGraph.toTrace to trace from elevator1 to top region following ‘execution’ edge, ‘behaviour’ edge, and ‘region’ edge (as marked in blue). This sequence suits all models in GRAF.
   * Second, trace to all sub-regions when there exist multiple regions by following the ‘subvertex’ and ‘region’ edges. In this example, it will find Elevator-Region and Elevator2-Region (as marked in pink). Then, GRAF will display both states in one object. This trace, marked in pink, is looped on until no new actions are found. In most models this loop won't execute. In the elevator model it executes once.
+
+==Conclusion==
+This is how GRAF was given the ability to deal with multiple active states. You can run the elevator model now and see it in action. There's two main types of development work that are needed to improve GRAF. Modification of the code like this adds more of UML's structural features. Modification of the rules, which we did not have to do here, adds more of UML's behaviour.
