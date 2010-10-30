@@ -11,11 +11,11 @@ http://graf-framework.googlecode.com/files/Elevator.png
 ==Procedure==
 We must first identify what needs to be changed. First, the .modeltest file format must be modified so it is possible to create models in multiple states at once. Second, the code must be changed to read and display the multiple states for one object. In this case the graph transformation rules themselves do not need to be changed.
 
-The modification to the part of the code that reads the modeltest file is simple. This code used to add one activeState edge to the state specified in the file. We just make it so it adds an activeState edge to each state specified in the file.
+XMIToGraph reads the modeltest file among other things. This code used to add one activeState edge to the state specified in the file. We just make it so it adds an activeState edge to each state specified in the file, separated by semicolons.
 
 We can now animate the model and examine the image for state 0. We should be able to see the multiple activeState edges from the behaviour execution of a single object.
 
-But at this point the object diagram will still only be displaying one state. We must find the code that traces the edges in the graph to find this state and modify it so it finds multiple states. This will also involve changing the state attribute into an array list.
+But at this point the object diagram will still only be displaying one state. We must find the code that searches the graph for the state to display and make it account for the possibility of multiple active states.
 
 Using the existing code we see how the states are found by using toTrace() and fromTrace(), starting from the behaviour execution node and following edges down into the mass of nodes that is the state machine.
 
