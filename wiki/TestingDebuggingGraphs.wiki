@@ -25,12 +25,7 @@ Using the existing code we see how the edges are followed using toTrace() and fr
 
 http://graf-framework.googlecode.com/files/regions%20output%20graph.jpg
 
+(Note nodes 1,2,3,4 etc are the nodes for states. The states in this model are called 1,2,3 etc)
 
-
-
-
-Nodes 1,2,3,4 etc are the nodes for states. In a modeltest file, {state1;state2} means an object can be in both state1 and state2.
-==Code changes==
-We changed the code in the Graph-To-Obj-Diag class (under the package model/modelTransformer). This class is intended to read a graph and transfer a graph into an object diagram. 
-  * First, in order to find Top-Region node, use List-Graph.toTrace to trace from elevator1 to Top-Region following ‘execution’ edge, ‘behaviour’ edge, and ‘region’ edge (as marked in blue). This sequence suits all models in GRAF.
-  * Second, trace to all sub-regions when there exist multiple regions by following the ‘subvertex’ and ‘region’ edges. In this example, it will find Elevator-Region and Elevator2-Region (as marked in pink). Then, GRAF will display both states in one object.
+  * First, in order to find the top region node, we used ListGraph.toTrace to trace from elevator1 to top region following ‘execution’ edge, ‘behaviour’ edge, and ‘region’ edge (as marked in blue). This sequence suits all models in GRAF.
+  * Second, trace to all sub-regions when there exist multiple regions by following the ‘subvertex’ and ‘region’ edges. In this example, it will find Elevator-Region and Elevator2-Region (as marked in pink). Then, GRAF will display both states in one object. This trace, marked in pink, is looped on until no new actions are found. In most models this loop won't execute. In the elevator model it executes once.
